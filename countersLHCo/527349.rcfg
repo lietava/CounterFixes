@@ -1,0 +1,31 @@
+run 527349
+inp MTVX 3
+bcm TOF 100 1288 2476
+LTG ft0
+LTG fdd
+LTG fv0
+LTG its
+ferst 1
+LTG mch
+ferst 1
+LTG mft
+ferst 1
+LTG mid
+LTG tof
+cont
+bcm TOF e
+LTG tpc
+LTG trd
+ttc calrate 100
+LTG emc
+cal ppcal 2953 3012 4000 356399999
+LTG phs
+LTG cpv
+1 cluster cru ft0 fdd fv0 its mch mft mid tof tpc  
+1 minbias_TVX  3  
+2 cluster trd trd  
+2 minbias_TVX  3  
+3 cluster phscpv phs cpv  
+3 minbias_TVX_L0  103  
+4 cluster emc emc  
+4 minbias_TVX_L0  103  

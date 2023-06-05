@@ -1,0 +1,256 @@
+[INFO] Defining data processing
+[INFO] ===>inside:ctp-proxy type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[INFO] name:ctp-proxy chan:name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[INFO] Channels setup: name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[INFO] ===> Proxy to be set
+[INFO] CCDB host:http://ccdb-test.cern.ch:8080
+[INFO] CTP vNew:1
+[INFO] CTPRunManager initialised.
+[INFO] ===> Proxy done
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 3151764.
+[INFO] Driver listening on port: 9844
+[INFO] Rate limiting set up at 500MB distributed over 1 readers
+[INFO] O2 Data Processing Layer initialised. We brake for nobody.
+[INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
+[INFO] Redeployment of configuration asked.
+[INFO] Starting internal-dpl-clock on pid 3151765
+[INFO] Starting ctp-proxy on pid 3151766
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 3151767
+[INFO] Redeployment of configuration done.
+[3151765:internal-dpl-clock]: [INFO] Defining data processing
+[3151765:internal-dpl-clock]: [INFO] ===>inside:ctp-proxy type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151765:internal-dpl-clock]: [INFO] name:ctp-proxy chan:name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151765:internal-dpl-clock]: [INFO] Channels setup: name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151765:internal-dpl-clock]: [INFO] ===> Proxy to be set
+[3151766:ctp-proxy]: [INFO] Defining data processing
+[3151766:ctp-proxy]: [INFO] ===>inside:ctp-proxy type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151766:ctp-proxy]: [INFO] name:ctp-proxy chan:name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151766:ctp-proxy]: [INFO] Channels setup: name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151766:ctp-proxy]: [INFO] ===> Proxy to be set
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] Defining data processing
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] ===>inside:ctp-proxy type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] name:ctp-proxy chan:name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] Channels setup: name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] ===> Proxy to be set
+[3151765:internal-dpl-clock]: [INFO] CCDB host:http://ccdb-test.cern.ch:8080
+[3151765:internal-dpl-clock]: [INFO] CTP vNew:1
+[3151765:internal-dpl-clock]: [INFO] CTPRunManager initialised.
+[3151766:ctp-proxy]: [INFO] CCDB host:http://ccdb-test.cern.ch:8080
+[3151766:ctp-proxy]: [INFO] CTP vNew:1
+[3151766:ctp-proxy]: [INFO] CTPRunManager initialised.
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] CCDB host:http://ccdb-test.cern.ch:8080
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] CTP vNew:1
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] CTPRunManager initialised.
+[3151765:internal-dpl-clock]: [INFO] ===> Proxy done
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] ===> Proxy done
+[3151766:ctp-proxy]: [INFO] ===> Proxy done
+[3151765:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[3151766:ctp-proxy]: [INFO] Instrumenting crash signals
+[3151765:internal-dpl-clock]: [INFO] Spawing new device internal-dpl-clock in process with pid 3151765
+[3151766:ctp-proxy]: [INFO] Spawing new device ctp-proxy in process with pid 3151766
+[3151767:internal-dpl-injected-dummy-sink]: [INFO] Spawing new device internal-dpl-injected-dummy-sink in process with pid 3151767
+[3151765:internal-dpl-clock]: [20:32:20][INFO] 
+[3151765:internal-dpl-clock]:       ______      _    _______  _________ 
+[3151765:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.4.55
+[3151765:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[3151765:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[3151765:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2022 GSI
+[3151765:internal-dpl-clock]: 
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][INFO] 
+[3151767:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[3151767:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.4.55
+[3151767:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[3151767:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[3151767:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2022 GSI
+[3151767:internal-dpl-injected-dummy-sink]: 
+[3151766:ctp-proxy]: [20:32:20][INFO] 
+[3151766:ctp-proxy]:       ______      _    _______  _________ 
+[3151766:ctp-proxy]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.4.55
+[3151766:ctp-proxy]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[3151766:ctp-proxy]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[3151766:ctp-proxy]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2022 GSI
+[3151766:ctp-proxy]: 
+[3151765:internal-dpl-clock]: [20:32:20][STATE] Starting FairMQ state machine --> IDLE
+[3151766:ctp-proxy]: [20:32:20][STATE] Starting FairMQ state machine --> IDLE
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] Starting FairMQ state machine --> IDLE
+[3151765:internal-dpl-clock]: [20:32:20][STATE] IDLE ---> INITIALIZING DEVICE
+[3151766:ctp-proxy]: [20:32:20][STATE] IDLE ---> INITIALIZING DEVICE
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] IDLE ---> INITIALIZING DEVICE
+[3151765:internal-dpl-clock]: [20:32:20][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[3151765:internal-dpl-clock]: [20:32:20][STATE] INITIALIZED ---> BINDING
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] INITIALIZED ---> BINDING
+[3151766:ctp-proxy]: [20:32:20][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] BINDING ---> BOUND
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] BOUND ---> CONNECTING
+[3151766:ctp-proxy]: [20:32:20][STATE] INITIALIZED ---> BINDING
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] CONNECTING ---> DEVICE READY
+[3151765:internal-dpl-clock]: [20:32:20][STATE] BINDING ---> BOUND
+[3151766:ctp-proxy]: [20:32:20][STATE] BINDING ---> BOUND
+[3151766:ctp-proxy]: [20:32:20][STATE] BOUND ---> CONNECTING
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] DEVICE READY ---> INITIALIZING TASK
+[3151765:internal-dpl-clock]: [20:32:20][STATE] BOUND ---> CONNECTING
+[3151765:internal-dpl-clock]: [20:32:20][STATE] CONNECTING ---> DEVICE READY
+[3151765:internal-dpl-clock]: [20:32:20][STATE] DEVICE READY ---> INITIALIZING TASK
+[3151765:internal-dpl-clock]: [20:32:20][STATE] INITIALIZING TASK ---> READY
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] INITIALIZING TASK ---> READY
+[3151765:internal-dpl-clock]: [20:32:20][STATE] READY ---> RUNNING
+[3151765:internal-dpl-clock]: [20:32:20][INFO] fair::mq::Device running...
+[3151765:internal-dpl-clock]: [20:32:20][INFO] LHCPeriod is not available, using current month NOV
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][STATE] READY ---> RUNNING
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][INFO] fair::mq::Device running...
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][INFO] LHCPeriod is not available, using current month NOV
+[3151765:internal-dpl-clock]: [20:32:20][INFO] Correctly handshaken websocket connection.
+[3151766:ctp-proxy]: [20:32:20][STATE] CONNECTING ---> DEVICE READY
+[3151766:ctp-proxy]: [20:32:20][STATE] DEVICE READY ---> INITIALIZING TASK
+[3151766:ctp-proxy]: [20:32:20][STATE] INITIALIZING TASK ---> READY
+[3151766:ctp-proxy]: [20:32:20][STATE] READY ---> RUNNING
+[3151766:ctp-proxy]: [20:32:20][INFO] fair::mq::Device running...
+[3151766:ctp-proxy]: [20:32:20][INFO] LHCPeriod is not available, using current month NOV
+[3151767:internal-dpl-injected-dummy-sink]: [20:32:20][INFO] Correctly handshaken websocket connection.
+[3151766:ctp-proxy]: [20:32:21][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:22][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:23][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:24][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:25][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:26][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:27][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:28][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:29][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:30][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:31][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:32][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:33][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:34][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:35][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:36][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:37][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:38][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:39][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:40][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:41][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:42][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:43][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:44][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:45][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:46][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:47][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:48][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:49][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:50][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:51][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:52][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:53][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:54][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:55][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:56][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:57][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:58][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:32:59][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:00][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:01][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:02][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:03][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:04][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:05][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:06][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:07][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:08][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:09][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:10][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:11][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:12][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:13][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:14][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:15][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:16][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:17][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:18][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:19][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:20][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:21][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:22][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:23][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:24][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:25][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:26][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:27][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:28][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:29][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:30][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:31][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:32][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:33][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:34][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:35][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:36][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:37][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:38][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:39][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:40][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:41][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:42][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:43][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:44][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:45][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:46][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:47][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:48][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:49][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:50][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:51][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:52][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:53][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:54][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:55][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:56][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:57][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:58][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:33:59][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:34:00][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:34:01][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:34:02][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:34:03][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151766:ctp-proxy]: [20:34:04][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151765:internal-dpl-clock]: [20:34:05][INFO] Received device shutdown request (signal 2).
+[3151765:internal-dpl-clock]: [20:34:05][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[INFO] QUIT_REQUESTED
+[3151765:internal-dpl-clock]: [20:34:05][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[3151765:internal-dpl-clock]: [20:34:05][STATE] RUNNING ---> READY
+[3151765:internal-dpl-clock]: [20:34:05][STATE] READY ---> RESETTING TASK
+[3151765:internal-dpl-clock]: [20:34:05][STATE] RESETTING TASK ---> DEVICE READY
+[3151765:internal-dpl-clock]: [20:34:05][STATE] No transition from state DEVICE_READY on transition AUTO
+[3151765:internal-dpl-clock]: [20:34:05][STATE] DEVICE READY ---> RESETTING DEVICE
+[3151766:ctp-proxy]: [20:34:05][INFO] Received device shutdown request (signal 15).
+[3151766:ctp-proxy]: [20:34:05][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[3151766:ctp-proxy]: [20:34:05][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3151765:internal-dpl-clock]: [20:34:05][STATE] RESETTING DEVICE ---> IDLE
+[3151765:internal-dpl-clock]: [20:34:05][STATE] IDLE ---> EXITING
+[3151765:internal-dpl-clock]: [20:34:05][STATE] Exiting FairMQ state machine
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][INFO] Received device shutdown request (signal 15).
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][STATE] RUNNING ---> READY
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][STATE] READY ---> RESETTING TASK
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][STATE] RESETTING TASK ---> DEVICE READY
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][STATE] DEVICE READY ---> RESETTING DEVICE
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][STATE] RESETTING DEVICE ---> IDLE
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][STATE] IDLE ---> EXITING
+[3151767:internal-dpl-injected-dummy-sink]: [20:34:05][STATE] Exiting FairMQ state machine
+[3151766:ctp-proxy]: [20:34:05][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[3151766:ctp-proxy]: [20:34:05][INFO] Correctly handshaken websocket connection.
+[3151766:ctp-proxy]: [20:34:05][STATE] RUNNING ---> READY
+[3151766:ctp-proxy]: [20:34:05][STATE] READY ---> RESETTING TASK
+[3151766:ctp-proxy]: [20:34:05][STATE] RESETTING TASK ---> DEVICE READY
+[3151766:ctp-proxy]: [20:34:05][STATE] No transition from state DEVICE_READY on transition AUTO
+[3151766:ctp-proxy]: [20:34:05][STATE] DEVICE READY ---> RESETTING DEVICE
+[3151766:ctp-proxy]: [20:34:05][INFO] Cleaning up for shared memory id '5b825466'...
+[3151766:ctp-proxy]: [20:34:05][INFO] Found 0 unmanaged regions...
+[3151766:ctp-proxy]: [20:34:05][INFO] Found 1 managed segments...
+[3151766:ctp-proxy]: [20:34:05][INFO] Successfully removed 'fmq_5b825466_m_0'.
+[3151766:ctp-proxy]: [20:34:05][INFO] Successfully removed 'fmq_5b825466_mng'.
+[3151766:ctp-proxy]: [20:34:06][STATE] RESETTING DEVICE ---> IDLE
+[3151766:ctp-proxy]: [20:34:06][STATE] IDLE ---> EXITING
+[3151766:ctp-proxy]: [20:34:06][STATE] Exiting FairMQ state machine
+[INFO] Dumping used configuration in dpl-config.json

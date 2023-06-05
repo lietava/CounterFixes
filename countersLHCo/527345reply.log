@@ -1,0 +1,1238 @@
+[INFO] Defining data processing
+[INFO] ===>inside:ctp-proxy type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[INFO] name:ctp-proxy chan:name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[INFO] Channels setup: name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[INFO] ===> Proxy to be set
+[INFO] CCDB host:http://ccdb-test.cern.ch:8080
+[INFO] CTP vNew:1
+[INFO] CTPRunManager initialised.
+[INFO] ===> Proxy done
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 3152098.
+[INFO] Driver listening on port: 10178
+[INFO] Rate limiting set up at 500MB distributed over 1 readers
+[INFO] O2 Data Processing Layer initialised. We brake for nobody.
+[INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
+[INFO] Redeployment of configuration asked.
+[INFO] Starting internal-dpl-clock on pid 3152099
+[INFO] Starting ctp-proxy on pid 3152100
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 3152101
+[INFO] Redeployment of configuration done.
+[3152099:internal-dpl-clock]: [INFO] Defining data processing
+[3152099:internal-dpl-clock]: [INFO] ===>inside:ctp-proxy type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152099:internal-dpl-clock]: [INFO] name:ctp-proxy chan:name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152099:internal-dpl-clock]: [INFO] Channels setup: name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152099:internal-dpl-clock]: [INFO] ===> Proxy to be set
+[3152100:ctp-proxy]: [INFO] Defining data processing
+[3152100:ctp-proxy]: [INFO] ===>inside:ctp-proxy type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152100:ctp-proxy]: [INFO] name:ctp-proxy chan:name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152100:ctp-proxy]: [INFO] Channels setup: name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152100:ctp-proxy]: [INFO] ===> Proxy to be set
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] Defining data processing
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] ===>inside:ctp-proxy type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] name:ctp-proxy chan:name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] Channels setup: name=ctp-proxy,type=sub,method=connect,address=tcp://188.184.30.57:5556,rateLogging=10,transport=zeromq
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] ===> Proxy to be set
+[3152099:internal-dpl-clock]: [INFO] CCDB host:http://ccdb-test.cern.ch:8080
+[3152099:internal-dpl-clock]: [INFO] CTP vNew:1
+[3152099:internal-dpl-clock]: [INFO] CTPRunManager initialised.
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] CCDB host:http://ccdb-test.cern.ch:8080
+[3152100:ctp-proxy]: [INFO] CCDB host:http://ccdb-test.cern.ch:8080
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] CTP vNew:1
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] CTPRunManager initialised.
+[3152100:ctp-proxy]: [INFO] CTP vNew:1
+[3152100:ctp-proxy]: [INFO] CTPRunManager initialised.
+[3152099:internal-dpl-clock]: [INFO] ===> Proxy done
+[3152100:ctp-proxy]: [INFO] ===> Proxy done
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] ===> Proxy done
+[3152099:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[3152100:ctp-proxy]: [INFO] Instrumenting crash signals
+[3152099:internal-dpl-clock]: [INFO] Spawing new device internal-dpl-clock in process with pid 3152099
+[3152101:internal-dpl-injected-dummy-sink]: [INFO] Spawing new device internal-dpl-injected-dummy-sink in process with pid 3152101
+[3152100:ctp-proxy]: [INFO] Spawing new device ctp-proxy in process with pid 3152100
+[3152099:internal-dpl-clock]: [20:53:48][INFO] 
+[3152099:internal-dpl-clock]:       ______      _    _______  _________ 
+[3152099:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.4.55
+[3152099:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[3152099:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[3152099:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2022 GSI
+[3152099:internal-dpl-clock]: 
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][INFO] 
+[3152101:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[3152101:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.4.55
+[3152101:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[3152101:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[3152101:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2022 GSI
+[3152101:internal-dpl-injected-dummy-sink]: 
+[3152100:ctp-proxy]: [20:53:48][INFO] 
+[3152100:ctp-proxy]:       ______      _    _______  _________ 
+[3152100:ctp-proxy]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.4.55
+[3152100:ctp-proxy]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[3152100:ctp-proxy]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[3152100:ctp-proxy]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2022 GSI
+[3152100:ctp-proxy]: 
+[3152099:internal-dpl-clock]: [20:53:48][STATE] Starting FairMQ state machine --> IDLE
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] Starting FairMQ state machine --> IDLE
+[3152100:ctp-proxy]: [20:53:48][STATE] Starting FairMQ state machine --> IDLE
+[3152099:internal-dpl-clock]: [20:53:48][STATE] IDLE ---> INITIALIZING DEVICE
+[3152100:ctp-proxy]: [20:53:48][STATE] IDLE ---> INITIALIZING DEVICE
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] IDLE ---> INITIALIZING DEVICE
+[3152099:internal-dpl-clock]: [20:53:48][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[3152099:internal-dpl-clock]: [20:53:48][STATE] INITIALIZED ---> BINDING
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] INITIALIZED ---> BINDING
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] BINDING ---> BOUND
+[3152100:ctp-proxy]: [20:53:48][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] BOUND ---> CONNECTING
+[3152100:ctp-proxy]: [20:53:48][STATE] INITIALIZED ---> BINDING
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] CONNECTING ---> DEVICE READY
+[3152099:internal-dpl-clock]: [20:53:48][STATE] BINDING ---> BOUND
+[3152100:ctp-proxy]: [20:53:48][STATE] BINDING ---> BOUND
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] DEVICE READY ---> INITIALIZING TASK
+[3152099:internal-dpl-clock]: [20:53:48][STATE] BOUND ---> CONNECTING
+[3152099:internal-dpl-clock]: [20:53:48][STATE] CONNECTING ---> DEVICE READY
+[3152100:ctp-proxy]: [20:53:48][STATE] BOUND ---> CONNECTING
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] INITIALIZING TASK ---> READY
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][STATE] READY ---> RUNNING
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][INFO] fair::mq::Device running...
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][INFO] LHCPeriod is not available, using current month NOV
+[3152101:internal-dpl-injected-dummy-sink]: [20:53:48][INFO] Correctly handshaken websocket connection.
+[3152099:internal-dpl-clock]: [20:53:48][STATE] DEVICE READY ---> INITIALIZING TASK
+[3152099:internal-dpl-clock]: [20:53:48][STATE] INITIALIZING TASK ---> READY
+[3152099:internal-dpl-clock]: [20:53:48][STATE] READY ---> RUNNING
+[3152099:internal-dpl-clock]: [20:53:48][INFO] fair::mq::Device running...
+[3152099:internal-dpl-clock]: [20:53:48][INFO] LHCPeriod is not available, using current month NOV
+[3152100:ctp-proxy]: [20:53:48][STATE] CONNECTING ---> DEVICE READY
+[3152100:ctp-proxy]: [20:53:48][STATE] DEVICE READY ---> INITIALIZING TASK
+[3152100:ctp-proxy]: [20:53:48][STATE] INITIALIZING TASK ---> READY
+[3152100:ctp-proxy]: [20:53:48][STATE] READY ---> RUNNING
+[3152100:ctp-proxy]: [20:53:48][INFO] fair::mq::Device running...
+[3152100:ctp-proxy]: [20:53:48][INFO] LHCPeriod is not available, using current month NOV
+[3152099:internal-dpl-clock]: [20:53:48][INFO] Correctly handshaken websocket connection.
+[3152100:ctp-proxy]: [20:53:49][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:50][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:51][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:52][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:53][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:53][INFO] received message ctpconfig of size 462
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing message with topic:ctpconfig
+[3152100:ctp-proxy]: [20:53:53][INFO] ctpconfig received
+[3152100:ctp-proxy]: [20:53:53][INFO] Loading run: 1665779790.3506398 run 527345
+[3152100:ctp-proxy]: inp MTVX 3
+[3152100:ctp-proxy]: bcm TOF 100 1288 2476
+[3152100:ctp-proxy]: LTG ft0
+[3152100:ctp-proxy]: LTG fdd
+[3152100:ctp-proxy]: LTG fv0
+[3152100:ctp-proxy]: LTG its
+[3152100:ctp-proxy]: ferst 1
+[3152100:ctp-proxy]: LTG mch
+[3152100:ctp-proxy]: ferst 1
+[3152100:ctp-proxy]: LTG mft
+[3152100:ctp-proxy]: ferst 1
+[3152100:ctp-proxy]: LTG mid
+[3152100:ctp-proxy]: LTG tof
+[3152100:ctp-proxy]: cont
+[3152100:ctp-proxy]: bcm TOF e
+[3152100:ctp-proxy]: LTG tpc
+[3152100:ctp-proxy]: LTG trd
+[3152100:ctp-proxy]: ttc calrate 100
+[3152100:ctp-proxy]: LTG emc
+[3152100:ctp-proxy]: cal ppcal 2953 3012 4000 356399999
+[3152100:ctp-proxy]: LTG phs
+[3152100:ctp-proxy]: LTG cpv
+[3152100:ctp-proxy]: 1 cluster cru ft0 fdd fv0 its mch mft mid tof tpc  
+[3152100:ctp-proxy]: 1 minbias_TVX  3  
+[3152100:ctp-proxy]: 2 cluster trd trd  
+[3152100:ctp-proxy]: 2 minbias_TVX  3  
+[3152100:ctp-proxy]: 3 cluster phscpv phs cpv  
+[3152100:ctp-proxy]: 3 minbias_TVX_L0  103  
+[3152100:ctp-proxy]: 4 cluster emc emc  
+[3152100:ctp-proxy]: 4 minbias_TVX_L0  103  
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: [20:53:53][INFO] Timestamp real time:1668542033084
+[3152100:ctp-proxy]: [20:53:53][INFO] Timestamp file:1665779790350
+[3152100:ctp-proxy]: [20:53:53][INFO] ctpcfg: using ctp time
+[3152100:ctp-proxy]: [20:53:53][INFO] Loading CTP configuration.
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:run 527345 lev:0
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:1
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:inp MTVX 3 lev:1
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:2
+[3152100:ctp-proxy]: [20:53:53][INFO] Input:MTVX index:3
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:bcm TOF 100 1288 2476 lev:2
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:3
+[3152100:ctp-proxy]: [20:53:53][INFO] BC mask added:TOF
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG ft0 lev:3
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:12 FT0
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG fdd lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:14 FDD
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG fv0 lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:13 FV0
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG its lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:0 ITS
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:ferst 1 lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:6
+[3152100:ctp-proxy]: [20:53:53][INFO] LTGitem:ferst 1
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG mch lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:9 MCH
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:ferst 1 lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:6
+[3152100:ctp-proxy]: [20:53:53][INFO] LTGitem:ferst 1
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG mft lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:8 MFT
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:ferst 1 lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:6
+[3152100:ctp-proxy]: [20:53:53][INFO] LTGitem:ferst 1
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG mid lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:10 MID
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG tof lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:3 TOF
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:cont lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:6
+[3152100:ctp-proxy]: [20:53:53][INFO] LTGitem:cont
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:bcm TOF e lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:6
+[3152100:ctp-proxy]: [20:53:53][INFO] LTGitem:bcm TOF e
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG tpc lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:1 TPC
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG trd lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:2 TRD
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:ttc calrate 100 lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:6
+[3152100:ctp-proxy]: [20:53:53][INFO] LTGitem:ttc calrate 100
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG emc lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:6 EMC
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:cal ppcal 2953 3012 4000 356399999 lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:6
+[3152100:ctp-proxy]: [20:53:53][INFO] LTGitem:cal ppcal 2953 3012 4000 356399999
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG phs lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:4 PHS
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:LTG cpv lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:5
+[3152100:ctp-proxy]: [20:53:53][INFO] Detector found:5 CPV
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:1 cluster cru ft0 fdd fv0 its mch mft mid tof tpc lev:6
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:7
+[3152100:ctp-proxy]: [20:53:53][INFO] Cluster:1 cluster cru ft0 fdd fv0 its mch mft mid tof tpc
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:1 minbias_TVX  3 lev:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Class:1 minbias_TVX  3
+[3152100:ctp-proxy]: [20:53:53][INFO] adding input:3
+[3152100:ctp-proxy]: [20:53:53][INFO] input found at:0
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:2 cluster trd trd lev:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:7
+[3152100:ctp-proxy]: [20:53:53][INFO] Cluster:2 cluster trd trd
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:2 minbias_TVX  3 lev:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Class:2 minbias_TVX  3
+[3152100:ctp-proxy]: [20:53:53][INFO] adding input:3
+[3152100:ctp-proxy]: [20:53:53][INFO] input found at:0
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:3 cluster phscpv phs cpv lev:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:7
+[3152100:ctp-proxy]: [20:53:53][INFO] Cluster:3 cluster phscpv phs cpv
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:3 minbias_TVX_L0  103 lev:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Class:3 minbias_TVX_L0  103
+[3152100:ctp-proxy]: [20:53:53][INFO] adding input:103
+[3152100:ctp-proxy]: [20:53:53][INFO] input inderted at:1
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:4 cluster emc emc lev:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:7
+[3152100:ctp-proxy]: [20:53:53][INFO] Cluster:4 cluster emc emc
+[3152100:ctp-proxy]: [20:53:53][INFO] Processing line
+[3152100:ctp-proxy]: [20:53:53][INFO] line:4 minbias_TVX_L0  103 lev:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Level:8
+[3152100:ctp-proxy]: [20:53:53][INFO] Class:4 minbias_TVX_L0  103
+[3152100:ctp-proxy]: [20:53:53][INFO] adding input:103
+[3152100:ctp-proxy]: [20:53:53][INFO] input found at:1
+[3152100:ctp-proxy]: Configuration:
+[3152100:ctp-proxy]:  Version:1
+[3152100:ctp-proxy]: Run:527345 cfg name:CTP BC  masks:
+[3152100:ctp-proxy]: CTP BC mask:TOF: # of active BC:3
+[3152100:ctp-proxy]: CTP inputs:
+[3152100:ctp-proxy]: CTP Input:MTVX Detector:FT0 Level:M Hardware mask:0x4 index:3
+[3152100:ctp-proxy]: CTP Input:0TVX Detector:CTP Level:0 Hardware mask:0x4000000000 index:39
+[3152100:ctp-proxy]: CTP descriptors:
+[3152100:ctp-proxy]: CTP Descriptor:dminbias_TVX Inputs:MTVX 
+[3152100:ctp-proxy]: CTP Descriptor:dminbias_TVX Inputs:MTVX 
+[3152100:ctp-proxy]: CTP Descriptor:dminbias_TVX_L0 Inputs:0TVX 
+[3152100:ctp-proxy]: CTP Descriptor:dminbias_TVX_L0 Inputs:0TVX 
+[3152100:ctp-proxy]: CTP detectors:13
+[3152100:ctp-proxy]: CTP Detector:FT0 HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:FDD HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:FV0 HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:ITS HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:MCH HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:MFT HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:MID HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:TOF HBaccepted:0 Mode:cont FErst:0
+[3152100:ctp-proxy]: CTP Detector:TPC HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:TRD HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:EMC HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:PHS HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP Detector:CPV HBaccepted:0 Mode: FErst:0
+[3152100:ctp-proxy]: CTP clusters:
+[3152100:ctp-proxy]: CTP Cluster:cru ITS TPC TOF MFT MCH MID FT0 FV0 FDD det mask:0b00000000000000000111011100001011  clust index:1
+[3152100:ctp-proxy]: CTP Cluster:trd TRD det mask:0b00000000000000000000000000000100  clust index:2
+[3152100:ctp-proxy]: CTP Cluster:phscpv PHS CPV det mask:0b00000000000000000000000000110000  clust index:3
+[3152100:ctp-proxy]: CTP Cluster:emc EMC det mask:0b00000000000000000000000001000000  clust index:4
+[3152100:ctp-proxy]: CTP classes:
+[3152100:ctp-proxy]: CTP Class:minbias_TVX Hardware mask:2 Cluster index:0 Desc index:0 Downscale:1 BCM: Descriptor:dminbias_TVX Cluster:cru
+[3152100:ctp-proxy]: CTP Class:minbias_TVX Hardware mask:4 Cluster index:1 Desc index:1 Downscale:1 BCM: Descriptor:dminbias_TVX Cluster:trd
+[3152100:ctp-proxy]: CTP Class:minbias_TVX_L0 Hardware mask:8 Cluster index:2 Desc index:2 Downscale:1 BCM: Descriptor:dminbias_TVX_L0 Cluster:phscpv
+[3152100:ctp-proxy]: CTP Class:minbias_TVX_L0 Hardware mask:16 Cluster index:3 Desc index:3 Downscale:1 BCM: Descriptor:dminbias_TVX_L0 Cluster:emc
+[3152100:ctp-proxy]: [20:53:53][INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1668542033-UKfgip, Host: http://ccdb-test.cern.ch:8080
+[3152100:ctp-proxy]: [20:53:53][INFO] CTP config  saved in ccdb:http://ccdb-test.cern.ch:8080 run:527345 tmin:1665779190350 tmax:1666038990350
+[3152100:ctp-proxy]: [20:53:53][INFO] Correctly handshaken websocket connection.
+[3152100:ctp-proxy]: [20:53:54][INFO] ctp-proxy[0]: in: 1 (0.000471 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:55][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:56][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:57][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:58][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:59][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:53:59][INFO] received message sox of size 5475
+[3152100:ctp-proxy]: [20:53:59][INFO] Processing message with topic:sox
+[3152100:ctp-proxy]: [20:53:59][WARN] run keyword not found in SOX
+[3152100:ctp-proxy]: [20:53:59][INFO] SOX received, Run keyword position:5475
+[3152100:ctp-proxy]: [20:53:59][INFO] Processing scalers, all good, time:1665779790.3506398 Fri Oct 14 22:36:30 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:53:59][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:53:59][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:53:59][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:53:59][INFO] Run started:527345
+[3152100:ctp-proxy]: [20:53:59][INFO] Adding scalers for orbit:517959908
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:00][INFO] ctp-proxy[0]: in: 1 (0.005478 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:00][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:00][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:00][INFO] Processing scalers, all good, time:1665779794.1636455 Fri Oct 14 22:36:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:00][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:00][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:00][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:00][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:00][INFO] Adding scalers for orbit:518002789
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:01][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:01][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:01][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:01][INFO] Processing scalers, all good, time:1665779804.163416 Fri Oct 14 22:36:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:01][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:01][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:01][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:01][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:01][INFO] Adding scalers for orbit:518115240
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:02][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:02][INFO] received message ctpd of size 5469
+[3152100:ctp-proxy]: [20:54:02][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:02][INFO] Processing scalers, all good, time:1665779814.1633396 Fri Oct 14 22:36:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:02][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:02][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:02][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:02][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:02][INFO] Adding scalers for orbit:518227695
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:03][INFO] ctp-proxy[0]: in: 1 (0.005473 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:03][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:03][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:03][INFO] Processing scalers, all good, time:1665779824.1634662 Fri Oct 14 22:37:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:03][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:03][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:03][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:03][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:03][INFO] Adding scalers for orbit:518340151
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:04][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:04][INFO] received message ctpd of size 5459
+[3152100:ctp-proxy]: [20:54:04][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:04][INFO] Processing scalers, all good, time:1665779834.163608 Fri Oct 14 22:37:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:04][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:04][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:04][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:04][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:04][INFO] Adding scalers for orbit:518452607
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:05][INFO] ctp-proxy[0]: in: 1 (0.005463 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:05][INFO] received message ctpd of size 5463
+[3152100:ctp-proxy]: [20:54:05][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:05][INFO] Processing scalers, all good, time:1665779844.1634579 Fri Oct 14 22:37:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:05][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:05][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:05][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:05][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:05][INFO] Adding scalers for orbit:518565061
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:06][INFO] ctp-proxy[0]: in: 1 (0.005467 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:06][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:06][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:06][INFO] Processing scalers, all good, time:1665779854.1636512 Fri Oct 14 22:37:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:06][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:06][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:06][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:06][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:06][INFO] Adding scalers for orbit:518677519
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:07][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:07][INFO] received message ctpd of size 5460
+[3152100:ctp-proxy]: [20:54:07][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:07][INFO] Processing scalers, all good, time:1665779864.163685 Fri Oct 14 22:37:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:07][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:07][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:07][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:07][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:07][INFO] Adding scalers for orbit:518789973
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:08][INFO] ctp-proxy[0]: in: 1 (0.005464 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:08][INFO] received message ctpd of size 5346
+[3152100:ctp-proxy]: [20:54:08][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:08][INFO] Processing scalers, all good, time:1665779874.1634207 Fri Oct 14 22:37:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:08][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:08][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:08][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:08][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:08][INFO] Adding scalers for orbit:518902426
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:09][INFO] ctp-proxy[0]: in: 1 (0.00535 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:09][INFO] received message ctpd of size 5344
+[3152100:ctp-proxy]: [20:54:09][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:09][INFO] Processing scalers, all good, time:1665779884.1633534 Fri Oct 14 22:38:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:09][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:09][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:09][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:09][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:09][INFO] Adding scalers for orbit:519014881
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:10][INFO] ctp-proxy[0]: in: 1 (0.005348 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:10][INFO] received message ctpd of size 5355
+[3152100:ctp-proxy]: [20:54:10][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:10][INFO] Processing scalers, all good, time:1665779894.1636467 Fri Oct 14 22:38:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:10][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:10][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:10][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:10][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:10][INFO] Adding scalers for orbit:519127338
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:11][INFO] ctp-proxy[0]: in: 1 (0.005359 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:11][INFO] received message ctpd of size 5470
+[3152100:ctp-proxy]: [20:54:11][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:11][INFO] Processing scalers, all good, time:1665779904.1633513 Fri Oct 14 22:38:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:11][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:11][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:11][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:11][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:11][INFO] Adding scalers for orbit:519239790
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:12][INFO] ctp-proxy[0]: in: 1 (0.005474 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:12][INFO] received message ctpd of size 5468
+[3152100:ctp-proxy]: [20:54:12][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:12][INFO] Processing scalers, all good, time:1665779914.163525 Fri Oct 14 22:38:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:12][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:12][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:12][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:12][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:12][INFO] Adding scalers for orbit:519352247
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:13][INFO] ctp-proxy[0]: in: 1 (0.005472 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:13][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:13][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:13][INFO] Processing scalers, all good, time:1665779924.1636035 Fri Oct 14 22:38:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:13][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:13][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:13][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:13][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:13][INFO] Adding scalers for orbit:519464702
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:14][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:14][INFO] received message ctpd of size 5470
+[3152100:ctp-proxy]: [20:54:14][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:14][INFO] Processing scalers, all good, time:1665779934.1633747 Fri Oct 14 22:38:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:14][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:14][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:14][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:14][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:14][INFO] Adding scalers for orbit:519577155
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:15][INFO] ctp-proxy[0]: in: 1 (0.005474 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:15][INFO] received message ctpd of size 5459
+[3152100:ctp-proxy]: [20:54:15][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:15][INFO] Processing scalers, all good, time:1665779944.1632957 Fri Oct 14 22:39:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:15][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:15][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:15][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:15][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:15][INFO] Adding scalers for orbit:519689609
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:16][INFO] ctp-proxy[0]: in: 1 (0.005463 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:16][INFO] received message ctpd of size 5459
+[3152100:ctp-proxy]: [20:54:16][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:16][INFO] Processing scalers, all good, time:1665779954.1635268 Fri Oct 14 22:39:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:16][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:16][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:16][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:16][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:16][INFO] Adding scalers for orbit:519802067
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:17][INFO] ctp-proxy[0]: in: 1 (0.005463 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:17][INFO] received message ctpd of size 5466
+[3152100:ctp-proxy]: [20:54:17][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:17][INFO] Processing scalers, all good, time:1665779964.1633623 Fri Oct 14 22:39:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:17][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:17][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:17][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:17][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:17][INFO] Adding scalers for orbit:519914521
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:18][INFO] ctp-proxy[0]: in: 1 (0.00547 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:18][INFO] received message ctpd of size 5454
+[3152100:ctp-proxy]: [20:54:18][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:18][INFO] Processing scalers, all good, time:1665779974.163566 Fri Oct 14 22:39:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:18][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:18][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:18][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:18][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:18][INFO] Adding scalers for orbit:520026978
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:19][INFO] ctp-proxy[0]: in: 1 (0.005458 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:19][INFO] received message ctpd of size 5343
+[3152100:ctp-proxy]: [20:54:19][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:19][INFO] Processing scalers, all good, time:1665779984.1633937 Fri Oct 14 22:39:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:19][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:19][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:19][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:19][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:19][INFO] Adding scalers for orbit:520139431
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:20][INFO] ctp-proxy[0]: in: 1 (0.005347 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:20][INFO] received message ctpd of size 5342
+[3152100:ctp-proxy]: [20:54:20][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:20][INFO] Processing scalers, all good, time:1665779994.163523 Fri Oct 14 22:39:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:20][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:20][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:20][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:20][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:20][INFO] Adding scalers for orbit:520251889
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:21][INFO] ctp-proxy[0]: in: 1 (0.005346 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:21][INFO] received message ctpd of size 5469
+[3152100:ctp-proxy]: [20:54:21][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:21][INFO] Processing scalers, all good, time:1665780004.1634574 Fri Oct 14 22:40:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:21][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:21][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:21][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:21][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:21][INFO] Adding scalers for orbit:520364342
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:22][INFO] ctp-proxy[0]: in: 1 (0.005473 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:22][INFO] received message ctpd of size 5466
+[3152100:ctp-proxy]: [20:54:22][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:22][INFO] Processing scalers, all good, time:1665780014.1634188 Fri Oct 14 22:40:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:22][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:22][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:22][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:22][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:22][INFO] Adding scalers for orbit:520476795
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:23][INFO] ctp-proxy[0]: in: 1 (0.00547 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:23][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:23][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:23][INFO] Processing scalers, all good, time:1665780024.1635504 Fri Oct 14 22:40:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:23][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:23][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:23][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:23][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:23][INFO] Adding scalers for orbit:520589251
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:24][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:24][INFO] received message ctpd of size 5465
+[3152100:ctp-proxy]: [20:54:24][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:24][INFO] Processing scalers, all good, time:1665780034.163691 Fri Oct 14 22:40:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:24][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:24][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:24][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:24][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:24][INFO] Adding scalers for orbit:520701709
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:25][INFO] ctp-proxy[0]: in: 1 (0.005469 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:25][INFO] received message ctpd of size 5440
+[3152100:ctp-proxy]: [20:54:25][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:25][INFO] Processing scalers, all good, time:1665780044.163643 Fri Oct 14 22:40:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:25][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:25][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:25][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:25][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:25][INFO] Adding scalers for orbit:520814163
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:26][INFO] ctp-proxy[0]: in: 1 (0.005444 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:26][INFO] received message ctpd of size 5458
+[3152100:ctp-proxy]: [20:54:26][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:26][INFO] Processing scalers, all good, time:1665780054.1634202 Fri Oct 14 22:40:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:26][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:26][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:26][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:26][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:26][INFO] Adding scalers for orbit:520926615
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:27][INFO] ctp-proxy[0]: in: 1 (0.005462 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:27][INFO] received message ctpd of size 5451
+[3152100:ctp-proxy]: [20:54:27][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:27][INFO] Processing scalers, all good, time:1665780064.1634247 Fri Oct 14 22:41:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:27][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:27][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:27][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:27][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:27][INFO] Adding scalers for orbit:521039071
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:28][INFO] ctp-proxy[0]: in: 1 (0.005455 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:28][INFO] received message ctpd of size 5470
+[3152100:ctp-proxy]: [20:54:28][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:28][INFO] Processing scalers, all good, time:1665780074.1635952 Fri Oct 14 22:41:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:28][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:28][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:28][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:28][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:28][INFO] Adding scalers for orbit:521151528
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:29][INFO] ctp-proxy[0]: in: 1 (0.005474 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:29][INFO] received message ctpd of size 5107
+[3152100:ctp-proxy]: [20:54:29][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:29][INFO] Processing scalers, all good, time:1665780084.1636784 Fri Oct 14 22:41:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:29][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:29][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:29][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:29][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:29][INFO] Adding scalers for orbit:521263983
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:30][INFO] ctp-proxy[0]: in: 1 (0.005111 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:30][INFO] received message ctpd of size 5345
+[3152100:ctp-proxy]: [20:54:30][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:30][INFO] Processing scalers, all good, time:1665780094.163424 Fri Oct 14 22:41:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:30][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:30][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:30][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:30][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:30][INFO] Adding scalers for orbit:521376436
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:31][INFO] ctp-proxy[0]: in: 1 (0.005349 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:31][INFO] received message ctpd of size 5354
+[3152100:ctp-proxy]: [20:54:31][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:31][INFO] Processing scalers, all good, time:1665780104.1637502 Fri Oct 14 22:41:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:31][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:31][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:31][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:31][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:31][INFO] Adding scalers for orbit:521488895
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:32][INFO] ctp-proxy[0]: in: 1 (0.005358 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:32][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:32][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:32][INFO] Processing scalers, all good, time:1665780114.1635203 Fri Oct 14 22:41:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:32][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:32][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:32][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:32][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:32][INFO] Adding scalers for orbit:521601346
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:33][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:33][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:33][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:33][INFO] Processing scalers, all good, time:1665780124.1636033 Fri Oct 14 22:42:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:33][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:33][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:33][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:33][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:33][INFO] Adding scalers for orbit:521713804
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:34][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:34][INFO] received message ctpd of size 5469
+[3152100:ctp-proxy]: [20:54:34][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:34][INFO] Processing scalers, all good, time:1665780134.1635852 Fri Oct 14 22:42:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:34][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:34][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:34][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:34][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:34][INFO] Adding scalers for orbit:521826258
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:35][INFO] ctp-proxy[0]: in: 1 (0.005473 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:35][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:54:35][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:35][INFO] Processing scalers, all good, time:1665780144.1637206 Fri Oct 14 22:42:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:35][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:35][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:35][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:35][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:35][INFO] Adding scalers for orbit:521938714
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:36][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:36][INFO] received message ctpd of size 5455
+[3152100:ctp-proxy]: [20:54:36][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:36][INFO] Processing scalers, all good, time:1665780154.1637542 Fri Oct 14 22:42:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:36][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:36][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:36][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:36][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:36][INFO] Adding scalers for orbit:522051170
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:37][INFO] ctp-proxy[0]: in: 1 (0.005459 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:37][INFO] received message ctpd of size 5460
+[3152100:ctp-proxy]: [20:54:37][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:37][INFO] Processing scalers, all good, time:1665780164.1636677 Fri Oct 14 22:42:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:37][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:37][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:37][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:37][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:37][INFO] Adding scalers for orbit:522163623
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:38][INFO] ctp-proxy[0]: in: 1 (0.005464 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:38][INFO] received message ctpd of size 5456
+[3152100:ctp-proxy]: [20:54:38][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:38][INFO] Processing scalers, all good, time:1665780174.1633139 Fri Oct 14 22:42:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:38][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:38][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:38][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:38][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:38][INFO] Adding scalers for orbit:522276076
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:39][INFO] ctp-proxy[0]: in: 1 (0.00546 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:39][INFO] received message ctpd of size 5459
+[3152100:ctp-proxy]: [20:54:39][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:39][INFO] Processing scalers, all good, time:1665780184.1634727 Fri Oct 14 22:43:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:39][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:39][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:39][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:39][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:39][INFO] Adding scalers for orbit:522388532
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:40][INFO] ctp-proxy[0]: in: 1 (0.005463 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:40][INFO] received message ctpd of size 5346
+[3152100:ctp-proxy]: [20:54:40][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:40][INFO] Processing scalers, all good, time:1665780194.163522 Fri Oct 14 22:43:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:40][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:40][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:40][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:40][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:40][INFO] Adding scalers for orbit:522500987
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:41][INFO] ctp-proxy[0]: in: 1 (0.00535 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:41][INFO] received message ctpd of size 5347
+[3152100:ctp-proxy]: [20:54:41][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:41][INFO] Processing scalers, all good, time:1665780204.1635418 Fri Oct 14 22:43:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:41][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:41][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:41][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:41][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:41][INFO] Adding scalers for orbit:522613442
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:42][INFO] ctp-proxy[0]: in: 1 (0.005351 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:42][INFO] received message ctpd of size 5353
+[3152100:ctp-proxy]: [20:54:42][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:42][INFO] Processing scalers, all good, time:1665780214.1637354 Fri Oct 14 22:43:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:42][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:42][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:42][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:42][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:42][INFO] Adding scalers for orbit:522725900
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:43][INFO] ctp-proxy[0]: in: 1 (0.005357 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:43][INFO] received message ctpd of size 5466
+[3152100:ctp-proxy]: [20:54:43][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:43][INFO] Processing scalers, all good, time:1665780224.163646 Fri Oct 14 22:43:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:43][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:43][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:43][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:43][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:43][INFO] Adding scalers for orbit:522838354
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:44][INFO] ctp-proxy[0]: in: 1 (0.00547 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:44][INFO] received message ctpd of size 5465
+[3152100:ctp-proxy]: [20:54:44][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:44][INFO] Processing scalers, all good, time:1665780234.1634817 Fri Oct 14 22:43:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:44][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:44][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:44][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:44][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:44][INFO] Adding scalers for orbit:522950807
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:45][INFO] ctp-proxy[0]: in: 1 (0.005469 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:45][INFO] received message ctpd of size 5467
+[3152100:ctp-proxy]: [20:54:45][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:45][INFO] Processing scalers, all good, time:1665780244.1634982 Fri Oct 14 22:44:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:45][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:45][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:45][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:45][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:45][INFO] Adding scalers for orbit:523063262
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:46][INFO] ctp-proxy[0]: in: 1 (0.005471 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:46][INFO] received message ctpd of size 5470
+[3152100:ctp-proxy]: [20:54:46][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:46][INFO] Processing scalers, all good, time:1665780254.1635313 Fri Oct 14 22:44:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:46][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:46][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:46][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:46][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:46][INFO] Adding scalers for orbit:523175717
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:47][INFO] ctp-proxy[0]: in: 1 (0.005474 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:47][INFO] received message ctpd of size 5458
+[3152100:ctp-proxy]: [20:54:47][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:47][INFO] Processing scalers, all good, time:1665780264.1635432 Fri Oct 14 22:44:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:47][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:47][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:47][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:47][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:47][INFO] Adding scalers for orbit:523288172
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:48][INFO] ctp-proxy[0]: in: 1 (0.005462 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:48][INFO] received message ctpd of size 5457
+[3152100:ctp-proxy]: [20:54:48][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:48][INFO] Processing scalers, all good, time:1665780274.1635866 Fri Oct 14 22:44:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:48][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:48][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:48][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:48][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:48][INFO] Adding scalers for orbit:523400629
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:49][INFO] ctp-proxy[0]: in: 1 (0.005461 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:49][INFO] received message ctpd of size 5469
+[3152100:ctp-proxy]: [20:54:49][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:49][INFO] Processing scalers, all good, time:1665780284.1635437 Fri Oct 14 22:44:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:49][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:49][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:49][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:49][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:49][INFO] Adding scalers for orbit:523513083
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:50][INFO] ctp-proxy[0]: in: 1 (0.005473 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:50][INFO] received message ctpd of size 5449
+[3152100:ctp-proxy]: [20:54:50][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:50][INFO] Processing scalers, all good, time:1665780294.16366 Fri Oct 14 22:44:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:50][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:50][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:50][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:50][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:50][INFO] Adding scalers for orbit:523625539
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:51][INFO] ctp-proxy[0]: in: 1 (0.005453 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:51][INFO] received message ctpd of size 5339
+[3152100:ctp-proxy]: [20:54:51][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:51][INFO] Processing scalers, all good, time:1665780304.163557 Fri Oct 14 22:45:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:51][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:51][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:51][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:51][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:51][INFO] Adding scalers for orbit:523737993
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:52][INFO] ctp-proxy[0]: in: 1 (0.005343 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:52][INFO] received message ctpd of size 5344
+[3152100:ctp-proxy]: [20:54:52][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:52][INFO] Processing scalers, all good, time:1665780314.1635466 Fri Oct 14 22:45:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:52][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:52][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:52][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:52][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:52][INFO] Adding scalers for orbit:523850448
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:53][INFO] ctp-proxy[0]: in: 1 (0.005348 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:53][INFO] received message ctpd of size 5467
+[3152100:ctp-proxy]: [20:54:53][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:53][INFO] Processing scalers, all good, time:1665780324.163568 Fri Oct 14 22:45:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:53][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:53][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:53][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:53][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:53][INFO] Adding scalers for orbit:523962903
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:54][INFO] ctp-proxy[0]: in: 1 (0.005471 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:54][INFO] received message ctpd of size 5468
+[3152100:ctp-proxy]: [20:54:54][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:54][INFO] Processing scalers, all good, time:1665780334.1635373 Fri Oct 14 22:45:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:54][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:54][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:54][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:54][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:54][INFO] Adding scalers for orbit:524075363
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:55][INFO] ctp-proxy[0]: in: 1 (0.005472 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:55][INFO] received message ctpd of size 5467
+[3152100:ctp-proxy]: [20:54:55][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:55][INFO] Processing scalers, all good, time:1665780344.163452 Fri Oct 14 22:45:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:55][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:55][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:55][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:55][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:55][INFO] Adding scalers for orbit:524187816
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:56][INFO] ctp-proxy[0]: in: 1 (0.005471 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:56][INFO] received message ctpd of size 5466
+[3152100:ctp-proxy]: [20:54:56][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:56][INFO] Processing scalers, all good, time:1665780354.163324 Fri Oct 14 22:45:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:56][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:56][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:56][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:56][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:56][INFO] Adding scalers for orbit:524300270
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:57][INFO] ctp-proxy[0]: in: 1 (0.00547 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:57][INFO] received message ctpd of size 5467
+[3152100:ctp-proxy]: [20:54:57][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:57][INFO] Processing scalers, all good, time:1665780364.16337 Fri Oct 14 22:46:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:57][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:57][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:57][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:57][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:57][INFO] Adding scalers for orbit:524412725
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:58][INFO] ctp-proxy[0]: in: 1 (0.005471 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:58][INFO] received message ctpd of size 5455
+[3152100:ctp-proxy]: [20:54:58][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:58][INFO] Processing scalers, all good, time:1665780374.1633248 Fri Oct 14 22:46:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:58][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:58][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:58][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:58][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:58][INFO] Adding scalers for orbit:524525180
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:54:59][INFO] ctp-proxy[0]: in: 1 (0.005459 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:54:59][INFO] received message ctpd of size 5448
+[3152100:ctp-proxy]: [20:54:59][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:54:59][INFO] Processing scalers, all good, time:1665780384.163491 Fri Oct 14 22:46:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:54:59][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:54:59][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:54:59][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:54:59][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:54:59][INFO] Adding scalers for orbit:524637636
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:00][INFO] ctp-proxy[0]: in: 1 (0.005452 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:00][INFO] received message ctpd of size 5464
+[3152100:ctp-proxy]: [20:55:00][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:00][INFO] Processing scalers, all good, time:1665780394.1634476 Fri Oct 14 22:46:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:00][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:00][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:00][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:00][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:00][INFO] Adding scalers for orbit:524750092
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:01][INFO] ctp-proxy[0]: in: 1 (0.005468 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:01][INFO] received message ctpd of size 5453
+[3152100:ctp-proxy]: [20:55:01][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:01][INFO] Processing scalers, all good, time:1665780404.1632895 Fri Oct 14 22:46:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:01][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:01][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:01][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:01][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:01][INFO] Adding scalers for orbit:524862544
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:02][INFO] ctp-proxy[0]: in: 1 (0.005457 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:02][INFO] received message ctpd of size 5343
+[3152100:ctp-proxy]: [20:55:02][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:02][INFO] Processing scalers, all good, time:1665780414.163599 Fri Oct 14 22:46:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:02][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:02][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:02][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:02][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:02][INFO] Adding scalers for orbit:524975003
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:03][INFO] ctp-proxy[0]: in: 1 (0.005347 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:03][INFO] received message ctpd of size 5346
+[3152100:ctp-proxy]: [20:55:03][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:03][INFO] Processing scalers, all good, time:1665780424.1633248 Fri Oct 14 22:47:04 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:03][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:03][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:03][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:03][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:03][INFO] Adding scalers for orbit:525087455
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:04][INFO] ctp-proxy[0]: in: 1 (0.00535 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:04][INFO] received message ctpd of size 5468
+[3152100:ctp-proxy]: [20:55:04][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:04][INFO] Processing scalers, all good, time:1665780434.1634965 Fri Oct 14 22:47:14 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:04][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:04][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:04][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:04][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:04][INFO] Adding scalers for orbit:525199911
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:05][INFO] ctp-proxy[0]: in: 1 (0.005472 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:05][INFO] received message ctpd of size 5465
+[3152100:ctp-proxy]: [20:55:05][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:05][INFO] Processing scalers, all good, time:1665780444.1635144 Fri Oct 14 22:47:24 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:05][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:05][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:05][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:05][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:05][INFO] Adding scalers for orbit:525312367
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:06][INFO] ctp-proxy[0]: in: 1 (0.005469 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:06][INFO] received message ctpd of size 5476
+[3152100:ctp-proxy]: [20:55:06][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:06][INFO] Processing scalers, all good, time:1665780454.1633594 Fri Oct 14 22:47:34 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:06][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:06][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:06][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:06][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:06][INFO] Adding scalers for orbit:525424821
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:07][INFO] ctp-proxy[0]: in: 1 (0.00548 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:07][INFO] received message ctpd of size 5471
+[3152100:ctp-proxy]: [20:55:07][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:07][INFO] Processing scalers, all good, time:1665780464.1633208 Fri Oct 14 22:47:44 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:07][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:07][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:07][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:07][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:07][INFO] Adding scalers for orbit:525537274
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:08][INFO] ctp-proxy[0]: in: 1 (0.005475 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:08][INFO] received message ctpd of size 5447
+[3152100:ctp-proxy]: [20:55:08][INFO] Processing message with topic:ctpd
+[3152100:ctp-proxy]: [20:55:08][INFO] Processing scalers, all good, time:1665780474.1634161 Fri Oct 14 22:47:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:08][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:08][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:08][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:08][INFO] Run continue:527345
+[3152100:ctp-proxy]: [20:55:08][INFO] Adding scalers for orbit:525649731
+[3152100:ctp-proxy]: Active runs:0 527345 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:09][INFO] ctp-proxy[0]: in: 1 (0.005451 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:09][INFO] received message eox of size 5455
+[3152100:ctp-proxy]: [20:55:09][INFO] Processing message with topic:eox
+[3152100:ctp-proxy]: [20:55:09][INFO] EOX received
+[3152100:ctp-proxy]: [20:55:09][INFO] Processing scalers, all good, time:1665780474.478009 Fri Oct 14 22:47:54 2022
+[3152100:ctp-proxy]: 
+[3152100:ctp-proxy]: 527286 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+[3152100:ctp-proxy]: [20:55:09][INFO] Counter size:1072
+[3152100:ctp-proxy]: [20:55:09][INFO] Run started:527286
+[3152100:ctp-proxy]: [20:55:09][ERROR] Trying to start run which is not loaded:527286
+[3152100:ctp-proxy]: [20:55:09][INFO] Run stopped:527345
+[3152100:ctp-proxy]: [20:55:09][INFO] Adding scalers for orbit:525653273
+[3152100:ctp-proxy]: [20:55:09][INFO] Stopping run index: 1
+[3152100:ctp-proxy]: [20:55:09][INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1668542109-u3qmc6, Host: http://ccdb-test.cern.ch:8080
+[3152100:ctp-proxy]: [20:55:09][INFO] CTP scalers saved in ccdb:http://ccdb-test.cern.ch:8080 run:527345 tmin:1665779190350 tmax:1666039674000
+[3152100:ctp-proxy]: Active runs:0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  #loaded runs:0
+[3152100:ctp-proxy]: [20:55:10][INFO] ctp-proxy[0]: in: 1 (0.005458 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:11][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:12][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:13][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:14][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:15][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:16][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:17][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:18][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:19][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:20][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:21][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152100:ctp-proxy]: [20:55:21][INFO] Received device shutdown request (signal 2).
+[3152100:ctp-proxy]: [20:55:21][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[INFO] QUIT_REQUESTED
+[3152099:internal-dpl-clock]: [20:55:21][INFO] Received device shutdown request (signal 2).
+[3152099:internal-dpl-clock]: [20:55:21][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[3152100:ctp-proxy]: [20:55:21][INFO] ctp-proxy[0]: in: 0 (0 MB) out: 0 (0 MB)
+[3152099:internal-dpl-clock]: [20:55:21][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[3152099:internal-dpl-clock]: [20:55:21][STATE] RUNNING ---> READY
+[3152099:internal-dpl-clock]: [20:55:21][STATE] READY ---> RESETTING TASK
+[3152099:internal-dpl-clock]: [20:55:21][STATE] RESETTING TASK ---> DEVICE READY
+[3152099:internal-dpl-clock]: [20:55:21][STATE] DEVICE READY ---> RESETTING DEVICE
+[3152100:ctp-proxy]: [20:55:21][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[3152099:internal-dpl-clock]: [20:55:21][STATE] RESETTING DEVICE ---> IDLE
+[3152099:internal-dpl-clock]: [20:55:21][STATE] IDLE ---> EXITING
+[3152099:internal-dpl-clock]: [20:55:21][STATE] Exiting FairMQ state machine
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][INFO] Received device shutdown request (signal 15).
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][STATE] RUNNING ---> READY
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][STATE] READY ---> RESETTING TASK
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][STATE] RESETTING TASK ---> DEVICE READY
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][STATE] DEVICE READY ---> RESETTING DEVICE
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][STATE] RESETTING DEVICE ---> IDLE
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][STATE] IDLE ---> EXITING
+[3152101:internal-dpl-injected-dummy-sink]: [20:55:21][STATE] Exiting FairMQ state machine
+[3152100:ctp-proxy]: [20:55:21][STATE] RUNNING ---> READY
+[3152100:ctp-proxy]: [20:55:21][STATE] READY ---> RESETTING TASK
+[3152100:ctp-proxy]: [20:55:21][STATE] RESETTING TASK ---> DEVICE READY
+[3152100:ctp-proxy]: [20:55:21][STATE] DEVICE READY ---> RESETTING DEVICE
+[3152100:ctp-proxy]: [20:55:21][INFO] Cleaning up for shared memory id '808efa49'...
+[3152100:ctp-proxy]: [20:55:21][INFO] Found 0 unmanaged regions...
+[3152100:ctp-proxy]: [20:55:21][INFO] Found 1 managed segments...
+[3152100:ctp-proxy]: [20:55:21][INFO] Successfully removed 'fmq_808efa49_m_0'.
+[3152100:ctp-proxy]: [20:55:21][INFO] Successfully removed 'fmq_808efa49_mng'.
+[3152100:ctp-proxy]: [20:55:22][STATE] RESETTING DEVICE ---> IDLE
+[3152100:ctp-proxy]: [20:55:22][STATE] IDLE ---> EXITING
+[3152100:ctp-proxy]: [20:55:22][STATE] Exiting FairMQ state machine
+[INFO] Dumping used configuration in dpl-config.json

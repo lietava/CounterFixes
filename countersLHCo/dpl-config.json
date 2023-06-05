@@ -1,0 +1,13 @@
+{
+    "internal-dpl-clock": "",
+    "ctp-proxy": {
+        "ready-state-policy": "keep",
+        "channel-config": "name=ctp-proxy,type=sub,method=connect,address=tcp:\/\/188.184.30.57:5556,rateLogging=10,transport=zeromq",
+        "orbit-offset-enumeration": "0",
+        "orbit-multiplier-enumeration": "0",
+        "start-value-enumeration": "0",
+        "end-value-enumeration": "-1",
+        "step-value-enumeration": "1"
+    },
+    "internal-dpl-injected-dummy-sink": ""
+}
