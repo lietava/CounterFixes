@@ -9,7 +9,9 @@
 #include <string>
 #include <map>
 #include <iostream>
-#include "TFile.h"
+#include <cstdio>
+#include <TSystem.h>
+#include <TFile.h>
 #endif
 using namespace o2::ctp;
 int readFile(std::vector<int>& runs, std::vector<long>& startTS, std::vector<long>& stopTS, std::vector<uint32_t>& count)
@@ -23,10 +25,10 @@ int readFile(std::vector<int>& runs, std::vector<long>& startTS, std::vector<lon
       TString tline(line);
       TObjArray *items = tline.Tokenize("\tab");
       int size = items->GetEntriesFast();
-      std::cout << "size:" << size << std::endl;
+      //std::cout << "size:" << size << std::endl;
       for(int i = 0; i < size; i++) {
 	 TString ss = ((TObjString*)items->At(i))->String();     
-	 std::cout << i << " ss:" << ss << std::endl;
+	 //std::cout << i << " ss:" << ss << std::endl;
       }
       if(size) {
         TString ss = ((TObjString*)items->At(0))->String();
@@ -42,12 +44,27 @@ int readFile(std::vector<int>& runs, std::vector<long>& startTS, std::vector<lon
    }
    return 0;
 }
-void create() 
+int prepareUpload(std::vector<int>& runs, std::vector<long>& startTS, std::vector<long>& stopTS)
 {
    using namespace std::chrono_literals;
    std::chrono::seconds min5 = 300s;
    long time5min = std::chrono::duration_cast<std::chrono::milliseconds>(min5).count();
-   //	
+   FILE *fptr = fopen("command.txt", "w");
+   // 
+   int i = 0;
+   for(auto const& run: runs) {
+    long start = startTS[i] - time5min;
+    long end = stopTS[i] + time5min;    
+    printf("o2-ccdb-upload -f %d.root --starttimestamp %ld --endtimestamp %ld  -k \"CTPRunScalers\" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m \"JIRA=O2-3684;runNumber=%d\"\n", run, start, end, run);
+    fprintf(fptr, "o2-ccdb-upload -f %d.root --starttimestamp %ld --endtimestamp %ld  -k \"CTPRunScalers\" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m \"JIRA=O2-3684;runNumber=%d\"\n", run, start, end, run);
+    i++;
+   }
+   fclose(fptr);
+   return 0;
+}
+void create() 
+{
+    //	
    std::vector<int> runs;
    std::vector<uint32_t> count;
    std::vector<long> startTS;
@@ -64,13 +81,13 @@ void create()
       // 1st scaler record
       CTPScalerRecordRaw screc0;
       screc0.intRecord = ir0;
-      screc0.epochTime = (double_t) (startTS[i] - time5min);
+      screc0.epochTime = (double_t) (startTS[i]);
       screc0.scalers.push_back(sc0);
       //  2nd = last scaler record
       CTPScalerRecordRaw screc;
       uint32_t orbit = stopTS[i]/88e-6;
       screc.intRecord = {0,orbit};
-      screc.epochTime = (double_t) (stopTS[i] + time5min);
+      screc.epochTime = (double_t) (stopTS[i]);
       screc.scalers.push_back(sc);
       // Full scalers consisting of two records
       CTPRunScalers runsc;
@@ -84,4 +101,5 @@ void create()
       i++;
       //if(i == 1) break;
    }
+   prepareUpload(runs,startTS,stopTS);
 }
