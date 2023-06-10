@@ -34,13 +34,14 @@ int readFile(std::vector<int>& runs, std::vector<long>& startTS, std::vector<lon
         TString ss = ((TObjString*)items->At(0))->String();
         runs.push_back(ss.Atoi());
         ss = ((TObjString*)items->At(2))->String();
-        startTS.push_back(ss.Atoi());
+        startTS.push_back(ss.Atoll());
         ss = ((TObjString*)items->At(3))->String();
-        stopTS.push_back(ss.Atoi());
+        stopTS.push_back(ss.Atoll());
         ss = ((TObjString*)items->At(4))->String();
 	//std::cout << ss << " " << ss.Atoi() << std::endl;
         count.push_back(ss.Atoi());
       }     
+
    }
    return 0;
 }

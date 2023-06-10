@@ -1,4 +1,4 @@
-o2-ccdb-upload -f 518541.root --starttimestamp 1552302322 --endtimestamp 1554255040  -k "CTPRunScalers" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m "JIRA=O2-3684;runNumber=518541"
-o2-ccdb-upload -f 518543.root --starttimestamp 1554723303 --endtimestamp 1556404618  -k "CTPRunScalers" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m "JIRA=O2-3684;runNumber=518543"
-o2-ccdb-upload -f 518546.root --starttimestamp 1556841744 --endtimestamp 1559888402  -k "CTPRunScalers" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m "JIRA=O2-3684;runNumber=518546"
-o2-ccdb-upload -f 518547.root --starttimestamp 1559815970 --endtimestamp 1561683837  -k "CTPRunScalers" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m "JIRA=O2-3684;runNumber=518547"
+o2-ccdb-upload -f 518541.root --starttimestamp 1655114711282 --endtimestamp 1655116664000  -k "CTPRunScalers" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m "JIRA=O2-3684;runNumber=518541"
+o2-ccdb-upload -f 518543.root --starttimestamp 1655117132263 --endtimestamp 1655118813578  -k "CTPRunScalers" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m "JIRA=O2-3684;runNumber=518543"
+o2-ccdb-upload -f 518546.root --starttimestamp 1655119250704 --endtimestamp 1655122297362  -k "CTPRunScalers" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m "JIRA=O2-3684;runNumber=518546"
+o2-ccdb-upload -f 518547.root --starttimestamp 1655122224930 --endtimestamp 1655124092797  -k "CTPRunScalers" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m "JIRA=O2-3684;runNumber=518547"
