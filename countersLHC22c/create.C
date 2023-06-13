@@ -14,6 +14,9 @@
 #include <TFile.h>
 #endif
 using namespace o2::ctp;
+
+const double orbitDuration = 88.924596234e-6; 
+
 int readFile(std::vector<int>& runs, std::vector<long>& startTS, std::vector<long>& stopTS, std::vector<uint32_t>& count)
 {
    std::string name = "runs.txt";
@@ -86,7 +89,8 @@ void create()
       screc0.scalers.push_back(sc0);
       //  2nd = last scaler record
       CTPScalerRecordRaw screc;
-      uint32_t orbit = stopTS[i]/88e-6;
+      std::cout << "end orbit --> (stopTS[i] - startTS[i]) * 1e-3 / orbitDuration = " << (stopTS[i] - startTS[i]) * 1e-3 / orbitDuration << std::endl;
+      uint32_t orbit = (stopTS[i] - startTS[i])* 1e-3 / orbitDuration; // start and stop are given in ms
       screc.intRecord = {0,orbit};
       screc.epochTime = (double_t) (stopTS[i]);
       screc.scalers.push_back(sc);
