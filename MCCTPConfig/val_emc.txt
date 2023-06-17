@@ -1,0 +1,314 @@
+pname runn dets: LHC_PP_2023_v5_emc.pd 0 
+BC mask TOF (CTP hw name) ...defined in common section
+trigdb.readtable /home/alice/trigger/DBCTP/bcmasks.cfg 0 1687004419.1866674
+Warning: Mask PP1 in cal cmd not defined before, maybe ok for cal 
+Warning: Mask CAL1 in cal cmd not defined before, maybe ok for cal 
+Processing cluster: ['cluster', 'CRU', 'ft0', 'fdd', 'fv0', 'its', 'mft', 'mid', 'tof', 'tpc', 'zdc']
+appending cluster CRU:['ft0', 'fdd', 'fv0', 'its', 'mft', 'mid', 'tof', 'tpc', 'zdc']
+Processing class: ['CMTVX-NONE-NOPF-CRU', 'MTVX']
+trigdb.readtable /home/alice/trigger/DBCTP/descriptors.cfg 0 1678109700.8336494
+trigdb.readtable /home/alice/trigger/DBCTP/inputs.cfg 0 1680708091.8296032
+Descriptor DMTVX found for inputs , in class CMTVX-NONE-NOPF-CRU 
+selfiline: ['CMTVX-NONE-NOPF-CRU', 'MTVX']
+appending class CMTVX-NONE-NOPF-CRU ['m', '0', None] [] [] [3] []
+Processing cluster: ['cluster', 'TRD', 'trd']
+appending cluster TRD:['trd']
+Processing class: ['CMTVX-A-NOPF-TRD', 'bcmA', 'MTVX']
+Descriptor DMTVX found for inputs , in class CMTVX-A-NOPF-TRD 
+selfiline: ['CMTVX-A-NOPF-TRD', 'MTVX', 'bcmA']
+BCmask bcmA defined in bcmasks.cfg
+appending class CMTVX-A-NOPF-TRD ['m', '0', None] ['bcmA'] [] [3] []
+Processing class: ['CMTVX-B-NOPF-TRD', 'bcmB', 'MTVX']
+Descriptor DMTVX found for inputs , in class CMTVX-B-NOPF-TRD 
+selfiline: ['CMTVX-B-NOPF-TRD', 'MTVX', 'bcmB']
+BCmask bcmB defined in bcmasks.cfg
+appending class CMTVX-B-NOPF-TRD ['m', '0', None] ['bcmB'] [] [3] []
+Processing class: ['CMTVX-C-NOPF-TRD', 'bcmC', 'MTVX']
+Descriptor DMTVX found for inputs , in class CMTVX-C-NOPF-TRD 
+selfiline: ['CMTVX-C-NOPF-TRD', 'MTVX', 'bcmC']
+BCmask bcmC defined in bcmasks.cfg
+appending class CMTVX-C-NOPF-TRD ['m', '0', None] ['bcmC'] [] [3] []
+Processing class: ['CMTVX-E-NOPF-TRD', 'bcmEMPTY', 'MTVX']
+Descriptor DMTVX found for inputs , in class CMTVX-E-NOPF-TRD 
+selfiline: ['CMTVX-E-NOPF-TRD', 'MTVX', 'bcmEMPTY']
+BCmask bcmEMPTY defined in bcmasks.cfg
+appending class CMTVX-E-NOPF-TRD ['m', '0', None] ['bcmEMPTY'] [] [3] []
+Processing cluster: ['cluster', 'PHSCPV', 'phs', 'cpv']
+LTG section phs not defined emu:emu16
+LTG section cpv not defined emu:emu18
+appending cluster PHSCPV:['phs', 'cpv']
+Processing class: ['C0TVX-A-NOPF-PHSCPV', 'bcmA', '0TVX', 'ds_phs']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+Descriptor D0TVX found for inputs , in class C0TVX-A-NOPF-PHSCPV 
+selfiline: ['C0TVX-A-NOPF-PHSCPV', '0TVX', 'bcmA', 'ds_phs']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class C0TVX-A-NOPF-PHSCPV [None, '0', None] ['bcmA'] [] [103] []
+Processing class: ['C0TVX-B-NOPF-PHSCPV', 'bcmB', '0TVX', 'ds_phs']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+Descriptor D0TVX found for inputs , in class C0TVX-B-NOPF-PHSCPV 
+selfiline: ['C0TVX-B-NOPF-PHSCPV', '0TVX', 'bcmB', 'ds_phs']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class C0TVX-B-NOPF-PHSCPV [None, '0', None] ['bcmB'] [] [103] []
+Processing class: ['C0TVX-C-NOPF-PHSCPV', 'bcmC', '0TVX', 'ds_phs']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+Descriptor D0TVX found for inputs , in class C0TVX-C-NOPF-PHSCPV 
+selfiline: ['C0TVX-C-NOPF-PHSCPV', '0TVX', 'bcmC', 'ds_phs']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class C0TVX-C-NOPF-PHSCPV [None, '0', None] ['bcmC'] [] [103] []
+Processing class: ['C0TVX-E-NOPF-PHSCPV', 'bcmEMPTY', '0TVX', 'ds_phs']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+Descriptor D0TVX found for inputs , in class C0TVX-E-NOPF-PHSCPV 
+selfiline: ['C0TVX-E-NOPF-PHSCPV', '0TVX', 'bcmEMPTY', 'ds_phs']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class C0TVX-E-NOPF-PHSCPV [None, '0', None] ['bcmEMPTY'] [] [103] []
+Processing class: ['CTVXPH0-A-NOPF-PHSCPV', 'DTVXPH0', 'bcmA']
+selfiline: ['CTVXPH0-A-NOPF-PHSCPV', '0TVX', '0PH0', 'bcmA']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXPH0-A-NOPF-PHSCPV [None, '0', None] ['bcmA'] [] [103, 22] []
+Processing class: ['CTVXPH0-B-NOPF-PHSCPV', 'DTVXPH0', 'bcmB']
+selfiline: ['CTVXPH0-B-NOPF-PHSCPV', '0TVX', '0PH0', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXPH0-B-NOPF-PHSCPV [None, '0', None] ['bcmB'] [] [103, 22] []
+Processing class: ['CTVXPH0-C-NOPF-PHSCPV', 'DTVXPH0', 'bcmC']
+selfiline: ['CTVXPH0-C-NOPF-PHSCPV', '0TVX', '0PH0', 'bcmC']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXPH0-C-NOPF-PHSCPV [None, '0', None] ['bcmC'] [] [103, 22] []
+Processing class: ['CTVXPH0-E-NOPF-PHSCPV', 'DTVXPH0', 'bcmEMPTY']
+selfiline: ['CTVXPH0-E-NOPF-PHSCPV', '0TVX', '0PH0', 'bcmEMPTY']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXPH0-E-NOPF-PHSCPV [None, '0', None] ['bcmEMPTY'] [] [103, 22] []
+Processing cluster: ['cluster', 'EMC', 'emc']
+appending cluster EMC:['emc']
+Processing class: ['CTVXEMC-A-NOPF-EMC', 'DTVXEMC', 'bcmA']
+selfiline: ['CTVXEMC-A-NOPF-EMC', '0TVX', '0EMC', 'bcmA']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXEMC-A-NOPF-EMC [None, '0', None] ['bcmA'] [] [103, 21] []
+Processing class: ['CTVXEMC-B-NOPF-EMC', 'DTVXEMC', 'bcmB']
+selfiline: ['CTVXEMC-B-NOPF-EMC', '0TVX', '0EMC', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXEMC-B-NOPF-EMC [None, '0', None] ['bcmB'] [] [103, 21] []
+Processing class: ['CTVXEMC-C-NOPF-EMC', 'DTVXEMC', 'bcmC']
+selfiline: ['CTVXEMC-C-NOPF-EMC', '0TVX', '0EMC', 'bcmC']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXEMC-C-NOPF-EMC [None, '0', None] ['bcmC'] [] [103, 21] []
+Processing class: ['CTVXEMC-E-NOPF-EMC', 'DTVXEMC', 'bcmEMPTY']
+selfiline: ['CTVXEMC-E-NOPF-EMC', '0TVX', '0EMC', 'bcmEMPTY']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXEMC-E-NOPF-EMC [None, '0', None] ['bcmEMPTY'] [] [103, 21] []
+Processing class: ['CTVXDMC-A-NOPF-EMC', 'DTVXDMC', 'bcmA']
+selfiline: ['CTVXDMC-A-NOPF-EMC', '0TVX', '0DMC', 'bcmA']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXDMC-A-NOPF-EMC [None, '0', None] ['bcmA'] [] [103, 14] []
+Processing class: ['CTVXDMC-B-NOPF-EMC', 'DTVXDMC', 'bcmB']
+selfiline: ['CTVXDMC-B-NOPF-EMC', '0TVX', '0DMC', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXDMC-B-NOPF-EMC [None, '0', None] ['bcmB'] [] [103, 14] []
+Processing class: ['CTVXDMC-C-NOPF-EMC', 'DTVXDMC', 'bcmC']
+selfiline: ['CTVXDMC-C-NOPF-EMC', '0TVX', '0DMC', 'bcmC']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXDMC-C-NOPF-EMC [None, '0', None] ['bcmC'] [] [103, 14] []
+Processing class: ['CTVXDMC-E-NOPF-EMC', 'DTVXDMC', 'bcmEMPTY']
+selfiline: ['CTVXDMC-E-NOPF-EMC', '0TVX', '0DMC', 'bcmEMPTY']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXDMC-E-NOPF-EMC [None, '0', None] ['bcmEMPTY'] [] [103, 14] []
+Processing class: ['C0TVX-A-NOPF-EMC', 'bcmA', '0TVX', 'ds_emc']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+Descriptor D0TVX found for inputs , in class C0TVX-A-NOPF-EMC 
+selfiline: ['C0TVX-A-NOPF-EMC', '0TVX', 'bcmA', 'ds_emc']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class C0TVX-A-NOPF-EMC [None, '0', None] ['bcmA'] [] [103] []
+Processing class: ['C0TVX-B-NOPF-EMC', 'bcmB', '0TVX', 'ds_emc']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+Descriptor D0TVX found for inputs , in class C0TVX-B-NOPF-EMC 
+selfiline: ['C0TVX-B-NOPF-EMC', '0TVX', 'bcmB', 'ds_emc']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class C0TVX-B-NOPF-EMC [None, '0', None] ['bcmB'] [] [103] []
+Processing class: ['C0TVX-C-NOPF-EMC', 'bcmC', '0TVX', 'ds_emc']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+Descriptor D0TVX found for inputs , in class C0TVX-C-NOPF-EMC 
+selfiline: ['C0TVX-C-NOPF-EMC', '0TVX', 'bcmC', 'ds_emc']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class C0TVX-C-NOPF-EMC [None, '0', None] ['bcmC'] [] [103] []
+Processing class: ['C0TVX-E-NOPF-EMC', 'bcmEMPTY', '0TVX', 'ds_emc']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+Descriptor D0TVX found for inputs , in class C0TVX-E-NOPF-EMC 
+selfiline: ['C0TVX-E-NOPF-EMC', '0TVX', 'bcmEMPTY', 'ds_emc']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class C0TVX-E-NOPF-EMC [None, '0', None] ['bcmEMPTY'] [] [103] []
+Processing class: ['CTVXEMCEG1-B-NOPF-EMC', 'DTVXEMCEG1', 'bcmB']
+selfiline: ['CTVXEMCEG1-B-NOPF-EMC', '0TVX', '0EMC', '1EG1', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXEMCEG1-B-NOPF-EMC [None, '0', '1'] ['bcmB'] [] [103, 21, 39] []
+Processing class: ['CTVXEMCEG2-B-NOPF-EMC', 'DTVXEMCEG2', 'bcmB']
+selfiline: ['CTVXEMCEG2-B-NOPF-EMC', '0TVX', '0EMC', '1EG2', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXEMCEG2-B-NOPF-EMC [None, '0', '1'] ['bcmB'] [] [103, 21, 40] []
+Processing class: ['CTVXEMCEJ1-B-NOPF-EMC', 'DTVXEMCEJ1', 'bcmB']
+selfiline: ['CTVXEMCEJ1-B-NOPF-EMC', '0TVX', '0EMC', '1EJ1', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXEMCEJ1-B-NOPF-EMC [None, '0', '1'] ['bcmB'] [] [103, 21, 37] []
+Processing class: ['CTVXEMCEJ2-B-NOPF-EMC', 'DTVXEMCEJ2', 'bcmB']
+selfiline: ['CTVXEMCEJ2-B-NOPF-EMC', '0TVX', '0EMC', '1EJ2', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXEMCEJ2-B-NOPF-EMC [None, '0', '1'] ['bcmB'] [] [103, 21, 38] []
+Processing class: ['CTVXDMCDG1-B-NOPF-EMC', 'DTVXDMCDG1', 'bcmB']
+selfiline: ['CTVXDMCDG1-B-NOPF-EMC', '0TVX', '0DMC', '1DG1', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXDMCDG1-B-NOPF-EMC [None, '0', '1'] ['bcmB'] [] [103, 14, 42] []
+Processing class: ['CTVXDMCDG2-B-NOPF-EMC', 'DTVXDMCDG2', 'bcmB']
+selfiline: ['CTVXDMCDG2-B-NOPF-EMC', '0TVX', '0DMC', '1DG2', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXDMCDG2-B-NOPF-EMC [None, '0', '1'] ['bcmB'] [] [103, 14, 44] []
+Processing class: ['CTVXDMCDJ1-B-NOPF-EMC', 'DTVXDMCDJ1', 'bcmB']
+selfiline: ['CTVXDMCDJ1-B-NOPF-EMC', '0TVX', '0DMC', '1DJ1', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXDMCDJ1-B-NOPF-EMC [None, '0', '1'] ['bcmB'] [] [103, 14, 41] []
+Processing class: ['CTVXDMCDJ2-B-NOPF-EMC', 'DTVXDMCDJ2', 'bcmB']
+selfiline: ['CTVXDMCDJ2-B-NOPF-EMC', '0TVX', '0DMC', '1DJ2', 'bcmB']
+Input 0TVX (inputs.cfg: MTVX) used at L0 level
+appending class CTVXDMCDJ2-B-NOPF-EMC [None, '0', '1'] ['bcmB'] [] [103, 14, 43] []
+Processing cluster: ['cluster', 'HMP', 'hmp']
+LTG section hmp not defined emu:emu14
+appending cluster HMP:['hmp']
+Processing class: ['C0TVX-A-NOPF-HMP', 'bcmA', 'MTVX']
+Descriptor DMTVX found for inputs , in class C0TVX-A-NOPF-HMP 
+selfiline: ['C0TVX-A-NOPF-HMP', 'MTVX', 'bcmA']
+appending class C0TVX-A-NOPF-HMP ['m', '0', None] ['bcmA'] [] [3] []
+Processing class: ['C0TVX-B-NOPF-HMP', 'bcmB', 'MTVX']
+Descriptor DMTVX found for inputs , in class C0TVX-B-NOPF-HMP 
+selfiline: ['C0TVX-B-NOPF-HMP', 'MTVX', 'bcmB']
+appending class C0TVX-B-NOPF-HMP ['m', '0', None] ['bcmB'] [] [3] []
+Processing class: ['C0TVX-C-NOPF-HMP', 'bcmC', 'MTVX']
+Descriptor DMTVX found for inputs , in class C0TVX-C-NOPF-HMP 
+selfiline: ['C0TVX-C-NOPF-HMP', 'MTVX', 'bcmC']
+appending class C0TVX-C-NOPF-HMP ['m', '0', None] ['bcmC'] [] [3] []
+Processing class: ['C0TVX-E-NOPF-HMP', 'bcmEMPTY', 'MTVX']
+Descriptor DMTVX found for inputs , in class C0TVX-E-NOPF-HMP 
+selfiline: ['C0TVX-E-NOPF-HMP', 'MTVX', 'bcmEMPTY']
+appending class C0TVX-E-NOPF-HMP ['m', '0', None] ['bcmEMPTY'] [] [3] []
+throwing mask: TOF fixed
+throwing mask: bcmA bcm
+throwing mask: bcmB bcm
+throwing mask: bcmC bcm
+throwing mask: bcmEMPTY bcm
+addPart ctprsrcs.gens: [[None, None, None, None], [None, None, None, None], [None, None, None, None]]
+Resources 0 getResources LHC_PP_2023_v5_emc LTUS:{'ft0': 1, 'fdd': 1, 'fv0': 1, 'its': 1, 'mft': 1, 'mid': 1, 'tof': 1, 'tpc': 1, 'zdc': 1, 'trd': 1, 'phs': 1, 'cpv': 1, 'emc': 1, 'hmp': 1, 'mch': 1}
+  masksN: [bcm,pp,cal,fixed]:[4, 0, 0, 1]
+  #of classes: 37 #of clusters: 5 #SHclusters: 0
+  gensN: [0, 0, 0, 0, 0, 0]
+Resources.check:{'ft0': 1, 'fdd': 1, 'fv0': 1, 'its': 1, 'mft': 1, 'mid': 1, 'tof': 1, 'tpc': 1, 'zdc': 1, 'trd': 1, 'phs': 1, 'cpv': 1, 'emc': 1, 'hmp': 1, 'mch': 1}
+checkrsrcs with ctprsrcs...
+Resources ctp Partition added: LHC_PP_2023_v5_emc LTUS:{'ft0': 1, 'fdd': 1, 'fv0': 1, 'its': 1, 'mft': 1, 'mid': 1, 'tof': 1, 'tpc': 1, 'zdc': 1, 'trd': 1, 'phs': 1, 'cpv': 1, 'emc': 1, 'hmp': 1, 'mch': 1}
+  masksN: [bcm,pp,cal,fixed]:[4, 0, 0, 1]
+  #of classes: 37 #of clusters: 5 #SHclusters: 0
+  gens: [[None, None, None, None], [None, None, None, None], [None, None, None, None]]
+  genUse: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+=== LHC_PP_2023_v5_emc.pd valid (LOADED)
+ver 1
+run 0
+INPUTS
+inp MTVX 3
+inp 0TVX 3
+inp 0PH0 22
+inp 0EMC 21
+inp 0DMC 14
+inp 1EG1 39
+inp 1EG2 40
+inp 1EJ1 37
+inp 1EJ2 38
+inp 1DG1 42
+inp 1DG2 44
+inp 1DJ1 41
+inp 1DJ2 43
+BCMASKS
+bcm TOF 100 1288 2476
+bcm bcmA 394L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H909L
+bcm bcmB 3564L
+bcm bcmC 103L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H1253L1H49L1H79L1H79L1H139L1H79L1H79L1H36L
+bcm bcmEMPTY 2847L1H84L1H631L
+DESCRIPTORS
+DMTVX MTVX
+D0TVX 0TVX
+DTVXPH0 0TVX 0PH0
+DTVXEMC 0TVX 0EMC
+DTVXDMC 0TVX 0DMC
+DTVXEMCEG1 0TVX 0EMC 1EG1
+DTVXEMCEG2 0TVX 0EMC 1EG2
+DTVXEMCEJ1 0TVX 0EMC 1EJ1
+DTVXEMCEJ2 0TVX 0EMC 1EJ2
+DTVXDMCDG1 0TVX 0DMC 1DG1
+DTVXDMCDG2 0TVX 0DMC 1DG2
+DTVXDMCDJ1 0TVX 0DMC 1DJ1
+DTVXDMCDJ2 0TVX 0DMC 1DJ2
+LTG ft0
+LTG fdd
+LTG fv0
+LTG its
+ferst 1
+LTG mch
+ferst 1
+LTG mft
+ferst 1
+LTG mid
+LTG tof
+cont
+bcm TOF e
+LTG tpc
+LTG trd
+ttc calrate 1000
+LTG zdc
+LTG emc
+cal ppcal 2953 3012 8000 268435453
+LTG phs
+LTG cpv
+LTG hmp
+? cluster CRU ft0 fdd fv0 its mft mid tof tpc zdc 
+CMTVX-NONE-NOPF-CRU ? DMTVX CRU {NONE} {} 
+? cluster TRD trd 
+CMTVX-A-NOPF-TRD ? DMTVX TRD {NONE} {bcmA} 
+CMTVX-B-NOPF-TRD ? DMTVX TRD {NONE} {bcmB} 
+CMTVX-C-NOPF-TRD ? DMTVX TRD {NONE} {bcmC} 
+CMTVX-E-NOPF-TRD ? DMTVX TRD {NONE} {bcmEMPTY} 
+? cluster PHSCPV phs cpv 
+C0TVX-A-NOPF-PHSCPV ? D0TVX PHSCPV {NONE} {bcmA} 0x1eb851
+C0TVX-B-NOPF-PHSCPV ? D0TVX PHSCPV {NONE} {bcmB} 0x1eb851
+C0TVX-C-NOPF-PHSCPV ? D0TVX PHSCPV {NONE} {bcmC} 0x1eb851
+C0TVX-E-NOPF-PHSCPV ? D0TVX PHSCPV {NONE} {bcmEMPTY} 0x1eb851
+CTVXPH0-A-NOPF-PHSCPV ? DTVXPH0 PHSCPV {NONE} {bcmA} 
+CTVXPH0-B-NOPF-PHSCPV ? DTVXPH0 PHSCPV {NONE} {bcmB} 
+CTVXPH0-C-NOPF-PHSCPV ? DTVXPH0 PHSCPV {NONE} {bcmC} 
+CTVXPH0-E-NOPF-PHSCPV ? DTVXPH0 PHSCPV {NONE} {bcmEMPTY} 
+? cluster EMC emc 
+CTVXEMC-A-NOPF-EMC ? DTVXEMC EMC {NONE} {bcmA} 
+CTVXEMC-B-NOPF-EMC ? DTVXEMC EMC {NONE} {bcmB} 
+CTVXEMC-C-NOPF-EMC ? DTVXEMC EMC {NONE} {bcmC} 
+CTVXEMC-E-NOPF-EMC ? DTVXEMC EMC {NONE} {bcmEMPTY} 
+CTVXDMC-A-NOPF-EMC ? DTVXDMC EMC {NONE} {bcmA} 
+CTVXDMC-B-NOPF-EMC ? DTVXDMC EMC {NONE} {bcmB} 
+CTVXDMC-C-NOPF-EMC ? DTVXDMC EMC {NONE} {bcmC} 
+CTVXDMC-E-NOPF-EMC ? DTVXDMC EMC {NONE} {bcmEMPTY} 
+C0TVX-A-NOPF-EMC ? D0TVX EMC {NONE} {bcmA} 0x1fae13
+C0TVX-B-NOPF-EMC ? D0TVX EMC {NONE} {bcmB} 0x1fae13
+C0TVX-C-NOPF-EMC ? D0TVX EMC {NONE} {bcmC} 0x1fae13
+C0TVX-E-NOPF-EMC ? D0TVX EMC {NONE} {bcmEMPTY} 0x1fae13
+CTVXEMCEG1-B-NOPF-EMC ? DTVXEMCEG1 EMC {NONE} {bcmB} 
+CTVXEMCEG2-B-NOPF-EMC ? DTVXEMCEG2 EMC {NONE} {bcmB} 
+CTVXEMCEJ1-B-NOPF-EMC ? DTVXEMCEJ1 EMC {NONE} {bcmB} 
+CTVXEMCEJ2-B-NOPF-EMC ? DTVXEMCEJ2 EMC {NONE} {bcmB} 
+CTVXDMCDG1-B-NOPF-EMC ? DTVXDMCDG1 EMC {NONE} {bcmB} 
+CTVXDMCDG2-B-NOPF-EMC ? DTVXDMCDG2 EMC {NONE} {bcmB} 
+CTVXDMCDJ1-B-NOPF-EMC ? DTVXDMCDJ1 EMC {NONE} {bcmB} 
+CTVXDMCDJ2-B-NOPF-EMC ? DTVXDMCDJ2 EMC {NONE} {bcmB} 
+? cluster HMP hmp 
+CMTVX-A-NOPF-HMP ? DMTVX HMP {NONE} {bcmA} 
+CMTVX-B-NOPF-HMP ? DMTVX HMP {NONE} {bcmB} 
+CMTVX-C-NOPF-HMP ? DMTVX HMP {NONE} {bcmC} 
+CMTVX-E-NOPF-HMP ? DMTVX HMP {NONE} {bcmEMPTY} 
+
+
+=== parts resources:
+Resources ctp  LTUS:{'ft0': 1, 'fdd': 1, 'fv0': 1, 'its': 1, 'mft': 1, 'mid': 1, 'tof': 1, 'tpc': 1, 'zdc': 1, 'trd': 1, 'phs': 1, 'cpv': 1, 'emc': 1, 'hmp': 1, 'mch': 1}
+  masksN: [bcm,pp,cal,fixed]:[4, 0, 0, 1]
+  #of classes: 37 #of clusters: 5 #SHclusters: 0
+  gens: [[None, None, None, None], [None, None, None, None], [None, None, None, None]]
+  genUse: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
