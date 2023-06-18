@@ -24,7 +24,7 @@
 #include <iostream>
 #endif
 using namespace o2::ctp;
-CTPConfiguration CreateCTPConfig(std::string cfgRun3str = "LHC_PP_2023_v5_emc.rcfg", int writeToFile = 0)
+CTPConfiguration CreateCTPConfig(std::string cfgRun3str = "LHC_PP_2023_v5_emc.rcfg", uint32_t run = 0, int writeToFile = 0)
 {
   /// Demo configuration
   CTPConfiguration ctpcfg;
@@ -75,6 +75,9 @@ ferst 1 \n\
   }
   //
   ctpcfg.loadConfigurationRun3(cfgRun3str);
+  if(run) {
+     ctpcfg.setRunNumber(run);
+  }
   ctpcfg.printStream(std::cout);
   std::cout << "CTP config done" << std::endl;
   ctpcfg.checkConfigConsistency();
@@ -86,7 +89,8 @@ ferst 1 \n\
     // std::cout << "classmask:" << std::hex << classmask << std::dec << std::endl;
   }
   if (writeToFile == 1) {
-    std::unique_ptr<TFile> myFile(TFile::Open("CTPConfig.root", "RECREATE"));
+    std::string fname = "CTPConfig"+std::to_string(run)+".root";	    
+    std::unique_ptr<TFile> myFile(TFile::Open(fname.c_str(), "RECREATE"));
     myFile->WriteObject(&ctpcfg, "CTPConfig");
     std::cout << "File CTPConfig.root written." << std::endl;
   }

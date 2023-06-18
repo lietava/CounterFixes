@@ -1,0 +1,631 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.28/04                        https://root.cern |
+  | (c) 1995-2022, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Jun 15 2023, 12:12:00                 |
+  | From tags/v6-28-04@v6-28-04                                      |
+  | With c++ (GCC) 12.2.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing CreateCTPConfig.C("LHC_PP_2023_v5_emc.rcfg", 310000,1)...
+[INFO] Loading CTP configuration.
+[INFO] CTP Config vesrion:ver 1
+[INFO] Processing line
+[INFO] line:ver 1 lev:0
+[INFO] Level:1
+[INFO] Processing line
+[INFO] line:run 300000 lev:1
+[INFO] Level:2
+[INFO] Processing line
+[INFO] line:INPUTS lev:2
+[INFO] Processing line
+[INFO] line:inp MTVX 3 lev:3
+[INFO] Level:3
+[INFO] Input:MTVX index:3
+[INFO] Processing line
+[INFO] line:inp 0TVX 3 lev:3
+[INFO] Level:3
+[INFO] Input:0TVX index:3
+[INFO] Processing line
+[INFO] line:inp 0PH0 22 lev:3
+[INFO] Level:3
+[INFO] Input:0PH0 index:22
+[INFO] Processing line
+[INFO] line:inp 0EMC 21 lev:3
+[INFO] Level:3
+[INFO] Input:0EMC index:21
+[INFO] Processing line
+[INFO] line:inp 0DMC 14 lev:3
+[INFO] Level:3
+[INFO] Input:0DMC index:14
+[INFO] Processing line
+[INFO] line:inp 1EG1 39 lev:3
+[INFO] Level:3
+[INFO] Input:1EG1 index:39
+[INFO] Processing line
+[INFO] line:inp 1EG2 40 lev:3
+[INFO] Level:3
+[INFO] Input:1EG2 index:40
+[INFO] Processing line
+[INFO] line:inp 1EJ1 37 lev:3
+[INFO] Level:3
+[INFO] Input:1EJ1 index:37
+[INFO] Processing line
+[INFO] line:inp 1EJ2 38 lev:3
+[INFO] Level:3
+[INFO] Input:1EJ2 index:38
+[INFO] Processing line
+[INFO] line:inp 1DG1 42 lev:3
+[INFO] Level:3
+[INFO] Input:1DG1 index:42
+[INFO] Processing line
+[INFO] line:inp 1DG2 44 lev:3
+[INFO] Level:3
+[INFO] Input:1DG2 index:44
+[INFO] Processing line
+[INFO] line:inp 1DJ1 41 lev:3
+[INFO] Level:3
+[INFO] Input:1DJ1 index:41
+[INFO] Processing line
+[INFO] line:inp 1DJ2 43 lev:3
+[INFO] Level:3
+[INFO] Input:1DJ2 index:43
+[INFO] Processing line
+[INFO] line:BCMASKS lev:3
+[INFO] Processing line
+[INFO] line:bcm TOF 100 1288 2476 lev:4
+[INFO] Level:4
+coded:0
+[INFO] BC mask added:TOF
+[INFO] Processing line
+[INFO] line:bcm bcmA 394L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H909L lev:4
+[INFO] Level:4
+coded:1
+[INFO] BC mask added:bcmA
+[INFO] Processing line
+[INFO] line:bcm bcmB 3564L lev:4
+[INFO] Level:4
+coded:1
+[INFO] BC mask added:bcmB
+[INFO] Processing line
+[INFO] line:bcm bcmC 103L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H139L1H79L1H79L1H1253L1H49L1H79L1H79L1H139L1H79L1H79L1H36L lev:4
+[INFO] Level:4
+coded:1
+[INFO] BC mask added:bcmC
+[INFO] Processing line
+[INFO] line:bcm bcmEMPTY 2847L1H84L1H631L lev:4
+[INFO] Level:4
+coded:1
+[INFO] BC mask added:bcmEMPTY
+[INFO] Processing line
+[INFO] line:DESCRIPTORS lev:4
+[INFO] Processing line
+[INFO] line:DMTVX MTVX lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:MTVX
+[INFO] Processing line
+[INFO] line:D0TVX 0TVX lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] Processing line
+[INFO] line:DTVXPH0 0TVX 0PH0 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0PH0
+[INFO] Processing line
+[INFO] line:DTVXEMC 0TVX 0EMC lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0EMC
+[INFO] Processing line
+[INFO] line:DTVXDMC 0TVX 0DMC lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0DMC
+[INFO] Processing line
+[INFO] line:DTVXEMCEG1 0TVX 0EMC 1EG1 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0EMC
+[INFO] isInputInConfig found:1EG1
+[INFO] Processing line
+[INFO] line:DTVXEMCEG2 0TVX 0EMC 1EG2 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0EMC
+[INFO] isInputInConfig found:1EG2
+[INFO] Processing line
+[INFO] line:DTVXEMCEJ1 0TVX 0EMC 1EJ1 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0EMC
+[INFO] isInputInConfig found:1EJ1
+[INFO] Processing line
+[INFO] line:DTVXEMCEJ2 0TVX 0EMC 1EJ2 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0EMC
+[INFO] isInputInConfig found:1EJ2
+[INFO] Processing line
+[INFO] line:DTVXDMCDG1 0TVX 0DMC 1DG1 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0DMC
+[INFO] isInputInConfig found:1DG1
+[INFO] Processing line
+[INFO] line:DTVXDMCDG2 0TVX 0DMC 1DG2 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0DMC
+[INFO] isInputInConfig found:1DG2
+[INFO] Processing line
+[INFO] line:DTVXDMCDJ1 0TVX 0DMC 1DJ1 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0DMC
+[INFO] isInputInConfig found:1DJ1
+[INFO] Processing line
+[INFO] line:DTVXDMCDJ2 0TVX 0DMC 1DJ2 lev:6
+[INFO] Level:6
+[INFO] isInputInConfig found:0TVX
+[INFO] isInputInConfig found:0DMC
+[INFO] isInputInConfig found:1DJ2
+[INFO] Processing line
+[INFO] line:LTG ft0 lev:6
+[INFO] Level:7
+[INFO] Detector found:12 FT0
+[INFO] Processing line
+[INFO] line:LTG fdd lev:8
+[INFO] Level:7
+[INFO] Detector found:14 FDD
+[INFO] Processing line
+[INFO] line:LTG fv0 lev:8
+[INFO] Level:7
+[INFO] Detector found:13 FV0
+[INFO] Processing line
+[INFO] line:LTG its lev:8
+[INFO] Level:7
+[INFO] Detector found:0 ITS
+[INFO] Processing line
+[INFO] line:ferst 1 lev:8
+[INFO] Level:8
+[INFO] LTGitem:ferst 1
+[INFO] Processing line
+[INFO] line:LTG mch lev:8
+[INFO] Level:7
+[INFO] Detector found:9 MCH
+[INFO] Processing line
+[INFO] line:ferst 1 lev:8
+[INFO] Level:8
+[INFO] LTGitem:ferst 1
+[INFO] Processing line
+[INFO] line:LTG mft lev:8
+[INFO] Level:7
+[INFO] Detector found:8 MFT
+[INFO] Processing line
+[INFO] line:ferst 1 lev:8
+[INFO] Level:8
+[INFO] LTGitem:ferst 1
+[INFO] Processing line
+[INFO] line:LTG mid lev:8
+[INFO] Level:7
+[INFO] Detector found:10 MID
+[INFO] Processing line
+[INFO] line:LTG tof lev:8
+[INFO] Level:7
+[INFO] Detector found:3 TOF
+[INFO] Processing line
+[INFO] line:cont lev:8
+[INFO] Level:8
+[INFO] LTGitem:cont
+[INFO] Processing line
+[INFO] line:bcm TOF e lev:8
+[INFO] Level:8
+[INFO] LTGitem:bcm TOF e
+[INFO] Processing line
+[INFO] line:LTG tpc lev:8
+[INFO] Level:7
+[INFO] Detector found:1 TPC
+[INFO] Processing line
+[INFO] line:LTG trd lev:8
+[INFO] Level:7
+[INFO] Detector found:2 TRD
+[INFO] Processing line
+[INFO] line:ttc calrate 1000 lev:8
+[INFO] Level:8
+[INFO] LTGitem:ttc calrate 1000
+[INFO] Processing line
+[INFO] line:LTG zdc lev:8
+[INFO] Level:7
+[INFO] Detector found:11 ZDC
+[INFO] Processing line
+[INFO] line:LTG emc lev:8
+[INFO] Level:7
+[INFO] Detector found:6 EMC
+[INFO] Processing line
+[INFO] line:cal ppcal 2953 3012 8000 268435453 lev:8
+[INFO] Level:8
+[INFO] LTGitem:cal ppcal 2953 3012 8000 268435453
+[INFO] Processing line
+[INFO] line:LTG phs lev:8
+[INFO] Level:7
+[INFO] Detector found:4 PHS
+[INFO] Processing line
+[INFO] line:LTG cpv lev:8
+[INFO] Level:7
+[INFO] Detector found:5 CPV
+[INFO] Processing line
+[INFO] line:LTG hmp lev:8
+[INFO] Level:7
+[INFO] Detector found:7 HMP
+[INFO] Processing line
+[INFO] line:0 cluster CRU ft0 fdd fv0 its mft mid tof tpc zdc lev:8
+[INFO] Level:9
+[INFO] Cluster:0 cluster CRU ft0 fdd fv0 its mft mid tof tpc zdc
+[INFO] Processing line
+[INFO] line:CMTVX-NONE-NOPF-CRU 0 DMTVX CRU {NONE} {} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-NONE-NOPF-CRU 0 DMTVX CRU {NONE} {}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] Processing line
+[INFO] line:1 cluster TRD trd lev:10
+[INFO] Level:9
+[INFO] Cluster:1 cluster TRD trd
+[INFO] Processing line
+[INFO] line:CMTVX-A-NOPF-TRD 1 DMTVX TRD {NONE} {bcmA} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-A-NOPF-TRD 1 DMTVX TRD {NONE} {bcmA}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] isBCMaskInConfigP found:bcmA
+[INFO] Processing line
+[INFO] line:CMTVX-B-NOPF-TRD 2 DMTVX TRD {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-B-NOPF-TRD 2 DMTVX TRD {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CMTVX-C-NOPF-TRD 3 DMTVX TRD {NONE} {bcmC} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-C-NOPF-TRD 3 DMTVX TRD {NONE} {bcmC}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] isBCMaskInConfigP found:bcmC
+[INFO] Processing line
+[INFO] line:CMTVX-E-NOPF-TRD 4 DMTVX TRD {NONE} {bcmEMPTY} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-E-NOPF-TRD 4 DMTVX TRD {NONE} {bcmEMPTY}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] isBCMaskInConfigP found:bcmEMPTY
+[INFO] Processing line
+[INFO] line:2 cluster PHSCPV phs cpv lev:10
+[INFO] Level:9
+[INFO] Cluster:2 cluster PHSCPV phs cpv
+[INFO] Processing line
+[INFO] line:C0TVX-A-NOPF-PHSCPV 5 D0TVX PHSCPV {NONE} {bcmA} 0x1eb851 lev:10
+[INFO] Level:10
+[INFO] Class:C0TVX-A-NOPF-PHSCPV 5 D0TVX PHSCPV {NONE} {bcmA} 0x1eb851
+[INFO] isDescriptorInConfig found:D0TVX
+[INFO] isBCMaskInConfigP found:bcmA
+[INFO] Processing line
+[INFO] line:C0TVX-B-NOPF-PHSCPV 6 D0TVX PHSCPV {NONE} {bcmB} 0x1eb851 lev:10
+[INFO] Level:10
+[INFO] Class:C0TVX-B-NOPF-PHSCPV 6 D0TVX PHSCPV {NONE} {bcmB} 0x1eb851
+[INFO] isDescriptorInConfig found:D0TVX
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:C0TVX-C-NOPF-PHSCPV 7 D0TVX PHSCPV {NONE} {bcmC} 0x1eb851 lev:10
+[INFO] Level:10
+[INFO] Class:C0TVX-C-NOPF-PHSCPV 7 D0TVX PHSCPV {NONE} {bcmC} 0x1eb851
+[INFO] isDescriptorInConfig found:D0TVX
+[INFO] isBCMaskInConfigP found:bcmC
+[INFO] Processing line
+[INFO] line:C0TVX-E-NOPF-PHSCPV 8 D0TVX PHSCPV {NONE} {bcmEMPTY} 0x1eb851 lev:10
+[INFO] Level:10
+[INFO] Class:C0TVX-E-NOPF-PHSCPV 8 D0TVX PHSCPV {NONE} {bcmEMPTY} 0x1eb851
+[INFO] isDescriptorInConfig found:D0TVX
+[INFO] isBCMaskInConfigP found:bcmEMPTY
+[INFO] Processing line
+[INFO] line:CTVXPH0-A-NOPF-PHSCPV 9 DTVXPH0 PHSCPV {NONE} {bcmA} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXPH0-A-NOPF-PHSCPV 9 DTVXPH0 PHSCPV {NONE} {bcmA}
+[INFO] isDescriptorInConfig found:DTVXPH0
+[INFO] isBCMaskInConfigP found:bcmA
+[INFO] Processing line
+[INFO] line:CTVXPH0-B-NOPF-PHSCPV 10 DTVXPH0 PHSCPV {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXPH0-B-NOPF-PHSCPV 10 DTVXPH0 PHSCPV {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXPH0
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXPH0-C-NOPF-PHSCPV 11 DTVXPH0 PHSCPV {NONE} {bcmC} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXPH0-C-NOPF-PHSCPV 11 DTVXPH0 PHSCPV {NONE} {bcmC}
+[INFO] isDescriptorInConfig found:DTVXPH0
+[INFO] isBCMaskInConfigP found:bcmC
+[INFO] Processing line
+[INFO] line:CTVXPH0-E-NOPF-PHSCPV 12 DTVXPH0 PHSCPV {NONE} {bcmEMPTY} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXPH0-E-NOPF-PHSCPV 12 DTVXPH0 PHSCPV {NONE} {bcmEMPTY}
+[INFO] isDescriptorInConfig found:DTVXPH0
+[INFO] isBCMaskInConfigP found:bcmEMPTY
+[INFO] Processing line
+[INFO] line:3 cluster EMC emc lev:10
+[INFO] Level:9
+[INFO] Cluster:3 cluster EMC emc
+[INFO] Processing line
+[INFO] line:CTVXEMC-A-NOPF-EMC 13 DTVXEMC EMC {NONE} {bcmA} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXEMC-A-NOPF-EMC 13 DTVXEMC EMC {NONE} {bcmA}
+[INFO] isDescriptorInConfig found:DTVXEMC
+[INFO] isBCMaskInConfigP found:bcmA
+[INFO] Processing line
+[INFO] line:CTVXEMC-B-NOPF-EMC 14 DTVXEMC EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXEMC-B-NOPF-EMC 14 DTVXEMC EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXEMC
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXEMC-C-NOPF-EMC 15 DTVXEMC EMC {NONE} {bcmC} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXEMC-C-NOPF-EMC 15 DTVXEMC EMC {NONE} {bcmC}
+[INFO] isDescriptorInConfig found:DTVXEMC
+[INFO] isBCMaskInConfigP found:bcmC
+[INFO] Processing line
+[INFO] line:CTVXEMC-E-NOPF-EMC 16 DTVXEMC EMC {NONE} {bcmEMPTY} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXEMC-E-NOPF-EMC 16 DTVXEMC EMC {NONE} {bcmEMPTY}
+[INFO] isDescriptorInConfig found:DTVXEMC
+[INFO] isBCMaskInConfigP found:bcmEMPTY
+[INFO] Processing line
+[INFO] line:CTVXDMC-A-NOPF-EMC 17 DTVXDMC EMC {NONE} {bcmA} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXDMC-A-NOPF-EMC 17 DTVXDMC EMC {NONE} {bcmA}
+[INFO] isDescriptorInConfig found:DTVXDMC
+[INFO] isBCMaskInConfigP found:bcmA
+[INFO] Processing line
+[INFO] line:CTVXDMC-B-NOPF-EMC 18 DTVXDMC EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXDMC-B-NOPF-EMC 18 DTVXDMC EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXDMC
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXDMC-C-NOPF-EMC 19 DTVXDMC EMC {NONE} {bcmC} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXDMC-C-NOPF-EMC 19 DTVXDMC EMC {NONE} {bcmC}
+[INFO] isDescriptorInConfig found:DTVXDMC
+[INFO] isBCMaskInConfigP found:bcmC
+[INFO] Processing line
+[INFO] line:CTVXDMC-E-NOPF-EMC 20 DTVXDMC EMC {NONE} {bcmEMPTY} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXDMC-E-NOPF-EMC 20 DTVXDMC EMC {NONE} {bcmEMPTY}
+[INFO] isDescriptorInConfig found:DTVXDMC
+[INFO] isBCMaskInConfigP found:bcmEMPTY
+[INFO] Processing line
+[INFO] line:C0TVX-A-NOPF-EMC 21 D0TVX EMC {NONE} {bcmA} 0x1fae13 lev:10
+[INFO] Level:10
+[INFO] Class:C0TVX-A-NOPF-EMC 21 D0TVX EMC {NONE} {bcmA} 0x1fae13
+[INFO] isDescriptorInConfig found:D0TVX
+[INFO] isBCMaskInConfigP found:bcmA
+[INFO] Processing line
+[INFO] line:C0TVX-B-NOPF-EMC 22 D0TVX EMC {NONE} {bcmB} 0x1fae13 lev:10
+[INFO] Level:10
+[INFO] Class:C0TVX-B-NOPF-EMC 22 D0TVX EMC {NONE} {bcmB} 0x1fae13
+[INFO] isDescriptorInConfig found:D0TVX
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:C0TVX-C-NOPF-EMC 23 D0TVX EMC {NONE} {bcmC} 0x1fae13 lev:10
+[INFO] Level:10
+[INFO] Class:C0TVX-C-NOPF-EMC 23 D0TVX EMC {NONE} {bcmC} 0x1fae13
+[INFO] isDescriptorInConfig found:D0TVX
+[INFO] isBCMaskInConfigP found:bcmC
+[INFO] Processing line
+[INFO] line:C0TVX-E-NOPF-EMC 24 D0TVX EMC {NONE} {bcmEMPTY} 0x1fae13 lev:10
+[INFO] Level:10
+[INFO] Class:C0TVX-E-NOPF-EMC 24 D0TVX EMC {NONE} {bcmEMPTY} 0x1fae13
+[INFO] isDescriptorInConfig found:D0TVX
+[INFO] isBCMaskInConfigP found:bcmEMPTY
+[INFO] Processing line
+[INFO] line:CTVXEMCEG1-B-NOPF-EMC 25 DTVXEMCEG1 EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXEMCEG1-B-NOPF-EMC 25 DTVXEMCEG1 EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXEMCEG1
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXEMCEG2-B-NOPF-EMC 26 DTVXEMCEG2 EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXEMCEG2-B-NOPF-EMC 26 DTVXEMCEG2 EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXEMCEG2
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXEMCEJ1-B-NOPF-EMC 27 DTVXEMCEJ1 EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXEMCEJ1-B-NOPF-EMC 27 DTVXEMCEJ1 EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXEMCEJ1
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXEMCEJ2-B-NOPF-EMC 28 DTVXEMCEJ2 EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXEMCEJ2-B-NOPF-EMC 28 DTVXEMCEJ2 EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXEMCEJ2
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXDMCDG1-B-NOPF-EMC 29 DTVXDMCDG1 EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXDMCDG1-B-NOPF-EMC 29 DTVXDMCDG1 EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXDMCDG1
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXDMCDG2-B-NOPF-EMC 30 DTVXDMCDG2 EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXDMCDG2-B-NOPF-EMC 30 DTVXDMCDG2 EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXDMCDG2
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXDMCDJ1-B-NOPF-EMC 31 DTVXDMCDJ1 EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXDMCDJ1-B-NOPF-EMC 31 DTVXDMCDJ1 EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXDMCDJ1
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CTVXDMCDJ2-B-NOPF-EMC 32 DTVXDMCDJ2 EMC {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CTVXDMCDJ2-B-NOPF-EMC 32 DTVXDMCDJ2 EMC {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DTVXDMCDJ2
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:4 cluster HMP hmp lev:10
+[INFO] Level:9
+[INFO] Cluster:4 cluster HMP hmp
+[INFO] Processing line
+[INFO] line:CMTVX-A-NOPF-HMP 33 DMTVX HMP {NONE} {bcmA} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-A-NOPF-HMP 33 DMTVX HMP {NONE} {bcmA}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] isBCMaskInConfigP found:bcmA
+[INFO] Processing line
+[INFO] line:CMTVX-B-NOPF-HMP 34 DMTVX HMP {NONE} {bcmB} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-B-NOPF-HMP 34 DMTVX HMP {NONE} {bcmB}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] isBCMaskInConfigP found:bcmB
+[INFO] Processing line
+[INFO] line:CMTVX-C-NOPF-HMP 35 DMTVX HMP {NONE} {bcmC} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-C-NOPF-HMP 35 DMTVX HMP {NONE} {bcmC}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] isBCMaskInConfigP found:bcmC
+[INFO] Processing line
+[INFO] line:CMTVX-E-NOPF-HMP 36 DMTVX HMP {NONE} {bcmEMPTY} lev:10
+[INFO] Level:10
+[INFO] Class:CMTVX-E-NOPF-HMP 36 DMTVX HMP {NONE} {bcmEMPTY}
+[INFO] isDescriptorInConfig found:DMTVX
+[INFO] isBCMaskInConfigP found:bcmEMPTY
+[INFO] Processing line
+[INFO] line: lev:10
+Configuration:
+ Version:1
+Run:310000 cfg name:CTP BC  masks:
+CTP BC mask:TOF: # of active BC:3
+CTP BC mask:bcmA: # of active BC:24
+CTP BC mask:bcmB: # of active BC:0
+CTP BC mask:bcmC: # of active BC:25
+CTP BC mask:bcmEMPTY: # of active BC:2
+CTP inputs:
+CTP Input:MTVX Detector:FT0 Level:M Hardware mask:0x4 index:3
+CTP Input:0TVX Detector:FT0 Level:0 Hardware mask:0x4 index:3
+CTP Input:0PH0 Detector:PHS Level:0 Hardware mask:0x200000 index:22
+CTP Input:0EMC Detector:EMC Level:0 Hardware mask:0x100000 index:21
+CTP Input:0DMC Detector:EMC Level:0 Hardware mask:0x2000 index:14
+CTP Input:1EG1 Detector:EMC Level:1 Hardware mask:0x4000000000 index:39
+CTP Input:1EG2 Detector:EMC Level:1 Hardware mask:0x8000000000 index:40
+CTP Input:1EJ1 Detector:EMC Level:1 Hardware mask:0x1000000000 index:37
+CTP Input:1EJ2 Detector:EMC Level:1 Hardware mask:0x2000000000 index:38
+CTP Input:1DG1 Detector:EMC Level:1 Hardware mask:0x20000000000 index:42
+CTP Input:1DG2 Detector:EMC Level:1 Hardware mask:0x80000000000 index:44
+CTP Input:1DJ1 Detector:EMC Level:1 Hardware mask:0x10000000000 index:41
+CTP Input:1DJ2 Detector:EMC Level:1 Hardware mask:0x40000000000 index:43
+CTP generators:
+CTP descriptors:
+CTP Descriptor:DMTVX Inputs:MTVX 
+CTP Descriptor:D0TVX Inputs:0TVX 
+CTP Descriptor:DTVXPH0 Inputs:0TVX 0PH0 
+CTP Descriptor:DTVXEMC Inputs:0TVX 0EMC 
+CTP Descriptor:DTVXDMC Inputs:0TVX 0DMC 
+CTP Descriptor:DTVXEMCEG1 Inputs:0TVX 0EMC 1EG1 
+CTP Descriptor:DTVXEMCEG2 Inputs:0TVX 0EMC 1EG2 
+CTP Descriptor:DTVXEMCEJ1 Inputs:0TVX 0EMC 1EJ1 
+CTP Descriptor:DTVXEMCEJ2 Inputs:0TVX 0EMC 1EJ2 
+CTP Descriptor:DTVXDMCDG1 Inputs:0TVX 0DMC 1DG1 
+CTP Descriptor:DTVXDMCDG2 Inputs:0TVX 0DMC 1DG2 
+CTP Descriptor:DTVXDMCDJ1 Inputs:0TVX 0DMC 1DJ1 
+CTP Descriptor:DTVXDMCDJ2 Inputs:0TVX 0DMC 1DJ2 
+CTP detectors:15
+CTP Detector:FT0 HBaccepted:0 Mode: FErst:0
+CTP Detector:FDD HBaccepted:0 Mode: FErst:0
+CTP Detector:FV0 HBaccepted:0 Mode: FErst:0
+CTP Detector:ITS HBaccepted:0 Mode: FErst:0
+CTP Detector:MCH HBaccepted:0 Mode: FErst:0
+CTP Detector:MFT HBaccepted:0 Mode: FErst:0
+CTP Detector:MID HBaccepted:0 Mode: FErst:0
+CTP Detector:TOF HBaccepted:0 Mode:cont FErst:0
+CTP Detector:TPC HBaccepted:0 Mode: FErst:0
+CTP Detector:TRD HBaccepted:0 Mode: FErst:0
+CTP Detector:ZDC HBaccepted:0 Mode: FErst:0
+CTP Detector:EMC HBaccepted:0 Mode: FErst:0
+CTP Detector:PHS HBaccepted:0 Mode: FErst:0
+CTP Detector:CPV HBaccepted:0 Mode: FErst:0
+CTP Detector:HMP HBaccepted:0 Mode: FErst:0
+CTP clusters:
+CTP Cluster:CRU ITS TPC TOF MFT MID ZDC FT0 FV0 FDD det mask:0b00000000000000000111110100001011  clust index:0
+CTP Cluster:TRD TRD det mask:0b00000000000000000000000000000100  clust index:1
+CTP Cluster:PHSCPV PHS CPV det mask:0b00000000000000000000000000110000  clust index:2
+CTP Cluster:EMC EMC det mask:0b00000000000000000000000001000000  clust index:3
+CTP Cluster:HMP HMP det mask:0b00000000000000000000000010000000  clust index:4
+CTP classes:
+CTP Class:CMTVX-NONE-NOPF-CRU Hardware mask:1 Cluster index:0 Desc index:0 Downscale:1 BCM: Descriptor:DMTVX Cluster:CRU
+CTP Class:CMTVX-A-NOPF-TRD Hardware mask:2 Cluster index:1 Desc index:0 Downscale:1 BCM:bcmA  Descriptor:DMTVX Cluster:TRD
+CTP Class:CMTVX-B-NOPF-TRD Hardware mask:4 Cluster index:1 Desc index:0 Downscale:1 BCM:bcmB  Descriptor:DMTVX Cluster:TRD
+CTP Class:CMTVX-C-NOPF-TRD Hardware mask:8 Cluster index:1 Desc index:0 Downscale:1 BCM:bcmC  Descriptor:DMTVX Cluster:TRD
+CTP Class:CMTVX-E-NOPF-TRD Hardware mask:16 Cluster index:1 Desc index:0 Downscale:1 BCM:bcmEMPTY  Descriptor:DMTVX Cluster:TRD
+CTP Class:C0TVX-A-NOPF-PHSCPV Hardware mask:32 Cluster index:2 Desc index:1 Downscale:2013265 BCM:bcmA  Descriptor:D0TVX Cluster:PHSCPV
+CTP Class:C0TVX-B-NOPF-PHSCPV Hardware mask:64 Cluster index:2 Desc index:1 Downscale:2013265 BCM:bcmB  Descriptor:D0TVX Cluster:PHSCPV
+CTP Class:C0TVX-C-NOPF-PHSCPV Hardware mask:128 Cluster index:2 Desc index:1 Downscale:2013265 BCM:bcmC  Descriptor:D0TVX Cluster:PHSCPV
+CTP Class:C0TVX-E-NOPF-PHSCPV Hardware mask:256 Cluster index:2 Desc index:1 Downscale:2013265 BCM:bcmEMPTY  Descriptor:D0TVX Cluster:PHSCPV
+CTP Class:CTVXPH0-A-NOPF-PHSCPV Hardware mask:512 Cluster index:2 Desc index:2 Downscale:1 BCM:bcmA  Descriptor:DTVXPH0 Cluster:PHSCPV
+CTP Class:CTVXPH0-B-NOPF-PHSCPV Hardware mask:1024 Cluster index:2 Desc index:2 Downscale:1 BCM:bcmB  Descriptor:DTVXPH0 Cluster:PHSCPV
+CTP Class:CTVXPH0-C-NOPF-PHSCPV Hardware mask:2048 Cluster index:2 Desc index:2 Downscale:1 BCM:bcmC  Descriptor:DTVXPH0 Cluster:PHSCPV
+CTP Class:CTVXPH0-E-NOPF-PHSCPV Hardware mask:4096 Cluster index:2 Desc index:2 Downscale:1 BCM:bcmEMPTY  Descriptor:DTVXPH0 Cluster:PHSCPV
+CTP Class:CTVXEMC-A-NOPF-EMC Hardware mask:8192 Cluster index:3 Desc index:3 Downscale:1 BCM:bcmA  Descriptor:DTVXEMC Cluster:EMC
+CTP Class:CTVXEMC-B-NOPF-EMC Hardware mask:16384 Cluster index:3 Desc index:3 Downscale:1 BCM:bcmB  Descriptor:DTVXEMC Cluster:EMC
+CTP Class:CTVXEMC-C-NOPF-EMC Hardware mask:32768 Cluster index:3 Desc index:3 Downscale:1 BCM:bcmC  Descriptor:DTVXEMC Cluster:EMC
+CTP Class:CTVXEMC-E-NOPF-EMC Hardware mask:65536 Cluster index:3 Desc index:3 Downscale:1 BCM:bcmEMPTY  Descriptor:DTVXEMC Cluster:EMC
+CTP Class:CTVXDMC-A-NOPF-EMC Hardware mask:131072 Cluster index:3 Desc index:4 Downscale:1 BCM:bcmA  Descriptor:DTVXDMC Cluster:EMC
+CTP Class:CTVXDMC-B-NOPF-EMC Hardware mask:262144 Cluster index:3 Desc index:4 Downscale:1 BCM:bcmB  Descriptor:DTVXDMC Cluster:EMC
+CTP Class:CTVXDMC-C-NOPF-EMC Hardware mask:524288 Cluster index:3 Desc index:4 Downscale:1 BCM:bcmC  Descriptor:DTVXDMC Cluster:EMC
+CTP Class:CTVXDMC-E-NOPF-EMC Hardware mask:1048576 Cluster index:3 Desc index:4 Downscale:1 BCM:bcmEMPTY  Descriptor:DTVXDMC Cluster:EMC
+CTP Class:C0TVX-A-NOPF-EMC Hardware mask:2097152 Cluster index:3 Desc index:1 Downscale:2076179 BCM:bcmA  Descriptor:D0TVX Cluster:EMC
+CTP Class:C0TVX-B-NOPF-EMC Hardware mask:4194304 Cluster index:3 Desc index:1 Downscale:2076179 BCM:bcmB  Descriptor:D0TVX Cluster:EMC
+CTP Class:C0TVX-C-NOPF-EMC Hardware mask:8388608 Cluster index:3 Desc index:1 Downscale:2076179 BCM:bcmC  Descriptor:D0TVX Cluster:EMC
+CTP Class:C0TVX-E-NOPF-EMC Hardware mask:16777216 Cluster index:3 Desc index:1 Downscale:2076179 BCM:bcmEMPTY  Descriptor:D0TVX Cluster:EMC
+CTP Class:CTVXEMCEG1-B-NOPF-EMC Hardware mask:33554432 Cluster index:3 Desc index:5 Downscale:1 BCM:bcmB  Descriptor:DTVXEMCEG1 Cluster:EMC
+CTP Class:CTVXEMCEG2-B-NOPF-EMC Hardware mask:67108864 Cluster index:3 Desc index:6 Downscale:1 BCM:bcmB  Descriptor:DTVXEMCEG2 Cluster:EMC
+CTP Class:CTVXEMCEJ1-B-NOPF-EMC Hardware mask:134217728 Cluster index:3 Desc index:7 Downscale:1 BCM:bcmB  Descriptor:DTVXEMCEJ1 Cluster:EMC
+CTP Class:CTVXEMCEJ2-B-NOPF-EMC Hardware mask:268435456 Cluster index:3 Desc index:8 Downscale:1 BCM:bcmB  Descriptor:DTVXEMCEJ2 Cluster:EMC
+CTP Class:CTVXDMCDG1-B-NOPF-EMC Hardware mask:536870912 Cluster index:3 Desc index:9 Downscale:1 BCM:bcmB  Descriptor:DTVXDMCDG1 Cluster:EMC
+CTP Class:CTVXDMCDG2-B-NOPF-EMC Hardware mask:1073741824 Cluster index:3 Desc index:10 Downscale:1 BCM:bcmB  Descriptor:DTVXDMCDG2 Cluster:EMC
+CTP Class:CTVXDMCDJ1-B-NOPF-EMC Hardware mask:2147483648 Cluster index:3 Desc index:11 Downscale:1 BCM:bcmB  Descriptor:DTVXDMCDJ1 Cluster:EMC
+CTP Class:CTVXDMCDJ2-B-NOPF-EMC Hardware mask:4294967296 Cluster index:3 Desc index:12 Downscale:1 BCM:bcmB  Descriptor:DTVXDMCDJ2 Cluster:EMC
+CTP Class:CMTVX-A-NOPF-HMP Hardware mask:8589934592 Cluster index:4 Desc index:0 Downscale:1 BCM:bcmA  Descriptor:DMTVX Cluster:HMP
+CTP Class:CMTVX-B-NOPF-HMP Hardware mask:17179869184 Cluster index:4 Desc index:0 Downscale:1 BCM:bcmB  Descriptor:DMTVX Cluster:HMP
+CTP Class:CMTVX-C-NOPF-HMP Hardware mask:34359738368 Cluster index:4 Desc index:0 Downscale:1 BCM:bcmC  Descriptor:DMTVX Cluster:HMP
+CTP Class:CMTVX-E-NOPF-HMP Hardware mask:68719476736 Cluster index:4 Desc index:0 Downscale:1 BCM:bcmEMPTY  Descriptor:DMTVX Cluster:HMP
+CTP config done
+MTVX 1
+0TVX 12
+0PH0 1
+0EMC 5
+0DMC 5
+1EG1 1
+1EG2 1
+1EJ1 1
+1EJ2 1
+1DG1 1
+1DG2 1
+1DJ1 1
+1DJ2 1
+DMTVX 9
+D0TVX 8
+DTVXPH0 4
+DTVXEMC 4
+DTVXDMC 4
+DTVXEMCEG1 1
+DTVXEMCEG2 1
+DTVXEMCEJ1 1
+DTVXEMCEJ2 1
+DTVXDMCDG1 1
+DTVXDMCDG2 1
+DTVXDMCDJ1 1
+DTVXDMCDJ2 1
+CTP Config consistency checked. WARNINGS:0 ERRORS:0
+File CTPConfig.root written.
+(o2::ctp::CTPConfiguration) @0x2a7abe0
