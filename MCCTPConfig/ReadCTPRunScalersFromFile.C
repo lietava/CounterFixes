@@ -44,10 +44,10 @@ void ReadCTPRunScalersFromFile(std::string name = "s.root")
     }
   }
   if (doconfig) {
-    //CTPConfiguration* ctpconfig = myFile->Get<CTPConfiguration>("CTPConfig");
-    CTPConfiguration* ctpconfig = myFile->Get<CTPConfiguration>("ccdb_object");
+    CTPConfiguration* ctpconfig = myFile->Get<CTPConfiguration>("CTPConfig");
     if (ctpconfig != nullptr) {
       ctpconfig->printStream(std::cout);
+      ctpconfig->checkConfigConsistency();
     } else {
       std::cout << "Config not there ?" << std::endl;
     }

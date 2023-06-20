@@ -1,0 +1,131 @@
+
+Processing ReadCTPRunScalersFromFile.C...
+Reading file:s.root
+Configuration:
+ Version:1
+Run:300000 cfg name:
+CTP BC  masks:
+CTP BC mask:TOF: # of active BC:3
+CTP BC mask:bcmA: # of active BC:24
+CTP BC mask:bcmB: # of active BC:0
+CTP BC mask:bcmC: # of active BC:25
+CTP BC mask:bcmEMPTY: # of active BC:2
+CTP inputs:13
+CTP Input:MTVX Detector:FT0 Level:M Hardware mask:0x4 index:3
+CTP Input:0TVX Detector:FT0 Level:0 Hardware mask:0x4 index:3
+CTP Input:0PH0 Detector:PHS Level:0 Hardware mask:0x200000 index:22
+CTP Input:0EMC Detector:EMC Level:0 Hardware mask:0x100000 index:21
+CTP Input:0DMC Detector:EMC Level:0 Hardware mask:0x2000 index:14
+CTP Input:1EG1 Detector:EMC Level:1 Hardware mask:0x4000000000 index:39
+CTP Input:1EG2 Detector:EMC Level:1 Hardware mask:0x8000000000 index:40
+CTP Input:1EJ1 Detector:EMC Level:1 Hardware mask:0x1000000000 index:37
+CTP Input:1EJ2 Detector:EMC Level:1 Hardware mask:0x2000000000 index:38
+CTP Input:1DG1 Detector:EMC Level:1 Hardware mask:0x20000000000 index:42
+CTP Input:1DG2 Detector:EMC Level:1 Hardware mask:0x80000000000 index:44
+CTP Input:1DJ1 Detector:EMC Level:1 Hardware mask:0x10000000000 index:41
+CTP Input:1DJ2 Detector:EMC Level:1 Hardware mask:0x40000000000 index:43
+CTP generators:
+CTP descriptors:13
+CTP Descriptor:DMTVX Inputs:MTVX 
+CTP Descriptor:D0TVX Inputs:0TVX 
+CTP Descriptor:DTVXPH0 Inputs:0TVX 0PH0 
+CTP Descriptor:DTVXEMC Inputs:0TVX 0EMC 
+CTP Descriptor:DTVXDMC Inputs:0TVX 0DMC 
+CTP Descriptor:DTVXEMCEG1 Inputs:0TVX 0EMC 1EG1 
+CTP Descriptor:DTVXEMCEG2 Inputs:0TVX 0EMC 1EG2 
+CTP Descriptor:DTVXEMCEJ1 Inputs:0TVX 0EMC 1EJ1 
+CTP Descriptor:DTVXEMCEJ2 Inputs:0TVX 0EMC 1EJ2 
+CTP Descriptor:DTVXDMCDG1 Inputs:0TVX 0DMC 1DG1 
+CTP Descriptor:DTVXDMCDG2 Inputs:0TVX 0DMC 1DG2 
+CTP Descriptor:DTVXDMCDJ1 Inputs:0TVX 0DMC 1DJ1 
+CTP Descriptor:DTVXDMCDJ2 Inputs:0TVX 0DMC 1DJ2 
+CTP detectors:15
+CTP Detector:FT0 HBaccepted:0 Mode: FErst:0
+CTP Detector:FDD HBaccepted:0 Mode: FErst:0
+CTP Detector:FV0 HBaccepted:0 Mode: FErst:0
+CTP Detector:ITS HBaccepted:0 Mode: FErst:0
+CTP Detector:MCH HBaccepted:0 Mode: FErst:0
+CTP Detector:MFT HBaccepted:0 Mode: FErst:0
+CTP Detector:MID HBaccepted:0 Mode: FErst:0
+CTP Detector:TOF HBaccepted:0 Mode:cont FErst:0
+CTP Detector:TPC HBaccepted:0 Mode: FErst:0
+CTP Detector:TRD HBaccepted:0 Mode: FErst:0
+CTP Detector:ZDC HBaccepted:0 Mode: FErst:0
+CTP Detector:EMC HBaccepted:0 Mode: FErst:0
+CTP Detector:PHS HBaccepted:0 Mode: FErst:0
+CTP Detector:CPV HBaccepted:0 Mode: FErst:0
+CTP Detector:HMP HBaccepted:0 Mode: FErst:0
+CTP clusters:
+CTP Cluster:CRU ITS TPC TOF MFT MID ZDC FT0 FV0 FDD det mask:0b00000000000000000111110100001011  clust index:0
+CTP Cluster:TRD TRD det mask:0b00000000000000000000000000000100  clust index:1
+CTP Cluster:PHSCPV PHS CPV det mask:0b00000000000000000000000000110000  clust index:2
+CTP Cluster:EMC EMC det mask:0b00000000000000000000000001000000  clust index:3
+CTP Cluster:HMP HMP det mask:0b00000000000000000000000010000000  clust index:4
+CTP classes:
+CTP Class:CMTVX-NONE-NOPF-CRU Hardware mask:1 Cluster index:0 Desc index:0 Downscale:1 BCM: Descriptor:DMTVX Cluster:CRU
+CTP Class:CMTVX-A-NOPF-TRD Hardware mask:2 Cluster index:1 Desc index:0 Downscale:1 BCM:bcmA  Descriptor:DMTVX Cluster:TRD
+CTP Class:CMTVX-B-NOPF-TRD Hardware mask:4 Cluster index:1 Desc index:0 Downscale:1 BCM:bcmB  Descriptor:DMTVX Cluster:TRD
+CTP Class:CMTVX-C-NOPF-TRD Hardware mask:8 Cluster index:1 Desc index:0 Downscale:1 BCM:bcmC  Descriptor:DMTVX Cluster:TRD
+CTP Class:CMTVX-E-NOPF-TRD Hardware mask:16 Cluster index:1 Desc index:0 Downscale:1 BCM:bcmEMPTY  Descriptor:DMTVX Cluster:TRD
+CTP Class:C0TVX-A-NOPF-PHSCPV Hardware mask:32 Cluster index:2 Desc index:1 Downscale:2013265 BCM:bcmA  Descriptor:D0TVX Cluster:PHSCPV
+CTP Class:C0TVX-B-NOPF-PHSCPV Hardware mask:64 Cluster index:2 Desc index:1 Downscale:2013265 BCM:bcmB  Descriptor:D0TVX Cluster:PHSCPV
+CTP Class:C0TVX-C-NOPF-PHSCPV Hardware mask:128 Cluster index:2 Desc index:1 Downscale:2013265 BCM:bcmC  Descriptor:D0TVX Cluster:PHSCPV
+CTP Class:C0TVX-E-NOPF-PHSCPV Hardware mask:256 Cluster index:2 Desc index:1 Downscale:2013265 BCM:bcmEMPTY  Descriptor:D0TVX Cluster:PHSCPV
+CTP Class:CTVXPH0-A-NOPF-PHSCPV Hardware mask:512 Cluster index:2 Desc index:2 Downscale:1 BCM:bcmA  Descriptor:DTVXPH0 Cluster:PHSCPV
+CTP Class:CTVXPH0-B-NOPF-PHSCPV Hardware mask:1024 Cluster index:2 Desc index:2 Downscale:1 BCM:bcmB  Descriptor:DTVXPH0 Cluster:PHSCPV
+CTP Class:CTVXPH0-C-NOPF-PHSCPV Hardware mask:2048 Cluster index:2 Desc index:2 Downscale:1 BCM:bcmC  Descriptor:DTVXPH0 Cluster:PHSCPV
+CTP Class:CTVXPH0-E-NOPF-PHSCPV Hardware mask:4096 Cluster index:2 Desc index:2 Downscale:1 BCM:bcmEMPTY  Descriptor:DTVXPH0 Cluster:PHSCPV
+CTP Class:CTVXEMC-A-NOPF-EMC Hardware mask:8192 Cluster index:3 Desc index:3 Downscale:1 BCM:bcmA  Descriptor:DTVXEMC Cluster:EMC
+CTP Class:CTVXEMC-B-NOPF-EMC Hardware mask:16384 Cluster index:3 Desc index:3 Downscale:1 BCM:bcmB  Descriptor:DTVXEMC Cluster:EMC
+CTP Class:CTVXEMC-C-NOPF-EMC Hardware mask:32768 Cluster index:3 Desc index:3 Downscale:1 BCM:bcmC  Descriptor:DTVXEMC Cluster:EMC
+CTP Class:CTVXEMC-E-NOPF-EMC Hardware mask:65536 Cluster index:3 Desc index:3 Downscale:1 BCM:bcmEMPTY  Descriptor:DTVXEMC Cluster:EMC
+CTP Class:CTVXDMC-A-NOPF-EMC Hardware mask:131072 Cluster index:3 Desc index:4 Downscale:1 BCM:bcmA  Descriptor:DTVXDMC Cluster:EMC
+CTP Class:CTVXDMC-B-NOPF-EMC Hardware mask:262144 Cluster index:3 Desc index:4 Downscale:1 BCM:bcmB  Descriptor:DTVXDMC Cluster:EMC
+CTP Class:CTVXDMC-C-NOPF-EMC Hardware mask:524288 Cluster index:3 Desc index:4 Downscale:1 BCM:bcmC  Descriptor:DTVXDMC Cluster:EMC
+CTP Class:CTVXDMC-E-NOPF-EMC Hardware mask:1048576 Cluster index:3 Desc index:4 Downscale:1 BCM:bcmEMPTY  Descriptor:DTVXDMC Cluster:EMC
+CTP Class:C0TVX-A-NOPF-EMC Hardware mask:2097152 Cluster index:3 Desc index:1 Downscale:2076179 BCM:bcmA  Descriptor:D0TVX Cluster:EMC
+CTP Class:C0TVX-B-NOPF-EMC Hardware mask:4194304 Cluster index:3 Desc index:1 Downscale:2076179 BCM:bcmB  Descriptor:D0TVX Cluster:EMC
+CTP Class:C0TVX-C-NOPF-EMC Hardware mask:8388608 Cluster index:3 Desc index:1 Downscale:2076179 BCM:bcmC  Descriptor:D0TVX Cluster:EMC
+CTP Class:C0TVX-E-NOPF-EMC Hardware mask:16777216 Cluster index:3 Desc index:1 Downscale:2076179 BCM:bcmEMPTY  Descriptor:D0TVX Cluster:EMC
+CTP Class:CTVXEMCEG1-B-NOPF-EMC Hardware mask:33554432 Cluster index:3 Desc index:5 Downscale:1 BCM:bcmB  Descriptor:DTVXEMCEG1 Cluster:EMC
+CTP Class:CTVXEMCEG2-B-NOPF-EMC Hardware mask:67108864 Cluster index:3 Desc index:6 Downscale:1 BCM:bcmB  Descriptor:DTVXEMCEG2 Cluster:EMC
+CTP Class:CTVXEMCEJ1-B-NOPF-EMC Hardware mask:134217728 Cluster index:3 Desc index:7 Downscale:1 BCM:bcmB  Descriptor:DTVXEMCEJ1 Cluster:EMC
+CTP Class:CTVXEMCEJ2-B-NOPF-EMC Hardware mask:268435456 Cluster index:3 Desc index:8 Downscale:1 BCM:bcmB  Descriptor:DTVXEMCEJ2 Cluster:EMC
+CTP Class:CTVXDMCDG1-B-NOPF-EMC Hardware mask:536870912 Cluster index:3 Desc index:9 Downscale:1 BCM:bcmB  Descriptor:DTVXDMCDG1 Cluster:EMC
+CTP Class:CTVXDMCDG2-B-NOPF-EMC Hardware mask:1073741824 Cluster index:3 Desc index:10 Downscale:1 BCM:bcmB  Descriptor:DTVXDMCDG2 Cluster:EMC
+CTP Class:CTVXDMCDJ1-B-NOPF-EMC Hardware mask:2147483648 Cluster index:3 Desc index:11 Downscale:1 BCM:bcmB  Descriptor:DTVXDMCDJ1 Cluster:EMC
+CTP Class:CTVXDMCDJ2-B-NOPF-EMC Hardware mask:4294967296 Cluster index:3 Desc index:12 Downscale:1 BCM:bcmB  Descriptor:DTVXDMCDJ2 Cluster:EMC
+CTP Class:CMTVX-A-NOPF-HMP Hardware mask:8589934592 Cluster index:4 Desc index:0 Downscale:1 BCM:bcmA  Descriptor:DMTVX Cluster:HMP
+CTP Class:CMTVX-B-NOPF-HMP Hardware mask:17179869184 Cluster index:4 Desc index:0 Downscale:1 BCM:bcmB  Descriptor:DMTVX Cluster:HMP
+CTP Class:CMTVX-C-NOPF-HMP Hardware mask:34359738368 Cluster index:4 Desc index:0 Downscale:1 BCM:bcmC  Descriptor:DMTVX Cluster:HMP
+CTP Class:CMTVX-E-NOPF-HMP Hardware mask:68719476736 Cluster index:4 Desc index:0 Downscale:1 BCM:bcmEMPTY  Descriptor:DMTVX Cluster:HMP
+[INFO] Checking consistency run:300000
+desc1:13
+0DMC 5
+0EMC 5
+0PH0 1
+0TVX 12
+1DG1 1
+1DG2 1
+1DJ1 1
+1DJ2 1
+1EG1 1
+1EG2 1
+1EJ1 1
+1EJ2 1
+MTVX 1
+Descriptors check:13
+D0TVX 8
+DMTVX 9
+DTVXDMC 4
+DTVXDMCDG1 1
+DTVXDMCDG2 1
+DTVXDMCDJ1 1
+DTVXDMCDJ2 1
+DTVXEMC 4
+DTVXEMCEG1 1
+DTVXEMCEG2 1
+DTVXEMCEJ1 1
+DTVXEMCEJ2 1
+DTVXPH0 4
+CTP Config consistency checked. WARNINGS:0 ERRORS:0
