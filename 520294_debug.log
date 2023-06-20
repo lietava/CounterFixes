@@ -1,0 +1,94 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.28/04                        https://root.cern |
+  | (c) 1995-2022, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Jun 15 2023, 12:12:00                 |
+  | From tags/v6-28-04@v6-28-04                                      |
+  | With c++ (GCC) 12.2.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing GetScalers.C("520294",1657182028190,"http://alice-ccdb.cern.ch")...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1687256149-pyKWmw, Host: http://alice-ccdb.cern.ch/
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1687256149-pyKWmw, Host: http://alice-ccdb.cern.ch
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657180930028/a8b092d5-fdcd-11ec-9d70-0aa140651b9a for 1657182028190 (retrieve, agent_id: ctpo2cs8.cern.ch-1687256149-pyKWmw), 
+[ERROR] L1B > L0A Before error:1
+[ERROR] L1B > L0A Before error:1
+Counter errorrs: lmB:0 l0B:0 l1B:0 lmA:0 l0A:0 l1A:0 lmBlmA:0 lmAl0B:0 l0Bl0A:0 l0Al1B: 2 l1Bl1A:0
+[INFO] Scaler Integrals for run:520294 duration:446
+0 LMB 2033313
+0 LMA 2033313
+0 L0B 2033313
+0 L0A 0
+0 L1B 0
+0 L1A 0
+1 LMB 2033313
+1 LMA 1868644
+1 L0B 1868644
+1 L0A 1868644
+1 L1B 1868644
+1 L1A 1868644
+2 LMB 17845337875
+2 LMA 0
+2 L0B 2033313
+2 L0A 1210384
+2 L1B 1210384
+2 L1A 1210384
+3 LMB 17845337875
+3 LMA 0
+3 L0B 2033313
+3 L0A 1240242
+3 L1B 1240242
+3 L1A 1240242
+4 LMB 17845337875
+4 LMA 0
+4 L0B 2033313
+4 L0A 1705464
+4 L1B 1705464
+4 L1A 1705464
+0 ok
+1 ok
+2 ok
+3 ok
+4 ok
+5 ok
+6 ok
+7 ok
+8 ok
+9 ok
+10 ok
+11 ok
+12 ok
+13 ok
+14 ok
+15 ok
+16 ok
+17 ok
+18 ok
+19 ok
+20 ok
+21 ok
+22 ok
+23 ok
+24 ok
+25 ok
+26 ok
+27 ok
+28 ok
+29 ok
+30 ok
+31 ok
+32 ok
+33 ok
+34 ok
+35 ok
+36 ok
+37 ok
+38 ok
+39 ok
+40 ok
+41 ok
+42 ok
+43 ok
+44 ok
+45 ok

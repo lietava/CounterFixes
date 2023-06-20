@@ -1,0 +1,1 @@
+root -b -q "GetScalers.C(\"520294\",1657182028190,\"http://alice-ccdb.cern.ch\")" > 520294.log
