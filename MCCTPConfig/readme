@@ -1,0 +1,6 @@
+CTPConfigMC0.root - latest config in database before this download: https://alice.its.cern.ch/jira/secure/attachment/58654/Screenshot%202022-08-02%20at%2009.51.50.png
+===
+New configs to be uploaded to ccdb:
+CTPConfig310000.root
+CTPConfig303000.root
+CTPConfig300000.root
