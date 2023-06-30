@@ -30,13 +30,15 @@ int prepareUpload(std::vector<int>& runs, std::vector<long>& startTS, std::vecto
 {
    using namespace std::chrono_literals;
    std::chrono::seconds min5 = 300s;
+   std::chrono::seconds min3 = 180s;
    long time5min = std::chrono::duration_cast<std::chrono::milliseconds>(min5).count();
+   long time3min = std::chrono::duration_cast<std::chrono::milliseconds>(min3).count();
    FILE *fptr = fopen("command.txt", "w");
    // 
    int i = 0;
    for(auto const& run: runs) {
-    long start = startTS[i] - time5min;
-    long end = stopTS[i] + time5min;    
+    long start = startTS[i] - time3min;
+    long end = stopTS[i] + time3min;    
     printf("o2-ccdb-upload -f %d.root --starttimestamp %ld --endtimestamp %ld  -k \"CTPRunScalers\" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m \"JIRA=O2-3684;runNumber=%d\"\n", run, start, end, run);
     fprintf(fptr, "o2-ccdb-upload -f %d.root --starttimestamp %ld --endtimestamp %ld  -k \"CTPRunScalers\" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m \"JIRA=O2-3684;runNumber=%d\"\n", run, start, end, run);
     i++;
@@ -92,7 +94,6 @@ void GetAndSave(std::string ccdbHost = "http://ccdb-test.cern.ch:8080")
         std::string name = run + ".root";
         TFile* myFile = TFile::Open(name.c_str(), "RECREATE");
         myFile->WriteObject(ctpscalers, "CTPRunScalers");
-        // myFile->Write();
         std::cout << run << " ok" << std::endl;
 	//
 	int runi = std::stoi(run);
