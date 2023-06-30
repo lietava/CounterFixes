@@ -26,55 +26,80 @@
 #include <iostream>
 #endif
 using namespace o2::ctp;
+int prepareUpload(std::vector<int>& runs, std::vector<long>& startTS, std::vector<long>& stopTS)
+{
+   using namespace std::chrono_literals;
+   std::chrono::seconds min5 = 300s;
+   long time5min = std::chrono::duration_cast<std::chrono::milliseconds>(min5).count();
+   FILE *fptr = fopen("command.txt", "w");
+   // 
+   int i = 0;
+   for(auto const& run: runs) {
+    long start = startTS[i] - time5min;
+    long end = stopTS[i] + time5min;    
+    printf("o2-ccdb-upload -f %d.root --starttimestamp %ld --endtimestamp %ld  -k \"CTPRunScalers\" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m \"JIRA=O2-3684;runNumber=%d\"\n", run, start, end, run);
+    fprintf(fptr, "o2-ccdb-upload -f %d.root --starttimestamp %ld --endtimestamp %ld  -k \"CTPRunScalers\" --path CTP/Calib/Scalers --host alice-ccdb.cern.ch -m \"JIRA=O2-3684;runNumber=%d\"\n", run, start, end, run);
+    i++;
+   }
+   fclose(fptr);
+   return 0;
+}
 void GetAndSave(std::string ccdbHost = "http://ccdb-test.cern.ch:8080")
 {
+  std::string ccdbHostProd = "http://alice-ccdb.cern.ch/";
   std::string CCDBPathCTPScalers = "CTP/Calib/Scalers";
   std::string CCDBPathCTPConfig = "CTP/Config/Config";
-  // std::vector<string> runs = {"518541","518543","518546","518547"};
-  // std::vector<long> timestamps = {1655116302316,1655118513690,1655121997478,1655123792911};
-  //std::vector<string> runs = {"519903", "519904", "519905", "519906"};
-  //std::vector<long> timestamps = {1656658674161, 1656660737184, 1656667772462, 1656669421115};
-  //std::vector<string> runs = {"518543"};
-  //std::vector<long> timestamps = {1655118513690};
-  std::vector<string> runs = {"527349","527963","528537","528543"};
-  std::vector<long> timestamps = {1665784953893,1666631792235,1667374389991, 1667377507182}; // scalers
-  //std::vector<long> timestamps = {1665784953893,};
-  int i = 0;
-  bool doscalers = 0;
-  bool doconfig = 1;
-  CTPRunManager mng;
-  // mng.setCCDBHost(ccdbHost);
+  std::vector<string> runs = {"519041","519043", "519045","519497","519498","519499","519502","519503","519504","519506","519507"};
   auto& mgr = o2::ccdb::BasicCCDBManager::instance();
   mgr.setURL(ccdbHost);
+  o2::ccdb::CcdbApi api;
+  api.init(ccdbHostProd);
+  //auto hd = api.retrieveHeaders("RCT/Info/RunInformation", std::map<std::string,std::string>(), 519041);
+  //return;
+  std::vector<long> startTS;
+  std::vector<long> stopTS;
+  std::vector<int> runis;
   for (auto const& run : runs) {
+    int runnumber = std::stoi(run);
+    auto hd = api.retrieveHeaders("RCT/Info/RunInformation", std::map<std::string,std::string>(), runnumber);
+    long timestampS = 0;
+    long timestampE = 0;
+    if(hd.size()) {
+     timestampS = std::stol(hd["SOR"]);
+     timestampE = std::stol(hd["EOR"]);
+     std::cout << "Found sor:" << timestampS << " eor:" << timestampE << std::endl;
+     // for(auto const& i: hd) {
+     //  std::cout << i.first << " " << i.second << std::endl;
+     // }
+    } else {
+      std::cout << " something wrong with " << run << std::endl;
+      std::cout << "size:" << hd.size() << std::endl;
+      for(auto const& i: hd) {
+       std::cout << i.first << " " << i.second << std::endl;
+      }
+      return;	    
+    }
     CTPConfiguration ctpcfg;
     CTPRunScalers scl;
     map<string, string> metadata; // can be empty
     metadata["runNumber"] = run;
-    if(doscalers) {
-      CTPRunScalers* ctpscalers = mgr.getSpecific<CTPRunScalers>(CCDBPathCTPScalers, timestamps[i], metadata);
-      if (ctpscalers == nullptr) {
-        std::cout << run << " CTPRunScalers not in database, timestamp:" << timestamps[i] << std::endl;
-      } else {
-        ctpscalers->printStream(std::cout);
+    CTPRunScalers* ctpscalers = mgr.getSpecific<CTPRunScalers>(CCDBPathCTPScalers, timestampS, metadata);
+    if (ctpscalers == nullptr) {
+       std::cout << run << " CTPRunScalers not in database, timestamp sor:" << timestampS << std::endl;
+    } else {
+        //ctpscalers->printStream(std::cout);
         //ctpscalers->convertRawToO2();
         std::string name = run + ".root";
         TFile* myFile = TFile::Open(name.c_str(), "RECREATE");
         myFile->WriteObject(ctpscalers, "CTPRunScalers");
         // myFile->Write();
         std::cout << run << " ok" << std::endl;
-      }
+	//
+	int runi = std::stoi(run);
+	runis.push_back(runi);
+	startTS.push_back(timestampS);
+	stopTS.push_back(timestampE);
    }
-   if(doconfig) {
-     CTPConfiguration* ctpcfg = mgr.getSpecific<CTPConfiguration>(CCDBPathCTPConfig,timestamps[i], metadata);
-     if (ctpcfg == nullptr) {
-       std::cout << "CTP Config not found" << std::endl;
-     } else {
-       std::string name = run + "_cfg.root";
-       TFile* myFile = TFile::Open(name.c_str(), "RECREATE");
-       myFile->WriteObject(ctpcfg, "CTPConfig");
-     }
-   }
-  i++;
   }
+  prepareUpload(runis, startTS, stopTS);
 }

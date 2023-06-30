@@ -9,9 +9,9 @@
 
 
 Processing GetScalers.C("520294",1657182028190,"http://alice-ccdb.cern.ch")...
-[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1687256518-bXtHZB, Host: http://alice-ccdb.cern.ch/
-[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1687256518-bXtHZB, Host: http://alice-ccdb.cern.ch
-[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657180930028/a8b092d5-fdcd-11ec-9d70-0aa140651b9a for 1657182028190 (retrieve, agent_id: ctpo2cs8.cern.ch-1687256518-bXtHZB), 
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1687334320-DZdZB1, Host: http://alice-ccdb.cern.ch/
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1687334320-DZdZB1, Host: http://alice-ccdb.cern.ch
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657180930028/a8b092d5-fdcd-11ec-9d70-0aa140651b9a for 1657182028190 (retrieve, agent_id: ctpo2cs8.cern.ch-1687334320-DZdZB1), 
 [ERROR] L1B > L0A Before error:1
 [ERROR] L1B > L0A Before error:1
 Counter errorrs: lmB:0 l0B:0 l1B:0 lmA:0 l0A:0 l1A:0 lmBlmA:0 lmAl0B:0 l0Bl0A:0 l0Al1B: 2 l1Bl1A:0

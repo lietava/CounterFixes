@@ -1,0 +1,26 @@
+
+Processing update.C...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1687274909-FdLbN9, Host: http://alice-ccdb.cern.ch
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1687274909-tP7d51, Host: http://alice-ccdb.cern.ch/
+
+processing run 520294
+path = alien:///alice/data/2022/LHC22f/520294/raw/1020/o2_ctf_run00520294_orbit0322055628_tf0000000001_epn193.root
+path1 = 
+firstOrbitCTFfile = 322055628 firstOrbitCTFfile1 = -1
+Final firstOrbitCTFfile = 322055628
+Processing run 520294 which started at 1657181582013 and ended at 1657181904301
+ query will be done for timeStamp 1657181743157
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1657166682330/28eac28d-fde1-11ec-9d70-0aa145271b9a for 1657181743157 (retrieve, agent_id: ctpo2cs8.cern.ch-1687274909-tP7d51), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657166082378/289dd0c6-fde1-11ec-9d70-0aa140651b9a for 1657181743157 (retrieve, agent_id: ctpo2cs8.cern.ch-1687274909-tP7d51), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1657152944347/f1d7f1be-fd89-11ec-9d70-0aa140641b9a for 1657181743157 (retrieve, agent_id: ctpo2cs8.cern.ch-1687274909-tP7d51), 
+orbitReset [mus] = 1657152944346551
+Counter errorrs: lmB:0 l0B:0 l1B:0 lmA:0 l0A:0 l1A:0 lmBlmA:0 lmAl0B:0 l0Bl0A:0 l0Al1B: 0 l1Bl1A:0
+startOrbit = 3263533376 endOrbit = 3530163198
+firstOrbitCTFfile = 322055628
+startOrbit in Scalers seems wrong, we will anyway use the one from CTF files
+startRunCTP = 1657181583013 endRunCTP = 1657205292962
+Adding these to GRPECS
+Large difference between GLO start (1657166682330) and what we get from CTP (1657181583013 --> 248 min, PLEASE CHECK
+Large difference between GLO end (1657190403252) and what we get from CTP (1657205292962 --> 248 min, PLEASE CHECK
+GRPECS will be valid from 1657181529868 to 1657182470694
+Adding SOX = 1657181583013 and EOX = 1657205292962 to RCT
