@@ -1,0 +1,415 @@
+run:523141
+Comparison between scalers validity and scalers tl first:52768 last:-2861
+run:523142
+Comparison between scalers validity and scalers tl first:211648 last:21232
+run:523148
+Comparison between scalers validity and scalers tl first:53497 last:-3047
+run:523182
+Comparison between scalers validity and scalers tl first:53741 last:21116
+run:523186
+Comparison between scalers validity and scalers tl first:53228 last:22434
+run:523298
+Comparison between scalers validity and scalers tl first:55602 last:-2588
+run:523306
+Comparison between scalers validity and scalers tl first:53851 last:-2142
+run:523308
+Comparison between scalers validity and scalers tl first:53436 last:-2603
+run:523309
+Comparison between scalers validity and scalers tl first:54353 last:22659
+run:523397
+Comparison between scalers validity and scalers tl first:51852 last:21560
+run:523399
+Comparison between scalers validity and scalers tl first:206472 last:710
+run:523401
+Comparison between scalers validity and scalers tl first:51652 last:19422
+run:523441
+Comparison between scalers validity and scalers tl first:218965 last:22059
+run:523541
+Comparison between scalers validity and scalers tl first:218127 last:21563
+run:523559
+Comparison between scalers validity and scalers tl first:45359 last:-2666
+run:523669
+Comparison between scalers validity and scalers tl first:58291 last:21814
+run:523671
+Comparison between scalers validity and scalers tl first:52233 last:22329
+run:523677
+Comparison between scalers validity and scalers tl first:52002 last:22491
+run:523728
+Comparison between scalers validity and scalers tl first:51771 last:21881
+run:523731
+Comparison between scalers validity and scalers tl first:52299 last:22330
+run:523779
+Comparison between scalers validity and scalers tl first:51976 last:-2577
+run:523783
+Comparison between scalers validity and scalers tl first:51740 last:21464
+run:523786
+Comparison between scalers validity and scalers tl first:52609 last:21797
+run:523788
+Comparison between scalers validity and scalers tl first:51715 last:238
+run:523789
+Comparison between scalers validity and scalers tl first:51886 last:21674
+run:523792
+Comparison between scalers validity and scalers tl first:52348 last:0
+run:523797
+Comparison between scalers validity and scalers tl first:51928 last:21931
+run:523821
+Comparison between scalers validity and scalers tl first:52183 last:21053
+run:526463
+Comparison between scalers validity and scalers tl first:197782 last:563
+run:526465
+Comparison between scalers validity and scalers tl first:66613 last:119
+run:526466
+Comparison between scalers validity and scalers tl first:67261 last:685
+run:526467
+Comparison between scalers validity and scalers tl first:67366 last:117
+run:526468
+Comparison between scalers validity and scalers tl first:66551 last:-2806
+run:526486
+Comparison between scalers validity and scalers tl first:67547 last:296
+run:526505
+Comparison between scalers validity and scalers tl first:209741 last:706
+run:526512
+Comparison between scalers validity and scalers tl first:66517 last:126
+run:526525
+Comparison between scalers validity and scalers tl first:209686 last:374
+run:526526
+Comparison between scalers validity and scalers tl first:66919 last:138
+run:526528
+Comparison between scalers validity and scalers tl first:67817 last:707
+run:526559
+Comparison between scalers validity and scalers tl first:66211 last:553
+run:526596
+Comparison between scalers validity and scalers tl first:211915 last:385
+run:526606
+Comparison between scalers validity and scalers tl first:67770 last:654
+run:526612
+Comparison between scalers validity and scalers tl first:66919 last:230
+run:526638
+Comparison between scalers validity and scalers tl first:202207 last:443
+run:526639
+Comparison between scalers validity and scalers tl first:66677 last:500
+run:526641
+Comparison between scalers validity and scalers tl first:66972 last:-2250
+run:526643
+Comparison between scalers validity and scalers tl first:66453 last:539
+run:526647
+Comparison between scalers validity and scalers tl first:67272 last:-36
+run:526649
+Comparison between scalers validity and scalers tl first:66279 last:-3056
+run:526713
+Comparison between scalers validity and scalers tl first:213554 last:-3030
+run:526714
+Comparison between scalers validity and scalers tl first:67276 last:-3085
+run:526715
+Comparison between scalers validity and scalers tl first:80407 last:-2433
+run:526716
+Comparison between scalers validity and scalers tl first:66294 last:-2879
+run:526719
+Comparison between scalers validity and scalers tl first:66378 last:555
+run:526720
+Comparison between scalers validity and scalers tl first:71401 last:614
+run:526776
+Comparison between scalers validity and scalers tl first:68101 last:394
+run:526860
+Comparison between scalers validity and scalers tl first:642507 last:259200469
+run:526865
+Comparison between scalers validity and scalers tl first:648979 last:259200303
+run:526886
+Comparison between scalers validity and scalers tl first:670269 last:259200306
+run:526938
+Comparison between scalers validity and scalers tl first:670323 last:259200849
+run:526963
+Comparison between scalers validity and scalers tl first:799832 last:259200605
+run:526964
+Comparison between scalers validity and scalers tl first:722324 last:259200617
+run:526966
+Comparison between scalers validity and scalers tl first:670371 last:259200063
+run:526967
+Comparison between scalers validity and scalers tl first:669830 last:259200387
+run:526968
+Comparison between scalers validity and scalers tl first:670407 last:259200688
+run:527015
+Comparison between scalers validity and scalers tl first:669906 last:259200353
+run:527016
+Comparison between scalers validity and scalers tl first:669594 last:259200571
+run:527028
+Comparison between scalers validity and scalers tl first:670681 last:259200621
+run:527031
+Comparison between scalers validity and scalers tl first:670149 last:259200542
+run:527033
+Comparison between scalers validity and scalers tl first:670638 last:259200301
+run:527034
+Comparison between scalers validity and scalers tl first:703995 last:259200175
+run:527038
+Comparison between scalers validity and scalers tl first:670631 last:259200449
+run:527039
+Comparison between scalers validity and scalers tl first:670409 last:259200966
+run:527041
+Comparison between scalers validity and scalers tl first:671492 last:259200941
+run:527057
+Comparison between scalers validity and scalers tl first:669777 last:259200852
+run:527076
+Comparison between scalers validity and scalers tl first:674429 last:259200583
+run:527108
+Comparison between scalers validity and scalers tl first:803346 last:259200405
+run:527109
+Comparison between scalers validity and scalers tl first:669980 last:259200898
+run:527228
+Comparison between scalers validity and scalers tl first:667714 last:259200646
+run:527237
+Comparison between scalers validity and scalers tl first:667300 last:259200840
+run:527240
+Comparison between scalers validity and scalers tl first:667847 last:259200241
+run:527259
+Comparison between scalers validity and scalers tl first:666950 last:259200963
+run:527260
+Comparison between scalers validity and scalers tl first:667676 last:259200796
+run:527261
+Comparison between scalers validity and scalers tl first:667337 last:259200824
+run:527262
+Comparison between scalers validity and scalers tl first:667573 last:259200502
+run:527345
+Comparison between scalers validity and scalers tl first:837021 last:259200485
+run:527347
+Comparison between scalers validity and scalers tl first:667416 last:259200160
+run:527349
+Comparison between scalers validity and scalers tl first:249000 last:180000
+run:527446
+Comparison between scalers validity and scalers tl first:667440 last:259200543
+run:527518
+Comparison between scalers validity and scalers tl first:653670 last:259200195
+run:527523
+Comparison between scalers validity and scalers tl first:666602 last:259200755
+run:527690
+Comparison between scalers validity and scalers tl first:804243 last:259200359
+run:527694
+Comparison between scalers validity and scalers tl first:668016 last:259200874
+run:527731
+Comparison between scalers validity and scalers tl first:667451 last:259200818
+run:527734
+Comparison between scalers validity and scalers tl first:667993 last:259200429
+run:527736
+Comparison between scalers validity and scalers tl first:667913 last:259201005
+run:527821
+Comparison between scalers validity and scalers tl first:667741 last:259200548
+run:527825
+Comparison between scalers validity and scalers tl first:667416 last:259200481
+run:527826
+Comparison between scalers validity and scalers tl first:667574 last:259200459
+run:527828
+Comparison between scalers validity and scalers tl first:668072 last:259200519
+run:527848
+Comparison between scalers validity and scalers tl first:667215 last:259200264
+run:527850
+Comparison between scalers validity and scalers tl first:668225 last:259200625
+run:527852
+Comparison between scalers validity and scalers tl first:668019 last:259200351
+run:527863
+Comparison between scalers validity and scalers tl first:667487 last:259200105
+run:527864
+Comparison between scalers validity and scalers tl first:667446 last:259200646
+run:527865
+Comparison between scalers validity and scalers tl first:668015 last:259200109
+run:527869
+Comparison between scalers validity and scalers tl first:668120 last:259200928
+run:527871
+Comparison between scalers validity and scalers tl first:668022 last:259200803
+run:527895
+Comparison between scalers validity and scalers tl first:821898 last:259200908
+run:527898
+Comparison between scalers validity and scalers tl first:667472 last:259200232
+run:527899
+Comparison between scalers validity and scalers tl first:667994 last:259200417
+run:527902
+Comparison between scalers validity and scalers tl first:668093 last:259200969
+run:527963
+Comparison between scalers validity and scalers tl first:384000 last:180332
+run:527976
+Comparison between scalers validity and scalers tl first:807169 last:259200123
+run:527978
+Comparison between scalers validity and scalers tl first:668079 last:259200959
+run:527979
+Comparison between scalers validity and scalers tl first:667592 last:259200764
+run:528021
+Comparison between scalers validity and scalers tl first:803110 last:259200395
+run:528026
+Comparison between scalers validity and scalers tl first:667608 last:259200081
+run:528036
+Comparison between scalers validity and scalers tl first:803920 last:259200109
+run:528093
+Comparison between scalers validity and scalers tl first:661656 last:259200169
+run:528094
+Comparison between scalers validity and scalers tl first:662323 last:259200046
+run:528097
+Comparison between scalers validity and scalers tl first:661453 last:259200254
+run:528105
+Comparison between scalers validity and scalers tl first:662175 last:259200563
+run:528107
+Comparison between scalers validity and scalers tl first:661960 last:259200547
+run:528109
+Comparison between scalers validity and scalers tl first:661293 last:259200944
+run:528110
+Comparison between scalers validity and scalers tl first:661531 last:259200666
+run:528231
+Comparison between scalers validity and scalers tl first:804763 last:259200755
+run:528232
+Comparison between scalers validity and scalers tl first:661120 last:259200393
+run:528233
+Comparison between scalers validity and scalers tl first:661098 last:259200194
+run:528263
+Comparison between scalers validity and scalers tl first:807114 last:259200693
+run:528266
+Comparison between scalers validity and scalers tl first:661796 last:259200039
+run:528292
+Comparison between scalers validity and scalers tl first:661333 last:259200848
+run:528294
+Comparison between scalers validity and scalers tl first:661293 last:259200443
+run:528316
+Comparison between scalers validity and scalers tl first:660889 last:259200024
+run:528319
+Comparison between scalers validity and scalers tl first:661119 last:259200159
+run:528328
+Comparison between scalers validity and scalers tl first:661081 last:259200254
+run:528329
+Comparison between scalers validity and scalers tl first:661193 last:259200225
+run:528330
+Comparison between scalers validity and scalers tl first:672198 last:259200577
+run:528332
+Comparison between scalers validity and scalers tl first:661369 last:259200751
+run:528336
+Comparison between scalers validity and scalers tl first:661146 last:259200815
+run:528347
+Comparison between scalers validity and scalers tl first:817135 last:259200591
+run:528359
+Comparison between scalers validity and scalers tl first:813144 last:259200039
+run:528379
+Comparison between scalers validity and scalers tl first:661880 last:259200518
+run:528381
+Comparison between scalers validity and scalers tl first:661618 last:259200839
+run:528386
+Comparison between scalers validity and scalers tl first:654882 last:259200240
+run:528448
+Comparison between scalers validity and scalers tl first:661260 last:259200459
+run:528451
+Comparison between scalers validity and scalers tl first:662067 last:259200855
+run:528461
+Comparison between scalers validity and scalers tl first:817235 last:259200718
+run:528463
+Comparison between scalers validity and scalers tl first:661380 last:259200661
+run:528529
+Comparison between scalers validity and scalers tl first:818339 last:259200619
+run:528530
+Comparison between scalers validity and scalers tl first:662323 last:259200443
+run:528531
+Comparison between scalers validity and scalers tl first:661494 last:259200575
+run:528534
+Comparison between scalers validity and scalers tl first:663041 last:259200014
+run:528537
+Comparison between scalers validity and scalers tl first:241000 last:180129
+run:528543
+Comparison between scalers validity and scalers tl first:242000 last:180250
+run:528602
+Comparison between scalers validity and scalers tl first:661621 last:259200681
+run:528604
+Comparison between scalers validity and scalers tl first:661819 last:259200640
+run:528617
+Comparison between scalers validity and scalers tl first:661765 last:259200218
+run:528781
+Comparison between scalers validity and scalers tl first:662203 last:259200681
+run:528782
+Comparison between scalers validity and scalers tl first:661698 last:259200542
+run:528783
+Comparison between scalers validity and scalers tl first:661876 last:259200503
+run:528784
+Comparison between scalers validity and scalers tl first:661428 last:259200143
+run:528798
+Comparison between scalers validity and scalers tl first:824249 last:259200219
+run:528801
+Comparison between scalers validity and scalers tl first:661573 last:259200106
+run:529077
+Comparison between scalers validity and scalers tl first:807904 last:259200601
+run:529078
+Comparison between scalers validity and scalers tl first:660772 last:259200244
+run:529084
+Comparison between scalers validity and scalers tl first:662036 last:259200721
+run:529088
+Comparison between scalers validity and scalers tl first:660986 last:259200756
+run:529115
+Comparison between scalers validity and scalers tl first:661335 last:259200565
+run:529116
+Comparison between scalers validity and scalers tl first:661514 last:259200792
+run:529117
+Comparison between scalers validity and scalers tl first:661502 last:259200126
+run:529128
+Comparison between scalers validity and scalers tl first:814654 last:259200146
+run:529129
+Comparison between scalers validity and scalers tl first:661186 last:259200252
+run:529208
+Comparison between scalers validity and scalers tl first:661349 last:259200805
+run:529209
+Comparison between scalers validity and scalers tl first:661688 last:259200040
+run:529210
+Comparison between scalers validity and scalers tl first:661441 last:259200242
+run:529211
+Comparison between scalers validity and scalers tl first:661390 last:259200864
+run:529235
+Comparison between scalers validity and scalers tl first:810933 last:259200556
+run:529237
+Comparison between scalers validity and scalers tl first:662989 last:259200571
+run:529242
+Comparison between scalers validity and scalers tl first:661564 last:259200692
+run:529248
+Comparison between scalers validity and scalers tl first:660979 last:259200664
+run:529252
+Comparison between scalers validity and scalers tl first:661171 last:259200424
+run:529270
+Comparison between scalers validity and scalers tl first:661702 last:259200262
+run:529306
+Comparison between scalers validity and scalers tl first:661107 last:259200360
+run:529310
+Comparison between scalers validity and scalers tl first:660612 last:259200634
+run:529317
+Comparison between scalers validity and scalers tl first:661195 last:259200674
+run:529320
+Comparison between scalers validity and scalers tl first:661555 last:259200686
+run:529324
+Comparison between scalers validity and scalers tl first:660342 last:259200279
+run:529338
+Comparison between scalers validity and scalers tl first:661599 last:259200876
+run:529341
+Comparison between scalers validity and scalers tl first:725301 last:259200873
+run:529450
+Comparison between scalers validity and scalers tl first:661101 last:259200765
+run:529452
+Comparison between scalers validity and scalers tl first:661438 last:259200971
+run:529454
+Comparison between scalers validity and scalers tl first:661321 last:259200013
+run:529458
+Comparison between scalers validity and scalers tl first:661153 last:259200309
+run:529460
+Comparison between scalers validity and scalers tl first:661530 last:259200989
+run:529461
+Comparison between scalers validity and scalers tl first:661637 last:259200472
+run:529462
+Comparison between scalers validity and scalers tl first:661827 last:259200509
+run:529542
+Comparison between scalers validity and scalers tl first:655730 last:259200278
+run:529552
+Comparison between scalers validity and scalers tl first:660327 last:259200437
+run:529554
+Comparison between scalers validity and scalers tl first:659241 last:259200013
+run:529662
+Comparison between scalers validity and scalers tl first:658002 last:259200251
+run:529663
+Comparison between scalers validity and scalers tl first:655683 last:259200465
+run:529664
+Comparison between scalers validity and scalers tl first:655954 last:259200594
+run:529674
+Comparison between scalers validity and scalers tl first:655682 last:259200156
+run:529675
+Comparison between scalers validity and scalers tl first:656556 last:259200574
+run:529690
+Comparison between scalers validity and scalers tl first:655960 last:259200190
+run:529691
+Comparison between scalers validity and scalers tl first:655670 last:259200411
+Number of runs processed:207

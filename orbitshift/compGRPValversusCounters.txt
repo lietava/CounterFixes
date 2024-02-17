@@ -1,0 +1,415 @@
+run:523141
+Comparison to scalers first: 52768 last: -2861
+run:523142
+Comparison to scalers first: 211648 last: 21232
+run:523148
+Comparison to scalers first: 53497 last: -3047
+run:523182
+Comparison to scalers first: 53741 last: 21116
+run:523186
+Comparison to scalers first: 53228 last: 22434
+run:523298
+Comparison to scalers first: 55602 last: -2588
+run:523306
+Comparison to scalers first: 53851 last: -2142
+run:523308
+Comparison to scalers first: 53436 last: -2603
+run:523309
+Comparison to scalers first: 54353 last: 22659
+run:523397
+Comparison to scalers first: 51852 last: 21560
+run:523399
+Comparison to scalers first: 206472 last: 710
+run:523401
+Comparison to scalers first: 51652 last: 19422
+run:523441
+Comparison to scalers first: 218965 last: 22059
+run:523541
+Comparison to scalers first: 218127 last: 21563
+run:523559
+Comparison to scalers first: 45359 last: -2666
+run:523669
+Comparison to scalers first: 58291 last: 21814
+run:523671
+Comparison to scalers first: 52233 last: 22329
+run:523677
+Comparison to scalers first: 52002 last: 22491
+run:523728
+Comparison to scalers first: 51771 last: 21881
+run:523731
+Comparison to scalers first: 52299 last: 22330
+run:523779
+Comparison to scalers first: 51976 last: -2577
+run:523783
+Comparison to scalers first: 51740 last: 21464
+run:523786
+Comparison to scalers first: 52609 last: 21797
+run:523788
+Comparison to scalers first: 51715 last: 238
+run:523789
+Comparison to scalers first: 51886 last: 21674
+run:523792
+Comparison to scalers first: 52348 last: 0
+run:523797
+Comparison to scalers first: 51928 last: 21931
+run:523821
+Comparison to scalers first: 52183 last: 21053
+run:526463
+Comparison to scalers first: 197782 last: 563
+run:526465
+Comparison to scalers first: 66613 last: 119
+run:526466
+Comparison to scalers first: 67261 last: 685
+run:526467
+Comparison to scalers first: 67366 last: 117
+run:526468
+Comparison to scalers first: 66551 last: -2806
+run:526486
+Comparison to scalers first: 67547 last: 296
+run:526505
+Comparison to scalers first: 209741 last: 706
+run:526512
+Comparison to scalers first: 66517 last: 126
+run:526525
+Comparison to scalers first: 209686 last: 374
+run:526526
+Comparison to scalers first: 66919 last: 138
+run:526528
+Comparison to scalers first: 67817 last: 707
+run:526559
+Comparison to scalers first: 66211 last: 553
+run:526596
+Comparison to scalers first: 211915 last: 385
+run:526606
+Comparison to scalers first: 67770 last: 654
+run:526612
+Comparison to scalers first: 66919 last: 230
+run:526638
+Comparison to scalers first: 202207 last: 443
+run:526639
+Comparison to scalers first: 66677 last: 500
+run:526641
+Comparison to scalers first: 66972 last: -2250
+run:526643
+Comparison to scalers first: 66453 last: 539
+run:526647
+Comparison to scalers first: 67272 last: -36
+run:526649
+Comparison to scalers first: 66279 last: -3056
+run:526713
+Comparison to scalers first: 213554 last: -3030
+run:526714
+Comparison to scalers first: 67276 last: -3085
+run:526715
+Comparison to scalers first: 80407 last: -2433
+run:526716
+Comparison to scalers first: 66294 last: -2879
+run:526719
+Comparison to scalers first: 66378 last: 555
+run:526720
+Comparison to scalers first: 71401 last: 614
+run:526776
+Comparison to scalers first: 68101 last: 394
+run:526860
+Comparison to scalers first: 42600 last: 367
+run:526865
+Comparison to scalers first: 49071 last: 203
+run:526886
+Comparison to scalers first: 71415 last: 202
+run:526938
+Comparison to scalers first: 71476 last: 747
+run:526963
+Comparison to scalers first: 201893 last: -2517
+run:526964
+Comparison to scalers first: 123476 last: 514
+run:526966
+Comparison to scalers first: 71529 last: -3058
+run:526967
+Comparison to scalers first: 70983 last: -2735
+run:526968
+Comparison to scalers first: 71546 last: 587
+run:527015
+Comparison to scalers first: 71046 last: 252
+run:527016
+Comparison to scalers first: 70734 last: 469
+run:527028
+Comparison to scalers first: 71812 last: 519
+run:527031
+Comparison to scalers first: 71310 last: -2579
+run:527033
+Comparison to scalers first: 71770 last: -2869
+run:527034
+Comparison to scalers first: 105128 last: -7336
+run:527038
+Comparison to scalers first: 71765 last: 347
+run:527039
+Comparison to scalers first: 71542 last: 864
+run:527041
+Comparison to scalers first: 72626 last: 840
+run:527057
+Comparison to scalers first: 70909 last: 750
+run:527076
+Comparison to scalers first: 75570 last: 482
+run:527108
+Comparison to scalers first: 205422 last: -2716
+run:527109
+Comparison to scalers first: 71112 last: 796
+run:527228
+Comparison to scalers first: 69787 last: 545
+run:527237
+Comparison to scalers first: 68449 last: 738
+run:527240
+Comparison to scalers first: 69006 last: 140
+run:527259
+Comparison to scalers first: 68082 last: -2162
+run:527260
+Comparison to scalers first: 68810 last: 694
+run:527261
+Comparison to scalers first: 68470 last: 723
+run:527262
+Comparison to scalers first: 68706 last: 401
+run:527345
+Comparison to scalers first: 238163 last: 383
+run:527347
+Comparison to scalers first: 68574 last: 58
+run:527349
+Comparison to scalers first: 68580 last: -66
+run:527446
+Comparison to scalers first: 68581 last: 440
+run:527518
+Comparison to scalers first: 54790 last: 93
+run:527523
+Comparison to scalers first: 67746 last: 653
+run:527690
+Comparison to scalers first: 205308 last: 257
+run:527694
+Comparison to scalers first: 68151 last: 771
+run:527731
+Comparison to scalers first: 67584 last: -2308
+run:527734
+Comparison to scalers first: 68126 last: 326
+run:527736
+Comparison to scalers first: 68053 last: 903
+run:527821
+Comparison to scalers first: 67865 last: 446
+run:527825
+Comparison to scalers first: 67548 last: -2645
+run:527826
+Comparison to scalers first: 67708 last: 356
+run:527828
+Comparison to scalers first: 68205 last: 416
+run:527848
+Comparison to scalers first: 67364 last: 161
+run:527850
+Comparison to scalers first: 68360 last: 522
+run:527852
+Comparison to scalers first: 68151 last: 247
+run:527863
+Comparison to scalers first: 67621 last: 3
+run:527864
+Comparison to scalers first: 67578 last: 544
+run:527865
+Comparison to scalers first: 68162 last: -4114
+run:527869
+Comparison to scalers first: 68272 last: 825
+run:527871
+Comparison to scalers first: 68154 last: 701
+run:527895
+Comparison to scalers first: 222031 last: 805
+run:527898
+Comparison to scalers first: 67607 last: 129
+run:527899
+Comparison to scalers first: 68128 last: -2707
+run:527902
+Comparison to scalers first: 68224 last: 867
+run:527963
+Comparison to scalers first: 203478 last: 332
+run:527976
+Comparison to scalers first: 208228 last: 21
+run:527978
+Comparison to scalers first: 68210 last: 857
+run:527979
+Comparison to scalers first: 67731 last: 663
+run:528021
+Comparison to scalers first: 204165 last: 294
+run:528026
+Comparison to scalers first: 67743 last: -22
+run:528036
+Comparison to scalers first: 204053 last: 7
+run:528093
+Comparison to scalers first: 61791 last: 66
+run:528094
+Comparison to scalers first: 62456 last: -55
+run:528097
+Comparison to scalers first: 61585 last: 154
+run:528105
+Comparison to scalers first: 62306 last: -2559
+run:528107
+Comparison to scalers first: 62114 last: 446
+run:528109
+Comparison to scalers first: 61426 last: 843
+run:528110
+Comparison to scalers first: 61664 last: 558
+run:528231
+Comparison to scalers first: 204901 last: 653
+run:528232
+Comparison to scalers first: 61253 last: 291
+run:528233
+Comparison to scalers first: 61231 last: 91
+run:528263
+Comparison to scalers first: 208159 last: 584
+run:528266
+Comparison to scalers first: 61938 last: -93
+run:528292
+Comparison to scalers first: 61466 last: 746
+run:528294
+Comparison to scalers first: 61424 last: 341
+run:528316
+Comparison to scalers first: 61024 last: -77
+run:528319
+Comparison to scalers first: 61255 last: 45
+run:528328
+Comparison to scalers first: 61214 last: 152
+run:528329
+Comparison to scalers first: 61324 last: 123
+run:528330
+Comparison to scalers first: 72330 last: -2545
+run:528332
+Comparison to scalers first: 61500 last: 648
+run:528336
+Comparison to scalers first: 61270 last: 712
+run:528347
+Comparison to scalers first: 218189 last: 488
+run:528359
+Comparison to scalers first: 213277 last: -64
+run:528379
+Comparison to scalers first: 62012 last: 412
+run:528381
+Comparison to scalers first: 61750 last: 737
+run:528386
+Comparison to scalers first: 55005 last: 138
+run:528448
+Comparison to scalers first: 61392 last: 357
+run:528451
+Comparison to scalers first: 62199 last: -4882
+run:528461
+Comparison to scalers first: 218273 last: 616
+run:528463
+Comparison to scalers first: 61513 last: 558
+run:528529
+Comparison to scalers first: 218473 last: 516
+run:528530
+Comparison to scalers first: 62455 last: 342
+run:528531
+Comparison to scalers first: 61625 last: 472
+run:528534
+Comparison to scalers first: 63172 last: -89
+run:528537
+Comparison to scalers first: 60774 last: 129
+run:528543
+Comparison to scalers first: 61597 last: 250
+run:528602
+Comparison to scalers first: 61755 last: 579
+run:528604
+Comparison to scalers first: 61950 last: 537
+run:528617
+Comparison to scalers first: 61896 last: 116
+run:528781
+Comparison to scalers first: 62334 last: 579
+run:528782
+Comparison to scalers first: 61829 last: 439
+run:528783
+Comparison to scalers first: 62007 last: 401
+run:528784
+Comparison to scalers first: 61562 last: 41
+run:528798
+Comparison to scalers first: 225289 last: 119
+run:528801
+Comparison to scalers first: 61711 last: 5
+run:529077
+Comparison to scalers first: 209977 last: -2518
+run:529078
+Comparison to scalers first: 61919 last: 144
+run:529084
+Comparison to scalers first: 63187 last: 619
+run:529088
+Comparison to scalers first: 62138 last: 656
+run:529115
+Comparison to scalers first: 62499 last: 464
+run:529116
+Comparison to scalers first: 62662 last: -2328
+run:529117
+Comparison to scalers first: 62653 last: 25
+run:529128
+Comparison to scalers first: 216716 last: -2978
+run:529129
+Comparison to scalers first: 62335 last: 150
+run:529208
+Comparison to scalers first: 62489 last: 705
+run:529209
+Comparison to scalers first: 62829 last: -60
+run:529210
+Comparison to scalers first: 62581 last: 141
+run:529211
+Comparison to scalers first: 62531 last: 762
+run:529235
+Comparison to scalers first: 212984 last: -2565
+run:529237
+Comparison to scalers first: 64130 last: 471
+run:529242
+Comparison to scalers first: 62698 last: 591
+run:529248
+Comparison to scalers first: 62121 last: 563
+run:529252
+Comparison to scalers first: 62311 last: 322
+run:529270
+Comparison to scalers first: 62851 last: 162
+run:529306
+Comparison to scalers first: 62261 last: 260
+run:529310
+Comparison to scalers first: 61752 last: 535
+run:529317
+Comparison to scalers first: 62343 last: 573
+run:529320
+Comparison to scalers first: 62703 last: -2451
+run:529324
+Comparison to scalers first: 61509 last: 178
+run:529338
+Comparison to scalers first: 62759 last: 775
+run:529341
+Comparison to scalers first: 126451 last: 770
+run:529450
+Comparison to scalers first: 63163 last: 662
+run:529452
+Comparison to scalers first: 62583 last: 869
+run:529454
+Comparison to scalers first: 62495 last: -89
+run:529458
+Comparison to scalers first: 62326 last: 207
+run:529460
+Comparison to scalers first: 62683 last: 888
+run:529461
+Comparison to scalers first: 62790 last: 371
+run:529462
+Comparison to scalers first: 62978 last: 408
+run:529542
+Comparison to scalers first: 57807 last: 176
+run:529552
+Comparison to scalers first: 61476 last: 330
+run:529554
+Comparison to scalers first: 60399 last: -3107
+run:529662
+Comparison to scalers first: 60087 last: 151
+run:529663
+Comparison to scalers first: 56845 last: 366
+run:529664
+Comparison to scalers first: 56086 last: 493
+run:529674
+Comparison to scalers first: 57750 last: 54
+run:529675
+Comparison to scalers first: 57705 last: 473
+run:529690
+Comparison to scalers first: 58043 last: -7832
+run:529691
+Comparison to scalers first: 56821 last: 310
+Number of runs processed:207

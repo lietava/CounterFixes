@@ -1,0 +1,606 @@
+
+Processing fixOrbits22.C...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1707486364-ZLLxVV, Host: http://alice-ccdb.cern.ch/
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1707486364-hlbVZJ, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660196771632/273f7ace-193d-11ed-8002-0aa140651b9a for 1660197431503 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660145837331/5117639d-18c2-11ed-8002-0aa140641b9a for 1660197431503 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660145837330 Time first 1660197425000
+Orbit from reset:580128 orbit from scalers:2672352362
+orbit offset:2671772234 235116 secs
+First and last before:2672352362 2685514504
+[INFO] Subtracting from orbit 2671772234
+First and last after:580128 13742270
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660197371503/25b103ca-193d-11ed-8002-0aa145271b9a for 1660197451503 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660197371503
+endValGRP:1660198592953
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660276134898/a1e391c1-1a04-11ed-8002-0aa140651b9a for 1660276794772 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660247436653/df027706-19ae-11ed-8002-0aa140641b9a for 1660276794772 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660247436652 Time first 1660276788000
+Orbit from reset:330070 orbit from scalers:3564827798
+orbit offset:3564497728 313676 secs
+First and last before:3564827798 3648975494
+[INFO] Subtracting from orbit 3564497728
+First and last after:330070 84477766
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660276734772/af28151d-1a04-11ed-8002-0aa145271b9a for 1660276814772 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660276734772
+endValGRP:1660284293434
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660401599430/5b1d2cdf-1b19-11ed-8002-0aa140651b9a for 1660402258398 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660402198482/343f1ab8-1b17-11ed-8002-0aa140641b9a for 1660402258398 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660402198481 Time first 1660402254000
+Orbit from reset:624 orbit from scalers:680768553
+orbit offset:680767929 59907.6 secs
+First and last before:680768553 690539609
+[INFO] Subtracting from orbit 680767929
+First and last after:624 9771680
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660402198398/598ed45b-1b19-11ed-8002-0aa145271b9a for 1660402278398 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660402198398
+endValGRP:1660403120412
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660427942278/afd6cca3-1b56-11ed-8002-0aa140651b9a for 1660428602149 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660402198481 Time first 1660428596000
+Orbit from reset:296852 orbit from scalers:976998884
+orbit offset:976702032 85949.8 secs
+First and last before:976998884 986762402
+[INFO] Subtracting from orbit 976702032
+First and last after:296852 10060370
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660428542149/ae47b49c-1b56-11ed-8002-0aa145271b9a for 1660428622149 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660428542149
+endValGRP:1660429461858
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660429919693/6e05f854-1b62-11ed-8002-0aa140651b9a for 1660430579564 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660402198481 Time first 1660430573000
+Orbit from reset:319085 orbit from scalers:999230767
+orbit offset:998911682 87904.2 secs
+First and last before:999230767 1043479536
+[INFO] Subtracting from orbit 998911682
+First and last after:319085 44567854
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660430519564/6c76fe53-1b62-11ed-8002-0aa145271b9a for 1660430599564 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660430519564
+endValGRP:1660434505397
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660434348793/eba83f1e-1b85-11ed-8002-0aa140651b9a for 1660435008647 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660402198481 Time first 1660435003000
+Orbit from reset:368902 orbit from scalers:1049041524
+orbit offset:1048672622 92283.2 secs
+First and last before:1049041524 1214896530
+[INFO] Subtracting from orbit 1048672622
+First and last after:368902 166223908
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660434948647/f90e4bf5-1b85-11ed-8002-0aa145271b9a for 1660435028647 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660434948647
+endValGRP:1660449773659
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660547624267/bcfb49a4-1c70-11ed-8002-0aa140651b9a for 1660548284148 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660490367835/7d47e09e-1be4-11ed-8002-0aa140641b9a for 1660548284148 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660490367834 Time first 1660548276000
+Orbit from reset:651205 orbit from scalers:2322845183
+orbit offset:2322193978 204353 secs
+First and last before:2322845183 2349028906
+[INFO] Subtracting from orbit 2322193978
+First and last after:651205 26834928
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660548224148/ca120f14-1c70-11ed-8002-0aa145271b9a for 1660548304148 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660548224148
+endValGRP:1660550626560
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660551567658/52fbd687-1c85-11ed-8002-0aa140651b9a for 1660552227528 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660490367834 Time first 1660552374000
+Orbit from reset:697289 orbit from scalers:2368931440
+orbit offset:2368234151 208405 secs
+First and last before:2368931440 2448457079
+[INFO] Subtracting from orbit 2368234151
+First and last after:697289 80222928
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660552167528/534c1ae2-1c85-11ed-8002-0aa145271b9a for 1660552247528 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660552167528
+endValGRP:1660559446710
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660560149470/6bd8560c-1c94-11ed-8002-0aa140651b9a for 1660560809348 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660490367834 Time first 1660560801000
+Orbit from reset:792054 orbit from scalers:2463696467
+orbit offset:2462904413 216736 secs
+First and last before:2463696467 2521374703
+[INFO] Subtracting from orbit 2462904413
+First and last after:792054 58470290
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660560749348/7734adec-1c94-11ed-8002-0aa145271b9a for 1660560829348 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660560749348
+endValGRP:1660565949422
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660595553057/f7dae722-1cec-11ed-8002-0aa140651b9a for 1660596212035 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660596152115/c99e9bfd-1cda-11ed-8002-0aa140641b9a for 1660596212035 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660596152114 Time first 1660596371000
+Orbit from reset:2461 orbit from scalers:2863690807
+orbit offset:2863688346 252005 secs
+First and last before:2863690807 2949046277
+[INFO] Subtracting from orbit 2863688346
+First and last after:2461 85357931
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660596152035/0505ad22-1ced-11ed-8002-0aa145271b9a for 1660596232035 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660596152035
+endValGRP:1660603983059
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660714671997/2e29534d-1dff-11ed-8002-0aa140651b9a for 1660715331873 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660712715756/2ef6f8bd-1dea-11ed-8002-0aa140641b9a for 1660715331873 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660712715755 Time first 1660715490000
+Orbit from reset:31197 orbit from scalers:4203240877
+orbit offset:4203209680 369882 secs
+First and last before:4203240877 4273463063
+[INFO] Subtracting from orbit 4203209680
+First and last after:31197 70253383
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660715271873/3ae85f0e-1dff-11ed-8002-0aa145271b9a for 1660715351873 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660715271873
+endValGRP:1660721755563
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660740445756/0b030d19-1e45-11ed-80df-c0a80209250c for 1660741105641 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660712715755 Time first 1660741091000
+Orbit from reset:319093 orbit from scalers:196176907
+orbit offset:195857814 17235.5 secs
+First and last before:196176907 315925743
+[INFO] Subtracting from orbit 195857814
+First and last after:319093 120067929
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660741045641/09739a22-1e45-11ed-8002-0aa145271b9a for 1660741125641 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660741045641
+endValGRP:1660751737334
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660906919840/12da2704-1fbf-11ed-8003-0aa140651b9a for 1660907579709 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660885607638/ba8e7e25-1f7c-11ed-8003-0aa140641b9a for 1660907579709 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660885607637 Time first 1660907578000
+Orbit from reset:247067 orbit from scalers:2068382851
+orbit offset:2068135784 181996 secs
+First and last before:2068382851 2141753683
+[INFO] Subtracting from orbit 2068135784
+First and last after:247067 73617899
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660907519709/1fe93ed8-1fbf-11ed-8003-0aa145271b9a for 1660907599709 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660907519709
+endValGRP:1660914124814
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660914047887/a48cb500-1fc5-11ed-8003-0aa140651b9a for 1660914707767 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660885607637 Time first 1660914700000
+Orbit from reset:327157 orbit from scalers:2148468522
+orbit offset:2148141365 189036 secs
+First and last before:2148468522 2173481994
+[INFO] Subtracting from orbit 2148141365
+First and last after:327157 25340629
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660914647767/b1aae7ca-1fc5-11ed-8003-0aa145271b9a for 1660914727767 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660914647767
+endValGRP:1660916946329
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660925293120/5fb701ba-2004-11ed-8003-0aa140651b9a for 1660925952998 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660885607637 Time first 1660925945000
+Orbit from reset:453613 orbit from scalers:2274926740
+orbit offset:2274473127 200154 secs
+First and last before:2274926740 2476467369
+[INFO] Subtracting from orbit 2274473127
+First and last after:453613 201994242
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1660925892998/6d0b27aa-2004-11ed-8003-0aa145271b9a for 1660925972998 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1660925892998
+endValGRP:1660943889491
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661008325351/e916b5e0-209e-11ed-8003-0aa140651b9a for 1661008985229 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660984190575/4291a45a-2062-11ed-8003-0aa140641b9a for 1661008985229 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660984190574 Time first 1661008977000
+Orbit from reset:278735 orbit from scalers:3208657163
+orbit offset:3208378428 282337 secs
+First and last before:3208657163 3222856964
+[INFO] Subtracting from orbit 3208378428
+First and last after:278735 14478536
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661008925229/f611d296-209e-11ed-8003-0aa145271b9a for 1661009005229 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661008925229
+endValGRP:1661010261881
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661012016852/af251546-20c5-11ed-8003-0aa140651b9a for 1661012676701 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1660984190574 Time first 1661012669000
+Orbit from reset:320253 orbit from scalers:3250169018
+orbit offset:3249848765 285987 secs
+First and last before:3250169018 3410130053
+[INFO] Subtracting from orbit 3249848765
+First and last after:320253 160281288
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661012616701/bc4c4752-20c5-11ed-8003-0aa145271b9a for 1661012696701 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661012616701
+endValGRP:1661026915330
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661083485146/67733f62-214c-11ed-8003-0aa140651b9a for 1661084145024 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1661063800920/9e07ea49-211b-11ed-8003-0aa140641b9a for 1661084145024 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661063800919 Time first 1661084137000
+Orbit from reset:228689 orbit from scalers:4053864515
+orbit offset:4053635826 356720 secs
+First and last before:4053864515 4060811793
+[INFO] Subtracting from orbit 4053635826
+First and last after:228689 7175967
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661084085024/65e476f7-214c-11ed-8003-0aa145271b9a for 1661084165024 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661084085024
+endValGRP:1661084752423
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661087106384/f77a3a94-2158-11ed-8003-0aa140651b9a for 1661087766260 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661063800919 Time first 1661087758000
+Orbit from reset:269408 orbit from scalers:4094587019
+orbit offset:4094317611 360300 secs
+First and last before:4094587019 4121487983
+[INFO] Subtracting from orbit 4094317611
+First and last after:269408 27170372
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661087706260/047d61ca-2159-11ed-8003-0aa145271b9a for 1661087786260 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661087706260
+endValGRP:1661090172464
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661090001512/4db711dc-2160-11ed-8003-0aa140651b9a for 1661090661391 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661063800919 Time first 1661090654000
+Orbit from reset:301975 orbit from scalers:4127147443
+orbit offset:4126845468 363162 secs
+First and last before:4127147443 4156924371
+[INFO] Subtracting from orbit 4126845468
+First and last after:301975 30078903
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661090601391/5ad43403-2160-11ed-8003-0aa145271b9a for 1661090681391 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661090601391
+endValGRP:1661093323797
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661093603404/6370602a-2165-11ed-8003-0aa140651b9a for 1661094263285 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661063800919 Time first 1661094255000
+Orbit from reset:342470 orbit from scalers:4167647622
+orbit offset:4167305152 366723 secs
+First and last before:4167647622 4181483758
+[INFO] Subtracting from orbit 4167305152
+First and last after:342470 14178606
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661094203285/63bed169-2165-11ed-8003-0aa145271b9a for 1661094283285 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661094203285
+endValGRP:1661095486238
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661095430235/b329373b-2169-11ed-8003-0aa140651b9a for 1661096090114 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661063800919 Time first 1661096082000
+Orbit from reset:363016 orbit from scalers:4188192827
+orbit offset:4187829811 368529 secs
+First and last before:4188192827 4202307488
+[INFO] Subtracting from orbit 4187829811
+First and last after:363016 14477677
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661096030114/bfcd972a-2169-11ed-8003-0aa145271b9a for 1661096110114 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661096030114
+endValGRP:1661097358674
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661098955775/8aeb2c32-2174-11ed-8003-0aa140651b9a for 1661099615652 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661063800919 Time first 1661099608000
+Orbit from reset:402667 orbit from scalers:4227838763
+orbit offset:4227436096 372014 secs
+First and last before:4227838763 4254677215
+[INFO] Subtracting from orbit 4227436096
+First and last after:402667 27241119
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661099555652/767d58ea-667c-11ed-9dc3-200114580202 for 1661099635652 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661099555652
+endValGRP:1661101994000
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661102113192/ee964b30-2179-11ed-8003-0aa140651b9a for 1661102773072 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661063800919 Time first 1661102765000
+Orbit from reset:438169 orbit from scalers:4263344167
+orbit offset:4262905998 375136 secs
+First and last before:4263344167 4280707167
+[INFO] Subtracting from orbit 4262905998
+First and last after:438169 17801169
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661102713072/fb972e57-2179-11ed-8003-0aa145271b9a for 1661102793072 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661102713072
+endValGRP:1661104330931
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661117864939/278aa47d-219d-11ed-8003-0aa140651b9a for 1661118524817 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1661106391463/c7f71b9b-217e-11ed-8003-0aa140641b9a for 1661118524817 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661106391462 Time first 1661118517000
+Orbit from reset:136357 orbit from scalers:145513746
+orbit offset:145377389 12793.2 secs
+First and last before:145513746 155859870
+[INFO] Subtracting from orbit 145377389
+First and last after:136357 10482481
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661118464817/3411ba54-219d-11ed-8003-0aa145271b9a for 1661118544817 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661118464817
+endValGRP:1661119458053
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661229360005/2da5d546-22ab-11ed-8003-0aa140651b9a for 1661230019875 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1661213943357/31e273d5-2279-11ed-8003-0aa140641b9a for 1661230019875 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1661213943356 Time first 1661230019000
+Orbit from reset:180778 orbit from scalers:1399403552
+orbit offset:1399222774 123132 secs
+First and last before:1399403552 1460042597
+[INFO] Subtracting from orbit 1399222774
+First and last after:180778 60819823
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1661229959875/2c1aca7a-22ab-11ed-8003-0aa145271b9a for 1661230039875 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1661229959875
+endValGRP:1661235408792
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664551432490/c0516dde-40d8-11ed-832d-0aa140651b9a for 1664552092387 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664549840284/2f6b445c-40d0-11ed-832d-0aa140641b9a for 1664552092387 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664549840283 Time first 1664552099000
+Orbit from reset:25400 orbit from scalers:2897643449
+orbit offset:2897618049 254990 secs
+First and last before:2897643449 2913619441
+[INFO] Subtracting from orbit 2897618049
+First and last after:25400 16001392
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664552032387/c0a36f78-40d8-11ed-832d-0aa145271b9a for 1664552112387 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664552032387
+endValGRP:1664553520119
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664553547852/7bd15d26-40db-11ed-832d-0aa140651b9a for 1664554207739 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664549840283 Time first 1664554215000
+Orbit from reset:49195 orbit from scalers:2921432929
+orbit offset:2921383734 257082 secs
+First and last before:2921432929 2926816788
+[INFO] Subtracting from orbit 2921383734
+First and last after:49195 5433054
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664554147739/7c2523b3-40db-11ed-832d-0aa145271b9a for 1664554227739 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664554147739
+endValGRP:1664554693685
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664554524745/9c4d277b-40e3-11ed-832d-0aa140651b9a for 1664555184634 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664549840283 Time first 1664555192000
+Orbit from reset:60182 orbit from scalers:2932420022
+orbit offset:2932359840 258048 secs
+First and last before:2932420022 2966068850
+[INFO] Subtracting from orbit 2932359840
+First and last after:60182 33709010
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664555124634/9c967d22-40e3-11ed-832d-0aa145271b9a for 1664555204634 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664555124634
+endValGRP:1664558184117
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664558112559/d3c54475-40e5-11ed-832d-0aa140651b9a for 1664558772449 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664549840283 Time first 1664558779000
+Orbit from reset:100520 orbit from scalers:2972764130
+orbit offset:2972663610 261594 secs
+First and last before:2972764130 2976775255
+[INFO] Subtracting from orbit 2972663610
+First and last after:100520 4111645
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664558712449/d2375cd0-40e5-11ed-832d-0aa145271b9a for 1664558792449 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664558712449
+endValGRP:1664559133194
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664575950568/044c1af3-4148-11ed-832d-0aa140651b9a for 1664576610453 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664571111275/b5e957cf-4101-11ed-832d-0aa140641b9a for 1664576610453 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664571111274 Time first 1664576618000
+Orbit from reset:61925 orbit from scalers:3173365120
+orbit offset:3173303195 279251 secs
+First and last before:3173365120 3451019997
+[INFO] Subtracting from orbit 3173303195
+First and last after:61925 277716802
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664576550453/049af33b-4148-11ed-832d-0aa145271b9a for 1664576630453 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664576550453
+endValGRP:1664601308296
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664622936371/733ccf3b-418d-11ed-832d-0aa140651b9a for 1664623596259 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664621301764/91c70eca-4176-11ed-832d-0aa140641b9a for 1664623596259 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664621301763 Time first 1664623746000
+Orbit from reset:27486 orbit from scalers:3703346674
+orbit offset:3703319188 325892 secs
+First and last before:3703346674 3786374727
+[INFO] Subtracting from orbit 3703319188
+First and last after:27486 83055539
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664623536259/738ac76b-418d-11ed-832d-0aa145271b9a for 1664623616259 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664623536259
+endValGRP:1664631129706
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664633193224/fa1f26f4-4197-11ed-832d-0aa140651b9a for 1664633853114 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664621301763 Time first 1664633860000
+Orbit from reset:141223 orbit from scalers:3817080789
+orbit offset:3816939566 335891 secs
+First and last before:3817080789 3837218662
+[INFO] Subtracting from orbit 3816939566
+First and last after:141223 20279096
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664633793114/fa6eae43-4197-11ed-832d-0aa145271b9a for 1664633873114 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664633793114
+endValGRP:1664635650974
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664635665127/25edd15d-41a5-11ed-832d-0aa140651b9a for 1664636325018 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664621301763 Time first 1664636332000
+Orbit from reset:169022 orbit from scalers:3844883272
+orbit offset:3844714250 338335 secs
+First and last before:3844883272 3900833937
+[INFO] Subtracting from orbit 3844714250
+First and last after:169022 56119687
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664636265018/263c8c2f-41a5-11ed-832d-0aa145271b9a for 1664636345018 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664636265018
+endValGRP:1664641307927
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664641261599/0e52e7ed-41df-11ed-832d-0aa140651b9a for 1664641921483 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664621301763 Time first 1664641928000
+Orbit from reset:231951 orbit from scalers:3907812926
+orbit offset:3907580975 343867 secs
+First and last before:3907812926 4180523082
+[INFO] Subtracting from orbit 3907580975
+First and last after:231951 272942107
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664641861483/0ea2b7a3-41df-11ed-832d-0aa145271b9a for 1664641941483 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664641861483
+endValGRP:1664666179126
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664680274424/9aa2a82d-4211-11ed-832d-0aa140651b9a for 1664680934314 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664679431014/e983fb3b-41fd-11ed-832d-0aa140641b9a for 1664680934314 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664679431013 Time first 1664681084000
+Orbit from reset:18588 orbit from scalers:53167679
+orbit offset:53149091 4677.12 secs
+First and last before:53167679 129697280
+[INFO] Subtracting from orbit 53149091
+First and last after:18588 76548189
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664680874314/9af1a410-4211-11ed-832d-0aa145271b9a for 1664680954314 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664680874314
+endValGRP:1664687889374
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664687797191/81c7dc28-421c-11ed-832d-0aa140651b9a for 1664688457081 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664679431013 Time first 1664688464000
+Orbit from reset:101580 orbit from scalers:136159986
+orbit offset:136058406 11973.1 secs
+First and last before:136159986 182357322
+[INFO] Subtracting from orbit 136058406
+First and last after:101580 46298916
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664688397081/82161c36-421c-11ed-832d-0aa145271b9a for 1664688477081 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664688397081
+endValGRP:1664692572138
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664692506293/99c376f5-424d-11ed-832d-0aa140651b9a for 1664693166183 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664679431013 Time first 1664693174000
+Orbit from reset:154546 orbit from scalers:189126585
+orbit offset:188972039 16629.5 secs
+First and last before:189126585 419475155
+[INFO] Subtracting from orbit 188972039
+First and last after:154546 230503116
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664693106183/9a16d926-424d-11ed-832d-0aa145271b9a for 1664693186183 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664693106183
+endValGRP:1664713657707
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664719632282/4304fae5-4260-11ed-832d-0aa140651b9a for 1664720292170 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664679431013 Time first 1664720299000
+Orbit from reset:459580 orbit from scalers:494163081
+orbit offset:493703501 43445.9 secs
+First and last before:494163081 509606898
+[INFO] Subtracting from orbit 493703501
+First and last after:459580 15903397
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664720232170/4353a2c9-4260-11ed-832d-0aa145271b9a for 1664720312170 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664720232170
+endValGRP:1664721672623
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664738024899/ba5503b3-42a8-11ed-832d-0aa140651b9a for 1664738684789 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664728534214/3d4d0fbe-4270-11ed-832d-0aa140641b9a for 1664738684789 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664728534213 Time first 1664738691000
+Orbit from reset:114217 orbit from scalers:700992370
+orbit offset:700878153 61677.3 secs
+First and last before:700992370 859610051
+[INFO] Subtracting from orbit 700878153
+First and last after:114217 158731898
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664738624789/baa577de-42a8-11ed-832d-0aa145271b9a for 1664738704789 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664738624789
+endValGRP:1664752796553
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664797016194/f4a120d7-4339-11ed-832d-0aa140651b9a for 1664797676085 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664761746121/9123b6e6-42bd-11ed-832d-0aa140641b9a for 1664797676085 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664761746120 Time first 1664797828000
+Orbit from reset:405758 orbit from scalers:1366007293
+orbit offset:1365601535 120173 secs
+First and last before:1366007293 1561038019
+[INFO] Subtracting from orbit 1365601535
+First and last after:405758 195436484
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664797616085/f4f01582-4339-11ed-832d-0aa145271b9a for 1664797696085 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664797616085
+endValGRP:1664815171385
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664815126339/8f2d7f32-4342-11ed-832d-0aa140651b9a for 1664815786230 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664761746120 Time first 1664815794000
+Orbit from reset:607794 orbit from scalers:1568043208
+orbit offset:1567435414 137934 secs
+First and last before:1568043208 1602593184
+[INFO] Subtracting from orbit 1567435414
+First and last after:607794 35157770
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664815726230/8f7d29b4-4342-11ed-832d-0aa145271b9a for 1664815806230 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664815726230
+endValGRP:1664818866654
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664818761192/412b9652-4351-11ed-832d-0aa140651b9a for 1664819421081 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664761746120 Time first 1664819428000
+Orbit from reset:648660 orbit from scalers:1608905481
+orbit offset:1608256821 141527 secs
+First and last before:1608905481 1673570025
+[INFO] Subtracting from orbit 1608256821
+First and last after:648660 65313204
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664819361081/417b4147-4351-11ed-832d-0aa145271b9a for 1664819441081 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664819361081
+endValGRP:1664825178230
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664839438914/e082c9b5-4375-11ed-832e-0aa140651b9a for 1664840097793 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664839835025/61c14cdd-4373-11ed-832e-0aa140641b9a for 1664840097793 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664839835024 Time first 1664840240000
+Orbit from reset:4554 orbit from scalers:1842952993
+orbit offset:1842948439 162179 secs
+First and last before:1842952993 1850451603
+[INFO] Subtracting from orbit 1842948439
+First and last after:4554 7503164
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664840037793/e0d239d3-4375-11ed-832e-0aa145271b9a for 1664840117793 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664840037793
+endValGRP:1664840907443
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664840762449/f9f333d5-4398-11ed-832e-0aa140651b9a for 1664841421323 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664839835024 Time first 1664841428000
+Orbit from reset:17913 orbit from scalers:1856312165
+orbit offset:1856294252 163354 secs
+First and last before:1856312165 2019978211
+[INFO] Subtracting from orbit 1856294252
+First and last after:17913 163683959
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664841361323/fa4234b2-4398-11ed-832e-0aa145271b9a for 1664841441323 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664841361323
+endValGRP:1664855982500
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664857561154/2988f635-43ae-11ed-832e-0aa140651b9a for 1664858220028 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664839835024 Time first 1664858227000
+Orbit from reset:206826 orbit from scalers:2045221311
+orbit offset:2045014485 179961 secs
+First and last before:2045221311 2122304082
+[INFO] Subtracting from orbit 2045014485
+First and last after:206826 77289597
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664858160028/27fc5aa4-43ae-11ed-832e-0aa145271b9a for 1664858240028 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664858160028
+endValGRP:1664865078750
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664865956658/b9aa6de1-43bc-11ed-832e-0aa140651b9a for 1664866616547 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664839835024 Time first 1664866623000
+Orbit from reset:301243 orbit from scalers:2139640905
+orbit offset:2139339662 188262 secs
+First and last before:2139640905 2192642084
+[INFO] Subtracting from orbit 2139339662
+First and last after:301243 53302422
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664866556547/b9f88846-43bc-11ed-832e-0aa145271b9a for 1664866636547 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664866556547
+endValGRP:1664871336539
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664871099852/3f2861d8-43c8-11ed-832e-0aa140651b9a for 1664871758728 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664839835024 Time first 1664871766000
+Orbit from reset:359079 orbit from scalers:2197471009
+orbit offset:2197111930 193346 secs
+First and last before:2197471009 2248289614
+[INFO] Subtracting from orbit 2197111930
+First and last after:359079 51177684
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664871698728/3f7a1d7c-43c8-11ed-832e-0aa145271b9a for 1664871778728 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664871698728
+endValGRP:1664876284964
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664876486840/6fbe3908-43cd-11ed-832e-0aa140651b9a for 1664877145721 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664839835024 Time first 1664877152000
+Orbit from reset:419647 orbit from scalers:2258048622
+orbit offset:2257628975 198671 secs
+First and last before:2258048622 2273355828
+[INFO] Subtracting from orbit 2257628975
+First and last after:419647 15726853
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664877085721/6e32b61b-43cd-11ed-832e-0aa145271b9a for 1664877165721 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664877085721
+endValGRP:1664878510944
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664895007545/c02488ed-43fb-11ed-832e-0aa140651b9a for 1664895666434 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664890634810/a8c9b955-43e9-11ed-832e-0aa140641b9a for 1664895666434 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664890634809 Time first 1664895673000
+Orbit from reset:56656 orbit from scalers:2466322448
+orbit offset:2466265792 217031 secs
+First and last before:2466322448 2497047626
+[INFO] Subtracting from orbit 2466265792
+First and last after:56656 30781834
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664895606434/c07327cc-43fb-11ed-832e-0aa145271b9a for 1664895686434 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664895606434
+endValGRP:1664898405701
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664923949659/1359185f-443a-11ed-832e-0aa140651b9a for 1664924608533 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664915506260/91546ac9-4423-11ed-832e-0aa140641b9a for 1664924608533 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664915506259 Time first 1664924615000
+Orbit from reset:102432 orbit from scalers:2791789854
+orbit offset:2791687422 245668 secs
+First and last before:2791789854 2798068233
+[INFO] Subtracting from orbit 2791687422
+First and last after:102432 6380811
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664924548533/0cae8e11-443a-11ed-832e-0aa145271b9a for 1664924628533 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664924548533
+endValGRP:1664925162488
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664926421575/c88ed608-445c-11ed-832e-0aa140651b9a for 1664927080446 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664915506259 Time first 1664927234000
+Orbit from reset:131884 orbit from scalers:2821243242
+orbit offset:2821111358 248258 secs
+First and last before:2821243242 2965703841
+[INFO] Subtracting from orbit 2821111358
+First and last after:131884 144592483
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664927020446/c700322f-445c-11ed-832e-0aa145271b9a for 1664927100446 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664927020446
+endValGRP:1664940077970
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664940252852/eb6437b7-445f-11ed-832e-0aa140651b9a for 1664940911724 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664915506259 Time first 1664940919000
+Orbit from reset:285778 orbit from scalers:2975128207
+orbit offset:2974842429 261786 secs
+First and last before:2975128207 2980850862
+[INFO] Subtracting from orbit 2974842429
+First and last after:285778 6008433
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664940851724/e9d6b8d3-445f-11ed-832e-0aa145271b9a for 1664940931724 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664940851724
+endValGRP:1664941424915
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664941484732/ed47469f-4462-11ed-832e-0aa140651b9a for 1664942143593 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664915506259 Time first 1664942164000
+Orbit from reset:299779 orbit from scalers:2989129328
+orbit offset:2988829549 263017 secs
+First and last before:2989129328 2995376180
+[INFO] Subtracting from orbit 2988829549
+First and last after:299779 6546631
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664942083593/ebb93b74-4462-11ed-832e-0aa145271b9a for 1664942163593 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664942083593
+endValGRP:1664942716567
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664943180834/b890a5cb-4466-11ed-832e-0aa140651b9a for 1664943839706 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664915506259 Time first 1664943846000
+Orbit from reset:318694 orbit from scalers:3008053047
+orbit offset:3007734353 264681 secs
+First and last before:3008053047 3013701282
+[INFO] Subtracting from orbit 3007734353
+First and last after:318694 5966929
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664943779706/b704cca9-4466-11ed-832e-0aa145271b9a for 1664943859706 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664943779706
+endValGRP:1664944346121
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664947896750/b166ac3b-4479-11ed-832e-0aa140651b9a for 1664948555622 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664915506259 Time first 1664948562000
+Orbit from reset:371727 orbit from scalers:3061085941
+orbit offset:3060714214 269343 secs
+First and last before:3061085941 3105334330
+[INFO] Subtracting from orbit 3060714214
+First and last after:371727 44620116
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664948495622/b1ba6299-4479-11ed-832e-0aa145271b9a for 1664948575622 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664948495622
+endValGRP:1664952497555
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664952813729/ecbf66d2-447c-11ed-832e-0aa140651b9a for 1664953472599 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664915506259 Time first 1664953484000
+Orbit from reset:427078 orbit from scalers:3116428425
+orbit offset:3116001347 274208 secs
+First and last before:3116428425 3120943752
+[INFO] Subtracting from orbit 3116001347
+First and last after:427078 4942405
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664953412599/ed1390b2-447c-11ed-832e-0aa145271b9a for 1664953492599 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664953412599
+endValGRP:1664953885614
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664996563052/4f7c01d3-44ee-11ed-832e-0aa140651b9a for 1664997221899 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664974664692/4e7e3c93-44ad-11ed-832e-0aa140641b9a for 1664997221899 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+ Orbit reset 1664974664691 Time first 1664997230000
+Orbit from reset:253757 orbit from scalers:3608370313
+orbit offset:3608116556 317514 secs
+First and last before:3608370313 3668579056
+[INFO] Subtracting from orbit 3608116556
+First and last after:253757 60462500
+[INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1664997161899/4fce3ba0-44ee-11ed-832e-0aa145271b9a for 1664997241899 (retrieve, agent_id: ctpo2cs8.cern.ch-1707486364-ZLLxVV), 
+startValGRP:1664997161899
+endValGRP:1665002584394
+Number of runs processed:58

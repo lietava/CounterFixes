@@ -1,0 +1,2433 @@
+
+Processing fixOrbits22CTPval.C...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1708004648-L9n3XH, Host: http://alice-ccdb.cern.ch
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1708004648-jf7LBL, Host: http://alice-ccdb.cern.ch/
+run:523141
+Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.47
+Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.47
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/33606/65598fe8-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660160747232/65598fe8-cb49-11ee-80cd-200114580202 for 1660160807232 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/13/13280/5117639d-18c2-11ed-8002-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660145837331/5117639d-18c2-11ed-8002-0aa140641b9a for 1660160807232 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660145837330 Time first scalers 1660160800000 ccdb: 1660160747232
+Orbit from reset:168262445 orbit from scalers:168262445
+orbit offset:0 0 secs
+First and last before:168262445 174698541
+[INFO] Subtracting from orbit 0
+First and last after:168262445 174698541
+scalers: valS:1660160747232 1660161370139
+Comparison between scalers validity and scalers tl first:52768 last:-2861
+run:523142
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/06091/664b644f-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660162333352/664b644f-cb49-11ee-80cd-200114580202 for 1660162393352 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660145837330 Time first scalers 1660162545000 ccdb: 1660162333352
+Orbit from reset:187885812 orbit from scalers:187885812
+orbit offset:0 0 secs
+First and last before:187885812 213695955
+[INFO] Subtracting from orbit 0
+First and last after:187885812 213695955
+scalers: valS:1660162333352 1660164862232
+Comparison between scalers validity and scalers tl first:211648 last:21232
+run:523148
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/28455/673d1af4-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660197371503/673d1af4-cb49-11ee-80cd-200114580202 for 1660197431503 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660145837330 Time first scalers 1660197425000 ccdb: 1660197371503
+Orbit from reset:580128245 orbit from scalers:580128245
+orbit offset:0 0 secs
+First and last before:580128245 593290387
+[INFO] Subtracting from orbit 0
+First and last after:580128245 593290387
+scalers: valS:1660197371503 1660198592953
+Comparison between scalers validity and scalers tl first:53497 last:-3047
+run:523182
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/35929/682cecce-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660248072259/682cecce-cb49-11ee-80cd-200114580202 for 1660248132259 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/13/64441/df027706-19ae-11ed-8002-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660247436653/df027706-19ae-11ed-8002-0aa140641b9a for 1660248132259 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660247436652 Time first scalers 1660248126000 ccdb: 1660248072259
+Orbit from reset:7752050 orbit from scalers:7752050
+orbit offset:0 0 secs
+First and last before:7752050 38156255
+[INFO] Subtracting from orbit 0
+First and last after:7752050 38156255
+scalers: valS:1660248072259 1660250851116
+Comparison between scalers validity and scalers tl first:53741 last:21116
+run:523186
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/49017/691ef673-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660276734772/691ef673-cb49-11ee-80cd-200114580202 for 1660276794772 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660247436652 Time first scalers 1660276788000 ccdb: 1660276734772
+Orbit from reset:330070073 orbit from scalers:330070073
+orbit offset:0 0 secs
+First and last before:330070073 414217769
+[INFO] Subtracting from orbit 0
+First and last after:330070073 414217769
+scalers: valS:1660276734772 1660284293434
+Comparison between scalers validity and scalers tl first:53228 last:22434
+run:523298
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/62107/6a0a42a2-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660402198398/6a0a42a2-cb49-11ee-80cd-200114580202 for 1660402258398 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/04/04549/343f1ab8-1b17-11ed-8002-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+Error in <TNetXNGFile::Open>: [ERROR] Server responded with an error: [3011] No servers are available to read the file.
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/04/04549/343f1ab8-1b17-11ed-8002-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660402198482/343f1ab8-1b17-11ed-8002-0aa140641b9a for 1660402258398 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660402198481 Time first scalers 1660402254000 ccdb: 1660402198398
+Orbit from reset:624337 orbit from scalers:624337
+orbit offset:0 0 secs
+First and last before:624337 10395393
+[INFO] Subtracting from orbit 0
+First and last after:624337 10395393
+scalers: valS:1660402198398 1660403120412
+Comparison between scalers validity and scalers tl first:55602 last:-2588
+run:523306
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/34622/6af69093-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660428542149/6af69093-cb49-11ee-80cd-200114580202 for 1660428602149 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660402198481 Time first scalers 1660428596000 ccdb: 1660428542149
+Orbit from reset:296852840 orbit from scalers:296852840
+orbit offset:0 0 secs
+First and last before:296852840 306616358
+[INFO] Subtracting from orbit 0
+First and last after:296852840 306616358
+scalers: valS:1660428542149 1660429461858
+Comparison between scalers validity and scalers tl first:53851 last:-2142
+run:523308
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/56214/6be344f5-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660430519564/6be344f5-cb49-11ee-80cd-200114580202 for 1660430579564 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660402198481 Time first scalers 1660430573000 ccdb: 1660430519564
+Orbit from reset:319085159 orbit from scalers:319085159
+orbit offset:0 0 secs
+First and last before:319085159 363333928
+[INFO] Subtracting from orbit 0
+First and last after:319085159 363333928
+scalers: valS:1660430519564 1660434505397
+Comparison between scalers validity and scalers tl first:53436 last:-2603
+run:523309
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/19477/6cd2afb7-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660434948647/6cd2afb7-cb49-11ee-80cd-200114580202 for 1660435008647 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660402198481 Time first scalers 1660435003000 ccdb: 1660434948647
+Orbit from reset:368902647 orbit from scalers:368902647
+orbit offset:0 0 secs
+First and last before:368902647 534757653
+[INFO] Subtracting from orbit 0
+First and last after:368902647 534757653
+scalers: valS:1660434948647 1660449773659
+Comparison between scalers validity and scalers tl first:54353 last:22659
+run:523397
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/20999/6dd47265-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660548224148/6dd47265-cb49-11ee-80cd-200114580202 for 1660548284148 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/11/25905/7d47e09e-1be4-11ed-8002-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+Error in <TNetXNGFile::Open>: [ERROR] Server responded with an error: [3011] No servers are available to read the file.
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/11/25905/7d47e09e-1be4-11ed-8002-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660490367835/7d47e09e-1be4-11ed-8002-0aa140641b9a for 1660548284148 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660490367834 Time first scalers 1660548276000 ccdb: 1660548224148
+Orbit from reset:651205273 orbit from scalers:651205273
+orbit offset:0 0 secs
+First and last before:651205273 677388996
+[INFO] Subtracting from orbit 0
+First and last after:651205273 677388996
+scalers: valS:1660548224148 1660550626560
+Comparison between scalers validity and scalers tl first:51852 last:21560
+run:523399
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/33337/6ec0a3a3-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660552167528/6ec0a3a3-cb49-11ee-80cd-200114580202 for 1660552227528 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660490367834 Time first scalers 1660552374000 ccdb: 1660552167528
+Orbit from reset:697289261 orbit from scalers:697289261
+orbit offset:0 0 secs
+First and last before:697289261 776814900
+[INFO] Subtracting from orbit 0
+First and last after:697289261 776814900
+scalers: valS:1660552167528 1660559446710
+Comparison between scalers validity and scalers tl first:206472 last:710
+run:523401
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/38240/6f9aec0c-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660560749348/6f9aec0c-cb49-11ee-80cd-200114580202 for 1660560809348 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660490367834 Time first scalers 1660560801000 ccdb: 1660560749348
+Orbit from reset:792054942 orbit from scalers:792054942
+orbit offset:0 0 secs
+First and last before:792054942 849733178
+[INFO] Subtracting from orbit 0
+First and last after:792054942 849733178
+scalers: valS:1660560749348 1660565949422
+Comparison between scalers validity and scalers tl first:51652 last:19422
+run:523441
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/37699/7080fd17-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660596152035/7080fd17-cb49-11ee-80cd-200114580202 for 1660596212035 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/09/27477/c99e9bfd-1cda-11ed-8002-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660596152115/c99e9bfd-1cda-11ed-8002-0aa140641b9a for 1660596212035 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660596152114 Time first scalers 1660596371000 ccdb: 1660596152035
+Orbit from reset:2461478 orbit from scalers:2461478
+orbit offset:0 0 secs
+First and last before:2461478 87816948
+[INFO] Subtracting from orbit 0
+First and last after:2461478 87816948
+scalers: valS:1660596152035 1660603983059
+Comparison between scalers validity and scalers tl first:218965 last:22059
+run:523541
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/36147/7172b409-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660715271873/7172b409-cb49-11ee-80cd-200114580202 for 1660715331873 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/03/46232/2ef6f8bd-1dea-11ed-8002-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660712715756/2ef6f8bd-1dea-11ed-8002-0aa140641b9a for 1660715331873 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660712715755 Time first scalers 1660715490000 ccdb: 1660715271873
+Orbit from reset:31197723 orbit from scalers:31197723
+orbit offset:0 0 secs
+First and last before:31197723 101419909
+[INFO] Subtracting from orbit 0
+First and last after:31197723 101419909
+scalers: valS:1660715271873 1660721755563
+Comparison between scalers validity and scalers tl first:218127 last:21563
+run:523559
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/00940/725d31b3-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660741045641/725d31b3-cb49-11ee-80cd-200114580202 for 1660741105641 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660712715755 Time first scalers 1660741091000 ccdb: 1660741045641
+Orbit from reset:319093324 orbit from scalers:319093324
+orbit offset:0 0 secs
+First and last before:319093324 438842160
+[INFO] Subtracting from orbit 0
+First and last after:319093324 438842160
+scalers: valS:1660741045641 1660751737334
+Comparison between scalers validity and scalers tl first:45359 last:-2666
+run:523669
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/09671/735100ac-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660907519709/735100ac-cb49-11ee-80cd-200114580202 for 1660907579709 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/04/22573/ba8e7e25-1f7c-11ed-8003-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660885607638/ba8e7e25-1f7c-11ed-8003-0aa140641b9a for 1660907579709 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660885607637 Time first scalers 1660907578000 ccdb: 1660907519709
+Orbit from reset:247067334 orbit from scalers:247067334
+orbit offset:0 0 secs
+First and last before:247067334 320438166
+[INFO] Subtracting from orbit 0
+First and last after:247067334 320438166
+scalers: valS:1660907519709 1660914124814
+Comparison between scalers validity and scalers tl first:58291 last:21814
+run:523671
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/50817/743bef08-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660914647767/743bef08-cb49-11ee-80cd-200114580202 for 1660914707767 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660885607637 Time first scalers 1660914700000 ccdb: 1660914647767
+Orbit from reset:327157662 orbit from scalers:327157662
+orbit offset:0 0 secs
+First and last before:327157662 352171134
+[INFO] Subtracting from orbit 0
+First and last after:327157662 352171134
+scalers: valS:1660914647767 1660916946329
+Comparison between scalers validity and scalers tl first:52233 last:22329
+run:523677
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/61593/7536b633-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1660925892998/7536b633-cb49-11ee-80cd-200114580202 for 1660925952998 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660885607637 Time first scalers 1660925945000 ccdb: 1660925892998
+Orbit from reset:453613113 orbit from scalers:453613113
+orbit offset:0 0 secs
+First and last before:453613113 655153742
+[INFO] Subtracting from orbit 0
+First and last after:453613113 655153742
+scalers: valS:1660925892998 1660943889491
+Comparison between scalers validity and scalers tl first:52002 last:22491
+run:523728
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/09688/7659eb03-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661008925229/7659eb03-cb49-11ee-80cd-200114580202 for 1661008985229 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/01/16866/4291a45a-2062-11ed-8003-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1660984190575/4291a45a-2062-11ed-8003-0aa140641b9a for 1661008985229 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660984190574 Time first scalers 1661008977000 ccdb: 1661008925229
+Orbit from reset:278735322 orbit from scalers:278735322
+orbit offset:0 0 secs
+First and last before:278735322 292935123
+[INFO] Subtracting from orbit 0
+First and last after:278735322 292935123
+scalers: valS:1661008925229 1661010261881
+Comparison between scalers validity and scalers tl first:51771 last:21881
+run:523731
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/42839/7767824a-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661012616701/7767824a-cb49-11ee-80cd-200114580202 for 1661012676701 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1660984190574 Time first scalers 1661012669000 ccdb: 1661012616701
+Orbit from reset:320253644 orbit from scalers:320253644
+orbit offset:0 0 secs
+First and last before:320253644 480214679
+[INFO] Subtracting from orbit 0
+First and last after:320253644 480214679
+scalers: valS:1661012616701 1661026915330
+Comparison between scalers validity and scalers tl first:52299 last:22330
+run:523779
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/58775/7872ac16-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661084085024/7872ac16-cb49-11ee-80cd-200114580202 for 1661084145024 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/12/08155/9e07ea49-211b-11ed-8003-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1661063800920/9e07ea49-211b-11ed-8003-0aa140641b9a for 1661084145024 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1661063800919 Time first scalers 1661084137000 ccdb: 1661084085024
+Orbit from reset:228689045 orbit from scalers:228689045
+orbit offset:0 0 secs
+First and last before:228689045 235636323
+[INFO] Subtracting from orbit 0
+First and last after:228689045 235636323
+scalers: valS:1661084085024 1661084752423
+Comparison between scalers validity and scalers tl first:51976 last:-2577
+run:523783
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/56976/7981b089-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661087706260/7981b089-cb49-11ee-80cd-200114580202 for 1661087766260 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1661063800919 Time first scalers 1661087758000 ccdb: 1661087706260
+Orbit from reset:269408937 orbit from scalers:269408937
+orbit offset:0 0 secs
+First and last before:269408937 296309901
+[INFO] Subtracting from orbit 0
+First and last after:269408937 296309901
+scalers: valS:1661087706260 1661090172464
+Comparison between scalers validity and scalers tl first:51740 last:21464
+run:523786
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/14594/7a79a7fb-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661090601391/7a79a7fb-cb49-11ee-80cd-200114580202 for 1661090661391 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1661063800919 Time first scalers 1661090654000 ccdb: 1661090601391
+Orbit from reset:301975855 orbit from scalers:301975855
+orbit offset:0 0 secs
+First and last before:301975855 331752783
+[INFO] Subtracting from orbit 0
+First and last after:301975855 331752783
+scalers: valS:1661090601391 1661093323797
+Comparison between scalers validity and scalers tl first:52609 last:21797
+run:523788
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/21514/7b7a084a-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661094203285/7b7a084a-cb49-11ee-80cd-200114580202 for 1661094263285 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1661063800919 Time first scalers 1661094255000 ccdb: 1661094203285
+Orbit from reset:342470838 orbit from scalers:342470838
+orbit offset:0 0 secs
+First and last before:342470838 356306974
+[INFO] Subtracting from orbit 0
+First and last after:342470838 356306974
+scalers: valS:1661094203285 1661095486238
+Comparison between scalers validity and scalers tl first:51715 last:238
+run:523789
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/39239/7c672f00-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661096030114/7c672f00-cb49-11ee-80cd-200114580202 for 1661096090114 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1661063800919 Time first scalers 1661096082000 ccdb: 1661096030114
+Orbit from reset:363016334 orbit from scalers:363016334
+orbit offset:0 0 secs
+First and last before:363016334 377130995
+[INFO] Subtracting from orbit 0
+First and last after:363016334 377130995
+scalers: valS:1661096030114 1661097358674
+Comparison between scalers validity and scalers tl first:51886 last:21674
+run:523792
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/27436/7d66876f-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661099555652/7d66876f-cb49-11ee-80cd-200114580202 for 1661099615652 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1661063800919 Time first scalers 1661099608000 ccdb: 1661099555652
+Orbit from reset:402667906 orbit from scalers:402667906
+orbit offset:0 0 secs
+First and last before:402667906 429506358
+[INFO] Subtracting from orbit 0
+First and last after:402667906 429506358
+scalers: valS:1661099555652 1661101994000
+Comparison between scalers validity and scalers tl first:52348 last:0
+run:523797
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/16124/7e644cc7-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661102713072/7e644cc7-cb49-11ee-80cd-200114580202 for 1661102773072 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1661063800919 Time first scalers 1661102765000 ccdb: 1661102713072
+Orbit from reset:438169895 orbit from scalers:438169895
+orbit offset:0 0 secs
+First and last before:438169895 455532895
+[INFO] Subtracting from orbit 0
+First and last after:438169895 455532895
+scalers: valS:1661102713072 1661104330931
+Comparison between scalers validity and scalers tl first:51928 last:21931
+run:523821
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/24360/7f7ac6f4-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1661118464817/7f7ac6f4-cb49-11ee-80cd-200114580202 for 1661118524817 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/11/32330/c7f71b9b-217e-11ed-8003-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1661106391463/c7f71b9b-217e-11ed-8003-0aa140641b9a for 1661118524817 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1661106391462 Time first scalers 1661118517000 ccdb: 1661118464817
+Orbit from reset:136357526 orbit from scalers:136357526
+orbit offset:0 0 secs
+First and last before:136357526 146703650
+[INFO] Subtracting from orbit 0
+First and last after:136357526 146703650
+scalers: valS:1661118464817 1661119458053
+Comparison between scalers validity and scalers tl first:52183 last:21053
+run:526463
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/07633/80894bc4-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664549840218/80894bc4-cb49-11ee-80cd-200114580202 for 1664549900218 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/05/11762/2f6b445c-40d0-11ed-832d-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664549840284/2f6b445c-40d0-11ed-832d-0aa140641b9a for 1664549900218 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664549840283 Time first scalers 1664550038000 ccdb: 1664549840218
+Orbit from reset:2223423 orbit from scalers:2223423
+orbit offset:0 0 secs
+First and last before:2223423 16422413
+[INFO] Subtracting from orbit 0
+First and last after:2223423 16422413
+scalers: valS:1664549840218 1664551301563
+Comparison between scalers validity and scalers tl first:197782 last:563
+run:526465
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/15096/819df4b5-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664552032387/819df4b5-cb49-11ee-80cd-200114580202 for 1664552092387 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664549840283 Time first scalers 1664552099000 ccdb: 1664552032387
+Orbit from reset:25400362 orbit from scalers:25400362
+orbit offset:0 0 secs
+First and last before:25400362 41376354
+[INFO] Subtracting from orbit 0
+First and last after:25400362 41376354
+scalers: valS:1664552032387 1664553520119
+Comparison between scalers validity and scalers tl first:66613 last:119
+run:526466
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/19459/8299619e-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664554147739/8299619e-cb49-11ee-80cd-200114580202 for 1664554207739 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664549840283 Time first scalers 1664554215000 ccdb: 1664554147739
+Orbit from reset:49195803 orbit from scalers:49195803
+orbit offset:0 0 secs
+First and last before:49195803 54579662
+[INFO] Subtracting from orbit 0
+First and last after:49195803 54579662
+scalers: valS:1664554147739 1664554693685
+Comparison between scalers validity and scalers tl first:67261 last:685
+run:526467
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/29245/838cfed5-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664555124634/838cfed5-cb49-11ee-80cd-200114580202 for 1664555184634 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664549840283 Time first scalers 1664555192000 ccdb: 1664555124634
+Orbit from reset:60182640 orbit from scalers:60182640
+orbit offset:0 0 secs
+First and last before:60182640 93831468
+[INFO] Subtracting from orbit 0
+First and last after:60182640 93831468
+scalers: valS:1664555124634 1664558184117
+Comparison between scalers validity and scalers tl first:67366 last:117
+run:526468
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/59310/84849fce-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664558712449/84849fce-cb49-11ee-80cd-200114580202 for 1664558772449 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664549840283 Time first scalers 1664558779000 ccdb: 1664558712449
+Orbit from reset:100520186 orbit from scalers:100520186
+orbit offset:0 0 secs
+First and last before:100520186 104531311
+[INFO] Subtracting from orbit 0
+First and last after:100520186 104531311
+scalers: valS:1664558712449 1664559133194
+Comparison between scalers validity and scalers tl first:66551 last:-2806
+run:526486
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/39764/85a81dc3-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664576550453/85a81dc3-cb49-11ee-80cd-200114580202 for 1664576610453 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/13/16398/b5e957cf-4101-11ed-832d-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664571111275/b5e957cf-4101-11ed-832d-0aa140641b9a for 1664576610453 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664571111274 Time first scalers 1664576618000 ccdb: 1664576550453
+Orbit from reset:61925791 orbit from scalers:61925791
+orbit offset:0 0 secs
+First and last before:61925791 339580668
+[INFO] Subtracting from orbit 0
+First and last after:61925791 339580668
+scalers: valS:1664576550453 1664601308296
+Comparison between scalers validity and scalers tl first:67547 last:296
+run:526505
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/26911/86c8b705-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664623536259/86c8b705-cb49-11ee-80cd-200114580202 for 1664623596259 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/12/50835/91c70eca-4176-11ed-832d-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664621301764/91c70eca-4176-11ed-832d-0aa140641b9a for 1664623596259 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664621301763 Time first scalers 1664623746000 ccdb: 1664623536259
+Orbit from reset:27486624 orbit from scalers:27486624
+orbit offset:0 0 secs
+First and last before:27486624 110514677
+[INFO] Subtracting from orbit 0
+First and last after:27486624 110514677
+scalers: valS:1664623536259 1664631129706
+Comparison between scalers validity and scalers tl first:209741 last:706
+run:526512
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/19959/87d91404-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664641861483/87d91404-cb49-11ee-80cd-200114580202 for 1664641921483 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664621301763 Time first scalers 1664641928000 ccdb: 1664641861483
+Orbit from reset:231951989 orbit from scalers:231951989
+orbit offset:0 0 secs
+First and last before:231951989 504662145
+[INFO] Subtracting from orbit 0
+First and last after:231951989 504662145
+scalers: valS:1664641861483 1664666179126
+Comparison between scalers validity and scalers tl first:66517 last:126
+run:526525
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/02520/88fca3fc-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664680874314/88fca3fc-cb49-11ee-80cd-200114580202 for 1664680934314 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/04/07940/e983fb3b-41fd-11ed-832d-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664679431014/e983fb3b-41fd-11ed-832d-0aa140641b9a for 1664680934314 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664679431013 Time first scalers 1664681084000 ccdb: 1664680874314
+Orbit from reset:18588636 orbit from scalers:18588636
+orbit offset:0 0 secs
+First and last before:18588636 95118237
+[INFO] Subtracting from orbit 0
+First and last after:18588636 95118237
+scalers: valS:1664680874314 1664687889374
+Comparison between scalers validity and scalers tl first:209686 last:374
+run:526526
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/23324/8a06bcc9-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664688397081/8a06bcc9-cb49-11ee-80cd-200114580202 for 1664688457081 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664679431013 Time first scalers 1664688464000 ccdb: 1664688397081
+Orbit from reset:101580298 orbit from scalers:101580298
+orbit offset:0 0 secs
+First and last before:101580298 147777634
+[INFO] Subtracting from orbit 0
+First and last after:101580298 147777634
+scalers: valS:1664688397081 1664692572138
+Comparison between scalers validity and scalers tl first:66919 last:138
+run:526528
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/54691/8aff06cf-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664693106183/8aff06cf-cb49-11ee-80cd-200114580202 for 1664693166183 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664679431013 Time first scalers 1664693174000 ccdb: 1664693106183
+Orbit from reset:154546521 orbit from scalers:154546521
+orbit offset:0 0 secs
+First and last before:154546521 384895091
+[INFO] Subtracting from orbit 0
+First and last after:154546521 384895091
+scalers: valS:1664693106183 1664713657707
+Comparison between scalers validity and scalers tl first:67817 last:707
+run:526559
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/51834/8c2a6841-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664738624789/8c2a6841-cb49-11ee-80cd-200114580202 for 1664738684789 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/13059/3d4d0fbe-4270-11ed-832d-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664728534214/3d4d0fbe-4270-11ed-832d-0aa140641b9a for 1664738684789 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664728534213 Time first scalers 1664738691000 ccdb: 1664738624789
+Orbit from reset:114217971 orbit from scalers:114217971
+orbit offset:0 0 secs
+First and last before:114217971 272835652
+[INFO] Subtracting from orbit 0
+First and last after:114217971 272835652
+scalers: valS:1664738624789 1664752796553
+Comparison between scalers validity and scalers tl first:66211 last:553
+run:526596
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/21513/8d477f11-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664797616085/8d477f11-cb49-11ee-80cd-200114580202 for 1664797676085 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/11/21793/9123b6e6-42bd-11ed-832d-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664761746121/9123b6e6-42bd-11ed-832d-0aa140641b9a for 1664797676085 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664761746120 Time first scalers 1664797828000 ccdb: 1664797616085
+Orbit from reset:405758153 orbit from scalers:405758153
+orbit offset:0 0 secs
+First and last before:405758153 600788879
+[INFO] Subtracting from orbit 0
+First and last after:405758153 600788879
+scalers: valS:1664797616085 1664815171385
+Comparison between scalers validity and scalers tl first:211915 last:385
+run:526606
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/23838/8e601eaf-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664815726230/8e601eaf-cb49-11ee-80cd-200114580202 for 1664815786230 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664761746120 Time first scalers 1664815794000 ccdb: 1664815726230
+Orbit from reset:607794494 orbit from scalers:607794494
+orbit offset:0 0 secs
+First and last before:607794494 642344470
+[INFO] Subtracting from orbit 0
+First and last after:607794494 642344470
+scalers: valS:1664815726230 1664818866654
+Comparison between scalers validity and scalers tl first:67770 last:654
+run:526612
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/02758/8f72575f-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664819361081/8f72575f-cb49-11ee-80cd-200114580202 for 1664819421081 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664761746120 Time first scalers 1664819428000 ccdb: 1664819361081
+Orbit from reset:648660578 orbit from scalers:648660578
+orbit offset:0 0 secs
+First and last before:648660578 713325122
+[INFO] Subtracting from orbit 0
+First and last after:648660578 713325122
+scalers: valS:1664819361081 1664825178230
+Comparison between scalers validity and scalers tl first:66919 last:230
+run:526638
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/46428/907c2039-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664840037793/907c2039-cb49-11ee-80cd-200114580202 for 1664840097793 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/09/22048/61c14cdd-4373-11ed-832e-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664839835025/61c14cdd-4373-11ed-832e-0aa140641b9a for 1664840097793 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664839835024 Time first scalers 1664840240000 ccdb: 1664840037793
+Orbit from reset:4554150 orbit from scalers:4554150
+orbit offset:0 0 secs
+First and last before:4554150 12052760
+[INFO] Subtracting from orbit 0
+First and last after:4554150 12052760
+scalers: valS:1664840037793 1664840907443
+Comparison between scalers validity and scalers tl first:202207 last:443
+run:526639
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/31291/919dcf81-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664841361323/919dcf81-cb49-11ee-80cd-200114580202 for 1664841421323 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664839835024 Time first scalers 1664841428000 ccdb: 1664841361323
+Orbit from reset:17913783 orbit from scalers:17913783
+orbit offset:0 0 secs
+First and last before:17913783 181579829
+[INFO] Subtracting from orbit 0
+First and last after:17913783 181579829
+scalers: valS:1664841361323 1664855982500
+Comparison between scalers validity and scalers tl first:66677 last:500
+run:526641
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/30234/92a61524-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664858160028/92a61524-cb49-11ee-80cd-200114580202 for 1664858220028 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664839835024 Time first scalers 1664858227000 ccdb: 1664858160028
+Orbit from reset:206826646 orbit from scalers:206826646
+orbit offset:0 0 secs
+First and last before:206826646 283909417
+[INFO] Subtracting from orbit 0
+First and last after:206826646 283909417
+scalers: valS:1664858160028 1664865078750
+Comparison between scalers validity and scalers tl first:66972 last:-2250
+run:526643
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/11755/93b76d2f-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664866556547/93b76d2f-cb49-11ee-80cd-200114580202 for 1664866616547 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664839835024 Time first scalers 1664866623000 ccdb: 1664866556547
+Orbit from reset:301243718 orbit from scalers:301243718
+orbit offset:0 0 secs
+First and last before:301243718 354244897
+[INFO] Subtracting from orbit 0
+First and last after:301243718 354244897
+scalers: valS:1664866556547 1664871336539
+Comparison between scalers validity and scalers tl first:66453 last:539
+run:526647
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/58528/94b944ca-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664871698728/94b944ca-cb49-11ee-80cd-200114580202 for 1664871758728 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664839835024 Time first scalers 1664871766000 ccdb: 1664871698728
+Orbit from reset:359079235 orbit from scalers:359079235
+orbit offset:0 0 secs
+First and last before:359079235 409897840
+[INFO] Subtracting from orbit 0
+First and last after:359079235 409897840
+scalers: valS:1664871698728 1664876284964
+Comparison between scalers validity and scalers tl first:67272 last:-36
+run:526649
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/21010/95c39e4b-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664877085721/95c39e4b-cb49-11ee-80cd-200114580202 for 1664877145721 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664839835024 Time first scalers 1664877152000 ccdb: 1664877085721
+Orbit from reset:419647404 orbit from scalers:419647404
+orbit offset:0 0 secs
+First and last before:419647404 434954610
+[INFO] Subtracting from orbit 0
+First and last after:419647404 434954610
+scalers: valS:1664877085721 1664878510944
+Comparison between scalers validity and scalers tl first:66279 last:-3056
+run:526713
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/51854/96e795e7-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664927020446/96e795e7-cb49-11ee-80cd-200114580202 for 1664927080446 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/29234/91546ac9-4423-11ed-832e-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664915506260/91546ac9-4423-11ed-832e-0aa140641b9a for 1664927080446 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664915506259 Time first scalers 1664927234000 ccdb: 1664927020446
+Orbit from reset:131884107 orbit from scalers:131884107
+orbit offset:0 0 secs
+First and last before:131884107 276344706
+[INFO] Subtracting from orbit 0
+First and last after:131884107 276344706
+scalers: valS:1664927020446 1664940077970
+Comparison between scalers validity and scalers tl first:213554 last:-3030
+run:526714
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/51569/9824321e-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664940851724/9824321e-cb49-11ee-80cd-200114580202 for 1664940911724 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664915506259 Time first scalers 1664940919000 ccdb: 1664940851724
+Orbit from reset:285778536 orbit from scalers:285778536
+orbit offset:0 0 secs
+First and last before:285778536 291501191
+[INFO] Subtracting from orbit 0
+First and last after:285778536 291501191
+scalers: valS:1664940851724 1664941424915
+Comparison between scalers validity and scalers tl first:67276 last:-3085
+run:526715
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/61850/992243e1-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664942083593/992243e1-cb49-11ee-80cd-200114580202 for 1664942143593 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664915506259 Time first scalers 1664942164000 ccdb: 1664942083593
+Orbit from reset:299779162 orbit from scalers:299779162
+orbit offset:0 0 secs
+First and last before:299779162 306026014
+[INFO] Subtracting from orbit 0
+First and last after:299779162 306026014
+scalers: valS:1664942083593 1664942716567
+Comparison between scalers validity and scalers tl first:80407 last:-2433
+run:526716
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/01729/9a3cd3c1-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664943779706/9a3cd3c1-cb49-11ee-80cd-200114580202 for 1664943839706 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664915506259 Time first scalers 1664943846000 ccdb: 1664943779706
+Orbit from reset:318694064 orbit from scalers:318694064
+orbit offset:0 0 secs
+First and last before:318694064 324342299
+[INFO] Subtracting from orbit 0
+First and last after:318694064 324342299
+scalers: valS:1664943779706 1664944346121
+Comparison between scalers validity and scalers tl first:66294 last:-2879
+run:526719
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/33090/9b5ea15d-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664948495622/9b5ea15d-cb49-11ee-80cd-200114580202 for 1664948555622 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664915506259 Time first scalers 1664948562000 ccdb: 1664948495622
+Orbit from reset:371727760 orbit from scalers:371727760
+orbit offset:0 0 secs
+First and last before:371727760 415976149
+[INFO] Subtracting from orbit 0
+First and last after:371727760 415976149
+scalers: valS:1664948495622 1664952497555
+Comparison between scalers validity and scalers tl first:66378 last:555
+run:526720
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/58003/9c640e70-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664953412599/9c640e70-cb49-11ee-80cd-200114580202 for 1664953472599 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664915506259 Time first scalers 1664953484000 ccdb: 1664953412599
+Orbit from reset:427078025 orbit from scalers:427078025
+orbit offset:0 0 secs
+First and last before:427078025 431593352
+[INFO] Subtracting from orbit 0
+First and last after:427078025 431593352
+scalers: valS:1664953412599 1664953885614
+Comparison between scalers validity and scalers tl first:71401 last:614
+run:526776
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/14837/9d89d462-cb49-11ee-80cd-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1664997161899/9d89d462-cb49-11ee-80cd-200114580202 for 1664997221899 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/11/09987/4e7e3c93-44ad-11ed-832e-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1664974664692/4e7e3c93-44ad-11ed-832e-0aa140641b9a for 1664997221899 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1664974664691 Time first scalers 1664997230000 ccdb: 1664997161899
+Orbit from reset:253757789 orbit from scalers:253757789
+orbit offset:0 0 secs
+First and last before:253757789 313966532
+[INFO] Subtracting from orbit 0
+First and last after:253757789 313966532
+scalers: valS:1664997161899 1665002584394
+Comparison between scalers validity and scalers tl first:68101 last:394
+run:526860
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/15898/ebd9304f-4688-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665176895493/ebd9304f-4688-11ed-832f-0aa140651b9a for 1665177555400 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/11/61098/109f4765-4661-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665161821448/109f4765-4661-11ed-832f-0aa140641b9a for 1665177555400 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665161821447 Time first scalers 1665177538000 ccdb: 1665177495400
+Orbit from reset:176740223 orbit from scalers:176750145
+orbit offset:9922 0.873136 secs
+First and last before:176750145 192511914
+[INFO] Subtracting from orbit 9922
+First and last after:176740223 192501992
+scalers: valS:1665176895493 1665438140469
+Comparison between scalers validity and scalers tl first:642507 last:259200469
+run:526865
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/26163/f801428c-469b-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665180497021/f801428c-469b-11ed-832f-0aa140651b9a for 1665181156929 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665161821447 Time first scalers 1665181146000 ccdb: 1665181096929
+Orbit from reset:217313924 orbit from scalers:217319739
+orbit offset:5815 0.51172 secs
+First and last before:217319739 284509506
+[INFO] Subtracting from orbit 5815
+First and last after:217313924 284503691
+scalers: valS:1665180497021 1665446321303
+Comparison between scalers validity and scalers tl first:648979 last:259200303
+run:526886
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/54703/838f53ed-46c2-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665188214731/838f53ed-46c2-11ed-832f-0aa140651b9a for 1665188873585 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665161821447 Time first scalers 1665188885000 ccdb: 1665188813585
+Orbit from reset:304342714 orbit from scalers:304345769
+orbit offset:3055 0.26884 secs
+First and last before:304345769 470678846
+[INFO] Subtracting from orbit 3055
+First and last after:304342714 470675791
+scalers: valS:1665188214731 1665462876306
+Comparison between scalers validity and scalers tl first:670269 last:259200306
+run:526938
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/25371/f3505102-474d-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+Error in <TNetXNGFile::Open>: [ERROR] Server responded with an error: [3011] No servers are available to read the file.
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/25371/f3505102-474d-11ed-832f-0aa140651b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665259185677/f3505102-474d-11ed-832f-0aa140651b9a for 1665259844524 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/03/57283/8fc2a767-46fc-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665228606747/8fc2a767-46fc-11ed-832f-0aa140641b9a for 1665259844524 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665228606746 Time first scalers 1665259856000 ccdb: 1665259784524
+Orbit from reset:351412942 orbit from scalers:351416469
+orbit offset:3527 0.310376 secs
+First and last before:351416469 393110063
+[INFO] Subtracting from orbit 3527
+First and last after:351412942 393106536
+scalers: valS:1665259185677 1665522763849
+Comparison between scalers validity and scalers tl first:670323 last:259200849
+run:526963
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/10488/f25d597a-4815-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665348218168/f25d597a-4815-11ed-832f-0aa140651b9a for 1665348876107 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/03/46971/722d42fa-4814-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665348816200/722d42fa-4814-11ed-832f-0aa140641b9a for 1665348876107 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665348816199 Time first scalers 1665349018000 ccdb: 1665348816107
+Orbit from reset:2269349 orbit from scalers:2280144
+orbit offset:10795 0.94996 secs
+First and last before:2280144 7257740
+[INFO] Subtracting from orbit 10795
+First and last after:2269349 7246945
+scalers: valS:1665348218168 1665608661605
+Comparison between scalers validity and scalers tl first:799832 last:259200605
+run:526964
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/34662/9dc8a5c2-482d-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665349509676/9dc8a5c2-482d-11ed-832f-0aa140651b9a for 1665350168524 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665348816199 Time first scalers 1665350232000 ccdb: 1665350108524
+Orbit from reset:15921365 orbit from scalers:15925870
+orbit offset:4505 0.39644 secs
+First and last before:15925870 121579660
+[INFO] Subtracting from orbit 4505
+First and last after:15921365 121575155
+scalers: valS:1665349509676 1665618827617
+Comparison between scalers validity and scalers tl first:722324 last:259200617
+run:526966
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/61632/994c0c87-4837-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665362566629/994c0c87-4837-11ed-832f-0aa140651b9a for 1665363225471 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665348816199 Time first scalers 1665363237000 ccdb: 1665363165471
+Orbit from reset:162168866 orbit from scalers:162171294
+orbit offset:2428 0.213664 secs
+First and last before:162171294 169794142
+[INFO] Subtracting from orbit 2428
+First and last after:162168866 169791714
+scalers: valS:1665362566629 1665623115063
+Comparison between scalers validity and scalers tl first:670371 last:259200063
+run:526967
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/38497/ea5a2a30-4866-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665363885170/ea5a2a30-4866-11ed-832f-0aa140651b9a for 1665364544017 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665348816199 Time first scalers 1665364555000 ccdb: 1665364484017
+Orbit from reset:176990412 orbit from scalers:176993131
+orbit offset:2719 0.239272 secs
+First and last before:176993131 398328894
+[INFO] Subtracting from orbit 2719
+First and last after:176990412 398326175
+scalers: valS:1665363885170 1665643437387
+Comparison between scalers validity and scalers tl first:669830 last:259200387
+run:526968
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/35170/68097cf4-487c-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665385237593/68097cf4-487c-11ed-832f-0aa140651b9a for 1665385896454 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665348816199 Time first scalers 1665385908000 ccdb: 1665385836454
+Orbit from reset:417115202 orbit from scalers:417120278
+orbit offset:5076 0.446688 secs
+First and last before:417120278 502128277
+[INFO] Subtracting from orbit 5076
+First and last after:417115202 502123201
+scalers: valS:1665385237593 1665652667688
+Comparison between scalers validity and scalers tl first:670407 last:259200688
+run:527015
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/63443/c06e67ba-48a7-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665410468094/c06e67ba-48a7-11ed-832f-0aa140651b9a for 1665411126954 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/00/03292/c5187d77-48a3-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665410373339/c5187d77-48a3-11ed-832f-0aa140641b9a for 1665411126954 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665411138000 ccdb: 1665411066954
+Orbit from reset:8598993 orbit from scalers:8602511
+orbit offset:3518 0.309584 secs
+First and last before:8602511 19241150
+[INFO] Subtracting from orbit 3518
+First and last after:8598993 19237632
+scalers: valS:1665410468094 1665671284353
+Comparison between scalers validity and scalers tl first:669906 last:259200353
+run:527016
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/05109/cfcaba03-48b6-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665411919406/cfcaba03-48b6-11ed-832f-0aa140651b9a for 1665412578266 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665412589000 ccdb: 1665412518266
+Orbit from reset:24916188 orbit from scalers:24919458
+orbit offset:3270 0.28776 secs
+First and last before:24919458 91979510
+[INFO] Subtracting from orbit 3270
+First and last after:24916188 91976240
+scalers: valS:1665411919406 1665677752571
+Comparison between scalers validity and scalers tl first:669594 last:259200571
+run:527028
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/56216/b4203793-48c1-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665418737319/b4203793-48c1-11ed-832f-0aa140651b9a for 1665419396188 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665419408000 ccdb: 1665419336188
+Orbit from reset:101599134 orbit from scalers:101606053
+orbit offset:6919 0.608872 secs
+First and last before:101606053 144586537
+[INFO] Subtracting from orbit 6919
+First and last after:101599134 144579618
+scalers: valS:1665418737319 1665682430621
+Comparison between scalers validity and scalers tl first:670681 last:259200621
+run:527031
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/30267/21c229e0-48c6-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665423885851/21c229e0-48c6-11ed-832f-0aa140651b9a for 1665424544690 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665424556000 ccdb: 1665424484690
+Orbit from reset:159490878 orbit from scalers:159493001
+orbit offset:2123 0.186824 secs
+First and last before:159493001 165974602
+[INFO] Subtracting from orbit 2123
+First and last after:159490878 165972479
+scalers: valS:1665423885851 1665684332542
+Comparison between scalers validity and scalers tl first:670149 last:259200542
+run:527033
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/46460/717e00b0-48ca-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665425737362/717e00b0-48ca-11ed-832f-0aa140651b9a for 1665426396230 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665426408000 ccdb: 1665426336230
+Orbit from reset:180317512 orbit from scalers:180321818
+orbit offset:4306 0.378928 secs
+First and last before:180321818 186798525
+[INFO] Subtracting from orbit 4306
+First and last after:180317512 186794219
+scalers: valS:1665425737362 1665686184301
+Comparison between scalers validity and scalers tl first:670638 last:259200301
+run:527034
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/27430/214582a0-48d5-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665427004005/214582a0-48d5-11ed-832f-0aa140651b9a for 1665427662872 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665427708000 ccdb: 1665427602872
+Orbit from reset:194936639 orbit from scalers:194940014
+orbit offset:3375 0.297 secs
+First and last before:194940014 238413964
+[INFO] Subtracting from orbit 3375
+First and last after:194936639 238410589
+scalers: valS:1665427004005 1665690774175
+Comparison between scalers validity and scalers tl first:703995 last:259200175
+run:527038
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/52362/065620f5-48e0-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665431381369/065620f5-48e0-11ed-832f-0aa140651b9a for 1665432040235 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665432052000 ccdb: 1665431980235
+Orbit from reset:243787016 orbit from scalers:243790066
+orbit offset:3050 0.2684 secs
+First and last before:243790066 291034785
+[INFO] Subtracting from orbit 3050
+First and last after:243787016 291031735
+scalers: valS:1665431381369 1665695453449
+Comparison between scalers validity and scalers tl first:670631 last:259200449
+run:527039
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/45461/0f9ad659-48ea-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665436236591/0f9ad659-48ea-11ed-832f-0aa140651b9a for 1665436895458 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665436907000 ccdb: 1665436835458
+Orbit from reset:298383834 orbit from scalers:298387040
+orbit offset:3206 0.282128 secs
+First and last before:298387040 339508718
+[INFO] Subtracting from orbit 3206
+First and last after:298383834 339505512
+scalers: valS:1665436236591 1665699763966
+Comparison between scalers validity and scalers tl first:670409 last:259200966
+run:527041
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/59327/ae399a4e-4914-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665440393508/ae399a4e-4914-11ed-832f-0aa140651b9a for 1665441052374 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665410373338 Time first scalers 1665441065000 ccdb: 1665440992374
+Orbit from reset:345142551 orbit from scalers:345145197
+orbit offset:2646 0.232848 secs
+First and last before:345145197 545357365
+[INFO] Subtracting from orbit 2646
+First and last after:345142551 545354719
+scalers: valS:1665440393508 1665718068941
+Comparison between scalers validity and scalers tl first:671492 last:259200941
+run:527057
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/04846/26abf4ac-4949-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665471196223/26abf4ac-4949-11ed-832f-0aa140651b9a for 1665471855091 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/02/19230/c27aa3c8-4928-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665467492026/c27aa3c8-4928-11ed-832f-0aa140641b9a for 1665471855091 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665467492025 Time first scalers 1665471866000 ccdb: 1665471795091
+Orbit from reset:49187459 orbit from scalers:49191957
+orbit offset:4498 0.395824 secs
+First and last before:49191957 156456580
+[INFO] Subtracting from orbit 4498
+First and last after:49187459 156452082
+scalers: valS:1665471196223 1665740604852
+Comparison between scalers validity and scalers tl first:669777 last:259200852
+run:527076
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/02525/0a819b5c-494f-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665481289571/0a819b5c-494f-11ed-832f-0aa140651b9a for 1665481948430 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665467492025 Time first scalers 1665481964000 ccdb: 1665481888430
+Orbit from reset:162744343 orbit from scalers:162746430
+orbit offset:2087 0.183656 secs
+First and last before:162746430 184904678
+[INFO] Subtracting from orbit 2087
+First and last after:162744343 184902591
+scalers: valS:1665481289571 1665743134583
+Comparison between scalers validity and scalers tl first:674429 last:259200583
+run:527108
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/59314/54416768-49cc-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665536495654/54416768-49cc-11ed-832f-0aa140651b9a for 1665537153578 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/12/28733/d04c5327-49ca-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665537093668/d04c5327-49ca-11ed-832f-0aa140641b9a for 1665537153578 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665537093667 Time first scalers 1665537299000 ccdb: 1665537093578
+Orbit from reset:2309068 orbit from scalers:2318125
+orbit offset:9057 0.797016 secs
+First and last before:2318125 7329048
+[INFO] Subtracting from orbit 9057
+First and last after:2309068 7319991
+scalers: valS:1665536495654 1665796945405
+Comparison between scalers validity and scalers tl first:803346 last:259200405
+run:527109
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/58809/06889d40-49ec-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665538087020/06889d40-49ec-11ed-832f-0aa140651b9a for 1665538745888 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665537093667 Time first scalers 1665538757000 ccdb: 1665538685888
+Orbit from reset:18704982 orbit from scalers:18709309
+orbit offset:4327 0.380776 secs
+First and last before:18709309 160419583
+[INFO] Subtracting from orbit 4327
+First and last after:18704982 160415256
+scalers: valS:1665538087020 1665810558898
+Comparison between scalers validity and scalers tl first:669980 last:259200898
+run:527228
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/48538/8c1424da-4adf-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665628650286/8c1424da-4adf-11ed-832f-0aa140651b9a for 1665629308213 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/62146/60be84f1-4aa1-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665629248306/60be84f1-4aa1-11ed-832f-0aa140641b9a for 1665629308213 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665629248305 Time first scalers 1665629318000 ccdb: 1665629248213
+Orbit from reset:783753 orbit from scalers:789304
+orbit offset:5551 0.488488 secs
+First and last before:789304 300281150
+[INFO] Subtracting from orbit 5551
+First and last after:783753 300275599
+scalers: valS:1665628650286 1665915150646
+Comparison between scalers validity and scalers tl first:667714 last:259200646
+run:527237
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/52125/834908ab-4af3-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665656587700/834908ab-4af3-11ed-832f-0aa140651b9a for 1665657246551 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665629248305 Time first scalers 1665657255000 ccdb: 1665657186551
+Orbit from reset:314948801 orbit from scalers:314958806
+orbit offset:10005 0.88044 secs
+First and last before:314958806 396713505
+[INFO] Subtracting from orbit 10005
+First and last after:314948801 396703500
+scalers: valS:1665656587700 1665923725840
+Comparison between scalers validity and scalers tl first:667300 last:259200840
+run:527240
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/12292/935e73d6-4b0c-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665666913153/935e73d6-4b0c-11ed-832f-0aa140651b9a for 1665667571994 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665629248305 Time first scalers 1665667581000 ccdb: 1665667511994
+Orbit from reset:431069654 orbit from scalers:431074282
+orbit offset:4628 0.407264 secs
+First and last before:431074282 517764615
+[INFO] Subtracting from orbit 4628
+First and last after:431069654 517759987
+scalers: valS:1665666913153 1665934490241
+Comparison between scalers validity and scalers tl first:667847 last:259200241
+run:527259
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/33645/c7cf64c9-4b5c-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665708870050/c7cf64c9-4b5c-11ed-832f-0aa140651b9a for 1665709528918 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/12/15128/9be40a5e-4b5a-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665708804438/9be40a5e-4b5a-11ed-832f-0aa140641b9a for 1665709528918 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665708804437 Time first scalers 1665709537000 ccdb: 1665709468918
+Orbit from reset:8238024 orbit from scalers:8246770
+orbit offset:8746 0.769648 secs
+First and last before:8246770 10497891
+[INFO] Subtracting from orbit 8746
+First and last after:8238024 10489145
+scalers: valS:1665708870050 1665968937963
+Comparison between scalers validity and scalers tl first:666950 last:259200963
+run:527260
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/50066/b07ad169-4b64-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665709613324/b07ad169-4b64-11ed-832f-0aa140651b9a for 1665710272190 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665708804437 Time first scalers 1665710281000 ccdb: 1665710212190
+Orbit from reset:16604663 orbit from scalers:16606536
+orbit offset:1873 0.164824 secs
+First and last before:16606536 48696984
+[INFO] Subtracting from orbit 1873
+First and last after:16604663 48695111
+scalers: valS:1665709613324 1665972334796
+Comparison between scalers validity and scalers tl first:667676 last:259200796
+run:527261
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/31828/3b60e69e-4b67-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665712972663/3b60e69e-4b67-11ed-832f-0aa140651b9a for 1665713631530 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665708804437 Time first scalers 1665713640000 ccdb: 1665713571530
+Orbit from reset:54378239 orbit from scalers:54381680
+orbit offset:3441 0.302808 secs
+First and last before:54381680 60977397
+[INFO] Subtracting from orbit 3441
+First and last after:54378239 60973956
+scalers: valS:1665712972663 1665973426824
+Comparison between scalers validity and scalers tl first:667337 last:259200824
+run:527262
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/11282/f48f8ab4-4b69-11ed-832f-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665714241427/f48f8ab4-4b69-11ed-832f-0aa140651b9a for 1665714900294 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665708804437 Time first scalers 1665714909000 ccdb: 1665714840294
+Orbit from reset:68648757 orbit from scalers:68651646
+orbit offset:2889 0.254232 secs
+First and last before:68651646 74131007
+[INFO] Subtracting from orbit 2889
+First and last after:68648757 74128118
+scalers: valS:1665714241427 1665974596502
+Comparison between scalers validity and scalers tl first:667573 last:259200502
+run:527345
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/29740/7a0fb571-4c01-11ed-8330-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665778952979/7a0fb571-4c01-11ed-8330-0aa140651b9a for 1665779611837 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/06/50588/a4dbc553-4b94-11ed-832f-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665733730291/a4dbc553-4b94-11ed-832f-0aa140641b9a for 1665779611837 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665733730290 Time first scalers 1665779790000 ccdb: 1665779551837
+Orbit from reset:517963667 orbit from scalers:517959908
+orbit offset:4294963537 377957 secs
+First and last before:517959908 525653273
+[INFO] Subtracting from orbit 4294963537
+First and last after:517963667 525657032
+scalers: valS:1665778952979 1666039674485
+Comparison between scalers validity and scalers tl first:837021 last:259200485
+run:527347
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/34883/71d4b747-4c06-11ed-8330-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665781084584/71d4b747-4c06-11ed-8330-0aa140651b9a for 1665781743426 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665733730290 Time first scalers 1665781752000 ccdb: 1665781683426
+Orbit from reset:540027304 orbit from scalers:540027854
+orbit offset:550 0.0484 secs
+First and last before:540027854 549647519
+[INFO] Subtracting from orbit 550
+First and last after:540027304 549646969
+scalers: valS:1665781084584 1666041808160
+Comparison between scalers validity and scalers tl first:667416 last:259200160
+run:527349
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/10704/f65ac9dc-011b-11ee-b312-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665785304000/f65ac9dc-011b-11ee-b312-200114580202 for 1665785544420 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665733730290 Time first scalers 1665785553000 ccdb: 1665785484420
+Orbit from reset:582771383 orbit from scalers:582773846
+orbit offset:2463 0.216744 secs
+First and last before:582773846 591187003
+[INFO] Subtracting from orbit 2463
+First and last after:582771383 591184540
+scalers: valS:1665785304000 1665786482000
+Comparison between scalers validity and scalers tl first:249000 last:180000
+run:527446
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/03283/c874ec56-4d22-11ed-8330-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665870412560/c874ec56-4d22-11ed-8330-0aa140651b9a for 1665871071419 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/04/07922/8aaa2cc3-4cc8-11ed-8330-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+Error in <TNetXNGFile::Open>: [ERROR] Server responded with an error: [3011] No servers are available to read the file.
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/04/07922/8aaa2cc3-4cc8-11ed-8330-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665865971349/8aaa2cc3-4cc8-11ed-8330-0aa140641b9a for 1665871071419 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665865971348 Time first scalers 1665871080000 ccdb: 1665871011419
+Orbit from reset:57449257 orbit from scalers:57457222
+orbit offset:7965 0.70092 secs
+First and last before:57457222 435866534
+[INFO] Subtracting from orbit 7965
+First and last after:57449257 435858569
+scalers: valS:1665870412560 1666163930543
+Comparison between scalers validity and scalers tl first:667440 last:259200543
+run:527518
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/38235/84c63d76-4d83-11ed-8330-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665941249330/84c63d76-4d83-11ed-8330-0aa140651b9a for 1665941908210 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/09/31027/5819f149-4d70-11ed-8330-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+Error in <TNetXNGFile::Open>: [ERROR] Server responded with an error: [3011] No servers are available to read the file.
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/09/31027/5819f149-4d70-11ed-8330-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1665938041966/5819f149-4d70-11ed-8330-0aa140641b9a for 1665941908210 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665938041965 Time first scalers 1665941903000 ccdb: 1665941848210
+Orbit from reset:43419201 orbit from scalers:43427030
+orbit offset:7829 0.688952 secs
+First and last before:43427030 92620354
+[INFO] Subtracting from orbit 7829
+First and last after:43419201 92612525
+scalers: valS:1665941249330 1666205478195
+Comparison between scalers validity and scalers tl first:653670 last:259200195
+run:527523
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/04583/74e4c2da-4dd8-11ed-8330-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1665951901398/74e4c2da-4dd8-11ed-8330-0aa140651b9a for 1665952560254 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1665938041965 Time first scalers 1665952568000 ccdb: 1665952500254
+Orbit from reset:163352273 orbit from scalers:163363501
+orbit offset:11228 0.988064 secs
+First and last before:163363501 502862589
+[INFO] Subtracting from orbit 11228
+First and last after:163352273 502851361
+scalers: valS:1665951901398 1666241958755
+Comparison between scalers validity and scalers tl first:666602 last:259200755
+run:527690
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/17676/9067ea67-504d-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666224469757/9067ea67-504d-11ed-8337-0aa140651b9a for 1666225128692 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/14/44396/a16c5a49-500c-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666225068785/a16c5a49-500c-11ed-8337-0aa140641b9a for 1666225128692 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666225068784 Time first scalers 1666225274000 ccdb: 1666225068692
+Orbit from reset:2307752 orbit from scalers:2316729
+orbit offset:8977 0.789976 secs
+First and last before:2316729 313632130
+[INFO] Subtracting from orbit 8977
+First and last after:2307752 313623153
+scalers: valS:1666224469757 1666512158359
+Comparison between scalers validity and scalers tl first:804243 last:259200359
+run:527694
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/20726/d3357201-5064-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666254671984/d3357201-5064-11ed-8337-0aa140651b9a for 1666255331849 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666225068784 Time first scalers 1666255340000 ccdb: 1666255271849
+Orbit from reset:340414432 orbit from scalers:340419089
+orbit offset:4657 0.409816 secs
+First and last before:340419089 425980492
+[INFO] Subtracting from orbit 4657
+First and last after:340414432 425975835
+scalers: valS:1666254671984 1666522148874
+Comparison between scalers validity and scalers tl first:668016 last:259200874
+run:527731
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/52130/287df5b8-508f-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666274415549/287df5b8-508f-11ed-8337-0aa140651b9a for 1666275075416 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/02/24354/7d779e71-5071-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666268387642/7d779e71-5071-11ed-8337-0aa140641b9a for 1666275075416 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666268387641 Time first scalers 1666275083000 ccdb: 1666275015416
+Orbit from reset:75292543 orbit from scalers:75303664
+orbit offset:11121 0.978648 secs
+First and last before:75303664 143303178
+[INFO] Subtracting from orbit 11121
+First and last after:75292543 143292057
+scalers: valS:1666274415549 1666540330818
+Comparison between scalers validity and scalers tl first:667451 last:259200818
+run:527734
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/57487/453f2141-50b6-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666285373007/453f2141-50b6-11ed-8337-0aa140651b9a for 1666286032874 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666268387641 Time first scalers 1666286041000 ccdb: 1666285972874
+Orbit from reset:198520541 orbit from scalers:198526417
+orbit offset:5876 0.517088 secs
+First and last before:198526417 332212013
+[INFO] Subtracting from orbit 5876
+First and last after:198520541 332206137
+scalers: valS:1666285373007 1666557129429
+Comparison between scalers validity and scalers tl first:667993 last:259200429
+run:527736
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/55215/ca421fac-50cf-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666298542087/ca421fac-50cf-11ed-8337-0aa140651b9a for 1666299201947 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666268387641 Time first scalers 1666299210000 ccdb: 1666299141947
+Orbit from reset:346612301 orbit from scalers:346617720
+orbit offset:5419 0.476872 secs
+First and last before:346617720 455469192
+[INFO] Subtracting from orbit 5419
+First and last after:346612301 455463773
+scalers: valS:1666298542087 1666568090005
+Comparison between scalers validity and scalers tl first:667913 last:259201005
+run:527821
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/29506/6f7f5d73-51a2-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666395070259/6f7f5d73-51a2-11ed-8337-0aa140651b9a for 1666395730135 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/11/44891/5620d049-5191-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666392016691/5620d049-5191-11ed-8337-0aa140641b9a for 1666395730135 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666392016690 Time first scalers 1666395738000 ccdb: 1666395670135
+Orbit from reset:41847926 orbit from scalers:41853701
+orbit offset:5775 0.5082 secs
+First and last before:41853701 82596443
+[INFO] Subtracting from orbit 5775
+First and last after:41847926 82590668
+scalers: valS:1666395070259 1666658561548
+Comparison between scalers validity and scalers tl first:667741 last:259200548
+run:527825
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/51615/85dc647d-51bb-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666399316584/85dc647d-51bb-11ed-8337-0aa140651b9a for 1666399976452 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666392016690 Time first scalers 1666399984000 ccdb: 1666399916452
+Orbit from reset:89596246 orbit from scalers:89606401
+orbit offset:10155 0.89364 secs
+First and last before:89606401 203765985
+[INFO] Subtracting from orbit 10155
+First and last after:89596246 203755830
+scalers: valS:1666399316584 1666669336481
+Comparison between scalers validity and scalers tl first:667416 last:259200481
+run:527826
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/61385/58592cde-51ec-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666410078426/58592cde-51ec-11ed-8337-0aa140651b9a for 1666410738292 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666392016690 Time first scalers 1666410746000 ccdb: 1666410678292
+Orbit from reset:210620129 orbit from scalers:210631321
+orbit offset:11192 0.984896 secs
+First and last before:210631321 439572677
+[INFO] Subtracting from orbit 11192
+First and last after:210620129 439561485
+scalers: valS:1666410078426 1666690305459
+Comparison between scalers validity and scalers tl first:667574 last:259200459
+run:527828
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/40830/6ae25fd9-51fa-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666431588928/6ae25fd9-51fa-11ed-8337-0aa140651b9a for 1666432248795 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666392016690 Time first scalers 1666432257000 ccdb: 1666432188795
+Orbit from reset:452521706 orbit from scalers:452528985
+orbit offset:7279 0.640552 secs
+First and last before:452528985 507541175
+[INFO] Subtracting from orbit 7279
+First and last after:452521706 507533896
+scalers: valS:1666431588928 1666696349519
+Comparison between scalers validity and scalers tl first:668072 last:259200519
+run:527848
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/50088/fdbf85dd-5229-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666455453785/fdbf85dd-5229-11ed-8337-0aa140651b9a for 1666456113636 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/02/07390/2f387aa6-5219-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666450362974/2f387aa6-5219-11ed-8337-0aa140641b9a for 1666456113636 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666450362973 Time first scalers 1666456121000 ccdb: 1666456053636
+Orbit from reset:64751792 orbit from scalers:64762343
+orbit offset:10551 0.928488 secs
+First and last before:64762343 81184350
+[INFO] Subtracting from orbit 10551
+First and last after:64751792 81173799
+scalers: valS:1666455453785 1666716782264
+Comparison between scalers validity and scalers tl first:667215 last:259200264
+run:527850
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/39006/d495ce48-5240-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666458429775/d495ce48-5240-11ed-8337-0aa140651b9a for 1666459089640 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666450362973 Time first scalers 1666459098000 ccdb: 1666459029640
+Orbit from reset:98229594 orbit from scalers:98240453
+orbit offset:10859 0.955592 secs
+First and last before:98240453 191495548
+[INFO] Subtracting from orbit 10859
+First and last after:98229594 191484689
+scalers: valS:1666458429775 1666726591625
+Comparison between scalers validity and scalers tl first:668225 last:259200625
+run:527852
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/10227/f7a3ab45-525a-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666467860981/f7a3ab45-525a-11ed-8337-0aa140651b9a for 1666468520849 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666450362973 Time first scalers 1666468529000 ccdb: 1666468460849
+Orbit from reset:204285740 orbit from scalers:204291357
+orbit offset:5617 0.494296 secs
+First and last before:204291357 317734477
+[INFO] Subtracting from orbit 5617
+First and last after:204285740 317728860
+scalers: valS:1666467860981 1666737817351
+Comparison between scalers validity and scalers tl first:668019 last:259200351
+run:527863
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/01222/b955e600-529b-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666487732513/b955e600-529b-11ed-8337-0aa140651b9a for 1666488392379 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/20255/b80db8b1-526f-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666487529251/b80db8b1-526f-11ed-8337-0aa140641b9a for 1666488392379 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666487529250 Time first scalers 1666488400000 ccdb: 1666488332379
+Orbit from reset:9792003 orbit from scalers:9799293
+orbit offset:7290 0.64152 secs
+First and last before:9799293 212549473
+[INFO] Subtracting from orbit 7290
+First and last after:9792003 212542183
+scalers: valS:1666487732513 1666765630105
+Comparison between scalers validity and scalers tl first:667487 last:259200105
+run:527864
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/40049/78b0ee19-529f-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666506322554/78b0ee19-529f-11ed-8337-0aa140651b9a for 1666506982422 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666487529250 Time first scalers 1666506990000 ccdb: 1666506922422
+Orbit from reset:218845525 orbit from scalers:218855739
+orbit offset:10214 0.898832 secs
+First and last before:218855739 230649576
+[INFO] Subtracting from orbit 10214
+First and last after:218845525 230639362
+scalers: valS:1666506322554 1666767239646
+Comparison between scalers validity and scalers tl first:667446 last:259200646
+run:527865
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/60351/aeec514b-52a6-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666507909985/aeec514b-52a6-11ed-8337-0aa140651b9a for 1666508569838 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666487529250 Time first scalers 1666508578000 ccdb: 1666508509838
+Orbit from reset:236703351 orbit from scalers:236706545
+orbit offset:3194 0.281072 secs
+First and last before:236706545 265482063
+[INFO] Subtracting from orbit 3194
+First and last after:236703351 265478869
+scalers: valS:1666507909985 1666770337109
+Comparison between scalers validity and scalers tl first:668015 last:259200109
+run:527869
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/15897/e21d9c9d-52ba-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666514522880/e21d9c9d-52ba-11ed-8337-0aa140651b9a for 1666515182728 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666487529250 Time first scalers 1666515191000 ccdb: 1666515122728
+Orbit from reset:311069728 orbit from scalers:311070438
+orbit offset:710 0.06248 secs
+First and last before:311070438 363046052
+[INFO] Subtracting from orbit 710
+First and last after:311069728 363045342
+scalers: valS:1666514522880 1666779012928
+Comparison between scalers validity and scalers tl first:668120 last:259200928
+run:527871
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/48006/2fe147a6-52d6-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666520027978/2fe147a6-52d6-11ed-8337-0aa140651b9a for 1666520687846 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666487529250 Time first scalers 1666520696000 ccdb: 1666520627846
+Orbit from reset:372976110 orbit from scalers:372980579
+orbit offset:4469 0.393272 secs
+First and last before:372980579 494920650
+[INFO] Subtracting from orbit 4469
+First and last after:372976110 494916181
+scalers: valS:1666520027978 1666790739803
+Comparison between scalers validity and scalers tl first:668022 last:259200803
+run:527895
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/47758/19feb1da-530c-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666540638102/19feb1da-530c-11ed-8337-0aa140651b9a for 1666541297969 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/07660/5d253ce6-52ea-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666540204834/5d253ce6-52ea-11ed-8337-0aa140641b9a for 1666541297969 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666540204833 Time first scalers 1666541460000 ccdb: 1666541237969
+Orbit from reset:14114958 orbit from scalers:14121270
+orbit offset:6312 0.555456 secs
+First and last before:14121270 162959272
+[INFO] Subtracting from orbit 6312
+First and last after:14114958 162952960
+scalers: valS:1666540638102 1666813895908
+Comparison between scalers validity and scalers tl first:821898 last:259200908
+run:527898
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/27945/3db16a1c-5323-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666560607528/3db16a1c-5323-11ed-8337-0aa140651b9a for 1666561267393 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666540204833 Time first scalers 1666561275000 ccdb: 1666561207393
+Orbit from reset:236944196 orbit from scalers:236953943
+orbit offset:9747 0.857736 secs
+First and last before:236953943 274720714
+[INFO] Subtracting from orbit 9747
+First and last after:236944196 274710967
+scalers: valS:1666560607528 1666823834232
+Comparison between scalers validity and scalers tl first:667472 last:259200232
+run:527899
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/27969/0a9a0ebe-533f-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666564768006/0a9a0ebe-533f-11ed-8337-0aa140651b9a for 1666565427872 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666540204833 Time first scalers 1666565436000 ccdb: 1666565367872
+Orbit from reset:283736649 orbit from scalers:283740279
+orbit offset:3630 0.31944 secs
+First and last before:283740279 408994103
+[INFO] Subtracting from orbit 3630
+First and last after:283736649 408990473
+scalers: valS:1666564768006 1666835774417
+Comparison between scalers validity and scalers tl first:667994 last:259200417
+run:527902
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/07639/43998547-5357-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666579957907/43998547-5357-11ed-8337-0aa140651b9a for 1666580617776 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666540204833 Time first scalers 1666580626000 ccdb: 1666580557776
+Orbit from reset:454555530 orbit from scalers:454560236
+orbit offset:4706 0.414128 secs
+First and last before:454560236 525987280
+[INFO] Subtracting from orbit 4706
+First and last after:454555530 525982574
+scalers: valS:1666579957907 1666846177969
+Comparison between scalers validity and scalers tl first:668093 last:259200969
+run:527963
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/43082/f698ce75-011b-11ee-b312-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666632008000/f698ce75-011b-11ee-b312-200114580202 for 1666632248522 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/02/33590/87c03183-53c0-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666632188612/87c03183-53c0-11ed-8337-0aa140641b9a for 1666632248522 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666632188611 Time first scalers 1666632392000 ccdb: 1666632188522
+Orbit from reset:2287207 orbit from scalers:2289857
+orbit offset:2650 0.2332 secs
+First and last before:2289857 50985044
+[INFO] Subtracting from orbit 2650
+First and last after:2287207 50982394
+scalers: valS:1666632008000 1666636902332
+Comparison between scalers validity and scalers tl first:384000 last:180332
+run:527976
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/47235/323ed8ed-5433-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666655757831/323ed8ed-5433-11ed-8337-0aa140651b9a for 1666656416772 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/01/06136/cd23cdf8-53f8-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666656356861/cd23cdf8-53f8-11ed-8337-0aa140641b9a for 1666656416772 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666656356860 Time first scalers 1666656565000 ccdb: 1666656356772
+Orbit from reset:2340634 orbit from scalers:2343698
+orbit offset:3064 0.269632 secs
+First and last before:2343698 282051228
+[INFO] Subtracting from orbit 3064
+First and last after:2340634 282048164
+scalers: valS:1666655757831 1666940638123
+Comparison between scalers validity and scalers tl first:807169 last:259200123
+run:527978
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/36193/69e436bf-543e-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666682833921/69e436bf-543e-11ed-8337-0aa140651b9a for 1666683493790 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666656356860 Time first scalers 1666683502000 ccdb: 1666683433790
+Orbit from reset:305260199 orbit from scalers:305262673
+orbit offset:2474 0.217712 secs
+First and last before:305262673 336230222
+[INFO] Subtracting from orbit 2474
+First and last after:305260199 336227748
+scalers: valS:1666682833921 1666945455959
+Comparison between scalers validity and scalers tl first:668079 last:259200959
+run:527979
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/37210/b74b6e03-544e-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666686130408/b74b6e03-544e-11ed-8337-0aa140651b9a for 1666686790269 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666656356860 Time first scalers 1666686798000 ccdb: 1666686730269
+Orbit from reset:342325310 orbit from scalers:342332836
+orbit offset:7526 0.662288 secs
+First and last before:342332836 414969039
+[INFO] Subtracting from orbit 7526
+First and last after:342325310 414961513
+scalers: valS:1666686130408 1666952457764
+Comparison between scalers validity and scalers tl first:667592 last:259200764
+run:528021
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/60344/b26ac3a8-5488-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666715575890/b26ac3a8-5488-11ed-8337-0aa140651b9a for 1666716234835 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/14/34630/137d4c76-5484-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666716174924/137d4c76-5484-11ed-8337-0aa140641b9a for 1666716234835 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666716174923 Time first scalers 1666716379000 ccdb: 1666716174835
+Orbit from reset:2294944 orbit from scalers:2297625
+orbit offset:2681 0.235928 secs
+First and last before:2297625 22327545
+[INFO] Subtracting from orbit 2681
+First and last after:2294944 22324864
+scalers: valS:1666715575890 1666977360395
+Comparison between scalers validity and scalers tl first:803110 last:259200395
+run:528026
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/01499/7e67cc49-5498-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666721971392/7e67cc49-5498-11ed-8337-0aa140651b9a for 1666722631257 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666716174923 Time first scalers 1666722639000 ccdb: 1666722571257
+Orbit from reset:72691665 orbit from scalers:72700725
+orbit offset:9060 0.79728 secs
+First and last before:72700725 98624750
+[INFO] Subtracting from orbit 9060
+First and last after:72691665 98615690
+scalers: valS:1666721971392 1666984145081
+Comparison between scalers validity and scalers tl first:667608 last:259200081
+run:528036
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/22325/670badda-54eb-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666741123080/670badda-54eb-11ed-8337-0aa140651b9a for 1666741782947 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/08/38479/00e18173-54be-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666741054528/00e18173-54be-11ed-8337-0aa140641b9a for 1666741782947 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666741054527 Time first scalers 1666741927000 ccdb: 1666741722947
+Orbit from reset:9811379 orbit from scalers:9813829
+orbit offset:2450 0.2156 secs
+First and last before:9813829 219282415
+[INFO] Subtracting from orbit 2450
+First and last after:9811379 219279965
+scalers: valS:1666741123080 1667019754109
+Comparison between scalers validity and scalers tl first:803920 last:259200109
+run:528093
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/28469/f444a5e8-5560-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666809924344/f444a5e8-5560-11ed-8337-0aa140651b9a for 1666810584209 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/13/53936/b6aee55e-554c-11ed-8337-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666802348076/b6aee55e-554c-11ed-8337-0aa140641b9a for 1666810584209 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666802348075 Time first scalers 1666810586000 ccdb: 1666810524209
+Orbit from reset:92639442 orbit from scalers:92639781
+orbit offset:339 0.029832 secs
+First and last before:92639781 97768757
+[INFO] Subtracting from orbit 339
+First and last after:92639442 97768418
+scalers: valS:1666809924344 1667070242169
+Comparison between scalers validity and scalers tl first:661656 last:259200169
+run:528094
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/49282/1d07948e-5564-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666810783677/1d07948e-5564-11ed-8337-0aa140651b9a for 1666811443544 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666802348075 Time first scalers 1666811446000 ccdb: 1666811383544
+Orbit from reset:102310557 orbit from scalers:102310155
+orbit offset:4294966894 377957 secs
+First and last before:102310155 113027522
+[INFO] Subtracting from orbit 4294966894
+First and last after:102310557 113027924
+scalers: valS:1666810783677 1667071599046
+Comparison between scalers validity and scalers tl first:662323 last:259200046
+run:528097
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/23073/c622a98b-5565-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666812157547/c622a98b-5565-11ed-8337-0aa140651b9a for 1666812817415 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666802348075 Time first scalers 1666812819000 ccdb: 1666812757415
+Orbit from reset:117750604 orbit from scalers:117759692
+orbit offset:9088 0.799744 secs
+First and last before:117759692 121047910
+[INFO] Subtracting from orbit 9088
+First and last after:117750604 121038822
+scalers: valS:1666812157547 1667072312254
+Comparison between scalers validity and scalers tl first:661453 last:259200254
+run:528105
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/31547/62360df9-5573-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666816366825/62360df9-5573-11ed-8337-0aa140651b9a for 1666817026694 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666802348075 Time first scalers 1666817029000 ccdb: 1666816966694
+Orbit from reset:165094086 orbit from scalers:165094391
+orbit offset:305 0.02684 secs
+First and last before:165094391 186781348
+[INFO] Subtracting from orbit 305
+First and last after:165094086 186781043
+scalers: valS:1666816366825 1667078157563
+Comparison between scalers validity and scalers tl first:662175 last:259200563
+run:528107
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/51615/4e9f6392-559f-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666821191040/4e9f6392-559f-11ed-8337-0aa140651b9a for 1666821850886 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666802348075 Time first scalers 1666821853000 ccdb: 1666821790886
+Orbit from reset:219342294 orbit from scalers:219347458
+orbit offset:5164 0.454432 secs
+First and last before:219347458 398927576
+[INFO] Subtracting from orbit 5164
+First and last after:219342294 398922412
+scalers: valS:1666821191040 1667097022547
+Comparison between scalers validity and scalers tl first:661960 last:259200547
+run:528109
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/07681/07efbe9e-55a5-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666837610707/07efbe9e-55a5-11ed-8337-0aa140651b9a for 1666838270574 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666802348075 Time first scalers 1666838272000 ccdb: 1666838210574
+Orbit from reset:403981873 orbit from scalers:403992218
+orbit offset:10345 0.91036 secs
+First and last before:403992218 426573487
+[INFO] Subtracting from orbit 10345
+First and last after:403981873 426563142
+scalers: valS:1666837610707 1667099480944
+Comparison between scalers validity and scalers tl first:661293 last:259200944
+run:528110
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/06356/3a722493-55ab-11ed-8337-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666840881469/3a722493-55ab-11ed-8337-0aa140651b9a for 1666841541336 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666802348075 Time first scalers 1666841543000 ccdb: 1666841481336
+Orbit from reset:440765847 orbit from scalers:440774061
+orbit offset:8214 0.722832 secs
+First and last before:440774061 456505877
+[INFO] Subtracting from orbit 8214
+First and last after:440765847 456497663
+scalers: valS:1666840881469 1667102142666
+Comparison between scalers validity and scalers tl first:661531 last:259200666
+run:528231
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/32603/a4df4df3-5639-11ed-8339-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666902623237/a4df4df3-5639-11ed-8339-0aa140651b9a for 1666903283099 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/06/14849/8182a6f9-5637-11ed-8339-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666903190587/8182a6f9-5637-11ed-8339-0aa140641b9a for 1666903283099 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666903190586 Time first scalers 1666903428000 ccdb: 1666903223099
+Orbit from reset:2669835 orbit from scalers:2676621
+orbit offset:6786 0.597168 secs
+First and last before:2676621 10336417
+[INFO] Subtracting from orbit 6786
+First and last after:2669835 10329631
+scalers: valS:1666902623237 1667163309755
+Comparison between scalers validity and scalers tl first:804763 last:259200755
+run:528232
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/22056/537dccd1-5694-11ed-8339-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666904082880/537dccd1-5694-11ed-8339-0aa140651b9a for 1666904742747 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666903190586 Time first scalers 1666904744000 ccdb: 1666904682747
+Orbit from reset:17468890 orbit from scalers:17474717
+orbit offset:5827 0.512776 secs
+First and last before:17474717 448322190
+[INFO] Subtracting from orbit 5827
+First and last after:17468890 448316363
+scalers: valS:1666904082880 1667202257393
+Comparison between scalers validity and scalers tl first:661120 last:259200393
+run:528233
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/60345/7c840d2f-56a4-11ed-8339-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666942915902/7c840d2f-56a4-11ed-8339-0aa140651b9a for 1666943575769 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666903190586 Time first scalers 1666943577000 ccdb: 1666943515769
+Orbit from reset:454164716 orbit from scalers:454168275
+orbit offset:3559 0.313192 secs
+First and last before:454168275 526374981
+[INFO] Subtracting from orbit 3559
+First and last after:454164716 526371422
+scalers: valS:1666942915902 1667209198194
+Comparison between scalers validity and scalers tl first:661098 last:259200194
+run:528263
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/57270/bc149df5-56d0-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666961239886/bc149df5-56d0-11ed-833a-0aa140651b9a for 1666961898841 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/00/48253/0ea4c505-56c0-11ed-833a-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666961838927/0ea4c505-56c0-11ed-833a-0aa140641b9a for 1666961898841 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666961838926 Time first scalers 1666962047000 ccdb: 1666961838841
+Orbit from reset:2339892 orbit from scalers:2347079
+orbit offset:7187 0.632456 secs
+First and last before:2347079 80560078
+[INFO] Subtracting from orbit 7187
+First and last after:2339892 80552891
+scalers: valS:1666961239886 1667228202693
+Comparison between scalers validity and scalers tl first:807114 last:259200693
+run:528266
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/15897/e9e76616-56db-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666969857204/e9e76616-56db-11ed-833a-0aa140651b9a for 1666970517062 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666961838926 Time first scalers 1666970519000 ccdb: 1666970457062
+Orbit from reset:97611621 orbit from scalers:97613295
+orbit offset:1674 0.147312 secs
+First and last before:97613295 134553635
+[INFO] Subtracting from orbit 1674
+First and last after:97611621 134551961
+scalers: valS:1666969857204 1667233004039
+Comparison between scalers validity and scalers tl first:661796 last:259200039
+run:528292
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/63189/8fe7fe27-5717-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666990657667/8fe7fe27-5717-11ed-833a-0aa140651b9a for 1666991317534 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/04/06621/c1d801d3-56e1-11ed-833a-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1666976312981/c1d801d3-56e1-11ed-833a-0aa140641b9a for 1666991317534 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666976312980 Time first scalers 1666991319000 ccdb: 1666991257534
+Orbit from reset:168749936 orbit from scalers:168750682
+orbit offset:746 0.065648 secs
+First and last before:168750682 259880249
+[INFO] Subtracting from orbit 746
+First and last after:168749936 259879503
+scalers: valS:1666990657667 1667258622848
+Comparison between scalers validity and scalers tl first:661333 last:259200848
+run:528294
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/50319/08adde35-5722-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1666999945707/08adde35-5722-11ed-833a-0aa140651b9a for 1667000605576 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1666976312980 Time first scalers 1667000607000 ccdb: 1667000545576
+Orbit from reset:273197979 orbit from scalers:273204407
+orbit offset:6428 0.565664 secs
+First and last before:273204407 310457967
+[INFO] Subtracting from orbit 6428
+First and last after:273197979 310451539
+scalers: valS:1666999945707 1667263120443
+Comparison between scalers validity and scalers tl first:661293 last:259200443
+run:528316
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/02759/2e18003c-575c-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667025527111/2e18003c-575c-11ed-833a-0aa140651b9a for 1667026186976 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/00/14361/ea6bed99-5752-11ed-833a-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667024914164/ea6bed99-5752-11ed-833a-0aa140641b9a for 1667026186976 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667024914163 Time first scalers 1667026188000 ccdb: 1667026126976
+Orbit from reset:14324911 orbit from scalers:14330290
+orbit offset:5379 0.473352 secs
+First and last before:14330290 44755440
+[INFO] Subtracting from orbit 5379
+First and last after:14324911 44750061
+scalers: valS:1667025527111 1667288094024
+Comparison between scalers validity and scalers tl first:660889 last:259200024
+run:528319
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/23106/1e6bfd6e-576d-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667029481881/1e6bfd6e-576d-11ed-833a-0aa140651b9a for 1667030141745 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667024914163 Time first scalers 1667030143000 ccdb: 1667030081745
+Orbit from reset:58800795 orbit from scalers:58808208
+orbit offset:7413 0.652344 secs
+First and last before:58808208 126567985
+[INFO] Subtracting from orbit 7413
+First and last after:58800795 126560572
+scalers: valS:1667029481881 1667295369159
+Comparison between scalers validity and scalers tl first:661119 last:259200159
+run:528328
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/43134/b71c9f18-5789-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667043635919/b71c9f18-5789-11ed-833a-0aa140651b9a for 1667044295786 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667024914163 Time first scalers 1667044297000 ccdb: 1667044235786
+Orbit from reset:217969356 orbit from scalers:217973597
+orbit offset:4241 0.373208 secs
+First and last before:217973597 264686325
+[INFO] Subtracting from orbit 4241
+First and last after:217969356 264682084
+scalers: valS:1667043635919 1667307651254
+Comparison between scalers validity and scalers tl first:661081 last:259200254
+run:528329
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/04816/513056fb-5793-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667049045807/513056fb-5793-11ed-833a-0aa140651b9a for 1667049705676 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667024914163 Time first scalers 1667049707000 ccdb: 1667049645676
+Orbit from reset:278807417 orbit from scalers:278812497
+orbit offset:5080 0.44704 secs
+First and last before:278812497 311062442
+[INFO] Subtracting from orbit 5080
+First and last after:278807417 311057362
+scalers: valS:1667049045807 1667311775225
+Comparison between scalers validity and scalers tl first:661193 last:259200225
+run:528330
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/18201/39dc19b4-5796-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667052834802/39dc19b4-5796-11ed-833a-0aa140651b9a for 1667053494670 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667024914163 Time first scalers 1667053507000 ccdb: 1667053434670
+Orbit from reset:321540251 orbit from scalers:321541903
+orbit offset:1652 0.145376 secs
+First and last before:321541903 325112040
+[INFO] Subtracting from orbit 1652
+First and last after:321540251 325110388
+scalers: valS:1667052834802 1667313024577
+Comparison between scalers validity and scalers tl first:672198 last:259200577
+run:528332
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/63203/df719ceb-57bb-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667055305631/df719ceb-57bb-11ed-833a-0aa140651b9a for 1667055965500 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667024914163 Time first scalers 1667055967000 ccdb: 1667055905500
+Orbit from reset:349204138 orbit from scalers:349210308
+orbit offset:6170 0.54296 secs
+First and last before:349210308 506942536
+[INFO] Subtracting from orbit 6170
+First and last after:349204138 506936366
+scalers: valS:1667055305631 1667329193751
+Comparison between scalers validity and scalers tl first:661369 last:259200751
+run:528336
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/24628/5e29a6b1-57c9-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667073098854/5e29a6b1-57c9-11ed-833a-0aa140651b9a for 1667073758730 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667024914163 Time first scalers 1667073760000 ccdb: 1667073698730
+Orbit from reset:549295010 orbit from scalers:549301621
+orbit offset:6611 0.581768 secs
+First and last before:549301621 572122187
+[INFO] Subtracting from orbit 6611
+First and last after:549295010 572115576
+scalers: valS:1667073098854 1667334989815
+Comparison between scalers validity and scalers tl first:661146 last:259200815
+run:528347
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/62650/12cb8487-581a-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667085878865/12cb8487-581a-11ed-833a-0aa140651b9a for 1667086537811 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/02/62374/41430973-57e2-11ed-833a-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667086477903/41430973-57e2-11ed-833a-0aa140641b9a for 1667086537811 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667086477902 Time first scalers 1667086696000 ccdb: 1667086477811
+Orbit from reset:2452617 orbit from scalers:2457111
+orbit offset:4494 0.395472 secs
+First and last before:2457111 269607251
+[INFO] Subtracting from orbit 4494
+First and last after:2452617 269602757
+scalers: valS:1667085878865 1667369652591
+Comparison between scalers validity and scalers tl first:817135 last:259200591
+run:528359
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/42344/0c4c0d32-584b-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667125016856/0c4c0d32-584b-11ed-833a-0aa140651b9a for 1667125676723 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/03/46200/434f027e-583b-11ed-833a-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667124706544/434f027e-583b-11ed-833a-0aa140641b9a for 1667125676723 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667124706543 Time first scalers 1667125830000 ccdb: 1667125616723
+Orbit from reset:12633816 orbit from scalers:12643298
+orbit offset:9482 0.834416 secs
+First and last before:12643298 76249924
+[INFO] Subtracting from orbit 9482
+First and last after:12633816 76240442
+scalers: valS:1667125016856 1667390687039
+Comparison between scalers validity and scalers tl first:813144 last:259200039
+run:528379
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/61140/727dd0ef-58dc-11ed-833a-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667185412120/727dd0ef-58dc-11ed-833a-0aa140651b9a for 1667186071988 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/63945/559f20d6-58c8-11ed-833a-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667185296308/559f20d6-58c8-11ed-833a-0aa140641b9a for 1667186071988 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667185296307 Time first scalers 1667186074000 ccdb: 1667186011988
+Orbit from reset:8745533 orbit from scalers:8747059
+orbit offset:1526 0.134288 secs
+First and last before:8747059 97152170
+[INFO] Subtracting from orbit 1526
+First and last after:8745533 97150644
+scalers: valS:1667185412120 1667453135518
+Comparison between scalers validity and scalers tl first:661880 last:259200518
+run:528381
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/39271/772d61a2-58e9-11ed-833b-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667193720382/772d61a2-58e9-11ed-833b-0aa140651b9a for 1667194380250 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667185296307 Time first scalers 1667194382000 ccdb: 1667194320250
+Orbit from reset:102173002 orbit from scalers:102174960
+orbit offset:1958 0.172304 secs
+First and last before:102174960 160029387
+[INFO] Subtracting from orbit 1958
+First and last after:102173002 160027429
+scalers: valS:1667193720382 1667458726839
+Comparison between scalers validity and scalers tl first:661618 last:259200839
+run:528386
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/32074/ab01d316-58fa-11ed-833b-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667202887118/ab01d316-58fa-11ed-833b-0aa140651b9a for 1667203546995 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667185296307 Time first scalers 1667203542000 ccdb: 1667203486995
+Orbit from reset:205181623 orbit from scalers:205184319
+orbit offset:2696 0.237248 secs
+First and last before:205184319 243115673
+[INFO] Subtracting from orbit 2696
+First and last after:205181623 243112977
+scalers: valS:1667202887118 1667466115240
+Comparison between scalers validity and scalers tl first:654882 last:259200240
+run:528448
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/16638/2a90607e-5952-11ed-833b-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667238214740/2a90607e-5952-11ed-833b-0aa140651b9a for 1667238874608 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/04/33881/27cf609e-593a-11ed-833b-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667234182075/27cf609e-593a-11ed-833b-0aa140641b9a for 1667238874608 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667234182074 Time first scalers 1667238876000 ccdb: 1667238814608
+Orbit from reset:52785463 orbit from scalers:52790595
+orbit offset:5132 0.451616 secs
+First and last before:52790595 115979029
+[INFO] Subtracting from orbit 5132
+First and last after:52785463 115973897
+scalers: valS:1667238214740 1667503695459
+Comparison between scalers validity and scalers tl first:661260 last:259200459
+run:528451
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/01236/66b70b99-5959-11ed-833b-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667245387933/66b70b99-5959-11ed-833b-0aa140651b9a for 1667246047801 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667234182074 Time first scalers 1667246050000 ccdb: 1667245987801
+Orbit from reset:133460555 orbit from scalers:133468141
+orbit offset:7586 0.667568 secs
+First and last before:133468141 150923215
+[INFO] Subtracting from orbit 7586
+First and last after:133460555 150915629
+scalers: valS:1667245387933 1667506802855
+Comparison between scalers validity and scalers tl first:662067 last:259200855
+run:528461
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/46200/8535a285-59b3-11ed-833b-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667277255765/8535a285-59b3-11ed-833b-0aa140651b9a for 1667277914727 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/08/33644/d6c88d3b-599f-11ed-833b-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667277854816/d6c88d3b-599f-11ed-833b-0aa140641b9a for 1667277914727 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667277854815 Time first scalers 1667278073000 ccdb: 1667277854727
+Orbit from reset:2453595 orbit from scalers:2453934
+orbit offset:339 0.029832 secs
+First and last before:2453934 95068292
+[INFO] Subtracting from orbit 339
+First and last after:2453595 95067953
+scalers: valS:1667277255765 1667545508718
+Comparison between scalers validity and scalers tl first:817235 last:259200718
+run:528463
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/36986/e9a64e8c-59c8-11ed-833c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667287289620/e9a64e8c-59c8-11ed-833c-0aa140651b9a for 1667287949487 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667277854815 Time first scalers 1667287951000 ccdb: 1667287889487
+Orbit from reset:113536472 orbit from scalers:113539020
+orbit offset:2548 0.224224 secs
+First and last before:113539020 198391334
+[INFO] Subtracting from orbit 2548
+First and last after:113536472 198388786
+scalers: valS:1667287289620 1667554696661
+Comparison between scalers validity and scalers tl first:661380 last:259200661
+run:528529
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/28758/77764bcd-5a58-11ed-84ce-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667355968661/77764bcd-5a58-11ed-84ce-0aa140651b9a for 1667356628527 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/01/26939/ed7377c3-5a11-11ed-84b8-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667326855458/ed7377c3-5a11-11ed-84b8-0aa140641b9a for 1667356628527 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667326855457 Time first scalers 1667356787000 ccdb: 1667356568527
+Orbit from reset:336594646 orbit from scalers:336602219
+orbit offset:7573 0.666424 secs
+First and last before:336602219 340706722
+[INFO] Subtracting from orbit 7573
+First and last after:336594646 340699149
+scalers: valS:1667355968661 1667616352619
+Comparison between scalers validity and scalers tl first:818339 last:259200619
+run:528530
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/07414/028a6899-5a5c-11ed-84ce-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667357033677/028a6899-5a5c-11ed-84ce-0aa140651b9a for 1667357693545 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667326855457 Time first scalers 1667357696000 ccdb: 1667357633545
+Orbit from reset:346816789 orbit from scalers:346824864
+orbit offset:8075 0.7106 secs
+First and last before:346824864 357820407
+[INFO] Subtracting from orbit 8075
+First and last after:346816789 357812332
+scalers: valS:1667357033677 1667617874443
+Comparison between scalers validity and scalers tl first:662323 last:259200443
+run:528531
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/45962/4733b16a-5a6e-11ed-84ce-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667358463506/4733b16a-5a6e-11ed-84ce-0aa140651b9a for 1667359123375 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667326855457 Time first scalers 1667359125000 ccdb: 1667359063375
+Orbit from reset:362886584 orbit from scalers:362887548
+orbit offset:964 0.084832 secs
+First and last before:362887548 446054100
+[INFO] Subtracting from orbit 964
+First and last after:362886584 446053136
+scalers: valS:1667358463506 1667625720575
+Comparison between scalers validity and scalers tl first:661494 last:259200575
+run:528534
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/24642/8ca3aad2-5a80-11ed-84ce-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667366639959/8ca3aad2-5a80-11ed-84ce-0aa140651b9a for 1667367299828 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667326855457 Time first scalers 1667367303000 ccdb: 1667367239828
+Orbit from reset:454852141 orbit from scalers:454854921
+orbit offset:2780 0.24464 secs
+First and last before:454854921 534302495
+[INFO] Subtracting from orbit 2780
+First and last after:454852141 534299715
+scalers: valS:1667366639959 1667633568014
+Comparison between scalers validity and scalers tl first:663041 last:259200014
+run:528537
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/35123/f6cf7fa4-011b-11ee-b312-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667374748000/f6cf7fa4-011b-11ee-b312-200114580202 for 1667374988226 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667326855457 Time first scalers 1667374989000 ccdb: 1667374928226
+Orbit from reset:541284920 orbit from scalers:541297015
+orbit offset:12095 1.06436 secs
+First and last before:541297015 569784524
+[INFO] Subtracting from orbit 12095
+First and last after:541284920 569772429
+scalers: valS:1667374748000 1667377703129
+Comparison between scalers validity and scalers tl first:241000 last:180129
+run:528543
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/28153/f70d1595-011b-11ee-b312-200114580202 in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667377865000/f70d1595-011b-11ee-b312-200114580202 for 1667378105403 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667326855457 Time first scalers 1667378107000 ccdb: 1667378045403
+Orbit from reset:576348335 orbit from scalers:576351397
+orbit offset:3062 0.269456 secs
+First and last before:576351397 591669594
+[INFO] Subtracting from orbit 3062
+First and last after:576348335 591666532
+scalers: valS:1667377865000 1667379649250
+Comparison between scalers validity and scalers tl first:242000 last:180250
+run:528602
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/51612/a1332ce5-5ae5-11ed-84d5-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667416444379/a1332ce5-5ae5-11ed-84d5-0aa140651b9a for 1667417104245 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/10/36441/15f01208-5a8e-11ed-84ce-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667380180976/15f01208-5a8e-11ed-84ce-0aa140641b9a for 1667417104245 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667380180975 Time first scalers 1667417106000 ccdb: 1667417044245
+Orbit from reset:415239726 orbit from scalers:415248533
+orbit offset:8807 0.775016 secs
+First and last before:415248533 422837763
+[INFO] Subtracting from orbit 8807
+First and last after:415239726 422828956
+scalers: valS:1667416444379 1667676981681
+Comparison between scalers validity and scalers tl first:661621 last:259200681
+run:528604
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/46488/e31c8aee-5b08-11ed-84d5-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667417648181/e31c8aee-5b08-11ed-84d5-0aa140651b9a for 1667418308050 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667380180975 Time first scalers 1667418310000 ccdb: 1667418248050
+Orbit from reset:428779287 orbit from scalers:428785111
+orbit offset:5824 0.512512 secs
+First and last before:428785111 593127948
+[INFO] Subtracting from orbit 5824
+First and last after:428779287 593122124
+scalers: valS:1667417648181 1667692124640
+Comparison between scalers validity and scalers tl first:661819 last:259200640
+run:528617
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/56004/ebf9dc0b-5b60-11ed-84d5-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667442331235/ebf9dc0b-5b60-11ed-84d5-0aa140651b9a for 1667442991104 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/08/17196/c931cddd-5b1e-11ed-84d5-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667442329242/c931cddd-5b1e-11ed-84d5-0aa140641b9a for 1667442991104 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667442329241 Time first scalers 1667442993000 ccdb: 1667442931104
+Orbit from reset:7464290 orbit from scalers:7470626
+orbit offset:6336 0.557568 secs
+First and last before:7470626 319439338
+[INFO] Subtracting from orbit 6336
+First and last after:7464290 319433002
+scalers: valS:1667442331235 1667729935218
+Comparison between scalers validity and scalers tl first:661765 last:259200218
+run:528781
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/21060/5efce5c6-5c96-11ed-a42e-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667602491797/5efce5c6-5c96-11ed-a42e-0aa140651b9a for 1667603151666 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/32334/725296a4-5c8c-11ed-a42e-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667599379311/725296a4-5c8c-11ed-a42e-0aa140641b9a for 1667603151666 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667599379310 Time first scalers 1667603154000 ccdb: 1667603091666
+Orbit from reset:42448210 orbit from scalers:42450524
+orbit offset:2314 0.203632 secs
+First and last before:42450524 47943661
+[INFO] Subtracting from orbit 2314
+First and last after:42448210 47941347
+scalers: valS:1667602491797 1667862842681
+Comparison between scalers validity and scalers tl first:662203 last:259200681
+run:528782
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/65252/cd2da08b-5c98-11ed-a42e-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667603492302/cd2da08b-5c98-11ed-a42e-0aa140651b9a for 1667604152171 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667599379310 Time first scalers 1667604154000 ccdb: 1667604092171
+Orbit from reset:53693693 orbit from scalers:53700871
+orbit offset:7178 0.631664 secs
+First and last before:53700871 59682407
+[INFO] Subtracting from orbit 7178
+First and last after:53693693 59675229
+scalers: valS:1667603492302 1667863886542
+Comparison between scalers validity and scalers tl first:661698 last:259200542
+run:528783
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/08179/86d34655-5c9a-11ed-a42e-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667604466124/86d34655-5c9a-11ed-a42e-0aa140651b9a for 1667605125993 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667599379310 Time first scalers 1667605128000 ccdb: 1667605065993
+Orbit from reset:64646793 orbit from scalers:64653820
+orbit offset:7027 0.618376 secs
+First and last before:64653820 68014883
+[INFO] Subtracting from orbit 7027
+First and last after:64646793 68007856
+scalers: valS:1667604466124 1667864627503
+Comparison between scalers validity and scalers tl first:661876 last:259200503
+run:528784
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/61132/a04fb852-5cbc-11ed-a42e-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667605211572/a04fb852-5cbc-11ed-a42e-0aa140651b9a for 1667605871438 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667599379310 Time first scalers 1667605873000 ccdb: 1667605811438
+Orbit from reset:73024677 orbit from scalers:73035025
+orbit offset:10348 0.910624 secs
+First and last before:73035025 232712471
+[INFO] Subtracting from orbit 10348
+First and last after:73024677 232702123
+scalers: valS:1667605211572 1667879273143
+Comparison between scalers validity and scalers tl first:661428 last:259200143
+run:528798
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/60111/cd288c0f-5cf0-11ed-a42e-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667636946751/cd288c0f-5cf0-11ed-a42e-0aa140651b9a for 1667637605711 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/02/34923/4f515dbb-5ce5-11ed-a42e-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1667637545788/4f515dbb-5ce5-11ed-a42e-0aa140641b9a for 1667637605711 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667637545787 Time first scalers 1667637771000 ccdb: 1667637545711
+Orbit from reset:2532628 orbit from scalers:2532904
+orbit offset:276 0.024288 secs
+First and last before:2532904 55512509
+[INFO] Subtracting from orbit 276
+First and last after:2532628 55512233
+scalers: valS:1667636946751 1667901682219
+Comparison between scalers validity and scalers tl first:824249 last:259200219
+run:528801
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/22849/55eafbeb-5d02-11ed-a42e-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1667642251427/55eafbeb-5d02-11ed-a42e-0aa140651b9a for 1667642911289 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1667637545787 Time first scalers 1667642913000 ccdb: 1667642851289
+Orbit from reset:60356900 orbit from scalers:60365317
+orbit offset:8417 0.740696 secs
+First and last before:60365317 140201126
+[INFO] Subtracting from orbit 8417
+First and last after:60356900 140192709
+scalers: valS:1667642251427 1667909213106
+Comparison between scalers validity and scalers tl first:661573 last:259200106
+run:529077
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/29499/5f126660-6239-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668221967096/5f126660-6239-11ed-a4ee-0aa140651b9a for 1668222625023 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/05/22044/6a03e171-6237-11ed-a4ee-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1668222565121/6a03e171-6237-11ed-a4ee-0aa140641b9a for 1668222625023 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668222565120 Time first scalers 1668222775000 ccdb: 1668222565023
+Orbit from reset:2360201 orbit from scalers:2368558
+orbit offset:8357 0.735416 secs
+First and last before:2368558 9462764
+[INFO] Subtracting from orbit 8357
+First and last after:2360201 9454407
+scalers: valS:1668221967096 1668482606601
+Comparison between scalers validity and scalers tl first:807904 last:259200601
+run:529078
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/12564/67e488bb-6265-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668223461228/67e488bb-6265-11ed-a4ee-0aa140651b9a for 1668224120081 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668222565120 Time first scalers 1668224122000 ccdb: 1668224060081
+Orbit from reset:17507866 orbit from scalers:17518796
+orbit offset:10930 0.96184 secs
+First and last before:17518796 222144945
+[INFO] Subtracting from orbit 10930
+First and last after:17507866 222134015
+scalers: valS:1668223461228 1668501519244
+Comparison between scalers validity and scalers tl first:660772 last:259200244
+run:529084
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/08195/476bed38-6277-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668247651964/476bed38-6277-11ed-a4ee-0aa140651b9a for 1668248310813 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668222565120 Time first scalers 1668248314000 ccdb: 1668248250813
+Orbit from reset:289558582 orbit from scalers:289568357
+orbit offset:9775 0.8602 secs
+First and last before:289568357 308470781
+[INFO] Subtracting from orbit 9775
+First and last after:289558582 308461006
+scalers: valS:1668247651964 1668509195721
+Comparison between scalers validity and scalers tl first:662036 last:259200721
+run:529088
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/57803/c1a9f78a-6287-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668252955014/c1a9f78a-6287-11ed-a4ee-0aa140651b9a for 1668253613862 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668222565120 Time first scalers 1668253616000 ccdb: 1668253553862
+Orbit from reset:349182130 orbit from scalers:349190481
+orbit offset:8351 0.734888 secs
+First and last before:349190481 388055608
+[INFO] Subtracting from orbit 8351
+First and last after:349182130 388047257
+scalers: valS:1668252955014 1668516272756
+Comparison between scalers validity and scalers tl first:660986 last:259200756
+run:529115
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/51882/b3d364ca-630e-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668280000665/b3d364ca-630e-11ed-a4ee-0aa140651b9a for 1668280659501 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/14/00222/e1c7a5a7-62b0-11ed-a4ee-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1668274735146/e1c7a5a7-62b0-11ed-a4ee-0aa140641b9a for 1668280659501 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668274735145 Time first scalers 1668280662000 ccdb: 1668280599501
+Orbit from reset:66650344 orbit from scalers:66655030
+orbit offset:4686 0.412368 secs
+First and last before:66655030 453153345
+[INFO] Subtracting from orbit 4686
+First and last after:66650344 453148659
+scalers: valS:1668280000665 1668574231565
+Comparison between scalers validity and scalers tl first:661335 last:259200565
+run:529116
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/46501/6d9fc99c-6316-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668314838486/6d9fc99c-6316-11ed-a4ee-0aa140651b9a for 1668315497338 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668274735145 Time first scalers 1668315500000 ccdb: 1668315437338
+Orbit from reset:458420467 orbit from scalers:458425429
+orbit offset:4962 0.436656 secs
+First and last before:458425429 490468475
+[INFO] Subtracting from orbit 4962
+First and last after:458420467 490463513
+scalers: valS:1668314838486 1668577549792
+Comparison between scalers validity and scalers tl first:661514 last:259200792
+run:529117
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/35698/5acd4b0c-632e-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668318718498/5acd4b0c-632e-11ed-a4ee-0aa140651b9a for 1668319377347 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668274735145 Time first scalers 1668319380000 ccdb: 1668319317347
+Orbit from reset:502052940 orbit from scalers:502060000
+orbit offset:7060 0.62128 secs
+First and last before:502060000 606031022
+[INFO] Subtracting from orbit 7060
+First and last after:502052940 606023962
+scalers: valS:1668318718498 1668587826126
+Comparison between scalers validity and scalers tl first:661502 last:259200126
+run:529128
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/19238/b49b7270-635f-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668348682346/b49b7270-635f-11ed-a4ee-0aa140651b9a for 1668349340284 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/00721/72308c82-635e-11ed-a4ee-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1668349280381/72308c82-635e-11ed-a4ee-0aa140641b9a for 1668349340284 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668349280380 Time first scalers 1668349497000 ccdb: 1668349280284
+Orbit from reset:2435996 orbit from scalers:2439758
+orbit offset:3762 0.331056 secs
+First and last before:2439758 6092282
+[INFO] Subtracting from orbit 3762
+First and last after:2435996 6088520
+scalers: valS:1668348682346 1668609022146
+Comparison between scalers validity and scalers tl first:814654 last:259200146
+run:529129
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/64726/1842f49c-6378-11ed-a4ee-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668349566814/1842f49c-6378-11ed-a4ee-0aa140651b9a for 1668350225665 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668349280380 Time first scalers 1668350228000 ccdb: 1668350165665
+Orbit from reset:10656444 orbit from scalers:10662516
+orbit offset:6072 0.534336 secs
+First and last before:10662516 123890121
+[INFO] Subtracting from orbit 6072
+First and last after:10656444 123884049
+scalers: valS:1668349566814 1668619497252
+Comparison between scalers validity and scalers tl first:661186 last:259200252
+run:529208
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/15/63447/acdeba80-6466-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668461348651/acdeba80-6466-11ed-b628-0aa140651b9a for 1668462007511 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/05/09449/7990c60d-6427-11ed-b628-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1668435621606/7990c60d-6427-11ed-b628-0aa140641b9a for 1668462007511 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668435621605 Time first scalers 1668462010000 ccdb: 1668461947511
+Orbit from reset:296750236 orbit from scalers:296756030
+orbit offset:5794 0.509872 secs
+First and last before:296756030 305261138
+[INFO] Subtracting from orbit 5794
+First and last after:296750236 305255344
+scalers: valS:1668461348651 1668721966805
+Comparison between scalers validity and scalers tl first:661349 last:259200805
+run:529209
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/15612/91105a9a-6486-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668462669312/91105a9a-6486-11ed-b628-0aa140651b9a for 1668463328171 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668435621605 Time first scalers 1668463331000 ccdb: 1668463268171
+Orbit from reset:311605519 orbit from scalers:311607501
+orbit offset:1982 0.174416 secs
+First and last before:311607501 459293439
+[INFO] Subtracting from orbit 1982
+First and last after:311605519 459291457
+scalers: valS:1668462669312 1668735664040
+Comparison between scalers validity and scalers tl first:661688 last:259200040
+run:529210
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/32588/334ee259-6489-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668476372559/334ee259-6489-11ed-b628-0aa140651b9a for 1668477031419 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668435621605 Time first scalers 1668477034000 ccdb: 1668476971419
+Orbit from reset:465702367 orbit from scalers:465706146
+orbit offset:3779 0.332552 secs
+First and last before:465706146 472014375
+[INFO] Subtracting from orbit 3779
+First and last after:465702367 472010596
+scalers: valS:1668476372559 1668736795242
+Comparison between scalers validity and scalers tl first:661441 last:259200242
+run:529211
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/57262/75e63788-64a5-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668477397610/75e63788-64a5-11ed-b628-0aa140651b9a for 1668478056469 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668435621605 Time first scalers 1668478059000 ccdb: 1668477996469
+Orbit from reset:477228987 orbit from scalers:477233100
+orbit offset:4113 0.361944 secs
+First and last before:477233100 608508029
+[INFO] Subtracting from orbit 4113
+First and last after:477228987 608503916
+scalers: valS:1668477397610 1668748932864
+Comparison between scalers validity and scalers tl first:661390 last:259200864
+run:529235
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/36700/8717e563-64d7-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668509800067/8717e563-64d7-11ed-b628-0aa140651b9a for 1668510458016 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/13/55719/93d65b44-64d5-11ed-b628-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1668510398110/93d65b44-64d5-11ed-b628-0aa140641b9a for 1668510458016 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668510398109 Time first scalers 1668510611000 ccdb: 1668510398016
+Orbit from reset:2394062 orbit from scalers:2397577
+orbit offset:3515 0.30932 secs
+First and last before:2397577 9428603
+[INFO] Subtracting from orbit 3515
+First and last after:2394062 9425088
+scalers: valS:1668509800067 1668770436556
+Comparison between scalers validity and scalers tl first:810933 last:259200556
+run:529237
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/59099/dadfa7be-64e4-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668511521011/dadfa7be-64e4-11ed-b628-0aa140651b9a for 1668512179870 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668510398109 Time first scalers 1668512184000 ccdb: 1668512119870
+Orbit from reset:20083206 orbit from scalers:20085897
+orbit offset:2691 0.236808 secs
+First and last before:20085897 73798032
+[INFO] Subtracting from orbit 2691
+First and last after:20083206 73795341
+scalers: valS:1668511521011 1668776160571
+Comparison between scalers validity and scalers tl first:662989 last:259200571
+run:529242
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/65251/5b6efa27-64fa-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668524492436/5b6efa27-64fa-11ed-b628-0aa140651b9a for 1668525151302 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668510398109 Time first scalers 1668525154000 ccdb: 1668525091302
+Orbit from reset:165937115 orbit from scalers:165939883
+orbit offset:2768 0.243584 secs
+First and last before:165939883 177651612
+[INFO] Subtracting from orbit 2768
+First and last after:165937115 177648844
+scalers: valS:1668524492436 1668785395692
+Comparison between scalers validity and scalers tl first:661564 last:259200692
+run:529248
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/33383/efe4e86a-6518-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668528900021/efe4e86a-6518-11ed-b628-0aa140651b9a for 1668529558879 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668510398109 Time first scalers 1668529561000 ccdb: 1668529498879
+Orbit from reset:215495957 orbit from scalers:215507247
+orbit offset:11290 0.99352 secs
+First and last before:215507247 325349728
+[INFO] Subtracting from orbit 11290
+First and last after:215495957 325338438
+scalers: valS:1668528900021 1668798529664
+Comparison between scalers validity and scalers tl first:660979 last:259200664
+run:529252
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/14572/800b20f4-6533-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668544472829/800b20f4-6533-11ed-b628-0aa140651b9a for 1668545131689 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668510398109 Time first scalers 1668545134000 ccdb: 1668545071689
+Orbit from reset:390621857 orbit from scalers:390629212
+orbit offset:7355 0.64724 secs
+First and last before:390629212 453646968
+[INFO] Subtracting from orbit 7355
+First and last after:390621857 453639613
+scalers: valS:1668544472829 1668809938424
+Comparison between scalers validity and scalers tl first:661171 last:259200424
+run:529270
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/14592/ac364578-6581-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668565139298/ac364578-6581-11ed-b628-0aa140651b9a for 1668565798149 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/05/48531/7bd41d9a-6548-11ed-b628-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1668559749950/7bd41d9a-6548-11ed-b628-0aa140641b9a for 1668565798149 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668559749949 Time first scalers 1668565801000 ccdb: 1668565738149
+Orbit from reset:68046988 orbit from scalers:68050953
+orbit offset:3965 0.34892 secs
+First and last before:68050953 276226708
+[INFO] Subtracting from orbit 3965
+First and last after:68046988 276222743
+scalers: valS:1668565139298 1668843513262
+Comparison between scalers validity and scalers tl first:661702 last:259200262
+run:529306
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/07397/7a023996-65ba-11ed-b628-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668605611893/7a023996-65ba-11ed-b628-0aa140651b9a for 1668606270739 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/08/61127/6377efd5-65b2-11ed-b628-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1668605235732/6377efd5-65b2-11ed-b628-0aa140641b9a for 1668606270739 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668605235731 Time first scalers 1668606273000 ccdb: 1668606210739
+Orbit from reset:11664590 orbit from scalers:11674665
+orbit offset:10075 0.8866 secs
+First and last before:11674665 39073812
+[INFO] Subtracting from orbit 10075
+First and last after:11664590 39063737
+scalers: valS:1668605611893 1668867910360
+Comparison between scalers validity and scalers tl first:661107 last:259200360
+run:529310
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/07911/4d33ded0-65cb-11ed-8000-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668614590388/4d33ded0-65cb-11ed-8000-0aa140651b9a for 1668615249248 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668605235731 Time first scalers 1668615251000 ccdb: 1668615189248
+Orbit from reset:112626533 orbit from scalers:112627718
+orbit offset:1185 0.10428 secs
+First and last before:112627718 120336908
+[INFO] Subtracting from orbit 1185
+First and last after:112626533 120335723
+scalers: valS:1668614590388 1668875136634
+Comparison between scalers validity and scalers tl first:660612 last:259200634
+run:529317
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/50328/71ec458e-65de-11ed-8004-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668618321805/71ec458e-65de-11ed-8004-0aa140651b9a for 1668618980657 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668605235731 Time first scalers 1668618983000 ccdb: 1668618920657
+Orbit from reset:154594674 orbit from scalers:154603652
+orbit offset:8978 0.790064 secs
+First and last before:154603652 212797876
+[INFO] Subtracting from orbit 8978
+First and last after:154594674 212788898
+scalers: valS:1668618321805 1668883358674
+Comparison between scalers validity and scalers tl first:661195 last:259200674
+run:529320
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/42092/3bb87354-65ee-11ed-8004-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668626161445/3bb87354-65ee-11ed-8004-0aa140651b9a for 1668626820297 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668605235731 Time first scalers 1668626823000 ccdb: 1668626760297
+Orbit from reset:242759258 orbit from scalers:242765239
+orbit offset:5981 0.526328 secs
+First and last before:242765239 289053765
+[INFO] Subtracting from orbit 5981
+First and last after:242759258 289047784
+scalers: valS:1668626161445 1668890139686
+Comparison between scalers validity and scalers tl first:661555 last:259200686
+run:529324
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/06352/6673e704-660c-11ed-8009-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668637370658/6673e704-660c-11ed-8009-0aa140651b9a for 1668638029491 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668605235731 Time first scalers 1668638031000 ccdb: 1668637969491
+Orbit from reset:368798627 orbit from scalers:368809279
+orbit offset:10652 0.937376 secs
+First and last before:368809279 434757174
+[INFO] Subtracting from orbit 10652
+First and last after:368798627 434746522
+scalers: valS:1668637370658 1668903096279
+Comparison between scalers validity and scalers tl first:660342 last:259200279
+run:529338
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/13058/9950bf7f-6651-11ed-800d-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668652214401/9950bf7f-6651-11ed-800d-0aa140651b9a for 1668652873241 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/02/63434/da99d296-661e-11ed-8009-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1668651821230/da99d296-661e-11ed-8009-0aa140641b9a for 1668652873241 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668651821229 Time first scalers 1668652876000 ccdb: 1668652813241
+Orbit from reset:11861408 orbit from scalers:11866192
+orbit offset:4784 0.420992 secs
+First and last before:11866192 245102893
+[INFO] Subtracting from orbit 4784
+First and last after:11861408 245098109
+scalers: valS:1668652214401 1668932816876
+Comparison between scalers validity and scalers tl first:661599 last:259200876
+run:529341
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/02754/c3a81382-6661-11ed-800e-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1668675131699/c3a81382-6661-11ed-800e-0aa140651b9a for 1668675790549 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1668651821229 Time first scalers 1668675857000 ccdb: 1668675730549
+Orbit from reset:270293844 orbit from scalers:270294421
+orbit offset:577 0.050776 secs
+First and last before:270294421 323180386
+[INFO] Subtracting from orbit 577
+First and last after:270293844 323179809
+scalers: valS:1668675131699 1668939759873
+Comparison between scalers validity and scalers tl first:725301 last:259200873
+run:529450
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/41609/fb6cdd58-6993-11ed-802e-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669030451899/fb6cdd58-6993-11ed-802e-0aa140651b9a for 1669031109837 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/06/15877/d0829976-6991-11ed-802e-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1669031049936/d0829976-6991-11ed-802e-0aa140641b9a for 1669031109837 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669031049935 Time first scalers 1669031113000 ccdb: 1669031049837
+Orbit from reset:709196 orbit from scalers:713347
+orbit offset:4151 0.365288 secs
+First and last before:713347 10478791
+[INFO] Subtracting from orbit 4151
+First and last after:709196 10474640
+scalers: valS:1669030451899 1669291181765
+Comparison between scalers validity and scalers tl first:661101 last:259200765
+run:529452
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/52346/16182341-699f-11ed-8031-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669033092562/16182341-699f-11ed-8031-0aa140651b9a for 1669033751417 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669031049935 Time first scalers 1669033754000 ccdb: 1669033691417
+Orbit from reset:30408515 orbit from scalers:30412753
+orbit offset:4238 0.372944 secs
+First and last before:30412753 64110909
+[INFO] Subtracting from orbit 4238
+First and last after:30408515 64106671
+scalers: valS:1669033092562 1669295950971
+Comparison between scalers validity and scalers tl first:661438 last:259200971
+run:529454
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/05870/153f4fee-69aa-11ed-8033-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669037099679/153f4fee-69aa-11ed-8033-0aa140651b9a for 1669037758505 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669031049935 Time first scalers 1669037761000 ccdb: 1669037698505
+Orbit from reset:75469164 orbit from scalers:75473546
+orbit offset:4382 0.385616 secs
+First and last before:75473546 117223896
+[INFO] Subtracting from orbit 4382
+First and last after:75469164 117219514
+scalers: valS:1669037099679 1669300674013
+Comparison between scalers validity and scalers tl first:661321 last:259200013
+run:529458
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/07667/70f6f5ec-69c1-11ed-8035-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669041408847/70f6f5ec-69c1-11ed-8035-0aa140651b9a for 1669042067674 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669031049935 Time first scalers 1669042070000 ccdb: 1669042007674
+Orbit from reset:123925949 orbit from scalers:123934009
+orbit offset:8060 0.70928 secs
+First and last before:123934009 230042110
+[INFO] Subtracting from orbit 8060
+First and last after:123925949 230034050
+scalers: valS:1669041408847 1669310706309
+Comparison between scalers validity and scalers tl first:661153 last:259200309
+run:529460
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/29759/18957a06-69cf-11ed-8037-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669052187470/18957a06-69cf-11ed-8037-0aa140651b9a for 1669052846317 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669031049935 Time first scalers 1669052849000 ccdb: 1669052786317
+Orbit from reset:245141006 orbit from scalers:245149041
+orbit offset:8035 0.70708 secs
+First and last before:245149041 295993389
+[INFO] Subtracting from orbit 8035
+First and last after:245141006 295985354
+scalers: valS:1669052187470 1669316570989
+Comparison between scalers validity and scalers tl first:661530 last:259200989
+run:529461
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/02277/eda98b3a-69d1-11ed-8037-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669057289363/eda98b3a-69d1-11ed-8037-0aa140651b9a for 1669057948210 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669031049935 Time first scalers 1669057951000 ccdb: 1669057888210
+Orbit from reset:302515458 orbit from scalers:302518562
+orbit offset:3104 0.273152 secs
+First and last before:302518562 309673354
+[INFO] Subtracting from orbit 3104
+First and last after:302515458 309670250
+scalers: valS:1669057289363 1669317787472
+Comparison between scalers validity and scalers tl first:661637 last:259200472
+run:529462
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/40561/fff01911-69f4-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669058486173/fff01911-69f4-11ed-803c-0aa140651b9a for 1669059145022 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669031049935 Time first scalers 1669059148000 ccdb: 1669059085022
+Orbit from reset:315976301 orbit from scalers:315984566
+orbit offset:8265 0.72732 secs
+First and last before:315984566 479064768
+[INFO] Subtracting from orbit 8265
+First and last after:315976301 479056503
+scalers: valS:1669058486173 1669332850509
+Comparison between scalers validity and scalers tl first:661827 last:259200509
+run:529542
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/38773/ed2f74a2-6b7b-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669239570270/ed2f74a2-6b7b-11ed-803c-0aa140651b9a for 1669240228193 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/11/23094/b4c5aa98-6b78-11ed-803c-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1669240168292/b4c5aa98-6b78-11ed-803c-0aa140641b9a for 1669240228193 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669240168291 Time first scalers 1669240226000 ccdb: 1669240168193
+Orbit from reset:648965 orbit from scalers:656757
+orbit offset:7792 0.685696 secs
+First and last before:656757 15563515
+[INFO] Subtracting from orbit 7792
+First and last after:648965 15555723
+scalers: valS:1669239570270 1669500752278
+Comparison between scalers validity and scalers tl first:655730 last:259200278
+run:529552
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/60881/df22e33e-6bcd-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669272423673/df22e33e-6bcd-11ed-803c-0aa140651b9a for 1669273082524 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/12/09490/ff13bfbf-6bc3-11ed-803c-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1669272505221/ff13bfbf-6bc3-11ed-803c-0aa140641b9a for 1669273082524 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669272505220 Time first scalers 1669273084000 ccdb: 1669273022524
+Orbit from reset:6508660 orbit from scalers:6518058
+orbit offset:9398 0.827024 secs
+First and last before:6518058 47705735
+[INFO] Subtracting from orbit 9398
+First and last after:6508660 47696337
+scalers: valS:1669272423673 1669535947437
+Comparison between scalers validity and scalers tl first:660327 last:259200437
+run:529554
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/23608/e35ccb92-6bd2-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669277086759/e35ccb92-6bd2-11ed-803c-0aa140651b9a for 1669277745601 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669272505220 Time first scalers 1669277746000 ccdb: 1669277685601
+Orbit from reset:58935100 orbit from scalers:58941053
+orbit offset:5953 0.523864 secs
+First and last before:58941053 71935027
+[INFO] Subtracting from orbit 5953
+First and last after:58935100 71929074
+scalers: valS:1669277086759 1669538102013
+Comparison between scalers validity and scalers tl first:659241 last:259200013
+run:529662
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/37993/3b7d4e57-6d28-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669423055998/3b7d4e57-6d28-11ed-803c-0aa140651b9a for 1669423713913 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/08/54172/eac82903-6d23-11ed-803c-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1669423654010/eac82903-6d23-11ed-803c-0aa140641b9a for 1669423713913 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669423654009 Time first scalers 1669423714000 ccdb: 1669423653913
+Orbit from reset:674627 orbit from scalers:676500
+orbit offset:1873 0.164824 secs
+First and last before:676500 20851704
+[INFO] Subtracting from orbit 1873
+First and last after:674627 20849831
+scalers: valS:1669423055998 1669684708251
+Comparison between scalers validity and scalers tl first:658002 last:259200251
+run:529663
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/38228/7fc23221-6d80-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669425534317/7fc23221-6d80-11ed-803c-0aa140651b9a for 1669426193155 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669423654009 Time first scalers 1669426190000 ccdb: 1669426133155
+Orbit from reset:28518442 orbit from scalers:28525143
+orbit offset:6701 0.589688 secs
+First and last before:28525143 447171133
+[INFO] Subtracting from orbit 6701
+First and last after:28518442 447164432
+scalers: valS:1669425534317 1669722618465
+Comparison between scalers validity and scalers tl first:655683 last:259200465
+run:529664
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/16394/cb0020b9-6da8-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669463296046/cb0020b9-6da8-11ed-803c-0aa140651b9a for 1669463955914 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669423654009 Time first scalers 1669463952000 ccdb: 1669463895914
+Orbit from reset:453170356 orbit from scalers:453173987
+orbit offset:3631 0.319528 secs
+First and last before:453173987 641787255
+[INFO] Subtracting from orbit 3631
+First and last after:453170356 641783624
+scalers: valS:1669463296046 1669739924594
+Comparison between scalers validity and scalers tl first:655954 last:259200594
+run:529674
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/01760/51dab8d1-6de4-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669503216318/51dab8d1-6de4-11ed-803c-0aa140651b9a for 1669503874250 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/03/39775/8e100701-6dde-11ed-803c-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1669503814346/8e100701-6dde-11ed-803c-0aa140641b9a for 1669503874250 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669503814345 Time first scalers 1669503872000 ccdb: 1669503814250
+Orbit from reset:648358 orbit from scalers:655919
+orbit offset:7561 0.665368 secs
+First and last before:655919 27852883
+[INFO] Subtracting from orbit 7561
+First and last after:648358 27845322
+scalers: valS:1669503216318 1669765491156
+Comparison between scalers validity and scalers tl first:655682 last:259200156
+run:529675
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/05/39793/d5615cac-6e28-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669506067444/d5615cac-6e28-11ed-803c-0aa140651b9a for 1669506726295 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669503814345 Time first scalers 1669506724000 ccdb: 1669506666295
+Orbit from reset:32720474 orbit from scalers:32728164
+orbit offset:7690 0.67672 secs
+First and last before:32728164 358767753
+[INFO] Subtracting from orbit 7690
+First and last after:32720474 358760063
+scalers: valS:1669506067444 1669794917574
+Comparison between scalers validity and scalers tl first:656556 last:259200574
+run:529690
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/63954/0dba5e58-6eb0-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669587005040/0dba5e58-6eb0-11ed-803c-0aa140651b9a for 1669587662957 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/01/17430/a406ce77-6ea1-11ed-803c-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1669587603058/a406ce77-6ea1-11ed-803c-0aa140641b9a for 1669587662957 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669587603057 Time first scalers 1669587661000 ccdb: 1669587602957
+Orbit from reset:651596 orbit from scalers:654349
+orbit offset:2753 0.242264 secs
+First and last before:654349 69622287
+[INFO] Subtracting from orbit 2753
+First and last after:651596 69619534
+scalers: valS:1669587005040 1669852994190
+Comparison between scalers validity and scalers tl first:655960 last:259200190
+run:529691
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/56006/ca97cf54-6ed9-11ed-803c-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1669593563330/ca97cf54-6ed9-11ed-803c-0aa140651b9a for 1669594222179 (retrieve, agent_id: ctpo2cs8.cern.ch-1708004648-jf7LBL), 
+ Orbit reset 1669587603057 Time first scalers 1669594219000 ccdb: 1669594162179
+Orbit from reset:74399471 orbit from scalers:74405956
+orbit offset:6485 0.57068 secs
+First and last before:74405956 271211692
+[INFO] Subtracting from orbit 6485
+First and last after:74399471 271205207
+scalers: valS:1669593563330 1669870920411
+Comparison between scalers validity and scalers tl first:655670 last:259200411
+Number of runs processed:207

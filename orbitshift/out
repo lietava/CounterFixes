@@ -1,0 +1,1323 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.30/01                        https://root.cern |
+  | (c) 1995-2023, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Jan 18 2024, 01:29:08                 |
+  | From tags/v6-30-01-alice2@v6-25-02-6400-g526782cfe8              |
+  | With c++ (GCC) 12.2.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing compareVal.C...
+In file included from input_line_8:1:
+/home/rl/CounterFixes/orbitshift/compareVal.C:22:49: error: use of undeclared identifier 'metadataGRP'
+    headersS = api.retrieveHeaders(ccdbScalers, metadataGRP, tstart + 2000);
+                                                ^
+/home/rl/CounterFixes/orbitshift/compareVal.C:27:35: error: invalid operands to binary expression ('basic_ostream<char, std::char_traits<char> >' and 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >')
+    std::cout << "scalers: valS:" << valF << " " << valU << std::endl;
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/system_error:279:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const std::error_code' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:517:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'char' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:523:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, char __c)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:534:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'signed char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:539:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'unsigned char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:615:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:628:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const signed char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:633:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const unsigned char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/ostream.tcc:302:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const char *' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/cstddef:123:5: note: candidate function template not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'std::byte' for 1st argument
+    operator<<(byte __b, _IntegerType __shift) noexcept
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/iomanip:79:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::_Resetiosflags' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/iomanip:109:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::_Setiosflags' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/iomanip:143:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::_Setbase' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/iomanip:208:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::_Setprecision' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/iomanip:238:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::_Setw' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:1026:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const std::bernoulli_distribution' for 2nd argument
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/thread:92:5: note: candidate function template not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'thread::id' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __out, thread::id __id)
+    ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TString.h:482:16: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const TString' for 2nd argument
+std::ostream  &operator<<(std::ostream &str, const TString &s);
+               ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TTimeStamp.h:33:15: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const TTimeStamp' for 2nd argument
+std::ostream &operator<<(std::ostream &os,  const TTimeStamp &ts);
+              ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBits.h:184:22: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const TBits' for 2nd argument
+inline std::ostream &operator<<(std::ostream& os, const TBits& rhs)
+                     ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TGeoVector3.h:194:15: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const ROOT::Geom::Vertex_t' for 2nd argument
+std::ostream &operator<<(std::ostream &os, ROOT::Geom::Vertex_t const &vec);
+              ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TGeoTessellated.h:103:15: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const TGeoFacet' for 2nd argument
+std::ostream &operator<<(std::ostream &os, TGeoFacet const &facet);
+              ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TEveTrans.h:184:15: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const TEveTrans' for 2nd argument
+std::ostream& operator<<(std::ostream& s, const TEveTrans& t);
+              ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/RooPrintable.h:65:15: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const RooPrintable' for 2nd argument
+std::ostream& operator<<(std::ostream& os, const RooPrintable& rp) ;
+              ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/RooAbsArg.h:755:15: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const RooAbsArg' for 2nd argument
+std::ostream& operator<<(std::ostream& os, const RooAbsArg &arg);
+              ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TString.h:487:11: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+TBuffer  &operator<<(TBuffer &buf, const TString * sp);
+          ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:361:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Bool_t b)   { buf.WriteBool(b);   return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:362:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Char_t c)   { buf.WriteChar(c);   return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:363:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, UChar_t c)  { buf.WriteUChar(c);  return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:364:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Short_t s)  { buf.WriteShort(s);  return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:365:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, UShort_t s) { buf.WriteUShort(s); return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:366:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Int_t i)    { buf.WriteInt(i);    return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:367:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, UInt_t i)   { buf.WriteUInt(i);   return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:368:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Long_t l)   { buf.WriteLong(l);   return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:369:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, ULong_t l)  { buf.WriteULong(l);  return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:370:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Long64_t l) { buf.WriteLong64(l); return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:371:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, ULong64_t l){ buf.WriteULong64(l);return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:372:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Float_t f)  { buf.WriteFloat(f);  return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:373:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, Double_t d) { buf.WriteDouble(d); return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:374:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const Char_t *c)  { buf.WriteCharP(c);  return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:375:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TString &s) { buf.WriteTString(s);return buf; }
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TUUID.h:95:10: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+TBuffer &operator<<(TBuffer &buf, const TUUID &uuid);
+         ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TMD5.h:89:10: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+TBuffer &operator<<(TBuffer &buf, const TMD5 &md5);
+         ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TArray.h:75:10: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+TBuffer &operator<<(TBuffer &b, const TArray *obj);
+         ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TArrayI.h:73:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayI *obj)
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TTimeStamp.h:34:10: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+TBuffer &operator<<(TBuffer &buf, const TTimeStamp &ts);
+         ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TArrayC.h:72:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayC *obj)
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TArrayD.h:73:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayD *obj)
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TArrayF.h:72:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayF *obj)
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TArrayL64.h:74:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayL64 *obj)
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TArrayL.h:74:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayL *obj)
+                ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TArrayS.h:72:17: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::char_traits<char> >' to 'TBuffer &' for 1st argument
+inline TBuffer &operator<<(TBuffer &buf, const TArrayS *obj)
+                ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:507:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >')
+    operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/string_view:672:5: note: candidate template ignored: could not match 'basic_string_view' against '_Rb_tree_iterator'
+    operator<<(basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/basic_string.h:3883:5: note: candidate template ignored: could not match 'basic_string' against '_Rb_tree_iterator'
+    operator<<(basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bitset:1540:5: note: candidate template ignored: could not match 'bitset' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:598:5: note: candidate template ignored: could not match 'const _CharT *' against 'std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >'
+    operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/iomanip:178:5: note: candidate template ignored: could not match '_Setfill' against '_Rb_tree_iterator'
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/iomanip:311:5: note: candidate template ignored: could not match '_Put_money' against '_Rb_tree_iterator'
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/iomanip:363:5: note: candidate template ignored: could not match '_Put_time' against '_Rb_tree_iterator'
+    operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.h:1312:5: note: candidate template ignored: could not match 'independent_bits_engine' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:156:5: note: candidate template ignored: could not match 'linear_congruential_engine' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:477:5: note: candidate template ignored: could not match 'mersenne_twister_engine' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:632:5: note: candidate template ignored: could not match 'subtract_with_carry_engine' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:701:5: note: candidate template ignored: could not match 'discard_block_engine' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:863:5: note: candidate template ignored: could not match 'shuffle_order_engine' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:907:5: note: candidate template ignored: could not match 'uniform_int_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:965:5: note: candidate template ignored: could not match 'uniform_real_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:1107:5: note: candidate template ignored: could not match 'geometric_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:1221:5: note: candidate template ignored: could not match 'negative_binomial_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:1431:5: note: candidate template ignored: could not match 'poisson_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:1697:5: note: candidate template ignored: could not match 'binomial_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:1759:5: note: candidate template ignored: could not match 'exponential_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:1925:5: note: candidate template ignored: could not match 'normal_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:1992:5: note: candidate template ignored: could not match 'lognormal_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2064:5: note: candidate template ignored: could not match 'chi_squared_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2150:5: note: candidate template ignored: could not match 'cauchy_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2225:5: note: candidate template ignored: could not match 'fisher_f_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2299:5: note: candidate template ignored: could not match 'student_t_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2468:5: note: candidate template ignored: could not match 'gamma_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2544:5: note: candidate template ignored: could not match 'weibull_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2618:5: note: candidate template ignored: could not match 'extreme_value_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2754:5: note: candidate template ignored: could not match 'discrete_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:2976:5: note: candidate template ignored: could not match 'piecewise_constant_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/random.tcc:3182:5: note: candidate template ignored: could not match 'piecewise_linear_distribution' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_CharT, _Traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/regex.h:1675:5: note: candidate template ignored: could not match 'sub_match' against '_Rb_tree_iterator'
+    operator<<(basic_ostream<_Ch_type, _Ch_traits>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:413:5: note: candidate template ignored: could not match '_Expr' against 'basic_ostream'
+    _DEFINE_EXPR_BINARY_OPERATOR(<<, struct std::__shift_left)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:344:5: note: expanded from macro '_DEFINE_EXPR_BINARY_OPERATOR'
+    operator _Op(const _Expr<_Dom1, typename _Dom1::value_type>& __v,   \
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:413:5: note: candidate template ignored: could not match '_Expr' against 'basic_ostream'
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:357:5: note: expanded from macro '_DEFINE_EXPR_BINARY_OPERATOR'
+    operator _Op(const _Expr<_Dom, typename _Dom::value_type>& __v,     \
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:413:5: note: candidate template ignored: could not match '_Expr' against '_Rb_tree_iterator'
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:370:5: note: expanded from macro '_DEFINE_EXPR_BINARY_OPERATOR'
+    operator _Op(const typename _Dom::value_type& __t,                  \
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:413:5: note: candidate template ignored: could not match '_Expr' against 'basic_ostream'
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:383:5: note: expanded from macro '_DEFINE_EXPR_BINARY_OPERATOR'
+    operator _Op(const _Expr<_Dom,typename _Dom::value_type>& __e,      \
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:413:5: note: candidate template ignored: could not match '_Expr' against '_Rb_tree_iterator'
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/valarray_after.h:396:5: note: expanded from macro '_DEFINE_EXPR_BINARY_OPERATOR'
+    operator _Op(const valarray<typename _Dom::value_type>& __v,        \
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/valarray:1193:1: note: candidate template ignored: could not match 'valarray' against 'basic_ostream'
+_DEFINE_BINARY_OPERATOR(<<, __shift_left)
+^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/valarray:1155:5: note: expanded from macro '_DEFINE_BINARY_OPERATOR'
+    operator _Op(const valarray<_Tp>& __v, const valarray<_Tp>& __w)    \
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/valarray:1193:1: note: candidate template ignored: could not match 'valarray' against 'basic_ostream'
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/valarray:1166:5: note: expanded from macro '_DEFINE_BINARY_OPERATOR'
+    operator _Op(const valarray<_Tp>& __v,                              \
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/valarray:1193:1: note: candidate template ignored: could not match 'valarray' against '_Rb_tree_iterator'
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/valarray:1177:5: note: expanded from macro '_DEFINE_BINARY_OPERATOR'
+    operator _Op(const typename valarray<_Tp>::value_type& __t,         \
+    ^
+/home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/include/TBuffer.h:399:32: note: candidate template ignored: could not match 'const Tmpl *' against 'std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >'
+template <class Tmpl> TBuffer &operator<<(TBuffer &buf, const Tmpl *obj)
+                               ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/type_traits:2240:46: note: candidate template ignored: disabled by 'enable_if' [with _Ostream = std::basic_ostream<char> &, _Tp = std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >]
+    using __enable_if_t = typename enable_if<_Cond, _Tp>::type;
+                                             ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/complex:555:5: note: candidate template ignored: could not match 'complex' against '_Rb_tree_iterator'
+    operator<<(basic_ostream<_CharT, _Traits>& __os, const complex<_Tp>& __x)
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/shared_ptr.h:70:5: note: candidate template ignored: could not match '__shared_ptr' against '_Rb_tree_iterator'
+    operator<<(std::basic_ostream<_Ch, _Tr>& __os,
+    ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:108:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::basic_ostream<char, std::char_traits<char> >::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char> >::__ostream_type &)' (aka 'basic_ostream<char, std::char_traits<char> > &(*)(basic_ostream<char, std::char_traits<char> > &)') for 1st argument
+      operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:117:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::basic_ostream<char, std::char_traits<char> >::__ios_type &(*)(std::basic_ostream<char, std::char_traits<char> >::__ios_type &)' (aka 'basic_ios<char, std::char_traits<char> > &(*)(basic_ios<char, std::char_traits<char> > &)') for 1st argument
+      operator<<(__ios_type& (*__pf)(__ios_type&))
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:127:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::ios_base &(*)(std::ios_base &)' for 1st argument
+      operator<<(ios_base& (*__pf) (ios_base&))
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:166:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'long' for 1st argument
+      operator<<(long __n)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:170:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'unsigned long' for 1st argument
+      operator<<(unsigned long __n)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:174:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'bool' for 1st argument
+      operator<<(bool __n)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:178:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'short' for 1st argument
+      operator<<(short __n);
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:181:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'unsigned short' for 1st argument
+      operator<<(unsigned short __n)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:189:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'int' for 1st argument
+      operator<<(int __n);
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:192:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'unsigned int' for 1st argument
+      operator<<(unsigned int __n)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:201:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'long long' for 1st argument
+      operator<<(long long __n)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:205:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'unsigned long long' for 1st argument
+      operator<<(unsigned long long __n)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:220:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'double' for 1st argument
+      operator<<(double __f)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:224:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'float' for 1st argument
+      operator<<(float __f)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:232:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'long double' for 1st argument
+      operator<<(long double __f)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:245:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'const void *' for 1st argument; take the address of the argument with &
+      operator<<(const void* __p)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:250:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::nullptr_t' (aka 'nullptr_t') for 1st argument
+      operator<<(nullptr_t)
+      ^
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/ostream:283:7: note: candidate function not viable: no known conversion from 'const std::_Rb_tree_iterator<std::pair<const std::basic_string<char>, std::basic_string<char> > >' to 'std::basic_ostream<char, std::char_traits<char> >::__streambuf_type *' (aka 'basic_streambuf<char, std::char_traits<char> > *') for 1st argument
+      operator<<(__streambuf_type* __sb);
+      ^
+Error in <TInterpreter::AutoParse>: Error parsing payload code for class o2::parameters::GRPECSObject with content:
+
+#line 1 "G__O2DataFormatsParameters dictionary payload"
+
+#ifndef ZDC_FASTSIM_ONNX
+  #define ZDC_FASTSIM_ONNX 1
+#endif
+#ifndef ENABLE_UPGRADES
+  #define ENABLE_UPGRADES 1
+#endif
+#ifndef FMT_SHARED
+  #define FMT_SHARED 1
+#endif
+#ifndef BOOST_IOSTREAMS_NO_LIB
+  #define BOOST_IOSTREAMS_NO_LIB 1
+#endif
+#ifndef BOOST_IOSTREAMS_DYN_LINK
+  #define BOOST_IOSTREAMS_DYN_LINK 1
+#endif
+#ifndef BOOST_ERROR_CODE_HEADER_ONLY
+  #define BOOST_ERROR_CODE_HEADER_ONLY 1
+#endif
+#ifndef BOOST_ASIO_HAS_HAS_STD_CHRONO
+  #define BOOST_ASIO_HAS_HAS_STD_CHRONO 1
+#endif
+#ifndef FAIRMQ_HAS_STD_FILESYSTEM
+  #define FAIRMQ_HAS_STD_FILESYSTEM 1
+#endif
+#ifndef FAIRMQ_HAS_STD_PMR
+  #define FAIRMQ_HAS_STD_PMR 1
+#endif
+#ifndef BOOST_CONTAINER_NO_LIB
+  #define BOOST_CONTAINER_NO_LIB 1
+#endif
+#ifndef BOOST_CONTAINER_DYN_LINK
+  #define BOOST_CONTAINER_DYN_LINK 1
+#endif
+#ifndef BOOST_PROGRAM_OPTIONS_NO_LIB
+  #define BOOST_PROGRAM_OPTIONS_NO_LIB 1
+#endif
+#ifndef BOOST_PROGRAM_OPTIONS_DYN_LINK
+  #define BOOST_PROGRAM_OPTIONS_DYN_LINK 1
+#endif
+#ifndef BOOST_FILESYSTEM_NO_LIB
+  #define BOOST_FILESYSTEM_NO_LIB 1
+#endif
+#ifndef BOOST_FILESYSTEM_DYN_LINK
+  #define BOOST_FILESYSTEM_DYN_LINK 1
+#endif
+#ifndef BOOST_ATOMIC_NO_LIB
+  #define BOOST_ATOMIC_NO_LIB 1
+#endif
+#ifndef BOOST_ATOMIC_DYN_LINK
+  #define BOOST_ATOMIC_DYN_LINK 1
+#endif
+#ifndef BOOST_REGEX_NO_LIB
+  #define BOOST_REGEX_NO_LIB 1
+#endif
+#ifndef BOOST_REGEX_DYN_LINK
+  #define BOOST_REGEX_DYN_LINK 1
+#endif
+#ifndef DPL_ENABLE_BACKTRACE
+  #define DPL_ENABLE_BACKTRACE 1
+#endif
+#ifndef RANS_ENABLE_JSON
+  #define RANS_ENABLE_JSON 1
+#endif
+#ifndef RANS_OPENMP
+  #define RANS_OPENMP 1
+#endif
+
+#define _BACKWARD_BACKWARD_WARNING_H
+// Inline headers
+// Copyright 2019-2020 CERN and copyright holders of ALICE O2.
+// See https://alice-o2.web.cern.ch/copyright for details of the copyright holders.
+// All rights not expressly granted are reserved.
+//
+// This software is distributed under the terms of the GNU General Public
+// License v3 (GPL Version 3), copied verbatim in the file "COPYING".
+//
+// In applying this license CERN does not waive the privileges and immunities
+// granted to it by virtue of its status as an Intergovernmental Organization
+// or submit itself to any jurisdiction.
+
+/// \file ECSDataAdapter
+/// \brief Header only, adapter methods without external dependencies
+/// \author ruben.shahoyan@cern.ch, gvozden.neskovic@cern.ch
+
+#ifndef ALICEO2_ECSADAPTERS_H_
+#define ALICEO2_ECSADAPTERS_H_
+
+// NOTE: please only stdlib includes here!
+#include <string>
+#include <string_view>
+#include <array>
+
+namespace o2
+{
+namespace parameters
+{
+
+namespace GRPECS
+{
+
+enum RunType : int {
+  NONE,
+  PHYSICS,
+  TECHNICAL,
+  PEDESTAL,
+  PULSER,
+  LASER,
+  CALIBRATION_ITHR_TUNING,
+  CALIBRATION_VCASN_TUNING,
+  CALIBRATION_THR_SCAN,
+  CALIBRATION_DIGITAL_SCAN,
+  CALIBRATION_ANALOG_SCAN,
+  CALIBRATION_FHR,
+  CALIBRATION_ALPIDE_SCAN,
+  CALIBRATION,
+  COSMICS,
+  SYNTHETIC,
+  NOISE,
+  CALIBRATION_PULSE_LENGTH,
+  CALIBRATION_VRESETD,
+  NRUNTYPES
+};
+static constexpr std::array<std::string_view, NRUNTYPES> RunTypeNames = {
+  "NONE",
+  "PHYSICS",
+  "TECHNICAL",
+  "PEDESTAL",
+  "PULSER",
+  "LASER",
+  "CALIBRATION_ITHR_TUNING",
+  "CALIBRATION_VCASN_TUNING",
+  "CALIBRATION_THR_SCAN",
+  "CALIBRATION_DIGITAL_SCAN",
+  "CALIBRATION_ANALOG_SCAN",
+  "CALIBRATION_FHR",
+  "CALIBRATION_ALPIDE_SCAN",
+  "CALIBRATION",
+  "COSMICS",
+  "SYNTHETIC",
+  "NOISE",
+  "CALIBRATION_PULSE_LENGTH",
+  "CALIBRATION_VRESETD"};
+
+//_______________________________________________
+static RunType string2RunType(const std::string& rts)
+{
+  int rt = -1;
+  for (int i = 0; i < int(RunType::NRUNTYPES); i++) {
+    if (rts == RunTypeNames[i]) {
+      rt = i;
+      break;
+    }
+  }
+  return RunType(rt);
+}
+
+//_______________________________________________
+static std::string getRawDataPersistencyMode(const std::string& runType, bool imposeRaw = false)
+{
+  if (imposeRaw) {
+    return "raw";
+  }
+  std::string ret = "other";
+  auto rt = string2RunType(runType);
+  switch (rt) {
+    case RunType::PHYSICS:
+    case RunType::COSMICS:
+      ret = "raw";
+      break;
+    case RunType::PEDESTAL:
+    case RunType::PULSER:
+    case RunType::LASER:
+    case RunType::CALIBRATION_ITHR_TUNING:
+    case RunType::CALIBRATION_VCASN_TUNING:
+    case RunType::CALIBRATION_THR_SCAN:
+    case RunType::CALIBRATION_DIGITAL_SCAN:
+    case RunType::CALIBRATION_ANALOG_SCAN:
+    case RunType::CALIBRATION_FHR:
+    case RunType::CALIBRATION_ALPIDE_SCAN:
+    case RunType::CALIBRATION:
+    case RunType::CALIBRATION_PULSE_LENGTH:
+    case RunType::CALIBRATION_VRESETD:
+      ret = "calib";
+    default:
+      break;
+  }
+  return ret;
+}
+
+} // namespace GRPECS
+} // namespace parameters
+} // namespace o2
+
+#endif
+// Copyright 2019-2020 CERN and copyright holders of ALICE O2.
+// See https://alice-o2.web.cern.ch/copyright for details of the copyright holders.
+// All rights not expressly granted are reserved.
+//
+// This software is distributed under the terms of the GNU General Public
+// License v3 (GPL Version 3), copied verbatim in the file "COPYING".
+//
+// In applying this license CERN does not waive the privileges and immunities
+// granted to it by virtue of its status as an Intergovernmental Organization
+// or submit itself to any jurisdiction.
+
+/// \file GRPObject.h
+/// \brief Header of the General Run Parameters object
+/// \author ruben.shahoyan@cern.ch
+
+#ifndef ALICEO2_DATA_GRPOBJECT_H_
+#define ALICEO2_DATA_GRPOBJECT_H_
+
+#include <Rtypes.h>
+#include <cstdint>
+#include <ctime>
+#include "CommonConstants/LHCConstants.h"
+#include "CommonTypes/Units.h"
+#include "DetectorsCommonDataFormats/DetID.h"
+
+namespace o2
+{
+namespace parameters
+{
+/*
+ * Collects parameters describing the run, like the beam, magnet settings
+ * masks for participating and triggered detectors etc.
+ */
+
+class GRPObject
+{
+  using beamDirection = o2::constants::lhc::BeamDirection;
+  using DetID = o2::detectors::DetID;
+
+ public:
+  using timePoint = uint64_t; // std::time_t;
+
+  enum ROMode : int { ABSENT = 0,
+                      PRESENT = 0x1,
+                      CONTINUOUS = PRESENT + (0x1 << 1),
+                      TRIGGERING = PRESENT + (0x1 << 2) };
+
+  GRPObject() = default;
+  ~GRPObject() = default;
+
+  /// getters/setters for Start and Stop times according to logbook
+  timePoint getTimeStart() const { return mTimeStart; }
+  timePoint getTimeEnd() const { return mTimeEnd; }
+  void setTimeStart(timePoint t) { mTimeStart = t; }
+  void setTimeEnd(timePoint t) { mTimeEnd = t; }
+
+  void setNHBFPerTF(uint32_t n) { mNHBFPerTF = n; }
+  uint32_t getNHBFPerTF() const { return mNHBFPerTF; }
+
+  void setFirstOrbit(uint32_t o) { mFirstOrbit = o; }
+  uint32_t getFirstOrbit() const { return mFirstOrbit; }
+
+  /// getters/setters for beams crossing angle (deviation from 0)
+  o2::units::AngleRad_t getCrossingAngle() const { return mCrossingAngle; }
+  void setCrossingAngle(o2::units::AngleRad_t v) { mCrossingAngle = v; }
+  /// getters/setters for given beam A and Z info, encoded as A<<16+Z
+  int getBeamZ(beamDirection beam) const { return mBeamAZ[static_cast<int>(beam)] & 0xffff; }
+  int getBeamA(beamDirection beam) const { return mBeamAZ[static_cast<int>(beam)] >> 16; }
+  float getBeamZ2A(beamDirection beam) const;
+  void setBeamAZ(int a, int z, beamDirection beam) { mBeamAZ[static_cast<int>(beam)] = (a << 16) + z; }
+  /// getters/setters for beam energy per charge and per nucleon
+  void setBeamEnergyPerZ(float v) { mBeamEnergyPerZ = v; }
+  float getBeamEnergyPerZ() const { return mBeamEnergyPerZ; }
+  float getBeamEnergyPerNucleon(beamDirection beam) const { return mBeamEnergyPerZ * getBeamZ2A(beam); }
+  /// calculate center of mass energy per nucleon collision
+  float getSqrtS() const;
+
+  /// getters/setters for magnets currents
+  o2::units::Current_t getL3Current() const { return mL3Current; }
+  o2::units::Current_t getDipoleCurrent() const { return mDipoleCurrent; }
+  bool getFieldUniformity() const { return mUniformField; }
+  void setL3Current(o2::units::Current_t v) { mL3Current = v; }
+  void setDipoleCurrent(o2::units::Current_t v) { mDipoleCurrent = v; }
+  void setFieldUniformity(bool v) { mUniformField = v; }
+  int8_t getNominalL3Field();
+  /// getter/setter for data taking period name
+  const std::string& getDataPeriod() const { return mDataPeriod; }
+  void setDataPeriod(const std::string v) { mDataPeriod = v; }
+  /// getter/setter for LHC state in the beggining of run
+  const std::string& getLHCState() const { return mLHCState; }
+  void setLHCState(const std::string v) { mLHCState = v; }
+  // getter/setter for run identifier
+  void setRun(int r) { mRun = r; }
+  int getRun() const { return mRun; }
+  /// getter/setter for fill identifier
+  void setFill(int f) { mFill = f; }
+  int getFill() const { return mFill; }
+  /// getter/setter for masks of detectors in the readout
+  DetID::mask_t getDetsReadOut() const { return mDetsReadout; }
+  void setDetsReadOut(DetID::mask_t mask) { mDetsReadout = mask; }
+  /// getter/setter for masks of detectors with continuos readout
+  DetID::mask_t getDetsContinuousReadOut() const { return mDetsContinuousRO; }
+  void setDetsContinuousReadOut(DetID::mask_t mask) { mDetsContinuousRO = mask; }
+  /// getter/setter for masks of detectors providing the trigger
+  DetID::mask_t getDetsTrigger() const { return mDetsTrigger; }
+  void setDetsTrigger(DetID::mask_t mask) { mDetsTrigger = mask; }
+  /// add specific detector to the list of readout detectors
+  void addDetReadOut(DetID id) { mDetsReadout |= id.getMask(); }
+  /// remove specific detector from the list of readout detectors
+  void remDetReadOut(DetID id)
+  {
+    mDetsReadout &= ~id.getMask();
+    remDetContinuousReadOut(id);
+    remDetTrigger(id);
+  }
+  /// add specific detector to the list of continuously readout detectors
+  void addDetContinuousReadOut(DetID id) { mDetsContinuousRO |= id.getMask(); }
+  /// remove specific detector from the list of continuouslt readout detectors
+  void remDetContinuousReadOut(DetID id) { mDetsContinuousRO &= ~id.getMask(); }
+  /// add specific detector to the list of triggering detectors
+  void addDetTrigger(DetID id) { mDetsTrigger |= id.getMask(); }
+  /// remove specific detector from the list of triggering detectors
+  void remDetTrigger(DetID id) { mDetsTrigger &= ~id.getMask(); }
+  /// test if detector is read out
+  bool isDetReadOut(DetID id) const { return (mDetsReadout & id.getMask()) != 0; }
+  /// test if detector is read out
+  bool isDetContinuousReadOut(DetID id) const { return (mDetsContinuousRO & id.getMask()) != 0; }
+  /// test if detector is triggering
+  bool isDetTriggers(DetID id) const { return (mDetsTrigger & id.getMask()) != 0; }
+  /// set detector readout mode status
+  void setDetROMode(DetID id, ROMode status);
+  ROMode getDetROMode(DetID id) const;
+
+  /// extra selections
+  /// mask of readout detectors with addition selections. "only" overrides "skip"
+  DetID::mask_t getDetsReadOut(DetID::mask_t only, DetID::mask_t skip = 0) const { return only.any() ? (mDetsReadout & only) : (mDetsReadout ^ skip); }
+  /// same with comma-separate list of detector names
+  DetID::mask_t getDetsReadOut(const std::string& only, const std::string& skip = "") const { return getDetsReadOut(DetID::getMask(only), DetID::getMask(skip)); }
+
+  bool isMC() const { return mIsMC; }
+  void setIsMC(bool v = true) { mIsMC = v; }
+
+  /// print itself
+  void print() const;
+
+  static GRPObject* loadFrom(const std::string& grpFileName = "");
+
+ private:
+  timePoint mTimeStart = 0;      ///< DAQ_time_start entry from DAQ logbook
+  timePoint mTimeEnd = LONG_MAX; ///< DAQ_time_end entry from DAQ logbook
+
+  uint32_t mFirstOrbit = 0;  /// 1st orbit of the 1st TF, in the MC set at digitization // RS Not sure it will stay in GRP, may go to some CTP object
+  uint32_t mNHBFPerTF = 256; /// Number of HBFrames per TF
+
+  DetID::mask_t mDetsReadout;      ///< mask of detectors which are read out
+  DetID::mask_t mDetsContinuousRO; ///< mask of detectors read out in continuos mode
+  DetID::mask_t mDetsTrigger;      ///< mask of detectors which provide trigger
+
+  o2::units::AngleRad_t mCrossingAngle = 0.f; ///< crossing angle in radians (as deviation from pi)
+  o2::units::Current_t mL3Current = 0.f;      ///< signed current in L3
+  o2::units::Current_t mDipoleCurrent = 0.f;  ///< signed current in Dipole
+  bool mUniformField = false;                 ///< uniformity of magnetic field
+  float mBeamEnergyPerZ = 0.f;                ///< beam energy per charge (i.e. sqrt(s)/2 for pp)
+
+  int8_t mNominalL3Field = 0;        //!< Nominal L3 field deduced from mL3Current
+  bool mNominalL3FieldValid = false; //!< Has the field been computed (for caching)
+  bool mIsMC = false;                // flag GRP for MC
+  int mBeamAZ[beamDirection::NBeamDirections] = {0, 0}; ///< A<<16+Z for each beam
+
+  int mRun = 0;                 ///< run identifier
+  int mFill = 0;                ///< fill identifier
+  std::string mDataPeriod = ""; ///< name of the period
+  std::string mLHCState = "";   ///< machine state
+
+  ClassDefNV(GRPObject, 8);
+};
+
+//______________________________________________
+inline float GRPObject::getBeamZ2A(beamDirection b) const
+{
+  // Z/A of beam 0 or 1
+  int a = getBeamA(b);
+  return a ? getBeamZ(b) / static_cast<float>(a) : 0.f;
+}
+
+//______________________________________________
+inline int8_t GRPObject::getNominalL3Field()
+{
+  // compute nominal L3 field in kG
+
+  if (mNominalL3FieldValid == false) {
+    mNominalL3Field = std::lround(5.f * mL3Current / 30000.f);
+    mNominalL3FieldValid = true;
+  }
+  return mNominalL3Field;
+}
+
+} // namespace parameters
+} // namespace o2
+
+#endif
+// Copyright 2019-2020 CERN and copyright holders of ALICE O2.
+// See https://alice-o2.web.cern.ch/copyright for details of the copyright holders.
+// All rights not expressly granted are reserved.
+//
+// This software is distributed under the terms of the GNU General Public
+// License v3 (GPL Version 3), copied verbatim in the file "COPYING".
+//
+// In applying this license CERN does not waive the privileges and immunities
+// granted to it by virtue of its status as an Intergovernmental Organization
+// or submit itself to any jurisdiction.
+
+/// \file GRPLHCIFData.h
+/// \brief container for the LHC InterFace data
+
+#ifndef O2_GRP_LHCIFDATA_H
+#define O2_GRP_LHCIFDATA_H
+
+#include <Rtypes.h>
+#include <string>
+#include <unordered_map>
+#include <cstdint>
+#include "CommonTypes/Units.h"
+#include "CommonConstants/LHCConstants.h"
+#include "CommonDataFormat/BunchFilling.h"
+
+namespace o2
+{
+namespace parameters
+{
+
+class GRPLHCIFData
+{
+
+  using beamDirection = o2::constants::lhc::BeamDirection;
+
+ public:
+  GRPLHCIFData() = default;
+  ~GRPLHCIFData() = default;
+
+  static const std::unordered_map<unsigned int, unsigned int> mZtoA;
+
+  std::pair<long, int32_t> getBeamEnergyPerZWithTime() const { return mBeamEnergyPerZ; }
+  int32_t getBeamEnergyPerZ() const { return mBeamEnergyPerZ.second; }
+  float getBeamEnergyPerZinGeV() const { return mBeamEnergyPerZ.second * 0.12; }
+  long getBeamEnergyPerZTime() const { return mBeamEnergyPerZ.first; }
+  void setBeamEnergyPerZWithTime(std::pair<long, int32_t> p) { mBeamEnergyPerZ = p; }
+  void setBeamEnergyPerZWithTime(long t, int32_t v) { mBeamEnergyPerZ = std::make_pair(t, v); }
+
+  std::pair<long, int32_t> getFillNumberWithTime() const { return mFillNumber; }
+  int32_t getFillNumber() const { return mFillNumber.second; }
+  long getFillNumberTime() const { return mFillNumber.first; }
+  void setFillNumberWithTime(std::pair<long, int32_t> p) { mFillNumber = p; }
+  void setFillNumberWithTime(long t, int32_t v) { mFillNumber = std::make_pair(t, v); }
+
+  const std::pair<long, std::string>& getInjectionSchemeWithTime() const { return mInjectionScheme; }
+  const std::string& getInjectionScheme() const { return mInjectionScheme.second; }
+  long getInjectionSchemeTime() const { return mInjectionScheme.first; }
+  void setInjectionSchemeWithTime(std::pair<long, std::string> p) { mInjectionScheme = p; }
+  void setInjectionSchemeWithTime(long t, std::string v) { mInjectionScheme = std::make_pair(t, v); }
+
+  std::pair<long, int32_t> getAtomicNumberB1WithTime() const { return mAtomicNumberB1; }
+  int32_t getAtomicNumberB1() const { return mAtomicNumberB1.second; }
+  long getAtomicNumberB1Time() const { return mAtomicNumberB1.first; }
+  void setAtomicNumberB1WithTime(std::pair<long, int32_t> p) { mAtomicNumberB1 = p; }
+  void setAtomicNumberB1WithTime(long t, int32_t v) { mAtomicNumberB1 = std::make_pair(t, v); }
+
+  std::pair<long, int32_t> getAtomicNumberB2WithTime() const { return mAtomicNumberB2; }
+  int32_t getAtomicNumberB2() const { return mAtomicNumberB2.second; }
+  long getAtomicNumberB2Time() const { return mAtomicNumberB2.first; }
+  void setAtomicNumberB2WithTime(std::pair<long, int32_t> p) { mAtomicNumberB2 = p; }
+  void setAtomicNumberB2WithTime(long t, int32_t v) { mAtomicNumberB2 = std::make_pair(t, v); }
+
+  std::pair<long, o2::units::AngleRad_t> getCrossingAngleWithTime() const { return mCrossingAngle; }
+  o2::units::AngleRad_t getCrossingAngle() const { return mCrossingAngle.second; }
+  long getCrossingAngleTime() const { return mCrossingAngle.first; }
+  void setCrossingAngleWithTime(std::pair<long, o2::units::AngleRad_t> p) { mCrossingAngle = p; }
+  void setCrossingAngleWithTime(long t, o2::units::AngleRad_t v) { mCrossingAngle = std::make_pair(t, v); }
+
+  const std::pair<long, o2::BunchFilling>& getBunchFillingWithTime() const { return mBunchFilling; }
+  const o2::BunchFilling& getBunchFilling() const { return mBunchFilling.second; }
+  long getBunchFillingTime() const { return mBunchFilling.first; }
+  void setBunchFillingWithTime(std::pair<long, o2::BunchFilling> p) { mBunchFilling = p; }
+  void setBunchFillingWithTime(long t, o2::BunchFilling v) { mBunchFilling = std::make_pair(t, v); }
+
+  /// getters/setters for given beam A and Z info, encoded as A<<16+Z
+  int getBeamZ(beamDirection beam) const { return mBeamAZ[static_cast<int>(beam)] & 0xffff; }
+  int getBeamA(beamDirection beam) const { return mBeamAZ[static_cast<int>(beam)] >> 16; }
+  int getBeamZ(int beam) const { return mBeamAZ[beam] & 0xffff; }
+  int getBeamA(int beam) const { return mBeamAZ[beam] >> 16; }
+  float getBeamZoverA(beamDirection beam) const;
+  float getBeamZoverA(int beam) const;
+  void setBeamAZ(int a, int z, beamDirection beam) { mBeamAZ[static_cast<int>(beam)] = (a << 16) + z; }
+  void setBeamAZ(beamDirection beam);
+  void setBeamAZ();
+  /// getters/setters for beam energy per charge and per nucleon
+  float getBeamEnergyPerNucleon(beamDirection beam) const { return mBeamEnergyPerZ.second * getBeamZoverA(beam); }
+  float getBeamEnergyPerNucleon(int beam) const { return mBeamEnergyPerZ.second * getBeamZoverA(beam); }
+  float getBeamEnergyPerNucleonInGeV(beamDirection beam) const { return getBeamEnergyPerZinGeV() * getBeamZoverA(beam); }
+  float getBeamEnergyPerNucleonInGeV(int beam) const { return getBeamEnergyPerZinGeV() * getBeamZoverA(beam); }
+  /// calculate center of mass energy per nucleon collision
+  float getSqrtS() const;
+  /// helper function for BunchFilling
+  void translateBucketsToBCNumbers(std::vector<int32_t>& bcNb, std::vector<int32_t>& buckets, int beam);
+
+  void print() const;
+  static GRPLHCIFData* loadFrom(const std::string& grpLHCIFFileName = "");
+
+ private:
+  std::pair<long, int32_t> mBeamEnergyPerZ{}; // beam energy per charge
+  std::pair<long, int32_t> mFillNumber{};
+  std::pair<long, std::string> mInjectionScheme{};
+  std::pair<long, int32_t> mAtomicNumberB1{}; // clockwise
+  std::pair<long, int32_t> mAtomicNumberB2{}; // anticlockwise
+  std::pair<long, o2::units::AngleRad_t> mCrossingAngle{};
+  int mBeamAZ[beamDirection::NBeamDirections] = {0, 0}; ///< A<<16+Z for each beam
+  std::pair<long, o2::BunchFilling> mBunchFilling{};    /// To hold bunch filling information
+
+  ClassDefNV(GRPLHCIFData, 1);
+};
+
+//______________________________________________
+inline float GRPLHCIFData::getBeamZoverA(beamDirection b) const
+{
+  // Z/A of beam 0 or 1
+  int a = getBeamA(b);
+  return a ? getBeamZ(b) / static_cast<float>(a) : 0.f;
+}
+
+//______________________________________________
+inline float GRPLHCIFData::getBeamZoverA(int b) const
+{
+  // Z/A of beam 0 or 1
+  int a = getBeamA(b);
+  return a ? getBeamZ(b) / static_cast<float>(a) : 0.f;
+}
+
+} // namespace parameters
+} // namespace o2
+#endif
+// Copyright 2019-2020 CERN and copyright holders of ALICE O2.
+// See https://alice-o2.web.cern.ch/copyright for details of the copyright holders.
+// All rights not expressly granted are reserved.
+//
+// This software is distributed under the terms of the GNU General Public
+// License v3 (GPL Version 3), copied verbatim in the file "COPYING".
+//
+// In applying this license CERN does not waive the privileges and immunities
+// granted to it by virtue of its status as an Intergovernmental Organization
+// or submit itself to any jurisdiction.
+
+/// \file GRPECSObject.h
+/// \brief Header of the General Run Parameters object
+/// \author ruben.shahoyan@cern.ch
+
+#ifndef ALICEO2_DATA_GRPECSOBJECT_H_
+#define ALICEO2_DATA_GRPECSOBJECT_H_
+
+#include <Rtypes.h>
+#include <cstdint>
+#include <ctime>
+#include "DataFormatsParameters/ECSDataAdapters.h"
+#include "DetectorsCommonDataFormats/DetID.h"
+
+namespace o2
+{
+namespace parameters
+{
+/*
+ * Collects parameters describing the run that come from ECS only.
+ */
+
+class GRPECSObject
+{
+  using DetID = o2::detectors::DetID;
+
+ public:
+  using timePoint = uint64_t;
+  using RunType = o2::parameters::GRPECS::RunType;
+
+  enum ROMode : int { ABSENT = 0,
+                      PRESENT = 0x1,
+                      CONTINUOUS = PRESENT + (0x1 << 1),
+                      TRIGGERING = PRESENT + (0x1 << 2) };
+  GRPECSObject() = default;
+  ~GRPECSObject() = default;
+
+  /// getters/setters for Start and Stop times according to logbook
+  timePoint getTimeStart() const { return mTimeStart; }
+  void setTimeStart(timePoint t) { mTimeStart = t; }
+
+  timePoint getTimeEnd() const { return mTimeEnd; }
+  void setTimeEnd(timePoint t) { mTimeEnd = t; }
+
+  timePoint getTimeStartCTPasSet() const { return mTimeStartCTP; }
+  timePoint getTimeStartCTP() const { return mTimeStartCTP ? mTimeStartCTP : mTimeStart; }
+  void setTimeStartCTP(timePoint t) { mTimeStartCTP = t; }
+
+  timePoint getTimeEndCTPasSet() const { return mTimeEndCTP; }
+  timePoint getTimeEndCTP() const { return mTimeEndCTP ? mTimeEndCTP : mTimeEnd; }
+  void setTimeEndCTP(timePoint t) { mTimeEndCTP = t; }
+
+  void setNHBFPerTF(uint32_t n) { mNHBFPerTF = n; }
+  uint32_t getNHBFPerTF() const { return mNHBFPerTF; }
+
+  /// getter/setter for data taking period name
+  const std::string& getDataPeriod() const { return mDataPeriod; }
+  void setDataPeriod(const std::string v) { mDataPeriod = v; }
+  // getter/setter for run identifier
+  void setRun(int r) { mRun = r; }
+  int getRun() const { return mRun; }
+  /// getter/setter for masks of detectors in the readout
+  DetID::mask_t getDetsReadOut() const { return mDetsReadout; }
+  void setDetsReadOut(DetID::mask_t mask) { mDetsReadout = mask; }
+  /// getter/setter for masks of detectors with continuos readout
+  DetID::mask_t getDetsContinuousReadOut() const { return mDetsContinuousRO; }
+  void setDetsContinuousReadOut(DetID::mask_t mask) { mDetsContinuousRO = mask; }
+  /// getter/setter for masks of detectors providing the trigger
+  DetID::mask_t getDetsTrigger() const { return mDetsTrigger; }
+  void setDetsTrigger(DetID::mask_t mask) { mDetsTrigger = mask; }
+  /// add specific detector to the list of readout detectors
+  void addDetReadOut(DetID id) { mDetsReadout |= id.getMask(); }
+  /// remove specific detector from the list of readout detectors
+  void remDetReadOut(DetID id)
+  {
+    mDetsReadout &= ~id.getMask();
+    remDetContinuousReadOut(id);
+    remDetTrigger(id);
+  }
+  /// add specific detector to the list of continuously readout detectors
+  void addDetContinuousReadOut(DetID id) { mDetsContinuousRO |= id.getMask(); }
+  /// remove specific detector from the list of continuouslt readout detectors
+  void remDetContinuousReadOut(DetID id) { mDetsContinuousRO &= ~id.getMask(); }
+  /// add specific detector to the list of triggering detectors
+  void addDetTrigger(DetID id) { mDetsTrigger |= id.getMask(); }
+  /// remove specific detector from the list of triggering detectors
+  void remDetTrigger(DetID id) { mDetsTrigger &= ~id.getMask(); }
+  /// test if detector is read out
+  bool isDetReadOut(DetID id) const { return (mDetsReadout & id.getMask()) != 0; }
+  /// test if detector is read out
+  bool isDetContinuousReadOut(DetID id) const { return (mDetsContinuousRO & id.getMask()) != 0; }
+  /// test if detector is triggering
+  bool isDetTriggers(DetID id) const { return (mDetsTrigger & id.getMask()) != 0; }
+  /// set detector readout mode status
+  void setDetROMode(DetID id, ROMode status);
+  ROMode getDetROMode(DetID id) const;
+
+  void setRunType(RunType t) { mRunType = t; }
+  auto getRunType() const { return mRunType; }
+
+  bool isMC() const { return mIsMC; }
+  void setIsMC(bool v = true) { mIsMC = v; }
+
+  /// extra selections
+  /// mask of readout detectors with addition selections. "only" overrides "skip"
+  DetID::mask_t getDetsReadOut(DetID::mask_t only, DetID::mask_t skip = 0) const { return only.any() ? (mDetsReadout & only) : (mDetsReadout ^ skip); }
+  /// same with comma-separate list of detector names
+  DetID::mask_t getDetsReadOut(const std::string& only, const std::string& skip = "") const { return getDetsReadOut(DetID::getMask(only), DetID::getMask(skip)); }
+
+  // methods to manipulate the list of FLPs in the run
+  const std::vector<unsigned short>& getListOfFLPs() const { return mFLPs; }
+  void addFLP(unsigned short flp) { mFLPs.push_back(flp); }
+  void setListOfFLPs(const std::vector<unsigned short>& listFLPs) { mFLPs = listFLPs; }
+  bool getFLPStatus(unsigned short flp) const
+  {
+    return std::find(mFLPs.begin(), mFLPs.end(), flp) == mFLPs.end() ? false : true;
+  }
+  bool listOfFLPsSet() const
+  {
+    return mFLPs.size() > 0 ? true : false;
+  }
+
+  /// print itself
+  void print() const;
+
+  static GRPECSObject* loadFrom(const std::string& grpecsFileName = "");
+  static constexpr bool alwaysTriggeredRO(DetID::ID det) { return DefTriggeredDets[det]; }
+
+ private:
+  timePoint mTimeStart = 0;    ///< ECS start time
+  timePoint mTimeEnd = 0;      ///< ECS end time
+  timePoint mTimeStartCTP = 0; ///< CTP start time
+  timePoint mTimeEndCTP = 0;   ///< CTP end time
+
+  uint32_t mNHBFPerTF = 128; /// Number of HBFrames per TF
+
+  DetID::mask_t mDetsReadout;       ///< mask of detectors which are read out
+  DetID::mask_t mDetsContinuousRO;  ///< mask of detectors read out in continuos mode
+  DetID::mask_t mDetsTrigger;       ///< mask of detectors which provide trigger input to CTP
+  bool mIsMC = false;               ///< flag GRP for MC
+  int mRun = 0;                     ///< run identifier
+  RunType mRunType = RunType::NONE; ///< run type
+  std::string mDataPeriod{};        ///< name of the period
+  std::vector<unsigned short> mFLPs; ///< to store which FLPs were in the processing
+
+  // detectors which are always readout in triggered mode. Others are continuous by default but exceptionally can be triggered
+  static constexpr DetID::mask_t DefTriggeredDets = DetID::getMask(DetID::TRD) | DetID::getMask(DetID::PHS) | DetID::getMask(DetID::CPV) | DetID::getMask(DetID::EMC) | DetID::getMask(DetID::HMP);
+
+  ClassDefNV(GRPECSObject, 6);
+};
+
+} // namespace parameters
+} // namespace o2
+
+#endif
+// Copyright 2019-2020 CERN and copyright holders of ALICE O2.
+// See https://alice-o2.web.cern.ch/copyright for details of the copyright holders.
+// All rights not expressly granted are reserved.
+//
+// This software is distributed under the terms of the GNU General Public
+// License v3 (GPL Version 3), copied verbatim in the file "COPYING".
+//
+// In applying this license CERN does not waive the privileges and immunities
+// granted to it by virtue of its status as an Intergovernmental Organization
+// or submit itself to any jurisdiction.
+
+/// \file GRPMagField.h
+/// \brief Header of the General Run Parameters object for B field values
+/// \author ruben.shahoyan@cern.ch
+
+#ifndef ALICEO2_DATA_GRPMAGFIELDOBJECT_H_
+#define ALICEO2_DATA_GRPMAGFIELDOBJECT_H_
+
+#include <Rtypes.h>
+#include "CommonTypes/Units.h"
+
+namespace o2
+{
+namespace parameters
+{
+/*
+ * Collects parameters describing the run that are related to the B field only.
+*/
+
+class GRPMagField
+{
+ public:
+  GRPMagField() = default;
+  ~GRPMagField() = default;
+
+  /// getters/setters for magnets currents
+  o2::units::Current_t getL3Current() const
+  {
+    static float v = checkL3Override();
+    return v == NOOVERRIDEVAL ? mL3Current : v;
+  }
+
+  o2::units::Current_t getDipoleCurrent() const
+  {
+    static float v = checkDipoleOverride();
+    return v == NOOVERRIDEVAL ? mDipoleCurrent : v;
+  }
+
+  bool getFieldUniformity() const { return mUniformField; }
+  int8_t getNominalL3Field();
+  void setL3Current(o2::units::Current_t v) { mL3Current = v; }
+  void setDipoleCurrent(o2::units::Current_t v) { mDipoleCurrent = v; }
+  void setFieldUniformity(bool v) { mUniformField = v; }
+
+  /// print itself
+  void print() const;
+
+  static GRPMagField* loadFrom(const std::string& grpMagFieldFileName = "");
+
+ private:
+  o2::units::Current_t mL3Current = 0.f;     ///< signed current in L3
+  o2::units::Current_t mDipoleCurrent = 0.f; ///< signed current in Dipole
+  bool mUniformField = false;                ///< uniformity of magnetic field
+  int8_t mNominalL3Field = 0;                //!< Nominal L3 field deduced from mL3Current
+  bool mNominalL3FieldValid = false;         //!< Has the field been computed (for caching)
+
+  static constexpr float NOOVERRIDEVAL = 1e99;
+  static float checkL3Override();
+  static float checkDipoleOverride();
+
+  ClassDefNV(GRPMagField, 2);
+};
+
+inline int8_t GRPMagField::getNominalL3Field()
+{
+  // compute nominal L3 field in kG
+
+  if (mNominalL3FieldValid == false) {
+    mNominalL3Field = std::lround(5.f * getL3Current() / 30000.f);
+    mNominalL3FieldValid = true;
+  }
+  return mNominalL3Field;
+}
+
+} // namespace parameters
+} // namespace o2
+
+#endif
+
+#undef  _BACKWARD_BACKWARD_WARNING_H
+
+In file included from input_line_8:1:
+/home/rl/CounterFixes/orbitshift/compareVal.C:33:41: error: member access into incomplete type 'o2::parameters::GRPECSObject'
+    const auto validFromGRP = headersGRP->getTimeStart();  // start validity
+                                        ^
+G__O2DataFormatsParameters dictionary forward declarations' payload:17:41: note: forward declaration of 'o2::parameters::GRPECSObject'
+namespace o2{namespace parameters{class GRPECSObject;}}
+                                        ^
+In file included from input_line_8:1:
+/home/rl/CounterFixes/orbitshift/compareVal.C:34:42: error: member access into incomplete type 'o2::parameters::GRPECSObject'
+    const auto validUntilGRP = headersGRP->getTimeEnd();  // start validity
+                                         ^
+G__O2DataFormatsParameters dictionary forward declarations' payload:17:41: note: forward declaration of 'o2::parameters::GRPECSObject'
+namespace o2{namespace parameters{class GRPECSObject;}}
+                                        ^
+In module 'std' imported from input_line_1:1:
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/type_traits:1447:66: error: incomplete type 'o2::parameters::GRPECSObject' used in type trait expression
+    : public integral_constant<bool, __is_base_of(_Base, _Derived)>
+                                                                 ^
+G__O2CCDB dictionary payload:701:31: note: in instantiation of template class 'std::is_base_of<o2::conf::ConfigurableParam, o2::parameters::GRPECSObject>' requested here
+typename std::enable_if<!std::is_base_of<o2::conf::ConfigurableParam, T>::value, T*>::type
+                              ^
+G__O2CCDB dictionary payload:1229:25: note: while substituting explicitly-specified template arguments into function template 'retrieveFromTFileAny' 
+    ptr = mCCDBAccessor.retrieveFromTFileAny<T>(path, mMetaData, timestamp, nullptr, "",
+                        ^
+G__O2CCDB dictionary payload:1112:12: note: in instantiation of function template specialization 'o2::ccdb::CCDBManagerInstance::getForTimeStamp<o2::parameters::GRPECSObject>' requested here
+    return getForTimeStamp<T>(path, timestamp);
+           ^
+/home/rl/CounterFixes/orbitshift/compareVal.C:32:28: note: in instantiation of function template specialization 'o2::ccdb::CCDBManagerInstance::getSpecific<o2::parameters::GRPECSObject>' requested here
+    auto headersGRP = ccdb.getSpecific<o2::parameters::GRPECSObject>("GLO/Config/GRPECS", tstart + 2000, metadataGRP);
+                           ^
+G__O2DataFormatsParameters dictionary forward declarations' payload:17:41: note: forward declaration of 'o2::parameters::GRPECSObject'
+namespace o2{namespace parameters{class GRPECSObject;}}
+                                        ^
+G__O2CCDB dictionary payload:706:44: error: 'typeid' of incomplete type 'o2::parameters::GRPECSObject'
+  return static_cast<T*>(retrieveFromTFile(typeid(T), path, metadata, timestamp, headers, etag, createdNotAfter, createdNotBefore));
+                                           ^
+G__O2CCDB dictionary payload:1229:25: note: in instantiation of function template specialization 'o2::ccdb::CcdbApi::retrieveFromTFileAny<o2::parameters::GRPECSObject>' requested here
+    ptr = mCCDBAccessor.retrieveFromTFileAny<T>(path, mMetaData, timestamp, nullptr, "",
+                        ^
+G__O2CCDB dictionary payload:1112:12: note: in instantiation of function template specialization 'o2::ccdb::CCDBManagerInstance::getForTimeStamp<o2::parameters::GRPECSObject>' requested here
+    return getForTimeStamp<T>(path, timestamp);
+           ^
+/home/rl/CounterFixes/orbitshift/compareVal.C:32:28: note: in instantiation of function template specialization 'o2::ccdb::CCDBManagerInstance::getSpecific<o2::parameters::GRPECSObject>' requested here
+    auto headersGRP = ccdb.getSpecific<o2::parameters::GRPECSObject>("GLO/Config/GRPECS", tstart + 2000, metadataGRP);
+                           ^
+G__O2DataFormatsParameters dictionary forward declarations' payload:17:41: note: forward declaration of 'o2::parameters::GRPECSObject'
+namespace o2{namespace parameters{class GRPECSObject;}}
+                                        ^
+In module 'std' imported from input_line_1:1:
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/shared_ptr_base.h:1472:19: error: invalid application of 'sizeof' to an incomplete type 'o2::parameters::GRPECSObject'
+          static_assert( sizeof(_Yp) > 0, "incomplete type" );
+                         ^~~~~~~~~~~
+/local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/shared_ptr_base.h:1650:4: note: in instantiation of function template specialization 'std::__shared_ptr<void, __gnu_cxx::_S_atomic>::__shared_ptr<o2::parameters::GRPECSObject, void>' requested here
+          __shared_ptr(__p).swap(*this);
+          ^
+G__O2CCDB dictionary payload:1261:23: note: in instantiation of function template specialization 'std::__shared_ptr<void, __gnu_cxx::_S_atomic>::reset<o2::parameters::GRPECSObject>' requested here
+        cached.objPtr.reset(ptr);
+                      ^
+G__O2CCDB dictionary payload:1112:12: note: in instantiation of function template specialization 'o2::ccdb::CCDBManagerInstance::getForTimeStamp<o2::parameters::GRPECSObject>' requested here
+    return getForTimeStamp<T>(path, timestamp);
+           ^
+/home/rl/CounterFixes/orbitshift/compareVal.C:32:28: note: in instantiation of function template specialization 'o2::ccdb::CCDBManagerInstance::getSpecific<o2::parameters::GRPECSObject>' requested here
+    auto headersGRP = ccdb.getSpecific<o2::parameters::GRPECSObject>("GLO/Config/GRPECS", tstart + 2000, metadataGRP);
+                           ^
+G__O2DataFormatsParameters dictionary forward declarations' payload:17:41: note: forward declaration of 'o2::parameters::GRPECSObject'
+namespace o2{namespace parameters{class GRPECSObject;}}
+                                        ^
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+#0  0x00007f4a1bad563b in waitpid () from /lib64/libc.so.6
+#1  0x00007f4a1ba36c97 in do_system () from /lib64/libc.so.6
+#2  0x00007f4a1c8b0e0c in TUnixSystem::Exec (shellcmd=<optimized out>, this=0x145e0b0) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/unix/src/TUnixSystem.cxx:2120
+#3  TUnixSystem::StackTrace (this=0x145e0b0) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/unix/src/TUnixSystem.cxx:2411
+#4  0x00007f4a1c8b07d4 in TUnixSystem::DispatchSignals (this=0x145e0b0, sig=kSigSegmentationViolation) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/unix/src/TUnixSystem.cxx:3631
+#5  <signal handler called>
+#6  0x00007f4a15a51078 in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseLambdaExpr(clang::LambdaExpr*, llvm::SmallVectorImpl<llvm::PointerIntPair<clang::Stmt*, 1u, bool, llvm::PointerLikeTypeTraits<clang::Stmt*>, llvm::PointerIntPairInfo<clang::Stmt*, 1u, llvm::PointerLikeTypeTraits<clang::Stmt*> > > >*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#7  0x00007f4a15a4cc95 in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseStmt(clang::Stmt*, llvm::SmallVectorImpl<llvm::PointerIntPair<clang::Stmt*, 1u, bool, llvm::PointerLikeTypeTraits<clang::Stmt*>, llvm::PointerIntPairInfo<clang::Stmt*, 1u, llvm::PointerLikeTypeTraits<clang::Stmt*> > > >*) [clone .constprop.0] () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#8  0x00007f4a15a49066 in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseDecl(clang::Decl*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#9  0x00007f4a15a49bac in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseDeclStmt(clang::DeclStmt*, llvm::SmallVectorImpl<llvm::PointerIntPair<clang::Stmt*, 1u, bool, llvm::PointerLikeTypeTraits<clang::Stmt*>, llvm::PointerIntPairInfo<clang::Stmt*, 1u, llvm::PointerLikeTypeTraits<clang::Stmt*> > > >*) [clone .constprop.0] () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#10 0x00007f4a15a4cc95 in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseStmt(clang::Stmt*, llvm::SmallVectorImpl<llvm::PointerIntPair<clang::Stmt*, 1u, bool, llvm::PointerLikeTypeTraits<clang::Stmt*>, llvm::PointerIntPairInfo<clang::Stmt*, 1u, llvm::PointerLikeTypeTraits<clang::Stmt*> > > >*) [clone .constprop.0] () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#11 0x00007f4a15a4d206 in cling::DeclUnloader::VisitFunctionDecl(clang::FunctionDecl*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#12 0x00007f4a15a122e4 in cling::TransactionUnloader::unloadDeserializedDeclarations(cling::Transaction*, cling::DeclUnloader&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#13 0x00007f4a15a126d2 in cling::TransactionUnloader::RevertTransaction(cling::Transaction*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#14 0x00007f4a159f63e4 in cling::Interpreter::unload(cling::Transaction&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#15 0x00007f4a15a123f4 in cling::TransactionUnloader::unloadDeclarations(cling::Transaction*, cling::DeclUnloader&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#16 0x00007f4a15a126b2 in cling::TransactionUnloader::RevertTransaction(cling::Transaction*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#17 0x00007f4a159f63e4 in cling::Interpreter::unload(cling::Transaction&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#18 0x00007f4a15a877c8 in cling::IncrementalParser::commitTransaction(llvm::PointerIntPair<cling::Transaction*, 2u, cling::IncrementalParser::EParseResult, llvm::PointerLikeTypeTraits<cling::Transaction*>, llvm::PointerIntPairInfo<cling::Transaction*, 2u, llvm::PointerLikeTypeTraits<cling::Transaction*> > >&, bool) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#19 0x00007f4a15a8a5f8 in cling::IncrementalParser::Compile(llvm::StringRef, cling::CompilationOptions const&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#20 0x00007f4a159f61bf in cling::Interpreter::loadHeader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cling::Transaction**) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#21 0x00007f4a15ade1c3 in cling::MetaSema::actOnLCommand(llvm::StringRef, cling::Transaction**) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#22 0x00007f4a15ade34d in cling::MetaSema::actOnxCommand(llvm::StringRef, llvm::StringRef, cling::Value*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#23 0x00007f4a15aec8be in cling::MetaParser::isXCommand(cling::MetaSema::ActionResult&, cling::Value*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#24 0x00007f4a15aee145 in cling::MetaParser::isCommand(cling::MetaSema::ActionResult&, cling::Value*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#25 0x00007f4a15ad73c0 in cling::MetaProcessor::process(llvm::StringRef, cling::Interpreter::CompilationResult&, cling::Value*, bool) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#26 0x00007f4a159183cc in HandleInterpreterException (metaProcessor=0x2304f70, input_line=0x33f3550 ".X  /home/rl/CounterFixes/orbitshift/./compareVal.C", compRes=
+0x7ffd333fb62c: cling::Interpreter::kSuccess, result=0x7ffd333fb760) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/metacling/src/TCling.cxx:2436
+#27 0x00007f4a1593329f in TCling::ProcessLine (this=0x14c5970, line=<optimized out>, error=0x7ffd333fc63c) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/slc8_x86-64/GCC-Toolchain/v12.2.0-alice1-5/include/c++/12.2.0/bits/unique_ptr.h:191
+#28 0x00007f4a15933652 in TCling::ProcessLineSynch (this=0x14c5970, line=0x2ca82a0 ".X  /home/rl/CounterFixes/orbitshift/./compareVal.C", error=0x7ffd333fc63c) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/metacling/src/TCling.cxx:3540
+#29 0x00007f4a1c76ec67 in TApplication::ExecuteFile (file=<optimized out>, error=0x7ffd333fc63c, keep=<optimized out>) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/base/src/TApplication.cxx:1865
+#30 0x00007f4a1cc2ff8c in TRint::ProcessLineNr (this=0x1492c40, filestem=<optimized out>, line=0x7ffd333fc650 ".x compareVal.C", error=0x7ffd333fc63c) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/rint/src/TRint.cxx:820
+#31 0x00007f4a1cc31b46 in TRint::Run (this=this
+entry=0x1492c40, retrn=retrn
+entry=false) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/rint/src/TRint.cxx:461
+#32 0x00000000004011bd in main (argc=<optimized out>, argv=0x7ffd333fe7d8) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/main/src/rmain.cxx:84
+===========================================================
+
+
+The lines below might hint at the cause of the crash. If you see question
+marks as part of the stack trace, try to recompile with debugging information
+enabled and export CLING_DEBUG=1 environment variable before running.
+You may get help by asking at the ROOT forum https://root.cern/forum
+preferably using the command (.forum bug) in the ROOT prompt.
+Only if you are really convinced it is a bug in ROOT then please submit a
+report at https://root.cern/bugs or (preferably) using the command (.gh bug) in
+the ROOT prompt. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#6  0x00007f4a15a51078 in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseLambdaExpr(clang::LambdaExpr*, llvm::SmallVectorImpl<llvm::PointerIntPair<clang::Stmt*, 1u, bool, llvm::PointerLikeTypeTraits<clang::Stmt*>, llvm::PointerIntPairInfo<clang::Stmt*, 1u, llvm::PointerLikeTypeTraits<clang::Stmt*> > > >*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#7  0x00007f4a15a4cc95 in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseStmt(clang::Stmt*, llvm::SmallVectorImpl<llvm::PointerIntPair<clang::Stmt*, 1u, bool, llvm::PointerLikeTypeTraits<clang::Stmt*>, llvm::PointerIntPairInfo<clang::Stmt*, 1u, llvm::PointerLikeTypeTraits<clang::Stmt*> > > >*) [clone .constprop.0] () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#8  0x00007f4a15a49066 in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseDecl(clang::Decl*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#9  0x00007f4a15a49bac in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseDeclStmt(clang::DeclStmt*, llvm::SmallVectorImpl<llvm::PointerIntPair<clang::Stmt*, 1u, bool, llvm::PointerLikeTypeTraits<clang::Stmt*>, llvm::PointerIntPairInfo<clang::Stmt*, 1u, llvm::PointerLikeTypeTraits<clang::Stmt*> > > >*) [clone .constprop.0] () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#10 0x00007f4a15a4cc95 in clang::RecursiveASTVisitor<(anonymous namespace)::StaticVarCollector>::TraverseStmt(clang::Stmt*, llvm::SmallVectorImpl<llvm::PointerIntPair<clang::Stmt*, 1u, bool, llvm::PointerLikeTypeTraits<clang::Stmt*>, llvm::PointerIntPairInfo<clang::Stmt*, 1u, llvm::PointerLikeTypeTraits<clang::Stmt*> > > >*) [clone .constprop.0] () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#11 0x00007f4a15a4d206 in cling::DeclUnloader::VisitFunctionDecl(clang::FunctionDecl*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#12 0x00007f4a15a122e4 in cling::TransactionUnloader::unloadDeserializedDeclarations(cling::Transaction*, cling::DeclUnloader&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#13 0x00007f4a15a126d2 in cling::TransactionUnloader::RevertTransaction(cling::Transaction*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#14 0x00007f4a159f63e4 in cling::Interpreter::unload(cling::Transaction&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#15 0x00007f4a15a123f4 in cling::TransactionUnloader::unloadDeclarations(cling::Transaction*, cling::DeclUnloader&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#16 0x00007f4a15a126b2 in cling::TransactionUnloader::RevertTransaction(cling::Transaction*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#17 0x00007f4a159f63e4 in cling::Interpreter::unload(cling::Transaction&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#18 0x00007f4a15a877c8 in cling::IncrementalParser::commitTransaction(llvm::PointerIntPair<cling::Transaction*, 2u, cling::IncrementalParser::EParseResult, llvm::PointerLikeTypeTraits<cling::Transaction*>, llvm::PointerIntPairInfo<cling::Transaction*, 2u, llvm::PointerLikeTypeTraits<cling::Transaction*> > >&, bool) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#19 0x00007f4a15a8a5f8 in cling::IncrementalParser::Compile(llvm::StringRef, cling::CompilationOptions const&) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#20 0x00007f4a159f61bf in cling::Interpreter::loadHeader(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cling::Transaction**) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#21 0x00007f4a15ade1c3 in cling::MetaSema::actOnLCommand(llvm::StringRef, cling::Transaction**) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#22 0x00007f4a15ade34d in cling::MetaSema::actOnxCommand(llvm::StringRef, llvm::StringRef, cling::Value*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#23 0x00007f4a15aec8be in cling::MetaParser::isXCommand(cling::MetaSema::ActionResult&, cling::Value*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#24 0x00007f4a15aee145 in cling::MetaParser::isCommand(cling::MetaSema::ActionResult&, cling::Value*) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#25 0x00007f4a15ad73c0 in cling::MetaProcessor::process(llvm::StringRef, cling::Interpreter::CompilationResult&, cling::Value*, bool) () from /home/rl/alice/sw/slc8_x86-64/ROOT/v6-30-01-alice2-5/lib/libCling.so
+#26 0x00007f4a159183cc in HandleInterpreterException (metaProcessor=0x2304f70, input_line=0x33f3550 ".X  /home/rl/CounterFixes/orbitshift/./compareVal.C", compRes=
+0x7ffd333fb62c: cling::Interpreter::kSuccess, result=0x7ffd333fb760) at /local/workspace/DailyBuilds/DailyO2-slc8/daily-tags.GVhpxY2ZaK/SOURCES/ROOT/v6-30-01-alice2/v6-30-01-alice2/core/metacling/src/TCling.cxx:2436
+===========================================================
+
+

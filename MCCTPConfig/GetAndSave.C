@@ -31,17 +31,8 @@ void GetAndSave(std::string ccdbHost = ": http://alice-ccdb.cern.ch/")
 {
   std::string CCDBPathCTPScalers = "CTP/Calib/Scalers";
   std::string CCDBPathCTPConfig = "CTP/Config/Config";
-  // std::vector<string> runs = {"518541","518543","518546","518547"};
-  // std::vector<long> timestamps = {1655116302316,1655118513690,1655121997478,1655123792911};
-  //std::vector<string> runs = {"519903", "519904", "519905", "519906"};
-  //std::vector<long> timestamps = {1656658674161, 1656660737184, 1656667772462, 1656669421115};
-  //std::vector<string> runs = {"518543"};
-  //std::vector<long> timestamps = {1655118513690};
   std::vector<string> runs = {""};
-  //std::vector<string> runs = {"527349","527963","528537","528543"};
   std::vector<long> timestamps = {1659363659341}; // scalers
-  //std::vector<long> timestamps = {1665784953893,1666631792235,1667374389991, 1667377507182}; // scalers
-  //std::vector<long> timestamps = {1665784953893,};
   int i = 0;
   bool doscalers = 0;
   bool doconfig = 1;
