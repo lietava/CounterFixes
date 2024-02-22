@@ -13,7 +13,9 @@
 #include <TFile.h>
 #include <TTree.h>
 std::vector<std::string> labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
-
+//
+// main structure
+//
 struct bcInfo {
   ULong64_t bcAOD, bcEvSel, trigMask, selMask;
   void print() const {
@@ -31,6 +33,9 @@ struct bcInfo {
     std::cout << std::endl;
   }
 };
+//
+// utils
+//
 void printEvSel2AOD(std::map<uint64_t,std::vector<bcInfo>>& m)
 {
   for(auto const& i: m) {
@@ -64,6 +69,9 @@ void printMap(std::map<uint64_t,int>& m)
     std::cout << i.first << " " << i.second << std::endl;
   }
 };
+//
+// read data from root file
+//
 void getData(TFile& inputFile, std::vector<bcInfo>& bcs, std::array<int, 64>& selectionCounters, std::array<int, 64>& triggerCounters, int Nmax = 0)
 {
   int i = 0;
@@ -207,7 +215,7 @@ void selectionEfficiency(std::vector<bcInfo>& bcs)
 // Correlation matrix
 //
 std::array<bool,Ndim> zeros{0};  // Take care of empty or not used bits
-void printCovMatrix(float_t (*mat)[Ndim][Ndim])
+void printCorMatrix(float_t (*mat)[Ndim][Ndim])
 {
   std::cout << std::dec << "Matrix " << Ndim << std::endl;
   for(int i = 0; i < Ndim; i++) {
@@ -221,7 +229,7 @@ void printCovMatrix(float_t (*mat)[Ndim][Ndim])
     }
   }
 }
-void covMatrix(std::vector<bcInfo>& bcs, int NTotTrigs)
+void corMatrix(std::vector<bcInfo>& bcs, int NTotTrigs)
 {
   float_t cm[Ndim][Ndim];
   //std::array<std::array<int,Ndim>,Ndim> cmm;
@@ -264,14 +272,16 @@ void covMatrix(std::vector<bcInfo>& bcs, int NTotTrigs)
   }
   }
   }
-  printCovMatrix(&cm);
+  printCorMatrix(&cm);
 }
 //
 // Map collisions to ao2d bcs
 //
 void evSel2AOD(std::vector<bcInfo>& bcs, int skim = 0)
 {
+  std::cout << "Skimming bcs:" << skim << std::endl;
   std::map<uint64_t,std::vector<bcInfo>> evsel2aod;
+  std::array<int,8> counters{0};
   uint64_t prev = 0;
   for(auto const& bc: bcs) {
     std::cout << " bc.bcEvSel:" << bc.bcEvSel << std::endl;
@@ -288,7 +298,9 @@ void evSel2AOD(std::vector<bcInfo>& bcs, int skim = 0)
           bool bceq = (bcmap.bcAOD == bc.bcAOD);
           bool treq = (bcmap.trigMask == bc.trigMask);
           bool seeq = (bcmap.selMask == bc.selMask);
-          uint16_t lupt = bceq + 0x2*treq + 0x4*seeq;
+          //uint16_t lupt = bceq + 0x2*treq + 0x4*seeq;
+          int lupt = bceq + 0x2*treq + 0x4*seeq;
+	  counters[lupt] += 1;
           switch (lupt)
           {
             case 0x7: // all equal - remove, i.e. do not save
@@ -303,7 +315,8 @@ void evSel2AOD(std::vector<bcInfo>& bcs, int skim = 0)
       }
     }
   }
-  printEvSel2AOD(evsel2aod);
+  //printEvSel2AOD(evsel2aod);
+  std::cout << "Counters:" << counters << std::endl;
 }
 //
 // main
@@ -335,12 +348,12 @@ void eff2(std::string original = "bcRanges_fullrun.root", std::string skimmed = 
   std::sort(originalBCs.begin(), originalBCs.end(), [](const bcInfo& a, const bcInfo& b) { return a.bcEvSel < b.bcEvSel; });
   std::sort(skimmedBCs.begin(), skimmedBCs.end(), [](const bcInfo& a, const bcInfo& b) { return a.bcEvSel < b.bcEvSel; });
   //printbcInfoVect(originalBCs);
-  frequencyBC(originalBCs);
+  //frequencyBC(originalBCs);
   frequencyBCSorted(originalBCs);
   evSel2AOD(originalBCs,1);
   //selectionEfficiency(originalBCs);
   //evsel2AOD(skimmedBCs);
-  //covMatrix(originalBCs,originalTotal);
+  //corMatrix(originalBCs,originalTotal);
   // for (int i = 0; i < originalBCs.size() - 1; i++) {
   //   if (originalBCs[i].bcEvSel == originalBCs[i + 1].bcEvSel) {
   //     std::cout << "Duplicate BC in original: " << originalBCs[i].bcEvSel << "\t" << originalBCs[i].bcAOD << " - " << originalBCs[i + 1].bcAOD << std::endl;
