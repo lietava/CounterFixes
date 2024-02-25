@@ -75,7 +75,8 @@ struct bcInfos
   void cleanBC(std::vector<bcInfo>& bcs_cleaned);
   void selectionEfficiency() const;
   void corMatrix();
-  void printbcInfoVect() const;
+  void printbcInfoVect();
+  void printbcInfoVect(std::vector<bcInfo>& bcs);
   void printEvSel2AOD() const;
   void printSelectionEfficiency(std::array<double_t, Ndim>& eff) const;
   void printCorMatrix(float_t (*mat)[Ndim][Ndim]) const;
@@ -138,11 +139,15 @@ void bcInfos::getData(TFile& inputFile, int Nmax = 0)
   }
   std::cout << "Total original triggers:" << totalTriggered << " selected triggers:" << totalSelected << std::endl;
 }
-void bcInfos::printbcInfoVect() const
+void bcInfos::printbcInfoVect(std::vector<bcInfo>& bcs)
 {
   for(auto const& i: bcs) {
     i.print();
   }
+};
+void bcInfos::printbcInfoVect()
+{
+  printbcInfoVect(bcs);
 };
 //
 // utils
@@ -388,16 +393,41 @@ void bcInfos::cleanBC(std::vector<bcInfo>& bcs_cleaned)
           uint16_t lut = bceq + 0x2*treq + 0x4*seeq;
           counters[lut] += 1;
           tot++;
-          // exact duplicates
-          if(lut == 0x7) {
-            removed[j] = 1;
+          switch(lut)
+          {
+            //
+            case 0:
+            // TVX has two different bcAOD with two different triggers and selections (sel)
+              break;
+            case 1:
+            // bcAOD is equal but two different triggers with same sel ?
+              break;
+            case 2:
+            // different bcAOD , same trigger, different sel - split vertex ?
+              break;
+            case 3:
+            // same bcAOD, same trigger , different sel ?
+              break;
+            case 4:
+            // different bcAOD and trigger but same sel - split vertex ?
+              break;
+            case 5:
+            // same bcAOD, different trigger , same sel ?
+              break;
+            case 6:
+            // different bcAOD, same trigger and sel - split vertex ?
+              break;
+            case 7:
+            // exactly same record, why is it here ?
+              removed[j] = 1;
+              break;
           }
         }
         bcs_cleaned.push_back(bc.second[i]);
       }
     }
   }
-  //std::cout << "LUT counters:" << counters << " tot:" << tot << std::endl;
+  std::cout << "LUT counters:" << counters << " tot:" << tot << std::endl;
   std::cout << "bcs cleaned size:" << bcs_cleaned.size() << std::endl;
 }
 //
@@ -418,6 +448,7 @@ void eff3(std::string original = "bcRanges_fullrun.root", std::string skimmed = 
   eff.originalBCs.cleanBC(bcs_cleaned);
   //eff.originalBCs.evSel2AODInverse(bcs_cleaned);
   eff.originalBCs.frequencyBCSorted(bcs_cleaned);
+  //eff.originalBCs.printbcInfoVect(bcs_cleaned);
   //eff.originalBCs.selectionEfficiency();
   //evsel2AOD(skimmedBCs);
   //corMatrix(originalBCs,originalTotal);
