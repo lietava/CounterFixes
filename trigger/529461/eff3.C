@@ -14,46 +14,8 @@
 #include <TTree.h>
 std::vector<std::string> labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
 //
-// main structure
+const int Ndim = 64;
 //
-struct bcInfo {
-  ULong64_t bcAOD, bcEvSel, trigMask, selMask;
-  void print() const {
-    std::cout << bcEvSel << " " << bcAOD << " " << std::hex << trigMask << " " << selMask << " " << std::dec;
-    for(int i = 0; i < 64; i++) {
-      ULong64_t mask = 1ull << i;
-      if(mask & trigMask) {
-        if(i < labels.size()) {
-          std::cout << labels[i] << " ";
-        } else {
-          std::cout << "XXX ";
-        }
-      }
-    }
-    std::cout << std::endl;
-  }
-};
-struct effUtils
-{
-};
-//
-// utils
-//
-void printEvSel2AOD(std::map<uint64_t,std::vector<bcInfo>>& m)
-{
-  for(auto const& i: m) {
-    std::cout << "===>evSel BC:" << i.second.size() << " " << i.first << ":" << std::endl;
-    for(auto const& j: i.second){
-      j.print();
-    }
-  }
-};
-void printbcInfoVect(std::vector<bcInfo>& v)
-{
-  for(auto const& i: v) {
-    i.print();
-  }
-};
 template <class T, std::size_t N>
 ostream& operator<<(ostream& o, const array<T, N>& arr)
 {
@@ -73,9 +35,68 @@ void printMap(std::map<uint64_t,int>& m)
   }
 };
 //
+// main structure
+//
+struct bcInfo {
+  bcInfo() = default;
+  ULong64_t bcAOD, bcEvSel, trigMask, selMask;
+  void print() const {
+    std::cout << bcEvSel << " " << bcAOD << " " << std::hex << trigMask << " " << selMask << " " << std::dec;
+    for(int i = 0; i < Ndim; i++) {
+      ULong64_t mask = 1ull << i;
+      if(mask & trigMask) {
+        if(i < labels.size()) {
+          std::cout << labels[i] << " ";
+        } else {
+          std::cout << "XXX ";
+        }
+      }
+    }
+    std::cout << std::endl;
+  }
+};
+struct bcInfos
+{
+  bcInfos() = default;
+  std::vector<bcInfo> bcs;
+  std::array<int, Ndim> selectionCounters{0}, triggerCounters{0};
+  int totalSelected = 0;
+  int totalTriggered = 0;
+  std::array<bool,Ndim> zeros{0};  // Take care of empty or not used bits
+  std::map<uint64_t,std::vector<bcInfo>> evsel2aod;
+  //
+  void getData(TFile& inputFile, int Nmax = 0);
+  void frequencyBC() const;
+  void frequencyBCSorted();
+  void frequencyBCSorted(std::vector<bcInfo>& bcsa);
+  void evSel2AOD();
+  //void AOD2evSel();
+  void evSel2AODInverse(std::vector<bcInfo>& bcs);
+  void cleanBC(std::vector<bcInfo>& bcs_cleaned);
+  void selectionEfficiency() const;
+  void corMatrix();
+  void printbcInfoVect() const;
+  void printEvSel2AOD() const;
+  void printSelectionEfficiency(std::array<double_t, Ndim>& eff) const;
+  void printCorMatrix(float_t (*mat)[Ndim][Ndim]) const;
+};
+struct effUtils
+{
+  effUtils() = default;
+  bcInfos originalBCs, skimmedBCs;
+  void readFiles(TFile& originalFile, TFile& skimmedFile);
+};
+void effUtils::readFiles(TFile& originalFile, TFile& skimmedFile)
+{
+  std::cout << "=== Unskimmed:" << std::endl;
+  originalBCs.getData(originalFile, 0);
+  std::cout << "=== Skimmed:" << std::endl;
+  skimmedBCs.getData(skimmedFile,0);
+}
+//
 // read data from root file
 //
-void getData(TFile& inputFile, std::vector<bcInfo>& bcs, std::array<int, 64>& selectionCounters, std::array<int, 64>& triggerCounters, int Nmax = 0)
+void bcInfos::getData(TFile& inputFile, int Nmax = 0)
 {
   int i = 0;
   for (auto key : *(inputFile.GetListOfKeys())) {
@@ -97,7 +118,7 @@ void getData(TFile& inputFile, std::vector<bcInfo>& bcs, std::array<int, 64>& se
           bcAO2D.print();
         }
         // Counters
-        for (ULong64_t j = 0; j < 64; j++) {
+        for (ULong64_t j = 0; j < Ndim; j++) {
           if (bcAO2D.selMask & (1ull << j))
             selectionCounters[j]++;
           if (bcAO2D.trigMask & (1ull << j))
@@ -106,11 +127,40 @@ void getData(TFile& inputFile, std::vector<bcInfo>& bcs, std::array<int, 64>& se
       }
     }
   }
+  std::sort(bcs.begin(), bcs.end(), [](const bcInfo& a, const bcInfo& b) { return a.bcEvSel < b.bcEvSel; });
+  //
+  std::cout << "bcs Size:" << bcs.size() << std::endl;
+  for (int i = 0; i < Ndim; i++) {
+    totalSelected += selectionCounters[i];
+  }
+  for (int i = 0; i < Ndim; i++) {
+    totalTriggered += triggerCounters[i];
+  }
+  std::cout << "Total original triggers:" << totalTriggered << " selected triggers:" << totalSelected << std::endl;
 }
+void bcInfos::printbcInfoVect() const
+{
+  for(auto const& i: bcs) {
+    i.print();
+  }
+};
+//
+// utils
+//
+void bcInfos::printEvSel2AOD() const
+{
+  for(auto const& i: evsel2aod) {
+    std::cout << "===>evSel BC:" << i.second.size() << " " << i.first << ":" << std::endl;
+    for(auto const& j: i.second){
+      j.print();
+    }
+  }
+};
+
 //
 // Frequency: # of TVX with 1,2,3,... collision BCs
 //
-void frequencyBC(std::vector<bcInfo>& bcs)
+void bcInfos::frequencyBC() const
 {
   std::map<uint64_t, int> bcFreq;
   for(auto const& bc: bcs) {
@@ -143,17 +193,20 @@ void frequencyBC(std::vector<bcInfo>& bcs)
 //
 // Frequency: # of TVX with 1,2,3,... collision BCs
 // Assuming sorted in Vollision BC (bcEvSel)
-void frequencyBCSorted(std::vector<bcInfo>& bcs)
+void bcInfos::frequencyBCSorted(std::vector<bcInfo>& bcsa)
 {
   std::map<uint64_t, int> bcFreq;
   uint64_t prev = 0;
   int count = 0;
-  for(auto const& bc: bcs) {
+  for(auto const& bc: bcsa) {
     //std::cout << prev << " " << bc.bcEvSel << std::endl;
     if(bc.bcEvSel != prev) {
       if(prev) {
         bcFreq[prev] = count;
         //std::cout << "saving "  << prev << " " << count << std::endl;
+      }
+      if( count > 5) {
+        //std::cout << "count:" << count << " " << prev << std::endl;
       }
       count = 0;
       prev = bc.bcEvSel;
@@ -176,6 +229,7 @@ void frequencyBCSorted(std::vector<bcInfo>& bcs)
       freq[15]++;
     }
   }
+  std::cout << "Frequncy of evSel (TVX), i.e. number of singles, number of doubles. ..." << std::endl;
   float sum = 0;
   float i = 1;
   for(auto const& n: freq) {
@@ -186,12 +240,14 @@ void frequencyBCSorted(std::vector<bcInfo>& bcs)
   std::cout << std::endl;
   std::cout << "Fraction of singles:" << (float)freq[0]/bcs.size() << " sum:" << sum << " size:"  << bcs.size() << std::endl;
 }
-//
-const int Ndim = 64;
+void bcInfos::frequencyBCSorted()
+{
+  frequencyBCSorted(bcs);
+}
 //
 // Selection efficiency - should be raun on cleaned bcs ?
 //
-void printSelectionEfficiency(std::array<double_t, Ndim>& eff)
+void bcInfos::printSelectionEfficiency(std::array<double_t, Ndim>& eff) const
 {
   for(int i = 0; i < Ndim; i++ ) {
     if( i < labels.size() ){
@@ -201,7 +257,7 @@ void printSelectionEfficiency(std::array<double_t, Ndim>& eff)
     }
   }
 }
-void selectionEfficiency(std::vector<bcInfo>& bcs)
+void bcInfos::selectionEfficiency() const
 {
   std::array<double_t,Ndim> eff{0};
   for(int i =0; i < Ndim; i++) {
@@ -223,8 +279,7 @@ void selectionEfficiency(std::vector<bcInfo>& bcs)
 //
 // Correlation matrix
 //
-std::array<bool,Ndim> zeros{0};  // Take care of empty or not used bits
-void printCorMatrix(float_t (*mat)[Ndim][Ndim])
+void bcInfos::printCorMatrix(float_t (*mat)[Ndim][Ndim]) const
 {
   std::cout << std::dec << "Matrix " << Ndim << std::endl;
   for(int i = 0; i < Ndim; i++) {
@@ -238,8 +293,9 @@ void printCorMatrix(float_t (*mat)[Ndim][Ndim])
     }
   }
 }
-void corMatrix(std::vector<bcInfo>& bcs, int NTotTrigs)
+void bcInfos::corMatrix()
 {
+  int NTotTrigs = totalTriggered;
   float_t cm[Ndim][Ndim];
   //std::array<std::array<int,Ndim>,Ndim> cmm;
   float_t sigma[Ndim], mean[Ndim];
@@ -286,14 +342,13 @@ void corMatrix(std::vector<bcInfo>& bcs, int NTotTrigs)
 //
 // Map collisions to ao2d bcs
 //
-void evSel2AOD(std::vector<bcInfo>& bcs, int skim = 0)
+void bcInfos::evSel2AOD()
 {
-  std::cout << "Skimming bcs:" << skim << std::endl;
-  std::map<uint64_t,std::vector<bcInfo>> evsel2aod;
+  //std::map<uint64_t,std::vector<bcInfo>> evsel2aod;
   std::array<int,8> counters{0};
   uint64_t prev = 0;
   for(auto const& bc: bcs) {
-    std::cout << " bc.bcEvSel:" << bc.bcEvSel << std::endl;
+    //std::cout << " bc.bcEvSel:" << bc.bcEvSel << std::endl;
     //continue;
     if(bc.bcEvSel != prev) {
       evsel2aod[bc.bcEvSel].push_back(bc);
@@ -302,73 +357,69 @@ void evSel2AOD(std::vector<bcInfo>& bcs, int skim = 0)
     } else {
       //std::cout << "saving else "  << prev << " " << bc.bcEvSel << std::endl;
       //std::cout << bc.bcEvSel << " bcs " << bc.bcAOD << std::endl;
-      if(skim) {
-        for(auto const& bcmap: evsel2aod[bc.bcEvSel]) {
-          bool bceq = (bcmap.bcAOD == bc.bcAOD);
-          bool treq = (bcmap.trigMask == bc.trigMask);
-          bool seeq = (bcmap.selMask == bc.selMask);
-          //uint16_t lupt = bceq + 0x2*treq + 0x4*seeq;
-          int lupt = bceq + 0x2*treq + 0x4*seeq;
-    counters[lupt] += 1;
-          switch (lupt)
-          {
-            case 0x7: // all equal - remove, i.e. do not save
-              break;
-            default:
-              std::cout  << " case:" << lupt << " " << bc.bcAOD << std::endl;
-              evsel2aod[prev].push_back(bc);
+        evsel2aod[prev].push_back(bc);
+    }
+  }
+  //printEvSel2AOD();
+  //std::cout << "LUT Counters:" << counters << std::endl;
+}
+void bcInfos::evSel2AODInverse(std::vector<bcInfo>& bcs)
+{
+  for(auto const& bc: evsel2aod) {
+    for(auto const& bcinfo: bc.second) {
+      bcs.push_back(bcinfo);
+    }
+  }
+}
+void bcInfos::cleanBC(std::vector<bcInfo>& bcs_cleaned)
+{
+  // use set instead of vector ?
+  std::array<int,8> counters{0};
+  int tot = 0;
+  for(auto const& bc: evsel2aod) {
+    const int nbc = bc.second.size();
+    std::vector<int> removed(nbc,0);
+    for(int i = 0; i < nbc; i++) {
+      if( !removed[i]) {
+        for(int j = i+1; j < nbc; j++) {
+          bool bceq = (bc.second[i].bcAOD == bc.second[j].bcAOD);
+          bool treq = (bc.second[i].trigMask == bc.second[j].trigMask);
+          bool seeq = (bc.second[i].selMask == bc.second[j].selMask);
+          uint16_t lut = bceq + 0x2*treq + 0x4*seeq;
+          counters[lut] += 1;
+          tot++;
+          // exact duplicates
+          if(lut == 0x7) {
+            removed[j] = 1;
           }
         }
-      } else {
-        evsel2aod[prev].push_back(bc);
+        bcs_cleaned.push_back(bc.second[i]);
       }
     }
   }
-  //printEvSel2AOD(evsel2aod);
-  std::cout << "Counters:" << counters << std::endl;
+  //std::cout << "LUT counters:" << counters << " tot:" << tot << std::endl;
+  std::cout << "bcs cleaned size:" << bcs_cleaned.size() << std::endl;
 }
 //
 // main
 //
-void eff2(std::string original = "bcRanges_fullrun.root", std::string skimmed = "bcRanges_fullrun-skimmed.root")
+void eff3(std::string original = "bcRanges_fullrun.root", std::string skimmed = "bcRanges_fullrun-skimmed.root")
 {
   TFile originalFile(original.data());
   TFile skimmedFile(skimmed.data());
-  std::vector<bcInfo> originalBCs, skimmedBCs;
-  std::array<int, 64> originalSelected{0}, originalTriggered{0}, skimmedSelected{0}, skimmedTriggered{0};
-  int originalTotal = 0, skimmedTotal = 0;
-  getData(originalFile, originalBCs, originalSelected, originalTriggered,00);
-  getData(skimmedFile, skimmedBCs, skimmedSelected, skimmedTriggered,00);
-
-  std::cout << "Original BCs: " << originalBCs.size() << std::endl;
-  for (int i = 0; i < 64; i++) {
-    // std::cout << "* BIT " << i << " (" << labels[i] << ") selected: " << originalSelected[i] << " triggered: " << originalTriggered[i] << std::endl;
-    originalTotal += originalSelected[i];
-  }
-  std::cout << "* Total original triggers: " << originalTotal << std::endl;
-
-  std::cout << "Skimmed BCs: " << skimmedBCs.size() << std::endl;
-  for (int i = 0; i < 64; i++) {
-    // std::cout << "* BIT " << i << " (" << labels[i] << ") selected: " << originalSelected[i] << " triggered: " << originalTriggered[i] << std::endl;
-    skimmedTotal += skimmedSelected[i];
-  }
-  std::cout << "* Total skimmed triggers: " << skimmedTotal << std::endl;
-  //
-  std::sort(originalBCs.begin(), originalBCs.end(), [](const bcInfo& a, const bcInfo& b) { return a.bcEvSel < b.bcEvSel; });
-  std::sort(skimmedBCs.begin(), skimmedBCs.end(), [](const bcInfo& a, const bcInfo& b) { return a.bcEvSel < b.bcEvSel; });
-  //printbcInfoVect(originalBCs);
-  //frequencyBC(originalBCs);
-  //frequencyBCSorted(originalBCs);
-  //evSel2AOD(originalBCs,1);
-  //selectionEfficiency(originalBCs);
+  effUtils eff;
+  eff.readFiles(originalFile,skimmedFile);
+  //eff.originalBCs.printbcInfoVect();
+  std::cout << "=== Unskimmed" << std::endl;
+  //eff.originalBCs.frequencyBC();
+  eff.originalBCs.frequencyBCSorted();
+  eff.originalBCs.evSel2AOD();
+  std::vector<bcInfo> bcs_cleaned;
+  eff.originalBCs.cleanBC(bcs_cleaned);
+  //eff.originalBCs.evSel2AODInverse(bcs_cleaned);
+  eff.originalBCs.frequencyBCSorted(bcs_cleaned);
+  //eff.originalBCs.selectionEfficiency();
   //evsel2AOD(skimmedBCs);
   //corMatrix(originalBCs,originalTotal);
-  // for (int i = 0; i < originalBCs.size() - 1; i++) {
-  //   if (originalBCs[i].bcEvSel == originalBCs[i + 1].bcEvSel) {
-  //     std::cout << "Duplicate BC in original: " << originalBCs[i].bcEvSel << "\t" << originalBCs[i].bcAOD << " - " << originalBCs[i + 1].bcAOD << std::endl;
-  //   }
-  // }
-
-  // TFile outputFile("diffSkimmingBCs.root", "recreate");
 
 }
