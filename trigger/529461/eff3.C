@@ -452,7 +452,7 @@ void bcInfos::getArrayForBit(std::vector<uint64_t>& bctrigs, std::vector<uint64_
   //
 }
 //
-//
+//===========================
 //
 struct effUtils
 {
@@ -463,6 +463,7 @@ struct effUtils
   void correlatev0(int i, int j);
   void correlate(int i, int j);
   void correlateAll(int delta);
+  void printCorrelations(std::vector<int>& cor, int dist, int Nprint = 10);
 };
 void effUtils::readFiles(TFile& originalFile, TFile& skimmedFile)
 {
@@ -599,6 +600,9 @@ void effUtils::correlate(int ibit, int jbit)
 }
 void effUtils::correlateAll(int delta)
 {
+  int Nprint = 10;
+  std::cout << "Starting correlation all. Correlation window +/-" << delta << std::endl;
+  //std::cout << "Printing only +/-" << Nprint << std::endl;
   const int ndimcor = 2*delta + 1;
   std::vector<bcInfo>& v1 = originalBCs.bcs_cleaned;
   std::vector<bcInfo>& v2 = skimmedBCs.bcs_cleaned;
@@ -648,8 +652,20 @@ void effUtils::correlateAll(int delta)
         }
       }
     }
-    std::cout << "BIT:" << l << " Correlations:" << corr << std::endl;
+    std::cout << "BIT:" << l ; //<< " Correlations:" << corr << std::endl;
+    printCorrelations(corr,delta);
   }
+}
+void effUtils::printCorrelations( std::vector<int>& corr, int dist, int Nprint)
+{
+  if( (int)corr.size() < dist+Nprint) {
+    std::cout << "printCorrelations par not compatible" << std::endl;
+    return;
+  }
+  for(int i = 0; i < 2*Nprint + 1; i++) {
+    std::cout << " " << corr[dist - Nprint + i];
+  }
+  std::cout << std::endl;
 }
 //
 // main
@@ -665,7 +681,7 @@ void eff3(std::string original = "bcRanges_fullrun.root", std::string skimmed = 
   eff.skimmedBCs.cleanBC();
   clock_t start = clock();
   //eff.correlate(0,0);
-  eff.correlateAll(10);
+  eff.correlateAll(5000);
   clock_t stop = clock();
   double_t time = double_t(stop - start)/ (double_t)CLOCKS_PER_SEC;
   std::cout << "Time:" << time << std::endl;
