@@ -9,7 +9,8 @@
 // granted to it by virtue of its status as an Intergovernmental Organization
 // or submit itself to any jurisdiction.
 // O2 includes
-
+#include <iostream>
+#include <iomanip>
 #include <TFile.h>
 #include <TTree.h>
 std::vector<std::string> labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
@@ -40,25 +41,28 @@ void printMap(std::map<uint64_t,int>& m)
 struct bcInfo {
   bcInfo() = default;
   ULong64_t bcAOD, bcEvSel, trigMask, selMask;
-  void print() const {
-    std::cout << bcEvSel << " " << bcAOD << " " << std::hex << trigMask << " " << selMask << " " << std::dec;
-    for(int i = 0; i < Ndim; i++) {
-      ULong64_t mask = 1ull << i;
-      if(mask & trigMask) {
-        if(i < labels.size()) {
-          std::cout << labels[i] << " ";
-        } else {
-          std::cout << "XXX ";
-        }
+  void print() const;
+};
+void bcInfo::print() const
+{
+  std::cout << bcEvSel << " " << bcAOD << " " << std::hex << trigMask << " " << selMask << " " << std::dec;
+  for(size_t i = 0; i < Ndim; i++) {
+    ULong64_t mask = 1ull << i;
+    if(mask & trigMask) {
+      if(i < labels.size()) {
+        std::cout << labels[i] << " ";
+      } else {
+        std::cout << "XXX ";
       }
     }
-    std::cout << std::endl;
   }
+  std::cout << std::endl;
 };
 struct bcInfos
 {
   bcInfos() = default;
   std::vector<bcInfo> bcs;
+  std::vector<bcInfo> bcs_cleaned;
   std::array<int, Ndim> selectionCounters{0}, triggerCounters{0};
   int totalSelected = 0;
   int totalTriggered = 0;
@@ -73,31 +77,21 @@ struct bcInfos
   //void AOD2evSel();
   void evSel2AODInverse(std::vector<bcInfo>& bcs);
   void cleanBC(std::vector<bcInfo>& bcs_cleaned);
+  void cleanBC();
   void selectionEfficiency() const;
   void corMatrix();
+  void getArrayForBit(std::vector<uint64_t>& bctrigs, std::vector<uint64_t>& bcselec, int bit);
+  //
   void printbcInfoVect();
   void printbcInfoVect(std::vector<bcInfo>& bcs);
   void printEvSel2AOD() const;
   void printSelectionEfficiency(std::array<double_t, Ndim>& eff) const;
   void printCorMatrix(float_t (*mat)[Ndim][Ndim]) const;
 };
-struct effUtils
-{
-  effUtils() = default;
-  bcInfos originalBCs, skimmedBCs;
-  void readFiles(TFile& originalFile, TFile& skimmedFile);
-};
-void effUtils::readFiles(TFile& originalFile, TFile& skimmedFile)
-{
-  std::cout << "=== Unskimmed:" << std::endl;
-  originalBCs.getData(originalFile, 0);
-  std::cout << "=== Skimmed:" << std::endl;
-  skimmedBCs.getData(skimmedFile,0);
-}
 //
 // read data from root file
 //
-void bcInfos::getData(TFile& inputFile, int Nmax = 0)
+void bcInfos::getData(TFile& inputFile, int Nmax)
 {
   int i = 0;
   for (auto key : *(inputFile.GetListOfKeys())) {
@@ -254,7 +248,7 @@ void bcInfos::frequencyBCSorted()
 //
 void bcInfos::printSelectionEfficiency(std::array<double_t, Ndim>& eff) const
 {
-  for(int i = 0; i < Ndim; i++ ) {
+  for(size_t i = 0; i < Ndim; i++ ) {
     if( i < labels.size() ){
       std::cout << labels[i] << " bit "  << i << " eff:" << eff[i] << std::endl;
     } else {
@@ -278,8 +272,9 @@ void bcInfos::selectionEfficiency() const
       }
     }
     eff[i] = after/before;
+    std::cout << "BIT:" << i << " b:" << before << " a:" << after << " eff:" << eff[i] << std::endl;
   }
-  printSelectionEfficiency(eff);
+  //printSelectionEfficiency(eff);
 }
 //
 // Correlation matrix
@@ -381,6 +376,10 @@ void bcInfos::cleanBC(std::vector<bcInfo>& bcs_cleaned)
   // use set instead of vector ?
   std::array<int,8> counters{0};
   int tot = 0;
+  if(evsel2aod.size() == 0) {
+    std::cout << "Creating evsel2aod" << std::endl;
+    evSel2AOD();
+  }
   for(auto const& bc: evsel2aod) {
     const int nbc = bc.second.size();
     std::vector<int> removed(nbc,0);
@@ -430,6 +429,228 @@ void bcInfos::cleanBC(std::vector<bcInfo>& bcs_cleaned)
   std::cout << "LUT counters:" << counters << " tot:" << tot << std::endl;
   std::cout << "bcs cleaned size:" << bcs_cleaned.size() << std::endl;
 }
+void bcInfos::cleanBC()
+{
+  cleanBC(bcs_cleaned);
+}
+void bcInfos::getArrayForBit(std::vector<uint64_t>& bctrigs, std::vector<uint64_t>& bcselec, int bit)
+{
+  // create arrays
+  evSel2AOD();
+  std::vector<bcInfo> bcs_cleaned;
+  cleanBC(bcs_cleaned);
+  uint64_t mask = 1ull << bit;
+  for(auto const&bcinfo: bcs_cleaned) {
+    if(bcinfo.trigMask & mask) {
+      bctrigs.push_back(bcinfo.bcEvSel);
+    }
+    if(bcinfo.selMask & mask) {
+      bcselec.push_back(bcinfo.bcEvSel);
+    }
+  }
+  std::cout << "BIT:" << bit << " # trigs:" << bctrigs.size() << " # selec:" << bcselec.size() << std::endl;
+  //
+}
+//
+//
+//
+struct effUtils
+{
+  effUtils() = default;
+  bcInfos originalBCs, skimmedBCs;
+  void readFiles(TFile& originalFile, TFile& skimmedFile);
+  void correlateFFT();
+  void correlatev0(int i, int j);
+  void correlate(int i, int j);
+  void correlateAll(int delta);
+};
+void effUtils::readFiles(TFile& originalFile, TFile& skimmedFile)
+{
+  std::cout << "=== Unskimmed:" << std::endl;
+  originalBCs.getData(originalFile, 0);
+  std::cout << "=== Skimmed:" << std::endl;
+  skimmedBCs.getData(skimmedFile,0);
+}
+void effUtils::correlateFFT()
+{
+  std::vector<uint64_t> bctrigsunsk;
+  std::vector<uint64_t> bctrigsskim;
+  std::vector<uint64_t> bcselecunsk;
+  std::vector<uint64_t> bcselecskim;
+  originalBCs.getArrayForBit(bctrigsunsk, bcselecunsk, 3);
+  skimmedBCs.getArrayForBit(bctrigsskim, bcselecskim, 3);
+  std::cout << "first unsk " << bcselecunsk[0] << std::endl;
+  std::cout << "first skim " << bctrigsskim[0] << std::endl;
+  int nunsk = bcselecunsk.size();
+  int nskim = bctrigsskim.size();
+  uint64_t first = bcselecunsk[0];
+  if( first > bctrigsskim[0]) {
+    first = bctrigsskim[0];
+  }
+  uint64_t last = bcselecunsk[nunsk-1];
+  std::cout << " time span:" << last - first << std::endl;
+  //double_t *unsk = &bcselecunsk[0];
+  //double_t *skim = &bctrigsskim[0];
+  double_t *unsk = new double_t(bcselecunsk.size());
+  int i = 0;
+  for(auto const& bc: bcselecunsk) {
+    unsk[i] = bcselecunsk[i] - first;
+  }
+  double_t *skim = new double_t(bctrigsskim.size());
+  i = 0;
+  for(auto const& bc: bctrigsskim) {
+    skim[i] = bctrigsskim[i] - first;
+  }
+  // not finished - need version which can work with zero supressed data
+}
+void effUtils::correlatev0(int ibit, int jbit)
+{
+  int delta = 3;
+  const int ndimcor = 2*delta + 1;
+  std::vector<int> corr(ndimcor,0);
+  uint64_t maski = 1ull << ibit;
+  uint64_t maskj = 1ull << jbit;
+  std::vector<bcInfo>& v1 = originalBCs.bcs;
+  std::vector<bcInfo>& v2 = originalBCs.bcs;
+  int ndatai = v1.size();
+  int ndataj = v2.size();
+
+  std::cout << "ndatai:" << ndatai << " ndataj:" << ndataj << std::endl;
+  //
+  for(int i = 0; i < ndatai; i++) {
+    int posi = v1[i].bcEvSel;
+    bool trigi = v1[i].selMask & maski;
+    if(trigi) {
+      for(int j = 0; j < ndataj; j++) {
+        int posj = v2[j].bcEvSel;
+        if( posj+delta < posi) {
+          continue;
+        }
+        if(posi+delta < posj) {
+          continue;
+        }
+        int dist = posi - posj;
+        //std::cout << dist << std::endl;
+        bool trigj = v2[j].trigMask & maskj;
+        if(trigi && trigj) {
+          corr[dist + delta] += 1;
+        }
+      }
+    }
+  }
+  std::cout << "Correlations:" << corr << std::endl;
+}
+//
+// array instead of vectors - it is 10/13.8 faster
+//
+void effUtils::correlate(int ibit, int jbit)
+{
+  int delta = 10;
+  const int ndimcor = 2*delta + 1;
+  std::vector<int> corr(ndimcor,0);
+  uint64_t maski = 1ull << ibit;
+  uint64_t maskj = 1ull << jbit;
+  std::vector<bcInfo>& v1 = originalBCs.bcs_cleaned;
+  std::vector<bcInfo>& v2 = skimmedBCs.bcs_cleaned;
+  int ndatai = v1.size();
+  int ndataj = v2.size();
+  std::cout << "ndatai:" << ndatai << " ndataj:" << ndataj << std::endl;
+  //
+  uint64_t *arrbc1 = new uint64_t[ndatai];
+  uint64_t *arrtr1 = new uint64_t[ndatai];
+  int i = 0;
+  for(auto const& bcinfo: v1) {
+    arrbc1[i] = bcinfo.bcEvSel;
+    arrtr1[i] = bcinfo.selMask;
+    i++;
+  }
+  uint64_t *arrbc2 = new uint64_t[ndataj];
+  uint64_t *arrtr2 = new uint64_t[ndataj];
+  int j = 0;
+  for(auto const& bcinfo: v2) {
+    arrbc2[j] = bcinfo.bcEvSel;
+    arrtr2[j] = bcinfo.trigMask;
+    j++;
+  }
+  //
+  for(int i = 0; i < ndatai; i++) {
+    int posi = arrbc1[i];
+    bool trigi = arrtr1[i] & maski;
+    if(trigi) {
+      for(int j = 0; j < ndataj; j++) {
+        int posj = arrbc2[j];
+        if( posj+delta < posi) {
+          continue;
+        }
+        if(posi+delta < posj) {
+          continue;
+        }
+        int dist = posi - posj;
+        //std::cout << dist << std::endl;
+        bool trigj = arrtr2[j] & maskj;
+        if(trigi && trigj) {
+          //std::cout << dist+delta << std::endl;
+          corr[dist + delta] += 1;
+        }
+      }
+    }
+  }
+  std::cout << "Correlations:" << corr << std::endl;
+}
+void effUtils::correlateAll(int delta)
+{
+  const int ndimcor = 2*delta + 1;
+  std::vector<int> corr(ndimcor,0);
+  std::vector<bcInfo>& v1 = originalBCs.bcs_cleaned;
+  std::vector<bcInfo>& v2 = skimmedBCs.bcs_cleaned;
+  int ndatai = v1.size();
+  int ndataj = v2.size();
+  std::cout << "ndatai:" << ndatai << " ndataj:" << ndataj << std::endl;
+  //
+  uint64_t *arrbc1 = new uint64_t[ndatai];
+  uint64_t *arrtr1 = new uint64_t[ndatai];
+  int i = 0;
+  for(auto const& bcinfo: v1) {
+    arrbc1[i] = bcinfo.bcEvSel;
+    arrtr1[i] = bcinfo.selMask;
+    i++;
+  }
+  uint64_t *arrbc2 = new uint64_t[ndataj];
+  uint64_t *arrtr2 = new uint64_t[ndataj];
+  int j = 0;
+  for(auto const& bcinfo: v2) {
+    arrbc2[j] = bcinfo.bcEvSel;
+    arrtr2[j] = bcinfo.trigMask;
+    j++;
+  }
+  //
+  for(int l = 0; l < Ndim; l++) {
+    uint64_t maskl = 1ull << l;
+    for(int i = 0; i < ndatai; i++) {
+      int posi = arrbc1[i];
+      bool trigi = arrtr1[i] & maskl;
+      if(trigi) {
+        for(int j = 0; j < ndataj; j++) {
+          int posj = arrbc2[j];
+          if( posj+delta < posi) {
+            continue;
+          }
+          if(posi+delta < posj) {
+            continue;
+          }
+          int dist = posi - posj;
+          //std::cout << dist << std::endl;
+          bool trigj = arrtr2[j] & maskl;
+          if(trigi && trigj) {
+            //std::cout << dist+delta << std::endl;
+            corr[dist + delta] += 1;
+          }
+        }
+      }
+    }
+    std::cout << "BIT:" << l << " Correlations:" << corr << std::endl;
+  }
+}
 //
 // main
 //
@@ -440,17 +661,33 @@ void eff3(std::string original = "bcRanges_fullrun.root", std::string skimmed = 
   effUtils eff;
   eff.readFiles(originalFile,skimmedFile);
   //eff.originalBCs.printbcInfoVect();
+  eff.originalBCs.cleanBC();
+  eff.skimmedBCs.cleanBC();
+  clock_t start = clock();
+  //eff.correlate(0,0);
+  eff.correlateAll(10);
+  clock_t stop = clock();
+  double_t time = double_t(stop - start)/ (double_t)CLOCKS_PER_SEC;
+  std::cout << "Time:" << time << std::endl;
+  return;
   std::cout << "=== Unskimmed" << std::endl;
   //eff.originalBCs.frequencyBC();
   eff.originalBCs.frequencyBCSorted();
   eff.originalBCs.evSel2AOD();
   std::vector<bcInfo> bcs_cleaned;
   eff.originalBCs.cleanBC(bcs_cleaned);
-  //eff.originalBCs.evSel2AODInverse(bcs_cleaned);
   eff.originalBCs.frequencyBCSorted(bcs_cleaned);
   //eff.originalBCs.printbcInfoVect(bcs_cleaned);
   //eff.originalBCs.selectionEfficiency();
-  //evsel2AOD(skimmedBCs);
+  return ;
+  //
+  std::cout << "=== Skimmed" << std::endl;
+  eff.skimmedBCs.frequencyBCSorted();
+  eff.skimmedBCs.evSel2AOD();
+  std::vector<bcInfo> bcs_cleaned2;
+  eff.skimmedBCs.cleanBC(bcs_cleaned2);
+  eff.skimmedBCs.frequencyBCSorted(bcs_cleaned2);
+  //
   //corMatrix(originalBCs,originalTotal);
 
 }
