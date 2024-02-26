@@ -600,7 +600,6 @@ void effUtils::correlate(int ibit, int jbit)
 void effUtils::correlateAll(int delta)
 {
   const int ndimcor = 2*delta + 1;
-  std::vector<int> corr(ndimcor,0);
   std::vector<bcInfo>& v1 = originalBCs.bcs_cleaned;
   std::vector<bcInfo>& v2 = skimmedBCs.bcs_cleaned;
   int ndatai = v1.size();
@@ -625,6 +624,7 @@ void effUtils::correlateAll(int delta)
   }
   //
   for(int l = 0; l < Ndim; l++) {
+    std::vector<int> corr(ndimcor,0);
     uint64_t maskl = 1ull << l;
     for(int i = 0; i < ndatai; i++) {
       int posi = arrbc1[i];
