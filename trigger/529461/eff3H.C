@@ -17,6 +17,8 @@
 std::vector<std::string> labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
 //
 const int Ndim = 64;
+const int Nfreq = 10;
+const int Ndim_used = 52;
 //
 template <class T, std::size_t N>
 ostream& operator<<(ostream& o, const array<T, N>& arr)
@@ -71,9 +73,9 @@ struct bcInfos
   std::map<uint64_t,std::vector<bcInfo>> evsel2aod;
   //
   void getData(TFile& inputFile, int Nmax = 0);
+  double_t getDuration();
   void frequencyBC() const;
-  void frequencyBCSorted();
-  void frequencyBCSorted(std::vector<bcInfo>& bcsa);
+  void frequencyBCSorted(std::array<int,Nfreq>& freq);
   void evSel2AOD();
   //void AOD2evSel();
   void evSel2AODInverse(std::vector<bcInfo>& bcs);
@@ -108,7 +110,7 @@ void bcInfos::getData(TFile& inputFile, int Nmax)
       if((i < Nmax) || (Nmax == 0)) {
         cefpTree->GetEntry(i);
         bcs.push_back(bcAO2D);
-        // Check consistrmcy
+        // Check consistency
         if(~bcAO2D.trigMask & bcAO2D.selMask) {
           std::cout << "ERROR selMask is not subset of trigMask:";
           bcAO2D.print();
@@ -128,11 +130,16 @@ void bcInfos::getData(TFile& inputFile, int Nmax)
   std::cout << "bcs Size:" << bcs.size() << std::endl;
   for (int i = 0; i < Ndim; i++) {
     totalSelected += selectionCounters[i];
-  }
-  for (int i = 0; i < Ndim; i++) {
     totalTriggered += triggerCounters[i];
   }
-  std::cout << "Total original triggers:" << totalTriggered << " selected triggers:" << totalSelected << std::endl;
+  std::cout << "Total original triggers:" << totalTriggered << " selected triggers:" << totalSelected ;
+  std::cout << " Duration:" << getDuration() << std::endl;
+}
+double_t bcInfos::getDuration()
+{
+  uint64_t tt =   bcs.back().bcEvSel - bcs.front().bcEvSel;
+  double_t t = tt*25.e-9;
+  return t;
 }
 void bcInfos::printbcInfoVect(std::vector<bcInfo>& bcs)
 {
@@ -172,12 +179,12 @@ void bcInfos::frequencyBC() const
   }
   //printMap(bcFreq);
   //
-  std::array<int,16> freq{0};
+  std::array<int,Nfreq> freq{0};
   for(auto const& bc: bcFreq) {
     if(bc.second < 15) {
       freq[bc.second]++;
     }  else  {
-      freq[15]++;
+      freq[Nfreq-1]++;
     }
   }
   float sum = 0;
@@ -193,12 +200,12 @@ void bcInfos::frequencyBC() const
 //
 // Frequency: # of TVX with 1,2,3,... collision BCs
 // Assuming sorted in Vollision BC (bcEvSel)
-void bcInfos::frequencyBCSorted(std::vector<bcInfo>& bcsa)
+void bcInfos::frequencyBCSorted(std::array<int,Nfreq>& freq)
 {
   std::map<uint64_t, int> bcFreq;
   uint64_t prev = 0;
   int count = 0;
-  for(auto const& bc: bcsa) {
+  for(auto const& bc: bcs) {
     //std::cout << prev << " " << bc.bcEvSel << std::endl;
     if(bc.bcEvSel != prev) {
       if(prev) {
@@ -219,30 +226,29 @@ void bcInfos::frequencyBCSorted(std::vector<bcInfo>& bcsa)
   //std::cout << "saving "  << prev << " " << count << std::endl;
   //printMap(bcFreq);
   //
-  std::array<int,16> freq{0};
   for(auto const& bc: bcFreq) {
-    if(bc.second < 15) {
+    if(bc.second < Nfreq) {
       //std::cout << " *** " << bc.first << " " << bc.second << std::endl;
       //std::cout << freq << std::endl;
       freq[bc.second]++;
     }  else  {
-      freq[15]++;
+      freq[Nfreq-1]++;
     }
   }
-  std::cout << "Frequncy of evSel (TVX), i.e. number of singles, number of doubles. ..." << std::endl;
+  std::cout << "Frequency of evSel (TVX), i.e. number of singles, number of doubles. ..." << std::endl;
   float sum = 0;
+  int npairs = 0;
   float i = 1;
   for(auto const& n: freq) {
     std::cout << n << " ";
     sum += n*i;
-    i += 1;
+    if(i > 1) {
+      npairs += n*TMath::Binomial(i,2);
+    }
+    i += 1.;
   }
   std::cout << std::endl;
-  std::cout << "Fraction of singles:" << (float)freq[0]/bcs.size() << " sum:" << sum << " size:"  << bcs.size() << std::endl;
-}
-void bcInfos::frequencyBCSorted()
-{
-  frequencyBCSorted(bcs);
+  std::cout << "Fraction of singles:" << (float)freq[0]/bcs.size() << " sum:" << sum << " pairs"  << npairs << " size:"  << bcs.size() << std::endl;
 }
 //
 // Selection efficiency - should be raun on cleaned bcs ?
@@ -464,6 +470,10 @@ struct effUtils
 {
   effUtils() = default;
   bcInfos originalBCs, skimmedBCs;
+  std::array<double_t,Ndim> effSkimmed{0};
+  std::array<double_t,Ndim> effSkimmedC{0};
+  std::array<double_t,Ndim> effSkimmedError{0};
+  //
   void extractLabels(std::vector<std::string>& labels);
   void readFiles(TFile& originalFile, TFile& skimmedFile);
   void skimmedEfficiency();
@@ -472,10 +482,13 @@ struct effUtils
   void correlate(int i, int j);
   void correlateAll(int delta);
   void printCorrelations(std::vector<int>& cor, int dist, int Nprint = 10);
+  //
+  void fillFreq(TH1* histo, std::array<int,Nfreq>& arr);
+  void fillSkimmedEff(TH1 *histo);
 };
 void effUtils::extractLabels(std::vector<std::string>& labels)
 {
-  TFile file("AnalysisResults.root");
+  TFile file("AnalysisResults_fullrun.root");
   if(!file.IsOpen()) {
     std::cout << "File AnalysisResults.root can not be opned" << std::endl;
     return;
@@ -505,28 +518,43 @@ void effUtils::readFiles(TFile& originalFile, TFile& skimmedFile)
 }
 void effUtils::skimmedEfficiency()
 {
-  std::array<double_t,Ndim> eff{0};
-  for(int i =0; i < Ndim; i++) {
-    double_t before = 0;
-    double_t after = 0;
-    uint64_t mask = (1ull << i);
-    for(auto const& bc: originalBCs.bcs) {
+  std::cout << "===> Skimming efficiency" << std::endl;
+  std::array<double_t,Ndim> before{0},after{0};
+  for(auto const& bc: originalBCs.bcs) {
+    for(int i =0; i < Ndim; i++) {
+      uint64_t mask = (1ull << i);
       if(bc.selMask & mask) {
-        before++;
+        before[i]++;
       }
     }
-    for(auto const& bc: skimmedBCs.bcs) {
+  }
+  for(auto const& bc: skimmedBCs.bcs) {
+    for(int i =0; i < Ndim; i++) {
+      uint64_t mask = (1ull << i);
       if(bc.trigMask & mask) {
-        after++;
+        after[i]++;
       }
     }
-    eff[i] = after/before;
-    std::cout << "BIT:" << i << " b:" << before << " a:" << after << " eff:" << eff[i] << std::endl;
+  }
+  for(int i = 0; i < Ndim; i++) {
+    double_t e = 0;
+    if(before[i] != 0) {
+      double_t e = after[i]/before[i];
+      effSkimmed[i] = e;
+      effSkimmedError[i] = sqrt(e*(1-e)/before[i]);
+    }
+    std::string label = "?";
+    if(i < (int) labels.size()) {
+      label = labels[i];
+    }
+    //std::cout << "BIT:" << i << " b:" << before[i] << " a:" << after[i] << " eff:" << effSkimmed[i] << "+-" << effSkimmedError[i] << std::endl;
+    std::cout << "BIT:" << std::setw(2) << i << "  " << std::setw(25) << label  << "   b:" << std::setw(10) << before[i] << " a:" << std::setw(10) << after[i] << " eff:" << effSkimmed[i] << std::endl;
+
   }
 }
 void effUtils::skimmedEfficiency_cleaned()
 {
-  std::array<double_t,Ndim> eff{0};
+  std::cout << "===> Skimming efficiency of cleaned" << std::endl;
   for(int i =0; i < Ndim; i++) {
     double_t before = 0;
     double_t after = 0;
@@ -541,8 +569,8 @@ void effUtils::skimmedEfficiency_cleaned()
         after++;
       }
     }
-    eff[i] = after/before;
-    std::cout << "BIT:" << i << " b:" << before << " a:" << after << " eff:" << eff[i] << std::endl;
+    effSkimmedC[i] = after/before;
+    std::cout << "BIT:" << i << " b:" << before << " a:" << after << " eff:" << effSkimmedC[i] << std::endl;
   }
 }
 void effUtils::correlatev0(int ibit, int jbit)
@@ -708,18 +736,43 @@ void effUtils::printCorrelations( std::vector<int>& corr, int dist, int Nprint)
   }
   std::cout << std::endl;
 }
+void effUtils::fillFreq(TH1* h, std::array<int,Nfreq>& arr)
+{
+  int Nfreq = 10;
+  float_t sum = 0;
+  for(int i = 0;i < Nfreq; i ++) {
+    h->Fill(i,arr[i]);
+    //std::cout << "fU:" << freqU[i] << std::endl;;
+    sum += (i+1)*arr[i];
+  }
+  std::cout << "h->INtegral:" << h->Integral() << " wsum:" << sum << std::endl;
+  h->Scale(1./sum);
+}
+void effUtils::fillSkimmedEff(TH1* h)
+{
+  for(int i = 0; i <Ndim_used; i++)
+  {
+    h->Fill(i,effSkimmed[i]);
+    //h->SetBinContent(i+1,effSkimmed[i]);
+    //h->SetBinError(i+1,effSkimmedError[i]);
+  }
+}
 //
 // main
 //
-void eff3(std::string original = "bcRanges_fullrun.root", std::string skimmed = "bcRanges_fullrun-skimmed.root")
+void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed = "bcRanges_fullrun-skimmed.root")
 {
+  TFile *f = new TFile("eff.root","RECREATE");
+  TH1F * hfreqU = new TH1F("Freq Unskimm","Freq Unskimm", Nfreq,0,Nfreq);
+  TH1F * hfreqS = new TH1F("Freq Skimmed","Freq Skimmed", Nfreq,0,Nfreq);
+  TH1F * hEffSkimmed = new TH1F("Skimming eff","Skimming eff", Ndim_used,0,Ndim_used);
+  hfreqS->Sumw2();
+  hfreqU->Sumw2();
   TFile originalFile(original.data());
   TFile skimmedFile(skimmed.data());
   effUtils eff;
   eff.readFiles(originalFile,skimmedFile);
   eff.extractLabels(labels);
-  //eff.skimmedEfficiency();
-  //eff.skimmedEfficiency_cleaned();
   //clock_t start = clock();
   //eff.correlate(0,0);
   //eff.correlateAll(5000);
@@ -729,20 +782,26 @@ void eff3(std::string original = "bcRanges_fullrun.root", std::string skimmed = 
   //return;
   std::cout << "=== Unskimmed" << std::endl;
   //eff.originalBCs.frequencyBC();
-  eff.originalBCs.frequencyBCSorted();
   eff.originalBCs.evSel2AOD();
   eff.originalBCs.cleanBC();
-  eff.originalBCs.frequencyBCSorted();
+  std::array<int,Nfreq> freqU{0};
+  eff.originalBCs.frequencyBCSorted(freqU);
+  eff.fillFreq(hfreqU, freqU);
   //eff.originalBCs.printbcInfoVect(bcs_cleaned);
   eff.originalBCs.selectionEfficiency();
   //return ;
   //
   std::cout << "=== Skimmed" << std::endl;
-  eff.skimmedBCs.frequencyBCSorted();
   eff.skimmedBCs.evSel2AOD();
   eff.skimmedBCs.cleanBC();
-  eff.skimmedBCs.frequencyBCSorted();
+  std::array<int,Nfreq> freqS{0};
+  eff.skimmedBCs.frequencyBCSorted(freqS);
+  eff.fillFreq(hfreqS,freqS);
+  eff.skimmedEfficiency();
+  eff.fillSkimmedEff(hEffSkimmed);
+  //eff.skimmedEfficiency_cleaned();
   //
   //corMatrix(originalBCs,originalTotal);
   //
+  f->Write();
 }
