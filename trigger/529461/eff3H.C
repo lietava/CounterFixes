@@ -14,6 +14,7 @@
 #include <TFile.h>
 #include <TTree.h>
 #include <TH1.h>
+#include <TMath.h>
 std::vector<std::string> labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
 //
 const int Ndim = 64;
@@ -72,6 +73,7 @@ struct bcInfos
   std::array<bool,Ndim> zeros{0};  // Take care of empty or not used bits
   std::map<uint64_t,std::vector<bcInfo>> evsel2aod;
   //
+  uint64_t dataSize(uint64_t window);
   void getData(TFile& inputFile, int Nmax = 0);
   double_t getDuration();
   void frequencyBC() const;
@@ -91,6 +93,34 @@ struct bcInfos
   void printSelectionEfficiency(std::array<double_t, Ndim>& eff) const;
   void printCorMatrix(float_t (*mat)[Ndim][Ndim]) const;
 };
+//
+// estimate data size in unit of bcs
+//
+uint64_t bcInfos::dataSize(uint64_t window)
+{
+  uint64_t start = bcs.front().bcEvSel;
+  uint64_t maxsize = bcs.back().bcEvSel - start;
+  std::cout << "Max size:" <<  maxsize << std::endl;
+  uint64_t size = 0;
+  auto it = begin(bcs);
+  ++it;
+  while(it != end(bcs)){
+    if( (it->bcEvSel - start) > window) {
+      size += window;
+    } else {
+      size += it->bcEvSel - start;
+    }
+    start = it->bcEvSel;
+    ++it;
+  }
+  uint64_t lastsize = bcs.back().bcEvSel - start;
+  if(lastsize > window) {
+    lastsize = window;
+  }
+  size += lastsize;
+  std::cout << "Selection window:" << window << " data ssize in BC:" << size << " fraction of max:" << (double_t)size/(double_t) maxsize <<  std::endl;
+  return size;
+}
 //
 // read data from root file
 //
@@ -773,6 +803,8 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   effUtils eff;
   eff.readFiles(originalFile,skimmedFile);
   eff.extractLabels(labels);
+  eff.originalBCs.dataSize(1);
+  return;
   //clock_t start = clock();
   //eff.correlate(0,0);
   //eff.correlateAll(5000);
