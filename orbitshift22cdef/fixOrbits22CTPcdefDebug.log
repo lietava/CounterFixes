@@ -1,0 +1,555 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.30/01                        https://root.cern |
+  | (c) 1995-2023, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Feb 12 2024, 10:07:08                 |
+  | From tags/v6-30-01-alice2@v6-25-02-6400-g526782cfe8              |
+  | With c++ (GCC) 12.2.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing fixOrbits22CTPcdef.C...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1709460921-N7f1Vj, Host: http://alice-ccdb.cern.ch
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1709460921-jxpvrJ, Host: http://ccdb-test.cern.ch:8080
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1709460921-dBlX1h, Host: http://alice-ccdb.cern.ch/
+run:520259
+Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.32
+Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.32
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/63411/1f45d721-efff-11ed-9692-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657153587859/1f45d721-efff-11ed-9692-200114580202 for 1657153767859 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:79
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/05/44451/f1d7f1be-fd89-11ec-9d70-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1657152944347/f1d7f1be-fd89-11ec-9d70-0aa140641b9a for 1657153767859 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1657152944346 Time first scalers 1657153708000 ccdbi sor: 1657153707859
+Orbit from reset:8587657 orbit from scalers:3117516091
+orbit offset:3108928434 273586 secs
+First and last before:3117516091 3126061272
+[INFO] Subtracting from orbit 3108928434
+First and last after:8587657 17132838
+ INFO : run 520259 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1657153587859 1657154652000
+Comparison between scalers validity and scalers tl first:120141 last:184000
+Writing to CCDB startValGRP:1657153587859 endValGRP:1657154652000
+run:520294
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/24652/a8b092d5-fdcd-11ec-9d70-0aa140651b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657180930028/a8b092d5-fdcd-11ec-9d70-0aa140651b9a for 1657181642013 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:46
+ Orbit reset 1657152944346 Time first scalers 1657181582000 ccdbi sor: 1657181582013
+Orbit from reset:322044239 orbit from scalers:3430974312
+orbit offset:3108930073 273586 secs
+First and last before:3430974312 3435981422
+[INFO] Subtracting from orbit 3108930073
+First and last after:322044239 327051349
+ INFO : run 520294 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1657180930028 1657441228188
+Comparison between scalers validity and scalers tl first:651972 last:259200188
+Writing to CCDB startValGRP:1657180930028 endValGRP:1657441228188
+run:520471
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/41086/dafd52f4-004f-11ed-9d70-0aa140651b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657456270361/dafd52f4-004f-11ed-9d70-0aa140651b9a for 1657456930199 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:95
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/02/31325/54d7055e-ffc8-11ec-9d70-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1657399641561/54d7055e-ffc8-11ec-9d70-0aa140641b9a for 1657456930199 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1657399641560 Time first scalers 1657456923000 ccdbi sor: 1657456870199
+Orbit from reset:644157437 orbit from scalers:2232291077
+orbit offset:1588133640 139756 secs
+First and last before:2232291077 2242708387
+[INFO] Subtracting from orbit 1588133640
+First and last after:644157437 654574747
+ INFO : run 520471 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1657456270361 1657717049477
+Comparison between scalers validity and scalers tl first:652639 last:259200477
+Writing to CCDB startValGRP:1657456270361 endValGRP:1657717049477
+run:520472
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/48780/7d41d4f4-005e-11ed-9d70-0aa140651b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657457849995/7d41d4f4-005e-11ed-9d70-0aa140651b9a for 1657458509840 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:565
+ Orbit reset 1657399641560 Time first scalers 1657458501000 ccdbi sor: 1657458449840
+Orbit from reset:661902808 orbit from scalers:2250045342
+orbit offset:1588142534 139757 secs
+First and last before:2250045342 2313388521
+[INFO] Subtracting from orbit 1588142534
+First and last after:661902808 725245987
+ INFO : run 520472 has start time from run and start time from orbit that differ (by 51 secs)
+scalers: valS:1657457849995 1657723334668
+Comparison between scalers validity and scalers tl first:651005 last:259200668
+Writing to CCDB startValGRP:1657457849995 endValGRP:1657723334668
+run:520473
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/55700/364d3856-0067-11ed-9d70-0aa140651b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1657463965287/364d3856-0067-11ed-9d70-0aa140651b9a for 1657464625193 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:332
+ Orbit reset 1657399641560 Time first scalers 1657464584000 ccdbi sor: 1657464565193
+Orbit from reset:730309079 orbit from scalers:2318446674
+orbit offset:1588137595 139756 secs
+First and last before:2318446674 2355519002
+[INFO] Subtracting from orbit 1588137595
+First and last after:730309079 767381407
+ INFO : run 520473 has start time from run and start time from orbit that differ (by 18 secs)
+scalers: valS:1657463965287 1657727081097
+Comparison between scalers validity and scalers tl first:618713 last:259200097
+Writing to CCDB startValGRP:1657463965287 endValGRP:1657727081097
+run:517619
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/02773/02eaecfa-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654244894758/02eaecfa-0a8c-11ee-b97e-200114580202 for 1654245254758 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/08/12536/4fa247de-e30a-11ec-8002-0aa140641b9a in SE <ALICE::CERN::EOS>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1654239395834/4fa247de-e30a-11ec-8002-0aa140641b9a for 1654245254758 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1654239395833 Time first scalers 1654245194758 ccdbi sor: 1654245194758
+Orbit from reset:65211710 orbit from scalers:0
+orbit offset:4229755586 372218 secs
+First and last before:0 14599357
+[INFO] Subtracting from orbit 4229755586
+First and last after:65211710 79811067
+ INFO : run 517619 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654244894758 1654246793000
+Comparison between scalers validity and scalers tl first:300000 last:-499855896
+Writing to CCDB startValGRP:1654244894758 endValGRP:1654246793000
+run:517620
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/36389/0320e104-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654246457790/0320e104-0a8c-11ee-b97e-200114580202 for 1654246817790 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654246757790 ccdbi sor: 1654246757790
+Orbit from reset:82788759 orbit from scalers:0
+orbit offset:4212178537 370672 secs
+First and last before:0 59659646
+[INFO] Subtracting from orbit 4212178537
+First and last after:82788759 142448405
+ INFO : run 517620 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654246457790 1654252363000
+Comparison between scalers validity and scalers tl first:300000 last:-1769318600
+Writing to CCDB startValGRP:1654246457790 endValGRP:1654252363000
+run:517623
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/26641/03559c08-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654253036478/03559c08-0a8c-11ee-b97e-200114580202 for 1654253396478 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654253336478 ccdbi sor: 1654253336478
+Orbit from reset:156769280 orbit from scalers:0
+orbit offset:4138198016 364161 secs
+First and last before:0 114344393
+[INFO] Subtracting from orbit 4138198016
+First and last after:156769280 271113673
+ INFO : run 517623 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654253036478 1654263804507
+Comparison between scalers validity and scalers tl first:300000 last:-314482205
+Writing to CCDB startValGRP:1654253036478 endValGRP:1654263804507
+run:517677
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/06/14558/03872938-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654304935803/03872938-0a8c-11ee-b97e-200114580202 for 1654305295803 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654305235803 ccdbi sor: 1654305235803
+Orbit from reset:740402237 orbit from scalers:0
+orbit offset:3554565059 312802 secs
+First and last before:0 23156664
+[INFO] Subtracting from orbit 3554565059
+First and last after:740402237 763558901
+ INFO : run 517677 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654304935803 1654307595000
+Comparison between scalers validity and scalers tl first:300000 last:-1111511752
+Writing to CCDB startValGRP:1654304935803 endValGRP:1654307595000
+run:517678
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/39255/03b96fe5-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654307271284/03b96fe5-0a8c-11ee-b97e-200114580202 for 1654307631284 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654307571284 ccdbi sor: 1654307571284
+Orbit from reset:766665848 orbit from scalers:0
+orbit offset:3528301448 310491 secs
+First and last before:0 26097054
+[INFO] Subtracting from orbit 3528301448
+First and last after:766665848 792762902
+ INFO : run 517678 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654307271284 1654310191954
+Comparison between scalers validity and scalers tl first:300000 last:589098498
+Writing to CCDB startValGRP:1654307271284 endValGRP:1654310191954
+run:517679
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/08417/03ebcfb1-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654310134619/03ebcfb1-0a8c-11ee-b97e-200114580202 for 1654310494619 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654310434619 ccdbi sor: 1654310434619
+Orbit from reset:798865432 orbit from scalers:0
+orbit offset:3496101864 307657 secs
+First and last before:0 10833110
+[INFO] Subtracting from orbit 3496101864
+First and last after:798865432 809698542
+ INFO : run 517679 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654310134619 1654311697949
+Comparison between scalers validity and scalers tl first:300000 last:-915390507
+Writing to CCDB startValGRP:1654310134619 endValGRP:1654311697949
+run:517685
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/41293/04236d98-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654314909784/04236d98-0a8c-11ee-b97e-200114580202 for 1654315269784 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654315209784 ccdbi sor: 1654315209784
+Orbit from reset:852564467 orbit from scalers:0
+orbit offset:3442402829 302931 secs
+First and last before:0 68995016
+[INFO] Subtracting from orbit 3442402829
+First and last after:852564467 921559483
+ INFO : run 517685 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654314909784 1654321645138
+Comparison between scalers validity and scalers tl first:300000 last:2032269570
+Writing to CCDB startValGRP:1654314909784 endValGRP:1654321645138
+run:517690
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/37427/04560838-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654325247261/04560838-0a8c-11ee-b97e-200114580202 for 1654325607261 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654325547261 ccdbi sor: 1654325547261
+Orbit from reset:968814384 orbit from scalers:0
+orbit offset:3326152912 292701 secs
+First and last before:0 65288112
+[INFO] Subtracting from orbit 3326152912
+First and last after:968814384 1034102496
+ INFO : run 517690 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654325247261 1654331652980
+Comparison between scalers validity and scalers tl first:300000 last:624370004
+Writing to CCDB startValGRP:1654325247261 endValGRP:1654331652980
+run:517693
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/12/57742/04894c36-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654332957336/04894c36-0a8c-11ee-b97e-200114580202 for 1654333317336 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654333257336 ccdbi sor: 1654333257336
+Orbit from reset:1055517899 orbit from scalers:0
+orbit offset:3239449397 285072 secs
+First and last before:0 5429341
+[INFO] Subtracting from orbit 3239449397
+First and last after:1055517899 1060947240
+ INFO : run 517693 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654332957336 1654334040138
+Comparison between scalers validity and scalers tl first:300000 last:-1760400838
+Writing to CCDB startValGRP:1654332957336 endValGRP:1654334040138
+run:517737
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/27173/04baef51-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654410544752/04baef51-0a8c-11ee-b97e-200114580202 for 1654410904752 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654410844752 ccdbi sor: 1654410844752
+Orbit from reset:1928025836 orbit from scalers:0
+orbit offset:2366941460 208291 secs
+First and last before:0 47937501
+[INFO] Subtracting from orbit 2366941460
+First and last after:1928025836 1975963337
+ INFO : run 517737 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654410544752 1654415407575
+Comparison between scalers validity and scalers tl first:300000 last:-1442091777
+Writing to CCDB startValGRP:1654410544752 endValGRP:1654415407575
+run:517748
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/24099/04ec7bf7-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654415310687/04ec7bf7-0a8c-11ee-b97e-200114580202 for 1654415670687 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654415610687 ccdbi sor: 1654415610687
+Orbit from reset:1981621075 orbit from scalers:0
+orbit offset:2313346221 203574 secs
+First and last before:0 41945391
+[INFO] Subtracting from orbit 2313346221
+First and last after:1981621075 2023566466
+ INFO : run 517748 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654415310687 1654419640664
+Comparison between scalers validity and scalers tl first:300000 last:-1375980392
+Writing to CCDB startValGRP:1654415310687 endValGRP:1654419640664
+run:517751
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/45395/0521e616-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654421342297/0521e616-0a8c-11ee-b97e-200114580202 for 1654421702297 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654421642297 ccdbi sor: 1654421642297
+Orbit from reset:2049449440 orbit from scalers:0
+orbit offset:2245517856 197606 secs
+First and last before:0 53538606
+[INFO] Subtracting from orbit 2245517856
+First and last after:2049449440 2102988046
+ INFO : run 517751 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654421342297 1654426703196
+Comparison between scalers validity and scalers tl first:300000 last:158484732
+Writing to CCDB startValGRP:1654421342297 endValGRP:1654426703196
+run:517753
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/14054/05562fc5-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654426547372/05562fc5-0a8c-11ee-b97e-200114580202 for 1654426907372 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654426847372 ccdbi sor: 1654426847372
+Orbit from reset:2107983020 orbit from scalers:0
+orbit offset:2186984276 192455 secs
+First and last before:0 43405088
+[INFO] Subtracting from orbit 2186984276
+First and last after:2107983020 2151388108
+ INFO : run 517753 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654426547372 1654431007152
+Comparison between scalers validity and scalers tl first:300000 last:153799984
+Writing to CCDB startValGRP:1654426547372 endValGRP:1654431007152
+run:517758
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/51830/05889438-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654432642772/05889438-0a8c-11ee-b97e-200114580202 for 1654433002772 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654432942772 ccdbi sor: 1654432942772
+Orbit from reset:2176528735 orbit from scalers:0
+orbit offset:2118438561 186423 secs
+First and last before:0 9731570
+[INFO] Subtracting from orbit 2118438561
+First and last after:2176528735 2186260305
+ INFO : run 517758 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654432642772 1654434108148
+Comparison between scalers validity and scalers tl first:300000 last:1350872276
+Writing to CCDB startValGRP:1654432642772 endValGRP:1654434108148
+run:517767
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/09960/05badc3e-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1654441298372/05badc3e-0a8c-11ee-b97e-200114580202 for 1654441658372 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+ Orbit reset 1654239395833 Time first scalers 1654441598372 ccdbi sor: 1654441598372
+Orbit from reset:2273865134 orbit from scalers:0
+orbit offset:2021102162 177857 secs
+First and last before:0 60585824
+[INFO] Subtracting from orbit 2021102162
+First and last after:2273865134 2334450958
+ INFO : run 517767 has start time from run and start time from orbit that differ (by 0 secs)
+scalers: valS:1654441298372 1654447285942
+Comparison between scalers validity and scalers tl first:300000 last:1071157958
+Writing to CCDB startValGRP:1654441298372 endValGRP:1654447285942
+run:518541
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/40540/12e3ccf4-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1655114711282/12e3ccf4-0a8c-11ee-b97e-200114580202 for 1655115071282 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/15/44124/032bf51a-eb01-11ec-8000-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1655115011389/032bf51a-eb01-11ec-8000-0aa140641b9a for 1655115071282 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1655115011388 Time first scalers 1655115011282 ccdbi sor: 1655115011282
+error: scaler time < orbit reset time, skipping
+run:518543
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/03/32049/131a89f6-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1655117132263/131a89f6-0a8c-11ee-b97e-200114580202 for 1655117492263 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/03/47228/a630cbd7-eb06-11ec-8000-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1655117432369/a630cbd7-eb06-11ec-8000-0aa140641b9a for 1655117492263 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1655117432368 Time first scalers 1655117432263 ccdbi sor: 1655117432263
+error: scaler time < orbit reset time, skipping
+run:518546
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/42083/134fb4ce-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1655119250704/134fb4ce-0a8c-11ee-b97e-200114580202 for 1655119610704 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/12/36700/94e26a8d-eb0b-11ec-8000-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1655119550816/94e26a8d-eb0b-11ec-8000-0aa140641b9a for 1655119610704 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1655119550815 Time first scalers 1655119550704 ccdbi sor: 1655119550704
+error: scaler time < orbit reset time, skipping
+run:518547
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/57753/1381d4fc-0a8c-11ee-b97e-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1655122224930/1381d4fc-0a8c-11ee-b97e-200114580202 for 1655122584930 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:2
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/10/23302/81a84900-eb12-11ec-8000-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1655122525042/81a84900-eb12-11ec-8000-0aa140641b9a for 1655122584930 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1655122525041 Time first scalers 1655122524930 ccdbi sor: 1655122524930
+error: scaler time < orbit reset time, skipping
+run:519041
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/19709/e2acf169-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1655716369161/e2acf169-1980-11ee-8d77-200114580202 for 1655716609161 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:145
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/13/16896/71de58b2-f064-11ec-8001-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1655707473099/71de58b2-f064-11ec-8001-0aa140641b9a for 1655716609161 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1655707473098 Time first scalers 1655716601000 ccdbi sor: 1655716549161
+Orbit from reset:102647663 orbit from scalers:4136565494
+orbit offset:4033917831 354985 secs
+First and last before:4136565494 4152673245
+[INFO] Subtracting from orbit 4033917831
+First and last after:102647663 118755414
+ INFO : run 519041 has start time from run and start time from orbit that differ (by 51 secs)
+scalers: valS:1655716369161 1655718213386
+Comparison between scalers validity and scalers tl first:231839 last:180386
+Writing to CCDB startValGRP:1655716369161 endValGRP:1655718213386
+run:519043
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/02498/e2e2e8cb-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1655718807842/e2e2e8cb-1980-11ee-8d77-200114580202 for 1655719047842 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:195
+ Orbit reset 1655707473098 Time first scalers 1655719039000 ccdbi sor: 1655718987842
+Orbit from reset:130064149 orbit from scalers:4163988955
+orbit offset:4033924806 354985 secs
+First and last before:4163988955 4185600255
+[INFO] Subtracting from orbit 4033924806
+First and last after:130064149 151675449
+ INFO : run 519043 has start time from run and start time from orbit that differ (by 51 secs)
+scalers: valS:1655718807842 1655721141409
+Comparison between scalers validity and scalers tl first:231158 last:180409
+Writing to CCDB startValGRP:1655718807842 endValGRP:1655721141409
+run:519045
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/09/48471/e312d471-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1655721304642/e312d471-1980-11ee-8d77-200114580202 for 1655721544642 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:530
+ Orbit reset 1655707473098 Time first scalers 1655721537000 ccdbi sor: 1655721484642
+Orbit from reset:158155365 orbit from scalers:4192078630
+orbit offset:4033923265 354985 secs
+First and last before:4192078630 4251462180
+[INFO] Subtracting from orbit 4033923265
+First and last after:158155365 217538915
+ INFO : run 519045 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1655721304642 1655726998155
+Comparison between scalers validity and scalers tl first:232358 last:180155
+Writing to CCDB startValGRP:1655721304642 endValGRP:1655726998155
+run:519497
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/04/34877/e33f9e4a-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656284361634/e33f9e4a-1980-11ee-8d77-200114580202 for 1656284601634 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:40
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/05/54699/7ad927d4-f532-11ec-9d70-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1656235769195/7ad927d4-f532-11ec-9d70-0aa140641b9a for 1656284601634 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1656235769194 Time first scalers 1656284595000 ccdbi sor: 1656284541634
+Orbit from reset:549069751 orbit from scalers:1933946511
+orbit offset:1384876760 121869 secs
+First and last before:1933946511 1938256935
+[INFO] Subtracting from orbit 1384876760
+First and last after:549069751 553380175
+ INFO : run 519497 has start time from run and start time from orbit that differ (by 53 secs)
+scalers: valS:1656284361634 1656285175025
+Comparison between scalers validity and scalers tl first:233366 last:197025
+Writing to CCDB startValGRP:1656284361634 endValGRP:1656285175025
+run:519498
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/48767/e36fe6ce-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656285412308/e36fe6ce-1980-11ee-8d77-200114580202 for 1656285652308 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:23
+ Orbit reset 1656235769194 Time first scalers 1656285645000 ccdbi sor: 1656285592308
+Orbit from reset:560877508 orbit from scalers:1945762845
+orbit offset:1384885337 121870 secs
+First and last before:1945762845 1948082718
+[INFO] Subtracting from orbit 1384885337
+First and last after:560877508 563197381
+ INFO : run 519498 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1656285412308 1656286048629
+Comparison between scalers validity and scalers tl first:232692 last:196629
+Writing to CCDB startValGRP:1656285412308 endValGRP:1656286048629
+run:519499
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/55698/e3a0cbbf-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656286193953/e3a0cbbf-1980-11ee-8d77-200114580202 for 1656286433953 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:233
+ Orbit reset 1656235769194 Time first scalers 1656286427000 ccdbi sor: 1656286373953
+Orbit from reset:569671476 orbit from scalers:1954552400
+orbit offset:1384880924 121870 secs
+First and last before:1954552400 1980097513
+[INFO] Subtracting from orbit 1384880924
+First and last after:569671476 595216589
+ INFO : run 519499 has start time from run and start time from orbit that differ (by 53 secs)
+scalers: valS:1656286193953 1656288898985
+Comparison between scalers validity and scalers tl first:233047 last:199985
+Writing to CCDB startValGRP:1656286193953 endValGRP:1656288898985
+run:519502
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/01/61104/e3cf7eb9-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656289046367/e3cf7eb9-1980-11ee-8d77-200114580202 for 1656289286367 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:188
+ Orbit reset 1656235769194 Time first scalers 1656289279000 ccdbi sor: 1656289226367
+Orbit from reset:601743592 orbit from scalers:1986629038
+orbit offset:1384885446 121870 secs
+First and last before:1986629038 2007474658
+[INFO] Subtracting from orbit 1384885446
+First and last after:601743592 622589212
+ INFO : run 519502 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1656289046367 1656291332860
+Comparison between scalers validity and scalers tl first:232633 last:199860
+Writing to CCDB startValGRP:1656289046367 endValGRP:1656291332860
+run:519503
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/07/33820/e4058165-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656291424276/e4058165-1980-11ee-8d77-200114580202 for 1656291664276 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:9
+ Orbit reset 1656235769194 Time first scalers 1656291657000 ccdbi sor: 1656291604276
+Orbit from reset:628485350 orbit from scalers:2013363740
+orbit offset:1384878390 121869 secs
+First and last before:2013363740 2014158657
+[INFO] Subtracting from orbit 1384878390
+First and last after:628485350 629280267
+ INFO : run 519503 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1656291424276 1656291924521
+Comparison between scalers validity and scalers tl first:232724 last:197521
+Writing to CCDB startValGRP:1656291424276 endValGRP:1656291924521
+run:519504
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/41541/e434883a-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656292114617/e434883a-1980-11ee-8d77-200114580202 for 1656292354617 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:320
+ Orbit reset 1656235769194 Time first scalers 1656292347000 ccdbi sor: 1656292294617
+Orbit from reset:636244733 orbit from scalers:2021129183
+orbit offset:1384884450 121870 secs
+First and last before:2021129183 2056567281
+[INFO] Subtracting from orbit 1384884450
+First and last after:636244733 671682831
+ INFO : run 519504 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1656292114617 1656295695598
+Comparison between scalers validity and scalers tl first:232383 last:196598
+Writing to CCDB startValGRP:1656292114617 endValGRP:1656295695598
+run:519506
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/32040/e46569f3-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656295834798/e46569f3-1980-11ee-8d77-200114580202 for 1656296074798 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:268
+ Orbit reset 1656235769194 Time first scalers 1656296068000 ccdbi sor: 1656296014798
+Orbit from reset:678089173 orbit from scalers:2062968419
+orbit offset:1384879246 121869 secs
+First and last before:2062968419 2092856994
+[INFO] Subtracting from orbit 1384879246
+First and last after:678089173 707977748
+ INFO : run 519506 has start time from run and start time from orbit that differ (by 53 secs)
+scalers: valS:1656295834798 1656298922670
+Comparison between scalers validity and scalers tl first:233202 last:196670
+Writing to CCDB startValGRP:1656295834798 endValGRP:1656298922670
+run:519507
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/10/31269/e493768b-1980-11ee-8d77-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656298964326/e493768b-1980-11ee-8d77-200114580202 for 1656299204326 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:303
+ Orbit reset 1656235769194 Time first scalers 1656299197000 ccdbi sor: 1656299144326
+Orbit from reset:713276288 orbit from scalers:2098160762
+orbit offset:1384884474 121870 secs
+First and last before:2098160762 2131977175
+[INFO] Subtracting from orbit 1384884474
+First and last after:713276288 747092701
+ INFO : run 519507 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1656298964326 1656302401364
+Comparison between scalers validity and scalers tl first:232674 last:197364
+Writing to CCDB startValGRP:1656298964326 endValGRP:1656302401364
+run:519903
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/00/61344/4c233bb2-e9be-11ed-9692-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656658300799/4c233bb2-e9be-11ed-9692-200114580202 for 1656658480799 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:22
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/13/60120/91dd7bca-f7a6-11ec-9d70-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1656505531761/91dd7bca-f7a6-11ec-9d70-0aa140641b9a for 1656658480799 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+ Orbit reset 1656505531760 Time first scalers 1656658473000 ccdbi sor: 1656658420799
+Orbit from reset:1719898053 orbit from scalers:1843395784
+orbit offset:123497731 10867.8 secs
+First and last before:1843395784 1845646891
+[INFO] Subtracting from orbit 123497731
+First and last after:1719898053 1722149160
+ INFO : run 519903 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1656658300799 1656658945000
+Comparison between scalers validity and scalers tl first:172201 last:271000
+Writing to CCDB startValGRP:1656658300799 endValGRP:1656658945000
+run:519904
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/11/05841/4c53e71d-e9be-11ed-9692-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656659661129/4c53e71d-e9be-11ed-9692-200114580202 for 1656659841129 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:92
+ Orbit reset 1656505531760 Time first scalers 1656659834000 ccdbi sor: 1656659781129
+Orbit from reset:1735203155 orbit from scalers:1858694244
+orbit offset:123491089 10867.2 secs
+First and last before:1858694244 1868846574
+[INFO] Subtracting from orbit 123491089
+First and last after:1735203155 1745355485
+ INFO : run 519904 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1656659661129 1656660919000
+Comparison between scalers validity and scalers tl first:172871 last:182000
+Writing to CCDB startValGRP:1656659661129 endValGRP:1656660919000
+run:519905
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/08/51843/4c932d2b-e9be-11ed-9692-200114580202 in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656661259006/4c932d2b-e9be-11ed-9692-200114580202 for 1656661439006 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:636
+ Orbit reset 1656505531760 Time first scalers 1656661432000 ccdbi sor: 1656661379006
+Orbit from reset:1753173436 orbit from scalers:1876661815
+orbit offset:123488379 10867 secs
+First and last before:1876661815 1947961462
+[INFO] Subtracting from orbit 123488379
+First and last after:1753173436 1824473083
+ INFO : run 519905 has start time from run and start time from orbit that differ (by 52 secs)
+scalers: valS:1656661259006 1656668014000
+Comparison between scalers validity and scalers tl first:172994 last:242000
+Writing to CCDB startValGRP:1656661259006 endValGRP:1656668014000
+run:519906
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/11520/270deaa0-f924-11ec-9d70-0aa140651b9a in SE <ALICE::CERN::OCDB>
+Error in <TNetXNGFile::Open>: [ERROR] Server responded with an error: [3011] Unable to open file /eos/alice/cond/13/17442/270f6324-f924-11ec-9d70-b47af1a61b9a; No such file or directory
+
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/11520/270deaa0-f924-11ec-9d70-0aa140651b9a in SE <ALICE::CCIN2P3::SE>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1656668295174/270deaa0-f924-11ec-9d70-0aa140651b9a for 1656668955017 (retrieve, agent_id: ctpo2cs8.cern.ch-1709460921-dBlX1h), 
+Scaler size:50
+ Orbit reset 1656505531760 Time first scalers 1656668946000 ccdbi sor: 1656668895017
+Orbit from reset:1837671993 orbit from scalers:1961162081
+orbit offset:123490088 10867.1 secs
+First and last before:1961162081 1966501439
+[INFO] Subtracting from orbit 123490088
+First and last after:1837671993 1843011351
+ INFO : run 519906 has start time from run and start time from orbit that differ (by 50 secs)
+scalers: valS:1656668295174 1656928621098
+Comparison between scalers validity and scalers tl first:650826 last:259200098
+Writing to CCDB startValGRP:1656668295174 endValGRP:1656928621098
+Number of runs processed:35

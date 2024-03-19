@@ -92,6 +92,7 @@ struct bcInfos
   void printEvSel2AOD() const;
   void printSelectionEfficiency(std::array<double_t, Ndim>& eff) const;
   void printCorMatrix(float_t (*mat)[Ndim][Ndim]) const;
+  void printCorMatrixSimple(float_t (*mat)[Ndim][Ndim]) const;
 };
 //
 // estimate data size in unit of bcs
@@ -335,6 +336,24 @@ void bcInfos::printCorMatrix(float_t (*mat)[Ndim][Ndim]) const
     }
   }
 }
+void bcInfos::printCorMatrixSimple(float_t (*mat)[Ndim][Ndim]) const
+{
+  std::cout << std::dec << "Matrix " << Ndim << std::endl;
+  for(int i = 0; i < Ndim; i++) {
+    double_t sum = 0;
+    if(!zeros[i]) {
+      for(int j = 0; j < Ndim; j++) {
+        if(!zeros[j]) {
+          if(i != j) {
+            //std::cout <<   std::setw(10) << std::setprecision(2) << (*mat)[i][j] << " ";
+            sum += ((*mat)[i][j]);
+          }
+        }
+      }
+    }
+    std::cout << "covMatrix:" << i << " sum off diag:" << sum << std::endl;
+  }
+}
 void bcInfos::corMatrix()
 {
   int NTotTrigs = totalTriggered;
@@ -352,12 +371,12 @@ void bcInfos::corMatrix()
       mean[i] = mu;
       sigma[i] = sqrt(mu *(1.- mu));
       cm[i][i] = 1.;
-      std::cout << i << " " << i << " MAT:" << cm[i][i] << " mean:" << mu << std::endl;
+      //std::cout << i << " " << i << " MAT:" << cm[i][i] << " mean:" << mu << std::endl;
     } else {
       zeros[i] = 1;
     }
   }
-  std::cout << "zeros: " << zeros << std::endl;
+  //std::cout << "zeros: " << zeros << std::endl;
   //
   for(int i = 0; i < Ndim; i++) {
     uint64_t maski = 1ull << i;
@@ -373,13 +392,14 @@ void bcInfos::corMatrix()
         sumij += it*jt;
       }
       cm[i][j] = ((float_t)(sumij)/NTotTrigs - mean[i]*mean[j])/sigma[i]/sigma[j];
-      std::cout << i << " " << j << " MAT:" << cm[i][j] << " " << sumij << std::endl;
+      //std::cout << i << " " << j << " MAT:" << cm[i][j] << " " << sumij << std::endl;
       cm[j][i] = cm[i][j];
     }
   }
   }
   }
   printCorMatrix(&cm);
+  printCorMatrixSimple(&cm);
 }
 //
 // Map collisions to ao2d bcs
@@ -803,8 +823,8 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   effUtils eff;
   eff.readFiles(originalFile,skimmedFile);
   eff.extractLabels(labels);
-  eff.originalBCs.dataSize(1);
-  return;
+  //eff.originalBCs.dataSize(1);
+  //return;
   //clock_t start = clock();
   //eff.correlate(0,0);
   //eff.correlateAll(5000);
@@ -833,7 +853,7 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   eff.fillSkimmedEff(hEffSkimmed);
   //eff.skimmedEfficiency_cleaned();
   //
-  //corMatrix(originalBCs,originalTotal);
+  eff.originalBCs.corMatrix();
   //
   f->Write();
 }

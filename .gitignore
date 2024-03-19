@@ -1,2 +1,6 @@
 .*.swp
 out*
+*.out
+*.d
+*.so
+*.pcm
