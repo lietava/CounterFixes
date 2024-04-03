@@ -1,0 +1,34 @@
+
+Processing copyConfig.C...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-Bybu65, Host: http://alice-ccdb.cern.ch
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-7Dt1Pa, Host: http://ccdb-test.cern.ch:8080
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://alice-ccdb.cern.ch/
+run:549286
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://alice-ccdb.cern.ch
+[WARN] Missing STF/EFT -> use SOX/EOX;
+Run start:1711956333971
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1711955618137/c20a2a29-eff8-11ee-8207-c0a80209250c for 1711956333971 (retrieve, agent_id: ctpo2cs8.cern.ch-1712163345-0epbho), 
+Writing to CCDB startValGRP:1711955618137 endValGRP:1712215418137
+run:549287
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://alice-ccdb.cern.ch
+[WARN] Missing STF/EFT -> use SOX/EOX;
+Run start:1711976030706
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1711975314327/9de2fd86-f026-11ee-820e-c0a80209250c for 1711976030706 (retrieve, agent_id: ctpo2cs8.cern.ch-1712163345-0epbho), 
+Writing to CCDB startValGRP:1711975314327 endValGRP:1712235114327
+run:549288
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://alice-ccdb.cern.ch
+[WARN] Missing STF/EFT -> use SOX/EOX;
+Run start:1711976965671
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1711976249048/cb05a269-f028-11ee-820e-c0a80209250c for 1711976965671 (retrieve, agent_id: ctpo2cs8.cern.ch-1712163345-0epbho), 
+Writing to CCDB startValGRP:1711976249048 endValGRP:1712236049048
+run:549289
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://alice-ccdb.cern.ch
+[WARN] Missing STF/EFT -> use SOX/EOX;
+Run start:1711977660719
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1712163345-0epbho, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1711976943394/68e27bbd-f02a-11ee-820e-c0a80209250c for 1711977660719 (retrieve, agent_id: ctpo2cs8.cern.ch-1712163345-0epbho), 
+Writing to CCDB startValGRP:1711976943394 endValGRP:1712236743394
+Number of runs processed:4
