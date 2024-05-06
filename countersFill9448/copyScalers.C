@@ -46,7 +46,7 @@ void copyScalers() {
     long valU = std::stol(valSU->second);
     // write to ccdb
     std::cout << "Writing to CCDB startValGRP:" << valF << " endValGRP:" << valU << std::endl;
-    //apiProd.storeAsTFileAny(scl, ccdbScalers, metadata, valF, valU);
+    apiProd.storeAsTFileAny(scl, ccdbScalers, metadata, valF, valU);
     ic++;
   }
   std::cout << "Number of runs processed:" << ic << std::endl;
