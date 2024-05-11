@@ -296,7 +296,7 @@ void bcInfos::printSelectionEfficiency(std::array<double_t, Ndim>& eff) const
 }
 void bcInfos::selectionEfficiency() const
 {
-  std:;cout << "===> Selection efficiency - downscaling" << std::endl;
+  std::cout << "===> Selection efficiency - downscaling 2" << std::endl;
   std::array<double_t,Ndim> eff{0};
   for(int i =0; i < Ndim; i++) {
     double_t before = 0;
@@ -315,7 +315,7 @@ void bcInfos::selectionEfficiency() const
     if(i < (int) labels.size()) {
       label = labels[i];
     }
-    std::cout << "BIT:" << std::setw(2) << i << "  " << std::setw(25) << label << "   b:" << std::setw(10) << before << " a:" << std::setw(10) << after << " eff:" << eff[i] << std::endl;
+    std::cout << "BIT:" << std::setw(2) << i << "  " << std::setw(25) << label << "   b:" << std::setw(10) << before << " a:" << std::setw(10) << after << " eff:" << after/before << std::endl;
   }
   //printSelectionEfficiency(eff);
 }

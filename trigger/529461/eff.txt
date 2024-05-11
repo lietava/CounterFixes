@@ -1,0 +1,35 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.30/01                        https://root.cern |
+  | (c) 1995-2023, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Feb 12 2024, 10:07:08                 |
+  | From tags/v6-30-01-alice2@v6-25-02-6400-g526782cfe8              |
+  | With c++ (GCC) 12.2.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing eff3.C...
+=== Unskimmed:
+bcs Size:442913
+Total original triggers:706305 selected triggers:484580
+=== Skimmed:
+bcs Size:298841
+Total original triggers:498118 selected triggers:336113
+=== Unskimmed
+Frequncy of evSel (TVX), i.e. number of singles, number of doubles. ...
+405931 13351 2746 414 62 10 1 0 1 0 0 0 0 0 0 0 
+Fraction of singles:0.916503 sum:442913 size:442913
+LUT counters:394 363 0 2 1189 1977 8722 10424  tot:23071
+bcs cleaned size:432489
+Frequncy of evSel (TVX), i.e. number of singles, number of doubles. ...
+413870 7472 1040 115 19 0 0 0 0 0 0 0 0 0 0 0 
+Fraction of singles:0.934427 sum:432489 size:442913
+=== Skimmed
+Frequncy of evSel (TVX), i.e. number of singles, number of doubles. ...
+258239 13485 3560 604 84 17 2 0 0 0 0 0 0 0 0 0 
+Fraction of singles:0.864135 sum:298841 size:298841
+LUT counters:539 359 0 1 1679 1866 12583 9733  tot:26760
+bcs cleaned size:289108
+Frequncy of evSel (TVX), i.e. number of singles, number of doubles. ...
+264921 9272 1576 196 25 1 0 0 0 0 0 0 0 0 0 0 
+Fraction of singles:0.886495 sum:289108 size:298841
