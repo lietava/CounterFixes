@@ -1,0 +1,22 @@
+
+Processing copyObjects.C...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1715422349-YSMMQY, Host: http://alice-ccdb.cern.ch
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1715422349-s0zsjH, Host: http://ccdb-test.cern.ch:8080
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1715422349-RahSc5, Host: http://alice-ccdb.cern.ch/
+run:551394
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1715422349-RahSc5, Host: http://alice-ccdb.cern.ch
+Run start:1715252771110
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1715422349-RahSc5, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1715252111048/12fe3437-0eef-11ef-ba29-c0a80209250c for 1715252771110 (retrieve, agent_id: ctpo2cs8.cern.ch-1715422349-RahSc5), 
+Scalers test (not writing) startValGRP:1715252111048 endValGRP:1715522521000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1715252111048/9719af8c-0eec-11ef-ba29-c0a80209250c for 1715252771110 (retrieve, agent_id: ctpo2cs8.cern.ch-1715422349-RahSc5), 
+Config test (not writing) startValGRP:1715252111048 endValGRP:1715522521000
+run:551398
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1715422349-RahSc5, Host: http://alice-ccdb.cern.ch
+Run start:1715263836822
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1715422349-RahSc5, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1715263176746/b4691622-0ef4-11ef-ba4d-c0a80209250c for 1715263836822 (retrieve, agent_id: ctpo2cs8.cern.ch-1715422349-RahSc5), 
+Scalers test (not writing) startValGRP:1715263176746 endValGRP:1715546153000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1715263176746/4b32028f-0eef-11ef-ba29-c0a80209250c for 1715263836822 (retrieve, agent_id: ctpo2cs8.cern.ch-1715422349-RahSc5), 
+Config test (not writing) startValGRP:1715263176746 endValGRP:1715546153000
+Number of runs processed:2
