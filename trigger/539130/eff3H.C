@@ -11,11 +11,14 @@
 // O2 includes
 #include <iostream>
 #include <iomanip>
+#include <array>
 #include <TFile.h>
 #include <TTree.h>
 #include <TH1.h>
 #include <TMath.h>
 #include "CCDB/BasicCCDBManager.h"
+//
+#pragma link C++ class std::vector < std::array < uint64_t, 2>> + ;
 //
 std::vector<std::string> labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
 //
@@ -66,6 +69,11 @@ void bcInfo::print() const
 };
 struct bcInfos
 {
+  const std::string ccdbTest = "http://ccdb-test.cern.ch:8080";
+  const std::string ccdbProd = "http://alice-ccdb.cern.ch";
+  const std::string mCCDBPathOTSmp= "Users/m/mpuccio/EventFiltering/OTS";
+  const std::string mCCDBPathOTS= "Users/r/rlietava/EventFiltering/OTS";
+  //const std::string mCCDBPathTrigScalersSkimmed = "Users/m/mpuccio/EventFiltering/OTS/SelectionCounters";
   bcInfos() = default;
   std::vector<bcInfo> bcs;
   std::vector<bcInfo> bcs_cleaned;
@@ -74,13 +82,14 @@ struct bcInfos
   int totalTriggered = 0;
   std::array<bool,Ndim> zeros{0};  // Take care of empty or not used bits
   std::map<uint64_t,std::vector<bcInfo>> evsel2aod;
-  TH1* trigScalers;
+  TH1* mFilterCounters = nullptr;
+  TH1* mSelectionCounters = nullptr;
   bool skimmed = 0;
-  std::string mCCDBPathTrigScalers;
   //
   void getTrigScalers(int runNumber = 539130);
   uint64_t dataSize(uint64_t window);
-  void getData(TFile& inputFile, bool skimmed = 0, int Nmax = 0);
+  void getData(TFile& inputFile, int Nmax = 0);
+  void getDataCCDB(int run);
   double_t getDuration();
   void frequencyBC() const;
   void frequencyBCSorted(std::array<int,Nfreq>& freq);
@@ -104,8 +113,6 @@ struct bcInfos
 //
 void bcInfos::getTrigScalers(int runNumber)
 {
-  std::string ccdbTest = "http://ccdb-test.cern.ch:8080";
-  std::string ccdbProd = "http://alice-ccdb.cern.ch";
   auto& ccdbMgr = o2::ccdb::BasicCCDBManager::instance();
   //ccdbMgr.setURL(ccdbProd);
   //
@@ -116,13 +123,12 @@ void bcInfos::getTrigScalers(int runNumber)
   std::map<std::string,std::string> metadata;
   metadata["runNumber"] = std::to_string(runNumber);
   std::cout << "run:" << metadata["runNumber"] << " Timestamp:" << timeStamp << std::endl;
-  trigScalers = ccdbMgr.getSpecific<TH1>(mCCDBPathTrigScalers, timeStamp, metadata);
-  if( trigScalers == nullptr ) {
-    std::cout << "TrigScalers not found" << std::endl;
+  //mFilterCounters = ccdbMgr.getSpecific<TH1>(mCCDBPathTrigScalers, timeStamp, metadata);
+  if( mFilterCounters == nullptr ) {
+    std::cout << "FilterCounters not found" << std::endl;
     return;
   }
-  //TH1F* h = (TH1F*) trigScalers;
-  std::cout << "TrigScalers N bins:" << trigScalers->GetNbinsX() << std::endl;
+  std::cout << "FilterCounters N bins:" << mFilterCounters->GetNbinsX() << std::endl;
   //trigScalers->Draw();
 }
 //
@@ -156,7 +162,7 @@ uint64_t bcInfos::dataSize(uint64_t window)
 //
 // read data from root file
 //
-void bcInfos::getData(TFile& inputFile, bool skimmed, int Nmax)
+void bcInfos::getData(TFile& inputFile, int Nmax)
 {
   int i = 0;
   for (auto key : *(inputFile.GetListOfKeys())) {
@@ -196,6 +202,59 @@ void bcInfos::getData(TFile& inputFile, bool skimmed, int Nmax)
   }
   std::cout << "Total original triggers:" << totalTriggered << " selected triggers:" << totalSelected ;
   std::cout << " Duration:" << getDuration() << std::endl;
+}
+void bcInfos::getDataCCDB(int runNumber)
+{
+  auto& ccdbMgr = o2::ccdb::BasicCCDBManager::instance();
+  //ccdbMgr.setURL(ccdbProd);
+  //
+  auto soreor = ccdbMgr.getRunDuration(runNumber);
+  uint64_t timeStamp = (soreor.second - soreor.first) / 2 + soreor.first;
+  //timeStamp = 1688349854935;
+  //
+  std::map<std::string,std::string> metadata;
+  metadata["runNumber"] = std::to_string(runNumber);
+  std::cout << "run:" << metadata["runNumber"] << " Timestamp:" << timeStamp << std::endl;
+  std::string path = mCCDBPathOTS+"/FilterCounters";
+  mFilterCounters = ccdbMgr.getSpecific<TH1>(path, timeStamp, metadata);
+  if( mFilterCounters == nullptr ) {
+    std::cout << "FilterScalers not found" << std::endl;
+    return;
+  }
+  std::cout << "FilterCounters N bins:" << mFilterCounters->GetNbinsX() << std::endl;
+  path = mCCDBPathOTS+"/SelectionCounters";
+  mSelectionCounters = ccdbMgr.getSpecific<TH1>(path, timeStamp, metadata);
+  if( mSelectionCounters == nullptr ) {
+    std::cout << "SelectionCounters not found" << std::endl;
+    return;
+  }
+  std::cout << "SelectionCounters N bins:" << mSelectionCounters->GetNbinsX() << std::endl;
+  // bcinfo
+  path = mCCDBPathOTS+"/FilterBitMasks";
+  std::vector<array<uint64_t,2>>* fbm = ccdbMgr.getSpecific<std::vector<array<uint64_t,2>>>(path, timeStamp, metadata);
+  std::cout << " FBM size:" << (*fbm).size() << std::endl;
+  path = mCCDBPathOTS+"/SelectionBitMasks";
+  std::vector<array<uint64_t,2>>* sbm = ccdbMgr.getSpecific<std::vector<array<uint64_t,2>>>(path, timeStamp, metadata);
+  std::cout << " SBM size:" << (*sbm).size() << std::endl;
+  path = mCCDBPathOTS+"/SelectedBCs";
+  std::vector<array<uint64_t,2>>* sbc = ccdbMgr.getSpecific<std::vector<array<uint64_t,2>>>(path, timeStamp, metadata);
+  std::cout << " SBC size:" << (*sbc).size() << std::endl;
+  if((*fbm).size() != (*sbm).size()) {
+    std::cout << "ERROR: FBM size != SBM size" << std::endl;
+    return;
+  }
+  if((*fbm).size() != (*sbc).size()) {
+    std::cout << "ERROR: FBM size != SBC size" << std::endl;
+    return;
+  }
+  for(size_t i = 0; i < (*fbm).size(); i++) {
+    bcInfo bci;
+    bci.bcAOD = (*sbc)[i][0];
+    bci.bcEvSel = (*sbc)[i][1];
+    bci.trigMask = (*fbm)[i][0];
+    bci.selMask = (*sbm)[i][0];
+    bcs.push_back(bci);
+  }
 }
 double_t bcInfos::getDuration()
 {
@@ -330,7 +389,7 @@ void bcInfos::selectionEfficiency() const
   std::cout << "===> Selection efficiency - downscaling" << std::endl;
   std::array<double_t,Ndim> eff{0};
   for(int i =0; i < Ndim; i++) {
-    double_t before = trigScalers->GetBinContent(i+2);
+    double_t before = mFilterCounters->GetBinContent(i+2);
     double_t after = 0;
     uint64_t mask = (1ull << i);
     for(auto const& bc: bcs) {
@@ -338,7 +397,7 @@ void bcInfos::selectionEfficiency() const
         after++;
       }
     }
-    eff[i] = before/after;
+    eff[i] = after/before;
     std::string label = "?";
     if(i < (int) labels.size()) {
       label = labels[i];
@@ -580,6 +639,7 @@ struct effUtils
   void extractLabelsAnal(std::vector<std::string>& labels);
   void extractLabels(std::vector<std::string>& labels);
   void readFiles(TFile& originalFile, TFile& skimmedFile);
+  void readFiles(TFile& file);
   void skimmedEfficiency();
   void skimmedEfficiency_cleaned();
   void correlatev0(int i, int j);
@@ -589,8 +649,6 @@ struct effUtils
   //
   void fillFreq(TH1* histo, std::array<int,Nfreq>& arr);
   void fillSkimmedEff(TH1 *histo);
-  const std::string mCCDBPathTrigScalersOrigina = "Users/m/mpuccio/EventFiltering/OTS/FilterCounters";
-  const std::string mCCDBPathTrigScalersSkimmed = "Users/m/mpuccio/EventFiltering/OTS/SelectionCounters";
 };
 void effUtils::extractLabelsAnal(std::vector<std::string>& labels)
 {
@@ -618,7 +676,7 @@ void effUtils::extractLabelsAnal(std::vector<std::string>& labels)
 void effUtils::extractLabels(std::vector<std::string>& labels)
 {
   labels.clear();
-  TH1* hist1 = originalBCs.trigScalers;
+  TH1* hist1 = originalBCs.mFilterCounters;
   std::cout << "Labels Nbins:" <<  hist1->GetNbinsX() << std::endl;
   for (int i = 1; i <= hist1->GetNbinsX(); i++) {
     std::string label = hist1->GetXaxis()->GetBinLabel(i);
@@ -631,11 +689,16 @@ void effUtils::extractLabels(std::vector<std::string>& labels)
 void effUtils::readFiles(TFile& originalFile, TFile& skimmedFile)
 {
   std::cout << "=== Unskimmed:" << std::endl;
-  originalBCs.getData(originalFile, 0);
-  originalBCs.mCCDBPathTrigScalers = mCCDBPathTrigScalersOrigina;
+  originalBCs.getData(originalFile);
+  //originalBCs.mCCDBPathTrigScalers = mCCDBPathTrigScalersOrigina;
   std::cout << "=== Skimmed:" << std::endl;
-  skimmedBCs.getData(skimmedFile,1);
-  skimmedBCs.mCCDBPathTrigScalers = mCCDBPathTrigScalersSkimmed;
+  skimmedBCs.getData(skimmedFile);
+  //skimmedBCs.mCCDBPathTrigScalers = mCCDBPathTrigScalersSkimmed;
+}
+void effUtils::readFiles(TFile& file)
+{
+  skimmedBCs.getData(file);
+  originalBCs.getDataCCDB(539130);
 }
 void effUtils::skimmedEfficiency()
 {
@@ -649,8 +712,16 @@ void effUtils::skimmedEfficiency()
       }
     }
   }
+  for(auto const& bc: skimmedBCs.bcs) {
+    for(int i =0; i < Ndim; i++) {
+      uint64_t mask = (1ull << i);
+      if(bc.trigMask & mask) {
+        after[i]++;
+      }
+    }
+  }
   for(int i = 0; i < Ndim; i++) {
-    after[i] = skimmedBCs.trigScalers->GetBinContent(i+2);
+    //after[i] = skimmedBCs.mFilterCounters->GetBinContent(i+2);
     double_t e = 0;
     if(before[i] != 0) {
       double_t e = after[i]/before[i];
@@ -876,6 +947,9 @@ void effUtils::fillSkimmedEff(TH1* h)
 //
 void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed = "bcRanges_fullrun-skimmed.root")
 {
+  //bcInfos bcis;
+  //bcis.getDataCCDB(539130);
+  //return;
   TFile *f = new TFile("eff.root","RECREATE");
   TH1F * hfreqU = new TH1F("Freq Unskimm","Freq Unskimm", Nfreq,0,Nfreq);
   TH1F * hfreqS = new TH1F("Freq Skimmed","Freq Skimmed", Nfreq,0,Nfreq);
@@ -885,9 +959,8 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   TFile originalFile(original.data());
   TFile skimmedFile(skimmed.data());
   effUtils eff;
-  eff.readFiles(originalFile,skimmedFile);
-  eff.originalBCs.getTrigScalers();
-  eff.skimmedBCs.getTrigScalers();
+  //eff.readFiles(originalFile,skimmedFile);
+  eff.readFiles(skimmedFile);
   eff.extractLabels(labels);
   //eff.originalBCs.dataSize(1);
   //return;
@@ -901,7 +974,7 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   std::cout << "=== Unskimmed" << std::endl;
   //eff.originalBCs.frequencyBC();
   eff.originalBCs.evSel2AOD();
-  eff.originalBCs.cleanBC();
+  //eff.originalBCs.cleanBC();
   std::array<int,Nfreq> freqU{0};
   eff.originalBCs.frequencyBCSorted(freqU);
   eff.fillFreq(hfreqU, freqU);
