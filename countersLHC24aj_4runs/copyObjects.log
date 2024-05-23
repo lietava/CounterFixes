@@ -1,0 +1,49 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.30/01                        https://root.cern |
+  | (c) 1995-2023, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Apr 26 2024, 01:12:03                 |
+  | From tags/v6-30-01-alice4@v6-25-02-6402-g7bd79f26a4              |
+  | With c++ (GCC) 12.2.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing copyObjects.C(1,1,0)...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-lbVTl9, Host: http://alice-ccdb.cern.ch
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-d7X9DX, Host: http://ccdb-test.cern.ch:8080
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://alice-ccdb.cern.ch/
+run:551894
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://alice-ccdb.cern.ch
+Run start:1716471117347
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1716470407674/2dc77bee-190c-11ef-b077-c0a80209250c for 1716471117347 (retrieve, agent_id: ctpo2cs8.cern.ch-1716505818-DnRPV5), 
+Scalers test (not writing) startValGRP:1716470407674 endValGRP:1716731756000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1716470407674/924f2671-1908-11ef-b077-c0a80209250c for 1716471117347 (retrieve, agent_id: ctpo2cs8.cern.ch-1716505818-DnRPV5), 
+Config test (not writing) startValGRP:1716470407674 endValGRP:1716730207674
+run:551921
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://alice-ccdb.cern.ch
+Run start:1716489030450
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1716488314520/a3df8b73-193b-11ef-b23a-c0a80209250c for 1716489030450 (retrieve, agent_id: ctpo2cs8.cern.ch-1716505818-DnRPV5), 
+Scalers test (not writing) startValGRP:1716488314520 endValGRP:1716752141000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1716488314520/439ed9e2-1932-11ef-b22e-c0a80209250c for 1716489030450 (retrieve, agent_id: ctpo2cs8.cern.ch-1716505818-DnRPV5), 
+Config test (not writing) startValGRP:1716488314520 endValGRP:1716748114520
+run:551922
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://alice-ccdb.cern.ch
+Run start:1716493825964
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1716493109890/bc928aad-1948-11ef-b254-c0a80209250c for 1716493825964 (retrieve, agent_id: ctpo2cs8.cern.ch-1716505818-DnRPV5), 
+Scalers test (not writing) startValGRP:1716493109890 endValGRP:1716757766000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1716493109890/6de1ed6a-193d-11ef-b23b-c0a80209250c for 1716493825964 (retrieve, agent_id: ctpo2cs8.cern.ch-1716505818-DnRPV5), 
+Config test (not writing) startValGRP:1716493109890 endValGRP:1716752909890
+run:551923
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://alice-ccdb.cern.ch
+Run start:1716499284392
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716505818-DnRPV5, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1716498567152/b4539ab8-1954-11ef-b25d-c0a80209250c for 1716499284392 (retrieve, agent_id: ctpo2cs8.cern.ch-1716505818-DnRPV5), 
+Scalers test (not writing) startValGRP:1716498567152 endValGRP:1716762906000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1716498567152/22aa1384-194a-11ef-b254-c0a80209250c for 1716499284392 (retrieve, agent_id: ctpo2cs8.cern.ch-1716505818-DnRPV5), 
+Config test (not writing) startValGRP:1716498567152 endValGRP:1716758367152
+Number of runs in the list:4
+Number of scalers only tested (NOT written to ccdb):4 written to CCDB:0
+Number of configs only tested (NOT written to ccdb):4 written to CCDB:0
