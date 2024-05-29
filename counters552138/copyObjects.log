@@ -1,0 +1,25 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.30/01                        https://root.cern |
+  | (c) 1995-2023, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Apr 26 2024, 01:12:03                 |
+  | From tags/v6-30-01-alice4@v6-25-02-6402-g7bd79f26a4              |
+  | With c++ (GCC) 12.2.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing copyObjects.C(1,1,0)...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716973760-K1Pwip, Host: http://alice-ccdb.cern.ch
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716973760-i8gm3c, Host: http://ccdb-test.cern.ch:8080
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716973760-TO3Gbu, Host: http://alice-ccdb.cern.ch/
+run:552138
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716973760-TO3Gbu, Host: http://alice-ccdb.cern.ch
+Run start:1716932470117
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1716973760-TO3Gbu, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1716931753166/04a5bf23-1d44-11ef-b483-c0a80209250c for 1716932470117 (retrieve, agent_id: ctpo2cs8.cern.ch-1716973760-TO3Gbu), 
+Scalers test (not writing) startValGRP:1716931753166 endValGRP:1717195544000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1716931753166/b9a6b87a-1d3a-11ef-b482-c0a80209250c for 1716932470117 (retrieve, agent_id: ctpo2cs8.cern.ch-1716973760-TO3Gbu), 
+Config test (not writing) startValGRP:1716931753166 endValGRP:1717191553166
+Number of runs in the list:1
+Number of scalers only tested (NOT written to ccdb):1 written to CCDB:0
+Number of configs only tested (NOT written to ccdb):1 written to CCDB:0
