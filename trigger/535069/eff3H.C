@@ -25,7 +25,7 @@
 //
 std::vector<std::string> labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
 //
-int runNUMBER = 539130;
+int runNUMBER = 535069;
 const int Ndim = 64;
 const int Nfreq = 10;
 const int Ndim_used = 64;
@@ -885,10 +885,16 @@ void effUtils::getFrequencyComp()
   TH2F * h = new TH2F("Ori versus Skimmed Singles", "Ori versus Skimmed Singles",Ndim,0,1.2, Ndim, 0, 1.2);
   for(int i =0; i < Ndim; i++ ) {
     if(before[i]) {
-      h1->Fill(i,(double_t)originalBCs.freqDSel[i]/before[i]);
+      double_t e = (double_t)originalBCs.freqDSel[i]/before[i];
+      h1->Fill(i,e);
+      double_t er = sqrt(e*(1-e)/before[i]);
+      h1->SetBinError(i+1,er);
     }
     if(after[i]) {
-      h2->Fill(i,(double_t)skimmedBCs.freqDTri[i]/after[i]);
+      double_t e = (double_t)skimmedBCs.freqDTri[i]/after[i];
+      double_t er = sqrt(e*(1-e)/after[i]);
+      h2->Fill(i,e);
+      h2->SetBinError(i+1,er);
     }
     if(before[i]*after[i]) {
       h->Fill((double_t)originalBCs.freqDSel[i]/before[i],(double_t)skimmedBCs.freqDTri[i]/after[i],i);
@@ -1103,9 +1109,14 @@ void effUtils::vennDiagram()
       }
     }
   }
+  TH1F *h = new TH1F("Venn intersection of Trig and Sel", "Venn intersection of Trig and Sel",Ndim,0,Ndim);
   *mylog << "Venn diagrams::" << std::endl;
   for(int i = 0; i< 64; i++) {
     *mylog << "[" << i << "]" << originalBCs.selectionCounters[i] - vennInter[i] << " " << vennInter[i] << " " << skimmedBCs.triggerCounters[i] - vennInter[i] << " " << std::endl;
+    double_t e = (double_t) vennInter[i]/originalBCs.selectionCounters[i];
+    double_t er = sqrt(e*(1-e)/originalBCs.selectionCounters[i]);
+    h->Fill(i,e);
+    h->SetBinError(i+1,er);
   }
 }
 void effUtils::printCorrelations(int bit, std::vector<int>& corr, int dist, int Nprint)

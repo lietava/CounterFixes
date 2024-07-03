@@ -1,0 +1,408 @@
+bcs Size:796765
+Total original triggers:2016580 selected triggers:882712 Duration:37212.6
+run:535069 Timestamp:1682270153623
+FilterCounters N bins:66
+SelectionCounters N bins:66
+ FBM size:965799
+ SBM size:965799
+ SBC size:965799
+Labels Nbins:66
+Label size:65
+=== Unskimmed
+Freq[0]:[f 1 #11969:1,f 2 #7:0.000584844,]
+Freq[1]:[f 1 #1059:1,f 2 #1:0.000944287,]
+Freq[2]:[f 1 #173:1,]
+Freq[3]:[f 1 #397:1,]
+Freq[4]:[f 1 #0:-nan,]
+Freq[5]:[f 1 #149:1,]
+Freq[6]:[f 1 #1493:1,]
+Freq[7]:[f 1 #1093:1,f 2 #3:0.00274474,]
+Freq[8]:[f 1 #36:1,]
+Freq[9]:[f 1 #6899:1,f 2 #8:0.00115959,]
+Freq[10]:[f 1 #0:-nan,]
+Freq[11]:[f 1 #0:-nan,]
+Freq[12]:[f 1 #271695:1,]
+Freq[13]:[f 1 #476072:1,]
+Freq[14]:[f 1 #0:-nan,]
+Freq[15]:[f 1 #0:-nan,]
+Freq[16]:[f 1 #165033:1,]
+Freq[17]:[f 1 #0:-nan,]
+Freq[18]:[f 1 #0:-nan,]
+Freq[19]:[f 1 #98238:1,]
+Freq[20]:[f 1 #297924:1,f 2 #151:0.000506841,]
+Freq[21]:[f 1 #204122:1,f 2 #42:0.000205759,]
+Freq[22]:[f 1 #0:-nan,]
+Freq[23]:[f 1 #8182:1,f 2 #6:0.000733317,]
+Freq[24]:[f 1 #189617:1,f 2 #17:8.96544e-05,]
+Freq[25]:[f 1 #9574:1,f 2 #11:0.00114895,]
+Freq[26]:[f 1 #20437:1,f 2 #13:0.000636101,]
+Freq[27]:[f 1 #2277:1,f 2 #2:0.000878349,]
+Freq[28]:[f 1 #1267:1,f 2 #3:0.0023678,]
+Freq[29]:[f 1 #234:1,]
+Freq[30]:[f 1 #1323:1,f 2 #1:0.000755858,]
+Freq[31]:[f 1 #4139:1,f 2 #1:0.000241604,]
+Freq[32]:[f 1 #1979:1,]
+Freq[33]:[f 1 #230290:1,f 2 #601:0.00260975,f 3 #1:4.34235e-06,]
+Freq[34]:[f 1 #3605:1,f 2 #2746:0.76172,f 3 #442:0.122607,f 4 #47:0.0130374,f 5 #1:0.000277393,]
+Freq[35]:[f 1 #1276:1,f 2 #1872:1.46708,f 3 #594:0.465517,f 4 #74:0.0579937,f 5 #2:0.0015674,]
+Freq[36]:[f 1 #340:1,f 2 #277:0.814706,f 3 #49:0.144118,f 4 #9:0.0264706,]
+Freq[37]:[f 1 #741:1,f 2 #398:0.537112,f 3 #148:0.19973,f 4 #30:0.0404858,f 5 #1:0.00134953,]
+Freq[38]:[f 1 #363:1,f 2 #31:0.0853994,f 3 #7:0.0192837,f 4 #1:0.00275482,]
+Freq[39]:[f 1 #14218:1,f 2 #33:0.002321,]
+Freq[40]:[f 1 #3186:1,]
+Freq[41]:[f 1 #1198:1,f 2 #3:0.00250417,]
+Freq[42]:[f 1 #992:1,f 2 #1:0.00100806,]
+Freq[43]:[f 1 #0:-nan,]
+Freq[44]:[f 1 #8194:1,f 2 #9:0.00109836,]
+Freq[45]:[f 1 #0:-nan,]
+Freq[46]:[f 1 #14079:1,f 2 #35:0.00248597,]
+Freq[47]:[f 1 #2527:1,f 2 #1:0.000395726,]
+Freq[48]:[f 1 #5910:1,f 2 #11:0.00186125,]
+Freq[49]:[f 1 #0:-nan,]
+Freq[50]:[f 1 #5040:1,f 2 #6:0.00119048,]
+Freq[51]:[f 1 #0:-nan,]
+Freq[52]:[f 1 #36:1,f 2 #5:0.138889,f 3 #2:0.0555556,]
+Freq[53]:[f 1 #19042:1,f 2 #1068:0.0560865,f 3 #95:0.00498897,f 4 #9:0.000472639,]
+Freq[54]:[f 1 #388:1,f 2 #51:0.131443,f 3 #3:0.00773196,]
+Freq[55]:[f 1 #4569:1,f 2 #835:0.182753,f 3 #56:0.0122565,f 4 #2:0.000437733,]
+Freq[56]:[f 1 #12356:1,f 2 #2015:0.163079,f 3 #119:0.00963095,f 4 #2:0.000161865,]
+Freq[57]:[f 1 #3443:1,f 2 #271:0.0787104,f 3 #8:0.00232356,]
+Freq[58]:[f 1 #58966:1,f 2 #2498:0.0423634,f 3 #181:0.00306957,f 4 #7:0.000118712,]
+Freq[59]:[f 1 #5376:1,f 2 #10:0.00186012,]
+Freq[60]:[f 1 #21412:1,f 2 #42:0.00196152,f 3 #1:4.67028e-05,]
+Freq[61]:[f 1 #10407:1,]
+Freq[62]:[f 1 #172:1,]
+Freq[63]:[f 1 #510:1,]
+h->INtegral:0 wsum:0
+Freq of bcAOD (collisions):
+952092 5700 705 48 0 0 0 0 0 0 
+Fraction of singles:0.985808 sum:965799 size:965799
+===> Selection efficiency - downscaling
+BIT: 0      fTriggerEventF1Proton   b:     18378 a:     11865 eff:0.645609
+BIT: 1                 fTrackedXi   b:     45531 a:         0 eff:0
+BIT: 2          fOmegaLargeRadius   b:       173 a:       173 eff:1
+BIT: 3                fSingleXiYN   b:       397 a:       397 eff:1
+BIT: 4               fQuadrupleXi   b:         0 a:         0 eff:0
+BIT: 5                  fDoubleXi   b:      4238 a:         0 eff:0
+BIT: 6              fTrackedOmega   b:      1493 a:      1493 eff:1
+BIT: 7                  fhadronXi   b:      9482 a:         0 eff:0
+BIT: 8                  fTripleXi   b:        36 a:        36 eff:1
+BIT: 9                     fOmega   b:     54453 a:      5448 eff:0.10005
+BIT:10       fGammaVeryLowPtEMCAL   b:         0 a:         0 eff:0
+BIT:11        fGammaVeryLowPtDCAL   b:         0 a:         0 eff:0
+BIT:12          fGammaHighPtEMCAL   b:    271694 a:    271694 eff:1
+BIT:13           fGammaLowPtEMCAL   b:7.68042e+06 a:     66752 eff:0.00869119
+BIT:14       fGammaVeryHighPtDCAL   b:         0 a:         0 eff:0
+BIT:15      fGammaVeryHighPtEMCAL   b:         0 a:         0 eff:0
+BIT:16            fGammaLowPtDCAL   b:2.93528e+06 a:     24814 eff:0.00845371
+BIT:17           fJetNeutralLowPt   b:         0 a:         0 eff:0
+BIT:18          fJetNeutralHighPt   b:         0 a:         0 eff:0
+BIT:19           fGammaHighPtDCAL   b:     98238 a:     98238 eff:1
+BIT:20              fJetFullLowPt   b:1.51412e+06 a:         0 eff:0
+BIT:21             fJetFullHighPt   b:    204206 a:    204206 eff:1
+BIT:22              fEMCALReadout   b:         0 a:         0 eff:0
+BIT:23                  fPCMandEE   b:      8194 a:      8194 eff:1
+BIT:24                  fPHOSnbar   b:    189652 a:    189652 eff:1
+BIT:25           fPCMHighPtPhoton   b:      9596 a:      9596 eff:1
+BIT:26                fPHOSPhoton   b:     20463 a:     20463 eff:1
+BIT:27                        fLD   b:      2281 a:      2281 eff:1
+BIT:28                        fPD   b:      5228 a:      1035 eff:0.197972
+BIT:29                       fLLL   b:       234 a:       234 eff:1
+BIT:30                       fPLL   b:      1325 a:      1325 eff:1
+BIT:31                       fPPL   b:      4141 a:      4141 eff:1
+BIT:32                       fPPP   b:      5677 a:      1773 eff:0.312313
+BIT:33            fLeadingPtTrack   b:3.83965e+06 a:         0 eff:0
+BIT:34           fHighFt0cFv0Flat   b:     10617 a:     10617 eff:1
+BIT:35           fHighFt0cFv0Mult   b:      7109 a:      7109 eff:1
+BIT:36               fHighFt0Flat   b:      3688 a:         0 eff:0
+BIT:37               fHighFt0Mult   b:      4551 a:         0 eff:0
+BIT:38               fHighMultFv0   b:       450 a:         0 eff:0
+BIT:39             fHighTrackMult   b:     14284 a:     14284 eff:1
+BIT:40        fHfCharmBarToXiBach   b:      6199 a:      3077 eff:0.49637
+BIT:41               fHfV0Charm3P   b:      1204 a:      1204 eff:1
+BIT:42               fHfV0Charm2P   b:       994 a:       994 eff:1
+BIT:43          fHfDoubleCharmMix   b:         0 a:         0 eff:0
+BIT:44           fHfDoubleCharm3P   b:      8212 a:      8212 eff:1
+BIT:45                 fHfFemto2P   b:         0 a:         0 eff:0
+BIT:46                fHfBeauty4P   b:     14149 a:     14149 eff:1
+BIT:47                 fHfFemto3P   b:      2529 a:      2529 eff:1
+BIT:48                fHfBeauty3P   b:      5932 a:      5932 eff:1
+BIT:49                fHfHighPt3P   b:         0 a:         0 eff:0
+BIT:50           fHfDoubleCharm2P   b:      5052 a:      5052 eff:1
+BIT:51                fHfHighPt2P   b:         0 a:         0 eff:0
+BIT:52              fSingleMuHigh   b:        52 a:        52 eff:1
+BIT:53               fSingleMuLow   b:2.16518e+06 a:      2381 eff:0.00109968
+BIT:54                   fLMeeHMR   b:       499 a:       499 eff:1
+BIT:55                    fDiMuon   b:      6415 a:      6415 eff:1
+BIT:56                fDiElectron   b:     16752 a:     16752 eff:1
+BIT:57                   fLMeeIMR   b:      7035 a:      3455 eff:0.491116
+BIT:58                   fSingleE   b:3.01494e+06 a:      3244 eff:0.00107597
+BIT:59               fJetChHighPt   b:      5396 a:      5396 eff:1
+BIT:60                fJetChLowPt   b:     56568 a:      5803 eff:0.102585
+BIT:61                    fUDdiff   b:     21013 a:     10407 eff:0.495265
+BIT:62                  fH3L3Body   b:       172 a:       172 eff:1
+BIT:63                        fHe   b:       510 a:       510 eff:1
+=== Skimmed
+Freq[0]:[f 1 #7907:1,f 2 #12:0.00151764,]
+Freq[1]:[f 1 #824:1,f 2 #5:0.00606796,]
+Freq[2]:[f 1 #161:1,]
+Freq[3]:[f 1 #384:1,]
+Freq[4]:[f 1 #0:-nan,]
+Freq[5]:[f 1 #119:1,f 2 #2:0.0168067,]
+Freq[6]:[f 1 #1376:1,]
+Freq[7]:[f 1 #955:1,f 2 #7:0.00732984,]
+Freq[8]:[f 1 #34:1,]
+Freq[9]:[f 1 #2131:1,f 2 #9:0.00422337,]
+Freq[10]:[f 1 #0:-nan,]
+Freq[11]:[f 1 #0:-nan,]
+Freq[12]:[f 1 #268362:1,]
+Freq[13]:[f 1 #402065:1,]
+Freq[14]:[f 1 #0:-nan,]
+Freq[15]:[f 1 #0:-nan,]
+Freq[16]:[f 1 #135451:1,]
+Freq[17]:[f 1 #0:-nan,]
+Freq[18]:[f 1 #0:-nan,]
+Freq[19]:[f 1 #96959:1,]
+Freq[20]:[f 1 #287084:1,f 2 #179:0.000623511,]
+Freq[21]:[f 1 #201622:1,f 2 #52:0.000257908,]
+Freq[22]:[f 1 #0:-nan,]
+Freq[23]:[f 1 #7337:1,f 2 #4:0.000545182,]
+Freq[24]:[f 1 #152505:1,f 2 #12:7.86859e-05,]
+Freq[25]:[f 1 #6198:1,f 2 #11:0.00177477,]
+Freq[26]:[f 1 #19788:1,f 2 #13:0.000656964,]
+Freq[27]:[f 1 #2191:1,f 2 #2:0.000912825,]
+Freq[28]:[f 1 #462:1,f 2 #2:0.004329,]
+Freq[29]:[f 1 #225:1,]
+Freq[30]:[f 1 #1264:1,f 2 #2:0.00158228,]
+Freq[31]:[f 1 #3949:1,f 2 #5:0.00126614,]
+Freq[32]:[f 1 #779:1,]
+Freq[33]:[f 1 #216678:1,f 2 #679:0.00313368,f 3 #3:1.38454e-05,]
+Freq[34]:[f 1 #3543:1,f 2 #2730:0.770533,f 3 #437:0.123342,f 4 #46:0.0129833,f 5 #1:0.000282247,]
+Freq[35]:[f 1 #1258:1,f 2 #1842:1.46423,f 3 #595:0.472973,f 4 #71:0.0564388,f 5 #2:0.00158983,]
+Freq[36]:[f 1 #332:1,f 2 #276:0.831325,f 3 #47:0.141566,f 4 #9:0.0271084,]
+Freq[37]:[f 1 #729:1,f 2 #393:0.539095,f 3 #146:0.200274,f 4 #30:0.0411523,f 5 #1:0.00137174,]
+Freq[38]:[f 1 #358:1,f 2 #33:0.0921788,f 3 #4:0.0111732,f 4 #2:0.00558659,]
+Freq[39]:[f 1 #13792:1,f 2 #36:0.00261021,]
+Freq[40]:[f 1 #1625:1,f 2 #2:0.00123077,]
+Freq[41]:[f 1 #1075:1,f 2 #1:0.000930233,]
+Freq[42]:[f 1 #877:1,f 2 #1:0.00114025,]
+Freq[43]:[f 1 #0:-nan,]
+Freq[44]:[f 1 #7103:1,f 2 #11:0.00154864,]
+Freq[45]:[f 1 #0:-nan,]
+Freq[46]:[f 1 #12721:1,f 2 #40:0.00314441,]
+Freq[47]:[f 1 #1885:1,f 2 #2:0.00106101,]
+Freq[48]:[f 1 #5403:1,f 2 #11:0.00203591,]
+Freq[49]:[f 1 #0:-nan,]
+Freq[50]:[f 1 #4252:1,f 2 #5:0.00117592,]
+Freq[51]:[f 1 #0:-nan,]
+Freq[52]:[f 1 #34:1,f 2 #4:0.117647,f 3 #3:0.0882353,]
+Freq[53]:[f 1 #14899:1,f 2 #1061:0.0712128,f 3 #96:0.00644339,f 4 #10:0.000671186,]
+Freq[54]:[f 1 #460:1,f 2 #55:0.119565,f 3 #4:0.00869565,]
+Freq[55]:[f 1 #4522:1,f 2 #831:0.183768,f 3 #59:0.0130473,f 4 #2:0.000442282,]
+Freq[56]:[f 1 #12178:1,f 2 #2021:0.165955,f 3 #111:0.0091148,f 4 #3:0.000246346,]
+Freq[57]:[f 1 #2402:1,f 2 #240:0.0999167,f 3 #11:0.00457952,]
+Freq[58]:[f 1 #50152:1,f 2 #2473:0.0493101,f 3 #173:0.00344951,f 4 #8:0.000159515,]
+Freq[59]:[f 1 #5284:1,f 2 #9:0.00170326,]
+Freq[60]:[f 1 #17357:1,f 2 #45:0.00259261,]
+Freq[61]:[f 1 #4887:1,]
+Freq[62]:[f 1 #98:1,]
+Freq[63]:[f 1 #495:1,]
+h->INtegral:0 wsum:0
+Venn diagrams::
+[0]4076 7789 142 
+[1]0 0 834 
+[2]14 159 2 
+[3]14 383 1 
+[4]0 0 0 
+[5]0 0 123 
+[6]125 1368 8 
+[7]0 0 969 
+[8]2 34 0 
+[9]4647 801 1348 
+[10]0 0 0 
+[11]0 0 0 
+[12]3389 268305 56 
+[13]62636 4116 397948 
+[14]0 0 0 
+[15]0 0 0 
+[16]23464 1350 134101 
+[17]0 0 0 
+[18]0 0 0 
+[19]1287 96951 8 
+[20]0 0 287442 
+[21]2532 201674 52 
+[22]0 0 0 
+[23]884 7310 35 
+[24]37655 151997 533 
+[25]3657 5939 281 
+[26]714 19749 65 
+[27]90 2191 4 
+[28]799 236 230 
+[29]10 224 1 
+[30]68 1257 11 
+[31]195 3946 13 
+[32]1198 575 204 
+[33]0 0 218044 
+[34]115 10502 2 
+[35]87 7022 0 
+[36]0 0 1062 
+[37]0 0 2078 
+[38]0 0 444 
+[39]482 13802 62 
+[40]1557 1520 109 
+[41]143 1061 16 
+[42]135 859 20 
+[43]0 0 0 
+[44]1439 6773 352 
+[45]0 0 0 
+[46]1527 12622 179 
+[47]768 1761 128 
+[48]566 5366 59 
+[49]0 0 0 
+[50]952 4100 162 
+[51]0 0 0 
+[52]2 50 1 
+[53]2356 25 17324 
+[54]23 476 106 
+[55]56 6359 10 
+[56]237 16515 51 
+[57]1421 2034 881 
+[58]3171 73 55576 
+[59]111 5285 17 
+[60]3637 2166 15281 
+[61]6060 4347 540 
+[62]74 98 0 
+[63]15 495 0 
+===> Skimming efficiency
+BIT: 0      fTriggerEventF1Proton ds:  0.645609   b:     11865 a:      7931 eff:0 Venn Inter:      7789
+BIT: 1                 fTrackedXi ds:         0   b:         0 a:       834 eff:0 Venn Inter:         0
+BIT: 2          fOmegaLargeRadius ds:         1   b:       173 a:       161 eff:0 Venn Inter:       159
+BIT: 3                fSingleXiYN ds:         1   b:       397 a:       384 eff:0 Venn Inter:       383
+BIT: 4               fQuadrupleXi ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT: 5                  fDoubleXi ds:         0   b:         0 a:       123 eff:0 Venn Inter:         0
+BIT: 6              fTrackedOmega ds:         1   b:      1493 a:      1376 eff:0 Venn Inter:      1368
+BIT: 7                  fhadronXi ds:         0   b:         0 a:       969 eff:0 Venn Inter:         0
+BIT: 8                  fTripleXi ds:         1   b:        36 a:        34 eff:0 Venn Inter:        34
+BIT: 9                     fOmega ds:   0.10005   b:      5448 a:      2149 eff:0 Venn Inter:       801
+BIT:10       fGammaVeryLowPtEMCAL ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:11        fGammaVeryLowPtDCAL ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:12          fGammaHighPtEMCAL ds:         1   b:    271694 a:    268361 eff:0 Venn Inter:    268305
+BIT:13           fGammaLowPtEMCAL ds:0.00869119   b:     66752 a:    402064 eff:6 Venn Inter:      4116
+BIT:14       fGammaVeryHighPtDCAL ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:15      fGammaVeryHighPtEMCAL ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:16            fGammaLowPtDCAL ds:0.00845371   b:     24814 a:    135451 eff:5 Venn Inter:      1350
+BIT:17           fJetNeutralLowPt ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:18          fJetNeutralHighPt ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:19           fGammaHighPtDCAL ds:         1   b:     98238 a:     96959 eff:0 Venn Inter:     96951
+BIT:20              fJetFullLowPt ds:         0   b:         0 a:    287442 eff:0 Venn Inter:         0
+BIT:21             fJetFullHighPt ds:         1   b:    204206 a:    201726 eff:0 Venn Inter:    201674
+BIT:22              fEMCALReadout ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:23                  fPCMandEE ds:         1   b:      8194 a:      7345 eff:0 Venn Inter:      7310
+BIT:24                  fPHOSnbar ds:         1   b:    189652 a:    152530 eff:0 Venn Inter:    151997
+BIT:25           fPCMHighPtPhoton ds:         1   b:      9596 a:      6220 eff:0 Venn Inter:      5939
+BIT:26                fPHOSPhoton ds:         1   b:     20463 a:     19814 eff:0 Venn Inter:     19749
+BIT:27                        fLD ds:         1   b:      2281 a:      2195 eff:0 Venn Inter:      2191
+BIT:28                        fPD ds:  0.197972   b:      1035 a:       466 eff:0 Venn Inter:       236
+BIT:29                       fLLL ds:         1   b:       234 a:       225 eff:0 Venn Inter:       224
+BIT:30                       fPLL ds:         1   b:      1325 a:      1268 eff:0 Venn Inter:      1257
+BIT:31                       fPPL ds:         1   b:      4141 a:      3959 eff:0 Venn Inter:      3946
+BIT:32                       fPPP ds:  0.312313   b:      1773 a:       779 eff:0 Venn Inter:       575
+BIT:33            fLeadingPtTrack ds:         0   b:         0 a:    218044 eff:0 Venn Inter:         0
+BIT:34           fHighFt0cFv0Flat ds:         1   b:     10617 a:     10504 eff:0 Venn Inter:     10502
+BIT:35           fHighFt0cFv0Mult ds:         1   b:      7109 a:      7022 eff:0 Venn Inter:      7022
+BIT:36               fHighFt0Flat ds:         0   b:         0 a:      1062 eff:0 Venn Inter:         0
+BIT:37               fHighFt0Mult ds:         0   b:         0 a:      2078 eff:0 Venn Inter:         0
+BIT:38               fHighMultFv0 ds:         0   b:         0 a:       444 eff:0 Venn Inter:         0
+BIT:39             fHighTrackMult ds:         1   b:     14284 a:     13864 eff:0 Venn Inter:     13802
+BIT:40        fHfCharmBarToXiBach ds:   0.49637   b:      3077 a:      1629 eff:0 Venn Inter:      1520
+BIT:41               fHfV0Charm3P ds:         1   b:      1204 a:      1077 eff:0 Venn Inter:      1061
+BIT:42               fHfV0Charm2P ds:         1   b:       994 a:       879 eff:0 Venn Inter:       859
+BIT:43          fHfDoubleCharmMix ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:44           fHfDoubleCharm3P ds:         1   b:      8212 a:      7125 eff:0 Venn Inter:      6773
+BIT:45                 fHfFemto2P ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:46                fHfBeauty4P ds:         1   b:     14149 a:     12801 eff:0 Venn Inter:     12622
+BIT:47                 fHfFemto3P ds:         1   b:      2529 a:      1889 eff:0 Venn Inter:      1761
+BIT:48                fHfBeauty3P ds:         1   b:      5932 a:      5425 eff:0 Venn Inter:      5366
+BIT:49                fHfHighPt3P ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:50           fHfDoubleCharm2P ds:         1   b:      5052 a:      4262 eff:0 Venn Inter:      4100
+BIT:51                fHfHighPt2P ds:         0   b:         0 a:         0 eff:0 Venn Inter:         0
+BIT:52              fSingleMuHigh ds:         1   b:        52 a:        51 eff:0 Venn Inter:        50
+BIT:53               fSingleMuLow ds:0.00109968   b:      2381 a:     17349 eff:7 Venn Inter:        25
+BIT:54                   fLMeeHMR ds:         1   b:       499 a:       582 eff:1 Venn Inter:       476
+BIT:55                    fDiMuon ds:         1   b:      6415 a:      6369 eff:0 Venn Inter:      6359
+BIT:56                fDiElectron ds:         1   b:     16752 a:     16566 eff:0 Venn Inter:     16515
+BIT:57                   fLMeeIMR ds:  0.491116   b:      3455 a:      2915 eff:0 Venn Inter:      2034
+BIT:58                   fSingleE ds:0.00107597   b:      3244 a:     55649 eff:17 Venn Inter:        73
+BIT:59               fJetChHighPt ds:         1   b:      5396 a:      5302 eff:0 Venn Inter:      5285
+BIT:60                fJetChLowPt ds:  0.102585   b:      5803 a:     17447 eff:3 Venn Inter:      2166
+BIT:61                    fUDdiff ds:  0.495265   b:     10407 a:      4887 eff:0 Venn Inter:      4347
+BIT:62                  fH3L3Body ds:         1   b:       172 a:        98 eff:0 Venn Inter:        98
+BIT:63                        fHe ds:         1   b:       510 a:       495 eff:0 Venn Inter:       495
+Starting correlation all. Correlation window +/-1000
+ndatai:965799 ndataj:796765
+idata:965799 jdata:796765
+BIT:0 0 0 0 0 0 0 0 0 0 0 7789 3 0 0 0 0 0 0 0 0 0
+BIT:1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:2 0 0 0 0 0 0 0 0 0 0 159 1 0 0 0 0 0 0 0 0 0
+BIT:3 0 0 0 0 0 0 0 0 0 0 383 1 0 0 0 0 0 0 0 0 0
+BIT:4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:6 0 0 0 0 0 0 0 0 0 0 1368 0 1 0 0 0 0 0 0 0 0
+BIT:7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:8 0 0 0 0 0 0 0 0 0 0 34 0 0 0 0 0 0 0 0 0 0
+BIT:9 0 0 0 0 0 0 0 0 0 0 801 0 0 0 0 0 0 0 0 0 0
+BIT:10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:12 16 15 15 22 20 7 12 12 16 16 268319 14 15 12 12 7 20 22 16 14 17
+BIT:13 10 4 7 7 7 4 4 4 6 3 4118 4 1 1 4 6 7 3 4 7 5
+BIT:14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:16 1 3 0 0 3 1 0 1 0 1 1352 0 0 1 1 0 0 1 0 1 0
+BIT:17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:19 2 2 4 7 3 2 2 3 1 5 96953 5 1 3 2 2 3 7 4 2 2
+BIT:20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:21 13 12 12 12 6 4 9 2 10 16 201694 17 10 2 8 4 6 11 12 11 12
+BIT:22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:23 0 0 0 0 0 0 0 2 1 0 7310 7 0 0 2 0 0 0 0 0 0
+BIT:24 10 8 7 7 5 9 4 6 7 6 152005 5 12 6 6 8 3 4 6 8 7
+BIT:25 0 0 0 1 2 0 0 0 0 0 5939 2 0 0 0 0 0 0 0 0 0
+BIT:26 0 0 0 0 0 0 0 0 0 0 19749 0 0 0 0 0 0 0 0 0 0
+BIT:27 0 0 0 0 0 0 0 0 0 0 2191 1 1 0 0 0 0 0 0 0 0
+BIT:28 0 0 0 0 0 0 0 0 0 0 236 0 0 0 0 0 0 0 0 0 0
+BIT:29 0 0 0 0 0 0 0 0 0 0 224 0 0 0 0 0 0 0 0 0 0
+BIT:30 0 0 0 0 0 0 0 0 0 0 1257 0 0 0 0 0 0 0 0 0 0
+BIT:31 0 0 0 0 0 0 0 1 0 0 3946 2 0 0 0 0 0 0 0 0 0
+BIT:32 0 0 0 0 0 0 0 0 0 0 575 0 0 0 0 0 0 0 0 0 0
+BIT:33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:34 0 0 0 0 0 0 0 0 0 0 19126 0 0 0 0 0 0 0 0 0 0
+BIT:35 0 0 0 0 0 0 0 0 0 0 15149 0 0 0 0 0 0 0 0 0 0
+BIT:36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:37 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:38 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:39 0 0 0 0 0 0 0 0 0 1 13802 15 2 0 0 0 0 0 0 0 0
+BIT:40 0 0 0 0 0 0 0 0 0 0 1520 3 0 0 0 0 0 0 0 0 0
+BIT:41 0 0 0 0 0 0 0 1 0 0 1061 0 1 0 0 0 0 0 0 0 0
+BIT:42 0 0 0 0 0 0 0 0 0 0 859 2 0 0 0 0 0 0 0 0 0
+BIT:43 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:44 0 0 0 0 0 0 0 0 0 0 6773 4 0 0 0 0 0 0 0 0 0
+BIT:45 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:46 0 0 0 0 0 0 0 0 0 0 12672 8 0 0 0 0 0 0 0 0 0
+BIT:47 0 0 0 0 0 0 0 0 0 0 1761 1 0 0 0 0 0 0 0 0 0
+BIT:48 0 0 0 0 0 0 0 0 0 0 5374 3 2 0 0 0 0 0 0 0 0
+BIT:49 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:50 0 0 0 0 0 0 0 0 0 0 4100 1 0 0 0 0 0 0 0 0 0
+BIT:51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:52 0 0 0 0 0 0 0 0 0 0 74 3 0 0 0 0 0 0 0 0 0
+BIT:53 0 0 0 0 0 0 0 0 0 0 26 0 0 1 0 0 0 0 0 0 0
+BIT:54 0 0 0 0 0 0 0 0 1 0 592 0 1 0 0 0 0 0 0 0 0
+BIT:55 0 0 5 12 18 13 18 31 20 32 8371 34 22 31 18 11 18 13 5 0 0
+BIT:56 0 0 5 10 11 17 13 22 27 39 21162 83 41 22 13 17 11 10 5 0 0
+BIT:57 0 0 0 0 1 2 2 4 5 5 2311 4 0 3 1 2 1 2 1 0 0
+BIT:58 0 0 0 0 1 0 0 0 0 0 79 0 0 0 0 0 1 0 0 0 0
+BIT:59 0 0 0 0 0 0 0 0 0 0 5285 4 2 0 0 0 0 0 0 0 0
+BIT:60 0 0 0 0 0 0 0 0 0 0 2166 1 0 0 0 0 0 0 0 0 0
+BIT:61 0 0 0 0 0 0 0 0 0 1 4347 489 39 3 0 0 0 0 0 0 0
+BIT:62 0 0 0 0 0 0 0 0 0 0 98 0 0 0 0 0 0 0 0 0 0
+BIT:63 0 0 0 0 0 0 0 0 0 0 495 0 0 0 0 0 0 0 0 0 0
+Time:1569.61

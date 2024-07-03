@@ -1,0 +1,222 @@
+bcs Size:629029
+Total original triggers:1087637 selected triggers:661633 Duration:3045.39
+run:539130 Timestamp:1688348156582
+FilterCounters N bins:66
+SelectionCounters N bins:66
+ FBM size:826892
+ SBM size:826892
+ SBC size:826892
+Labels Nbins:66
+Label size:65
+=== Unskimmed
+Frequency of evSel (TVX), i.e. number of singles, number of doubles. ...
+766230 25744 2719 216 22 2 1 0 0 0 
+Fraction of singles:0.926639 sum:826868 pairs35468 size:826892
+h->INtegral:794934 wsum:826868
+Freq of bcAOD:
+785470 18437 1402 71 8 3 0 0 0 0 
+Fraction of singles:0.949906 sum:826892 size:826892
+===> Selection efficiency - downscaling
+BIT: 0      fTriggerEventF1Proton   b:     83247 a:     54315 eff:0.652456
+BIT: 1                 fTrackedXi   b:    166869 a:         0 eff:0
+BIT: 2          fOmegaLargeRadius   b:      1062 a:      1062 eff:1
+BIT: 3                fSingleXiYN   b:      2112 a:      2112 eff:1
+BIT: 4               fQuadrupleXi   b:        16 a:         0 eff:0
+BIT: 5                  fDoubleXi   b:     26972 a:         0 eff:0
+BIT: 6              fTrackedOmega   b:      5588 a:      5588 eff:1
+BIT: 7                  fhadronXi   b:     39442 a:         0 eff:0
+BIT: 8                  fTripleXi   b:       352 a:       352 eff:1
+BIT: 9                     fOmega   b:    284192 a:     28742 eff:0.101136
+BIT:10       fGammaVeryLowPtEMCAL   b:         0 a:         0 eff:-nan
+BIT:11        fGammaVeryLowPtDCAL   b:         0 a:         0 eff:-nan
+BIT:12          fGammaHighPtEMCAL   b:         0 a:         0 eff:-nan
+BIT:13           fGammaLowPtEMCAL   b:         0 a:         0 eff:-nan
+BIT:14       fGammaVeryHighPtDCAL   b:         0 a:         0 eff:-nan
+BIT:15      fGammaVeryHighPtEMCAL   b:         0 a:         0 eff:-nan
+BIT:16            fGammaLowPtDCAL   b:         0 a:         0 eff:-nan
+BIT:17           fJetNeutralLowPt   b:         0 a:         0 eff:-nan
+BIT:18          fJetNeutralHighPt   b:         0 a:         0 eff:-nan
+BIT:19           fGammaHighPtDCAL   b:         0 a:         0 eff:-nan
+BIT:20              fJetFullLowPt   b:         0 a:         0 eff:-nan
+BIT:21             fJetFullHighPt   b:         0 a:         0 eff:-nan
+BIT:22              fEMCALReadout   b:         0 a:         0 eff:-nan
+BIT:23                  fPCMandEE   b:     25507 a:     25507 eff:1
+BIT:24                  fPHOSnbar   b:      8796 a:      8796 eff:1
+BIT:25           fPCMHighPtPhoton   b:     22874 a:     22874 eff:1
+BIT:26                fPHOSPhoton   b:     23396 a:     23396 eff:1
+BIT:27                        fLD   b:     13159 a:     13159 eff:1
+BIT:28                        fPD   b:     33042 a:      6477 eff:0.196023
+BIT:29                       fLLL   b:      2039 a:      2039 eff:1
+BIT:30                       fPLL   b:     10775 a:     10775 eff:1
+BIT:31                       fPPL   b:     27707 a:     27707 eff:1
+BIT:32                       fPPP   b:     31543 a:      9551 eff:0.302793
+BIT:33            fLeadingPtTrack   b:1.31099e+07 a:         0 eff:0
+BIT:34           fHighFt0cFv0Flat   b:     22470 a:     22470 eff:1
+BIT:35           fHighFt0cFv0Mult   b:     56765 a:     56765 eff:1
+BIT:36               fHighFt0Flat   b:     10123 a:         0 eff:0
+BIT:37               fHighFt0Mult   b:     67838 a:         0 eff:0
+BIT:38               fHighMultFv0   b:      6946 a:         0 eff:0
+BIT:39             fHighTrackMult   b:     31603 a:     31603 eff:1
+BIT:40        fHfCharmBarToXiBach   b:     28537 a:     14189 eff:0.497214
+BIT:41               fHfV0Charm3P   b:      2279 a:      2279 eff:1
+BIT:42               fHfV0Charm2P   b:      2812 a:      2812 eff:1
+BIT:43          fHfDoubleCharmMix   b:         0 a:         0 eff:-nan
+BIT:44           fHfDoubleCharm3P   b:     16715 a:     16715 eff:1
+BIT:45                 fHfFemto2P   b:         0 a:         0 eff:-nan
+BIT:46                fHfBeauty4P   b:     31369 a:     31369 eff:1
+BIT:47                 fHfFemto3P   b:     13021 a:     13021 eff:1
+BIT:48                fHfBeauty3P   b:     13193 a:     13193 eff:1
+BIT:49                fHfHighPt3P   b:         0 a:         0 eff:-nan
+BIT:50           fHfDoubleCharm2P   b:     12047 a:     12047 eff:1
+BIT:51                fHfHighPt2P   b:         0 a:         0 eff:-nan
+BIT:52              fSingleMuHigh   b:       286 a:       286 eff:1
+BIT:53               fSingleMuLow   b:1.53299e+07 a:     17260 eff:0.0011259
+BIT:54                   fLMeeHMR   b:     14623 a:     14623 eff:1
+BIT:55                    fDiMuon   b:     52384 a:     52384 eff:1
+BIT:56                fDiElectron   b:    123975 a:    123975 eff:1
+BIT:57                   fLMeeIMR   b:    173197 a:     85219 eff:0.492035
+BIT:58                   fSingleE   b:2.10063e+07 a:     22967 eff:0.00109334
+BIT:59               fJetChHighPt   b:     18212 a:     18212 eff:1
+BIT:60                fJetChLowPt   b:    186835 a:     18770 eff:0.100463
+BIT:61                    fUDdiff   b:     79015 a:     39054 eff:0.494261
+BIT:62                  fH3L3Body   b:       662 a:       662 eff:1
+BIT:63                        fHe   b:      6722 a:      6722 eff:1
+=== Skimmed
+LUT counters:175 317 172 216 1067 2431 10339 18307  tot:33024
+bcs cleaned size:610722
+Frequency of evSel (TVX), i.e. number of singles, number of doubles. ...
+568950 25476 2711 220 19 2 1 0 0 0 
+Fraction of singles:0.904489 sum:629029 pairs35170 size:629029
+h->INtegral:597379 wsum:629029
+===> Skimming efficiency
+BIT: 0      fTriggerEventF1Proton   b:     54315 a:     34510 eff:0.635368
+BIT: 1                 fTrackedXi   b:         0 a:      2485 eff:0
+BIT: 2          fOmegaLargeRadius   b:      1062 a:      1033 eff:0.972693
+BIT: 3                fSingleXiYN   b:      2112 a:      2070 eff:0.980114
+BIT: 4               fQuadrupleXi   b:         0 a:        16 eff:0
+BIT: 5                  fDoubleXi   b:         0 a:       597 eff:0
+BIT: 6              fTrackedOmega   b:      5588 a:      5338 eff:0.955261
+BIT: 7                  fhadronXi   b:         0 a:       973 eff:0
+BIT: 8                  fTripleXi   b:       352 a:       328 eff:0.931818
+BIT: 9                     fOmega   b:     28742 a:      8343 eff:0.290272
+BIT:10       fGammaVeryLowPtEMCAL   b:         0 a:         0 eff:0
+BIT:11        fGammaVeryLowPtDCAL   b:         0 a:         0 eff:0
+BIT:12          fGammaHighPtEMCAL   b:         0 a:         0 eff:0
+BIT:13           fGammaLowPtEMCAL   b:         0 a:         0 eff:0
+BIT:14       fGammaVeryHighPtDCAL   b:         0 a:         0 eff:0
+BIT:15      fGammaVeryHighPtEMCAL   b:         0 a:         0 eff:0
+BIT:16            fGammaLowPtDCAL   b:         0 a:         0 eff:0
+BIT:17           fJetNeutralLowPt   b:         0 a:         0 eff:0
+BIT:18          fJetNeutralHighPt   b:         0 a:         0 eff:0
+BIT:19           fGammaHighPtDCAL   b:         0 a:         0 eff:0
+BIT:20              fJetFullLowPt   b:         0 a:         0 eff:0
+BIT:21             fJetFullHighPt   b:         0 a:         0 eff:0
+BIT:22              fEMCALReadout   b:         0 a:         0 eff:0
+BIT:23                  fPCMandEE   b:     25507 a:     21570 eff:0.84565
+BIT:24                  fPHOSnbar   b:      8796 a:      6508 eff:0.739882
+BIT:25           fPCMHighPtPhoton   b:     22874 a:     10037 eff:0.438795
+BIT:26                fPHOSPhoton   b:     23396 a:     22606 eff:0.966234
+BIT:27                        fLD   b:     13159 a:     12450 eff:0.946121
+BIT:28                        fPD   b:      6477 a:      2937 eff:0.453451
+BIT:29                       fLLL   b:      2039 a:      1679 eff:0.823443
+BIT:30                       fPLL   b:     10775 a:      9588 eff:0.889838
+BIT:31                       fPPL   b:     27707 a:     25707 eff:0.927816
+BIT:32                       fPPP   b:      9551 a:      3763 eff:0.39399
+BIT:33            fLeadingPtTrack   b:         0 a:     74326 eff:0
+BIT:34           fHighFt0cFv0Flat   b:     22470 a:     22426 eff:0.998042
+BIT:35           fHighFt0cFv0Mult   b:     56765 a:     56164 eff:0.989412
+BIT:36               fHighFt0Flat   b:         0 a:      2159 eff:0
+BIT:37               fHighFt0Mult   b:         0 a:     25959 eff:0
+BIT:38               fHighMultFv0   b:         0 a:      6844 eff:0
+BIT:39             fHighTrackMult   b:     31603 a:     30540 eff:0.966364
+BIT:40        fHfCharmBarToXiBach   b:     14189 a:      7111 eff:0.501163
+BIT:41               fHfV0Charm3P   b:      2279 a:      2067 eff:0.906977
+BIT:42               fHfV0Charm2P   b:      2812 a:      2619 eff:0.931366
+BIT:43          fHfDoubleCharmMix   b:         0 a:         0 eff:0
+BIT:44           fHfDoubleCharm3P   b:     16715 a:     14255 eff:0.852827
+BIT:45                 fHfFemto2P   b:         0 a:         0 eff:0
+BIT:46                fHfBeauty4P   b:     31369 a:     28407 eff:0.905576
+BIT:47                 fHfFemto3P   b:     13021 a:     10580 eff:0.812534
+BIT:48                fHfBeauty3P   b:     13193 a:     12248 eff:0.928371
+BIT:49                fHfHighPt3P   b:         0 a:         0 eff:0
+BIT:50           fHfDoubleCharm2P   b:     12047 a:     10544 eff:0.875239
+BIT:51                fHfHighPt2P   b:         0 a:         0 eff:0
+BIT:52              fSingleMuHigh   b:       286 a:       282 eff:0.986014
+BIT:53               fSingleMuLow   b:     17260 a:     67094 eff:3.88725
+BIT:54                   fLMeeHMR   b:     14623 a:     14244 eff:0.974082
+BIT:55                    fDiMuon   b:     52384 a:     51496 eff:0.983048
+BIT:56                fDiElectron   b:    123975 a:    122196 eff:0.98565
+BIT:57                   fLMeeIMR   b:     85219 a:     77451 eff:0.908847
+BIT:58                   fSingleE   b:     22967 a:    206687 eff:8.9993
+BIT:59               fJetChHighPt   b:     18212 a:     18029 eff:0.989952
+BIT:60                fJetChLowPt   b:     18770 a:     25357 eff:1.35093
+BIT:61                    fUDdiff   b:     39054 a:     19319 eff:0.494674
+BIT:62                  fH3L3Body   b:       662 a:       535 eff:0.808157
+BIT:63                        fHe   b:      6722 a:      6160 eff:0.916394
+Starting correlation all. Correlation window +/-100
+ndatai:826892 ndataj:629029
+BIT:0 1 0 1 0 1 0 2 0 1 24 33860 66 0 0 1 2 0 1 1 0 2
+BIT:1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:2 0 0 0 0 0 0 0 0 0 1 1023 1 0 0 0 0 0 0 0 0 0
+BIT:3 0 0 0 0 0 0 0 0 0 2 2063 3 0 0 0 0 0 0 0 0 0
+BIT:4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:6 0 1 0 0 0 0 0 0 1 3 5301 4 1 0 2 0 0 0 0 0 0
+BIT:7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:8 0 0 0 0 0 0 0 0 0 0 326 1 0 0 0 0 0 0 0 0 0
+BIT:9 0 1 0 0 0 0 1 0 2 4 3346 6 0 0 0 0 0 0 0 1 0
+BIT:10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:11 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:12 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:13 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:18 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:20 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:21 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:23 0 0 0 1 0 1 1 0 2 16 21344 35 0 2 0 1 0 2 0 0 0
+BIT:24 0 0 0 0 0 0 0 0 0 2 6388 6 0 0 0 0 0 0 0 0 0
+BIT:25 1 1 1 3 3 3 2 1 1 6 8398 9 3 2 2 2 3 3 3 1 4
+BIT:26 0 0 1 0 0 0 0 1 0 3 22558 14 0 1 0 0 0 0 1 0 0
+BIT:27 0 0 0 0 1 0 1 1 0 5 12381 30 1 0 0 0 0 0 0 0 0
+BIT:28 0 0 0 0 0 0 0 0 0 3 1556 2 0 0 0 0 0 0 0 0 0
+BIT:29 0 0 0 0 0 0 0 0 0 1 1657 10 0 0 0 0 0 0 0 0 0
+BIT:30 0 1 0 0 0 0 0 0 0 5 9535 17 0 0 0 1 0 0 0 0 0
+BIT:31 0 0 0 0 0 1 0 1 0 16 25608 38 1 0 2 1 0 0 1 0 0
+BIT:32 0 0 0 0 0 0 0 0 0 2 2980 0 0 0 0 0 0 0 0 0 0
+BIT:33 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:34 0 0 0 0 0 0 0 0 0 0 38495 0 0 0 0 0 0 0 0 0 0
+BIT:35 2 1 0 0 0 0 0 0 0 4 89991 4 0 0 0 0 0 0 0 1 2
+BIT:36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:37 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:38 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:39 0 1 0 0 1 0 1 0 2 14 30356 124 5 1 0 0 1 0 0 0 0
+BIT:40 0 0 0 0 0 0 0 0 1 2 6859 12 0 0 0 0 0 1 0 0 0
+BIT:41 0 0 0 0 0 0 0 0 0 2 2017 3 0 0 0 0 0 0 0 0 0
+BIT:42 0 0 0 0 0 0 0 0 0 0 2529 4 0 0 0 0 0 0 0 0 0
+BIT:43 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:44 0 0 0 1 2 0 1 1 3 7 13655 36 0 2 0 2 0 1 0 0 1
+BIT:45 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:46 2 0 1 0 2 1 1 1 0 14 28112 64 3 1 1 0 1 0 1 0 2
+BIT:47 0 0 0 0 0 0 0 0 0 5 10339 24 0 0 0 0 0 0 0 0 0
+BIT:48 0 0 0 0 0 0 0 0 1 5 12176 31 1 1 0 0 0 0 0 0 0
+BIT:49 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:50 0 0 0 0 0 0 0 0 0 3 10347 24 0 0 0 0 0 0 0 0 1
+BIT:51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+BIT:52 0 2 1 1 2 0 5 2 1 5 299 6 1 3 5 0 2 1 1 2 0
+BIT:53 2 0 1 0 0 1 1 1 2 0 136 2 2 0 0 1 3 0 0 0 2
+BIT:54 25 31 22 22 29 23 29 30 33 82 14751 93 31 31 27 23 30 23 19 32 24
+BIT:55 309 276 262 248 269 255 291 414 664 578 57621 610 685 415 282 265 261 247 260 258 313
+BIT:56 341 340 299 289 306 336 318 381 447 865 130663 979 435 388 329 325 308 282 295 335 351
+BIT:57 95 91 69 83 73 86 73 85 133 298 49506 337 113 96 79 93 84 90 69 112 95
+BIT:58 0 2 4 4 1 5 2 1 4 0 266 8 1 1 2 3 4 4 4 3 4
+BIT:59 0 0 0 0 0 0 0 0 0 9 17942 50 0 0 0 0 0 0 0 0 0
+BIT:60 0 0 0 0 0 0 0 1 0 1 4109 15 0 0 0 0 0 0 0 0 0
+BIT:61 0 0 0 0 0 2 2 3 1 16 17215 80 55 4 2 3 0 0 0 0 1
+BIT:62 0 0 0 0 0 0 0 1 0 0 525 0 1 0 0 0 0 0 0 0 0
+BIT:63 1 1 0 1 0 1 0 5 3 2 6013 9 2 0 1 1 1 0 0 0 2
+Time:462.51
