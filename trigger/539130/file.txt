@@ -8,72 +8,72 @@ SelectionCounters N bins:66
  SBC size:826892
 Labels Nbins:66
 Label size:65
+0 fTriggerEventF1Proton
+1 fTrackedXi
+2 fOmegaLargeRadius
+3 fSingleXiYN
+4 fQuadrupleXi
+5 fDoubleXi
+6 fTrackedOmega
+7 fhadronXi
+8 fTripleXi
+9 fOmega
+10 fGammaVeryLowPtEMCAL
+11 fGammaVeryLowPtDCAL
+12 fGammaHighPtEMCAL
+13 fGammaLowPtEMCAL
+14 fGammaVeryHighPtDCAL
+15 fGammaVeryHighPtEMCAL
+16 fGammaLowPtDCAL
+17 fJetNeutralLowPt
+18 fJetNeutralHighPt
+19 fGammaHighPtDCAL
+20 fJetFullLowPt
+21 fJetFullHighPt
+22 fEMCALReadout
+23 fPCMandEE
+24 fPHOSnbar
+25 fPCMHighPtPhoton
+26 fPHOSPhoton
+27 fLD
+28 fPD
+29 fLLL
+30 fPLL
+31 fPPL
+32 fPPP
+33 fLeadingPtTrack
+34 fHighFt0cFv0Flat
+35 fHighFt0cFv0Mult
+36 fHighFt0Flat
+37 fHighFt0Mult
+38 fHighMultFv0
+39 fHighTrackMult
+40 fHfCharmBarToXiBach
+41 fHfV0Charm3P
+42 fHfV0Charm2P
+43 fHfDoubleCharmMix
+44 fHfDoubleCharm3P
+45 fHfFemto2P
+46 fHfBeauty4P
+47 fHfFemto3P
+48 fHfBeauty3P
+49 fHfHighPt3P
+50 fHfDoubleCharm2P
+51 fHfHighPt2P
+52 fSingleMuHigh
+53 fSingleMuLow
+54 fLMeeHMR
+55 fDiMuon
+56 fDiElectron
+57 fLMeeIMR
+58 fSingleE
+59 fJetChHighPt
+60 fJetChLowPt
+61 fUDdiff
+62 fH3L3Body
+63 fHe
+64 Triggered events
 === Unskimmed
-Freq[0]:[f 1 #54551:1,f 2 #15:0.000274972,]
-Freq[1]:[f 1 #3219:1,f 2 #7:0.00217459,]
-Freq[2]:[f 1 #1062:1,]
-Freq[3]:[f 1 #2112:1,]
-Freq[4]:[f 1 #16:1,]
-Freq[5]:[f 1 #836:1,f 2 #3:0.00358852,]
-Freq[6]:[f 1 #5586:1,f 2 #1:0.000179019,]
-Freq[7]:[f 1 #1551:1,f 2 #9:0.00580271,]
-Freq[8]:[f 1 #352:1,]
-Freq[9]:[f 1 #33593:1,f 2 #32:0.000952579,]
-Freq[10]:[f 1 #0:-nan,]
-Freq[11]:[f 1 #0:-nan,]
-Freq[12]:[f 1 #0:-nan,]
-Freq[13]:[f 1 #0:-nan,]
-Freq[14]:[f 1 #0:-nan,]
-Freq[15]:[f 1 #0:-nan,]
-Freq[16]:[f 1 #0:-nan,]
-Freq[17]:[f 1 #0:-nan,]
-Freq[18]:[f 1 #0:-nan,]
-Freq[19]:[f 1 #0:-nan,]
-Freq[20]:[f 1 #0:-nan,]
-Freq[21]:[f 1 #0:-nan,]
-Freq[22]:[f 1 #0:-nan,]
-Freq[23]:[f 1 #25499:1,f 2 #4:0.000156869,]
-Freq[24]:[f 1 #8796:1,]
-Freq[25]:[f 1 #22868:1,f 2 #3:0.000131188,]
-Freq[26]:[f 1 #23384:1,f 2 #6:0.000256586,]
-Freq[27]:[f 1 #13155:1,f 2 #2:0.000152033,]
-Freq[28]:[f 1 #7847:1,f 2 #4:0.000509749,]
-Freq[29]:[f 1 #2037:1,f 2 #1:0.000490918,]
-Freq[30]:[f 1 #10769:1,f 2 #3:0.000278577,]
-Freq[31]:[f 1 #27687:1,f 2 #10:0.00036118,]
-Freq[32]:[f 1 #10276:1,f 2 #3:0.000291942,]
-Freq[33]:[f 1 #94764:1,f 2 #1449:0.0152906,f 3 #26:0.000274366,]
-Freq[34]:[f 1 #8907:1,f 2 #5619:0.630852,f 3 #679:0.0762322,f 4 #62:0.00696082,f 5 #8:0.00089817,]
-Freq[35]:[f 1 #29418:1,f 2 #10637:0.361581,f 3 #1786:0.0607111,f 4 #155:0.00526888,f 5 #15:0.000509892,f 6 #2:6.79856e-05,f 7 #1:3.39928e-05,]
-Freq[36]:[f 1 #762:1,f 2 #577:0.757218,f 3 #75:0.0984252,f 4 #3:0.00393701,f 5 #2:0.00262467,]
-Freq[37]:[f 1 #18572:1,f 2 #3005:0.161803,f 3 #518:0.0278914,f 4 #55:0.00296145,f 5 #7:0.000376911,]
-Freq[38]:[f 1 #5635:1,f 2 #576:0.102218,f 3 #40:0.00709849,f 4 #6:0.00106477,f 5 #3:0.000532387,]
-Freq[39]:[f 1 #31485:1,f 2 #59:0.00187391,]
-Freq[40]:[f 1 #14345:1,f 2 #6:0.000418264,]
-Freq[41]:[f 1 #2279:1,]
-Freq[42]:[f 1 #2812:1,]
-Freq[43]:[f 1 #0:-nan,]
-Freq[44]:[f 1 #16691:1,f 2 #12:0.00071895,]
-Freq[45]:[f 1 #0:-nan,]
-Freq[46]:[f 1 #31261:1,f 2 #54:0.00172739,]
-Freq[47]:[f 1 #13009:1,f 2 #6:0.000461219,]
-Freq[48]:[f 1 #13148:1,f 2 #23:0.00174932,]
-Freq[49]:[f 1 #0:-nan,]
-Freq[50]:[f 1 #12031:1,f 2 #8:0.000664949,]
-Freq[51]:[f 1 #0:-nan,]
-Freq[52]:[f 1 #265:1,f 2 #9:0.0339623,f 3 #1:0.00377358,]
-Freq[53]:[f 1 #79671:1,f 2 #3923:0.04924,f 3 #241:0.00302494,f 4 #13:0.000163171,f 5 #1:1.25516e-05,]
-Freq[54]:[f 1 #13437:1,f 2 #566:0.0421225,f 3 #18:0.00133958,]
-Freq[55]:[f 1 #45672:1,f 2 #3109:0.0680723,f 3 #155:0.00339376,f 4 #6:0.000131372,f 5 #1:2.18953e-05,]
-Freq[56]:[f 1 #113458:1,f 2 #4975:0.0438488,f 3 #185:0.00163056,f 4 #3:2.64415e-05,]
-Freq[57]:[f 1 #92551:1,f 2 #2547:0.02752,f 3 #59:0.000637486,]
-Freq[58]:[f 1 #238538:1,f 2 #7885:0.0330555,f 3 #371:0.00155531,f 4 #12:5.03065e-05,f 5 #1:4.1922e-06,]
-Freq[59]:[f 1 #18156:1,f 2 #28:0.00154219,]
-Freq[60]:[f 1 #40249:1,f 2 #83:0.00206216,]
-Freq[61]:[f 1 #39048:1,f 2 #5:0.000128048,]
-Freq[62]:[f 1 #662:1,]
-Freq[63]:[f 1 #6718:1,f 2 #2:0.000297708,]
-h->INtegral:0 wsum:0
 Freq of bcAOD (collisions):
 785470 18437 1402 71 8 3 0 0 0 0 
 Fraction of singles:0.949906 sum:826892 size:826892
@@ -143,199 +143,3 @@ BIT:61                    fUDdiff   b:     79015 a:     39054 eff:0.494261
 BIT:62                  fH3L3Body   b:       662 a:       662 eff:1
 BIT:63                        fHe   b:      6722 a:      6722 eff:1
 === Skimmed
-Freq[0]:[f 1 #34470:1,f 2 #20:0.000580215,]
-Freq[1]:[f 1 #2465:1,f 2 #10:0.0040568,]
-Freq[2]:[f 1 #1033:1,]
-Freq[3]:[f 1 #2070:1,]
-Freq[4]:[f 1 #16:1,]
-Freq[5]:[f 1 #591:1,f 2 #3:0.00507614,]
-Freq[6]:[f 1 #5334:1,f 2 #2:0.000374953,]
-Freq[7]:[f 1 #952:1,f 2 #9:0.00945378,f 3 #1:0.00105042,]
-Freq[8]:[f 1 #328:1,]
-Freq[9]:[f 1 #8293:1,f 2 #25:0.00301459,]
-Freq[10]:[f 1 #0:-nan,]
-Freq[11]:[f 1 #0:-nan,]
-Freq[12]:[f 1 #0:-nan,]
-Freq[13]:[f 1 #0:-nan,]
-Freq[14]:[f 1 #0:-nan,]
-Freq[15]:[f 1 #0:-nan,]
-Freq[16]:[f 1 #0:-nan,]
-Freq[17]:[f 1 #0:-nan,]
-Freq[18]:[f 1 #0:-nan,]
-Freq[19]:[f 1 #0:-nan,]
-Freq[20]:[f 1 #0:-nan,]
-Freq[21]:[f 1 #0:-nan,]
-Freq[22]:[f 1 #0:-nan,]
-Freq[23]:[f 1 #21562:1,f 2 #4:0.000185512,]
-Freq[24]:[f 1 #6506:1,f 2 #1:0.000153704,]
-Freq[25]:[f 1 #10027:1,f 2 #5:0.000498654,]
-Freq[26]:[f 1 #22598:1,f 2 #4:0.000177007,]
-Freq[27]:[f 1 #12446:1,f 2 #2:0.000160694,]
-Freq[28]:[f 1 #2927:1,f 2 #5:0.00170823,]
-Freq[29]:[f 1 #1677:1,f 2 #1:0.000596303,]
-Freq[30]:[f 1 #9588:1,]
-Freq[31]:[f 1 #25699:1,f 2 #4:0.000155648,]
-Freq[32]:[f 1 #3759:1,f 2 #2:0.000532056,]
-Freq[33]:[f 1 #71436:1,f 2 #1391:0.019472,f 3 #36:0.000503948,]
-Freq[34]:[f 1 #8857:1,f 2 #5615:0.633962,f 3 #689:0.0777916,f 4 #58:0.00654849,f 5 #8:0.00090324,]
-Freq[35]:[f 1 #28830:1,f 2 #10648:0.369337,f 3 #1774:0.0615331,f 4 #159:0.00551509,f 5 #12:0.000416233,f 6 #2:6.93722e-05,f 7 #1:3.46861e-05,]
-Freq[36]:[f 1 #758:1,f 2 #572:0.754617,f 3 #77:0.101583,f 4 #4:0.00527704,f 5 #2:0.00263852,]
-Freq[37]:[f 1 #18160:1,f 2 #3012:0.165859,f 3 #511:0.0281388,f 4 #53:0.0029185,f 5 #6:0.000330396,]
-Freq[38]:[f 1 #5553:1,f 2 #577:0.103908,f 3 #33:0.00594273,f 4 #7:0.00126058,f 5 #2:0.000360166,]
-Freq[39]:[f 1 #30426:1,f 2 #57:0.0018734,]
-Freq[40]:[f 1 #7105:1,f 2 #3:0.000422238,]
-Freq[41]:[f 1 #2067:1,]
-Freq[42]:[f 1 #2617:1,f 2 #1:0.000382117,]
-Freq[43]:[f 1 #0:-nan,]
-Freq[44]:[f 1 #14235:1,f 2 #10:0.000702494,]
-Freq[45]:[f 1 #0:-nan,]
-Freq[46]:[f 1 #28287:1,f 2 #60:0.00212112,]
-Freq[47]:[f 1 #10574:1,f 2 #3:0.000283715,]
-Freq[48]:[f 1 #12211:1,f 2 #19:0.00155597,]
-Freq[49]:[f 1 #0:-nan,]
-Freq[50]:[f 1 #10540:1,f 2 #2:0.000189753,]
-Freq[51]:[f 1 #0:-nan,]
-Freq[52]:[f 1 #261:1,f 2 #9:0.0344828,f 3 #1:0.00383142,]
-Freq[53]:[f 1 #58551:1,f 2 #3884:0.0663353,f 3 #235:0.00401359,f 4 #16:0.000273266,f 5 #1:1.70791e-05,]
-Freq[54]:[f 1 #13079:1,f 2 #560:0.0428167,f 3 #15:0.00114688,]
-Freq[55]:[f 1 #44817:1,f 2 #3097:0.0691032,f 3 #149:0.00332463,f 4 #8:0.000178504,f 5 #1:2.2313e-05,]
-Freq[56]:[f 1 #111769:1,f 2 #4945:0.044243,f 3 #175:0.00156573,f 4 #3:2.68411e-05,]
-Freq[57]:[f 1 #72622:1,f 2 #2304:0.0317259,f 3 #71:0.000977665,f 4 #2:2.75399e-05,]
-Freq[58]:[f 1 #190214:1,f 2 #7658:0.0402599,f 3 #368:0.00193466,f 4 #12:6.30868e-05,f 5 #1:5.25724e-06,]
-Freq[59]:[f 1 #17991:1,f 2 #19:0.00105608,]
-Freq[60]:[f 1 #25201:1,f 2 #78:0.00309512,]
-Freq[61]:[f 1 #19311:1,f 2 #4:0.000207136,]
-Freq[62]:[f 1 #535:1,]
-Freq[63]:[f 1 #6156:1,f 2 #2:0.000324886,]
-h->INtegral:0 wsum:0
-Venn diagrams::
-[0]20455 33860 650 
-[1]0 0 2485 
-[2]39 1023 10 
-[3]49 2063 7 
-[4]0 0 16 
-[5]0 0 597 
-[6]287 5301 37 
-[7]0 0 973 
-[8]26 326 2 
-[9]25396 3346 4997 
-[10]0 0 0 
-[11]0 0 0 
-[12]0 0 0 
-[13]0 0 0 
-[14]0 0 0 
-[15]0 0 0 
-[16]0 0 0 
-[17]0 0 0 
-[18]0 0 0 
-[19]0 0 0 
-[20]0 0 0 
-[21]0 0 0 
-[22]0 0 0 
-[23]4163 21344 226 
-[24]2408 6388 120 
-[25]14477 8397 1640 
-[26]838 22558 48 
-[27]778 12381 69 
-[28]4921 1556 1381 
-[29]382 1657 22 
-[30]1240 9535 53 
-[31]2099 25608 99 
-[32]6571 2980 783 
-[33]0 0 74326 
-[34]52 22418 8 
-[35]626 56139 25 
-[36]0 0 2159 
-[37]0 0 25959 
-[38]0 0 6844 
-[39]1247 30356 184 
-[40]7330 6859 252 
-[41]262 2017 50 
-[42]283 2529 90 
-[43]0 0 0 
-[44]3060 13655 600 
-[45]0 0 0 
-[46]3330 28039 368 
-[47]2682 10339 241 
-[48]1042 12151 97 
-[49]0 0 0 
-[50]1700 10347 197 
-[51]0 0 0 
-[52]10 276 6 
-[53]17137 123 66971 
-[54]1002 13621 623 
-[55]1761 50623 873 
-[56]3892 120083 2113 
-[57]38348 46871 30580 
-[58]22717 250 206437 
-[59]270 17942 87 
-[60]14661 4109 21248 
-[61]21843 17211 2108 
-[62]137 525 10 
-[63]709 6013 147 
-===> Skimming efficiency
-BIT: 0      fTriggerEventF1Proton ds: 0.652  b:     54315 a:     34510 eff:   0.635 VennInter:    33860 Inter/before: 0.623
-BIT: 1                 fTrackedXi ds: 0.000  b:         0 a:      2485 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT: 2          fOmegaLargeRadius ds: 1.000  b:      1062 a:      1033 eff:   0.973 VennInter:     1023 Inter/before: 0.963
-BIT: 3                fSingleXiYN ds: 1.000  b:      2112 a:      2070 eff:   0.980 VennInter:     2063 Inter/before: 0.977
-BIT: 4               fQuadrupleXi ds: 0.000  b:         0 a:        16 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT: 5                  fDoubleXi ds: 0.000  b:         0 a:       597 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT: 6              fTrackedOmega ds: 1.000  b:      5588 a:      5338 eff:   0.955 VennInter:     5301 Inter/before: 0.949
-BIT: 7                  fhadronXi ds: 0.000  b:         0 a:       973 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT: 8                  fTripleXi ds: 1.000  b:       352 a:       328 eff:   0.932 VennInter:      326 Inter/before: 0.926
-BIT: 9                     fOmega ds: 0.101  b:     28742 a:      8343 eff:   0.290 VennInter:     3346 Inter/before: 0.116
-BIT:10       fGammaVeryLowPtEMCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:11        fGammaVeryLowPtDCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:12          fGammaHighPtEMCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:13           fGammaLowPtEMCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:14       fGammaVeryHighPtDCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:15      fGammaVeryHighPtEMCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:16            fGammaLowPtDCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:17           fJetNeutralLowPt ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:18          fJetNeutralHighPt ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:19           fGammaHighPtDCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:20              fJetFullLowPt ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:21             fJetFullHighPt ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:22              fEMCALReadout ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:23                  fPCMandEE ds: 1.000  b:     25507 a:     21570 eff:   0.846 VennInter:    21344 Inter/before: 0.837
-BIT:24                  fPHOSnbar ds: 1.000  b:      8796 a:      6508 eff:   0.740 VennInter:     6388 Inter/before: 0.726
-BIT:25           fPCMHighPtPhoton ds: 1.000  b:     22874 a:     10037 eff:   0.439 VennInter:     8397 Inter/before: 0.367
-BIT:26                fPHOSPhoton ds: 1.000  b:     23396 a:     22606 eff:   0.966 VennInter:    22558 Inter/before: 0.964
-BIT:27                        fLD ds: 1.000  b:     13159 a:     12450 eff:   0.946 VennInter:    12381 Inter/before: 0.941
-BIT:28                        fPD ds: 0.196  b:      6477 a:      2937 eff:   0.453 VennInter:     1556 Inter/before: 0.240
-BIT:29                       fLLL ds: 1.000  b:      2039 a:      1679 eff:   0.823 VennInter:     1657 Inter/before: 0.813
-BIT:30                       fPLL ds: 1.000  b:     10775 a:      9588 eff:   0.890 VennInter:     9535 Inter/before: 0.885
-BIT:31                       fPPL ds: 1.000  b:     27707 a:     25707 eff:   0.928 VennInter:    25608 Inter/before: 0.924
-BIT:32                       fPPP ds: 0.303  b:      9551 a:      3763 eff:   0.394 VennInter:     2980 Inter/before: 0.312
-BIT:33            fLeadingPtTrack ds: 0.000  b:         0 a:     74326 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:34           fHighFt0cFv0Flat ds: 1.000  b:     22470 a:     22426 eff:   0.998 VennInter:    22418 Inter/before: 0.998
-BIT:35           fHighFt0cFv0Mult ds: 1.000  b:     56765 a:     56164 eff:   0.989 VennInter:    56139 Inter/before: 0.989
-BIT:36               fHighFt0Flat ds: 0.000  b:         0 a:      2159 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:37               fHighFt0Mult ds: 0.000  b:         0 a:     25959 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:38               fHighMultFv0 ds: 0.000  b:         0 a:      6844 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:39             fHighTrackMult ds: 1.000  b:     31603 a:     30540 eff:   0.966 VennInter:    30356 Inter/before: 0.961
-BIT:40        fHfCharmBarToXiBach ds: 0.497  b:     14189 a:      7111 eff:   0.501 VennInter:     6859 Inter/before: 0.483
-BIT:41               fHfV0Charm3P ds: 1.000  b:      2279 a:      2067 eff:   0.907 VennInter:     2017 Inter/before: 0.885
-BIT:42               fHfV0Charm2P ds: 1.000  b:      2812 a:      2619 eff:   0.931 VennInter:     2529 Inter/before: 0.899
-BIT:43          fHfDoubleCharmMix ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:44           fHfDoubleCharm3P ds: 1.000  b:     16715 a:     14255 eff:   0.853 VennInter:    13655 Inter/before: 0.817
-BIT:45                 fHfFemto2P ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:46                fHfBeauty4P ds: 1.000  b:     31369 a:     28407 eff:   0.906 VennInter:    28039 Inter/before: 0.894
-BIT:47                 fHfFemto3P ds: 1.000  b:     13021 a:     10580 eff:   0.813 VennInter:    10339 Inter/before: 0.794
-BIT:48                fHfBeauty3P ds: 1.000  b:     13193 a:     12248 eff:   0.928 VennInter:    12151 Inter/before: 0.921
-BIT:49                fHfHighPt3P ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:50           fHfDoubleCharm2P ds: 1.000  b:     12047 a:     10544 eff:   0.875 VennInter:    10347 Inter/before: 0.859
-BIT:51                fHfHighPt2P ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before:  -nan
-BIT:52              fSingleMuHigh ds: 1.000  b:       286 a:       282 eff:   0.986 VennInter:      276 Inter/before: 0.965
-BIT:53               fSingleMuLow ds: 0.001  b:     17260 a:     67094 eff:   3.887 VennInter:      123 Inter/before: 0.007
-BIT:54                   fLMeeHMR ds: 1.000  b:     14623 a:     14244 eff:   0.974 VennInter:    13621 Inter/before: 0.931
-BIT:55                    fDiMuon ds: 1.000  b:     52384 a:     51496 eff:   0.983 VennInter:    50623 Inter/before: 0.966
-BIT:56                fDiElectron ds: 1.000  b:    123975 a:    122196 eff:   0.986 VennInter:   120083 Inter/before: 0.969
-BIT:57                   fLMeeIMR ds: 0.492  b:     85219 a:     77451 eff:   0.909 VennInter:    46871 Inter/before: 0.550
-BIT:58                   fSingleE ds: 0.001  b:     22967 a:    206687 eff:   8.999 VennInter:      250 Inter/before: 0.011
-BIT:59               fJetChHighPt ds: 1.000  b:     18212 a:     18029 eff:   0.990 VennInter:    17942 Inter/before: 0.985
-BIT:60                fJetChLowPt ds: 0.100  b:     18770 a:     25357 eff:   1.351 VennInter:     4109 Inter/before: 0.219
-BIT:61                    fUDdiff ds: 0.494  b:     39054 a:     19319 eff:   0.495 VennInter:    17211 Inter/before: 0.441
-BIT:62                  fH3L3Body ds: 1.000  b:       662 a:       535 eff:   0.808 VennInter:      525 Inter/before: 0.793
-BIT:63                        fHe ds: 1.000  b:      6722 a:      6160 eff:   0.916 VennInter:     6013 Inter/before: 0.895
-Time:454.404

@@ -23,7 +23,6 @@
 //
 #pragma link C++ class std::vector < std::array < uint64_t, 2>> + ;
 //
-std::vector<std::string> labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
 //
 int runNUMBER = 539130;
 const int Ndim = 64;
@@ -59,7 +58,49 @@ void printMap(std::map<uint64_t,int>& m)
   }
 };
 //
-// main structure
+//================================
+//
+struct Hists
+{
+  Hists() = default;
+  TObjArray hists;
+  static std::vector<std::string> labels;
+  TH1F* addHist(std::string const&name,int n, int n1, int n2)
+  {
+    TH1F *h = new TH1F(name.c_str(),name.c_str(),n,n1,n2);
+    h->Sumw2();
+    hists.Add(h);
+    return h;
+  }
+  TH1F* addHistWithNames(std::string const&name)
+  {
+    TH1F *h = new TH1F(name.c_str(), name.c_str(), Ndim, 0, Ndim);
+    for (int i = 0; i < h->GetXaxis()->GetNbins(); i++) {
+      h->GetXaxis()->SetBinLabel(i + 1, labels[i].c_str());
+    }
+    //h->GetXaxis()->SetLabelSize(0.045);
+    h->GetXaxis()->LabelsOption("v");
+    hists.Add(h);
+    return h;
+  }
+  void addHist(TH1* h)
+  {
+    hists.Add(h);
+  }
+  void addHist(TH2* h)
+  {
+    hists.Add(h);
+  }
+  void writeHists()
+  {
+    TFile *file;
+    file = new TFile("Histos.root","RECREATE","FILE");
+    hists.Write();
+  }
+};
+std::vector<std::string> Hists::labels = {"fPHOSnbar", "fPHOSPair", "fPHOSElectron", "fPHOSPhoton", "fOmegaLargeRadius", "fSingleXiYN", "fQuadrupleXi", "fhadronXi", "fTripleXi", "fGammaHighPtDCAL", "fGammaHighPtEMCAL", "fJetFullHighPt", "fLD", "fPD", "fLLL", "fPLL", "fPPL", "fPPP", "fHighFt0cFv0Flat", "fHighFt0cFv0Mult", "fHighFt0Flat", "fHighFt0Mult", "fHighTrackMult", "fHfDoubleCharmMix", "fHfDoubleCharm3P", "fHfSoftGamma3P", "fHfFemto2P", "fHfBeauty4P", "fHfFemto3P", "fHfBeauty3P", "fHfSoftGamma2P", "fHfDoubleCharm2P", "fDiMuon", "fDiElectron", "fUDdiff", "fHe"};
+//
+// main structure bcInfo
 //
 struct bcInfo {
   bcInfo() = default;
@@ -72,8 +113,8 @@ void bcInfo::print() const
   for(size_t i = 0; i < Ndim; i++) {
     ULong64_t mask = 1ull << i;
     if(mask & trigMask) {
-      if(i < labels.size()) {
-        *mylog << labels[i] << " ";
+      if(i < Hists::labels.size()) {
+        *mylog << Hists::labels[i] << " ";
       } else {
         *mylog << "XXX ";
       }
@@ -81,6 +122,9 @@ void bcInfo::print() const
   }
   *mylog << std::endl;
 };
+//
+// bcInfos
+//
 struct bcInfos
 {
   const std::string ccdbTest = "http://ccdb-test.cern.ch:8080";
@@ -288,7 +332,7 @@ void bcInfos::getDataCCDB(int runNumber, int Nmax)
     bci.trigMask = (*fbm)[i][0];
     bci.selMask = (*sbm)[i][0];
     bcs.push_back(bci);
-    for(int m = 0; m < 64; m++) {
+    for(int m = 0; m < Ndim; m++) {
       if(bci.trigMask & (1ull << m)) {
         triggerCounters[m]++;
       }
@@ -419,7 +463,7 @@ void bcInfos::frequencyBCSorted(bool tri)
     // loop over bits
     if(bc.bcEvSel != prev) {
       if(prev) {
-        for(int i = 0; i < 64; i++) {
+        for(int i = 0; i < Ndim; i++) {
           uint64_t mask = 1ull << i;
           bool trig;
           if(tri) {
@@ -439,7 +483,7 @@ void bcInfos::frequencyBCSorted(bool tri)
       prev = bc.bcEvSel;
       //*mylog << "in " << std::endl;
     } else {
-      for(int i  =0; i< 64;i++) {
+      for(int i  =0; i< Ndim;i++) {
         uint64_t mask = 1ull << i;
         bool trig;
         if(tri) {
@@ -453,7 +497,7 @@ void bcInfos::frequencyBCSorted(bool tri)
     }
   }
   //bcFreq[prev] = count;
-  for(int i = 0; i < 64; i++) {
+  for(int i = 0; i < Ndim; i++) {
     uint64_t mask = 1ull << i;
     bool trig;
     if(tri) {
@@ -494,8 +538,8 @@ void bcInfos::selectionEfficiency( std::array<double_t,Ndim>& eff,std::array<dou
       //*mylog << "after:" << after << " before:" << before << std::endl;
     }
     std::string label = "?";
-    if(i < (int) labels.size()) {
-      label = labels[i];
+    if(i < (int) Hists::labels.size()) {
+      label = Hists::labels[i];
     }
     downscaleFactors[i] = eff[i];
     *mylog << "BIT:" << std::setw(2) << i << "  " << std::setw(25) << label << "   b:" << std::setw(10) << before << " a:" << std::setw(10) << after << " eff:" << eff[i] << std::endl;
@@ -520,8 +564,8 @@ void bcInfos::selectionEfficiencyBiased() const
     }
     eff[i] = after/before;
     std::string label = "?";
-    if(i < (int) labels.size()) {
-      label = labels[i];
+    if(i < (int) Hists::labels.size()) {
+      label = Hists::labels[i];
     }
     *mylog << "BIT:" << std::setw(2) << i << "  " << std::setw(25) << label << "   b:" << std::setw(10) << before << " a:" << std::setw(10) << after << " eff:" << after/before << std::endl;
   }
@@ -721,34 +765,7 @@ void bcInfos::getArrayForBit(std::vector<uint64_t>& bctrigs, std::vector<uint64_
   *mylog << "BIT:" << bit << " # trigs:" << bctrigs.size() << " # selec:" << bcselec.size() << std::endl;
   //
 }
-//
-//================================
-//
-struct Hists
-{
-  Hists() = default;
-  TObjArray hists;
-  void addHist(std::string const&name,int n, int n1, int n2)
-  {
-    TH1F *h = new TH1F(name.c_str(),name.c_str(),n,n1,n2);
-    h->Sumw2();
-    hists.Add(h);
-  }
-  void addHist(TH1* h)
-  {
-    hists.Add(h);
-  }
-  void addHist(TH2* h)
-  {
-    hists.Add(h);
-  }
-  void writeHists()
-  {
-    TFile *file;
-    file = new TFile("Histos.root","RECREATE","FILE");
-    hists.Write();
-  }
-};
+
 
 //
 //===========================
@@ -806,6 +823,9 @@ void effUtils::extractLabelsAnal(std::vector<std::string>& labels)
     }
   }
   *mylog << "Label size:" << labels.size() << std::endl;
+  for(size_t i = 0; i < labels.size(); i++) {
+    *mylog << i << " "  << labels[i] << std::endl;
+  }
 }
 void effUtils::extractLabels(std::vector<std::string>& labels)
 {
@@ -819,6 +839,9 @@ void effUtils::extractLabels(std::vector<std::string>& labels)
     }
   }
   *mylog << "Label size:" << labels.size() << std::endl;
+  for(size_t i = 0; i < labels.size(); i++) {
+    *mylog << i << " "  << labels[i] << std::endl;
+  }
 }
 void effUtils::readFiles(TFile& originalFile, TFile& skimmedFile, int n)
 {
@@ -859,7 +882,8 @@ void effUtils::printSkimmedEff()
 {
   int *before = originalBCs.selectionCounters.data();
   int *after = skimmedBCs.triggerCounters.data();
-  TH1F *h = new TH1F("Skimming eff","Skimming eff", Ndim_used,0,Ndim_used);
+  //TH1F *h = new TH1F("Skimming eff","Skimming eff", Ndim_used,0,Ndim_used);
+  TH1F *h = addHistWithNames("Skimming eff");
   h->SetAxisRange(0,1.2,"Y");
   *mylog << "===> Skimming efficiency" << std::endl;
   for(int i = 0; i < Ndim; i++) {
@@ -867,12 +891,15 @@ void effUtils::printSkimmedEff()
     if(i < (int) labels.size()) {
       label = labels[i];
     }
+    double_t venn_norm = 0;
+    if(before[i]) {
+      venn_norm = (double_t)vennInter[i]/before[i];
+    }
     *mylog << std::fixed << std::setprecision(3);
-    *mylog << "BIT:" << std::setw(2) << i << "  " << std::setw(25) << label << " ds:" << std::setw(6) << originalBCs.downscaleFactors[i] << "  b:" << std::setw(10) << before[i] << " a:" << std::setw(10) << after[i] << " eff:" << std::setw(8) << effSkimmed[i] << " VennInter:" << std::setw(9) << vennInter[i] << " Inter/before:" << std::setw(6) << (double_t)vennInter[i]/before[i] << " singles frac b/a:" << std::setw(6) << (double_t)originalBCs.freqDSel[i]/before[i] << " " << std::setw(6) << (double_t)skimmedBCs.freqDTri[i]/after[i]  <<  std::endl;
+    *mylog << "BIT:" << std::setw(2) << i << "  " << std::setw(25) << label << " ds:" << std::setw(6) << originalBCs.downscaleFactors[i] << "  b:" << std::setw(10) << before[i] << " a:" << std::setw(10) << after[i] << " eff:" << std::setw(8) << effSkimmed[i] << " VennInter:" << std::setw(9) << vennInter[i] << " Inter/before:" << std::setw(6) << venn_norm << " singles frac b/a:" << std::setw(6) << (double_t)originalBCs.freqDSel[i]/before[i] << " " << std::setw(6) << (double_t)skimmedBCs.freqDTri[i]/after[i]  <<  std::endl;
     h->SetBinContent(i+1,effSkimmed[i]);
     h->SetBinError(i+1,effSkimmedError[i]);
   }
-  addHist(h);
 }
 void effUtils::getFrequencyComp()
 {
@@ -880,22 +907,30 @@ void effUtils::getFrequencyComp()
   int *after = skimmedBCs.triggerCounters.data();
   originalBCs.frequencyBCSorted(0);
   skimmedBCs.frequencyBCSorted(1);
-  TH1F *h1 = new TH1F("Original Singles Freq Selected","Original Singles Freq Selected",Ndim,0,Ndim);
-  TH1F *h2 = new TH1F("Skimmed Singles Freq Triggered","Skimmed Singles Freq Triggered",Ndim,0,Ndim);
+  //TH1F *h1 = new TH1F("Original Singles Freq Selected","Original Singles Freq Selected",Ndim,0,Ndim);
+  //TH1F *h2 = new TH1F("Skimmed Singles Freq Triggered","Skimmed Singles Freq Triggered",Ndim,0,Ndim);
+  TH1F *h1 = addHistWithNames("Original Singles Freq Selected");
+  h1->SetAxisRange(0,1.2,"Y");
+  TH1F *h2 = addHistWithNames("Skimmed Singles Freq Triggered");
+  h2->SetAxisRange(0,1.2,"Y");
   TH2F * h = new TH2F("Ori versus Skimmed Singles", "Ori versus Skimmed Singles",Ndim,0,1.2, Ndim, 0, 1.2);
   for(int i =0; i < Ndim; i++ ) {
     if(before[i]) {
-      h1->Fill(i,(double_t)originalBCs.freqDSel[i]/before[i]);
+      double_t e = (double_t)originalBCs.freqDSel[i]/before[i];
+      h1->Fill(i,e);
+      double_t er = sqrt(e*(1-e)/before[i]);
+      h1->SetBinError(i+1,er);
     }
     if(after[i]) {
-      h2->Fill(i,(double_t)skimmedBCs.freqDTri[i]/after[i]);
+      double_t e = (double_t)skimmedBCs.freqDTri[i]/after[i];
+      double_t er = sqrt(e*(1-e)/after[i]);
+      h2->Fill(i,e);
+      h2->SetBinError(i+1,er);
     }
     if(before[i]*after[i]) {
       h->Fill((double_t)originalBCs.freqDSel[i]/before[i],(double_t)skimmedBCs.freqDTri[i]/after[i],i);
     }
   }
-  addHist(h1);
-  addHist(h2);
   addHist(h);
 }
 void effUtils::skimmedEfficiency_cleaned()
@@ -1083,7 +1118,7 @@ void effUtils::vennDiagram()
 {
   //std::array<int,64> used = {0};
   int i = 0;
-  for(int i =0; i < 64; i++){
+  for(int i =0; i < Ndim; i++){
     uint64_t mask = 1ull << i;
     std::cout << " Doing " << i << std::endl;
     for(auto const& bo: originalBCs.bcs) {
@@ -1103,9 +1138,20 @@ void effUtils::vennDiagram()
       }
     }
   }
+  //TH1F *h = new TH1F("Venn intersection of Trig and Sel", "Venn intersection of Trig and Sel",Ndim,0,Ndim);
+  TH1F *h = addHistWithNames("Venn intersection of Trig and Sel");
+  h->SetAxisRange(0,1.2,"Y");
   *mylog << "Venn diagrams::" << std::endl;
-  for(int i = 0; i< 64; i++) {
+  for(int i = 0; i< Ndim; i++) {
     *mylog << "[" << i << "]" << originalBCs.selectionCounters[i] - vennInter[i] << " " << vennInter[i] << " " << skimmedBCs.triggerCounters[i] - vennInter[i] << " " << std::endl;
+    double_t e = 0;
+    double_t er = 0;
+    if(originalBCs.selectionCounters[i]) {
+      e = (double_t) vennInter[i]/originalBCs.selectionCounters[i];
+      er = sqrt(e*(1-e)/originalBCs.selectionCounters[i]);
+    }
+    h->Fill(i,e);
+    h->SetBinError(i+1,er);
   }
 }
 void effUtils::printCorrelations(int bit, std::vector<int>& corr, int dist, int Nprint)
@@ -1136,14 +1182,14 @@ void effUtils::printCorrelations(int bit, std::vector<int>& corr, int dist, int 
 void effUtils::printDownscaleFactors()
 {
   getDownscaleFactors();
-  TH1F * h = new TH1F("Downscale Factors","Downscale Factors", Ndim_used,0,Ndim_used);
-  h->SetAxisRange(0,1.1,"Y");
+  //TH1F * h = new TH1F("Downscale Factors","Downscale Factors", Ndim_used,0,Ndim_used);
+  TH1F *h = addHistWithNames("Downscale Factors");
+  h->SetAxisRange(0,1.2,"Y");
   for(int i = 0; i < Ndim_used; i++) {
     //h->Fill(i,downscaleFactors[i]);
     h->SetBinContent(i+1,downscaleFactors[i]);
     h->SetBinError(i+1,downscaleFactorsError[i]);
   }
-  addHist(h);
 }
 //
 // main
@@ -1163,7 +1209,7 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   //eff.readFiles(originalFile,skimmedFile,10);
   //eff.extractLabelsAnal(labels);
   eff.readFiles(skimmedFile,0);
-  eff.extractLabels(labels);
+  eff.extractLabels(Hists::labels);
   //eff.originalBCs.dataSize(1);
   //return;
   //return;
@@ -1171,10 +1217,6 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   *mylog << "=== Unskimmed" << std::endl;
   //eff.originalBCs.frequencyBC();
   eff.originalBCs.evSel2AOD();
-  //eff.originalBCs.printbcInfoVect();
-  //eff.originalBCs.cleanBC();
-  std::array<int,Nfreq> freqU{0};
-  //eff.originalBCs.frequencyBCSorted(freqU);
   eff.originalBCs.frequencyCol();
   eff.printDownscaleFactors();
   //return ;

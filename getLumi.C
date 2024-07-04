@@ -52,6 +52,7 @@ void getLumi(int runNumber, std::string className= "minbias_TVX_L0")
   //return;
   scl->convertRawToO2();
   std::vector<CTPScalerRecordO2> recs = scl->getScalerRecordO2();
+  scl->printFromZero(std::cout);
   //
   // CTPConfiguration ctpcfg;
   auto ctpcfg = ccdbMgr.getSpecific<CTPConfiguration>(mCCDBPathCTPConfig, timeStamp, metadata);
@@ -59,6 +60,7 @@ void getLumi(int runNumber, std::string className= "minbias_TVX_L0")
     LOG(info) << "CTPRunConfig not in database, timestamp:" << timeStamp;
     return;
   }
+  ctpcfg->printStream(std::cout);
   //ctpcfg->printClasses(std::cout);
   //return;
   std::vector<CTPClass> ctpcls = ctpcfg->getCTPClasses();
