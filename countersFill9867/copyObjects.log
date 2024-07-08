@@ -1,0 +1,33 @@
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.30/01                        https://root.cern |
+  | (c) 1995-2023, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Apr 26 2024, 01:12:03                 |
+  | From tags/v6-30-01-alice4@v6-25-02-6402-g7bd79f26a4              |
+  | With c++ (GCC) 12.2.0                                            |
+  | Try '.help'/'.?', '.demo', '.license', '.credits', '.quit'/'.q'  |
+   ------------------------------------------------------------------
+
+
+Processing copyObjects.C(1,1,0)...
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1720449663-vhHnfJ, Host: http://alice-ccdb.cern.ch
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1720449663-R913rZ, Host: http://ccdb-test.cern.ch:8080
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1720449663-Rb1zDN, Host: http://alice-ccdb.cern.ch/
+run:553901
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1720449663-Rb1zDN, Host: http://alice-ccdb.cern.ch
+Run start:1720310328088
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1720449663-Rb1zDN, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1720309612751/3101c5ba-3bf5-11ef-a02e-c0a80209250c for 1720310328088 (retrieve, agent_id: ctpo2cs8.cern.ch-1720449663-Rb1zDN), 
+Scalers test (not writing) startValGRP:1720309612751 endValGRP:1720570174000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1720309612751/6adb88e4-3bf3-11ef-a02e-c0a80209250c for 1720310328088 (retrieve, agent_id: ctpo2cs8.cern.ch-1720449663-Rb1zDN), 
+Config test (not writing) startValGRP:1720309612751 endValGRP:1720569412751
+run:553903
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1720449663-Rb1zDN, Host: http://alice-ccdb.cern.ch
+Run start:1720311426666
+[INFO] Init CcdApi with UserAgentID: ctpo2cs8.cern.ch-1720449663-Rb1zDN, Host: http://ccdb-test.cern.ch:8080
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Calib/Scalers/1720310711969/a0a4216e-3bf7-11ef-a02e-c0a80209250c for 1720311426666 (retrieve, agent_id: ctpo2cs8.cern.ch-1720449663-Rb1zDN), 
+Scalers test (not writing) startValGRP:1720310711969 endValGRP:1720571220000
+[INFO] ccdb reads http://ccdb-test.cern.ch:8080/CTP/Config/Config/1720310711969/fa0a56eb-3bf5-11ef-a02e-c0a80209250c for 1720311426666 (retrieve, agent_id: ctpo2cs8.cern.ch-1720449663-Rb1zDN), 
+Config test (not writing) startValGRP:1720310711969 endValGRP:1720570511969
+Number of runs in the list:2
+Number of scalers only tested (NOT written to ccdb):2 written to CCDB:0
+Number of configs only tested (NOT written to ccdb):2 written to CCDB:0
