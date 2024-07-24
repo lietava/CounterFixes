@@ -1,0 +1,409 @@
+bcs Size:796765
+Total original triggers:2016580 selected triggers:882712 Duration:37212.6
+run:535069 Timestamp:1682270153623
+FilterCounters N bins:66
+SelectionCounters N bins:66
+ FBM size:965799
+ SBM size:965799
+ SBC size:965799
+Labels Nbins:66
+Label size:65
+0 fTriggerEventF1Proton
+1 fTrackedXi
+2 fOmegaLargeRadius
+3 fSingleXiYN
+4 fQuadrupleXi
+5 fDoubleXi
+6 fTrackedOmega
+7 fhadronXi
+8 fTripleXi
+9 fOmega
+10 fGammaVeryLowPtEMCAL
+11 fGammaVeryLowPtDCAL
+12 fGammaHighPtEMCAL
+13 fGammaLowPtEMCAL
+14 fGammaVeryHighPtDCAL
+15 fGammaVeryHighPtEMCAL
+16 fGammaLowPtDCAL
+17 fJetNeutralLowPt
+18 fJetNeutralHighPt
+19 fGammaHighPtDCAL
+20 fJetFullLowPt
+21 fJetFullHighPt
+22 fEMCALReadout
+23 fPCMandEE
+24 fPHOSnbar
+25 fPCMHighPtPhoton
+26 fPHOSPhoton
+27 fLD
+28 fPD
+29 fLLL
+30 fPLL
+31 fPPL
+32 fPPP
+33 fLeadingPtTrack
+34 fHighFt0cFv0Flat
+35 fHighFt0cFv0Mult
+36 fHighFt0Flat
+37 fHighFt0Mult
+38 fHighMultFv0
+39 fHighTrackMult
+40 fHfCharmBarToXiBach
+41 fHfV0Charm3P
+42 fHfV0Charm2P
+43 fHfDoubleCharmMix
+44 fHfDoubleCharm3P
+45 fHfFemto2P
+46 fHfBeauty4P
+47 fHfFemto3P
+48 fHfBeauty3P
+49 fHfHighPt3P
+50 fHfDoubleCharm2P
+51 fHfHighPt2P
+52 fSingleMuHigh
+53 fSingleMuLow
+54 fLMeeHMR
+55 fDiMuon
+56 fDiElectron
+57 fLMeeIMR
+58 fSingleE
+59 fJetChHighPt
+60 fJetChLowPt
+61 fUDdiff
+62 fH3L3Body
+63 fHe
+64 Triggered events
+=== Unskimmed
+LUT table  :000  001  010  011  100  101  110  111  
+LUT counters:110 174 28 19 379 909 3146 6984  tot:11749
+bcs cleaned size:965799
+Freq of bcAOD (collisions):
+952092 5700 705 48 0 0 0 0 0 0 
+Fraction of singles:0.985808 sum:965799 size:965799
+===> Selection efficiency - downscaling
+BIT: 0      fTriggerEventF1Proton   b:     18378 a:     11865 eff:0.645609
+BIT: 1                 fTrackedXi   b:     45531 a:         0 eff:0
+BIT: 2          fOmegaLargeRadius   b:       173 a:       173 eff:1
+BIT: 3                fSingleXiYN   b:       397 a:       397 eff:1
+BIT: 4               fQuadrupleXi   b:         0 a:         0 eff:0
+BIT: 5                  fDoubleXi   b:      4238 a:         0 eff:0
+BIT: 6              fTrackedOmega   b:      1493 a:      1493 eff:1
+BIT: 7                  fhadronXi   b:      9482 a:         0 eff:0
+BIT: 8                  fTripleXi   b:        36 a:        36 eff:1
+BIT: 9                     fOmega   b:     54453 a:      5448 eff:0.10005
+BIT:10       fGammaVeryLowPtEMCAL   b:         0 a:         0 eff:0
+BIT:11        fGammaVeryLowPtDCAL   b:         0 a:         0 eff:0
+BIT:12          fGammaHighPtEMCAL   b:    271694 a:    271694 eff:1
+BIT:13           fGammaLowPtEMCAL   b:7.68042e+06 a:     66752 eff:0.00869119
+BIT:14       fGammaVeryHighPtDCAL   b:         0 a:         0 eff:0
+BIT:15      fGammaVeryHighPtEMCAL   b:         0 a:         0 eff:0
+BIT:16            fGammaLowPtDCAL   b:2.93528e+06 a:     24814 eff:0.00845371
+BIT:17           fJetNeutralLowPt   b:         0 a:         0 eff:0
+BIT:18          fJetNeutralHighPt   b:         0 a:         0 eff:0
+BIT:19           fGammaHighPtDCAL   b:     98238 a:     98238 eff:1
+BIT:20              fJetFullLowPt   b:1.51412e+06 a:         0 eff:0
+BIT:21             fJetFullHighPt   b:    204206 a:    204206 eff:1
+BIT:22              fEMCALReadout   b:         0 a:         0 eff:0
+BIT:23                  fPCMandEE   b:      8194 a:      8194 eff:1
+BIT:24                  fPHOSnbar   b:    189652 a:    189652 eff:1
+BIT:25           fPCMHighPtPhoton   b:      9596 a:      9596 eff:1
+BIT:26                fPHOSPhoton   b:     20463 a:     20463 eff:1
+BIT:27                        fLD   b:      2281 a:      2281 eff:1
+BIT:28                        fPD   b:      5228 a:      1035 eff:0.197972
+BIT:29                       fLLL   b:       234 a:       234 eff:1
+BIT:30                       fPLL   b:      1325 a:      1325 eff:1
+BIT:31                       fPPL   b:      4141 a:      4141 eff:1
+BIT:32                       fPPP   b:      5677 a:      1773 eff:0.312313
+BIT:33            fLeadingPtTrack   b:3.83965e+06 a:         0 eff:0
+BIT:34           fHighFt0cFv0Flat   b:     10617 a:     10617 eff:1
+BIT:35           fHighFt0cFv0Mult   b:      7109 a:      7109 eff:1
+BIT:36               fHighFt0Flat   b:      3688 a:         0 eff:0
+BIT:37               fHighFt0Mult   b:      4551 a:         0 eff:0
+BIT:38               fHighMultFv0   b:       450 a:         0 eff:0
+BIT:39             fHighTrackMult   b:     14284 a:     14284 eff:1
+BIT:40        fHfCharmBarToXiBach   b:      6199 a:      3077 eff:0.49637
+BIT:41               fHfV0Charm3P   b:      1204 a:      1204 eff:1
+BIT:42               fHfV0Charm2P   b:       994 a:       994 eff:1
+BIT:43          fHfDoubleCharmMix   b:         0 a:         0 eff:0
+BIT:44           fHfDoubleCharm3P   b:      8212 a:      8212 eff:1
+BIT:45                 fHfFemto2P   b:         0 a:         0 eff:0
+BIT:46                fHfBeauty4P   b:     14149 a:     14149 eff:1
+BIT:47                 fHfFemto3P   b:      2529 a:      2529 eff:1
+BIT:48                fHfBeauty3P   b:      5932 a:      5932 eff:1
+BIT:49                fHfHighPt3P   b:         0 a:         0 eff:0
+BIT:50           fHfDoubleCharm2P   b:      5052 a:      5052 eff:1
+BIT:51                fHfHighPt2P   b:         0 a:         0 eff:0
+BIT:52              fSingleMuHigh   b:        52 a:        52 eff:1
+BIT:53               fSingleMuLow   b:2.16518e+06 a:      2381 eff:0.00109968
+BIT:54                   fLMeeHMR   b:       499 a:       499 eff:1
+BIT:55                    fDiMuon   b:      6415 a:      6415 eff:1
+BIT:56                fDiElectron   b:     16752 a:     16752 eff:1
+BIT:57                   fLMeeIMR   b:      7035 a:      3455 eff:0.491116
+BIT:58                   fSingleE   b:3.01494e+06 a:      3244 eff:0.00107597
+BIT:59               fJetChHighPt   b:      5396 a:      5396 eff:1
+BIT:60                fJetChLowPt   b:     56568 a:      5803 eff:0.102585
+BIT:61                    fUDdiff   b:     21013 a:     10407 eff:0.495265
+BIT:62                  fH3L3Body   b:       172 a:       172 eff:1
+BIT:63                        fHe   b:       510 a:       510 eff:1
+=== Skimmed
+LUT table  :000  001  010  011  100  101  110  111  
+LUT counters:124 181 28 21 366 916 3033 6973  tot:11642
+bcs cleaned size:796765
+Freq[0]:[f 1 #11855:1,f 2 #5:0.000421763,]
+Freq[1]:[f 1 #0:-nan,]
+Freq[2]:[f 1 #173:1,]
+Freq[3]:[f 1 #397:1,]
+Freq[4]:[f 1 #0:-nan,]
+Freq[5]:[f 1 #0:-nan,]
+Freq[6]:[f 1 #1493:1,]
+Freq[7]:[f 1 #0:-nan,]
+Freq[8]:[f 1 #36:1,]
+Freq[9]:[f 1 #5446:1,f 2 #1:0.000183621,]
+Freq[10]:[f 1 #0:-nan,]
+Freq[11]:[f 1 #0:-nan,]
+Freq[12]:[f 1 #271695:1,]
+Freq[13]:[f 1 #66752:1,]
+Freq[14]:[f 1 #0:-nan,]
+Freq[15]:[f 1 #0:-nan,]
+Freq[16]:[f 1 #24814:1,]
+Freq[17]:[f 1 #0:-nan,]
+Freq[18]:[f 1 #0:-nan,]
+Freq[19]:[f 1 #98238:1,]
+Freq[20]:[f 1 #0:-nan,]
+Freq[21]:[f 1 #204122:1,f 2 #42:0.000205759,]
+Freq[22]:[f 1 #0:-nan,]
+Freq[23]:[f 1 #8182:1,f 2 #6:0.000733317,]
+Freq[24]:[f 1 #189617:1,f 2 #17:8.96544e-05,]
+Freq[25]:[f 1 #9574:1,f 2 #11:0.00114895,]
+Freq[26]:[f 1 #20437:1,f 2 #13:0.000636101,]
+Freq[27]:[f 1 #2277:1,f 2 #2:0.000878349,]
+Freq[28]:[f 1 #1033:1,f 2 #1:0.000968054,]
+Freq[29]:[f 1 #234:1,]
+Freq[30]:[f 1 #1323:1,f 2 #1:0.000755858,]
+Freq[31]:[f 1 #4139:1,f 2 #1:0.000241604,]
+Freq[32]:[f 1 #1773:1,]
+Freq[33]:[f 1 #0:-nan,]
+Freq[34]:[f 1 #3605:1,f 2 #2746:0.76172,f 3 #442:0.122607,f 4 #47:0.0130374,f 5 #1:0.000277393,]
+Freq[35]:[f 1 #1276:1,f 2 #1872:1.46708,f 3 #594:0.465517,f 4 #74:0.0579937,f 5 #2:0.0015674,]
+Freq[36]:[f 1 #0:-nan,]
+Freq[37]:[f 1 #0:-nan,]
+Freq[38]:[f 1 #0:-nan,]
+Freq[39]:[f 1 #14218:1,f 2 #33:0.002321,]
+Freq[40]:[f 1 #3077:1,]
+Freq[41]:[f 1 #1198:1,f 2 #3:0.00250417,]
+Freq[42]:[f 1 #992:1,f 2 #1:0.00100806,]
+Freq[43]:[f 1 #0:-nan,]
+Freq[44]:[f 1 #8194:1,f 2 #9:0.00109836,]
+Freq[45]:[f 1 #0:-nan,]
+Freq[46]:[f 1 #14079:1,f 2 #35:0.00248597,]
+Freq[47]:[f 1 #2527:1,f 2 #1:0.000395726,]
+Freq[48]:[f 1 #5910:1,f 2 #11:0.00186125,]
+Freq[49]:[f 1 #0:-nan,]
+Freq[50]:[f 1 #5040:1,f 2 #6:0.00119048,]
+Freq[51]:[f 1 #0:-nan,]
+Freq[52]:[f 1 #36:1,f 2 #5:0.138889,f 3 #2:0.0555556,]
+Freq[53]:[f 1 #2377:1,f 2 #2:0.000841397,]
+Freq[54]:[f 1 #388:1,f 2 #51:0.131443,f 3 #3:0.00773196,]
+Freq[55]:[f 1 #4569:1,f 2 #835:0.182753,f 3 #56:0.0122565,f 4 #2:0.000437733,]
+Freq[56]:[f 1 #12356:1,f 2 #2015:0.163079,f 3 #119:0.00963095,f 4 #2:0.000161865,]
+Freq[57]:[f 1 #3003:1,f 2 #217:0.0722611,f 3 #6:0.001998,]
+Freq[58]:[f 1 #3236:1,f 2 #4:0.00123609,]
+Freq[59]:[f 1 #5376:1,f 2 #10:0.00186012,]
+Freq[60]:[f 1 #5793:1,f 2 #5:0.000863111,]
+Freq[61]:[f 1 #10407:1,]
+Freq[62]:[f 1 #172:1,]
+Freq[63]:[f 1 #510:1,]
+Freq[0]:[f 1 #7907:1,f 2 #12:0.00151764,]
+Freq[1]:[f 1 #824:1,f 2 #5:0.00606796,]
+Freq[2]:[f 1 #161:1,]
+Freq[3]:[f 1 #384:1,]
+Freq[4]:[f 1 #0:-nan,]
+Freq[5]:[f 1 #119:1,f 2 #2:0.0168067,]
+Freq[6]:[f 1 #1376:1,]
+Freq[7]:[f 1 #955:1,f 2 #7:0.00732984,]
+Freq[8]:[f 1 #34:1,]
+Freq[9]:[f 1 #2131:1,f 2 #9:0.00422337,]
+Freq[10]:[f 1 #0:-nan,]
+Freq[11]:[f 1 #0:-nan,]
+Freq[12]:[f 1 #268362:1,]
+Freq[13]:[f 1 #402065:1,]
+Freq[14]:[f 1 #0:-nan,]
+Freq[15]:[f 1 #0:-nan,]
+Freq[16]:[f 1 #135451:1,]
+Freq[17]:[f 1 #0:-nan,]
+Freq[18]:[f 1 #0:-nan,]
+Freq[19]:[f 1 #96959:1,]
+Freq[20]:[f 1 #287084:1,f 2 #179:0.000623511,]
+Freq[21]:[f 1 #201622:1,f 2 #52:0.000257908,]
+Freq[22]:[f 1 #0:-nan,]
+Freq[23]:[f 1 #7337:1,f 2 #4:0.000545182,]
+Freq[24]:[f 1 #152505:1,f 2 #12:7.86859e-05,]
+Freq[25]:[f 1 #6198:1,f 2 #11:0.00177477,]
+Freq[26]:[f 1 #19788:1,f 2 #13:0.000656964,]
+Freq[27]:[f 1 #2191:1,f 2 #2:0.000912825,]
+Freq[28]:[f 1 #462:1,f 2 #2:0.004329,]
+Freq[29]:[f 1 #225:1,]
+Freq[30]:[f 1 #1264:1,f 2 #2:0.00158228,]
+Freq[31]:[f 1 #3949:1,f 2 #5:0.00126614,]
+Freq[32]:[f 1 #779:1,]
+Freq[33]:[f 1 #216678:1,f 2 #679:0.00313368,f 3 #3:1.38454e-05,]
+Freq[34]:[f 1 #3543:1,f 2 #2730:0.770533,f 3 #437:0.123342,f 4 #46:0.0129833,f 5 #1:0.000282247,]
+Freq[35]:[f 1 #1258:1,f 2 #1842:1.46423,f 3 #595:0.472973,f 4 #71:0.0564388,f 5 #2:0.00158983,]
+Freq[36]:[f 1 #332:1,f 2 #276:0.831325,f 3 #47:0.141566,f 4 #9:0.0271084,]
+Freq[37]:[f 1 #729:1,f 2 #393:0.539095,f 3 #146:0.200274,f 4 #30:0.0411523,f 5 #1:0.00137174,]
+Freq[38]:[f 1 #358:1,f 2 #33:0.0921788,f 3 #4:0.0111732,f 4 #2:0.00558659,]
+Freq[39]:[f 1 #13792:1,f 2 #36:0.00261021,]
+Freq[40]:[f 1 #1625:1,f 2 #2:0.00123077,]
+Freq[41]:[f 1 #1075:1,f 2 #1:0.000930233,]
+Freq[42]:[f 1 #877:1,f 2 #1:0.00114025,]
+Freq[43]:[f 1 #0:-nan,]
+Freq[44]:[f 1 #7103:1,f 2 #11:0.00154864,]
+Freq[45]:[f 1 #0:-nan,]
+Freq[46]:[f 1 #12721:1,f 2 #40:0.00314441,]
+Freq[47]:[f 1 #1885:1,f 2 #2:0.00106101,]
+Freq[48]:[f 1 #5403:1,f 2 #11:0.00203591,]
+Freq[49]:[f 1 #0:-nan,]
+Freq[50]:[f 1 #4252:1,f 2 #5:0.00117592,]
+Freq[51]:[f 1 #0:-nan,]
+Freq[52]:[f 1 #34:1,f 2 #4:0.117647,f 3 #3:0.0882353,]
+Freq[53]:[f 1 #14899:1,f 2 #1061:0.0712128,f 3 #96:0.00644339,f 4 #10:0.000671186,]
+Freq[54]:[f 1 #460:1,f 2 #55:0.119565,f 3 #4:0.00869565,]
+Freq[55]:[f 1 #4522:1,f 2 #831:0.183768,f 3 #59:0.0130473,f 4 #2:0.000442282,]
+Freq[56]:[f 1 #12178:1,f 2 #2021:0.165955,f 3 #111:0.0091148,f 4 #3:0.000246346,]
+Freq[57]:[f 1 #2402:1,f 2 #240:0.0999167,f 3 #11:0.00457952,]
+Freq[58]:[f 1 #50152:1,f 2 #2473:0.0493101,f 3 #173:0.00344951,f 4 #8:0.000159515,]
+Freq[59]:[f 1 #5284:1,f 2 #9:0.00170326,]
+Freq[60]:[f 1 #17357:1,f 2 #45:0.00259261,]
+Freq[61]:[f 1 #4887:1,]
+Freq[62]:[f 1 #98:1,]
+Freq[63]:[f 1 #495:1,]
+===> Skimming efficiency
+BIT: 0      fTriggerEventF1Proton ds: 0.646  b:     11865 a:      7931 eff:   0.668 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.999  0.997
+BIT: 1                 fTrackedXi ds: 0.000  b:         0 a:       834 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.988
+BIT: 2          fOmegaLargeRadius ds: 1.000  b:       173 a:       161 eff:   0.931 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT: 3                fSingleXiYN ds: 1.000  b:       397 a:       384 eff:   0.967 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT: 4               fQuadrupleXi ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT: 5                  fDoubleXi ds: 0.000  b:         0 a:       123 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.967
+BIT: 6              fTrackedOmega ds: 1.000  b:      1493 a:      1376 eff:   0.922 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT: 7                  fhadronXi ds: 0.000  b:         0 a:       969 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.986
+BIT: 8                  fTripleXi ds: 1.000  b:        36 a:        34 eff:   0.944 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT: 9                     fOmega ds: 0.100  b:      5448 a:      2149 eff:   0.394 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  0.992
+BIT:10       fGammaVeryLowPtEMCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:11        fGammaVeryLowPtDCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:12          fGammaHighPtEMCAL ds: 1.000  b:    271694 a:    268361 eff:   0.988 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:13           fGammaLowPtEMCAL ds: 0.009  b:     66752 a:    402064 eff:   6.023 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:14       fGammaVeryHighPtDCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:15      fGammaVeryHighPtEMCAL ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:16            fGammaLowPtDCAL ds: 0.008  b:     24814 a:    135451 eff:   5.459 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:17           fJetNeutralLowPt ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:18          fJetNeutralHighPt ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:19           fGammaHighPtDCAL ds: 1.000  b:     98238 a:     96959 eff:   0.987 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:20              fJetFullLowPt ds: 0.000  b:         0 a:    287442 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.999
+BIT:21             fJetFullHighPt ds: 1.000  b:    204206 a:    201726 eff:   0.988 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  0.999
+BIT:22              fEMCALReadout ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:23                  fPCMandEE ds: 1.000  b:      8194 a:      7345 eff:   0.896 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.999  0.999
+BIT:24                  fPHOSnbar ds: 1.000  b:    189652 a:    152530 eff:   0.804 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:25           fPCMHighPtPhoton ds: 1.000  b:      9596 a:      6220 eff:   0.648 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.996
+BIT:26                fPHOSPhoton ds: 1.000  b:     20463 a:     19814 eff:   0.968 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.999  0.999
+BIT:27                        fLD ds: 1.000  b:      2281 a:      2195 eff:   0.962 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.998
+BIT:28                        fPD ds: 0.198  b:      1035 a:       466 eff:   0.450 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.991
+BIT:29                       fLLL ds: 1.000  b:       234 a:       225 eff:   0.962 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:30                       fPLL ds: 1.000  b:      1325 a:      1268 eff:   0.957 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.997
+BIT:31                       fPPL ds: 1.000  b:      4141 a:      3959 eff:   0.956 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  0.997
+BIT:32                       fPPP ds: 0.312  b:      1773 a:       779 eff:   0.439 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:33            fLeadingPtTrack ds: 0.000  b:         0 a:    218044 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.994
+BIT:34           fHighFt0cFv0Flat ds: 1.000  b:     10617 a:     10504 eff:   0.989 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.340  0.337
+BIT:35           fHighFt0cFv0Mult ds: 1.000  b:      7109 a:      7022 eff:   0.988 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.179  0.179
+BIT:36               fHighFt0Flat ds: 0.000  b:         0 a:      1062 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.313
+BIT:37               fHighFt0Mult ds: 0.000  b:         0 a:      2078 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.351
+BIT:38               fHighMultFv0 ds: 0.000  b:         0 a:       444 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.806
+BIT:39             fHighTrackMult ds: 1.000  b:     14284 a:     13864 eff:   0.971 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.995  0.995
+BIT:40        fHfCharmBarToXiBach ds: 0.496  b:      3077 a:      1629 eff:   0.529 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  0.998
+BIT:41               fHfV0Charm3P ds: 1.000  b:      1204 a:      1077 eff:   0.895 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.995  0.998
+BIT:42               fHfV0Charm2P ds: 1.000  b:       994 a:       879 eff:   0.884 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.998
+BIT:43          fHfDoubleCharmMix ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:44           fHfDoubleCharm3P ds: 1.000  b:      8212 a:      7125 eff:   0.868 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.997
+BIT:45                 fHfFemto2P ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:46                fHfBeauty4P ds: 1.000  b:     14149 a:     12801 eff:   0.905 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.995  0.994
+BIT:47                 fHfFemto3P ds: 1.000  b:      2529 a:      1889 eff:   0.747 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.999  0.998
+BIT:48                fHfBeauty3P ds: 1.000  b:      5932 a:      5425 eff:   0.915 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.996  0.996
+BIT:49                fHfHighPt3P ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:50           fHfDoubleCharm2P ds: 1.000  b:      5052 a:      4262 eff:   0.844 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.998
+BIT:51                fHfHighPt2P ds: 0.000  b:         0 a:         0 eff:   0.000 VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT:52              fSingleMuHigh ds: 1.000  b:        52 a:        51 eff:   0.981 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.692  0.667
+BIT:53               fSingleMuLow ds: 0.001  b:      2381 a:     17349 eff:   7.286 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.859
+BIT:54                   fLMeeHMR ds: 1.000  b:       499 a:       582 eff:   1.166 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.778  0.790
+BIT:55                    fDiMuon ds: 1.000  b:      6415 a:      6369 eff:   0.993 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.712  0.710
+BIT:56                fDiElectron ds: 1.000  b:     16752 a:     16566 eff:   0.989 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.738  0.735
+BIT:57                   fLMeeIMR ds: 0.491  b:      3455 a:      2915 eff:   0.844 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.869  0.824
+BIT:58                   fSingleE ds: 0.001  b:      3244 a:     55649 eff:  17.154 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.901
+BIT:59               fJetChHighPt ds: 1.000  b:      5396 a:      5302 eff:   0.983 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.996  0.997
+BIT:60                fJetChLowPt ds: 0.103  b:      5803 a:     17447 eff:   3.007 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.998  0.995
+BIT:61                    fUDdiff ds: 0.495  b:     10407 a:      4887 eff:   0.470 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:62                  fH3L3Body ds: 1.000  b:       172 a:        98 eff:   0.570 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+BIT:63                        fHe ds: 1.000  b:       510 a:       495 eff:   0.971 VennInter:        0 Inter/before: 0.000 singles frac b/a: 1.000  1.000
+0 effWin:0.656
+1 effWin:-nan
+2 effWin:0.925
+3 effWin:0.967
+4 effWin:-nan
+5 effWin:-nan
+6 effWin:0.917
+7 effWin:-nan
+8 effWin:0.944
+9 effWin:0.147
+10 effWin:-nan
+11 effWin:-nan
+12 effWin:0.988
+13 effWin:0.062
+14 effWin:-nan
+15 effWin:-nan
+16 effWin:0.054
+17 effWin:-nan
+18 effWin:-nan
+19 effWin:0.987
+20 effWin:-nan
+21 effWin:0.987
+22 effWin:-nan
+23 effWin:0.893
+24 effWin:0.801
+25 effWin:0.618
+26 effWin:0.964
+27 effWin:0.961
+28 effWin:0.228
+29 effWin:0.957
+30 effWin:0.948
+31 effWin:0.953
+32 effWin:0.324
+33 effWin:-nan
+34 effWin:0.989
+35 effWin:0.988
+36 effWin:-nan
+37 effWin:-nan
+38 effWin:-nan
+39 effWin:0.965
+40 effWin:0.494
+41 effWin:0.882
+42 effWin:0.865
+43 effWin:-nan
+44 effWin:0.824
+45 effWin:-nan
+46 effWin:0.892
+47 effWin:0.696
+48 effWin:0.904
+49 effWin:-nan
+50 effWin:0.811
+51 effWin:-nan
+52 effWin:0.981
+53 effWin:0.010
+54 effWin:0.954
+55 effWin:0.992
+56 effWin:0.988
+57 effWin:0.593
+58 effWin:0.023
+59 effWin:0.979
+60 effWin:0.372
+61 effWin:0.469
+62 effWin:0.570
+63 effWin:0.971
+Time:15.205

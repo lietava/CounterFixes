@@ -1,0 +1,147 @@
+=== Unskimmed:
+bcs Size:4802397
+Total original triggers:7117298 selected triggers:4385984 Duration:12709.4
+=== Skimmed:
+bcs Size:4784190
+Total original triggers:18640713 selected triggers:8101925 Duration:12709.4
+Labels Nbins:74
+Label size:72
+0 fTriggerEventF1Proton
+1 fTrackedOmega
+2 fTrackedXi
+3 fOmegaLargeRadius
+4 fOmegaHighMult
+5 fSingleXiYN
+6 fQuadrupleXi
+7 fDoubleXi
+8 fhadronOmega
+9 fTripleXi
+10 fOmega
+11 fGammaVeryLowPtEMCAL
+12 fGammaVeryLowPtDCAL
+13 fGammaHighPtEMCAL
+14 fGammaLowPtEMCAL
+15 fGammaVeryHighPtDCAL
+16 fGammaVeryHighPtEMCAL
+17 fGammaLowPtDCAL
+18 fJetNeutralLowPt
+19 fJetNeutralHighPt
+20 fGammaHighPtDCAL
+21 fJetFullLowPt
+22 fJetFullHighPt
+23 fEMCALReadout
+24 fPCMandEE
+25 fPHOSnbar
+26 fPCMHighPtPhoton
+27 fPHOSPhoton
+28 fLD
+29 fPD
+30 fLLL
+31 fPLL
+32 fPPL
+33 fPPP
+34 fLeadingPtTrack
+35 fHighFt0cFv0Flat
+36 fHighFt0cFv0Mult
+37 fHighFt0Flat
+38 fHighFt0Mult
+39 fHighMultFv0
+40 fHighTrackMult
+41 fHfPhotonCharm3P
+42 fHfHighPt2P
+43 fHfSigmaC0K0
+44 fHfDoubleCharm2P
+45 fHfBeauty3P
+46 fHfFemto3P
+47 fHfFemto2P
+48 fHfHighPt3P
+49 fHfSigmaCPPK
+50 fHfDoubleCharm3P
+51 fHfDoubleCharmMix
+52 fHfPhotonCharm2P
+53 fHfV0Charm2P
+54 fHfBeauty4P
+55 fHfV0Charm3P
+56 fHfCharmBarToXiBach
+57 fSingleMuHigh
+58 fSingleMuLow
+59 fLMeeHMR
+60 fDiMuon
+61 fDiElectron
+62 fLMeeIMR
+63 fSingleE
+64 fTrackHighPt
+65 fTrackLowPt
+66 fJetChHighPt
+67 fJetChLowPt
+68 fUDdiffLarge
+69 fUDdiffSmall
+70 fH3L3Body
+71 fHe
+0 fTriggerEventF1Proton 381876 381876 347002 347002 
+1 fTrackedOmega 44198 44198 37108 37108 
+2 fTrackedXi 30644 0 20573 0 
+3 fOmegaLargeRadius 4317 4317 3785 3785 
+4 fOmegaHighMult 65286 65286 58326 58326 
+5 fSingleXiYN 8975 8975 8314 8314 
+6 fQuadrupleXi 5 0 4 0 
+7 fDoubleXi 2372 0 1495 0 
+8 fhadronOmega 55053 55053 48237 48237 
+9 fTripleXi 34 0 24 0 
+10 fOmega 233323 102992 139654 22579 
+11 fGammaVeryLowPtEMCAL 163806 142370 778372 79717 
+12 fGammaVeryLowPtDCAL 66364 54515 704333 71198 
+13 fGammaHighPtEMCAL 126698 126698 1438557 1438557 
+14 fGammaLowPtEMCAL 286426 105643 1445417 71226 
+15 fGammaVeryHighPtDCAL 9102 0 1334667 0 
+16 fGammaVeryHighPtEMCAL 24620 0 1426872 0 
+17 fGammaLowPtDCAL 98351 38282 1345371 66758 
+18 fJetNeutralLowPt 0 0 0 0 
+19 fJetNeutralHighPt 0 0 0 0 
+20 fGammaHighPtDCAL 46883 46883 1343439 1343439 
+21 fJetFullLowPt 103501 20374 1312676 131520 
+22 fJetFullHighPt 66933 66933 1306780 1306780 
+23 fEMCALReadout 484919 240932 835926 6499 
+24 fPCMandEE 127731 127731 103038 103038 
+25 fPHOSnbar 13471 13471 211099 211099 
+26 fPCMHighPtPhoton 149740 149740 84702 84702 
+27 fPHOSPhoton 246897 246897 863979 863979 
+28 fLD 50537 50537 45736 45736 
+29 fPD 40046 33043 14536 7765 
+30 fLLL 4282 4282 3722 3722 
+31 fPLL 32901 32901 28650 28650 
+32 fPPL 112565 112565 99029 99029 
+33 fPPP 55748 50608 21124 15840 
+34 fLeadingPtTrack 755261 0 588604 0 
+35 fHighFt0cFv0Flat 52690 52690 52669 52669 
+36 fHighFt0cFv0Mult 127373 127373 127532 127532 
+37 fHighFt0Flat 4559 0 4514 0 
+38 fHighFt0Mult 106702 0 106805 0 
+39 fHighMultFv0 26401 0 26290 0 
+40 fHighTrackMult 152689 152689 145662 145662 
+41 fHfPhotonCharm3P 0 0 1318 1318 
+42 fHfHighPt2P 0 0 0 0 
+43 fHfSigmaC0K0 21967 21967 17972 17972 
+44 fHfDoubleCharm2P 91407 91407 69996 69996 
+45 fHfBeauty3P 74165 74165 57526 57526 
+46 fHfFemto3P 76117 76117 55607 55607 
+47 fHfFemto2P 0 0 0 0 
+48 fHfHighPt3P 0 0 0 0 
+49 fHfSigmaCPPK 113034 113034 94202 94202 
+50 fHfDoubleCharm3P 95171 95171 77411 77411 
+51 fHfDoubleCharmMix 0 0 0 0 
+52 fHfPhotonCharm2P 0 0 2947 2947 
+53 fHfV0Charm2P 39679 39679 31682 31682 
+54 fHfBeauty4P 153980 153980 120735 120735 
+55 fHfV0Charm3P 40308 40308 32875 32875 
+56 fHfCharmBarToXiBach 80745 79232 39502 36892 
+57 fSingleMuHigh 975 975 751 751 
+58 fSingleMuLow 310582 59404 244414 1413 
+59 fLMeeHMR 40319 40319 33182 33182 
+60 fDiMuon 168414 168414 165102 165102 
+61 fDiElectron 325921 325921 308137 308137 
+62 fLMeeIMR 307542 268515 197092 161154 
+63 fSingleE 813693 77522 625639 2555 
+=== Unskimmed
+=== Skimmed
+eff started with window:100

@@ -1,0 +1,271 @@
+bcs Size:796765
+Total original triggers:2016580 selected triggers:882712 Duration:37212.6
+run:535069 Timestamp:1682270153623
+FilterCounters N bins:66
+SelectionCounters N bins:66
+ FBM size:965799
+ SBM size:965799
+ SBC size:965799
+Labels Nbins:66
+Label size CCDB:65
+0 Trigge
+1 Tracke
+2 OmegaL
+3 Single
+4 Quadru
+5 Double
+6 Tracke
+7 hadron
+8 Triple
+9 Omega
+10 GammaV
+11 GammaV
+12 GammaH
+13 GammaL
+14 GammaV
+15 GammaV
+16 GammaL
+17 JetNeu
+18 JetNeu
+19 GammaH
+20 JetFul
+21 JetFul
+22 EMCALR
+23 PCMand
+24 PHOSnb
+25 PCMHig
+26 PHOSPh
+27 LD
+28 PD
+29 LLL
+30 PLL
+31 PPL
+32 PPP
+33 Leadin
+34 HighFt
+35 HighFt
+36 HighFt
+37 HighFt
+38 HighMu
+39 HighTr
+40 HfChar
+41 HfV0Ch
+42 HfV0Ch
+43 HfDoub
+44 HfDoub
+45 HfFemt
+46 HfBeau
+47 HfFemt
+48 HfBeau
+49 HfHigh
+50 HfDoub
+51 HfHigh
+52 Single
+53 Single
+54 LMeeHM
+55 DiMuon
+56 DiElec
+57 LMeeIM
+58 Single
+59 JetChH
+60 JetChL
+61 UDdiff
+62 H3L3Bo
+63 He
+64 rigger
+0 Trigge 11983 11865 7931 7828  OFC:18378OSC:11865
+1 Tracke 1061 0 834 0  OFC:45531OSC:0
+2 OmegaL 173 173 161 161  OFC:173OSC:173
+3 Single 397 397 384 384  OFC:397OSC:397
+4 Quadru 0 0 0 0  OFC:0OSC:0
+5 Double 149 0 123 0  OFC:4238OSC:0
+6 Tracke 1493 1493 1376 1376  OFC:1493OSC:1493
+7 hadron 1099 0 969 0  OFC:9482OSC:0
+8 Triple 36 36 34 34  OFC:36OSC:36
+9 Omega 6915 5448 2149 825  OFC:54453OSC:5448
+10 GammaV 0 0 0 0  OFC:0OSC:0
+11 GammaV 0 0 0 0  OFC:0OSC:0
+12 GammaH 271694 271694 268361 268361  OFC:271694OSC:271694
+13 GammaL 476071 66752 402064 3797  OFC:7.68042e+06OSC:66752
+14 GammaV 0 0 0 0  OFC:0OSC:0
+15 GammaV 0 0 0 0  OFC:0OSC:0
+16 GammaL 165033 24814 135451 1642  OFC:2.93528e+06OSC:24814
+17 JetNeu 0 0 0 0  OFC:0OSC:0
+18 JetNeu 0 0 0 0  OFC:0OSC:0
+19 GammaH 98238 98238 96959 96959  OFC:98238OSC:98238
+20 JetFul 298226 0 287442 0  OFC:1.51412e+06OSC:0
+21 JetFul 204206 204206 201726 201726  OFC:204206OSC:204206
+22 EMCALR 0 0 0 0  OFC:0OSC:0
+23 PCMand 8194 8194 7345 7345  OFC:8194OSC:8194
+24 PHOSnb 189652 189652 152530 152530  OFC:189652OSC:189652
+25 PCMHig 9596 9596 6220 6220  OFC:9596OSC:9596
+26 PHOSPh 20463 20463 19814 19814  OFC:20463OSC:20463
+27 LD 2281 2281 2195 2195  OFC:2281OSC:2281
+28 PD 1273 1035 466 240  OFC:5228OSC:1035
+29 LLL 234 234 225 225  OFC:234OSC:234
+30 PLL 1325 1325 1268 1268  OFC:1325OSC:1325
+31 PPL 4141 4141 3959 3959  OFC:4141OSC:4141
+32 PPP 1979 1773 779 568  OFC:5677OSC:1773
+33 Leadin 231494 0 218044 0  OFC:3.83965e+06OSC:0
+34 HighFt 10617 10617 10504 10504  OFC:10617OSC:10617
+35 HighFt 7109 7109 7022 7022  OFC:7109OSC:7109
+36 HighFt 1078 0 1062 0  OFC:3688OSC:0
+37 HighFt 2106 0 2078 0  OFC:4551OSC:0
+38 HighMu 450 0 444 0  OFC:450OSC:0
+39 HighTr 14284 14284 13864 13864  OFC:14284OSC:14284
+40 HfChar 3186 3077 1629 1533  OFC:6199OSC:3077
+41 HfV0Ch 1204 1204 1077 1077  OFC:1204OSC:1204
+42 HfV0Ch 994 994 879 879  OFC:994OSC:994
+43 HfDoub 0 0 0 0  OFC:0OSC:0
+44 HfDoub 8212 8212 7125 7125  OFC:8212OSC:8212
+45 HfFemt 0 0 0 0  OFC:0OSC:0
+46 HfBeau 14149 14149 12801 12801  OFC:14149OSC:14149
+47 HfFemt 2529 2529 1889 1889  OFC:2529OSC:2529
+48 HfBeau 5932 5932 5425 5425  OFC:5932OSC:5932
+49 HfHigh 0 0 0 0  OFC:0OSC:0
+50 HfDoub 5052 5052 4262 4262  OFC:5052OSC:5052
+51 HfHigh 0 0 0 0  OFC:0OSC:0
+52 Single 52 52 51 51  OFC:52OSC:52
+53 Single 21499 2381 17349 15  OFC:2.16518e+06OSC:2381
+54 LMeeHM 499 499 582 582  OFC:499OSC:499
+55 DiMuon 6415 6415 6369 6369  OFC:6415OSC:6415
+56 DiElec 16752 16752 16566 16566  OFC:16752OSC:16752
+57 LMeeIM 4009 3455 2915 2234  OFC:7035OSC:3455
+58 Single 64533 3244 55649 53  OFC:3.01494e+06OSC:3244
+59 JetChH 5396 5396 5302 5302  OFC:5396OSC:5396
+60 JetChL 21499 5803 17447 2222  OFC:56568OSC:5803
+61 UDdiff 10407 10407 4887 4887  OFC:21013OSC:10407
+62 H3L3Bo 172 172 98 98  OFC:172OSC:172
+63 He 510 510 495 495  OFC:510OSC:510
+=== Unskimmed
+=== Skimmed
+0 before:11865 after:7786 effWin:0.656216
+1 before:0 after:0 effWin:-nan
+2 before:173 after:159 effWin:0.919075
+3 before:397 after:383 effWin:0.964736
+4 before:0 after:0 effWin:-nan
+5 before:0 after:0 effWin:-nan
+6 before:1493 after:1368 effWin:0.916276
+7 before:0 after:0 effWin:-nan
+8 before:36 after:34 effWin:0.944444
+9 before:5448 after:801 effWin:0.147026
+10 before:0 after:0 effWin:-nan
+11 before:0 after:0 effWin:-nan
+12 before:271694 after:268305 effWin:0.987526
+13 before:66752 after:4116 effWin:0.0616611
+14 before:0 after:0 effWin:-nan
+15 before:0 after:0 effWin:-nan
+16 before:24814 after:1350 effWin:0.0544048
+17 before:0 after:0 effWin:-nan
+18 before:0 after:0 effWin:-nan
+19 before:98238 after:96951 effWin:0.986899
+20 before:0 after:0 effWin:-nan
+21 before:204206 after:201647 effWin:0.987469
+22 before:0 after:0 effWin:-nan
+23 before:8194 after:7306 effWin:0.891628
+24 before:189652 after:151976 effWin:0.801341
+25 before:9596 after:5933 effWin:0.618278
+26 before:20463 after:19732 effWin:0.964277
+27 before:2281 after:2190 effWin:0.960105
+28 before:1035 after:236 effWin:0.228019
+29 before:234 after:224 effWin:0.957265
+30 before:1325 after:1257 effWin:0.948679
+31 before:4141 after:3946 effWin:0.95291
+32 before:1773 after:575 effWin:0.324309
+33 before:0 after:0 effWin:-nan
+34 before:10617 after:10502 effWin:0.989168
+35 before:7109 after:7022 effWin:0.987762
+36 before:0 after:0 effWin:-nan
+37 before:0 after:0 effWin:-nan
+38 before:0 after:0 effWin:-nan
+39 before:14284 after:13770 effWin:0.964016
+40 before:3077 after:1519 effWin:0.493663
+41 before:1204 after:1059 effWin:0.879568
+42 before:994 after:858 effWin:0.863179
+43 before:0 after:0 effWin:-nan
+44 before:8212 after:6764 effWin:0.823673
+45 before:0 after:0 effWin:-nan
+46 before:14149 after:12607 effWin:0.891017
+47 before:2529 after:1760 effWin:0.695927
+48 before:5932 after:5361 effWin:0.903742
+49 before:0 after:0 effWin:-nan
+50 before:5052 after:4094 effWin:0.810372
+51 before:0 after:0 effWin:-nan
+52 before:52 after:50 effWin:0.961538
+53 before:2381 after:24 effWin:0.0100798
+54 before:499 after:476 effWin:0.953908
+55 before:6415 after:6359 effWin:0.99127
+56 before:16752 after:16512 effWin:0.985673
+57 before:3455 after:2034 effWin:0.588712
+58 before:3244 after:73 effWin:0.0225031
+59 before:5396 after:5277 effWin:0.977947
+60 before:5803 after:2159 effWin:0.372049
+61 before:10407 after:4347 effWin:0.4177
+62 before:172 after:98 effWin:0.569767
+63 before:510 after:495 effWin:0.970588
+===> Skimming efficiency
+BIT: 0                     Trigge ds: 0.000  b:     11865 a:      7931 eff:   0.656 VennInter:        0 Inter/before: 0.000 singles frac b/a:49445.612  0.000
+BIT: 1                     Tracke ds: 0.000  b:         0 a:       834 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:   inf  0.143
+BIT: 2                     OmegaL ds: 0.000  b:       173 a:       161 eff:   0.919 VennInter:        0 Inter/before: 0.000 singles frac b/a:5872723.913 184294.559
+BIT: 3                     Single ds: 0.000  b:       397 a:       384 eff:   0.965 VennInter:        0 Inter/before: 0.000 singles frac b/a:82.025  0.000
+BIT: 4                     Quadru ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan   -nan
+BIT: 5                     Double ds: 0.000  b:         0 a:       123 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.000
+BIT: 6                     Tracke ds: 0.000  b:      1493 a:      1376 eff:   0.916 VennInter:        0 Inter/before: 0.000 singles frac b/a:392947.778 426361.375
+BIT: 7                     hadron ds: 0.000  b:         0 a:       969 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:   inf 33.812
+BIT: 8                     Triple ds: 0.000  b:        36 a:        34 eff:   0.944 VennInter:        0 Inter/before: 0.000 singles frac b/a:16296417.556 17255095.765
+BIT: 9                      Omega ds: 0.000  b:      5448 a:      2149 eff:   0.147 VennInter:        0 Inter/before: 0.000 singles frac b/a: 6.014 15.246
+BIT:10                     GammaV ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:   inf    inf
+BIT:11                     GammaV ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:   inf    inf
+BIT:12                     GammaH ds: 0.000  b:    271694 a:    268361 eff:   0.988 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.015 2186.135
+BIT:13                     GammaL ds: 0.000  b:     66752 a:    402064 eff:   0.062 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000  0.081
+BIT:14                     GammaV ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -inf   -nan
+BIT:15                     GammaV ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -inf   -nan
+BIT:16                     GammaL ds: 0.000  b:     24814 a:    135451 eff:   0.054 VennInter:        0 Inter/before: 0.000 singles frac b/a:6573.482 4331.258
+BIT:17                     JetNeu ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan    inf
+BIT:18                     JetNeu ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -inf    inf
+BIT:19                     GammaH ds: 0.000  b:     98238 a:     96959 eff:   0.987 VennInter:        0 Inter/before: 0.000 singles frac b/a:-7574.286  0.000
+BIT:20                     JetFul ds: 0.000  b:         0 a:    287442 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:   inf 3546.604
+BIT:21                     JetFul ds: 0.000  b:    204206 a:    201726 eff:   0.987 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000  0.161
+BIT:22                     EMCALR ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -inf    inf
+BIT:23                     PCMand ds: 0.000  b:      8194 a:      7345 eff:   0.892 VennInter:        0 Inter/before: 0.000 singles frac b/a:-90808.244  0.000
+BIT:24                     PHOSnb ds: 0.000  b:    189652 a:    152530 eff:   0.801 VennInter:        0 Inter/before: 0.000 singles frac b/a:3093.410 881.340
+BIT:25                     PCMHig ds: 0.000  b:      9596 a:      6220 eff:   0.618 VennInter:        0 Inter/before: 0.000 singles frac b/a: 3.414  0.000
+BIT:26                     PHOSPh ds: 0.000  b:     20463 a:     19814 eff:   0.964 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 51450.640
+BIT:27                         LD ds: 0.000  b:      2281 a:      2195 eff:   0.960 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 14.836
+BIT:28                         PD ds: 0.000  b:      1035 a:       466 eff:   0.228 VennInter:        0 Inter/before: 0.000 singles frac b/a:566832.224 351373.442
+BIT:29                        LLL ds: 0.000  b:       234 a:       225 eff:   0.957 VennInter:        0 Inter/before: 0.000 singles frac b/a:140.017  0.004
+BIT:30                        PLL ds: 0.000  b:      1325 a:      1268 eff:   0.949 VennInter:        0 Inter/before: 0.000 singles frac b/a:-1309988.323 128727.672
+BIT:31                        PPL ds: 0.000  b:      4141 a:      3959 eff:   0.953 VennInter:        0 Inter/before: 0.000 singles frac b/a:-179686.731  0.000
+BIT:32                        PPP ds: 0.000  b:      1773 a:       779 eff:   0.324 VennInter:        0 Inter/before: 0.000 singles frac b/a:87224.546  0.000
+BIT:33                     Leadin ds: 0.000  b:         0 a:    218044 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.000
+BIT:34                     HighFt ds: 0.000  b:     10617 a:     10504 eff:   0.989 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000  0.000
+BIT:35                     HighFt ds: 0.000  b:      7109 a:      7022 eff:   0.988 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000  0.000
+BIT:36                     HighFt ds: 0.000  b:         0 a:      1062 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:   inf  0.000
+BIT:37                     HighFt ds: 0.000  b:         0 a:      2078 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan  0.000
+BIT:38                     HighMu ds: 0.000  b:         0 a:       444 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:   inf 2078977.500
+BIT:39                     HighTr ds: 0.000  b:     14284 a:     13864 eff:   0.964 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000  2.349
+BIT:40                     HfChar ds: 0.000  b:      3077 a:      1629 eff:   0.494 VennInter:        0 Inter/before: 0.000 singles frac b/a:190663.477  0.000
+BIT:41                     HfV0Ch ds: 0.000  b:      1204 a:      1077 eff:   0.880 VennInter:        0 Inter/before: 0.000 singles frac b/a:27.213  0.000
+BIT:42                     HfV0Ch ds: 0.000  b:       994 a:       879 eff:   0.863 VennInter:        0 Inter/before: 0.000 singles frac b/a:164520.443 667432.596
+BIT:43                     HfDoub ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan    inf
+BIT:44                     HfDoub ds: 0.000  b:      8212 a:      7125 eff:   0.824 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.031 82340.106
+BIT:45                     HfFemt ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan    inf
+BIT:46                     HfBeau ds: 0.000  b:     14149 a:     12801 eff:   0.891 VennInter:        0 Inter/before: 0.000 singles frac b/a:66893.280 12772.396
+BIT:47                     HfFemt ds: 0.000  b:      2529 a:      1889 eff:   0.696 VennInter:        0 Inter/before: 0.000 singles frac b/a:12.876  0.000
+BIT:48                     HfBeau ds: 0.000  b:      5932 a:      5425 eff:   0.904 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 108142.578
+BIT:49                     HfHigh ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan    inf
+BIT:50                     HfDoub ds: 0.000  b:      5052 a:      4262 eff:   0.810 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 221833.076
+BIT:51                     HfHigh ds: 0.000  b:         0 a:         0 eff:    -nan VennInter:        0 Inter/before: 0.000 singles frac b/a:  -nan    inf
+BIT:52                     Single ds: 0.000  b:        52 a:        51 eff:   0.962 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 -338.824
+BIT:53                     Single ds: 0.000  b:      2381 a:     17349 eff:   0.010 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 -0.000
+BIT:54                     LMeeHM ds: 0.000  b:       499 a:       582 eff:   0.954 VennInter:        0 Inter/before: 0.000 singles frac b/a:-3478425.908 281340.124
+BIT:55                     DiMuon ds: 0.000  b:      6415 a:      6369 eff:   0.991 VennInter:        0 Inter/before: 0.000 singles frac b/a:-115991.076  0.000
+BIT:56                     DiElec ds: 0.000  b:     16752 a:     16566 eff:   0.986 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 35414.316
+BIT:57                     LMeeIM ds: 0.000  b:      3455 a:      2915 eff:   0.589 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 11.240
+BIT:58                     Single ds: 0.000  b:      3244 a:     55649 eff:   0.023 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000 10542.392
+BIT:59                     JetChH ds: 0.000  b:      5396 a:      5302 eff:   0.978 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000  6.180
+BIT:60                     JetChL ds: 0.000  b:      5803 a:     17447 eff:   0.372 VennInter:        0 Inter/before: 0.000 singles frac b/a:28172.316 9382.622
+BIT:61                     UDdiff ds: 0.000  b:     10407 a:      4887 eff:   0.418 VennInter:        0 Inter/before: 0.000 singles frac b/a: 0.000  0.000
+BIT:62                     H3L3Bo ds: 0.000  b:       172 a:        98 eff:   0.570 VennInter:        0 Inter/before: 0.000 singles frac b/a:-10091479.814 1668361.633
+BIT:63                         He ds: 0.000  b:       510 a:       495 eff:   0.971 VennInter:        0 Inter/before: 0.000 singles frac b/a:-1458985.790  0.000
+Time:1.587

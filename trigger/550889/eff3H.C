@@ -25,7 +25,7 @@
 #pragma link C++ class std::vector < std::array < uint64_t, 2>> + ;
 //
 //
-int runNUMBER = 535069;
+int runNUMBER = 550889;
 const int Ndim = 64;
 const int Nfreq = 10;
 const int Ndim_used = 64;
@@ -236,17 +236,19 @@ void bcInfos::getData(TFile& inputFile, int Nmax)
     bcInfo bcAO2D;
     cefpTree->SetBranchAddress("bcAO2D", &bcAO2D.bcAOD);
     cefpTree->SetBranchAddress("bcEvSel", &bcAO2D.bcEvSel);
-    cefpTree->SetBranchAddress("selMask", &bcAO2D.selMask);
-    cefpTree->SetBranchAddress("triMask", &bcAO2D.trigMask);
+    cefpTree->SetBranchAddress("selMask0", &bcAO2D.selMask);
+    cefpTree->SetBranchAddress("triMask0", &bcAO2D.trigMask);
+    //cefpTree->SetBranchAddress("selMask1", &bcAO2D.selMask1);
+    //cefpTree->SetBranchAddress("triMask1", &bcAO2D.trigMask1);
     for (int i = 0; i < cefpTree->GetEntries(); i++) {
       if((i < Nmax) || (Nmax == 0)) {
         cefpTree->GetEntry(i);
         bcs.push_back(bcAO2D);
         // Check consistency
-        if(~bcAO2D.trigMask & bcAO2D.selMask) {
-          *mylog << "ERROR selMask is not subset of trigMask:";
-          bcAO2D.print();
-        }
+        //if(~bcAO2D.trigMask & bcAO2D.selMask) {
+        //  *mylog << "ERROR selMask is not subset of trigMask:";
+        //  bcAO2D.print();
+        //}
         // Counters
         for (ULong64_t j = 0; j < Ndim; j++) {
           if (bcAO2D.selMask & (1ull << j))
@@ -795,7 +797,7 @@ struct effUtils : Hists
   std::array<double_t,Ndim> downscaleFactorsError{0};
   std::array<int,Ndim> vennInter{0};
   //
-  void extractLabelsAnal(std::vector<std::string>& labels, std::string& filename);
+  void extractLabelsAnal(std::vector<std::string>& labels);
   void extractLabels(std::vector<std::string>& labels);
   void readFiles(TFile& originalFile, TFile& skimmedFile, int Nmax =0);
   void readFiles(int Nmax);
@@ -824,8 +826,8 @@ void effUtils::printTrigsAndSels()
     *mylog << i << " " << Hists::labels[i] << " ";
     *mylog << originalBCs.triggerCounters[i] << " " << originalBCs.selectionCounters[i] << " ";
     *mylog << skimmedBCs.triggerCounters[i] << " " << skimmedBCs.selectionCounters[i] << " ";
-    if(originalBCs.mFilterCounters != nullptr) {
-      *mylog << " OFC:" << (originalBCs.mFilterCounters)->GetBinContent(i+2);
+    if(originalBCs.mFilterCounters) {
+      *mylog << " OFC:" << originalBCs.mFilterCounters->GetBinContent(i+2);
     }
     if(originalBCs.mSelectionCounters) {
      *mylog << " OSC:" << originalBCs.mSelectionCounters->GetBinContent(i+2);
@@ -834,16 +836,15 @@ void effUtils::printTrigsAndSels()
       *mylog << " SFC:" << skimmedBCs.mFilterCounters->GetBinContent(i+2);
     }
     if(skimmedBCs.mSelectionCounters) {
-      *mylog << " SSC:" << skimmedBCs.mSelectionCounters->GetBinContent(i+2);
+      *mylog << "SSC:" << skimmedBCs.mSelectionCounters->GetBinContent(i+2);
     }
     *mylog << std::endl;
   }
 }
-void effUtils::extractLabelsAnal(std::vector<std::string>& labels,std::string& filename)
+void effUtils::extractLabelsAnal(std::vector<std::string>& labels)
 {
   //TFile file("AnalysisResults.root");
-  *mylog << "Extracting labels from file:" << filename << std::endl;
-  TFile file(filename.c_str());
+  TFile file("AnalysisResults_fullrun.root");
   if(!file.IsOpen()) {
     *mylog << "File AnalysisResults.root can not be opned" << std::endl;
     return;
@@ -854,42 +855,19 @@ void effUtils::extractLabelsAnal(std::vector<std::string>& labels,std::string& f
     *mylog << " Can not find labels" << std::endl;
     return;
   }
-  //*mylog << "ptr: " << originalBCs.mFilterCounters << std::endl;
-  TH1* hist2 = dynamic_cast<TH1*>(file.Get("central-event-filter-task/scalers/mScalers;1")); // Replace with the correct path
-  if(hist2 == nullptr) {
-    *mylog << " Can not find labels" << std::endl;
-    return;
-  }
-  if(labels.size() > 0) {
-    *mylog << " Doing original" << std::endl;
-    originalBCs.mSelectionCounters = hist1;
-    originalBCs.mSelectionCounters->SetDirectory(0);
-    originalBCs.mFilterCounters = hist2;
-    originalBCs.mFilterCounters->SetDirectory(0);
-  } else {
-    *mylog << "Doing skimmed" << std::endl;
-    skimmedBCs.mSelectionCounters = hist1;
-    skimmedBCs.mSelectionCounters->SetDirectory(0);
-    skimmedBCs.mFilterCounters = hist2;
-    skimmedBCs.mFilterCounters->SetDirectory(0);
-  }
-  //
-  //
-  if(labels.size() > 0) {
-    labels.clear();
-    *mylog << "Labels Nbins:" <<  hist1->GetNbinsX() << std::endl;
-    for (int i = 1; i <= hist1->GetNbinsX(); i++) {
-      std::string label = hist1->GetXaxis()->GetBinLabel(i);
-      if (label != "Total number of events" && label != "Filtered events") {
-        labels.push_back(label);
-      }
-    }
-    *mylog << "Label size:" << labels.size() << std::endl;
-    for(size_t i = 0; i < labels.size(); i++) {
-      *mylog << i << " "  << labels[i] << std::endl;
+  //originalBCs.mFilterCounters = hist1;
+  labels.clear();
+  *mylog << "Labels Nbins:" <<  hist1->GetNbinsX() << std::endl;
+  for (int i = 1; i <= hist1->GetNbinsX(); i++) {
+    std::string label = hist1->GetXaxis()->GetBinLabel(i);
+    if (label != "Total number of events" && label != "Filtered events") {
+      labels.push_back(label);
     }
   }
-  *mylog << "Exctracting labels done" << std::endl;
+  *mylog << "Label size:" << labels.size() << std::endl;
+  for(size_t i = 0; i < labels.size(); i++) {
+    *mylog << i << " "  << labels[i] << std::endl;
+  }
 }
 void effUtils::extractLabels(std::vector<std::string>& labels)
 {
@@ -1387,11 +1365,7 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   // Only files
   if(1) {
     eff.readFiles(originalFile,skimmedFile,0);
-    std::string ori = "AnalysisResults_fullrun.root";
-    eff.extractLabelsAnal(Hists::labels,ori);
-    std::vector<std::string> d;
-    std::string ski = "AnalysisResults_fullrun-skimmed.root";
-    eff.extractLabelsAnal(d,ski);
+    eff.extractLabelsAnal(Hists::labels);
   }
   // file + CCDB
   if(0) {
@@ -1399,8 +1373,8 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
     eff.extractLabels(Hists::labels);
   }
   //eff.originalBCs.dataSize(1);
+  //return;
   eff.printTrigsAndSels();
-  return;
   clock_t start = clock();
   *mylog << "=== Unskimmed" << std::endl;
   //eff.originalBCs.frequencyBC();
@@ -1412,13 +1386,13 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   //return ;
   //
   *mylog << "=== Skimmed" << std::endl;
-  eff.skimmedBCs.evSel2AOD();
+  //eff.skimmedBCs.evSel2AOD();
   //eff.skimmedBCs.printbcInfoVect();
   ////eff.skimmedBCs.cleanBC();
   //eff.getFrequencyComp();
   //eff.vennDiagram(13);
   //eff.skimmedEfficiency();
-  eff.skimmedEfficiencyWindow();
+  //eff.skimmedEfficiencyWindow();
   //
   // correlations
   //

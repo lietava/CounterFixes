@@ -25,7 +25,8 @@
 #include <iostream>
 #endif
 using namespace o2::ctp;
-void getLumi(int runNumber, std::string className= "minbias_TVX_L0")
+//void getLumi(int runNumber, std::string className= "minbias_TVX_L0")
+void getLumi(int runNumber, std::string className= "CMTVX")
 { //
   std::string ccdbTest = "http://ccdb-test.cern.ch:8080";
   std::string ccdbProd = "http://alice-ccdb.cern.ch";
@@ -41,7 +42,7 @@ void getLumi(int runNumber, std::string className= "minbias_TVX_L0")
   std::map<std::string,std::string> metadata;
   std::string srun = std::to_string(runNumber);
   metadata["runNumber"] = srun;
-  ccdbMgr.setURL(ccdbTest);
+  //ccdbMgr.setURL(ccdbTest);
   auto scl = ccdbMgr.getSpecific<CTPRunScalers>(mCCDBPathCTPScalers, timeStamp, metadata);
   std::cout << "Counters size:" << scl->getScalerRecordRaw().size() << std::endl;
   if (scl == nullptr) {
