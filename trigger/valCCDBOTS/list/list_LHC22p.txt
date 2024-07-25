@@ -1,0 +1,9 @@
+/alice/data/2022/LHC22p/528602/ctf_skim_full
+/alice/data/2022/LHC22p/528604/ctf_skim_full
+/alice/data/2022/LHC22p/528617/ctf_skim_full
+/alice/data/2022/LHC22p/528781/ctf_skim_full
+/alice/data/2022/LHC22p/528782/ctf_skim_full
+/alice/data/2022/LHC22p/528783/ctf_skim_full
+/alice/data/2022/LHC22p/528784/ctf_skim_full
+/alice/data/2022/LHC22p/528798/ctf_skim_full
+/alice/data/2022/LHC22p/528801/ctf_skim_full

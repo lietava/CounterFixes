@@ -1,0 +1,613 @@
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC22m.txt
+/alice/data/2022/LHC22m/523559/ctf_skim_full
+run:523559 Timestamp:1660746416148
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:4580240
+Labels Nbins:54
+===> RUN:523559 TVXCTP: 5266034466 TVXCCDB:5162214774 CCDB/TVX:0.980285
+WARN 1 0
+WARN 2 0
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523142/ctf_skim_full
+run:523142 Timestamp:1660163684009
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:1154092
+Labels Nbins:54
+===> RUN:523142 TVXCTP: 1126674221 TVXCCDB:1100165130 CCDB/TVX:0.976471
+WARN 15 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523182/ctf_skim_full
+run:523182 Timestamp:1660249475407
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:1429685
+Labels Nbins:54
+===> RUN:523182 TVXCTP: 1332077540 TVXCCDB:1232976876 CCDB/TVX:0.925604
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:            668/            664 SelBitCnt/SelHisto:            668/664
+ERROR:  1                fPHOSPair TrigBitCnt/FilterHisto:           9101/           9023 SelBitCnt/SelHisto:           9101/9023
+ERROR:  2            fPHOSElectron TrigBitCnt/FilterHisto:           9442/           9328 SelBitCnt/SelHisto:           9442/9328
+ERROR:  3              fPHOSPhoton TrigBitCnt/FilterHisto:          28382/          28086 SelBitCnt/SelHisto:          28382/28086
+ERROR:  4        fOmegaLargeRadius TrigBitCnt/FilterHisto:            583/            580 SelBitCnt/SelHisto:            583/580
+ERROR:  5              fSingleXiYN TrigBitCnt/FilterHisto:           5493/           5457 SelBitCnt/SelHisto:           5493/5457
+ERROR:  6             fQuadrupleXi TrigBitCnt/FilterHisto:            463/            458 SelBitCnt/SelHisto:            463/458
+ERROR:  7                fDoubleXi TrigBitCnt/FilterHisto:          26379/          80305 SelBitCnt/SelHisto:          20174/19981
+ERROR:  8                fhadronXi TrigBitCnt/FilterHisto:          29700/          29453 SelBitCnt/SelHisto:          29700/29453
+ERROR:  9                fTripleXi TrigBitCnt/FilterHisto:           4956/           4913 SelBitCnt/SelHisto:           4956/4913
+ERROR: 10                   fOmega TrigBitCnt/FilterHisto:         115274/         319220 SelBitCnt/SelHisto:         111906/110987
+ERROR: 11          fGammaLowPtDCAL TrigBitCnt/FilterHisto:          94909/     1.2675e+06 SelBitCnt/SelHisto:          24876/24694
+ERROR: 12         fGammaLowPtEMCAL TrigBitCnt/FilterHisto:         196560/    2.78456e+06 SelBitCnt/SelHisto:          52987/52550
+ERROR: 13         fGammaHighPtDCAL TrigBitCnt/FilterHisto:          45610/          45247 SelBitCnt/SelHisto:          45610/45247
+ERROR: 14        fGammaHighPtEMCAL TrigBitCnt/FilterHisto:         109964/         109101 SelBitCnt/SelHisto:         109964/109101
+WARN 15 0
+ERROR: 16           fJetFullHighPt TrigBitCnt/FilterHisto:          39782/          39479 SelBitCnt/SelHisto:          39782/39479
+WARN 17 0
+ERROR: 18                      fLD TrigBitCnt/FilterHisto:          18389/          18245 SelBitCnt/SelHisto:          18389/18245
+ERROR: 19                      fPD TrigBitCnt/FilterHisto:          39239/          38941 SelBitCnt/SelHisto:          39239/38941
+ERROR: 20                     fLLL TrigBitCnt/FilterHisto:           7998/           7917 SelBitCnt/SelHisto:           7998/7917
+ERROR: 21                     fPLL TrigBitCnt/FilterHisto:          15952/          15809 SelBitCnt/SelHisto:          15952/15809
+ERROR: 22                     fPPL TrigBitCnt/FilterHisto:          24070/          23902 SelBitCnt/SelHisto:          24070/23902
+ERROR: 23                     fPPP TrigBitCnt/FilterHisto:          27695/          27485 SelBitCnt/SelHisto:          27695/27485
+WARN 24 0
+ERROR: 25         fHighFt0cFv0Flat TrigBitCnt/FilterHisto:          31984/          31738 SelBitCnt/SelHisto:          31984/31738
+ERROR: 26         fHighFt0cFv0Mult TrigBitCnt/FilterHisto:         227256/         225429 SelBitCnt/SelHisto:         227256/225429
+ERROR: 27             fHighFt0Flat TrigBitCnt/FilterHisto:          14352/          14233 SelBitCnt/SelHisto:          14352/14233
+WARN 28 0
+ERROR: 29             fHighFt0Mult TrigBitCnt/FilterHisto:         142234/         141155 SelBitCnt/SelHisto:         142234/141155
+WARN 30 0
+ERROR: 31           fHighTrackMult TrigBitCnt/FilterHisto:          23097/          23082 SelBitCnt/SelHisto:          23097/23082
+ERROR: 32        fHfDoubleCharmMix TrigBitCnt/FilterHisto:          32401/          32160 SelBitCnt/SelHisto:          32401/32160
+ERROR: 33         fHfDoubleCharm3P TrigBitCnt/FilterHisto:           9207/           9134 SelBitCnt/SelHisto:           9207/9134
+ERROR: 34           fHfSoftGamma3P TrigBitCnt/FilterHisto:            270/            269 SelBitCnt/SelHisto:            270/269
+ERROR: 35               fHfFemto2P TrigBitCnt/FilterHisto:          60407/          59987 SelBitCnt/SelHisto:          60407/59987
+ERROR: 36              fHfBeauty4P TrigBitCnt/FilterHisto:          42916/          42597 SelBitCnt/SelHisto:          42916/42597
+ERROR: 37               fHfFemto3P TrigBitCnt/FilterHisto:          39945/          39648 SelBitCnt/SelHisto:          39945/39648
+ERROR: 38              fHfBeauty3P TrigBitCnt/FilterHisto:          17145/          17020 SelBitCnt/SelHisto:          17145/17020
+ERROR: 39           fHfSoftGamma2P TrigBitCnt/FilterHisto:           2428/           2407 SelBitCnt/SelHisto:           2428/2407
+ERROR: 40              fHfHighPt3P TrigBitCnt/FilterHisto:          49721/         116264 SelBitCnt/SelHisto:          35233/35012
+ERROR: 41         fHfDoubleCharm2P TrigBitCnt/FilterHisto:          10074/           9991 SelBitCnt/SelHisto:          10074/9991
+ERROR: 42              fHfHighPt2P TrigBitCnt/FilterHisto:          28030/          48082 SelBitCnt/SelHisto:          23774/23618
+ERROR: 43            fSingleMuHigh TrigBitCnt/FilterHisto:           2914/          54575 SelBitCnt/SelHisto:            520/515
+ERROR: 44             fSingleMuLow TrigBitCnt/FilterHisto:          47623/    6.24993e+06 SelBitCnt/SelHisto:           7589/7534
+ERROR: 45                  fDiMuon TrigBitCnt/FilterHisto:          24313/          24112 SelBitCnt/SelHisto:          24313/24112
+ERROR: 46              fDiElectron TrigBitCnt/FilterHisto:          68607/          68131 SelBitCnt/SelHisto:          68607/68131
+ERROR: 47                 fSingleE TrigBitCnt/FilterHisto:         121051/    8.38235e+06 SelBitCnt/SelHisto:          10010/9910
+ERROR: 48                  fUDdiff TrigBitCnt/FilterHisto:         115920/         115009 SelBitCnt/SelHisto:         115920/115009
+WARN 49 0
+ERROR: 50                      fHe TrigBitCnt/FilterHisto:          19678/          19522 SelBitCnt/SelHisto:          19678/19522
+WARN 51 0
+/alice/data/2022/LHC22m/523677/ctf_skim_full
+run:523677 Timestamp:1660934888076
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:7059607
+Labels Nbins:54
+===> RUN:523677 TVXCTP: 8999500898 TVXCCDB:8844091261 CCDB/TVX:0.982731
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           2919/           2673 SelBitCnt/SelHisto:           2919/2673
+ERROR:  1                fPHOSPair TrigBitCnt/FilterHisto:          41788/          38338 SelBitCnt/SelHisto:          41788/38338
+ERROR:  2            fPHOSElectron TrigBitCnt/FilterHisto:          39199/          35999 SelBitCnt/SelHisto:          39199/35999
+ERROR:  3              fPHOSPhoton TrigBitCnt/FilterHisto:         116832/         107168 SelBitCnt/SelHisto:         116832/107168
+ERROR:  4        fOmegaLargeRadius TrigBitCnt/FilterHisto:           3381/           3211 SelBitCnt/SelHisto:           3381/3211
+ERROR:  5              fSingleXiYN TrigBitCnt/FilterHisto:          29793/          28267 SelBitCnt/SelHisto:          29793/28267
+ERROR:  6             fQuadrupleXi TrigBitCnt/FilterHisto:           2034/           1927 SelBitCnt/SelHisto:           2034/1927
+ERROR:  7                fDoubleXi TrigBitCnt/FilterHisto:         128147/         380247 SelBitCnt/SelHisto:          98479/93480
+ERROR:  8                fhadronXi TrigBitCnt/FilterHisto:         149943/         142269 SelBitCnt/SelHisto:         149943/142269
+ERROR:  9                fTripleXi TrigBitCnt/FilterHisto:          22807/          21621 SelBitCnt/SelHisto:          22807/21621
+ERROR: 10                   fOmega TrigBitCnt/FilterHisto:         653783/    1.73034e+06 SelBitCnt/SelHisto:         637098/605403
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+ERROR: 18                      fLD TrigBitCnt/FilterHisto:         114067/         108628 SelBitCnt/SelHisto:         114067/108628
+ERROR: 19                      fPD TrigBitCnt/FilterHisto:         265570/         252925 SelBitCnt/SelHisto:         265570/252925
+ERROR: 20                     fLLL TrigBitCnt/FilterHisto:          33313/          31568 SelBitCnt/SelHisto:          33313/31568
+ERROR: 21                     fPLL TrigBitCnt/FilterHisto:          72597/          68854 SelBitCnt/SelHisto:          72597/68854
+ERROR: 22                     fPPL TrigBitCnt/FilterHisto:         120142/         113980 SelBitCnt/SelHisto:         120142/113980
+ERROR: 23                     fPPP TrigBitCnt/FilterHisto:         153207/         145759 SelBitCnt/SelHisto:         153207/145759
+WARN 24 0
+ERROR: 25         fHighFt0cFv0Flat TrigBitCnt/FilterHisto:         375483/         358508 SelBitCnt/SelHisto:         375483/358508
+ERROR: 26         fHighFt0cFv0Mult TrigBitCnt/FilterHisto:        1304169/    1.24502e+06 SelBitCnt/SelHisto:        1304169/1.24502e+06
+ERROR: 27             fHighFt0Flat TrigBitCnt/FilterHisto:         120312/         114809 SelBitCnt/SelHisto:         120312/114809
+WARN 28 0
+ERROR: 29             fHighFt0Mult TrigBitCnt/FilterHisto:         353331/         336986 SelBitCnt/SelHisto:         353331/336986
+WARN 30 0
+ERROR: 31           fHighTrackMult TrigBitCnt/FilterHisto:         155913/         147858 SelBitCnt/SelHisto:         155913/147858
+ERROR: 32        fHfDoubleCharmMix TrigBitCnt/FilterHisto:         111656/         105821 SelBitCnt/SelHisto:         111656/105821
+ERROR: 33         fHfDoubleCharm3P TrigBitCnt/FilterHisto:          32318/          30592 SelBitCnt/SelHisto:          32318/30592
+ERROR: 34           fHfSoftGamma3P TrigBitCnt/FilterHisto:           1055/           1008 SelBitCnt/SelHisto:           1055/1008
+ERROR: 35               fHfFemto2P TrigBitCnt/FilterHisto:         254263/         241493 SelBitCnt/SelHisto:         254263/241493
+ERROR: 36              fHfBeauty4P TrigBitCnt/FilterHisto:         184721/         175161 SelBitCnt/SelHisto:         184721/175161
+ERROR: 37               fHfFemto3P TrigBitCnt/FilterHisto:         152438/         144880 SelBitCnt/SelHisto:         152438/144880
+ERROR: 38              fHfBeauty3P TrigBitCnt/FilterHisto:          79545/          75519 SelBitCnt/SelHisto:          79545/75519
+ERROR: 39           fHfSoftGamma2P TrigBitCnt/FilterHisto:           9833/           9356 SelBitCnt/SelHisto:           9833/9356
+ERROR: 40              fHfHighPt3P TrigBitCnt/FilterHisto:         267475/         630867 SelBitCnt/SelHisto:         198233/188540
+ERROR: 41         fHfDoubleCharm2P TrigBitCnt/FilterHisto:          35661/          33801 SelBitCnt/SelHisto:          35661/33801
+ERROR: 42              fHfHighPt2P TrigBitCnt/FilterHisto:         158076/         265232 SelBitCnt/SelHisto:         137626/131041
+ERROR: 43            fSingleMuHigh TrigBitCnt/FilterHisto:          70121/         695415 SelBitCnt/SelHisto:           6731/6351
+ERROR: 44             fSingleMuLow TrigBitCnt/FilterHisto:         385943/    4.67165e+07 SelBitCnt/SelHisto:          60582/57926
+ERROR: 45                  fDiMuon TrigBitCnt/FilterHisto:         257061/         243698 SelBitCnt/SelHisto:         257061/243698
+ERROR: 46              fDiElectron TrigBitCnt/FilterHisto:         713900/         676629 SelBitCnt/SelHisto:         713900/676629
+ERROR: 47                 fSingleE TrigBitCnt/FilterHisto:        1048156/    7.36677e+07 SelBitCnt/SelHisto:          92410/87881
+ERROR: 48                  fUDdiff TrigBitCnt/FilterHisto:         917389/         875550 SelBitCnt/SelHisto:         917389/875550
+WARN 49 0
+ERROR: 50                      fHe TrigBitCnt/FilterHisto:         155027/         147858 SelBitCnt/SelHisto:         155027/147858
+WARN 51 0
+/alice/data/2022/LHC22m/523309/ctf_skim_full
+run:523309 Timestamp:1660442368850
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:7118911
+Labels Nbins:54
+===> RUN:523309 TVXCTP: 7377548640 TVXCCDB:7352387625 CCDB/TVX:0.99659
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           5454/           5453 SelBitCnt/SelHisto:           5454/5453
+ERROR:  1                fPHOSPair TrigBitCnt/FilterHisto:          74133/          74121 SelBitCnt/SelHisto:          74133/74121
+ERROR:  2            fPHOSElectron TrigBitCnt/FilterHisto:          60099/          60089 SelBitCnt/SelHisto:          60099/60089
+ERROR:  3              fPHOSPhoton TrigBitCnt/FilterHisto:         177844/         177808 SelBitCnt/SelHisto:         177844/177808
+ERROR:  5              fSingleXiYN TrigBitCnt/FilterHisto:          28987/          28984 SelBitCnt/SelHisto:          28987/28984
+ERROR:  7                fDoubleXi TrigBitCnt/FilterHisto:         123532/         383501 SelBitCnt/SelHisto:          95036/95027
+ERROR:  8                fhadronXi TrigBitCnt/FilterHisto:         148945/         148933 SelBitCnt/SelHisto:         148945/148933
+ERROR:  9                fTripleXi TrigBitCnt/FilterHisto:          21933/          21932 SelBitCnt/SelHisto:          21933/21932
+ERROR: 10                   fOmega TrigBitCnt/FilterHisto:         606143/    1.68844e+06 SelBitCnt/SelHisto:         589727/589674
+ERROR: 11          fGammaLowPtDCAL TrigBitCnt/FilterHisto:         526745/    7.15251e+06 SelBitCnt/SelHisto:         142139/142120
+ERROR: 12         fGammaLowPtEMCAL TrigBitCnt/FilterHisto:        1099523/    1.58362e+07 SelBitCnt/SelHisto:         300618/300582
+ERROR: 13         fGammaHighPtDCAL TrigBitCnt/FilterHisto:         254182/         254162 SelBitCnt/SelHisto:         254182/254162
+ERROR: 14        fGammaHighPtEMCAL TrigBitCnt/FilterHisto:         622378/         622311 SelBitCnt/SelHisto:         622378/622311
+WARN 15 0
+ERROR: 16           fJetFullHighPt TrigBitCnt/FilterHisto:         201925/         201905 SelBitCnt/SelHisto:         201925/201905
+WARN 17 0
+ERROR: 18                      fLD TrigBitCnt/FilterHisto:          98430/          98416 SelBitCnt/SelHisto:          98430/98416
+ERROR: 19                      fPD TrigBitCnt/FilterHisto:         226127/         226101 SelBitCnt/SelHisto:         226127/226101
+ERROR: 20                     fLLL TrigBitCnt/FilterHisto:          29504/          29503 SelBitCnt/SelHisto:          29504/29503
+ERROR: 21                     fPLL TrigBitCnt/FilterHisto:          66144/          66139 SelBitCnt/SelHisto:          66144/66139
+ERROR: 22                     fPPL TrigBitCnt/FilterHisto:         111899/         111891 SelBitCnt/SelHisto:         111899/111891
+ERROR: 23                     fPPP TrigBitCnt/FilterHisto:         149838/         149824 SelBitCnt/SelHisto:         149838/149824
+WARN 24 0
+ERROR: 25         fHighFt0cFv0Flat TrigBitCnt/FilterHisto:         143107/         143099 SelBitCnt/SelHisto:         143107/143099
+ERROR: 26         fHighFt0cFv0Mult TrigBitCnt/FilterHisto:         869269/         869176 SelBitCnt/SelHisto:         869269/869176
+ERROR: 27             fHighFt0Flat TrigBitCnt/FilterHisto:          88655/          88649 SelBitCnt/SelHisto:          88655/88649
+WARN 28 0
+ERROR: 29             fHighFt0Mult TrigBitCnt/FilterHisto:         317749/         317704 SelBitCnt/SelHisto:         317749/317704
+WARN 30 0
+ERROR: 32        fHfDoubleCharmMix TrigBitCnt/FilterHisto:         149741/         149734 SelBitCnt/SelHisto:         149741/149734
+ERROR: 33         fHfDoubleCharm3P TrigBitCnt/FilterHisto:          44606/          44604 SelBitCnt/SelHisto:          44606/44604
+ERROR: 35               fHfFemto2P TrigBitCnt/FilterHisto:         299880/         299858 SelBitCnt/SelHisto:         299880/299858
+ERROR: 36              fHfBeauty4P TrigBitCnt/FilterHisto:         215329/         215318 SelBitCnt/SelHisto:         215329/215318
+ERROR: 37               fHfFemto3P TrigBitCnt/FilterHisto:         191535/         191524 SelBitCnt/SelHisto:         191535/191524
+ERROR: 38              fHfBeauty3P TrigBitCnt/FilterHisto:          90069/          90061 SelBitCnt/SelHisto:          90069/90061
+ERROR: 39           fHfSoftGamma2P TrigBitCnt/FilterHisto:          11248/          11247 SelBitCnt/SelHisto:          11248/11247
+ERROR: 40              fHfHighPt3P TrigBitCnt/FilterHisto:         317959/         757817 SelBitCnt/SelHisto:         227775/227758
+ERROR: 41         fHfDoubleCharm2P TrigBitCnt/FilterHisto:          46667/          46665 SelBitCnt/SelHisto:          46667/46665
+ERROR: 42              fHfHighPt2P TrigBitCnt/FilterHisto:         161845/         279478 SelBitCnt/SelHisto:         137878/137863
+ERROR: 43            fSingleMuHigh TrigBitCnt/FilterHisto:          22400/         370673 SelBitCnt/SelHisto:           3475/3474
+ERROR: 44             fSingleMuLow TrigBitCnt/FilterHisto:         250623/    3.52587e+07 SelBitCnt/SelHisto:          43659/43650
+ERROR: 45                  fDiMuon TrigBitCnt/FilterHisto:         138734/         138717 SelBitCnt/SelHisto:         138734/138717
+ERROR: 46              fDiElectron TrigBitCnt/FilterHisto:         226022/         226011 SelBitCnt/SelHisto:         226022/226011
+ERROR: 47                 fSingleE TrigBitCnt/FilterHisto:         418487/    3.37501e+07 SelBitCnt/SelHisto:          40729/40727
+ERROR: 48                  fUDdiff TrigBitCnt/FilterHisto:         749060/         748981 SelBitCnt/SelHisto:         749060/748981
+WARN 49 0
+ERROR: 50                      fHe TrigBitCnt/FilterHisto:         124106/         124093 SelBitCnt/SelHisto:         124106/124093
+WARN 51 0
+/alice/data/2022/LHC22m/523731/ctf_skim_full
+run:523731 Timestamp:1661019728899
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:5623305
+Labels Nbins:54
+===> RUN:523731 TVXCTP: 7086969988 TVXCCDB:6971944138 CCDB/TVX:0.983769
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523148/ctf_skim_full
+run:523148 Timestamp:1660198005540
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:690911
+Labels Nbins:54
+===> RUN:523148 TVXCTP: 587006622 TVXCCDB:583522604 CCDB/TVX:0.994065
+WARN 15 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523186/ctf_skim_full
+run:523186 Timestamp:1660280500911
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:3909646
+Labels Nbins:54
+===> RUN:523186 TVXCTP: 3705147972 TVXCCDB:2496468882 CCDB/TVX:0.673784
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           2438/           1582 SelBitCnt/SelHisto:           2438/1582
+ERROR:  1                fPHOSPair TrigBitCnt/FilterHisto:           7726/           5160 SelBitCnt/SelHisto:           7726/5160
+ERROR:  2            fPHOSElectron TrigBitCnt/FilterHisto:           5631/           3789 SelBitCnt/SelHisto:           5631/3789
+ERROR:  3              fPHOSPhoton TrigBitCnt/FilterHisto:          98512/          65647 SelBitCnt/SelHisto:          98512/65647
+ERROR:  4        fOmegaLargeRadius TrigBitCnt/FilterHisto:           1800/           1254 SelBitCnt/SelHisto:           1800/1254
+ERROR:  5              fSingleXiYN TrigBitCnt/FilterHisto:          16286/          11213 SelBitCnt/SelHisto:          16286/11213
+ERROR:  6             fQuadrupleXi TrigBitCnt/FilterHisto:           1201/            810 SelBitCnt/SelHisto:           1201/810
+ERROR:  7                fDoubleXi TrigBitCnt/FilterHisto:          70666/         151164 SelBitCnt/SelHisto:          54429/37480
+ERROR:  8                fhadronXi TrigBitCnt/FilterHisto:          88363/          61571 SelBitCnt/SelHisto:          88363/61571
+ERROR:  9                fTripleXi TrigBitCnt/FilterHisto:          12671/           8715 SelBitCnt/SelHisto:          12671/8715
+ERROR: 10                   fOmega TrigBitCnt/FilterHisto:         323597/         617923 SelBitCnt/SelHisto:         314657/215321
+ERROR: 11          fGammaLowPtDCAL TrigBitCnt/FilterHisto:         275897/     2.5045e+06 SelBitCnt/SelHisto:          73477/49446
+ERROR: 12         fGammaLowPtEMCAL TrigBitCnt/FilterHisto:         570934/    5.49606e+06 SelBitCnt/SelHisto:         154390/104098
+ERROR: 13         fGammaHighPtDCAL TrigBitCnt/FilterHisto:         132885/          89176 SelBitCnt/SelHisto:         132885/89176
+ERROR: 14        fGammaHighPtEMCAL TrigBitCnt/FilterHisto:         319767/         215547 SelBitCnt/SelHisto:         319767/215547
+WARN 15 0
+ERROR: 16           fJetFullHighPt TrigBitCnt/FilterHisto:         118374/          80998 SelBitCnt/SelHisto:         118374/80998
+WARN 17 0
+ERROR: 18                      fLD TrigBitCnt/FilterHisto:          53522/          36539 SelBitCnt/SelHisto:          53522/36539
+ERROR: 19                      fPD TrigBitCnt/FilterHisto:         126467/          86832 SelBitCnt/SelHisto:         126467/86832
+ERROR: 20                     fLLL TrigBitCnt/FilterHisto:          16680/          11414 SelBitCnt/SelHisto:          16680/11414
+ERROR: 21                     fPLL TrigBitCnt/FilterHisto:          39976/          27394 SelBitCnt/SelHisto:          39976/27394
+ERROR: 22                     fPPL TrigBitCnt/FilterHisto:          71084/          49326 SelBitCnt/SelHisto:          71084/49326
+ERROR: 23                     fPPP TrigBitCnt/FilterHisto:          93916/          64367 SelBitCnt/SelHisto:          93916/64367
+WARN 24 0
+ERROR: 25         fHighFt0cFv0Flat TrigBitCnt/FilterHisto:          74637/          50754 SelBitCnt/SelHisto:          74637/50754
+ERROR: 26         fHighFt0cFv0Mult TrigBitCnt/FilterHisto:         462266/         313877 SelBitCnt/SelHisto:         462266/313877
+ERROR: 27             fHighFt0Flat TrigBitCnt/FilterHisto:          43524/          29444 SelBitCnt/SelHisto:          43524/29444
+WARN 28 0
+ERROR: 29             fHighFt0Mult TrigBitCnt/FilterHisto:         187352/         128095 SelBitCnt/SelHisto:         187352/128095
+WARN 30 0
+ERROR: 31           fHighTrackMult TrigBitCnt/FilterHisto:         131766/         111770 SelBitCnt/SelHisto:         131766/111770
+ERROR: 32        fHfDoubleCharmMix TrigBitCnt/FilterHisto:         103350/          71520 SelBitCnt/SelHisto:         103350/71520
+ERROR: 33         fHfDoubleCharm3P TrigBitCnt/FilterHisto:          32307/          22596 SelBitCnt/SelHisto:          32307/22596
+ERROR: 34           fHfSoftGamma3P TrigBitCnt/FilterHisto:            742/            499 SelBitCnt/SelHisto:            742/499
+ERROR: 35               fHfFemto2P TrigBitCnt/FilterHisto:         195443/         133679 SelBitCnt/SelHisto:         195443/133679
+ERROR: 36              fHfBeauty4P TrigBitCnt/FilterHisto:         140303/          97522 SelBitCnt/SelHisto:         140303/97522
+ERROR: 37               fHfFemto3P TrigBitCnt/FilterHisto:         131604/          90410 SelBitCnt/SelHisto:         131604/90410
+ERROR: 38              fHfBeauty3P TrigBitCnt/FilterHisto:          54624/          37771 SelBitCnt/SelHisto:          54624/37771
+ERROR: 39           fHfSoftGamma2P TrigBitCnt/FilterHisto:           6506/           4403 SelBitCnt/SelHisto:           6506/4403
+ERROR: 40              fHfHighPt3P TrigBitCnt/FilterHisto:         193732/         313634 SelBitCnt/SelHisto:         136048/94224
+ERROR: 41         fHfDoubleCharm2P TrigBitCnt/FilterHisto:          30946/          21285 SelBitCnt/SelHisto:          30946/21285
+ERROR: 42              fHfHighPt2P TrigBitCnt/FilterHisto:          94253/         110451 SelBitCnt/SelHisto:          79428/54510
+ERROR: 43            fSingleMuHigh TrigBitCnt/FilterHisto:           8507/         111377 SelBitCnt/SelHisto:           1586/1071
+ERROR: 44             fSingleMuLow TrigBitCnt/FilterHisto:         129347/    1.20504e+07 SelBitCnt/SelHisto:          21360/14342
+ERROR: 45                  fDiMuon TrigBitCnt/FilterHisto:          67688/          45677 SelBitCnt/SelHisto:          67688/45677
+ERROR: 46              fDiElectron TrigBitCnt/FilterHisto:         123484/          85971 SelBitCnt/SelHisto:         123484/85971
+ERROR: 47                 fSingleE TrigBitCnt/FilterHisto:         231794/    1.16355e+07 SelBitCnt/SelHisto:          20098/13894
+ERROR: 48                  fUDdiff TrigBitCnt/FilterHisto:         360970/         244463 SelBitCnt/SelHisto:         360970/244463
+WARN 49 0
+ERROR: 50                      fHe TrigBitCnt/FilterHisto:          62600/          42330 SelBitCnt/SelHisto:          62600/42330
+WARN 51 0
+/alice/data/2022/LHC22m/523298/ctf_skim_full
+run:523298 Timestamp:1660402688829
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:412625
+Labels Nbins:54
+===> RUN:523298 TVXCTP: 431369891 TVXCCDB:424376906 CCDB/TVX:0.983789
+WARN 0 0
+WARN 1 0
+WARN 2 0
+WARN 3 0
+WARN 15 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 43 0
+WARN 44 0
+WARN 45 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523306/ctf_skim_full
+run:523306 Timestamp:1660429029791
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:435315
+Labels Nbins:54
+===> RUN:523306 TVXCTP: 428476710 TVXCCDB:428435314 CCDB/TVX:0.999903
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523397/ctf_skim_full
+run:523397 Timestamp:1660549428646
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:1123901
+Labels Nbins:54
+===> RUN:523397 TVXCTP: 1168717386 TVXCCDB:1161076367 CCDB/TVX:0.993462
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523399/ctf_skim_full
+run:523399 Timestamp:1660555898498
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:3026720
+Labels Nbins:54
+===> RUN:523399 TVXCTP: 3488091577 TVXCCDB:3471218366 CCDB/TVX:0.995163
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:            963/            936 SelBitCnt/SelHisto:            963/936
+ERROR:  1                fPHOSPair TrigBitCnt/FilterHisto:          30009/          29220 SelBitCnt/SelHisto:          30009/29220
+ERROR:  2            fPHOSElectron TrigBitCnt/FilterHisto:          30779/          29986 SelBitCnt/SelHisto:          30779/29986
+ERROR:  3              fPHOSPhoton TrigBitCnt/FilterHisto:          90275/          87952 SelBitCnt/SelHisto:          90275/87952
+ERROR:  4        fOmegaLargeRadius TrigBitCnt/FilterHisto:           1719/           1685 SelBitCnt/SelHisto:           1719/1685
+ERROR:  5              fSingleXiYN TrigBitCnt/FilterHisto:          15111/          14725 SelBitCnt/SelHisto:          15111/14725
+ERROR:  6             fQuadrupleXi TrigBitCnt/FilterHisto:            892/            867 SelBitCnt/SelHisto:            892/867
+ERROR:  7                fDoubleXi TrigBitCnt/FilterHisto:          62833/         191352 SelBitCnt/SelHisto:          48556/47243
+ERROR:  8                fhadronXi TrigBitCnt/FilterHisto:          80518/          78422 SelBitCnt/SelHisto:          80518/78422
+ERROR:  9                fTripleXi TrigBitCnt/FilterHisto:          11128/          10859 SelBitCnt/SelHisto:          11128/10859
+ERROR: 10                   fOmega TrigBitCnt/FilterHisto:         292547/         791916 SelBitCnt/SelHisto:         284928/277549
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+ERROR: 18                      fLD TrigBitCnt/FilterHisto:          47956/          46762 SelBitCnt/SelHisto:          47956/46762
+ERROR: 19                      fPD TrigBitCnt/FilterHisto:         110661/         107830 SelBitCnt/SelHisto:         110661/107830
+ERROR: 20                     fLLL TrigBitCnt/FilterHisto:          13733/          13374 SelBitCnt/SelHisto:          13733/13374
+ERROR: 21                     fPLL TrigBitCnt/FilterHisto:          32944/          32118 SelBitCnt/SelHisto:          32944/32118
+ERROR: 22                     fPPL TrigBitCnt/FilterHisto:          59001/          57384 SelBitCnt/SelHisto:          59001/57384
+ERROR: 23                     fPPP TrigBitCnt/FilterHisto:          79498/          77413 SelBitCnt/SelHisto:          79498/77413
+WARN 24 0
+ERROR: 25         fHighFt0cFv0Flat TrigBitCnt/FilterHisto:          69059/          67252 SelBitCnt/SelHisto:          69059/67252
+ERROR: 26         fHighFt0cFv0Mult TrigBitCnt/FilterHisto:         443069/         432013 SelBitCnt/SelHisto:         443069/432013
+ERROR: 27             fHighFt0Flat TrigBitCnt/FilterHisto:          42376/          41295 SelBitCnt/SelHisto:          42376/41295
+WARN 28 0
+ERROR: 29             fHighFt0Mult TrigBitCnt/FilterHisto:         188377/         183482 SelBitCnt/SelHisto:         188377/183482
+WARN 30 0
+ERROR: 31           fHighTrackMult TrigBitCnt/FilterHisto:          91731/          89956 SelBitCnt/SelHisto:          91731/89956
+ERROR: 32        fHfDoubleCharmMix TrigBitCnt/FilterHisto:          91630/          89439 SelBitCnt/SelHisto:          91630/89439
+ERROR: 33         fHfDoubleCharm3P TrigBitCnt/FilterHisto:          27486/          26834 SelBitCnt/SelHisto:          27486/26834
+ERROR: 34           fHfSoftGamma3P TrigBitCnt/FilterHisto:            654/            636 SelBitCnt/SelHisto:            654/636
+ERROR: 35               fHfFemto2P TrigBitCnt/FilterHisto:         162642/         158392 SelBitCnt/SelHisto:         162642/158392
+ERROR: 36              fHfBeauty4P TrigBitCnt/FilterHisto:         121539/         118549 SelBitCnt/SelHisto:         121539/118549
+ERROR: 37               fHfFemto3P TrigBitCnt/FilterHisto:         105814/         103042 SelBitCnt/SelHisto:         105814/103042
+ERROR: 38              fHfBeauty3P TrigBitCnt/FilterHisto:          48945/          47703 SelBitCnt/SelHisto:          48945/47703
+ERROR: 39           fHfSoftGamma2P TrigBitCnt/FilterHisto:           5867/           5716 SelBitCnt/SelHisto:           5867/5716
+ERROR: 40              fHfHighPt3P TrigBitCnt/FilterHisto:         171124/         399501 SelBitCnt/SelHisto:         122599/119525
+ERROR: 41         fHfDoubleCharm2P TrigBitCnt/FilterHisto:          28354/          27678 SelBitCnt/SelHisto:          28354/27678
+ERROR: 42              fHfHighPt2P TrigBitCnt/FilterHisto:          86567/         145520 SelBitCnt/SelHisto:          73886/72080
+ERROR: 43            fSingleMuHigh TrigBitCnt/FilterHisto:          51205/         436987 SelBitCnt/SelHisto:           4109/4016
+ERROR: 44             fSingleMuLow TrigBitCnt/FilterHisto:         197389/    2.07541e+07 SelBitCnt/SelHisto:          27381/26676
+ERROR: 45                  fDiMuon TrigBitCnt/FilterHisto:         137904/         134882 SelBitCnt/SelHisto:         137904/134882
+ERROR: 46              fDiElectron TrigBitCnt/FilterHisto:         108635/         105872 SelBitCnt/SelHisto:         108635/105872
+ERROR: 47                 fSingleE TrigBitCnt/FilterHisto:         189836/    1.49692e+07 SelBitCnt/SelHisto:          19836/19367
+ERROR: 48                  fUDdiff TrigBitCnt/FilterHisto:         395998/         386487 SelBitCnt/SelHisto:         395998/386487
+WARN 49 0
+ERROR: 50                      fHe TrigBitCnt/FilterHisto:          56538/          55080 SelBitCnt/SelHisto:          56538/55080
+WARN 51 0
+/alice/data/2022/LHC22m/523401/ctf_skim_full
+run:523401 Timestamp:1660563207571
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:2208622
+Labels Nbins:54
+===> RUN:523401 TVXCTP: 2407589688 TVXCCDB:2393967443 CCDB/TVX:0.994342
+ERROR:  4        fOmegaLargeRadius TrigBitCnt/FilterHisto:           1224/           1183 SelBitCnt/SelHisto:           1224/1183
+ERROR:  5              fSingleXiYN TrigBitCnt/FilterHisto:          11085/          10662 SelBitCnt/SelHisto:          11085/10662
+ERROR:  6             fQuadrupleXi TrigBitCnt/FilterHisto:            799/            768 SelBitCnt/SelHisto:            799/768
+ERROR:  7                fDoubleXi TrigBitCnt/FilterHisto:          50071/         148578 SelBitCnt/SelHisto:          38391/36929
+ERROR:  8                fhadronXi TrigBitCnt/FilterHisto:          62953/          60525 SelBitCnt/SelHisto:          62953/60525
+ERROR:  9                fTripleXi TrigBitCnt/FilterHisto:           9015/           8651 SelBitCnt/SelHisto:           9015/8651
+ERROR: 10                   fOmega TrigBitCnt/FilterHisto:         223446/         598658 SelBitCnt/SelHisto:         217328/208932
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+ERROR: 18                      fLD TrigBitCnt/FilterHisto:          36257/          34893 SelBitCnt/SelHisto:          36257/34893
+ERROR: 19                      fPD TrigBitCnt/FilterHisto:          81573/          78442 SelBitCnt/SelHisto:          81573/78442
+ERROR: 20                     fLLL TrigBitCnt/FilterHisto:          12256/          11795 SelBitCnt/SelHisto:          12256/11795
+ERROR: 21                     fPLL TrigBitCnt/FilterHisto:          28090/          26964 SelBitCnt/SelHisto:          28090/26964
+ERROR: 22                     fPPL TrigBitCnt/FilterHisto:          47357/          45473 SelBitCnt/SelHisto:          47357/45473
+ERROR: 23                     fPPP TrigBitCnt/FilterHisto:          60507/          58176 SelBitCnt/SelHisto:          60507/58176
+WARN 24 0
+ERROR: 25         fHighFt0cFv0Flat TrigBitCnt/FilterHisto:          47463/          45667 SelBitCnt/SelHisto:          47463/45667
+ERROR: 26         fHighFt0cFv0Mult TrigBitCnt/FilterHisto:         298094/         287114 SelBitCnt/SelHisto:         298094/287114
+ERROR: 27             fHighFt0Flat TrigBitCnt/FilterHisto:          29385/          28321 SelBitCnt/SelHisto:          29385/28321
+WARN 28 0
+ERROR: 29             fHighFt0Mult TrigBitCnt/FilterHisto:         117863/         113483 SelBitCnt/SelHisto:         117863/113483
+WARN 30 0
+ERROR: 31           fHighTrackMult TrigBitCnt/FilterHisto:          92391/          88525 SelBitCnt/SelHisto:          92391/88525
+ERROR: 32        fHfDoubleCharmMix TrigBitCnt/FilterHisto:          73533/          70841 SelBitCnt/SelHisto:          73533/70841
+ERROR: 33         fHfDoubleCharm3P TrigBitCnt/FilterHisto:          22350/          21505 SelBitCnt/SelHisto:          22350/21505
+ERROR: 34           fHfSoftGamma3P TrigBitCnt/FilterHisto:            483/            470 SelBitCnt/SelHisto:            483/470
+ERROR: 35               fHfFemto2P TrigBitCnt/FilterHisto:         132914/         127856 SelBitCnt/SelHisto:         132914/127856
+ERROR: 36              fHfBeauty4P TrigBitCnt/FilterHisto:          94950/          91299 SelBitCnt/SelHisto:          94950/91299
+ERROR: 37               fHfFemto3P TrigBitCnt/FilterHisto:          89909/          86542 SelBitCnt/SelHisto:          89909/86542
+ERROR: 38              fHfBeauty3P TrigBitCnt/FilterHisto:          37454/          36069 SelBitCnt/SelHisto:          37454/36069
+ERROR: 39           fHfSoftGamma2P TrigBitCnt/FilterHisto:           4499/           4322 SelBitCnt/SelHisto:           4499/4322
+ERROR: 40              fHfHighPt3P TrigBitCnt/FilterHisto:         129945/         296830 SelBitCnt/SelHisto:          91725/88226
+ERROR: 41         fHfDoubleCharm2P TrigBitCnt/FilterHisto:          22347/          21514 SelBitCnt/SelHisto:          22347/21514
+ERROR: 42              fHfHighPt2P TrigBitCnt/FilterHisto:          64072/         105595 SelBitCnt/SelHisto:          54282/52344
+ERROR: 43            fSingleMuHigh TrigBitCnt/FilterHisto:          45333/         350730 SelBitCnt/SelHisto:           3513/3310
+ERROR: 44             fSingleMuLow TrigBitCnt/FilterHisto:         158133/    1.49384e+07 SelBitCnt/SelHisto:          20025/19299
+ERROR: 45                  fDiMuon TrigBitCnt/FilterHisto:         113410/         107375 SelBitCnt/SelHisto:         113410/107375
+ERROR: 46              fDiElectron TrigBitCnt/FilterHisto:          76933/          73775 SelBitCnt/SelHisto:          76933/73775
+ERROR: 47                 fSingleE TrigBitCnt/FilterHisto:         136676/    1.01727e+07 SelBitCnt/SelHisto:          13175/12641
+ERROR: 48                  fUDdiff TrigBitCnt/FilterHisto:         262047/         252616 SelBitCnt/SelHisto:         262047/252616
+WARN 49 0
+ERROR: 50                      fHe TrigBitCnt/FilterHisto:          40083/          38611 SelBitCnt/SelHisto:          40083/38611
+WARN 51 0
+/alice/data/2022/LHC22m/523441/ctf_skim_full
+run:523441 Timestamp:1660600136737
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:2977834
+Labels Nbins:54
+===> RUN:523441 TVXCTP: 3701324016 TVXCCDB:3590728536 CCDB/TVX:0.97012
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           2344/           2295 SelBitCnt/SelHisto:           2344/2295
+ERROR:  1                fPHOSPair TrigBitCnt/FilterHisto:          28629/          27990 SelBitCnt/SelHisto:          28629/27990
+ERROR:  2            fPHOSElectron TrigBitCnt/FilterHisto:          30255/          29589 SelBitCnt/SelHisto:          30255/29589
+ERROR:  3              fPHOSPhoton TrigBitCnt/FilterHisto:          91248/          89258 SelBitCnt/SelHisto:          91248/89258
+ERROR:  4        fOmegaLargeRadius TrigBitCnt/FilterHisto:           1706/           1680 SelBitCnt/SelHisto:           1706/1680
+ERROR:  5              fSingleXiYN TrigBitCnt/FilterHisto:          14757/          14468 SelBitCnt/SelHisto:          14757/14468
+ERROR:  6             fQuadrupleXi TrigBitCnt/FilterHisto:           1038/           1020 SelBitCnt/SelHisto:           1038/1020
+ERROR:  7                fDoubleXi TrigBitCnt/FilterHisto:          65494/         198992 SelBitCnt/SelHisto:          50268/49351
+ERROR:  8                fhadronXi TrigBitCnt/FilterHisto:          72164/          70955 SelBitCnt/SelHisto:          72164/70955
+ERROR:  9                fTripleXi TrigBitCnt/FilterHisto:          11792/          11569 SelBitCnt/SelHisto:          11792/11569
+ERROR: 10                   fOmega TrigBitCnt/FilterHisto:         302849/         827858 SelBitCnt/SelHisto:         294770/289171
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+ERROR: 18                      fLD TrigBitCnt/FilterHisto:          47182/          46212 SelBitCnt/SelHisto:          47182/46212
+ERROR: 19                      fPD TrigBitCnt/FilterHisto:          96364/          94390 SelBitCnt/SelHisto:          96364/94390
+ERROR: 20                     fLLL TrigBitCnt/FilterHisto:          16043/          15796 SelBitCnt/SelHisto:          16043/15796
+ERROR: 21                     fPLL TrigBitCnt/FilterHisto:          33276/          32690 SelBitCnt/SelHisto:          33276/32690
+ERROR: 22                     fPPL TrigBitCnt/FilterHisto:          52802/          51904 SelBitCnt/SelHisto:          52802/51904
+ERROR: 23                     fPPP TrigBitCnt/FilterHisto:          67370/          66084 SelBitCnt/SelHisto:          67370/66084
+WARN 24 0
+ERROR: 25         fHighFt0cFv0Flat TrigBitCnt/FilterHisto:          70528/          68975 SelBitCnt/SelHisto:          70528/68975
+ERROR: 26         fHighFt0cFv0Mult TrigBitCnt/FilterHisto:         540274/         528820 SelBitCnt/SelHisto:         540274/528820
+ERROR: 27             fHighFt0Flat TrigBitCnt/FilterHisto:          45074/          43901 SelBitCnt/SelHisto:          45074/43901
+WARN 28 0
+ERROR: 29             fHighFt0Mult TrigBitCnt/FilterHisto:         275686/         269682 SelBitCnt/SelHisto:         275686/269682
+WARN 30 0
+ERROR: 31           fHighTrackMult TrigBitCnt/FilterHisto:          34419/          34356 SelBitCnt/SelHisto:          34419/34356
+ERROR: 32        fHfDoubleCharmMix TrigBitCnt/FilterHisto:          88873/          87827 SelBitCnt/SelHisto:          88873/87827
+ERROR: 33         fHfDoubleCharm3P TrigBitCnt/FilterHisto:          25118/          24846 SelBitCnt/SelHisto:          25118/24846
+ERROR: 34           fHfSoftGamma3P TrigBitCnt/FilterHisto:            710/            702 SelBitCnt/SelHisto:            710/702
+ERROR: 35               fHfFemto2P TrigBitCnt/FilterHisto:         155348/         153006 SelBitCnt/SelHisto:         155348/153006
+ERROR: 36              fHfBeauty4P TrigBitCnt/FilterHisto:         112283/         110738 SelBitCnt/SelHisto:         112283/110738
+ERROR: 37               fHfFemto3P TrigBitCnt/FilterHisto:          96074/          94681 SelBitCnt/SelHisto:          96074/94681
+ERROR: 38              fHfBeauty3P TrigBitCnt/FilterHisto:          48201/          47481 SelBitCnt/SelHisto:          48201/47481
+ERROR: 39           fHfSoftGamma2P TrigBitCnt/FilterHisto:           7080/           6948 SelBitCnt/SelHisto:           7080/6948
+ERROR: 40              fHfHighPt3P TrigBitCnt/FilterHisto:         151526/         358755 SelBitCnt/SelHisto:         110022/108105
+ERROR: 41         fHfDoubleCharm2P TrigBitCnt/FilterHisto:          28879/          28497 SelBitCnt/SelHisto:          28879/28497
+ERROR: 42              fHfHighPt2P TrigBitCnt/FilterHisto:          81104/         137760 SelBitCnt/SelHisto:          69639/68390
+ERROR: 43            fSingleMuHigh TrigBitCnt/FilterHisto:          52124/         467712 SelBitCnt/SelHisto:           4460/4404
+ERROR: 44             fSingleMuLow TrigBitCnt/FilterHisto:         207592/    2.23037e+07 SelBitCnt/SelHisto:          27663/27159
+ERROR: 45                  fDiMuon TrigBitCnt/FilterHisto:         146541/         144783 SelBitCnt/SelHisto:         146541/144783
+ERROR: 46              fDiElectron TrigBitCnt/FilterHisto:          91456/          89840 SelBitCnt/SelHisto:          91456/89840
+ERROR: 47                 fSingleE TrigBitCnt/FilterHisto:         161749/    1.39162e+07 SelBitCnt/SelHisto:          18108/17698
+ERROR: 48                  fUDdiff TrigBitCnt/FilterHisto:         333613/         325913 SelBitCnt/SelHisto:         333613/325913
+WARN 49 0
+ERROR: 50                      fHe TrigBitCnt/FilterHisto:          53896/          52755 SelBitCnt/SelHisto:          53896/52755
+WARN 51 0
+/alice/data/2022/LHC22m/523541/ctf_skim_full
+run:523541 Timestamp:1660718609282
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:2787663
+Labels Nbins:54
+===> RUN:523541 TVXCTP: 3056846863 TVXCCDB:3008413176 CCDB/TVX:0.984156
+WARN 0 0
+WARN 1 0
+WARN 2 0
+WARN 3 0
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523669/ctf_skim_full
+run:523669 Timestamp:1660910837708
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:2576893
+Labels Nbins:54
+===> RUN:523669 TVXCTP: 3251785743 TVXCCDB:2782012198 CCDB/TVX:0.855534
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523671/ctf_skim_full
+run:523671 Timestamp:1660915808460
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:1219720
+Labels Nbins:54
+===> RUN:523671 TVXCTP: 1129132459 TVXCCDB:1114662345 CCDB/TVX:0.987185
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523797/ctf_skim_full
+run:523797 Timestamp:1661103434361
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:781500
+Labels Nbins:54
+===> RUN:523797 TVXCTP: 656677168 TVXCCDB:642964084 CCDB/TVX:0.979117
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0

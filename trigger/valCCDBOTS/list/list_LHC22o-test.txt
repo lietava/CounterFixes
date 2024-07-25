@@ -1,0 +1,5 @@
+/alice/data/2022/LHC22o-test/527690/ctf_skim_full
+/alice/data/2022/LHC22o-test/527694/ctf_skim_full
+/alice/data/2022/LHC22o-test/527731/ctf_skim_full
+/alice/data/2022/LHC22o-test/527734/ctf_skim_full
+/alice/data/2022/LHC22o-test/527736/ctf_skim_full

@@ -1385,7 +1385,7 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
   // Test
   //eff.readFiles(10);
   // Only files
-  if(1) {
+  if(0) {
     eff.readFiles(originalFile,skimmedFile,0);
     std::string ori = "AnalysisResults_fullrun.root";
     eff.extractLabelsAnal(Hists::labels,ori);
@@ -1394,7 +1394,7 @@ void eff3H(std::string original = "bcRanges_fullrun.root", std::string skimmed =
     eff.extractLabelsAnal(d,ski);
   }
   // file + CCDB
-  if(0) {
+  if(1) {
     eff.readFiles(skimmedFile,0);
     eff.extractLabels(Hists::labels);
   }

@@ -1,0 +1,4 @@
+/alice/data/2023/LHC23zj/539129/ctf_skim_full
+/alice/data/2023/LHC23zj/539130/ctf_skim_full
+/alice/data/2023/LHC23zj/539132/ctf_skim_full
+/alice/data/2023/LHC23zj/539133/ctf_skim_full

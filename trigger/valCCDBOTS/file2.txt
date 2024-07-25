@@ -1,0 +1,36 @@
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC22m.txt
+/alice/data/2022/LHC22m/523559/ctf_skim_full
+run:523559 Timestamp:1660746416148
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:4580240
+Labels Nbins:54
+===> RUN:523559 TVXCTP: 5266034466 TVXCCDB:5162214774 CCDB/TVX:0.980285
+WARN 1 0
+WARN 2 0
+WARN 11 0
+WARN 12 0
+WARN 13 0
+WARN 14 0
+WARN 15 0
+WARN 16 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0
+/alice/data/2022/LHC22m/523142/ctf_skim_full
+run:523142 Timestamp:1660163684009
+FilterCounters N bins:54
+SelectionCounters N bins:54
+ bcInfos size:1154092
+Labels Nbins:54
+===> RUN:523142 TVXCTP: 1126674221 TVXCCDB:1100165130 CCDB/TVX:0.976471
+WARN 15 0
+WARN 17 0
+WARN 24 0
+WARN 28 0
+WARN 30 0
+WARN 49 0
+WARN 51 0

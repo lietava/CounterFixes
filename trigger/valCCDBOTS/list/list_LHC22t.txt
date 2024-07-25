@@ -1,0 +1,15 @@
+/alice/data/2022/LHC22t/529452/ctf_skim_full
+/alice/data/2022/LHC22t/529454/ctf_skim_full
+/alice/data/2022/LHC22t/529458/ctf_skim_full
+/alice/data/2022/LHC22t/529460/ctf_skim_full
+/alice/data/2022/LHC22t/529462/ctf_skim_full
+/alice/data/2022/LHC22t/529542/ctf_skim_full
+/alice/data/2022/LHC22t/529552/ctf_skim_full
+/alice/data/2022/LHC22t/529554/ctf_skim_full
+/alice/data/2022/LHC22t/529662/ctf_skim_full
+/alice/data/2022/LHC22t/529663/ctf_skim_full
+/alice/data/2022/LHC22t/529664/ctf_skim_full
+/alice/data/2022/LHC22t/529674/ctf_skim_full
+/alice/data/2022/LHC22t/529675/ctf_skim_full
+/alice/data/2022/LHC22t/529690/ctf_skim_full
+/alice/data/2022/LHC22t/529691/ctf_skim_full

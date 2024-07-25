@@ -1,0 +1,14 @@
+/alice/data/2023/LHC23u/537274/ctf_skim_full
+/alice/data/2023/LHC23u/537276/ctf_skim_full
+/alice/data/2023/LHC23u/537397/ctf_skim_full
+/alice/data/2023/LHC23u/537401/ctf_skim_full
+/alice/data/2023/LHC23u/537411/ctf_skim_full
+/alice/data/2023/LHC23u/537425/ctf_skim_full
+/alice/data/2023/LHC23u/537426/ctf_skim_full
+/alice/data/2023/LHC23u/537447/ctf_skim_full
+/alice/data/2023/LHC23u/537448/ctf_skim_full
+/alice/data/2023/LHC23u/537449/ctf_skim_full
+/alice/data/2023/LHC23u/537464/ctf_skim_full
+/alice/data/2023/LHC23u/537465/ctf_skim_full
+/alice/data/2023/LHC23u/537466/ctf_skim_full
+/alice/data/2023/LHC23u/537480/ctf_skim_full
