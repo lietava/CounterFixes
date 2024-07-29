@@ -37,7 +37,7 @@ ofstream* mylog;
 // main structure bcInfo alias ZorroHelper
 //
 struct ZorroHelper {
-  uint64_t bcAOD, bcEvSel, trigMask[2], selMask[2];
+  ULong64_t bcAOD, bcEvSel, trigMask[2], selMask[2];
   void print() const;
   //ClassDefNV(ZorroHelper, 1);
 };
@@ -67,28 +67,89 @@ struct bcInfos
   //const std::string mCCDBPathTrigScalersSkimmed = "Users/m/mpuccio/EventFiltering/OTS/SelectionCounters";
   bcInfos() = default;
   std::vector<bcInfo> bcs;
-  std::array<int, Ndim> selectionCounters{0};  // counting bits from disk or CCDB file
-  std::array<int, Ndim> triggerCounters{0};    // counting bits from disk or CCDB file
+  std::array<int, Ndim> selectionCounters{0};  // counting bits from CCDB file
+  std::array<int, Ndim> triggerCounters{0};    // counting bits from CCDB file
+    std::array<int, Ndim> selectionCountersD{0};  // counting bits from disk file
+  std::array<int, Ndim> triggerCountersD{0};    // counting bits from disk file
   std::array<double_t,Ndim> downscaleFactors{0};
   int totalSelected = 0;
   int totalTriggered = 0;
   TH1* mFilterCounters = nullptr;       // from CCDB
   TH1* mSelectionCounters = nullptr;    // from CCDB
+  TH1* mFilterCountersD = nullptr;       // from CCDB
+  TH1* mSelectionCountersD = nullptr;    // from CCDB
   TH1* mInspectedTVX = nullptr;         // from CCDB
   std::array<double_t,Ndim> eff{0};
   std::array<double_t,Ndim> err{0};
   uint64_t TVXCTP{0},TVXCCDB{0};
   //
+  void getData(TFile& inputFile, int Nmax = 0);
   void getDataCCDB(int run, int Nmax = 0, bool print = 0);
+  void getHistosFRomAnal();
   double_t getDuration();
   void selectionEfficiency();
   void selectionEfficiencyBiased() const;
   void extractLabels();
   void checkConsistency();
+  void checkConsistencyD();
   //
   void printbcInfoVect();
   void printbcInfoVect(std::vector<bcInfo>& bcs);
 };
+//
+// read data from root file
+//
+void bcInfos::getData(TFile& inputFile, int Nmax)
+{
+  int i = 0;
+  for (auto key : *(inputFile.GetListOfKeys())) {
+    TTree* cefpTree = (TTree*)inputFile.Get(Form("%s/selectedBC", key->GetName()));
+    if (!cefpTree)
+      continue;
+    bcInfo bcAO2D;
+    cefpTree->SetBranchAddress("bcAO2D", &bcAO2D.bcAOD);
+    cefpTree->SetBranchAddress("bcEvSel", &bcAO2D.bcEvSel);
+    if(cefpTree->GetBranch("selMask") && cefpTree->GetBranch("triMask")) {
+      cefpTree->SetBranchAddress("selMask", &bcAO2D.selMask[0]);
+      cefpTree->SetBranchAddress("triMask", &bcAO2D.trigMask[0]);
+    } else {
+      cefpTree->SetBranchAddress("selMask0", &bcAO2D.selMask[0]);
+      cefpTree->SetBranchAddress("triMask0", &bcAO2D.trigMask[0]);
+      cefpTree->SetBranchAddress("selMask1", &bcAO2D.selMask[1]);
+      cefpTree->SetBranchAddress("triMask1", &bcAO2D.trigMask[1]);
+    }
+    for (int i = 0; i < cefpTree->GetEntries(); i++) {
+      if((i < Nmax) || (Nmax == 0)) {
+        cefpTree->GetEntry(i);
+        bcs.push_back(bcAO2D);
+        // Check consistency
+        //if(~bcAO2D.trigMask & bcAO2D.selMask) {
+        //  *mylog << "ERROR selMask is not subset of trigMask:";
+        //  bcAO2D.print();
+        //}
+        // Counters
+        for (int j = 0; j < Ndimused; j++) {
+          int index = j/64;
+          int mask = j % 64;
+          if (bcAO2D.selMask[index] & (1ull << mask))
+            selectionCountersD[j]++;
+          if (bcAO2D.trigMask[index] & (1ull << mask))
+            triggerCountersD[j]++;
+        }
+      }
+    }
+  }
+  std::sort(bcs.begin(), bcs.end(), [](const bcInfo& a, const bcInfo& b) { return a.bcEvSel < b.bcEvSel; });
+  //
+  *mylog << "bcs Size:" << bcs.size() << std::endl;
+  for (int i = 0; i < Ndimused; i++) {
+    totalSelected += selectionCountersD[i];
+    totalTriggered += triggerCountersD[i];
+    *mylog << i << " Trig:" << triggerCountersD[i] << " Sel:" << selectionCountersD[i] << std::endl;
+  }
+  *mylog << "Total original triggers:" << totalTriggered << " selected triggers:" << totalSelected ;
+  *mylog << " Duration:" << getDuration() << std::endl;
+}
 //
 void bcInfos::getDataCCDB(int runNumber, int Nmax, bool print)
 {
@@ -145,6 +206,7 @@ void bcInfos::getDataCCDB(int runNumber, int Nmax, bool print)
   }
   std::cout << "TVX CCDB:" << mInspectedTVX->GetEntries() << std::endl;
   TVXCCDB = mInspectedTVX->GetEntries();
+  mInspectedTVX->SetDirectory(0);
   //
   path = mCCDBPathOTS+"/FilterCounters";
   mFilterCounters = ccdbMgr.getSpecific<TH1>(path, timeStamp, metadata);
@@ -152,6 +214,7 @@ void bcInfos::getDataCCDB(int runNumber, int Nmax, bool print)
     *mylog << "FilterScalers not found" << std::endl;
     return;
   }
+  mFilterCounters->SetDirectory(0);
   int Nfiltered = mFilterCounters->GetNbinsX();
   *mylog << "FilterCounters N bins:" << mFilterCounters->GetNbinsX() << std::endl;
   path = mCCDBPathOTS+"/SelectionCounters";
@@ -160,6 +223,7 @@ void bcInfos::getDataCCDB(int runNumber, int Nmax, bool print)
     *mylog << "SelectionCounters not found" << std::endl;
     return;
   }
+  mSelectionCounters->SetDirectory(0);
   int Nselected = mSelectionCounters->GetNbinsX();
   *mylog << "SelectionCounters N bins:" << mSelectionCounters->GetNbinsX() << std::endl;
   if(Nfiltered != Nselected) {
@@ -200,6 +264,32 @@ void bcInfos::getDataCCDB(int runNumber, int Nmax, bool print)
       *mylog << i << " " << label << " " << triggerCounters[i] << " " << mFilterCounters->GetBinContent(i+2) << "||" << selectionCounters[i] << " " << mSelectionCounters->GetBinContent(i+2) << std::endl;
     }
   }
+}
+void bcInfos::getHistosFRomAnal()
+{ 
+  std::string filename = "AnalysisResults_fullrun.root";
+  *mylog << "Extracting labels from file:" << filename << std::endl;
+  TFile file(filename.c_str());
+  if(!file.IsOpen()) {
+    *mylog << "File AnalysisResults.root can not be opned" << std::endl;
+    return;
+  }
+  // Extract the histograms
+  TH1* hist1 = dynamic_cast<TH1*>(file.Get("central-event-filter-task/scalers/mFiltered;1")); // Replace with the correct path
+  if(hist1 == nullptr) {
+    *mylog << " Can not find labels" << std::endl;
+    return;
+  }
+  //*mylog << "ptr: " << originalBCs.mFilterCounters << std::endl;
+  TH1* hist2 = dynamic_cast<TH1*>(file.Get("central-event-filter-task/scalers/mScalers;1")); // Replace with the correct path
+  if(hist2 == nullptr) {
+    *mylog << " Can not find labels" << std::endl;
+    return;
+  }
+  mFilterCountersD = hist2;
+  mSelectionCountersD = hist1;
+  mFilterCountersD->SetDirectory(0);
+  mSelectionCountersD->SetDirectory(0);
 }
 double_t bcInfos::getDuration()
 {
@@ -290,43 +380,44 @@ void bcInfos::checkConsistency()
     }
   }
 }
+void bcInfos::checkConsistencyD()
+{
+  for(int i = 0; i < Ndimused; i++) {
+    if(selectionCounters[i] != selectionCountersD[i]) {
+      *mylog << "sel counters from disk vs ccdb diff" << std::endl;
+    }
+    if(triggerCounters[i] != triggerCountersD[i]) {
+      *mylog << "trig counters from disk vs ccdb diff" << std::endl;
+    }
+    if(mSelectionCounters->GetBinContent(i+2) != mSelectionCountersD->GetBinContent(i+2)) {
+      *mylog << "sel histos from disk vs ccdb diff" << std::endl;
+    }
+    if(mFilterCounters->GetBinContent(i+2) != mFilterCountersD->GetBinContent(i+2)) {
+      *mylog << "trig histos from disk vs ccdb diff" << std::endl;
+    }
+  }
+  *mylog << "checkConsistencyD finished" << std::endl;
+}
 //
 // main
 //
-void valCCDB_CTP()
+void valCCDB_OTS_disk()
 {
   ofstream ff;
   ff.open("file.txt");
   mylog = &ff;
   //
-  int runNum = 529691;
-  // loop over files
-  std::string inputList = "list/inputList.txt";
-  std::ifstream files(inputList.data());
-  std::string file;
-  int nfiles = 0;
-  int nperiods = 0;
-  while (std::getline(files, file) && nperiods < 100000) 
-  {
-    //file = "/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC24aj.txt";
-    std::cout << "Doing:" << file << std::endl;
-    *mylog << "Doing:" << file << std::endl;
-    std::ifstream fileruns(file.data());
-    std::string runline;
-    while (std::getline(fileruns, runline) && nfiles < 100000) {
-      std::cout << runline << std::endl;
-      *mylog<< runline << std::endl; 
-      std::vector<std::string> tokens = o2::utils::Str::tokenize(runline, '/');
-      size_t ntokens = tokens.size();
-      //std::cout << runline << " tokens:" << ntokens << " " << tokens[4] << std::endl;
-      nfiles++;
-      runNum = std::stoi(tokens[4]);
-      std::cout << runNum << std::endl;
-      bcInfos bcis;
-      bcis.getDataCCDB(runNum,0,0);
-      bcis.extractLabels();
-      bcis.checkConsistency();
-    }
-    nperiods++;
-  }
+  int runNum = 552205;
+  //file = "/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC24aj.txt";
+  //std::cout << runline << " tokens:" << ntokens << " " << tokens[4] << std::endl;
+  std::cout << runNum << std::endl;
+  bcInfos bcis;
+  bcis.getDataCCDB(runNum,0,0);
+  std::string oribcs = "bcRanges_fullrun.root";
+  TFile orifile(oribcs.data());
+  bcis.getData(orifile);
+  bcis.getHistosFRomAnal();
+  bcis.extractLabels();
+  bcis.checkConsistency();
+  bcis.checkConsistencyD();
 }
