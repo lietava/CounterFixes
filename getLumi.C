@@ -25,7 +25,7 @@
 #include <iostream>
 #endif
 using namespace o2::ctp;
-void getLumi(int runNumber, std::string className= "minbias_TVX_L0")
+void getLumi(int runNumber, uint64_t timeStamp = 0, std::string className= "minbias_TVX_L0")
 { //
   std::string ccdbTest = "http://ccdb-test.cern.ch:8080";
   std::string ccdbProd = "http://alice-ccdb.cern.ch";
@@ -33,9 +33,11 @@ void getLumi(int runNumber, std::string className= "minbias_TVX_L0")
   std::string mCCDBPathCTPConfig = "CTP/Config/Config";
   auto& ccdbMgr = o2::ccdb::BasicCCDBManager::instance();
   ccdbMgr.setURL(ccdbProd);
-  // Timestamp
-  auto soreor = ccdbMgr.getRunDuration(runNumber);
-  uint64_t timeStamp = (soreor.second - soreor.first) / 2 + soreor.first;
+  if(timeStamp == 0) {
+    // Timestamp
+    auto soreor = ccdbMgr.getRunDuration(runNumber);
+    uint64_t timeStamp = (soreor.second - soreor.first) / 2 + soreor.first;
+  }
   std::cout << "Timestamp:" << timeStamp << std::endl;
   // Scalers
   std::map<std::string,std::string> metadata;
@@ -52,7 +54,7 @@ void getLumi(int runNumber, std::string className= "minbias_TVX_L0")
   //return;
   scl->convertRawToO2();
   std::vector<CTPScalerRecordO2> recs = scl->getScalerRecordO2();
-  //scl->printFromZero(std::cout);
+  scl->printFromZero(std::cout);
   //
   // CTPConfiguration ctpcfg;
   auto ctpcfg = ccdbMgr.getSpecific<CTPConfiguration>(mCCDBPathCTPConfig, timeStamp, metadata);

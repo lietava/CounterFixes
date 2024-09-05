@@ -1,0 +1,49 @@
+[INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1725529162-tVzXTF, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:1
+run: 554524
+Run start:1721569699068
+Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.54
+Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.54
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/13/15129/1067fac1-476c-11ef-a8bd-0aa140651b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1721569046484/1067fac1-476c-11ef-a8bd-0aa140651b9a for 1721569759068 (retrieve, agent_id: ctpo2a9.cern.ch-1725529162-tVzXTF), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/13/00205/8a9b62f0-4591-11ef-a882-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1721367686594/8a9b62f0-4591-11ef-a882-0aa140641b9a for 1721569759068 (retrieve, agent_id: ctpo2a9.cern.ch-1725529162-tVzXTF), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/FirstRunOrbit/10/21037/e466425e-4767-11ef-a8bd-0aa140641b9a in SE <ALICE::CERN::OCDB>
+Info in <TKey::ReadObjectAny>: Using Converter StreamerInfo from vector<Long64_t> to vector<long>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/FirstRunOrbit/1721569700732/e466425e-4767-11ef-a8bd-0aa140641b9a for 1721569759068 (retrieve, agent_id: ctpo2a9.cern.ch-1725529162-tVzXTF), 
+CTP/Calib/FirstRunOrbit record:1721569700731749 554524 2271727776
+Orbit reset: 1721367686593
+ First orbit scalers: 2271727355
+ First orbit CCDB: 2271727776 diff:421
+ startTime run                 = 1721569699068
+ startTimeRun_accordingToOrbit = 1721569699030
+ INFO : run 554524 has start time from run and start time from orbit that differ (by 0 secs)
+run: 554526
+Run start:1721572331324
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/02/10765/87467cc8-47c2-11ef-a8f6-0aa140651b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1721571678264/87467cc8-47c2-11ef-a8f6-0aa140651b9a for 1721572391324 (retrieve, agent_id: ctpo2a9.cern.ch-1725529162-tVzXTF), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/FirstRunOrbit/14/18985/055790bf-476e-11ef-a8bd-0aa140641b9a in SE <ALICE::CERN::OCDB>
+Info in <TKey::ReadObjectAny>: Using Converter StreamerInfo from vector<Long64_t> to vector<long>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/FirstRunOrbit/1721572332983/055790bf-476e-11ef-a8bd-0aa140641b9a for 1721572391324 (retrieve, agent_id: ctpo2a9.cern.ch-1725529162-tVzXTF), 
+CTP/Calib/FirstRunOrbit record:1721572332982721 554526 2301328768
+Orbit reset: 1721367686593
+ First orbit scalers: 2301328311
+ First orbit CCDB: 2301328768 diff:457
+ startTime run                 = 1721572331324
+ startTimeRun_accordingToOrbit = 1721572331283
+ INFO : run 554526 has start time from run and start time from orbit that differ (by 0 secs)
+run: 554538
+Run start:1721609887749
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/Scalers/14/27996/62c8bcea-47e4-11ef-a989-0aa140651b9a in SE <ALICE::CERN::OCDB>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/Scalers/1721609239164/62c8bcea-47e4-11ef-a989-0aa140651b9a for 1721609947749 (retrieve, agent_id: ctpo2a9.cern.ch-1725529162-tVzXTF), 
+Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/FirstRunOrbit/06/38525/7876afb0-47c5-11ef-a8f8-0aa140641b9a in SE <ALICE::CERN::OCDB>
+Info in <TKey::ReadObjectAny>: Using Converter StreamerInfo from vector<Long64_t> to vector<long>
+[INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/FirstRunOrbit/1721609889341/7876afb0-47c5-11ef-a8f8-0aa140641b9a for 1721609947749 (retrieve, agent_id: ctpo2a9.cern.ch-1725529162-tVzXTF), 
+CTP/Calib/FirstRunOrbit record:1721609889340541 554538 2723668896
+Orbit reset: 1721367686593
+ First orbit scalers: 2723668459
+ First orbit CCDB: 2723668896 diff:437
+ startTime run                 = 1721609887749
+ startTimeRun_accordingToOrbit = 1721609887710
+ INFO : run 554538 has start time from run and start time from orbit that differ (by 0 secs)
+
