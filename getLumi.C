@@ -54,7 +54,7 @@ void getLumi(int runNumber, uint64_t timeStamp = 0, std::string className= "minb
   //return;
   scl->convertRawToO2();
   std::vector<CTPScalerRecordO2> recs = scl->getScalerRecordO2();
-  scl->printFromZero(std::cout);
+  //scl->printFromZero(std::cout);
   //
   // CTPConfiguration ctpcfg;
   auto ctpcfg = ccdbMgr.getSpecific<CTPConfiguration>(mCCDBPathCTPConfig, timeStamp, metadata);
