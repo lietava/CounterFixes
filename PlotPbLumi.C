@@ -33,12 +33,17 @@
 #endif
 using namespace o2::ctp;
 using namespace std::chrono;
+//
+// if fillN = 0: pileup correction not done
+// QCDB =1 : use for ongoing run
+//
 void PlotPbLumi(int runNumber, int fillN = 0, int QCDB = 0,  std::string ccdbHost = "http://alice-ccdb.cern.ch" )
 { // "http://ccdb-test.cern.ch:8080"
   std::string mCCDBPathCTPScalers = "CTP/Calib/Scalers";
   std::string mQCDBPathCTPScalers = "qc/CTP/Scalers";
   std::string mCCDBPathCTPConfig = "CTP/Config/Config";
   auto& ccdbMgr = o2::ccdb::BasicCCDBManager::instance();
+  ccdbMgr.setURL(ccdbHost);
   // Timestamp
   auto soreor = ccdbMgr.getRunDuration(runNumber);
   uint64_t timeStamp = (soreor.second - soreor.first) / 2 + soreor.first;
@@ -58,14 +63,14 @@ void PlotPbLumi(int runNumber, int fillN = 0, int QCDB = 0,  std::string ccdbHos
    if(QCDB) {  // use this option for ongoing run
     mCCDBPathCTPScalers = mQCDBPathCTPScalers;
     ccdbMgr.setURL("http://ccdb-test.cern.ch:8080");
+    timeStamp = duration_cast< milliseconds >(system_clock::now().time_since_epoch()).count();
+    std::cout << "For scalers using Current time:" << timeStamp << std::endl;
   }
   // Scalers
-  uint64_t ms = duration_cast< milliseconds >(system_clock::now().time_since_epoch()).count();
-  std::cout << "Current time:" << ms << std::endl;
   std::string srun = std::to_string(runNumber);
   metadata.clear(); // can be empty
   metadata["runNumber"] = srun;
-  auto scl = ccdbMgr.getSpecific<CTPRunScalers>(mCCDBPathCTPScalers, ms, metadata);
+  auto scl = ccdbMgr.getSpecific<CTPRunScalers>(mCCDBPathCTPScalers, timeStamp, metadata);
   if (scl == nullptr) {
     LOG(info) << "CTPRunScalers not in database, timestamp:" << timeStamp;
     return;
@@ -130,7 +135,10 @@ void PlotPbLumi(int runNumber, int fillN = 0, int QCDB = 0,  std::string ccdbHos
     n = 400;
   }
   if(runNumber == 559561 ) {
-    n = n-3;  // rate drops at the end
+    n = n - 3;  // rate drops at the end
+  }
+  if(runNumber == 559575){
+    n = n - 6;
   }
   std::cout << " Run duration:" << Trun << " Scalers size:" << n + 1 << std::endl;
   Double_t x[n], znc[n], zncpp[n], ex[n], eznc[n];
@@ -157,8 +165,8 @@ void PlotPbLumi(int runNumber, int fillN = 0, int QCDB = 0,  std::string ccdbHos
     eznc[i] = TMath::Sqrt(zncipp) / 28. / tt;
     if(1){
       //
-      auto had = recs[i + 1].scalers[tce].lmBefore - recs[i].scalers[tce].lmBefore;
-      had += recs[i + 1].scalers[tsc].lmBefore - recs[i].scalers[tsc].lmBefore;
+      auto had = recs[i + 1].scalers[tsc].lmBefore - recs[i].scalers[tsc].lmBefore;
+      had += recs[i + 1].scalers[tce].lmBefore - recs[i].scalers[tce].lmBefore;
       tcetsctoznc[i] = (double_t)(had) / zncpp[i];
       etcetsctoznc[i] = TMath::Sqrt(tcetsctoznc[i]*(1-tcetsctoznc[i])/ zncpp[i]);
       had = recs[i + 1].scalers[tce].lmBefore - recs[i].scalers[tce].lmBefore;
