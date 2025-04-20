@@ -1,0 +1,254 @@
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC22m.txt
+--
+===> RUN:523182 TVXCTP: 1332077540 TVXCCDB:1232976876 CCDB/TVX:0.925604
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:            668/            664 SelBitCnt/SelHisto:            668/664
+--
+===> RUN:523677 TVXCTP: 8999500898 TVXCCDB:8844091261 CCDB/TVX:0.982731
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           2919/           2673 SelBitCnt/SelHisto:           2919/2673
+--
+===> RUN:523309 TVXCTP: 7377548640 TVXCCDB:7352387625 CCDB/TVX:0.99659
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           5454/           5453 SelBitCnt/SelHisto:           5454/5453
+--
+===> RUN:523186 TVXCTP: 3705147972 TVXCCDB:2496468882 CCDB/TVX:0.673784
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           2438/           1582 SelBitCnt/SelHisto:           2438/1582
+--
+===> RUN:523399 TVXCTP: 3488091577 TVXCCDB:3471218366 CCDB/TVX:0.995163
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:            963/            936 SelBitCnt/SelHisto:            963/936
+--
+===> RUN:523401 TVXCTP: 2407589688 TVXCCDB:2393967443 CCDB/TVX:0.994342
+ERROR:  4        fOmegaLargeRadius TrigBitCnt/FilterHisto:           1224/           1183 SelBitCnt/SelHisto:           1224/1183
+--
+===> RUN:523441 TVXCTP: 3701324016 TVXCCDB:3590728536 CCDB/TVX:0.97012
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           2344/           2295 SelBitCnt/SelHisto:           2344/2295
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC22o-test.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC22o.txt
+--
+===> RUN:526639 TVXCTP: 7225049538 TVXCCDB:7206425961 CCDB/TVX:0.997422
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          12617/          12603 SelBitCnt/SelHisto:          12617/12603
+--
+===> RUN:526967 TVXCTP: 10076157034 TVXCCDB:10031958642 CCDB/TVX:0.995614
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          14850/          14714 SelBitCnt/SelHisto:          14850/14714
+--
+===> RUN:526968 TVXCTP: 3863824521 TVXCCDB:3860596590 CCDB/TVX:0.999165
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           6264/           6259 SelBitCnt/SelHisto:           6264/6259
+--
+===> RUN:527031 TVXCTP: 287798822 TVXCCDB:287744999 CCDB/TVX:0.999813
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:            488/            369 SelBitCnt/SelHisto:            488/369
+--
+===> RUN:527041 TVXCTP: 8892771217 TVXCCDB:8856849970 CCDB/TVX:0.995961
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          19071/          19069 SelBitCnt/SelHisto:          19071/19069
+--
+===> RUN:527057 TVXCTP: 4864802903 TVXCCDB:4834278449 CCDB/TVX:0.993725
+ERROR:  1                fPHOSPair TrigBitCnt/FilterHisto:          89223/          89208 SelBitCnt/SelHisto:          89223/89208
+--
+===> RUN:527109 TVXCTP: 6180018382 TVXCCDB:5956736709 CCDB/TVX:0.96387
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          11509/          11364 SelBitCnt/SelHisto:          11509/11364
+--
+===> RUN:527237 TVXCTP: 3709571075 TVXCCDB:3640297934 CCDB/TVX:0.981326
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           6887/           6647 SelBitCnt/SelHisto:           6887/6647
+--
+===> RUN:527523 TVXCTP: 15301826342 TVXCCDB:15125478562 CCDB/TVX:0.988475
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          12233/          12151 SelBitCnt/SelHisto:          12233/12151
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC22p.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC22r.txt
+--
+===> RUN:529078 TVXCTP: 8107464109 TVXCCDB:7922888132 CCDB/TVX:0.977234
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          23748/          23747 SelBitCnt/SelHisto:          23748/23747
+--
+===> RUN:529115 TVXCTP: 17484515503 TVXCCDB:17236006271 CCDB/TVX:0.985787
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:         226309/         226249 SelBitCnt/SelHisto:         226309/226249
+--
+===> RUN:529117 TVXCTP: 4737741380 TVXCCDB:4647238062 CCDB/TVX:0.980897
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          49785/          49775 SelBitCnt/SelHisto:          49785/49775
+--
+===> RUN:529129 TVXCTP: 5066627975 TVXCCDB:5010049507 CCDB/TVX:0.988833
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          36061/          36047 SelBitCnt/SelHisto:          36061/36047
+--
+===> RUN:529237 TVXCTP: 2409934687 TVXCCDB:2330497112 CCDB/TVX:0.967037
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          20862/          20752 SelBitCnt/SelHisto:          20862/20752
+--
+===> RUN:529252 TVXCTP: 2848527512 TVXCCDB:1837748584 CCDB/TVX:0.645157
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           8306/           8290 SelBitCnt/SelHisto:           8306/8290
+--
+===> RUN:529270 TVXCTP: 9387426904 TVXCCDB:9256763901 CCDB/TVX:0.986081
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          26338/          26330 SelBitCnt/SelHisto:          26338/26330
+--
+===> RUN:529317 TVXCTP: 2632720246 TVXCCDB:2591085130 CCDB/TVX:0.984186
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          21460/          21407 SelBitCnt/SelHisto:          21460/21407
+--
+===> RUN:529320 TVXCTP: 2077676992 TVXCCDB:1483030789 CCDB/TVX:0.713793
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          11381/          11344 SelBitCnt/SelHisto:          11381/11344
+--
+===> RUN:529338 TVXCTP: 10476180985 TVXCCDB:10328783575 CCDB/TVX:0.98593
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          77005/          76985 SelBitCnt/SelHisto:          77005/76985
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC22t.txt
+--
+===> RUN:529454 TVXCTP: 1888270809 TVXCCDB:1858507160 CCDB/TVX:0.984238
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:           4765/           4755 SelBitCnt/SelHisto:           4765/4755
+--
+===> RUN:529458 TVXCTP: 4773534921 TVXCCDB:4708383516 CCDB/TVX:0.986352
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          11928/          11922 SelBitCnt/SelHisto:          11928/11922
+--
+===> RUN:529462 TVXCTP: 7085956984 TVXCCDB:7023914280 CCDB/TVX:0.991244
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          17402/          17036 SelBitCnt/SelHisto:          17402/17036
+--
+===> RUN:529552 TVXCTP: 1829834644 TVXCCDB:1810169339 CCDB/TVX:0.989253
+ERROR:  5              fSingleXiYN TrigBitCnt/FilterHisto:           8947/           8941 SelBitCnt/SelHisto:           8947/8941
+--
+===> RUN:529675 TVXCTP: 14771493385 TVXCCDB:14655066350 CCDB/TVX:0.992118
+ERROR:  0                fPHOSnbar TrigBitCnt/FilterHisto:          30180/          29569 SelBitCnt/SelHisto:          30180/29569
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23f.txt
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23g.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23h.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23j.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23k.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23l.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23m.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23n.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23o.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23q.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23r.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23s.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23t.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23u.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23v.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23w.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23y.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23za.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zb.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zc.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zd.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23ze.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zf.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zg.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zh.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zi.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zj.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zk.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zm.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zn.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zq.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zr.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zs.txt
+--
+===> RUN:539483 TVXCTP: 9836968199 TVXCCDB:9663069749 CCDB/TVX:0.982322
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         348252/         532148 SelBitCnt/SelHisto:         346734/346706
+--
+===> RUN:539556 TVXCTP: 14979456995 TVXCCDB:14729997702 CCDB/TVX:0.983347
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         541247/         826192 SelBitCnt/SelHisto:         539032/539006
+--
+===> RUN:539649 TVXCTP: 23161098909 TVXCCDB:22601217100 CCDB/TVX:0.975827
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         861786/    1.30862e+06 SelBitCnt/SelHisto:         857744/853801
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23zt.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC23z.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC24af.txt
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC24ag.txt
+--
+===> RUN:551365 TVXCTP: 13464897015 TVXCCDB:13261108806 CCDB/TVX:0.984865
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         786120/         778112 SelBitCnt/SelHisto:         786120/778112
+--
+===> RUN:551398 TVXCTP: 11748646071 TVXCCDB:11419984111 CCDB/TVX:0.972026
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         706633/         688650 SelBitCnt/SelHisto:         706633/688650
+--
+--
+Doing:/home/rl/CounterFixes/trigger/valCCDBOTS/list/list_LHC24aj.txt
+--
+===> RUN:551943 TVXCTP: 20419270682 TVXCCDB:19900419652 CCDB/TVX:0.97459
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:        1138419/    1.13838e+06 SelBitCnt/SelHisto:        1138419/1.13838e+06
+--
+===> RUN:552141 TVXCTP: 2001600364 TVXCCDB:1978215297 CCDB/TVX:0.988317
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         114962/         114918 SelBitCnt/SelHisto:         114962/114918
+--
+===> RUN:552200 TVXCTP: 17295610656 TVXCCDB:17193161498 CCDB/TVX:0.994077
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:        1030225/    1.02956e+06 SelBitCnt/SelHisto:        1030225/1.02956e+06
+--
+===> RUN:552201 TVXCTP: 3331965944 TVXCCDB:3306063855 CCDB/TVX:0.992226
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         197286/         197241 SelBitCnt/SelHisto:         197286/197241
+--
+===> RUN:552204 TVXCTP: 3741266780 TVXCCDB:3705063586 CCDB/TVX:0.990323
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         221624/         220579 SelBitCnt/SelHisto:         221624/220579
+--
+===> RUN:552205 TVXCTP: 3847653623 TVXCCDB:3791498877 CCDB/TVX:0.985405
+ERROR:  0    fTriggerEventF1Proton TrigBitCnt/FilterHisto:         233950/         232868 SelBitCnt/SelHisto:         233950/232868

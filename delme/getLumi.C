@@ -25,7 +25,7 @@
 #include <iostream>
 #endif
 using namespace o2::ctp;
-void getLumi(int runNumber, uint64_t timeStamp = 0, std::string className= "minbias_TVX_L0")
+void getLumi(int runNumber, uint64_t timeStamp = 0, std::string className= "")
 { //
   std::string ccdbTest = "http://ccdb-test.cern.ch:8080";
   std::string ccdbProd = "http://alice-ccdb.cern.ch";

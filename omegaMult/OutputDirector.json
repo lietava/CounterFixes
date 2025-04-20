@@ -1,0 +1,13 @@
+{ "OutputDirector": {
+  "debug_mode": true,
+  "resfile": "AO2D",
+  "OutputDescriptors": [
+    {
+      "table": "AOD/NPCASCTABLENT/0"
+    },
+    {
+      "table": "AOD/NPCASCTABLE/0"
+    }
+  ],
+  "ntfmerge": 1
+} }
