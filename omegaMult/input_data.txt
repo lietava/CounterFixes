@@ -1,1 +1,1 @@
-/home/rl/TEST/strangeFilter/AO2D.root
+/Users/rl/anal/TEST/strangeFilter/datain/AO2D.root
