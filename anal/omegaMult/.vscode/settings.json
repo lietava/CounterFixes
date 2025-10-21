@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "analMult.C": "cpp",
+        "getNorm.C": "cpp",
+        "analyseTRG.C": "cpp",
+        "analyseMult2.C": "cpp",
+        "anal.C": "cpp",
+        "analMultFromTree.C": "cpp",
+        "analyse.C": "cpp",
+        "bitset": "cpp",
+        "algorithm": "cpp",
+        "analMultFind.C": "cpp",
+        "comp.C": "cpp",
+        "findRuns.C": "cpp"
+    }
+}
