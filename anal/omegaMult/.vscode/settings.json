@@ -11,6 +11,8 @@
         "algorithm": "cpp",
         "analMultFind.C": "cpp",
         "comp.C": "cpp",
-        "findRuns.C": "cpp"
+        "findRuns.C": "cpp",
+        "PlotLumi.C": "cpp",
+        "PlotPbLumi.C": "cpp"
     }
 }

@@ -102,7 +102,7 @@ void analyseTRG(TString dataFilename = "dataTRG/513390/AO2D.root", TString mcFil
       toitrg = toiHM;
       centCut = 0.8;
     }
-    dataFilteredDF = dataFilteredDF.Filter( Form("fToiMask & %d && fCentFT0M < %f",toitrg,centCut));
+    dataFilteredDF = dataFilteredDF.Filter( Form("fToiMask & %d && fCentFT0M < %f && fNoSameBunchPileup",toitrg,centCut));
     dataCentHist[iNt] =  dataFilteredDF.Histo1D({"Cent","Cent",1000,0.,10.},"fCentFT0M");
     dataFT0MHist[iNt] =  dataFilteredDF.Histo1D({"FT0M","FT0M",7000,0.,7000.},"fMultFT0M");
 

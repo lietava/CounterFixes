@@ -12,7 +12,9 @@ void comp()
     TFile fileOut("outputComp.root","recreate");
     TH1F* hRatio = (TH1F*) hTRG->Clone("Ratio TRG/MB");
     hRatio->Divide(hMB);
-    std::cout << hRatio->GetBinContent(2) << " " << hRatio->GetBinError(2) << std::endl;
+    for(int i  = 0; i < hRatio->GetNbinsX(); i ++){
+        std::cout << i << " " << hRatio->GetBinContent(i) << " " << hRatio->GetBinError(i) << std::endl;
+    }
     hTRG->Write();
     hMB->Write();
     hRatio->Write();

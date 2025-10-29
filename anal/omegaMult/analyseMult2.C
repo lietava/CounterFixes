@@ -20,8 +20,9 @@ void analyseMult2(TString dataFilename = "dataMB/AO2D.root", TString mcFilename 
 
   ROOT::EnableImplicitMT();
   std::cout << "Starting" << std::endl;
-  constexpr int NCENTBINS = 12;
-  double centbins[NCENTBINS]{0, 0.8,10,20,30,40,50,60,70,80,90,100};
+  constexpr int NCENTBINS = 11;
+  double centbins[NCENTBINS + 1]{0, 0.8,10,20,30,40,50,60,70,80,90,100};
+  //
   constexpr int NPTBINS = 7;
   double val[NPTBINS]{0.0009488760957, 0.0006952320908, 0.0004759373703, 0.0002954698723, 0.0001662988815, 8.73277117e-05, 3.635092251e-05};
   double stat[NPTBINS]{4.808611514e-05, 2.719983815e-05, 1.605100658e-05, 1.091321782e-05, 7.543390105e-06, 5.044361557e-06, 2.234297454e-06};
@@ -59,8 +60,8 @@ void analyseMult2(TString dataFilename = "dataMB/AO2D.root", TString mcFilename 
   }
   double normalisations[2]{0.7558 / hCounterTVX->GetEntries(), 0.7558 / hCounterTVX->GetEntries()};
   std::cout << "Normalisation finished:" << hCounterTVX->GetEntries() << std::endl;
-  std::array<float, NCENTBINS - 1> normCent;
-  for(int i = 0; i < NCENTBINS - 2; i++){
+  std::array<float, NCENTBINS > normCent;
+  for(int i = 0; i < NCENTBINS - 1; i++){
     normCent[i] = (centbins[i+1] - centbins[i])/100.;
   }
   //
@@ -88,9 +89,9 @@ void analyseMult2(TString dataFilename = "dataMB/AO2D.root", TString mcFilename 
   fillChainFromAO2D(mcChainN, mcFilename);
   std::vector<std::reference_wrapper<TChain>> dataChains = {dataChainT, dataChainN};
   std::vector<std::reference_wrapper<TChain>> mcChains = {mcChainT, mcChainN};
-  for(int imult{0}; imult < NCENTBINS-1; imult++) 
+  for(int imult{0}; imult < NCENTBINS; imult++) 
   {
-    std::cout << "Doing multiplicity:" << imult << std::endl;
+    std::cout << "Doing multiplicity " << imult << ":" << centbins[imult] << "-" << centbins[imult+1] << std::endl;
     auto multdir = output.mkdir(Form("cent%i",imult));
     multdir->cd();
     for (int iNt{0}; iNt < maxIter; ++iNt)
@@ -216,10 +217,10 @@ void analyseMult2(TString dataFilename = "dataMB/AO2D.root", TString mcFilename 
   }
   output.cd();
   TH1D* rawYieldvsCent[2];
-  rawYieldvsCent[0] = new TH1D("hOmegaTracked","hOmegaTracked", NCENTBINS - 1, centbins);
-  rawYieldvsCent[1] = new TH1D("hOmegaNT","hOmegaNT", NCENTBINS - 1, centbins);
+  rawYieldvsCent[0] = new TH1D("hOmegaTracked","hOmegaTracked", NCENTBINS , centbins);
+  rawYieldvsCent[1] = new TH1D("hOmegaNT","hOmegaNT", NCENTBINS , centbins);
   for(int i = 0; i < maxIter; i++){
-    for(int imult = 0; imult < NCENTBINS - 1; imult++) {
+    for(int imult = 0; imult < NCENTBINS ; imult++) {
       double error = 0;
       double integral = dataPtHist[i][imult]->IntegralAndError(0,NPTBINS,error);
       rawYieldvsCent[i]->SetBinContent(imult + 1, integral);
