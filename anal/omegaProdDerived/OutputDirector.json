@@ -3,9 +3,6 @@
   "resfile": "AO2D",
   "OutputDescriptors": [
     {
-      "table": "AOD/NPCASCTABLE/0"
-    },
-    {
       "table": "AOD/NPCASCTABLENT/0"
     }
   ],

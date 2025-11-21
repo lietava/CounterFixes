@@ -34,7 +34,6 @@
           "cfgGRPmagPath": "GLO/Config/GRPMagField",
           "cfgSkimmedProcessing": "1",
           "cfgMinRelChi2Change": "0.9",
-          "cfgMaxCent": "8.0025",
           "cfgMaxDZIni": "4",
           "cfgSelectOnlyOmegas": "1",
           "processCascadesMC": "0",
@@ -45,10 +44,8 @@
           "processTrackedCascadesData": "0",
           "ccdbUrl": "http://alice-ccdb.cern.ch",
           "cfgMinParamChange": "0.001",
-          "cfgMaxMult": "8000",
           "processTrackedCascadesMC": "0",
-          "cfgTriggersOfInterest": "fOmegaHighMult,fHighFt0cFv0Flat,fHighFt0cFv0Mult,fHighFt0Flat,fHighFt0Mult,fHighMultFv0,fHighTrackMult",
-          "cfgMinMult": "3000",
+          "cfgTriggersOfInterest": "fOmegaHighMult",
           "processGenParticles": "0",
           "cfgMaterialCorrection": "2"
         }
@@ -864,11 +861,18 @@
   ],
   "allowed_parent_level": 0,
   "type": "test",
-  "derived_data_type": "slim",
+  "derived_data_type": "standard",
   "inputdata": [
-    "/alice/data/2024/LHC24an/556767/apass1_skimmed/0950"
+    "/alice/data/2024/LHC24af/550731/apass1_sampled/2000",
+    "/alice/data/2024/LHC24ag/551083/apass1_sampled/1050",
+    "/alice/data/2024/LHC24aj/551943/apass1_sampled/1650",
+    "/alice/data/2024/LHC24al/553555/apass1_sampled/1610",
+    "/alice/data/2024/LHC24am/555651/apass1_sampled/2310",
+    "/alice/data/2024/LHC24ao/558449/apass1_sampled/1210",
+    "/alice/data/2024/LHC24an/556834/apass1_sampled/1240",
+    "/alice/data/2024/LHC24an/556664/apass1_sampled/0400"
   ],
-  "package_tag": "VO_ALICE@O2Physics::daily-20251101-0000-1",
+  "package_tag": "VO_ALICE@O2Physics::daily-20251109-0000-1",
   "OutputDirector": {
     "debug_mode": true,
     "resfile": "AO2D",
@@ -879,8 +883,8 @@
     ],
     "ntfmerge": 1
   },
-  "wagons_timestamp": 1763580119583,
+  "wagons_timestamp": 1762688091399,
   "aod_max_io_rate": 1000,
-  "train_id": "558834",
+  "train_id": "551331",
   "derived_data": true
 }

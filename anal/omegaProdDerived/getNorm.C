@@ -1,4 +1,4 @@
-int getNormFromFile( TString normalisationFilename = "results/AnalysisResults.root", int Z = 1, std::string comment = "", int ntoisman = 1)
+int getNormFromFile( TString normalisationFilename = "AnalysisResults.root", int Z = 1, std::string comment = "", int ntoisman = 1)
 {
     std::cout << comment << std::endl;
     std::cout << "File:" << normalisationFilename.Data() << std::endl;
@@ -32,6 +32,8 @@ int getNormFromFile( TString normalisationFilename = "results/AnalysisResults.ro
 }
 int getNorm()
 {
+    getNormFromFile("AnalysisResults.root");   
+    return 0;
     if(1) {
         getNormFromFile("../omegaProd0104/AnalysisResults.root");
         getNormFromFile("../omegaProd0605/AnalysisResults.root");

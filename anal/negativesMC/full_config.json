@@ -1,10 +1,10 @@
 {
-  "dataset_production_type": "DATA",
+  "dataset_production_type": "MC",
   "max_df_size": 100000000,
   "cpu_cores": 1,
   "workflows": [
     {
-      "subwagon_id": 60153,
+      "subwagon_id": 24845,
       "subwagon_name": "base",
       "configuration": {
         "non-prompt-cascade-task": {
@@ -37,8 +37,8 @@
           "cfgMaxCent": "8.0025",
           "cfgMaxDZIni": "4",
           "cfgSelectOnlyOmegas": "1",
-          "processCascadesMC": "0",
-          "processCascadesData": "1",
+          "processCascadesMC": "1",
+          "processCascadesData": "0",
           "cfgRedoPV": "1",
           "cfgMaxR": "200",
           "cfgMinCosPA": "-1",
@@ -47,13 +47,14 @@
           "cfgMinParamChange": "0.001",
           "cfgMaxMult": "8000",
           "processTrackedCascadesMC": "0",
-          "cfgTriggersOfInterest": "fOmegaHighMult,fHighFt0cFv0Flat,fHighFt0cFv0Mult,fHighFt0Flat,fHighFt0Mult,fHighMultFv0,fHighTrackMult",
+          "cfgTriggersOfInterest": "fTrackedOmega,fOmegaHighMult",
           "cfgMinMult": "3000",
           "processGenParticles": "0",
+	  "processNegMC":"1",
           "cfgMaterialCorrection": "2"
         }
       },
-      "wagon_id": 30095,
+      "wagon_id": 14426,
       "workflow_name": "o2-analysis-lf-non-prompt-cascade",
       "suffix": ""
     },
@@ -93,7 +94,17 @@
       "suffix": ""
     },
     {
-      "subwagon_id": 20940,
+      "subwagon_id": 26187,
+      "subwagon_name": "base",
+      "configuration": {
+        "mc-collision-converter": {}
+      },
+      "wagon_id": 15164,
+      "workflow_name": "o2-analysis-mccollision-converter",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 33349,
       "subwagon_name": "base",
       "configuration": {
         "tof-signal": {
@@ -172,11 +183,11 @@
           "processRun3": "1",
           "processRun2": "0",
           "enableTOFParamsForBetaMass": "0",
-          "processRun3BetaM": "1",
+          "processRun3BetaM": "0",
           "enableQaHistograms": "0"
         }
       },
-      "wagon_id": 12925,
+      "wagon_id": 19003,
       "workflow_name": "o2-analysis-pid-tof-merge",
       "suffix": ""
     },
@@ -195,17 +206,70 @@
       "suffix": ""
     },
     {
-      "subwagon_id": 61860,
+      "subwagon_id": 62128,
+      "subwagon_name": "base",
+      "configuration": {
+        "eventselection-run3": {
+          "timestamp.fatalOnInvalidTimestamp": "0",
+          "evselOpts.NumberOfOrbitsPerTF": "-1",
+          "evselOpts.TimeRangeVetoOnCollNarrow": "0.25",
+          "evselOpts.VzDiffNsigma": "3",
+          "evselOpts.maxDiffZvtxFT0vsPV": "1",
+          "bcselOpts.checkRunDurationLimits": "0",
+          "evselOpts.amIneeded": "-1",
+          "evselOpts.EpsilonVzDiffVetoInROF": "0.3",
+          "evselOpts.isMC": "-1",
+          "bcselOpts.ITSROFrameStartBorderMargin": "-1",
+          "timestamp.isRun2MC": "-1",
+          "bcselOpts.TimeFrameStartBorderMargin": "-1",
+          "bcselOpts.triggerBcShift": "0",
+          "evselOpts.FT0CamplPerCollCutVetoOnCollInROF": "5000",
+          "timestamp.orbit-reset-path": "CTP/Calib/OrbitReset",
+          "evselOpts.TimeIntervalForOccupancyCalculationMin": "-40",
+          "evselOpts.TimeRangeVetoOnCollStrict": "10",
+          "timestamp.rct-path": "RCT/Info/RunInformation",
+          "bcselOpts.maxInactiveChipsPerLayer": {
+            "values": [
+              8,
+              8,
+              8,
+              111,
+              111,
+              195,
+              195
+            ]
+          },
+          "lumiOpts.amIneeded": "-1",
+          "evselOpts.confSigmaBCforHighPtTracks": "4",
+          "evselOpts.FT0CamplPerCollCutVetoOnCollInTimeRange": "8000",
+          "bcselOpts.ITSROFrameEndBorderMargin": "-1",
+          "evselOpts.VzDiffMargin": "0.2",
+          "bcselOpts.amIneeded": "-1",
+          "evselOpts.TimeIntervalForOccupancyCalculationMax": "100",
+          "ccdburl": "http://alice-ccdb.cern.ch",
+          "evselOpts.muonSelection": "0",
+          "evselOpts.UseWeightsForOccupancyEstimator": "1",
+          "timestamp.verbose": "0",
+          "bcselOpts.TimeFrameEndBorderMargin": "-1",
+          "bcselOpts.NumberOfOrbitsPerTF": "-1"
+        }
+      },
+      "wagon_id": 31191,
+      "workflow_name": "o2-analysis-event-selection-service",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 67147,
       "subwagon_name": "base",
       "configuration": {
         "mult-cent-table": {
-          "generatorName": "",
+          "generatorName": "PYTHIA",
           "processRun3WithGlobalCounters": "1",
           "processMFT": "1",
           "processRun3": "0",
           "processCentralityRun2": "0",
           "processRun2": "0",
-          "processMonteCarlo2Mults": "0",
+          "processMonteCarlo2Mults": "1",
           "enabledTables": {
             "values": [
               [
@@ -339,64 +403,11 @@
           "ccdburl": "http://alice-ccdb.cern.ch",
           "processCentralityRun3": "1",
           "minNclsITSGlobalTrack": "5",
-          "processMonteCarlo": "0"
+          "processMonteCarlo": "1"
         }
       },
-      "wagon_id": 31037,
+      "wagon_id": 33441,
       "workflow_name": "o2-analysis-multcenttable",
-      "suffix": ""
-    },
-    {
-      "subwagon_id": 62128,
-      "subwagon_name": "base",
-      "configuration": {
-        "eventselection-run3": {
-          "timestamp.fatalOnInvalidTimestamp": "0",
-          "evselOpts.NumberOfOrbitsPerTF": "-1",
-          "evselOpts.TimeRangeVetoOnCollNarrow": "0.25",
-          "evselOpts.VzDiffNsigma": "3",
-          "evselOpts.maxDiffZvtxFT0vsPV": "1",
-          "bcselOpts.checkRunDurationLimits": "0",
-          "evselOpts.amIneeded": "-1",
-          "evselOpts.EpsilonVzDiffVetoInROF": "0.3",
-          "evselOpts.isMC": "-1",
-          "bcselOpts.ITSROFrameStartBorderMargin": "-1",
-          "timestamp.isRun2MC": "-1",
-          "bcselOpts.TimeFrameStartBorderMargin": "-1",
-          "bcselOpts.triggerBcShift": "0",
-          "evselOpts.FT0CamplPerCollCutVetoOnCollInROF": "5000",
-          "timestamp.orbit-reset-path": "CTP/Calib/OrbitReset",
-          "evselOpts.TimeIntervalForOccupancyCalculationMin": "-40",
-          "evselOpts.TimeRangeVetoOnCollStrict": "10",
-          "timestamp.rct-path": "RCT/Info/RunInformation",
-          "bcselOpts.maxInactiveChipsPerLayer": {
-            "values": [
-              8,
-              8,
-              8,
-              111,
-              111,
-              195,
-              195
-            ]
-          },
-          "lumiOpts.amIneeded": "-1",
-          "evselOpts.confSigmaBCforHighPtTracks": "4",
-          "evselOpts.FT0CamplPerCollCutVetoOnCollInTimeRange": "8000",
-          "bcselOpts.ITSROFrameEndBorderMargin": "-1",
-          "evselOpts.VzDiffMargin": "0.2",
-          "bcselOpts.amIneeded": "-1",
-          "evselOpts.TimeIntervalForOccupancyCalculationMax": "100",
-          "ccdburl": "http://alice-ccdb.cern.ch",
-          "evselOpts.muonSelection": "0",
-          "evselOpts.UseWeightsForOccupancyEstimator": "1",
-          "timestamp.verbose": "0",
-          "bcselOpts.TimeFrameEndBorderMargin": "-1",
-          "bcselOpts.NumberOfOrbitsPerTF": "-1"
-        }
-      },
-      "wagon_id": 31191,
-      "workflow_name": "o2-analysis-event-selection-service",
       "suffix": ""
     },
     {
@@ -723,7 +734,7 @@
       "suffix": ""
     },
     {
-      "subwagon_id": 69789,
+      "subwagon_id": 69793,
       "subwagon_name": "base",
       "configuration": {
         "pid-tpc-service": {
@@ -738,7 +749,7 @@
           "pidTPC.useNetworkAl": "0",
           "pidTPC.autofetchNetworks": "1",
           "pidTPC.useNetworkEl": "1",
-          "processTracksIU": "1",
+          "processTracksIU": "0",
           "pidTPC.ccdbPath": "Analysis/PID/TPC/Response",
           "pidTPC.useNetworkMu": "0",
           "pidTPC.enableTuneOnDataTable": "-1",
@@ -775,33 +786,33 @@
               "photon-conversion-builder"
             ]
           },
-          "pidTPC.useNetworkCorrection": "0",
+          "pidTPC.useNetworkCorrection": "1",
           "ccdburl": "http://alice-ccdb.cern.ch",
           "pidTPC.savedEdxsCorrected": "-1",
-          "processTracksMCIU": "0"
+          "processTracksMCIU": "1"
         }
       },
-      "wagon_id": 34291,
+      "wagon_id": 34293,
       "workflow_name": "o2-analysis-pid-tpc-service",
       "suffix": ""
     },
     {
-      "subwagon_id": 1761,
+      "subwagon_id": 33345,
       "subwagon_name": "base",
       "configuration": {
         "ft0-corrected-table": {
           "ccdb-timestamp": "-1",
-          "resoFT0C": "20",
+          "resoFT0C": "5.65",
           "ccdb-path-grplhcif": "GLO/Config/GRPLHCIF",
-          "resoFT0A": "20",
+          "resoFT0A": "5.65",
           "collisionSystem": "-2",
           "addHistograms": "0",
           "ccdb-url": "http://alice-ccdb.cern.ch",
-          "processWithBypassFT0timeInMC": "0",
-          "processStandard": "1"
+          "processWithBypassFT0timeInMC": "1",
+          "processStandard": "0"
         }
       },
-      "wagon_id": 1560,
+      "wagon_id": 18999,
       "workflow_name": "o2-analysis-ft0-corrected-table",
       "suffix": ""
     },
@@ -866,21 +877,27 @@
   "type": "test",
   "derived_data_type": "slim",
   "inputdata": [
-    "/alice/data/2024/LHC24an/556767/apass1_skimmed/0950"
+    "/alice/sim/2024/LHC24j7/553555"
   ],
-  "package_tag": "VO_ALICE@O2Physics::daily-20251101-0000-1",
+  "package_tag": "VO_ALICE@O2Physics::daily-20251101-0000-2",
   "OutputDirector": {
     "debug_mode": true,
     "resfile": "AO2D",
     "OutputDescriptors": [
       {
-        "table": "AOD/NPCASCTABLENT/0"
+        "table": "AOD/NPCASCTABLEMC/0"
+      },
+      {
+        "table": "AOD/NPCASCTABLEMCNT/0"
+      },
+      {
+        "table": "AOD/NPCASCTABLEGen/0"
       }
     ],
     "ntfmerge": 1
   },
-  "wagons_timestamp": 1763580119583,
+  "wagons_timestamp": 1763476902660,
   "aod_max_io_rate": 1000,
-  "train_id": "558834",
+  "train_id": "557596",
   "derived_data": true
 }
