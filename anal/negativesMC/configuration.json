@@ -1,5 +1,17 @@
 {
   "non-prompt-cascade-task": {
+    "cfgUseAbsDCA": "1",
+    "cfgMinRelChi2Change": "0.9",
+    "processCascadesMC": "1",
+    "processCascadesData": "0",
+    "cfgMaxR": "200",
+    "ptEdges": "0,0.2,0.4,0.6,0.8,1,1.2,1.6,2.0,2.4,2.8,3.2,3.6,4,4.5,5,5.5,6,7,8,10",
+    "ccdbUrl": "http://alice-ccdb.cern.ch",
+    "cfgMinParamChange": "0.001",
+    "processTrackedCascadesMC": "1",
+    "cfgTriggersOfInterest": "fTrackedOmega,fOmegaHighMult,fHighFt0Mult",
+    "processGenParticles": "1",
+    "processdNdetaMC": "1",
     "cfgPropToPCA": "1",
     "particlesCutsPID": {
       "values": [
@@ -22,27 +34,15 @@
       ]
     },
     "cfgCutNclusTPC": "70",
-    "cfgUseAbsDCA": "1",
+    "cfgMaxMultFV0": "10000",
     "cfgGRPmagPath": "GLO/Config/GRPMagField",
     "cfgSkimmedProcessing": "1",
-    "cfgMinRelChi2Change": "0.9",
-    "cfgMaxCent": "8.0025",
     "cfgMaxDZIni": "4",
     "cfgSelectOnlyOmegas": "1",
-    "processCascadesMC": "1",
-    "processCascadesData": "0",
     "cfgRedoPV": "1",
-    "cfgMaxR": "200",
     "cfgMinCosPA": "-1",
     "processTrackedCascadesData": "0",
-    "ccdbUrl": "http://alice-ccdb.cern.ch",
-    "cfgMinParamChange": "0.001",
     "cfgMaxMult": "8000",
-    "processTrackedCascadesMC": "0",
-    "cfgTriggersOfInterest": "fTrackedOmega,fOmegaHighMult",
-    "cfgMinMult": "3000",
-    "processGenParticles": "0",
-    "processNegMC": "1",
     "cfgMaterialCorrection": "2"
   },
   "track-selection": {
@@ -697,7 +697,7 @@
         "photon-conversion-builder"
       ]
     },
-    "pidTPC.useNetworkCorrection": "1",
+    "pidTPC.useNetworkCorrection": "0",
     "ccdburl": "http://alice-ccdb.cern.ch",
     "pidTPC.savedEdxsCorrected": "-1",
     "processTracksMCIU": "1"

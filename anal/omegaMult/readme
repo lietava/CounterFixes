@@ -1,2 +1,10 @@
-analyse.C
-- original macro: nontracked (nt) and tracked - triggered
+=========================
+analyse.C => output.root
+- original macro: nontracked (nt) and tracked - Min Bias
+========================
+analyseTRG.C => outputTRG.root
+- triggered non-tracked and tracked
+=======================
+analMultFind.C ==> outputTracl.root
+- cent for ft0m = 3500
+

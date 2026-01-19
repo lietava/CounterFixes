@@ -1,3 +1,4 @@
+std::vector<std::string> names = {"fOmegaHighMult","fLeadingPtTrack","fHighFt0cFv0Flat","fHighFt0cFv0Mult","fHighFt0Flat","fHighFt0Mult","fHighMultFv0","fHighTrackMult"};
 int getNormFromFile( TString normalisationFilename = "AnalysisResults.root", int Z = 1, std::string comment = "", int ntoisman = 1)
 {
     std::cout << comment << std::endl;
@@ -25,7 +26,7 @@ int getNormFromFile( TString normalisationFilename = "AnalysisResults.root", int
         std::cout << "Number of TOIs:" << count << std::endl;
         for(int i = 0; i < count; i++) {
             double nf = zorroSummary->getNormalisationFactor(i);
-            std::cout << i << " Norm factor " << nf <<  comment << std::endl;
+            std::cout << i << " " << names[i] << " Norm factor " << nf <<  comment << std::endl;
         }
     }
     return 0;

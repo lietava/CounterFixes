@@ -12,10 +12,9 @@ void theplot()
     }
     TGraphErrors* g = (TGraphErrors*)f->Get("Table 45/Graph1D_y1");
     if (!g) {
-        std::cerr << "Graph not found!" << std::endl;
+        std::cerr << "Graph not found Table 45!" << std::endl;
         return;
     }
-
     int Npoints = g->GetN();
     std::vector<float> xrun2(Npoints), yrun2(Npoints), exrun2(Npoints), eyrun2(Npoints);
     std::cout << "Graph has " << Npoints << " points." << std::endl;
@@ -35,7 +34,7 @@ void theplot()
     }
     TGraphErrors* gdatatracks = (TGraphErrors*)ftracks->Get("NTracks");
     if (!gdatatracks) {
-        std::cerr << "Graph not found!" << std::endl;
+        std::cerr << "Graph not found Ntracks!" << std::endl;
         return;
     }
     int Npoints3 = gdatatracks->GetN();
@@ -71,13 +70,16 @@ void theplot()
         ex[i] = 0;
         std::cout << yrun3[i] << ":" << yields3[i] << " e:" << eyields[i] << std::endl;
     }
-    TGraphErrors* grun3 = new TGraphErrors(NCENTBINS - 1, yrun3.data(), yields3.data(), ex.data(), eyields.data());
+    TGraphErrors* grun3 = new TGraphErrors(NCENTBINS , yrun3.data(), yields3.data(), ex.data(), eyields.data());
     TFile* fout = new TFile("outputCompRun2.root", "recreate");
     grun3->Write();
     //
     float dx[2] = {0, 20};
     float dy[2] = {0, 0.01};
     TGraph* dummy = new TGraph(2, dx, dy);
+    dummy->GetXaxis()->SetTitle("multNTracksGlobal");
+    dummy->GetYaxis()->SetTitle("Measured Yield");
+    dummy->SetTitle("Omega yield vs NTracksGlobal");
     dummy->Draw("AP");
     g->SetMarkerSize(0.7);
     g->SetMarkerStyle(21);
@@ -86,5 +88,5 @@ void theplot()
     grun3->SetMarkerStyle(20);
     grun3->SetMarkerColor(kBlue);
     grun3->Draw("P");
-    dummy->SetTitle("Omega yield vs NTracksGlobal");
+    
 }; 

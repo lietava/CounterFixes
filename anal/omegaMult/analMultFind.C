@@ -53,17 +53,21 @@ void doNTracksPercentiles()
     }
     percentilesNTracks(h, 10, 30);
 }
+//
+// Track multiplicity estiamtor
+//
 void analMultFind(TString normalisationFilename = "dataMB/AnalysisResults.root")
 {
   doNTracksPercentiles();
-  return;
+  //return;
   //ROOT::EnableImplicitMT();
   //
   //std::vector<int> runs = {556160,556182,556741,556767,557415,557876,556152,556164,556734,557374,557425,557862,557897,557913,557926};
   std::vector<int> runs = {556160,556182,556741,556767,557415,557876,556152,556164,556734,557374,557425,557862,557897,557926};
-  constexpr float CENT = 0.8;
-  std::map<float,float> centVsRun; 
-  std::map<float,float> tracksVsRun;
+  constexpr double CENT = 0.8;
+  std::map<double,std::array<double,2>> centVsRun; 
+  std::map<double,std::array<double,2>> centMinMaxVsRun; 
+  std::map<double, std::array<double,2>> tracksVsRun;
   int mRunMuber = 0;
   std::map<int,TH1*> centPerRunHist;
   std::map<int,TH1*> tracksPerRunHist;
@@ -71,8 +75,6 @@ void analMultFind(TString normalisationFilename = "dataMB/AnalysisResults.root")
   constexpr int NCENTBINS = 11;
   double centbins[NCENTBINS + 1]{0, 0.8,10,20,30,40,50,60,70,80,90,100};
   //double centbins[NCENTBINS + 1]{ 0, 0.01,10,20,30,40,50,60,70,80,90,100 };
-
-
   //
   TFile *f = TFile::Open(normalisationFilename);
   std::string dir = "non-prompt-cascade-task/mult/";  // your directory name
@@ -80,6 +82,7 @@ void analMultFind(TString normalisationFilename = "dataMB/AnalysisResults.root")
   std::map<int, std::array<TH1*, NCENTBINS>> centBinsTracks;
   TH1* test;
   bool onlyone = 1;
+  double cmin = 100;
   for(auto const& runNumber: runs) {
     std::string histnameM = dir + "hMultVsCentZoom_run" + std::to_string(runNumber);
     TH2 *h = (TH2F*) f->Get(histnameM.c_str());
@@ -110,18 +113,49 @@ void analMultFind(TString normalisationFilename = "dataMB/AnalysisResults.root")
     std::string namex = "hcent_T0M3100_" + std::to_string(runNumber);
     int biny = h->GetYaxis()->FindBin(3100.);
     TH1* hx = h->ProjectionX(namex.c_str(), biny, biny);
+    //TH1* hx = h->ProjectionX(namex.c_str(), biny, h->GetYaxis()->GetNbins());
     int maxBin = hx->GetMaximumBin();
     double centAtMax = hx->GetBinCenter(maxBin);
-    centVsRun[runNumber] = centAtMax;
+    double centMean = hx->GetMean();
+    double centRMS = hx->GetRMS();
+    double xmin = 0;
+    double xmax = 100.;
+    for(int i = 1; i < hx->GetNbinsX(); i++) {
+      if(hx->GetBinContent(i) != 0.) {
+        if(xmin == 0) {
+          xmin = hx->GetBinCenter(i);
+          break;
+        }
+      }
+    }
+    for(int i = hx->GetNbinsX(); i > 0; i--) {
+      if(hx->GetBinContent(i) != 0.) {
+        if(xmax == 100.) {
+          xmax =  hx->GetBinCenter(i);
+          break;
+        }
+      }
+    }
+    if(cmin > xmin) {
+      cmin = xmin;
+    }
+    centMinMaxVsRun[runNumber][0] = xmin - centMean;
+    centMinMaxVsRun[runNumber][1] = xmax - centMean;
+    std::cout << runNumber << " cmean:" << centMean << " cmin:" << xmin << " cmax:" << xmax << std::endl; 
+    centVsRun[runNumber][0] = centMean;
+    centVsRun[runNumber][1] = centRMS;
     centPerRunHist[runNumber] = hx;
+    //
     //
     //tracksPerRunHist[runNumber] = hTvsCZ->ProjectionY();
     int binx = hTvsCZ->GetXaxis()->FindBin(centAtMax);
     TH1* hy = hTvsCZ->ProjectionY("hy",binx,binx);
     tracksPerRunHist[runNumber] = hTvsCZ->ProjectionY();
-    float meanTracks  = hy->GetMean();
-    tracksVsRun[runNumber] = meanTracks;
-    std::cout << runNumber << " cent:" << centAtMax << " <Tracks>:" << meanTracks << std::endl;
+    double meanTracks  = hy->GetMean();
+    tracksVsRun[runNumber][0] = meanTracks;
+    tracksVsRun[runNumber][1] = hy->GetMeanError();
+
+    //std::cout << runNumber << " cent:" << centAtMax << " <Tracks>:" << meanTracks << std::endl;
     //
     //  <tracks> per Cent
     //
@@ -139,24 +173,57 @@ void analMultFind(TString normalisationFilename = "dataMB/AnalysisResults.root")
         //std::cout << "Tracks:" << test->GetMean() << "[" << centbins[ic] << "-" << centbins[ic+1] << "]" << std::endl;
     }
   }
+  std::cout << "===> cmin:" << cmin << std::endl;
   //
   // Cent/Tracks versus Run
   //
-  TGraph* gCentVsRun = new TGraph(centVsRun.size());
-  gCentVsRun->SetTitle("CentVsRun");
-  gCentVsRun->SetName("CentVsRun");
+  TGraphErrors* gCentVsRun = new TGraphErrors(centVsRun.size());
+  TGraphAsymmErrors* gCentVsRunMinMax = new TGraphAsymmErrors(centVsRun.size());
+  gCentVsRun->SetTitle("CentVsRun RMS Errors");
+  gCentVsRunMinMax->SetName("CentVsRun MinMax errors");
   int i = 0;
   for(const auto&[key, val]: centVsRun) {
-    gCentVsRun->SetPoint(i++,key,val);
+    gCentVsRun->SetPoint(i,key,val[0]);
+    gCentVsRun->SetPointError(i,0,val[1]);
+    gCentVsRunMinMax->SetPoint(i,key,val[0]);
+    gCentVsRunMinMax->SetPointError(i, 0, 0, centMinMaxVsRun[key][0], centMinMaxVsRun[key][1]);
+    i++;
   }
   //
-  TGraph* gTracksVsRun = new TGraph(tracksVsRun.size());
+  TGraphErrors* gTracksVsRun = new TGraphErrors(tracksVsRun.size());
   gTracksVsRun->SetTitle("TracksVsRun");
   gTracksVsRun->SetName("TracksVsRun");
   i = 0;
   for(const auto&[key, val]: tracksVsRun) {
-    gTracksVsRun->SetPoint(i++,key,val);
+    gTracksVsRun->SetPoint(i,key,val[0]);
+    gTracksVsRun->SetPointError(i++,0,val[1]);
   }
+  //
+  if(0) {
+    TGaxis::SetMaxDigits(6);
+    gCentVsRun->SetMarkerStyle(20);
+    gCentVsRun->SetMarkerSize(0.0);
+    gCentVsRunMinMax->SetMarkerStyle(20);
+    gCentVsRunMinMax->SetMarkerSize(0.7);
+    gCentVsRunMinMax->SetMarkerColor(kBlue);
+    gCentVsRunMinMax->SetLineColor(kBlue);
+    gCentVsRunMinMax->SetTitle("Centrality vs Run");
+    gCentVsRunMinMax->GetXaxis()->SetTitle("Run number");
+    gCentVsRunMinMax->GetYaxis()->SetTitle("Centrality[%]");
+    gCentVsRunMinMax->Draw("AP");
+    gCentVsRun->Draw("P");
+    TLatex tex;
+    tex.SetNDC();               // use normalized (0–1) coordinates
+    tex.SetTextSize(0.04);
+    tex.DrawLatex(0.50, 0.85, "Blue: Min - Max range");
+    tex.DrawLatex(0.50, 0.80, "Black: RMS");
+  }
+  TGaxis::SetMaxDigits(6);
+  gTracksVsRun->SetMarkerStyle(20);
+  gTracksVsRun->SetMarkerSize(0.7);
+  gTracksVsRun->GetHistogram()->SetMinimum(17);
+  gTracksVsRun->Draw("AP");
+
   //
   // Output
   //
@@ -192,7 +259,7 @@ void analMultFind(TString normalisationFilename = "dataMB/AnalysisResults.root")
   //
   //percentilesNTracks(total[0], 10);
   //
-  std::vector<float> x(NCENTBINS), y(NCENTBINS),ex(NCENTBINS),ey(NCENTBINS);
+  std::vector<double> x(NCENTBINS), y(NCENTBINS),ex(NCENTBINS),ey(NCENTBINS);
   for (int i = 0; i < NCENTBINS; i++) {
       if (total[i]) {
         total[i]->Write();

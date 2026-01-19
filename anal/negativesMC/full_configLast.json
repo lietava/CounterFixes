@@ -8,18 +8,6 @@
       "subwagon_name": "base",
       "configuration": {
         "non-prompt-cascade-task": {
-          "cfgUseAbsDCA": "1",
-          "cfgMinRelChi2Change": "0.9",
-          "processCascadesMC": "1",
-          "processCascadesData": "0",
-          "cfgMaxR": "200",
-          "ptEdges": "0,0.2,0.4,0.6,0.8,1,1.2,1.6,2.0,2.4,2.8,3.2,3.6,4,4.5,5,5.5,6,7,8,10",
-          "ccdbUrl": "http://alice-ccdb.cern.ch",
-          "cfgMinParamChange": "0.001",
-          "processTrackedCascadesMC": "1",
-          "cfgTriggersOfInterest": "fTrackedOmega,fOmegaHighMult,fHighFt0Mult",
-          "processGenParticles": "1",
-          "processdNdetaMC": "1",
           "cfgPropToPCA": "1",
           "particlesCutsPID": {
             "values": [
@@ -42,15 +30,27 @@
             ]
           },
           "cfgCutNclusTPC": "70",
-          "cfgMaxMultFV0": "10000",
+          "cfgUseAbsDCA": "1",
           "cfgGRPmagPath": "GLO/Config/GRPMagField",
-          "cfgSkimmedProcessing": "1",
+          "cfgSkimmedProcessing": "0",
+          "cfgMinRelChi2Change": "0.9",
+          "cfgMaxCent": "8.0025",
           "cfgMaxDZIni": "4",
-          "cfgSelectOnlyOmegas": "1",
+          "cfgSelectOnlyOmegas": "0",
+          "processCascadesMC": "0",
+          "processCascadesData": "0",
           "cfgRedoPV": "1",
+          "cfgMaxR": "200",
           "cfgMinCosPA": "-1",
           "processTrackedCascadesData": "0",
+          "ccdbUrl": "http://alice-ccdb.cern.ch",
+          "cfgMinParamChange": "0.001",
           "cfgMaxMult": "8000",
+          "processTrackedCascadesMC": "0",
+          "cfgTriggersOfInterest": "fTrackedOmega,fOmegaHighMult",
+          "cfgMinMult": "3000",
+          "processGenParticles": "1",
+	        "processdNdetaMC":"1",
           "cfgMaterialCorrection": "2"
         }
       },
@@ -786,7 +786,7 @@
               "photon-conversion-builder"
             ]
           },
-          "pidTPC.useNetworkCorrection": "0",
+          "pidTPC.useNetworkCorrection": "1",
           "ccdburl": "http://alice-ccdb.cern.ch",
           "pidTPC.savedEdxsCorrected": "-1",
           "processTracksMCIU": "1"
@@ -879,7 +879,7 @@
   "inputdata": [
     "/alice/sim/2024/LHC24j7/553555"
   ],
-  "package_tag": "VO_ALICE@O2Physics::daily-20251210-0000-1",
+  "package_tag": "VO_ALICE@O2Physics::daily-20251101-0000-2",
   "OutputDirector": {
     "debug_mode": true,
     "resfile": "AO2D",
@@ -896,8 +896,8 @@
     ],
     "ntfmerge": 1
   },
-  "wagons_timestamp": 1765356865781,
+  "wagons_timestamp": 1763476902660,
   "aod_max_io_rate": 1000,
-  "train_id": "572490",
+  "train_id": "557596",
   "derived_data": true
 }

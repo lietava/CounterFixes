@@ -1,5 +1,17 @@
 {
   "non-prompt-cascade-task": {
+    "cfgUseAbsDCA": "1",
+    "cfgMinRelChi2Change": "0.9",
+    "processCascadesMC": "0",
+    "processCascadesData": "1",
+    "cfgMaxR": "200",
+    "ptEdges": "0,0.2,0.4,0.6,0.8,1,1.2,1.6,2.0,2.4,2.8,3.2,3.6,4,4.5,5,5.5,6,7,8,10",
+    "ccdbUrl": "http://alice-ccdb.cern.ch",
+    "cfgMinParamChange": "0.001",
+    "processTrackedCascadesMC": "0",
+    "cfgTriggersOfInterest": "fOmegaHighMult,fLeadingPtTrack,fHighFt0cFv0Flat,fHighFt0cFv0Mult,fHighFt0Flat,fHighFt0Mult,fHighMultFv0,fHighTrackMult",
+    "processGenParticles": "0",
+    "processdNdetaMC": "0",
     "cfgPropToPCA": "1",
     "particlesCutsPID": {
       "values": [
@@ -22,26 +34,15 @@
       ]
     },
     "cfgCutNclusTPC": "70",
-    "cfgUseAbsDCA": "1",
+    "cfgMaxMultFV0": "10000",
     "cfgGRPmagPath": "GLO/Config/GRPMagField",
     "cfgSkimmedProcessing": "1",
-    "cfgMinRelChi2Change": "0.9",
-    "cfgMaxCent": "8.0025",
     "cfgMaxDZIni": "4",
     "cfgSelectOnlyOmegas": "1",
-    "processCascadesMC": "0",
-    "processCascadesData": "1",
     "cfgRedoPV": "1",
-    "cfgMaxR": "200",
     "cfgMinCosPA": "-1",
     "processTrackedCascadesData": "0",
-    "ccdbUrl": "http://alice-ccdb.cern.ch",
-    "cfgMinParamChange": "0.001",
     "cfgMaxMult": "8000",
-    "processTrackedCascadesMC": "0",
-    "cfgTriggersOfInterest": "fOmegaHighMult,fHighFt0cFv0Flat,fHighFt0cFv0Mult,fHighFt0Flat,fHighFt0Mult,fHighMultFv0,fHighTrackMult",
-    "cfgMinMult": "3000",
-    "processGenParticles": "0",
     "cfgMaterialCorrection": "2"
   },
   "track-selection": {

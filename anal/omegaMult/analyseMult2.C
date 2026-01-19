@@ -61,7 +61,7 @@ void analyseMult2(TString dataFilename = "dataMB/AO2D.root", TString mcFilename 
   double normalisations[2]{0.7558 / hCounterTVX->GetEntries(), 0.7558 / hCounterTVX->GetEntries()};
   std::cout << "Normalisation finished:" << hCounterTVX->GetEntries() << std::endl;
   std::array<float, NCENTBINS > normCent;
-  for(int i = 0; i < NCENTBINS - 1; i++){
+  for(int i = 0; i < NCENTBINS; i++){
     normCent[i] = (centbins[i+1] - centbins[i])/100.;
   }
   //
@@ -103,13 +103,12 @@ void analyseMult2(TString dataFilename = "dataMB/AO2D.root", TString mcFilename 
       ROOT::RDataFrame dataDF(dataChain);
       double centMin = centbins[imult];
       double centMax = centbins[imult+1];
-      auto dataFilteredCentDF = dataDF.Filter([=](float cent){
-        return (cent > centMin) && (cent < centMax);
-      },{"fCentFT0M"});
+      //auto dataFilteredCentDF = dataDF.Filter([=](float cent){return (cent > centMin) && (cent < centMax);},{"fCentFT0M"});
+      auto dataFilteredCentDF = dataDF.Filter(Form("(fCentFT0M > %f) && (fCentFT0M <%f) && fNoSameBunchPileup && fSel8", centMin, centMax));
       auto dataFilteredDF = dataFilteredCentDF.Filter(selectionString.Data());
       
       ROOT::RDataFrame mcDFNt(mcChain);
-      auto mcFilteredDFNt = mcDFNt.Filter((selectionString + "&&std::abs(fPDGcode)==3334").Data());
+      auto mcFilteredDFNt = mcDFNt.Filter((selectionString + "&&std::abs(fPDGcode)==3334 && fSel8").Data());
       auto dataPtMassHist = dataFilteredDF.Histo2D({Form("dataPtMassHist%s", names[iNt].data()), ";#it{p}_{T} (GeV/c);Invariant mass (GeV/c^{2})", NPTBINS, pt, 50, 1.65, 1.71}, "fCascPt", "fMassOmega");
       auto mcPtMassHist = mcFilteredDFNt.Histo2D({Form("mcPtMassHist%s", names[iNt].data()), ";#it{p}_{T} (GeV/c);Invariant mass (GeV/c^{2})", NPTBINS, pt, 60, 1.65, 1.71}, "fCascPt", "fMassOmega");
       mcPtHist[iNt][imult] = mcFilteredDFNt.Histo1D({Form("mcPtHist%s", names[iNt].data()), ";#it{p}_{T} (GeV/c)", NPTBINS, pt}, "fCascPt");

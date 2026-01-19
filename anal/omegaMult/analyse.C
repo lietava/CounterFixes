@@ -17,6 +17,7 @@ void fillChainFromAO2D(TChain &chain, const TString &fileName)
 void analyse(TString dataFilename = "dataMB/AO2D.root", TString mcFilename = "mcMB/AO2D.root", TString normalisationFilename = "dataMB/AnalysisResults.root")
 {
   TString selectionString{"std::abs(fProtonEta) < 0.9&&std::abs(fPionEta)<0.9&&fCascCosPA > 0.9995&&std::abs(fBachEta)<0.9&&fBachNClusTPC>70&&std::abs(fMassXi-1.32171)>0.008&& std::abs(fPvZ)<10"};
+  //TString selectionString{"std::abs(fProtonEta) < 0.9&&std::abs(fPionEta)<0.9&&fCascCosPA > 0.9995&&std::abs(fBachEta)<0.9&&fBachNClusTPC>70&&std::abs(fMassXi-1.32171)>0.008&& std::abs(fPvZ)<10&& fSel8"};
 
   ROOT::EnableImplicitMT();
 
@@ -54,7 +55,7 @@ void analyse(TString dataFilename = "dataMB/AO2D.root", TString mcFilename = "mc
       exit(1);
     }
   }
-  // std::cout << "Zorro normalisation " << zorroSummary->getNormalisationFactor(0) << std::endl;
+  std::cout << "# TVXs:" << hCounterTVX->GetEntries() << std::endl;
   // double normalisations[2]{0.7558 / zorroSummary->getNormalisationFactor(0) / 0.857, 0.7558 /zorroSummary->getNormalisationFactor(0)};
   double normalisations[2]{0.7558 / hCounterTVX->GetEntries() / 0.857, 0.7558 / hCounterTVX->GetEntries()};
 
@@ -82,9 +83,9 @@ void analyse(TString dataFilename = "dataMB/AO2D.root", TString mcFilename = "mc
     fillChainFromAO2D(mcChain, mcFilename);
 
     ROOT::RDataFrame dataDF(dataChain);
-    auto dataFilteredDF = dataDF.Filter(selectionString.Data());
+    auto dataFilteredDF = dataDF.Filter((selectionString + "&& fSel8 && fNoSameBunchPileup").Data());
     ROOT::RDataFrame mcDFNt(mcChain);
-    auto mcFilteredDFNt = mcDFNt.Filter((selectionString + "&&std::abs(fPDGcode)==3334").Data());
+    auto mcFilteredDFNt = mcDFNt.Filter((selectionString + "&&std::abs(fPDGcode)==3334 && fSel8 && fNoSameBunchPileup").Data());
 
     auto dataPtMassHist = dataFilteredDF.Histo2D({Form("dataPtMassHist%s", names[iNt].data()), ";#it{p}_{T} (GeV/c);Invariant mass (GeV/c^{2})", 7, pt, 50, 1.65, 1.71}, "fCascPt", "fMassOmega");
     auto mcPtMassHist = mcFilteredDFNt.Histo2D({Form("mcPtMassHist%s", names[iNt].data()), ";#it{p}_{T} (GeV/c);Invariant mass (GeV/c^{2})", 7, pt, 60, 1.65, 1.71}, "fCascPt", "fMassOmega");
@@ -140,7 +141,7 @@ void analyse(TString dataFilename = "dataMB/AO2D.root", TString mcFilename = "mc
       dataPtHist[iNt]->SetBinError(i + 1, fsig.getError() * data.sumEntries());
     }
     dataPtHist[iNt]->Scale(1., "width");
-
+    gStyle->SetOptTitle(1);
     dir->cd();
     purity->Write();
     TH1D efficiency(Form("efficiency%s", names[iNt].data()), ";#it{p}_{T} (GeV/c);Efficiency", 7, pt);
@@ -148,7 +149,9 @@ void analyse(TString dataFilename = "dataMB/AO2D.root", TString mcFilename = "mc
     efficiency.Write();
 
     TCanvas cComp(Form("spectra_comparison%s", names[iNt].c_str()));
+    cComp.SetLeftMargin(0.15);
     TH1 *spectrum = (TH1 *)dataPtHist[iNt]->Clone(Form("spectrum%s", names[iNt].data()));
+    spectrum->SetTitle(Form("Omega spectrum %s", names[iNt].c_str()));
     spectrum->Divide(&efficiency);
     spectrum->Scale(normalisations[iNt]);
     published_stat.Draw("e x0");

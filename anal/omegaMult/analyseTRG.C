@@ -102,12 +102,12 @@ void analyseTRG(TString dataFilename = "dataTRG/513390/AO2D.root", TString mcFil
       toitrg = toiHM;
       centCut = 0.8;
     }
-    dataFilteredDF = dataFilteredDF.Filter( Form("fToiMask & %d && fCentFT0M < %f && fNoSameBunchPileup",toitrg,centCut));
+    dataFilteredDF = dataFilteredDF.Filter( Form("fNoSameBunchPileup && fToiMask & %d && fCentFT0M < %f && fNoSameBunchPileup && fSel8",toitrg,centCut));
     dataCentHist[iNt] =  dataFilteredDF.Histo1D({"Cent","Cent",1000,0.,10.},"fCentFT0M");
     dataFT0MHist[iNt] =  dataFilteredDF.Histo1D({"FT0M","FT0M",7000,0.,7000.},"fMultFT0M");
 
     ROOT::RDataFrame mcDFNt(mcChain);
-    auto mcFilteredDFNt = mcDFNt.Filter((selectionString + "&&std::abs(fPDGcode)==3334").Data());
+    auto mcFilteredDFNt = mcDFNt.Filter((selectionString + "&&std::abs(fPDGcode)==3334 && fSel8").Data());
 
     auto dataPtMassHist = dataFilteredDF.Histo2D({Form("dataPtMassHist%s", names[iNt].data()), ";#it{p}_{T} (GeV/c);Invariant mass (GeV/c^{2})", 7, pt, 50, 1.65, 1.71}, "fCascPt", "fMassOmega");
     auto mcPtMassHist = mcFilteredDFNt.Histo2D({Form("mcPtMassHist%s", names[iNt].data()), ";#it{p}_{T} (GeV/c);Invariant mass (GeV/c^{2})", 7, pt, 60, 1.65, 1.71}, "fCascPt", "fMassOmega");
@@ -171,12 +171,18 @@ void analyseTRG(TString dataFilename = "dataTRG/513390/AO2D.root", TString mcFil
     efficiency.Write();
 
     TCanvas cComp(Form("spectra_comparison%s", names[iNt].c_str()));
+    cComp.SetLeftMargin(0.15);
     TH1 *spectrum = (TH1 *)dataPtHist[iNt]->Clone(Form("spectrum%s", names[iNt].data()));
     spectrum->Divide(&efficiency);
     spectrum->Scale(normalisations[iNt]);
-    published_stat.Draw("e x0");
+    //published_stat.Draw("e x0");
+    //published_syst.Draw("e2 same");
+    //spectrum->Draw("same");
+
+    spectrum->Draw();
+    published_stat.Draw("e x0 same");
     published_syst.Draw("e2 same");
-    spectrum->Draw("same");
+
     dir->cd();
     cComp.Write();
     spectrum->Write();

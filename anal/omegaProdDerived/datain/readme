@@ -1,1 +1,4 @@
-cp /alice/data/2024/LHC24al/553187/apass1_sampled/0830/o2_ctf_run00553187_orbit0081661536_tf0000000099_epn045/002/AO2D.root file://
+cp /alice/data/2024/LHC24aj/551760/apass1_sampled/1330/o2_ctf_run00551760_orbit0286943264_tf0001271810_epn307/001/AO2D.root file://
+cp /alice/data/2024/LHC24aj/551761/apass1_sampled/1720/o2_ctf_run00551761_orbit0443837408_tf0000098804_epn313/001/AO2D.root file://
+cp /alice/data/2024/LHC24aj/551780/apass1_sampled/0310/o2_ctf_run00551780_orbit0330549120_tf0005566875_epn103/001/AO2D.root file://
+cp /alice/data/2024/LHC24aj/551843/apass1_sampled/0320/o2_ctf_run00551843_orbit0087748480_tf0001739951_epn106/001/AO2D.root file://
