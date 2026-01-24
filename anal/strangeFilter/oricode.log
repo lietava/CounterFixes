@@ -1,0 +1,1600 @@
+O2 job script starts at Thu Mar 27 10:11:35 AM CET 2025
+NOTE: input_data.txt is already there. Using it instead of processing wn.xml
+No tf_limit in config; using default TIMEFRAMES=2
+Running on 1 cores and configuring with shared memory 7500000000, rate limit 209715200, readers 1
+
+Generating O2 command. Adding the following options:
+Input files: --aod-file @input_data.txt
+Reader/Spawner configuration: --readers 1
+Memory options: --aod-memory-rate-limit 209715200 --shm-segment-size 7500000000
+Limiting throughput to: 1000 MB/s
+Monitoring: --resources-monitoring 2 --resources-monitoring-dump-interval 600
+
+Global options (given once): --aod-file @input_data.txt   --readers 1 --aod-memory-rate-limit 209715200 --shm-segment-size 7500000000  --resources-monitoring 2 --resources-monitoring-dump-interval 600 --aod-max-io-rate 1000
+Workflow options (given for each workflow): -b --configuration json://configuration.json    
+
+Adding o2-analysis-lf-strangeness-filter
+Adding o2-analysis-multiplicity-table
+Adding o2-analysis-lf-lambdakzerobuilder
+Adding o2-analysis-lf-cascadebuilder
+Adding o2-analysis-event-selection
+Adding o2-analysis-track-propagation
+Adding o2-analysis-lf-st-coll-ids
+Adding o2-analysis-lf-tpcpid
+Adding o2-analysis-pid-tpc
+Adding o2-analysis-tracks-extra-v002-converter
+Adding o2-analysis-timestamp
+Adding o2-analysis-pid-tpc-base
+
+The following O2 command will be executed: 
+o2-analysis-lf-strangeness-filter -b --configuration json://configuration.json | o2-analysis-multiplicity-table -b --configuration json://configuration.json | o2-analysis-lf-lambdakzerobuilder -b --configuration json://configuration.json | o2-analysis-lf-cascadebuilder -b --configuration json://configuration.json | o2-analysis-event-selection -b --configuration json://configuration.json | o2-analysis-track-propagation -b --configuration json://configuration.json | o2-analysis-lf-st-coll-ids -b --configuration json://configuration.json | o2-analysis-lf-tpcpid -b --configuration json://configuration.json | o2-analysis-pid-tpc -b --configuration json://configuration.json | o2-analysis-tracks-extra-v002-converter -b --configuration json://configuration.json | o2-analysis-timestamp -b --configuration json://configuration.json | o2-analysis-pid-tpc-base -b --configuration json://configuration.json --aod-file @input_data.txt --readers 1 --aod-memory-rate-limit 209715200 --shm-segment-size 7500000000 --resources-monitoring 2 --resources-monitoring-dump-interval 600 --aod-max-io-rate 1000
+
+However, if for local debugging you want to run the same workflow, you can achieve this with the following reduced command line:
+o2-analysis-lf-strangeness-filter -b --configuration json://configuration.json | o2-analysis-multiplicity-table -b --configuration json://configuration.json | o2-analysis-lf-lambdakzerobuilder -b --configuration json://configuration.json | o2-analysis-lf-cascadebuilder -b --configuration json://configuration.json | o2-analysis-event-selection -b --configuration json://configuration.json | o2-analysis-track-propagation -b --configuration json://configuration.json | o2-analysis-lf-st-coll-ids -b --configuration json://configuration.json | o2-analysis-lf-tpcpid -b --configuration json://configuration.json | o2-analysis-pid-tpc -b --configuration json://configuration.json | o2-analysis-tracks-extra-v002-converter -b --configuration json://configuration.json | o2-analysis-timestamp -b --configuration json://configuration.json | o2-analysis-pid-tpc-base -b --configuration json://configuration.json --aod-file @input_data.txt
+
+
+[INFO] Loading metadata from file /home/rl/TEST/strangeFilter/AO2D.root in PID 112029
+[INFO] Metadata for file "/home/rl/TEST/strangeFilter/AO2D.root":
+[INFO] - O2Version: 1.2.0
+[INFO] - LPMProductionTag: LHC24al
+[INFO] - ROOTVersion: 6.30/01
+[INFO] - RecoPassName: apass1_sampled
+[INFO] - Run: 3
+[INFO] - AnchorPassName: 
+[INFO] - DataType: RAW
+[INFO] - AnchorProduction: 
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 112029.
+[INFO] Driver listening on port: 30109
+[INFO] Rate limiting set up at 209MB distributed over 1 readers
+[INFO] O2 Data Processing Layer initialised. We brake for nobody.
+[INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
+[INFO] Redeployment of configuration asked.
+[INFO] Starting internal-dpl-clock on pid 112038
+[INFO] Starting internal-dpl-aod-reader on pid 112039
+[INFO] Starting internal-dpl-aod-spawner on pid 112040
+[INFO] Starting internal-dpl-aod-index-builder on pid 112041
+[INFO] Starting timestamp-task on pid 112042
+[INFO] Starting st-coll-ids on pid 112043
+[INFO] Starting bc-selection-task on pid 112044
+[INFO] Starting tracks-extra-v002-converter on pid 112045
+[INFO] Starting tracks-extra-spawner on pid 112046
+[INFO] Starting track-propagation on pid 112047
+[INFO] Starting event-selection-task on pid 112048
+[INFO] Starting pid-multiplicity on pid 112049
+[INFO] Starting multiplicity-table on pid 112050
+[INFO] Starting tpc-pid on pid 112051
+[INFO] Starting lf-tpc-pid on pid 112052
+[INFO] Starting cascade-preselector on pid 112053
+[INFO] Starting lambdakzero-preselector on pid 112054
+[INFO] Starting lambdakzero-builder on pid 112055
+[INFO] Starting lambdakzero-initializer on pid 112056
+[INFO] Starting lambdakzero-v0-data-link-builder on pid 112057
+[INFO] Starting cascade-builder on pid 112058
+[INFO] Starting cascade-initializer on pid 112059
+[INFO] Starting lf-strangeness-filter on pid 112060
+[INFO] Starting cascade-link-builder on pid 112061
+[INFO] Starting kfcascade-link-builder on pid 112062
+[INFO] Starting tracascade-link-builder on pid 112063
+[INFO] Starting internal-dpl-aod-writer on pid 112064
+[INFO] Starting internal-dpl-aod-global-analysis-file-sink on pid 112065
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 112066
+[INFO] Redeployment of configuration done.
+[112041:internal-dpl-aod-index-builder]: [INFO] Setting metadata AnchorPassName to ''
+[112041:internal-dpl-aod-index-builder]: [INFO] Setting metadata AnchorProduction to ''
+[112041:internal-dpl-aod-index-builder]: [INFO] Setting metadata DataType to 'RAW'
+[112041:internal-dpl-aod-index-builder]: [INFO] Setting metadata RecoPassName to 'apass1_sampled'
+[112041:internal-dpl-aod-index-builder]: [INFO] Setting metadata Run to '3'
+[112042:timestamp-task]: [INFO] Setting metadata AnchorPassName to ''
+[112042:timestamp-task]: [INFO] Setting metadata AnchorProduction to ''
+[112042:timestamp-task]: [INFO] Setting metadata DataType to 'RAW'
+[112042:timestamp-task]: [INFO] Setting metadata RecoPassName to 'apass1_sampled'
+[112042:timestamp-task]: [INFO] Setting metadata Run to '3'
+[112044:bc-selection-task]: [INFO] Setting metadata AnchorPassName to ''
+[112044:bc-selection-task]: [INFO] Setting metadata AnchorProduction to ''
+[112044:bc-selection-task]: [INFO] Setting metadata DataType to 'RAW'
+[112044:bc-selection-task]: [INFO] Setting metadata RecoPassName to 'apass1_sampled'
+[112044:bc-selection-task]: [INFO] Setting metadata Run to '3'
+[112038:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[112039:internal-dpl-aod-reader]: [INFO] Instrumenting crash signals
+[112048:event-selection-task]: [INFO] Setting metadata AnchorPassName to ''
+[112048:event-selection-task]: [INFO] Setting metadata AnchorProduction to ''
+[112048:event-selection-task]: [INFO] Setting metadata DataType to 'RAW'
+[112048:event-selection-task]: [INFO] Setting metadata RecoPassName to 'apass1_sampled'
+[112048:event-selection-task]: [INFO] Setting metadata Run to '3'
+[112040:internal-dpl-aod-spawner]: [INFO] Instrumenting crash signals
+[112041:internal-dpl-aod-index-builder]: [INFO] Instrumenting crash signals
+[112050:multiplicity-table]: [INFO] Setting metadata AnchorPassName to ''
+[112050:multiplicity-table]: [INFO] Setting metadata AnchorProduction to ''
+[112050:multiplicity-table]: [INFO] Setting metadata DataType to 'RAW'
+[112050:multiplicity-table]: [INFO] Setting metadata RecoPassName to 'apass1_sampled'
+[112050:multiplicity-table]: [INFO] Setting metadata Run to '3'
+[112045:tracks-extra-v002-converter]: [INFO] Instrumenting crash signals
+[112043:st-coll-ids]: [INFO] Instrumenting crash signals
+[112039:internal-dpl-aod-reader]: [INFO] Spawing new device internal-dpl-aod-reader in process with pid 112039
+[112039:internal-dpl-aod-reader]: [10:11:37][INFO] 
+[112039:internal-dpl-aod-reader]:       ______      _    _______  _________ 
+[112039:internal-dpl-aod-reader]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112039:internal-dpl-aod-reader]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112039:internal-dpl-aod-reader]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112039:internal-dpl-aod-reader]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112039:internal-dpl-aod-reader]: 
+[112039:internal-dpl-aod-reader]: [10:11:37][STATE] Starting FairMQ state machine --> IDLE
+[112044:bc-selection-task]: [INFO] Instrumenting crash signals
+[112039:internal-dpl-aod-reader]: [10:11:37][STATE] IDLE ---> INITIALIZING DEVICE
+[112042:timestamp-task]: [INFO] Instrumenting crash signals
+[112048:event-selection-task]: [INFO] Instrumenting crash signals
+[112046:tracks-extra-spawner]: [INFO] Instrumenting crash signals
+[112045:tracks-extra-v002-converter]: [INFO] Spawing new device tracks-extra-v002-converter in process with pid 112045
+[112045:tracks-extra-v002-converter]: [10:11:37][INFO] 
+[112045:tracks-extra-v002-converter]:       ______      _    _______  _________ 
+[112045:tracks-extra-v002-converter]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112045:tracks-extra-v002-converter]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112045:tracks-extra-v002-converter]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112045:tracks-extra-v002-converter]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112045:tracks-extra-v002-converter]: 
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] Starting FairMQ state machine --> IDLE
+[112038:internal-dpl-clock]: [INFO] Spawing new device internal-dpl-clock in process with pid 112038
+[112038:internal-dpl-clock]: [10:11:37][INFO] 
+[112038:internal-dpl-clock]:       ______      _    _______  _________ 
+[112038:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112038:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112038:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112038:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112038:internal-dpl-clock]: 
+[112038:internal-dpl-clock]: [10:11:37][STATE] Starting FairMQ state machine --> IDLE
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] IDLE ---> INITIALIZING DEVICE
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] INITIALIZED ---> BINDING
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] BINDING ---> BOUND
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] BOUND ---> CONNECTING
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] CONNECTING ---> DEVICE READY
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] DEVICE READY ---> INITIALIZING TASK
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] INITIALIZING TASK ---> READY
+[112045:tracks-extra-v002-converter]: [10:11:37][STATE] READY ---> RUNNING
+[112045:tracks-extra-v002-converter]: [10:11:37][INFO] fair::mq::Device running...
+[112045:tracks-extra-v002-converter]: [10:11:37][INFO] LHCPeriod is not available, using current month MAR
+[112045:tracks-extra-v002-converter]: [10:11:37][INFO] Correctly handshaken websocket connection.
+[112053:cascade-preselector]: [INFO] Instrumenting crash signals
+[112038:internal-dpl-clock]: [10:11:37][STATE] IDLE ---> INITIALIZING DEVICE
+[112047:track-propagation]: [INFO] Instrumenting crash signals
+[112038:internal-dpl-clock]: [10:11:37][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112038:internal-dpl-clock]: [10:11:37][STATE] INITIALIZED ---> BINDING
+[112038:internal-dpl-clock]: [10:11:37][STATE] BINDING ---> BOUND
+[112038:internal-dpl-clock]: [10:11:37][STATE] BOUND ---> CONNECTING
+[112038:internal-dpl-clock]: [10:11:37][STATE] CONNECTING ---> DEVICE READY
+[112038:internal-dpl-clock]: [10:11:37][STATE] DEVICE READY ---> INITIALIZING TASK
+[112038:internal-dpl-clock]: [10:11:37][STATE] INITIALIZING TASK ---> READY
+[112038:internal-dpl-clock]: [10:11:37][STATE] READY ---> RUNNING
+[112038:internal-dpl-clock]: [10:11:37][INFO] fair::mq::Device running...
+[112038:internal-dpl-clock]: [10:11:37][INFO] LHCPeriod is not available, using current month MAR
+[112038:internal-dpl-clock]: [10:11:37][INFO] Correctly handshaken websocket connection.
+[INFO] Controller for internal-dpl-aod-reader not yet available.
+[112052:lf-tpc-pid]: [INFO] Instrumenting crash signals
+[112041:internal-dpl-aod-index-builder]: [INFO] Spawing new device internal-dpl-aod-index-builder in process with pid 112041
+[112041:internal-dpl-aod-index-builder]: [10:11:37][INFO] 
+[112041:internal-dpl-aod-index-builder]:       ______      _    _______  _________ 
+[112041:internal-dpl-aod-index-builder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112041:internal-dpl-aod-index-builder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112041:internal-dpl-aod-index-builder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112041:internal-dpl-aod-index-builder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112041:internal-dpl-aod-index-builder]: 
+[112051:tpc-pid]: [INFO] Setting metadata AnchorPassName to ''
+[112051:tpc-pid]: [INFO] Setting metadata AnchorProduction to ''
+[112051:tpc-pid]: [INFO] Setting metadata DataType to 'RAW'
+[112051:tpc-pid]: [INFO] Setting metadata RecoPassName to 'apass1_sampled'
+[112051:tpc-pid]: [INFO] Setting metadata Run to '3'
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] Starting FairMQ state machine --> IDLE
+[112040:internal-dpl-aod-spawner]: [INFO] Spawing new device internal-dpl-aod-spawner in process with pid 112040
+[112049:pid-multiplicity]: [INFO] Instrumenting crash signals
+[112040:internal-dpl-aod-spawner]: [10:11:37][INFO] 
+[112040:internal-dpl-aod-spawner]:       ______      _    _______  _________ 
+[112040:internal-dpl-aod-spawner]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112040:internal-dpl-aod-spawner]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112040:internal-dpl-aod-spawner]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112040:internal-dpl-aod-spawner]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112040:internal-dpl-aod-spawner]: 
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] Starting FairMQ state machine --> IDLE
+[112044:bc-selection-task]: [INFO] Spawing new device bc-selection-task in process with pid 112044
+[112044:bc-selection-task]: [10:11:37][INFO] 
+[112044:bc-selection-task]:       ______      _    _______  _________ 
+[112044:bc-selection-task]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112044:bc-selection-task]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112044:bc-selection-task]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112044:bc-selection-task]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112044:bc-selection-task]: 
+[112044:bc-selection-task]: [10:11:37][STATE] Starting FairMQ state machine --> IDLE
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] IDLE ---> INITIALIZING DEVICE
+[112050:multiplicity-table]: [INFO] Instrumenting crash signals
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] IDLE ---> INITIALIZING DEVICE
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] INITIALIZED ---> BINDING
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] BINDING ---> BOUND
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] BOUND ---> CONNECTING
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] CONNECTING ---> DEVICE READY
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] DEVICE READY ---> INITIALIZING TASK
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] INITIALIZING TASK ---> READY
+[112041:internal-dpl-aod-index-builder]: [10:11:37][STATE] READY ---> RUNNING
+[112041:internal-dpl-aod-index-builder]: [10:11:37][INFO] fair::mq::Device running...
+[112041:internal-dpl-aod-index-builder]: [10:11:37][INFO] LHCPeriod is not available, using current month MAR
+[112042:timestamp-task]: [INFO] Spawing new device timestamp-task in process with pid 112042
+[112042:timestamp-task]: [10:11:37][INFO] 
+[112042:timestamp-task]:       ______      _    _______  _________ 
+[112042:timestamp-task]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112042:timestamp-task]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112042:timestamp-task]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112042:timestamp-task]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112042:timestamp-task]: 
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] INITIALIZED ---> BINDING
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] BINDING ---> BOUND
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] BOUND ---> CONNECTING
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] CONNECTING ---> DEVICE READY
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] DEVICE READY ---> INITIALIZING TASK
+[112041:internal-dpl-aod-index-builder]: [10:11:37][INFO] Correctly handshaken websocket connection.
+[112044:bc-selection-task]: [10:11:37][STATE] IDLE ---> INITIALIZING DEVICE
+[112044:bc-selection-task]: [10:11:37][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066697-20fKIx-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112044:bc-selection-task]: [10:11:37][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066697-20fKIx-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112043:st-coll-ids]: [INFO] Spawing new device st-coll-ids in process with pid 112043
+[112044:bc-selection-task]: [10:11:37][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112043:st-coll-ids]: [10:11:37][INFO] 
+[112043:st-coll-ids]:       ______      _    _______  _________ 
+[112043:st-coll-ids]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112043:st-coll-ids]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112043:st-coll-ids]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112043:st-coll-ids]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112043:st-coll-ids]: 
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] INITIALIZING TASK ---> READY
+[112042:timestamp-task]: [10:11:37][STATE] Starting FairMQ state machine --> IDLE
+[112040:internal-dpl-aod-spawner]: [10:11:37][STATE] READY ---> RUNNING
+[112040:internal-dpl-aod-spawner]: [10:11:37][INFO] fair::mq::Device running...
+[112040:internal-dpl-aod-spawner]: [10:11:37][INFO] LHCPeriod is not available, using current month MAR
+[112040:internal-dpl-aod-spawner]: [10:11:37][INFO] Correctly handshaken websocket connection.
+[112055:lambdakzero-builder]: [INFO] Instrumenting crash signals
+[112044:bc-selection-task]: [10:11:37][STATE] INITIALIZED ---> BINDING
+[112044:bc-selection-task]: [10:11:37][STATE] BINDING ---> BOUND
+[112044:bc-selection-task]: [10:11:37][STATE] BOUND ---> CONNECTING
+[112044:bc-selection-task]: [10:11:37][STATE] CONNECTING ---> DEVICE READY
+[112044:bc-selection-task]: [10:11:37][STATE] DEVICE READY ---> INITIALIZING TASK
+[112044:bc-selection-task]: [10:11:37][STATE] INITIALIZING TASK ---> READY
+[112044:bc-selection-task]: [10:11:37][STATE] READY ---> RUNNING
+[112044:bc-selection-task]: [10:11:37][INFO] fair::mq::Device running...
+[112044:bc-selection-task]: [10:11:37][INFO] LHCPeriod is not available, using current month MAR
+[112044:bc-selection-task]: [10:11:37][INFO] Correctly handshaken websocket connection.
+[112043:st-coll-ids]: [10:11:37][STATE] Starting FairMQ state machine --> IDLE
+[112053:cascade-preselector]: [INFO] Spawing new device cascade-preselector in process with pid 112053
+[112042:timestamp-task]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112051:tpc-pid]: [INFO] Instrumenting crash signals
+[112053:cascade-preselector]: [10:11:38][INFO] 
+[112053:cascade-preselector]:       ______      _    _______  _________ 
+[112053:cascade-preselector]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112053:cascade-preselector]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112053:cascade-preselector]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112053:cascade-preselector]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112053:cascade-preselector]: 
+[112053:cascade-preselector]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112052:lf-tpc-pid]: [INFO] Spawing new device lf-tpc-pid in process with pid 112052
+[112052:lf-tpc-pid]: [10:11:38][INFO] 
+[112052:lf-tpc-pid]:       ______      _    _______  _________ 
+[112052:lf-tpc-pid]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112052:lf-tpc-pid]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112052:lf-tpc-pid]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112052:lf-tpc-pid]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112052:lf-tpc-pid]: 
+[112052:lf-tpc-pid]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112042:timestamp-task]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-NQkghf-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112042:timestamp-task]: [10:11:38][INFO] Initializing TimestampTask
+[112042:timestamp-task]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-NQkghf-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112042:timestamp-task]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066697-qnQnaz-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112048:event-selection-task]: [INFO] Spawing new device event-selection-task in process with pid 112048
+[112048:event-selection-task]: [10:11:38][INFO] 
+[112048:event-selection-task]:       ______      _    _______  _________ 
+[112048:event-selection-task]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112048:event-selection-task]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112048:event-selection-task]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112048:event-selection-task]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112048:event-selection-task]: 
+[112043:st-coll-ids]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112048:event-selection-task]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112054:lambdakzero-preselector]: [INFO] Instrumenting crash signals
+[112052:lf-tpc-pid]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112043:st-coll-ids]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112043:st-coll-ids]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112061:cascade-link-builder]: [INFO] Instrumenting crash signals
+[112043:st-coll-ids]: [10:11:38][STATE] BINDING ---> BOUND
+[112043:st-coll-ids]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112043:st-coll-ids]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112043:st-coll-ids]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112052:lf-tpc-pid]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-t7Hb0Q-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112046:tracks-extra-spawner]: [INFO] Spawing new device tracks-extra-spawner in process with pid 112046
+[112052:lf-tpc-pid]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-t7Hb0Q-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112052:lf-tpc-pid]: [10:11:38][INFO] Initialising LF TPC PID response for fixed timestamp 0:
+[112052:lf-tpc-pid]: [10:11:38][INFO] Skipping El
+[112052:lf-tpc-pid]: [10:11:38][INFO] Skipping Mu
+[112052:lf-tpc-pid]: [10:11:38][INFO] Enabling Pi
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosPi` :: inizializing parameters from json with particle Pi
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosPi` :: Using default parameters for Pi as entry `Set parameters` 0 < 1.5
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosPi` :: initializing from configurable 'fileParamBbPositive' bb =  post =  simple = false
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosPi` :: using full BetheBloch parametrization
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegPi` :: inizializing parameters from json with particle Pi
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegPi` :: Using default parameters for Pi as entry `Set parameters` 0 < 1.5
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegPi` :: initializing from configurable 'fileParamBbNegative' bb =  post =  simple = false
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegPi` :: using full BetheBloch parametrization
+[112052:lf-tpc-pid]: [10:11:38][INFO] Enabling Ka
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosKa` :: inizializing parameters from json with particle Ka
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosKa` :: Using default parameters for Ka as entry `Set parameters` 0 < 1.5
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosKa` :: initializing from configurable 'fileParamBbPositive' bb =  post =  simple = false
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosKa` :: using full BetheBloch parametrization
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegKa` :: inizializing parameters from json with particle Ka
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegKa` :: Using default parameters for Ka as entry `Set parameters` 0 < 1.5
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegKa` :: initializing from configurable 'fileParamBbNegative' bb =  post =  simple = false
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegKa` :: using full BetheBloch parametrization
+[112052:lf-tpc-pid]: [10:11:38][INFO] Enabling Pr
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosPr` :: inizializing parameters from json with particle Pr
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosPr` :: Using default parameters for Pr as entry `Set parameters` 0 < 1.5
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosPr` :: initializing from configurable 'fileParamBbPositive' bb =  post =  simple = false
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `PosPr` :: using full BetheBloch parametrization
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegPr` :: inizializing parameters from json with particle Pr
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegPr` :: Using default parameters for Pr as entry `Set parameters` 0 < 1.5
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegPr` :: initializing from configurable 'fileParamBbNegative' bb =  post =  simple = false
+[112052:lf-tpc-pid]: [10:11:38][INFO] bbParams `NegPr` :: using full BetheBloch parametrization
+[112052:lf-tpc-pid]: [10:11:38][INFO] Skipping De
+[112052:lf-tpc-pid]: [10:11:38][INFO] Skipping Tr
+[112052:lf-tpc-pid]: [10:11:38][INFO] Skipping He
+[112052:lf-tpc-pid]: [10:11:38][INFO] Skipping Al
+[112046:tracks-extra-spawner]: [10:11:38][INFO] 
+[112046:tracks-extra-spawner]:       ______      _    _______  _________ 
+[112046:tracks-extra-spawner]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112046:tracks-extra-spawner]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112046:tracks-extra-spawner]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112046:tracks-extra-spawner]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112046:tracks-extra-spawner]: 
+[112046:tracks-extra-spawner]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112052:lf-tpc-pid]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112052:lf-tpc-pid]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112052:lf-tpc-pid]: [10:11:38][STATE] BINDING ---> BOUND
+[112052:lf-tpc-pid]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112052:lf-tpc-pid]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112052:lf-tpc-pid]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112052:lf-tpc-pid]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112052:lf-tpc-pid]: [10:11:38][STATE] READY ---> RUNNING
+[112052:lf-tpc-pid]: [10:11:38][INFO] fair::mq::Device running...
+[112052:lf-tpc-pid]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112043:st-coll-ids]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112043:st-coll-ids]: [10:11:38][STATE] READY ---> RUNNING
+[112043:st-coll-ids]: [10:11:38][INFO] fair::mq::Device running...
+[112052:lf-tpc-pid]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112043:st-coll-ids]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112043:st-coll-ids]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112056:lambdakzero-initializer]: [INFO] Instrumenting crash signals
+[112048:event-selection-task]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112053:cascade-preselector]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112057:lambdakzero-v0-data-link-builder]: [INFO] Instrumenting crash signals
+[112042:timestamp-task]: [10:11:38][INFO] From metadata this data is from Run 3
+[112042:timestamp-task]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112042:timestamp-task]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112042:timestamp-task]: [10:11:38][STATE] BINDING ---> BOUND
+[112042:timestamp-task]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112042:timestamp-task]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112042:timestamp-task]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112050:multiplicity-table]: [INFO] Spawing new device multiplicity-table in process with pid 112050
+[112050:multiplicity-table]: [10:11:38][INFO] 
+[112050:multiplicity-table]:       ______      _    _______  _________ 
+[112050:multiplicity-table]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112050:multiplicity-table]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112050:multiplicity-table]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112050:multiplicity-table]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112050:multiplicity-table]: 
+[112050:multiplicity-table]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112059:cascade-initializer]: [INFO] Instrumenting crash signals
+[112048:event-selection-task]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-1E39IS-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112048:event-selection-task]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-1E39IS-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112048:event-selection-task]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112048:event-selection-task]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112048:event-selection-task]: [10:11:38][STATE] BINDING ---> BOUND
+[112048:event-selection-task]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112048:event-selection-task]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112048:event-selection-task]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112064:internal-dpl-aod-writer]: [INFO] Instrumenting crash signals
+[112042:timestamp-task]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112042:timestamp-task]: [10:11:38][STATE] READY ---> RUNNING
+[112046:tracks-extra-spawner]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112042:timestamp-task]: [10:11:38][INFO] fair::mq::Device running...
+[112042:timestamp-task]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112042:timestamp-task]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112055:lambdakzero-builder]: [INFO] Spawing new device lambdakzero-builder in process with pid 112055
+[112058:cascade-builder]: [INFO] Instrumenting crash signals
+[112046:tracks-extra-spawner]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112046:tracks-extra-spawner]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112046:tracks-extra-spawner]: [10:11:38][STATE] BINDING ---> BOUND
+[112046:tracks-extra-spawner]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112046:tracks-extra-spawner]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112046:tracks-extra-spawner]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112060:lf-strangeness-filter]: [INFO] Instrumenting crash signals
+[112046:tracks-extra-spawner]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112046:tracks-extra-spawner]: [10:11:38][STATE] READY ---> RUNNING
+[112046:tracks-extra-spawner]: [10:11:38][INFO] fair::mq::Device running...
+[112046:tracks-extra-spawner]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112046:tracks-extra-spawner]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112066:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[112055:lambdakzero-builder]: [10:11:38][INFO] 
+[112055:lambdakzero-builder]:       ______      _    _______  _________ 
+[112055:lambdakzero-builder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112055:lambdakzero-builder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112055:lambdakzero-builder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112055:lambdakzero-builder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112055:lambdakzero-builder]: 
+[112055:lambdakzero-builder]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112047:track-propagation]: [INFO] Spawing new device track-propagation in process with pid 112047
+[112062:kfcascade-link-builder]: [INFO] Instrumenting crash signals
+[112065:internal-dpl-aod-global-analysis-file-sink]: [INFO] Instrumenting crash signals
+[112051:tpc-pid]: [INFO] Spawing new device tpc-pid in process with pid 112051
+[112048:event-selection-task]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112048:event-selection-task]: [10:11:38][STATE] READY ---> RUNNING
+[112048:event-selection-task]: [10:11:38][INFO] fair::mq::Device running...
+[112048:event-selection-task]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112048:event-selection-task]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112051:tpc-pid]: [10:11:38][INFO] 
+[112051:tpc-pid]:       ______      _    _______  _________ 
+[112051:tpc-pid]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112051:tpc-pid]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112051:tpc-pid]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112051:tpc-pid]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112051:tpc-pid]: 
+[112055:lambdakzero-builder]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112051:tpc-pid]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112063:tracascade-link-builder]: [INFO] Instrumenting crash signals
+[112055:lambdakzero-builder]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-BdHh5D-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112047:track-propagation]: [10:11:38][INFO] 
+[112047:track-propagation]:       ______      _    _______  _________ 
+[112047:track-propagation]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112047:track-propagation]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112047:track-propagation]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112047:track-propagation]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112047:track-propagation]: 
+[112047:track-propagation]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112049:pid-multiplicity]: [INFO] Spawing new device pid-multiplicity in process with pid 112049
+[112054:lambdakzero-preselector]: [INFO] Spawing new device lambdakzero-preselector in process with pid 112054
+[112049:pid-multiplicity]: [10:11:38][INFO] 
+[112049:pid-multiplicity]:       ______      _    _______  _________ 
+[112049:pid-multiplicity]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112049:pid-multiplicity]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112049:pid-multiplicity]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112049:pid-multiplicity]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112049:pid-multiplicity]: 
+[112049:pid-multiplicity]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112054:lambdakzero-preselector]: [10:11:38][INFO] 
+[112054:lambdakzero-preselector]:       ______      _    _______  _________ 
+[112054:lambdakzero-preselector]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112054:lambdakzero-preselector]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112054:lambdakzero-preselector]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112054:lambdakzero-preselector]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112054:lambdakzero-preselector]: 
+[112054:lambdakzero-preselector]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112051:tpc-pid]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112051:tpc-pid]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-XNx19H-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCFullEl
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCFullMu
+[112051:tpc-pid]: [10:11:38][INFO] Auto-enabling table: pidTPCFullPi
+[112051:tpc-pid]: [10:11:38][INFO] Auto-enabling table: pidTPCFullKa
+[112051:tpc-pid]: [10:11:38][INFO] Auto-enabling table: pidTPCFullPr
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCFullDe
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCFullTr
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCFullHe
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCFullAl
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCEl
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCMu
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCPi
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCKa
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCPr
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCDe
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCTr
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCHe
+[112051:tpc-pid]: [10:11:38][INFO] Auto-disabling table: pidTPCAl
+[112051:tpc-pid]: [10:11:38][INFO] Automatically setting reco pass for TPC Response to apass1_sampled from AO2D
+[112051:tpc-pid]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-XNx19H-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112051:tpc-pid]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066697-9FzhVf-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112051:tpc-pid]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112051:tpc-pid]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112051:tpc-pid]: [10:11:38][STATE] BINDING ---> BOUND
+[112051:tpc-pid]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112051:tpc-pid]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112051:tpc-pid]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112054:lambdakzero-preselector]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112047:track-propagation]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112054:lambdakzero-preselector]: [10:11:38][INFO] Process function processBuildAll status: 1
+[112054:lambdakzero-preselector]: [10:11:38][INFO] Process function doprocessBuildMCAssociated status: 0
+[112054:lambdakzero-preselector]: [10:11:38][INFO] Process function doprocessBuildValiddEdx status: 0
+[112054:lambdakzero-preselector]: [10:11:38][INFO] Process function doprocessBuildValiddEdxMCAssociated status: 0
+[112054:lambdakzero-preselector]: [10:11:38][INFO] Process function doprocessBuildFindable status: 0
+[112051:tpc-pid]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112051:tpc-pid]: [10:11:38][STATE] READY ---> RUNNING
+[112051:tpc-pid]: [10:11:38][INFO] fair::mq::Device running...
+[112051:tpc-pid]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112051:tpc-pid]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112047:track-propagation]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-1X7Bd9-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112047:track-propagation]: [10:11:38][INFO] Enabling processCovariance
+[112047:track-propagation]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-1X7Bd9-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112061:cascade-link-builder]: [INFO] Spawing new device cascade-link-builder in process with pid 112061
+[112061:cascade-link-builder]: [10:11:38][INFO] 
+[112061:cascade-link-builder]:       ______      _    _______  _________ 
+[112061:cascade-link-builder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112061:cascade-link-builder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112061:cascade-link-builder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112061:cascade-link-builder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112061:cascade-link-builder]: 
+[112061:cascade-link-builder]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112047:track-propagation]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112047:track-propagation]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112047:track-propagation]: [10:11:38][STATE] BINDING ---> BOUND
+[112047:track-propagation]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112049:pid-multiplicity]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112049:pid-multiplicity]: [10:11:38][INFO] Initializing PID Mult Task
+[112049:pid-multiplicity]: [10:11:38][INFO] Table TPC PID Multiplicity enabled!
+[112049:pid-multiplicity]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112049:pid-multiplicity]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112049:pid-multiplicity]: [10:11:38][STATE] BINDING ---> BOUND
+[112049:pid-multiplicity]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112049:pid-multiplicity]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112049:pid-multiplicity]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112049:pid-multiplicity]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112047:track-propagation]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112047:track-propagation]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112049:pid-multiplicity]: [10:11:38][STATE] READY ---> RUNNING
+[112049:pid-multiplicity]: [10:11:38][INFO] fair::mq::Device running...
+[112049:pid-multiplicity]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112061:cascade-link-builder]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112049:pid-multiplicity]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112061:cascade-link-builder]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112061:cascade-link-builder]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112059:cascade-initializer]: [INFO] Spawing new device cascade-initializer in process with pid 112059
+[112047:track-propagation]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112047:track-propagation]: [10:11:38][STATE] READY ---> RUNNING
+[112047:track-propagation]: [10:11:38][INFO] fair::mq::Device running...
+[112047:track-propagation]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112061:cascade-link-builder]: [10:11:38][STATE] BINDING ---> BOUND
+[112061:cascade-link-builder]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112047:track-propagation]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112061:cascade-link-builder]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112061:cascade-link-builder]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112061:cascade-link-builder]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112059:cascade-initializer]: [10:11:38][INFO] 
+[112059:cascade-initializer]:       ______      _    _______  _________ 
+[112059:cascade-initializer]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112059:cascade-initializer]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112059:cascade-initializer]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112059:cascade-initializer]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112059:cascade-initializer]: 
+[112061:cascade-link-builder]: [10:11:38][STATE] READY ---> RUNNING
+[112061:cascade-link-builder]: [10:11:38][INFO] fair::mq::Device running...
+[112061:cascade-link-builder]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112061:cascade-link-builder]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112059:cascade-initializer]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112064:internal-dpl-aod-writer]: [INFO] Spawing new device internal-dpl-aod-writer in process with pid 112064
+[112064:internal-dpl-aod-writer]: [10:11:38][INFO] 
+[112064:internal-dpl-aod-writer]:       ______      _    _______  _________ 
+[112064:internal-dpl-aod-writer]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112064:internal-dpl-aod-writer]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112064:internal-dpl-aod-writer]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112064:internal-dpl-aod-writer]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112064:internal-dpl-aod-writer]: 
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112059:cascade-initializer]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112059:cascade-initializer]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112059:cascade-initializer]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112059:cascade-initializer]: [10:11:38][STATE] BINDING ---> BOUND
+[112059:cascade-initializer]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112059:cascade-initializer]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112059:cascade-initializer]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112060:lf-strangeness-filter]: [INFO] Spawing new device lf-strangeness-filter in process with pid 112060
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112059:cascade-initializer]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112059:cascade-initializer]: [10:11:38][STATE] READY ---> RUNNING
+[112059:cascade-initializer]: [10:11:38][INFO] fair::mq::Device running...
+[112059:cascade-initializer]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112059:cascade-initializer]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112060:lf-strangeness-filter]: [10:11:38][INFO] 
+[112060:lf-strangeness-filter]:       ______      _    _______  _________ 
+[112060:lf-strangeness-filter]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112060:lf-strangeness-filter]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112060:lf-strangeness-filter]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112060:lf-strangeness-filter]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112060:lf-strangeness-filter]: 
+[112060:lf-strangeness-filter]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112066:internal-dpl-injected-dummy-sink]: [INFO] Spawing new device internal-dpl-injected-dummy-sink in process with pid 112066
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] BINDING ---> BOUND
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][INFO] 
+[112066:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[112066:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112066:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112066:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112066:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112066:internal-dpl-injected-dummy-sink]: 
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112056:lambdakzero-initializer]: [INFO] Spawing new device lambdakzero-initializer in process with pid 112056
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112064:internal-dpl-aod-writer]: [10:11:38][STATE] READY ---> RUNNING
+[112064:internal-dpl-aod-writer]: [10:11:38][INFO] fair::mq::Device running...
+[112064:internal-dpl-aod-writer]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112064:internal-dpl-aod-writer]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112056:lambdakzero-initializer]: [10:11:38][INFO] 
+[112056:lambdakzero-initializer]:       ______      _    _______  _________ 
+[112056:lambdakzero-initializer]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112056:lambdakzero-initializer]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112056:lambdakzero-initializer]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112056:lambdakzero-initializer]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112056:lambdakzero-initializer]: 
+[112056:lambdakzero-initializer]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112057:lambdakzero-v0-data-link-builder]: [INFO] Spawing new device lambdakzero-v0-data-link-builder in process with pid 112057
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][INFO] 
+[112057:lambdakzero-v0-data-link-builder]:       ______      _    _______  _________ 
+[112057:lambdakzero-v0-data-link-builder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112057:lambdakzero-v0-data-link-builder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112057:lambdakzero-v0-data-link-builder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112057:lambdakzero-v0-data-link-builder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112057:lambdakzero-v0-data-link-builder]: 
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112058:cascade-builder]: [INFO] Spawing new device cascade-builder in process with pid 112058
+[112060:lf-strangeness-filter]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112062:kfcascade-link-builder]: [INFO] Spawing new device kfcascade-link-builder in process with pid 112062
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112062:kfcascade-link-builder]: [10:11:38][INFO] 
+[112062:kfcascade-link-builder]:       ______      _    _______  _________ 
+[112062:kfcascade-link-builder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112062:kfcascade-link-builder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112062:kfcascade-link-builder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112062:kfcascade-link-builder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112062:kfcascade-link-builder]: 
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] BINDING ---> BOUND
+[112065:internal-dpl-aod-global-analysis-file-sink]: [INFO] Spawing new device internal-dpl-aod-global-analysis-file-sink in process with pid 112065
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112062:kfcascade-link-builder]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112056:lambdakzero-initializer]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][INFO] 
+[112065:internal-dpl-aod-global-analysis-file-sink]:       ______      _    _______  _________ 
+[112065:internal-dpl-aod-global-analysis-file-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112065:internal-dpl-aod-global-analysis-file-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112065:internal-dpl-aod-global-analysis-file-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112065:internal-dpl-aod-global-analysis-file-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112065:internal-dpl-aod-global-analysis-file-sink]: 
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-JT7SSp-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-JT7SSp-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set track type: 1
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set pt range: 5 - 1e+10
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set eta range: -1.1 - 1.1
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set require ITS refit: 1
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set require TPC refit: 1
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set require golden chi2: 0
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set min N crossed rows TPC: 70
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set min N crossed rows over findable clusters TPC: 0.8
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set max chi2 per cluster TPC: 4
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set require hits in ITS layers: 1
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set max chi2 per cluster ITS: 36
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set max DCA xy: 1
+[112060:lf-strangeness-filter]: [10:11:38][INFO] Track selection, set max DCA z: 2
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][STATE] READY ---> RUNNING
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][INFO] fair::mq::Device running...
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112066:internal-dpl-injected-dummy-sink]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112056:lambdakzero-initializer]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112056:lambdakzero-initializer]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112063:tracascade-link-builder]: [INFO] Spawing new device tracascade-link-builder in process with pid 112063
+[112056:lambdakzero-initializer]: [10:11:38][STATE] BINDING ---> BOUND
+[112056:lambdakzero-initializer]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112056:lambdakzero-initializer]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112058:cascade-builder]: [10:11:38][INFO] 
+[112058:cascade-builder]:       ______      _    _______  _________ 
+[112058:cascade-builder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112058:cascade-builder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112058:cascade-builder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112058:cascade-builder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112058:cascade-builder]: 
+[112056:lambdakzero-initializer]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112058:cascade-builder]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112056:lambdakzero-initializer]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112056:lambdakzero-initializer]: [10:11:38][STATE] READY ---> RUNNING
+[112056:lambdakzero-initializer]: [10:11:38][INFO] fair::mq::Device running...
+[112056:lambdakzero-initializer]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112056:lambdakzero-initializer]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112063:tracascade-link-builder]: [10:11:38][INFO] 
+[112063:tracascade-link-builder]:       ______      _    _______  _________ 
+[112063:tracascade-link-builder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.9.1
+[112063:tracascade-link-builder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[112063:tracascade-link-builder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[112063:tracascade-link-builder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[112063:tracascade-link-builder]: 
+[112063:tracascade-link-builder]: [10:11:38][STATE] Starting FairMQ state machine --> IDLE
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] BINDING ---> BOUND
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][STATE] READY ---> RUNNING
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][INFO] fair::mq::Device running...
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112057:lambdakzero-v0-data-link-builder]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112062:kfcascade-link-builder]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112062:kfcascade-link-builder]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112062:kfcascade-link-builder]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112062:kfcascade-link-builder]: [10:11:38][STATE] BINDING ---> BOUND
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112062:kfcascade-link-builder]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] BINDING ---> BOUND
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112062:kfcascade-link-builder]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112062:kfcascade-link-builder]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112058:cascade-builder]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112062:kfcascade-link-builder]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112062:kfcascade-link-builder]: [10:11:38][STATE] READY ---> RUNNING
+[112062:kfcascade-link-builder]: [10:11:38][INFO] fair::mq::Device running...
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112062:kfcascade-link-builder]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112062:kfcascade-link-builder]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112063:tracascade-link-builder]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][STATE] READY ---> RUNNING
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][INFO] fair::mq::Device running...
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112063:tracascade-link-builder]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112063:tracascade-link-builder]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112058:cascade-builder]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-TS1pjq-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112063:tracascade-link-builder]: [10:11:38][STATE] BINDING ---> BOUND
+[112063:tracascade-link-builder]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112063:tracascade-link-builder]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112063:tracascade-link-builder]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112063:tracascade-link-builder]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112063:tracascade-link-builder]: [10:11:38][STATE] READY ---> RUNNING
+[112063:tracascade-link-builder]: [10:11:38][INFO] fair::mq::Device running...
+[112063:tracascade-link-builder]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112063:tracascade-link-builder]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112039:internal-dpl-aod-reader]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112039:internal-dpl-aod-reader]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112039:internal-dpl-aod-reader]: [10:11:38][STATE] BINDING ---> BOUND
+[112039:internal-dpl-aod-reader]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112039:internal-dpl-aod-reader]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112039:internal-dpl-aod-reader]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112039:internal-dpl-aod-reader]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112039:internal-dpl-aod-reader]: [10:11:38][STATE] READY ---> RUNNING
+[112039:internal-dpl-aod-reader]: [10:11:38][INFO] fair::mq::Device running...
+[112039:internal-dpl-aod-reader]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[INFO] Controller for internal-dpl-aod-reader now available.
+[112039:internal-dpl-aod-reader]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112053:cascade-preselector]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112053:cascade-preselector]:    Missing FileEntry for KFParticle/KFParticleBase.h
+[112053:cascade-preselector]:    requested to autoload type KFParticleBase
+[112053:cascade-preselector]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112053:cascade-preselector]:    Missing FileEntry for KFParticle/KFParticle.h
+[112053:cascade-preselector]:    requested to autoload type KFParticle
+[112053:cascade-preselector]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112053:cascade-preselector]:    Missing FileEntry for KFParticle/KFVertex.h
+[112053:cascade-preselector]:    requested to autoload type KFVertex
+[112053:cascade-preselector]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112053:cascade-preselector]:    Missing FileEntry for KFParticlePerformance/KFPartEfficiencies.h
+[112053:cascade-preselector]:    requested to autoload type KFPartEfficiencies
+[112053:cascade-preselector]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112053:cascade-preselector]:    Missing FileEntry for KFParticlePerformance/KFMCParticle.h
+[112053:cascade-preselector]:    requested to autoload type KFMCParticle
+[112053:cascade-preselector]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112053:cascade-preselector]:    Missing FileEntry for KFParticleTest/KFParticleTest.h
+[112053:cascade-preselector]:    requested to autoload type KFParticleTest
+[112050:multiplicity-table]: Warning in <TDatabasePDG::AddParticle>: Particle with PDGcode=1000030040 already defined
+[112050:multiplicity-table]: [10:11:38][STATE] IDLE ---> INITIALIZING DEVICE
+[112050:multiplicity-table]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-nYqpL1-111914, Host: http://alice-ccdb.cern.ch/, Curl timeouts: upload:20 download:15
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: FV0Mults
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-enabling table: FT0Mults
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: FDDMults
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: ZDCMults
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: TrackletMults
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: TPCMults
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: PVMults
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: MultsExtra
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: MultSelections
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-enabling table: FV0MultZeqs
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-enabling table: FT0MultZeqs
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-enabling table: FDDMultZeqs
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-enabling table: PVMultZeqs
+[112050:multiplicity-table]: [10:11:38][INFO] Auto-disabling table: MultMCExtras
+[112050:multiplicity-table]: [10:11:38][INFO] Cannot have the FV0MultZeqs table enabled and not the one on FV0Mults. Enabling it.
+[112050:multiplicity-table]: [10:11:38][INFO] Cannot have the FDDMultZeqs table enabled and not the one on FDDMults. Enabling it.
+[112050:multiplicity-table]: [10:11:38][INFO] Cannot have the PVMultZeqs table enabled and not the one on PVMults. Enabling it.
+[112050:multiplicity-table]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-nYqpL1-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112050:multiplicity-table]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112050:multiplicity-table]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112053:cascade-preselector]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112053:cascade-preselector]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112050:multiplicity-table]: [10:11:38][STATE] BINDING ---> BOUND
+[112050:multiplicity-table]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112050:multiplicity-table]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112050:multiplicity-table]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112053:cascade-preselector]: [10:11:38][STATE] BINDING ---> BOUND
+[112053:cascade-preselector]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112053:cascade-preselector]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112053:cascade-preselector]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112050:multiplicity-table]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112050:multiplicity-table]: [10:11:38][STATE] READY ---> RUNNING
+[112050:multiplicity-table]: [10:11:38][INFO] fair::mq::Device running...
+[112050:multiplicity-table]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112050:multiplicity-table]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112053:cascade-preselector]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112053:cascade-preselector]: [10:11:38][STATE] READY ---> RUNNING
+[112053:cascade-preselector]: [10:11:38][INFO] fair::mq::Device running...
+[112053:cascade-preselector]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112053:cascade-preselector]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112054:lambdakzero-preselector]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112054:lambdakzero-preselector]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112054:lambdakzero-preselector]: [10:11:38][STATE] BINDING ---> BOUND
+[112054:lambdakzero-preselector]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112054:lambdakzero-preselector]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112054:lambdakzero-preselector]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112054:lambdakzero-preselector]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112054:lambdakzero-preselector]: [10:11:38][STATE] READY ---> RUNNING
+[112054:lambdakzero-preselector]: [10:11:38][INFO] fair::mq::Device running...
+[112054:lambdakzero-preselector]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112054:lambdakzero-preselector]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112058:cascade-builder]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112058:cascade-builder]:    Missing FileEntry for KFParticle/KFParticleBase.h
+[112058:cascade-builder]:    requested to autoload type KFParticleBase
+[112058:cascade-builder]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112058:cascade-builder]:    Missing FileEntry for KFParticle/KFParticle.h
+[112058:cascade-builder]:    requested to autoload type KFParticle
+[112058:cascade-builder]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112058:cascade-builder]:    Missing FileEntry for KFParticle/KFVertex.h
+[112058:cascade-builder]:    requested to autoload type KFVertex
+[112058:cascade-builder]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112058:cascade-builder]:    Missing FileEntry for KFParticlePerformance/KFPartEfficiencies.h
+[112058:cascade-builder]:    requested to autoload type KFPartEfficiencies
+[112058:cascade-builder]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112058:cascade-builder]:    Missing FileEntry for KFParticlePerformance/KFMCParticle.h
+[112058:cascade-builder]:    requested to autoload type KFMCParticle
+[112058:cascade-builder]: Error in cling::AutoLoadingVisitor::InsertIntoAutoLoadingState:
+[112058:cascade-builder]:    Missing FileEntry for KFParticleTest/KFParticleTest.h
+[112058:cascade-builder]:    requested to autoload type KFParticleTest
+[112058:cascade-builder]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-TS1pjq-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112058:cascade-builder]: [10:11:38][INFO] LUT correction requested, will load LUT when initializing with timestamp...
+[112058:cascade-builder]: [10:11:38][INFO] Strangeness builder configuration:
+[112058:cascade-builder]: [10:11:38][INFO] Run 3 processing enabled. Will subscribe to TracksIU table.
+[112058:cascade-builder]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112058:cascade-builder]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112058:cascade-builder]: [10:11:38][STATE] BINDING ---> BOUND
+[112058:cascade-builder]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112058:cascade-builder]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112058:cascade-builder]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112058:cascade-builder]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112058:cascade-builder]: [10:11:38][STATE] READY ---> RUNNING
+[112058:cascade-builder]: [10:11:38][INFO] fair::mq::Device running...
+[112058:cascade-builder]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112058:cascade-builder]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112055:lambdakzero-builder]: [10:11:38][INFO] Init CcdApi with UserAgentID: ctpo2a9.cern.ch-1743066698-BdHh5D-111914, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:15
+[112055:lambdakzero-builder]: [10:11:38][INFO] LUT correction requested, will load LUT when initializing with timestamp...
+[112055:lambdakzero-builder]: [10:11:38][INFO]  -+*> process call configuration:
+[112055:lambdakzero-builder]: [10:11:38][INFO]  ---+*> Run 3 processing enabled. Will subscribe to TracksIU table.
+[112055:lambdakzero-builder]: [10:11:38][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112055:lambdakzero-builder]: [10:11:38][STATE] INITIALIZED ---> BINDING
+[112055:lambdakzero-builder]: [10:11:38][STATE] BINDING ---> BOUND
+[112055:lambdakzero-builder]: [10:11:38][STATE] BOUND ---> CONNECTING
+[112055:lambdakzero-builder]: [10:11:38][STATE] CONNECTING ---> DEVICE READY
+[112055:lambdakzero-builder]: [10:11:38][STATE] DEVICE READY ---> INITIALIZING TASK
+[112055:lambdakzero-builder]: [10:11:38][STATE] INITIALIZING TASK ---> READY
+[112055:lambdakzero-builder]: [10:11:38][STATE] READY ---> RUNNING
+[112055:lambdakzero-builder]: [10:11:38][INFO] fair::mq::Device running...
+[112055:lambdakzero-builder]: [10:11:38][INFO] LHCPeriod is not available, using current month MAR
+[112055:lambdakzero-builder]: [10:11:38][INFO] Correctly handshaken websocket connection.
+[112060:lf-strangeness-filter]: [10:11:39][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Param/MatLUT/1546300800000/3f0d0f81-99d9-11ee-b9a2-200114580202 for 1743066698146 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-JT7SSp-111914), 
+[112060:lf-strangeness-filter]: [10:11:39][INFO] Initializing voxel layer lookup
+[112060:lf-strangeness-filter]: [10:11:39][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[112060:lf-strangeness-filter]: [10:11:39][STATE] INITIALIZED ---> BINDING
+[112060:lf-strangeness-filter]: [10:11:39][STATE] BINDING ---> BOUND
+[112060:lf-strangeness-filter]: [10:11:39][STATE] BOUND ---> CONNECTING
+[112060:lf-strangeness-filter]: [10:11:39][STATE] CONNECTING ---> DEVICE READY
+[112060:lf-strangeness-filter]: [10:11:39][STATE] DEVICE READY ---> INITIALIZING TASK
+[112060:lf-strangeness-filter]: [10:11:39][STATE] INITIALIZING TASK ---> READY
+[112060:lf-strangeness-filter]: [10:11:39][STATE] READY ---> RUNNING
+[112060:lf-strangeness-filter]: [10:11:39][INFO] fair::mq::Device running...
+[112060:lf-strangeness-filter]: [10:11:39][INFO] LHCPeriod is not available, using current month MAR
+[112060:lf-strangeness-filter]: [10:11:39][INFO] Correctly handshaken websocket connection.
+[112040:internal-dpl-aod-spawner]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112040:internal-dpl-aod-spawner]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112040:internal-dpl-aod-spawner]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112046:tracks-extra-spawner]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112046:tracks-extra-spawner]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112046:tracks-extra-spawner]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112042:timestamp-task]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112042:timestamp-task]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.54
+[112042:timestamp-task]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.54
+[112042:timestamp-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/10/28490/cf7ea906-3682-11ef-a5d1-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[112042:timestamp-task]: [10:11:41][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1719712092272/cf7ea906-3682-11ef-a5d1-0aa140641b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-NQkghf-111914), 
+[112042:timestamp-task]: [10:11:41][INFO] Add new run number 553555 with orbit-reset timestamp 1719712092271103, SOR: 1719714657556, EOR: 1719767498674 to cache
+[112044:bc-selection-task]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112044:bc-selection-task]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.62
+[112044:bc-selection-task]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.62
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/10/28490/cf7ea906-3682-11ef-a5d1-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:44][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1719712092272/cf7ea906-3682-11ef-a5d1-0aa140641b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Config/GRPECS/13/32332/f571fb30-3703-11ef-a5d6-0aa145271b9a in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:44][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1719714601466/f571fb30-3703-11ef-a5d6-0aa145271b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/FirstRunOrbit/07/55986/c886ae60-3688-11ef-a5d1-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:44][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/FirstRunOrbit/1719714657592/c886ae60-3688-11ef-a5d1-0aa140641b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/EventSelection/EventSelectionParams/05/07443/5f880452-f6ff-11ee-82dc-90ce809b250c in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:44][INFO] ccdb reads http://alice-ccdb.cern.ch/EventSelection/EventSelectionParams/1543767116001/5f880452-f6ff-11ee-82dc-90ce809b250c for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/ITS/Config/AlpideParam/15/42630/72f98d32-2f45-11ef-956d-0aa202c71b9a in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:44][INFO] ccdb reads http://alice-ccdb.cern.ch/ITS/Config/AlpideParam/1718916079995/72f98d32-2f45-11ef-956d-0aa202c71b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/EventSelection/TriggerAliases/00/43659/5c148b57-4793-11ef-aa00-90ce809b24ee in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:44][INFO] ccdb reads http://alice-ccdb.cern.ch/EventSelection/TriggerAliases/1719714656556/5c148b57-4793-11ef-aa00-90ce809b24ee for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Config/GRPLHCIF/11/49806/34ca3283-3687-11ef-a5d1-0aa202c71b9a in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:44][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPLHCIF/1719713980588/34ca3283-3687-11ef-a5d1-0aa202c71b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/ITS/Calib/TimeDeadMap/11/51107/dd2c2bff-3703-11ef-a5d6-0aa200321b9a in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:44][INFO] ccdb reads http://alice-ccdb.cern.ch/ITS/Calib/TimeDeadMap/1719713548505/dd2c2bff-3703-11ef-a5d6-0aa200321b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112044:bc-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/Users/j/jian/RCT/00/22537/8e61d3a2-f9c3-11ef-b238-200114580202 in SE <ALICE::CERN::OCDB>
+[112044:bc-selection-task]: [10:11:46][INFO] ccdb reads http://alice-ccdb.cern.ch/Users/j/jian/RCT/1719714647556/8e61d3a2-f9c3-11ef-b238-200114580202 for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-20fKIx-111914), 
+[112047:track-propagation]: [10:11:46][INFO] Loading material look-up table for timestamp: 1719756648288
+[112047:track-propagation]: [10:11:47][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Param/MatLUT/1546300800000/3f0d0f81-99d9-11ee-b9a2-200114580202 for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-1X7Bd9-111914), 
+[112047:track-propagation]: [10:11:47][INFO] Initializing voxel layer lookup
+[112047:track-propagation]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112047:track-propagation]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.53
+[112047:track-propagation]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.53
+[112047:track-propagation]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Config/GRPMagField/09/53964/47ebfb5b-355c-11ef-a5ce-0aa202c71b9a in SE <ALICE::CERN::OCDB>
+[112047:track-propagation]: [10:11:48][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPMagField/1719585593166/47ebfb5b-355c-11ef-a5ce-0aa202c71b9a for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-1X7Bd9-111914), 
+[112047:track-propagation]: [10:11:48][INFO] Setting magnetic field to current 29999.9 A for run 553555 from its GRPMagField CCDB object
+[112047:track-propagation]: [10:11:48][INFO] MagneticField::Print: MagneticFieldMap:
+[112047:track-propagation]: [10:11:48][INFO] MagneticField::Print: Solenoid (0.999996*)5 kG, Dipole ON (0.999994) 
+[112047:track-propagation]: [10:11:48][INFO] MagneticField::Print: Machine B fields for p-p  beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+[112047:track-propagation]: [10:11:48][INFO] MagneticField::Print: Uses Sol30_Dip6_Hole  of /home/rl/alice/sw/slc9_x86-64/O2/dev-local1/share/Common/maps/mfchebKGI_sym.root
+[112047:track-propagation]: Info in <TGeoGlobalMagField::SetField>: Global magnetic field set to <MagneticFieldMap>
+[112047:track-propagation]: Info in <TGeoGlobalMagField::Lock>: Global magnetic field <MagneticFieldMap> is now locked
+[112047:track-propagation]: [10:11:48][INFO] Loaded 440 params from $(O2_ROOT)/share/Common/maps/sol5k.txt
+[112047:track-propagation]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Calib/MeanVertex/10/27205/8c1fe625-36eb-11ef-a5d4-0aa200321b9a in SE <ALICE::CERN::OCDB>
+[112047:track-propagation]: [10:11:48][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Calib/MeanVertex/1719756591507/8c1fe625-36eb-11ef-a5d4-0aa200321b9a for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-1X7Bd9-111914), 
+[112048:event-selection-task]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112048:event-selection-task]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112048:event-selection-task]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112048:event-selection-task]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112048:event-selection-task]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.49
+[112048:event-selection-task]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.49
+[112048:event-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/10/28490/cf7ea906-3682-11ef-a5d1-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[112048:event-selection-task]: [10:11:52][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1719712092272/cf7ea906-3682-11ef-a5d1-0aa140641b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-1E39IS-111914), 
+[112048:event-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Config/GRPECS/13/32332/f571fb30-3703-11ef-a5d6-0aa145271b9a in SE <ALICE::CERN::OCDB>
+[112048:event-selection-task]: [10:11:52][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPECS/1719714601466/f571fb30-3703-11ef-a5d6-0aa145271b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-1E39IS-111914), 
+[112048:event-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/FirstRunOrbit/07/55986/c886ae60-3688-11ef-a5d1-0aa140641b9a in SE <ALICE::CERN::OCDB>
+[112048:event-selection-task]: [10:11:52][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/FirstRunOrbit/1719714657592/c886ae60-3688-11ef-a5d1-0aa140641b9a for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-1E39IS-111914), 
+[112048:event-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Config/GRPLHCIF/11/49806/34ca3283-3687-11ef-a5d1-0aa202c71b9a in SE <ALICE::CERN::OCDB>
+[112048:event-selection-task]: [10:11:52][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPLHCIF/1719713980588/34ca3283-3687-11ef-a5d1-0aa202c71b9a for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-1E39IS-111914), 
+[112048:event-selection-task]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/ITS/Config/AlpideParam/15/42630/72f98d32-2f45-11ef-956d-0aa202c71b9a in SE <ALICE::CERN::OCDB>
+[112048:event-selection-task]: [10:11:52][INFO] ccdb reads http://alice-ccdb.cern.ch/ITS/Config/AlpideParam/1718916079995/72f98d32-2f45-11ef-956d-0aa202c71b9a for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-1E39IS-111914), 
+[112049:pid-multiplicity]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112049:pid-multiplicity]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112049:pid-multiplicity]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112050:multiplicity-table]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112050:multiplicity-table]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112050:multiplicity-table]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112050:multiplicity-table]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112050:multiplicity-table]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.17
+[112050:multiplicity-table]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.17
+[112050:multiplicity-table]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/Centrality/Calibration/07/46236/3aaafa22-dcbf-11ef-b238-c0871358250c in SE <ALICE::CERN::OCDB>
+[112050:multiplicity-table]: [10:11:56][INFO] ccdb reads http://alice-ccdb.cern.ch/Centrality/Calibration/1719714599000/3aaafa22-dcbf-11ef-b238-c0871358250c for 1719741078115 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-nYqpL1-111914), 
+[112051:tpc-pid]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112051:tpc-pid]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112051:tpc-pid]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112051:tpc-pid]: [10:11:56][INFO] Retrieving latest TPC response object for timestamp 1719756648288:
+[112051:tpc-pid]: [10:11:56][ERROR] Requested resource does not exist: http://alice-ccdb.cern.ch/Analysis/PID/TPC/Response/1719756648288/RecoPassName=apass1_sampled/
+[112051:tpc-pid]: [10:11:56][WARN] !! Could not find a valid TPC response object for specific pass name apass1_sampled! Falling back to latest uploaded object.
+[112051:tpc-pid]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112051:tpc-pid]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.34
+[112051:tpc-pid]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.34
+[112051:tpc-pid]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/Analysis/PID/TPC/Response/00/00530/88abdf1b-4bfd-11ef-aa00-72d6cfc024ee in SE <ALICE::CERN::OCDB>
+[112051:tpc-pid]: [10:11:59][INFO] ccdb reads http://alice-ccdb.cern.ch/Analysis/PID/TPC/Response/1719503271481/88abdf1b-4bfd-11ef-aa00-72d6cfc024ee for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-XNx19H-111914), 
+[112051:tpc-pid]: [10:11:59][INFO] Successfully retrieved TPC PID object from CCDB for timestamp 1719756648288, period LHC24al23, recoPass apass1
+[112051:tpc-pid]: [10:11:59][INFO] ==== TPC PID response parameters: ====
+[112051:tpc-pid]: [10:11:59][INFO] BB param [0] = 0.298059
+[112051:tpc-pid]: [10:11:59][INFO] BB param [1] = 3.11779
+[112051:tpc-pid]: [10:11:59][INFO] BB param [2] = 0.0308607
+[112051:tpc-pid]: [10:11:59][INFO] BB param [3] = 2.27736
+[112051:tpc-pid]: [10:11:59][INFO] BB param [4] = 0.711076
+[112051:tpc-pid]: [10:11:59][INFO] use default resolution parametrization = true
+[112051:tpc-pid]: [10:11:59][INFO] Default Resolution parametrization: 
+[112051:tpc-pid]: [10:11:59][INFO] Resolution param [0] = 0.07
+[112051:tpc-pid]: [10:11:59][INFO] Resolution param [1] = 0
+[112051:tpc-pid]: [10:11:59][INFO] mMIP = 50
+[112051:tpc-pid]: [10:11:59][INFO] mChargeFactor = 2.3
+[112051:tpc-pid]: [10:11:59][INFO] mMultNormalization = 11000
+[112051:tpc-pid]: [10:11:59][INFO] nClNorm = 152
+[112051:tpc-pid]: [10:11:59][INFO] Fetching network for timestamp: 1719756648288
+[112051:tpc-pid]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112051:tpc-pid]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.62
+[112051:tpc-pid]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.62
+[112051:tpc-pid]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/Analysis/PID/TPC/ML/07/52435/64eb6440-4bfd-11ef-afef-72d6cfc0250c in SE <ALICE::CERN::OCDB>
+[112051:tpc-pid]: [10:11:59][INFO] ccdb reads http://alice-ccdb.cern.ch/Analysis/PID/TPC/ML/1719503271481/64eb6440-4bfd-11ef-afef-72d6cfc0250c for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066697-9FzhVf-111914), 
+[112051:tpc-pid]: [10:12:00][INFO] --- ONNX-ML model ---
+[112051:tpc-pid]: [10:12:00][INFO] Hyperloop test/Grid job detected! Number of cores = . Setting threads anyway to 1.
+[112051:tpc-pid]: [10:12:00][INFO] Input Nodes:
+[112051:tpc-pid]: [10:12:00][INFO] 	input : -1x6
+[112051:tpc-pid]: [10:12:00][INFO] Output Nodes:
+[112051:tpc-pid]: [10:12:00][INFO] 	output : -1x2
+[112051:tpc-pid]: [10:12:00][INFO] Model validity - From: 1719503271481, Until: 1720312138767
+[112051:tpc-pid]: [10:12:00][INFO] --- Model initialized! ---
+[112051:tpc-pid]: [10:12:00][INFO] Retrieved NN corrections for production tag LHC24al23, pass number apass1, NN-Version number
+[112055:lambdakzero-builder]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112055:lambdakzero-builder]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112055:lambdakzero-builder]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112055:lambdakzero-builder]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112055:lambdakzero-builder]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.46
+[112055:lambdakzero-builder]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.46
+[112055:lambdakzero-builder]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Config/GRPMagField/09/53964/47ebfb5b-355c-11ef-a5ce-0aa202c71b9a in SE <ALICE::CERN::OCDB>
+[112055:lambdakzero-builder]: [10:12:03][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPMagField/1719585593166/47ebfb5b-355c-11ef-a5ce-0aa202c71b9a for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-BdHh5D-111914), 
+[112055:lambdakzero-builder]: [10:12:03][INFO] MagneticField::Print: MagneticFieldMap:
+[112055:lambdakzero-builder]: [10:12:03][INFO] MagneticField::Print: Solenoid (0.999996*)5 kG, Dipole ON (0.999994) 
+[112055:lambdakzero-builder]: [10:12:03][INFO] MagneticField::Print: Machine B fields for p-p  beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+[112055:lambdakzero-builder]: [10:12:03][INFO] MagneticField::Print: Uses Sol30_Dip6_Hole  of /home/rl/alice/sw/slc9_x86-64/O2/dev-local1/share/Common/maps/mfchebKGI_sym.root
+[112055:lambdakzero-builder]: Info in <TGeoGlobalMagField::SetField>: Global magnetic field set to <MagneticFieldMap>
+[112055:lambdakzero-builder]: Info in <TGeoGlobalMagField::Lock>: Global magnetic field <MagneticFieldMap> is now locked
+[112055:lambdakzero-builder]: [10:12:03][INFO] Loaded 440 params from $(O2_ROOT)/share/Common/maps/sol5k.txt
+[112055:lambdakzero-builder]: [10:12:03][INFO] Retrieved GRP for timestamp 1719756648288 with magnetic field of 5.00673 kG
+[112055:lambdakzero-builder]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Calib/MeanVertex/10/27205/8c1fe625-36eb-11ef-a5d4-0aa200321b9a in SE <ALICE::CERN::OCDB>
+[112055:lambdakzero-builder]: [10:12:03][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Calib/MeanVertex/1719756591507/8c1fe625-36eb-11ef-a5d4-0aa200321b9a for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-BdHh5D-111914), 
+[112055:lambdakzero-builder]: [10:12:03][INFO] Loading material look-up table for timestamp: 1719756648288
+[112055:lambdakzero-builder]: [10:12:03][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Param/MatLUT/1546300800000/3f0d0f81-99d9-11ee-b9a2-200114580202 for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-BdHh5D-111914), 
+[112055:lambdakzero-builder]: [10:12:03][INFO] Initializing voxel layer lookup
+[112056:lambdakzero-initializer]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112056:lambdakzero-initializer]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112056:lambdakzero-initializer]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112058:cascade-builder]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112058:cascade-builder]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112058:cascade-builder]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112058:cascade-builder]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112058:cascade-builder]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.76
+[112058:cascade-builder]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.76
+[112058:cascade-builder]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Config/GRPMagField/09/53964/47ebfb5b-355c-11ef-a5ce-0aa202c71b9a in SE <ALICE::CERN::OCDB>
+[112058:cascade-builder]: [10:12:07][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPMagField/1719585593166/47ebfb5b-355c-11ef-a5ce-0aa202c71b9a for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-TS1pjq-111914), 
+[112058:cascade-builder]: [10:12:07][INFO] MagneticField::Print: MagneticFieldMap:
+[112058:cascade-builder]: [10:12:07][INFO] MagneticField::Print: Solenoid (0.999996*)5 kG, Dipole ON (0.999994) 
+[112058:cascade-builder]: [10:12:07][INFO] MagneticField::Print: Machine B fields for p-p  beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+[112058:cascade-builder]: [10:12:07][INFO] MagneticField::Print: Uses Sol30_Dip6_Hole  of /home/rl/alice/sw/slc9_x86-64/O2/dev-local1/share/Common/maps/mfchebKGI_sym.root
+[112058:cascade-builder]: Info in <TGeoGlobalMagField::SetField>: Global magnetic field set to <MagneticFieldMap>
+[112058:cascade-builder]: Info in <TGeoGlobalMagField::Lock>: Global magnetic field <MagneticFieldMap> is now locked
+[112058:cascade-builder]: [10:12:07][INFO] Loaded 440 params from $(O2_ROOT)/share/Common/maps/sol5k.txt
+[112058:cascade-builder]: [10:12:07][INFO] Retrieved GRP for timestamp 1719756648288 with magnetic field of 5.00673 kG
+[112058:cascade-builder]: [10:12:07][INFO] Loading material look-up table for timestamp: 1719756648288
+[112058:cascade-builder]: [10:12:07][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Param/MatLUT/1546300800000/3f0d0f81-99d9-11ee-b9a2-200114580202 for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-TS1pjq-111914), 
+[112058:cascade-builder]: [10:12:07][INFO] Initializing voxel layer lookup
+[112059:cascade-initializer]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112059:cascade-initializer]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112059:cascade-initializer]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112060:lf-strangeness-filter]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/cache.cc:61: Creating gandiva cache with capacity of 5000
+[112060:lf-strangeness-filter]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:276: Detected CPU Name : cascadelake
+[112060:lf-strangeness-filter]: /local/workspace/DailyBuilds/DailyO2Physics-slc9/daily-tags.l2Hn9jcT5q/BUILD/b1f36d9e624a74ca6b299030fd548428301e0ca1/arrow/src_tmp/cpp/src/gandiva/engine.cc:277: Detected CPU Features: [ +prfchw -cldemote +avx +aes +sahf +pclmul -xop +crc32 -xsaves -avx512fp16 -usermsr -sm4 +sse4.1 -avx512ifma +xsave +sse4.2 -avx512pf -tsxldtrk -ptwrite -widekl -sm3 +invpcid +64bit +xsavec -avx10.1-512 -avx512vpopcntdq +cmov -avx512vp2intersect +avx512cd +movbe -avxvnniint8 -avx512er -amx-int8 -kl -avx10.1-256 +evex512 -avxvnni -rtm +adx +avx2 -hreset -movdiri -serialize -sha512 -vpclmulqdq +avx512vl -uintr +clflushopt -raoint -cmpccxadd +bmi -amx-tile +sse -gfni -avxvnniint16 -amx-fp16 +xsaveopt +rdrnd +avx512f -amx-bf16 -avx512bf16 +avx512vnni +cx8 +avx512bw +sse3 +pku +fsgsbase -clzero -mwaitx -lwp +lzcnt -sha -movdir64b -wbnoinvd -enqcmd -prefetchwt1 -avxneconvert -tbm -pconfig -amx-complex +ssse3 +cx16 +bmi2 +fma +popcnt -avxifma +f16c -avx512bitalg -rdpru +clwb +mmx +sse2 +rdseed -avx512vbmi2 -prefetchi -rdpid -fma4 -avx512vbmi -shstk -vaes -waitpkg -sgx +fxsr +avx512dq -sse4a]
+[112060:lf-strangeness-filter]: [10:12:07][ERROR] Requested resource does not exist: http://alice-ccdb.cern.ch/GLO/GRP/GRP/1719756648288/
+[112060:lf-strangeness-filter]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[112060:lf-strangeness-filter]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.49
+[112060:lf-strangeness-filter]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.49
+[112060:lf-strangeness-filter]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/GLO/Config/GRPMagField/09/53964/47ebfb5b-355c-11ef-a5ce-0aa202c71b9a in SE <ALICE::CERN::OCDB>
+[112060:lf-strangeness-filter]: [10:12:09][INFO] ccdb reads http://alice-ccdb.cern.ch/GLO/Config/GRPMagField/1719585593166/47ebfb5b-355c-11ef-a5ce-0aa202c71b9a for 1719756648288 (retrieve, agent_id: ctpo2a9.cern.ch-1743066698-JT7SSp-111914), 
+[112060:lf-strangeness-filter]: [10:12:09][INFO] MagneticField::Print: MagneticFieldMap:
+[112060:lf-strangeness-filter]: [10:12:09][INFO] MagneticField::Print: Solenoid (0.999996*)5 kG, Dipole ON (0.999994) 
+[112060:lf-strangeness-filter]: [10:12:09][INFO] MagneticField::Print: Machine B fields for p-p  beam (7000 GeV): QGrad: 22.0002 Dipole: 37.8781
+[112060:lf-strangeness-filter]: [10:12:09][INFO] MagneticField::Print: Uses Sol30_Dip6_Hole  of /home/rl/alice/sw/slc9_x86-64/O2/dev-local1/share/Common/maps/mfchebKGI_sym.root
+[112060:lf-strangeness-filter]: Info in <TGeoGlobalMagField::SetField>: Global magnetic field set to <MagneticFieldMap>
+[112060:lf-strangeness-filter]: Info in <TGeoGlobalMagField::Lock>: Global magnetic field <MagneticFieldMap> is now locked
+[112064:internal-dpl-aod-writer]: [10:12:10][INFO] No AODs to be saved.
+[112039:internal-dpl-aod-reader]: [10:17:48][INFO] No input files left to read for reader 0!
+[112039:internal-dpl-aod-reader]: [10:17:48][INFO] Read info: lfn=/home/rl/TEST/strangeFilter/AO2D.root,size=3994479284,total_df=83,read_df=83,read_bytes=3320248322,read_calls=2349,io_time=3.6,wait_time=366.8,level=0
+[112039:internal-dpl-aod-reader]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-reader_to_internal-dpl-aod-spawner
+[112039:internal-dpl-aod-reader]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-reader_to_internal-dpl-aod-index-builder
+[112039:internal-dpl-aod-reader]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-reader_to_st-coll-ids
+[112039:internal-dpl-aod-reader]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-reader_to_track-propagation
+[112039:internal-dpl-aod-reader]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-reader_to_cascade-preselector
+[112039:internal-dpl-aod-reader]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-reader_to_internal-dpl-aod-writer
+[112041:internal-dpl-aod-index-builder]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-index-builder_to_timestamp-task
+[112041:internal-dpl-aod-index-builder]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-index-builder_to_bc-selection-task
+[112042:timestamp-task]: [10:17:48][INFO] CCDBManager summary: 2 queries, 563 bytes for 2 objects, 1 good fetches (and 0 failed ones) in 1,817 ms, instance: ctpo2a9.cern.ch-1743066698-NQkghf-111914
+[112042:timestamp-task]: [10:17:48][INFO] CCDB cache miss/hit/failures
+[112042:timestamp-task]: [10:17:48][INFO]   CTP/Calib/OrbitReset: 1/0/0 (563-563 bytes)
+[112042:timestamp-task]: [10:17:48][INFO]   RCT-Run-Info HeaderOnly: 1/0/0 (0-0 bytes)
+[112042:timestamp-task]: [10:17:48][INFO] Sending end-of-stream message to channel from_timestamp-task_to_bc-selection-task
+[112044:bc-selection-task]: [10:17:48][INFO] CCDBManager summary: 10 queries, 235,046 bytes for 10 objects, 9 good fetches (and 0 failed ones) in 2,431 ms, instance: ctpo2a9.cern.ch-1743066697-20fKIx-111914
+[112044:bc-selection-task]: [10:17:48][INFO] CCDB cache miss/hit/failures
+[112044:bc-selection-task]: [10:17:48][INFO]   ITS/Calib/TimeDeadMap: 1/0/0 (225250-225250 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   ITS/Config/AlpideParam: 1/0/0 (1413-1413 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   Users/j/jian/RCT: 1/0/0 (746-746 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   GLO/Config/GRPLHCIF: 1/0/0 (1860-1860 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   EventSelection/EventSelectionParams: 1/0/0 (1610-1610 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   CTP/Calib/FirstRunOrbit: 1/0/0 (579-579 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   GLO/Config/GRPECS: 1/0/0 (1885-1885 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   EventSelection/TriggerAliases: 1/0/0 (1140-1140 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   CTP/Calib/OrbitReset: 1/0/0 (563-563 bytes)
+[112044:bc-selection-task]: [10:17:48][INFO]   RCT-Run-Info HeaderOnly: 1/0/0 (0-0 bytes)
+[112040:internal-dpl-aod-spawner]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-spawner_to_st-coll-ids
+[112040:internal-dpl-aod-spawner]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-spawner_to_tracks-extra-v002-converter
+[112040:internal-dpl-aod-spawner]: [10:17:48][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-spawner_to_track-propagation
+[112043:st-coll-ids]: [10:17:48][INFO] Sending end-of-stream message to channel from_st-coll-ids_to_track-propagation
+[112043:st-coll-ids]: [10:17:48][INFO] Sending end-of-stream message to channel from_st-coll-ids_to_event-selection-task
+[112043:st-coll-ids]: [10:17:48][INFO] Sending end-of-stream message to channel from_st-coll-ids_to_lf-strangeness-filter
+[112044:bc-selection-task]: [10:17:48][INFO] Sending end-of-stream message to channel from_bc-selection-task_to_track-propagation
+[112044:bc-selection-task]: [10:17:48][INFO] Sending end-of-stream message to channel from_bc-selection-task_to_event-selection-task
+[112044:bc-selection-task]: [10:17:48][INFO] Sending end-of-stream message to channel from_bc-selection-task_to_multiplicity-table
+[112044:bc-selection-task]: [10:17:48][INFO] Sending end-of-stream message to channel from_bc-selection-task_to_internal-dpl-aod-global-analysis-file-sink
+[112045:tracks-extra-v002-converter]: [10:17:48][INFO] Sending end-of-stream message to channel from_tracks-extra-v002-converter_to_tracks-extra-spawner
+[112046:tracks-extra-spawner]: [10:17:48][INFO] Sending end-of-stream message to channel from_tracks-extra-spawner_to_event-selection-task
+[112047:track-propagation]: [10:17:49][INFO] CCDBManager summary: 3 queries, 21,441,706 bytes for 3 objects, 3 good fetches (and 0 failed ones) in 2,295 ms, instance: ctpo2a9.cern.ch-1743066698-1X7Bd9-111914
+[112047:track-propagation]: [10:17:49][INFO] CCDB cache miss/hit/failures
+[112047:track-propagation]: [10:17:49][INFO]   GLO/Calib/MeanVertex: 1/0/0 (1603-1603 bytes)
+[112047:track-propagation]: [10:17:49][INFO]   GLO/Config/GRPMagField: 1/0/0 (1107-1107 bytes)
+[112047:track-propagation]: [10:17:49][INFO]   GLO/Param/MatLUT: 1/0/0 (21438996-21438996 bytes)
+[112047:track-propagation]: [10:17:49][INFO] Sending end-of-stream message to channel from_track-propagation_to_event-selection-task
+[112047:track-propagation]: [10:17:49][INFO] Sending end-of-stream message to channel from_track-propagation_to_tpc-pid
+[112047:track-propagation]: [10:17:49][INFO] Sending end-of-stream message to channel from_track-propagation_to_lambdakzero-builder
+[112047:track-propagation]: [10:17:49][INFO] Sending end-of-stream message to channel from_track-propagation_to_lf-strangeness-filter
+[112047:track-propagation]: [10:17:49][INFO] Sending end-of-stream message to channel from_track-propagation_to_internal-dpl-aod-global-analysis-file-sink
+[112047:track-propagation]: [10:17:49][INFO] Sending end-of-stream message to channel from_track-propagation_to_internal-dpl-aod-writer
+[112048:event-selection-task]: [10:17:49][INFO] CCDBManager summary: 6 queries, 6,300 bytes for 6 objects, 5 good fetches (and 0 failed ones) in 2,167 ms, instance: ctpo2a9.cern.ch-1743066698-1E39IS-111914
+[112048:event-selection-task]: [10:17:49][INFO] CCDB cache miss/hit/failures
+[112048:event-selection-task]: [10:17:49][INFO]   ITS/Config/AlpideParam: 1/0/0 (1413-1413 bytes)
+[112048:event-selection-task]: [10:17:49][INFO]   GLO/Config/GRPLHCIF: 1/0/0 (1860-1860 bytes)
+[112048:event-selection-task]: [10:17:49][INFO]   CTP/Calib/FirstRunOrbit: 1/0/0 (579-579 bytes)
+[112048:event-selection-task]: [10:17:49][INFO]   GLO/Config/GRPECS: 1/0/0 (1885-1885 bytes)
+[112048:event-selection-task]: [10:17:49][INFO]   CTP/Calib/OrbitReset: 1/0/0 (563-563 bytes)
+[112048:event-selection-task]: [10:17:49][INFO]   RCT-Run-Info HeaderOnly: 1/0/0 (0-0 bytes)
+[112048:event-selection-task]: [10:17:49][INFO] Sending end-of-stream message to channel from_event-selection-task_to_pid-multiplicity
+[112048:event-selection-task]: [10:17:49][INFO] Sending end-of-stream message to channel from_event-selection-task_to_multiplicity-table
+[112048:event-selection-task]: [10:17:49][INFO] Sending end-of-stream message to channel from_event-selection-task_to_internal-dpl-aod-global-analysis-file-sink
+[112049:pid-multiplicity]: [10:17:49][INFO] Sending end-of-stream message to channel from_pid-multiplicity_to_multiplicity-table
+[112049:pid-multiplicity]: [10:17:49][INFO] Sending end-of-stream message to channel from_pid-multiplicity_to_tpc-pid
+[112050:multiplicity-table]: [10:17:49][INFO] CCDBManager summary: 2 queries, 8,500 bytes for 2 objects, 1 good fetches (and 0 failed ones) in 1,434 ms, instance: ctpo2a9.cern.ch-1743066698-nYqpL1-111914
+[112050:multiplicity-table]: [10:17:49][INFO] CCDB cache miss/hit/failures
+[112050:multiplicity-table]: [10:17:49][INFO]   Centrality/Calibration: 1/0/0 (8500-8500 bytes)
+[112050:multiplicity-table]: [10:17:49][INFO]   RCT-Run-Info HeaderOnly: 1/0/0 (0-0 bytes)
+[112050:multiplicity-table]: [10:17:49][INFO] Sending end-of-stream message to channel from_multiplicity-table_to_tpc-pid
+[112050:multiplicity-table]: [10:17:49][INFO] Sending end-of-stream message to channel from_multiplicity-table_to_lf-tpc-pid
+[112050:multiplicity-table]: [10:17:49][INFO] Sending end-of-stream message to channel from_multiplicity-table_to_lf-strangeness-filter
+[112050:multiplicity-table]: [10:17:49][INFO] Sending end-of-stream message to channel from_multiplicity-table_to_internal-dpl-aod-global-analysis-file-sink
+[112050:multiplicity-table]: [10:17:49][INFO] Sending end-of-stream message to channel from_multiplicity-table_to_internal-dpl-aod-writer
+[112051:tpc-pid]: [10:17:49][INFO] CCDBManager summary: 2 queries, 1,206 bytes for 1 objects, 1 good fetches (and 1 failed ones for 1 objects) in 1,839 ms, instance: ctpo2a9.cern.ch-1743066698-XNx19H-111914
+[112051:tpc-pid]: [10:17:49][INFO] CCDB cache miss/hit/failures
+[112051:tpc-pid]: [10:17:49][INFO]   Analysis/PID/TPC/Response: 1/0/1 (1206-1206 bytes)
+[112051:tpc-pid]: [10:17:49][INFO] Sending end-of-stream message to channel from_tpc-pid_to_lf-tpc-pid
+[112051:tpc-pid]: [10:17:49][INFO] Sending end-of-stream message to channel from_tpc-pid_to_lf-strangeness-filter
+[112051:tpc-pid]: [10:17:49][INFO] Sending end-of-stream message to channel from_tpc-pid_to_internal-dpl-aod-writer
+[112052:lf-tpc-pid]: [10:17:49][INFO] CCDBManager summary: 0 queries, 0 bytes for 0 objects, 0 good fetches (and 0 failed ones) in 0 ms, instance: ctpo2a9.cern.ch-1743066698-t7Hb0Q-111914
+[112052:lf-tpc-pid]: [10:17:49][INFO] CCDB cache miss/hit/failures
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:49][ERROR] Cannot read class info from buffer.
+[112064:internal-dpl-aod-writer]: [10:17:50][ERROR] Some Lifetime::Timeframe data got dropped starting at 83
+[112052:lf-tpc-pid]: [10:17:50][INFO] Sending end-of-stream message to channel from_lf-tpc-pid_to_cascade-preselector
+[112052:lf-tpc-pid]: [10:17:50][INFO] Sending end-of-stream message to channel from_lf-tpc-pid_to_lambdakzero-builder
+[112052:lf-tpc-pid]: [10:17:50][INFO] Sending end-of-stream message to channel from_lf-tpc-pid_to_lf-strangeness-filter
+[112052:lf-tpc-pid]: [10:17:50][INFO] Sending end-of-stream message to channel from_lf-tpc-pid_to_internal-dpl-aod-global-analysis-file-sink
+[112052:lf-tpc-pid]: [10:17:50][INFO] Sending end-of-stream message to channel from_lf-tpc-pid_to_internal-dpl-aod-writer
+[112053:cascade-preselector]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-preselector_to_lambdakzero-preselector
+[112053:cascade-preselector]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-preselector_to_cascade-builder
+[112053:cascade-preselector]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-preselector_to_internal-dpl-aod-global-analysis-file-sink
+[112054:lambdakzero-preselector]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-preselector_to_lambdakzero-builder
+[112054:lambdakzero-preselector]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-preselector_to_internal-dpl-aod-global-analysis-file-sink
+[112055:lambdakzero-builder]: fitter 0: error (0 muted): propagation failed for X:+1.3700e+02 Alp:+2.967e+00 Par: +5.8342e+01 -1.4169e+02 +9.6693e-01 -1.2248e+00 -8.3942e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+3.102e+00] [-3.174e+00 +3.859e+00] [+1.641e-02 -1.683e-02 +9.032e-05] [+4.420e-04 +1.056e-02 +3.106e-06 +2.668e-04] [-9.095e-02 +9.141e-02 -5.889e-04 -9.813e-05 +1.091e-02]
+[112055:lambdakzero-builder]: fitter 0: error (1 muted): propagation failed for X:+1.3700e+02 Alp:+2.967e+00 Par: +5.8342e+01 -1.4169e+02 +9.6693e-01 -1.2248e+00 -8.3942e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+3.102e+00] [-3.174e+00 +3.859e+00] [+1.641e-02 -1.683e-02 +9.032e-05] [+4.420e-04 +1.056e-02 +3.106e-06 +2.668e-04] [-9.095e-02 +9.141e-02 -5.889e-04 -9.813e-05 +1.091e-02]
+[112055:lambdakzero-builder]: fitter 0: error (4 muted): propagation failed for X:+1.7000e+01 Alp:+1.571e+00 Par: +5.1719e+01 -5.8871e+01 -9.5578e-01 +1.0055e+00 -6.5902e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+1.169e+02] [-9.694e+01 +1.078e+02] [-6.195e-01 +5.162e-01 +3.620e-03] [-2.939e-02 -5.390e-01 +2.267e-04 +1.888e-02] [-2.491e-01 -7.966e-02 +1.243e-03 +9.405e-03 +1.275e-02]
+[112055:lambdakzero-builder]: fitter 0: error (12 muted): propagation failed for X:-7.3000e+01 Alp:+8.727e-01 Par: +1.0308e+02 +1.4705e+01 -9.5181e-01 -1.1995e-01 -3.8860e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+3.160e+02] [+2.813e+01 +3.937e+01] [-7.581e-01 -6.709e-02 +1.857e-03] [+9.192e-03 -2.504e-01 -2.914e-05 +2.025e-03] [-6.004e-01 -2.677e-02 +1.524e-03 -2.383e-04 +5.370e-03]
+[112055:lambdakzero-builder]: fitter 0: error (33 muted): propagation failed for X:-9.0000e+00 Alp:+1.222e+00 Par: -5.0595e+01 +4.0078e+01 +9.6169e-01 +4.3040e-02 +7.9803e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+3.975e+02] [+1.306e+01 +5.398e+01] [-1.920e+00 -6.402e-02 +9.578e-03] [-4.724e-03 -6.609e-01 +2.964e-05 +1.138e-02] [-2.255e+00 -9.870e-02 +1.148e-02 +4.838e-04 +7.105e-02]
+[112055:lambdakzero-builder]: fitter 0: error (93 muted): propagation failed for X:-5.0000e+00 Alp:+2.269e+00 Par: +4.9990e+01 -5.7840e+01 -9.5649e-01 +9.0366e-01 -8.5026e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+2.537e+02] [-1.660e+02 +1.766e+02] [-1.357e+00 +8.875e-01 +7.539e-03] [-6.771e-02 -8.879e-01 +4.827e-04 +1.777e-02] [-1.105e+00 +2.665e-01 +6.182e-03 +8.795e-03 +4.231e-02]
+[112055:lambdakzero-builder]: fitter 0: error (254 muted): propagation failed for X:+2.9100e+02 Alp:-5.236e-01 Par: +2.1052e+02 +4.8678e+02 +9.5254e-01 +1.2837e+00 -2.3756e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+2.831e+01] [+2.993e+01 +3.402e+01] [+4.631e-02 +4.912e-02 +7.702e-05] [-1.790e-03 +7.170e-03 -3.029e-06 +3.594e-05] [-1.615e-01 -1.731e-01 -2.833e-04 +1.189e-05 +1.219e-03]
+[112055:lambdakzero-builder]: fitter 0: error (692 muted): propagation failed for X:+1.3000e+01 Alp:+8.727e-01 Par: -3.3085e+01 -4.1932e+01 +9.5254e-01 +9.4827e-01 +1.0107e+01 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+1.619e+02] [+1.180e+02 +1.351e+02] [-1.088e+00 -8.035e-01 +7.531e-03] [-4.639e-02 -8.599e-01 +4.240e-04 +1.783e-02] [-8.902e-01 -1.020e+00 +6.298e-03 +8.846e-03 +5.262e-02]
+[112055:lambdakzero-builder]: fitter 0: error (1883 muted): propagation failed for X:+1.2500e+02 Alp:+1.920e+00 Par: -5.5940e+01 +1.1934e+02 -9.7299e-01 +1.1233e+00 +9.2225e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+2.506e+00] [-2.447e+00 +2.803e+00] [+1.413e-02 -1.386e-02 +8.307e-05] [-3.055e-04 +9.230e-03 -2.319e-06 +2.674e-04] [-9.196e-02 +9.160e-02 -6.559e-04 +9.644e-05 +1.679e-02]
+[112055:lambdakzero-builder]: fitter 0: error (5122 muted): propagation failed for X:-1.0000e+00 Alp:+1.571e+00 Par: +4.9034e+01 -9.0539e+01 -9.6993e-01 +1.2016e+00 -7.5003e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+2.701e+02] [-2.535e+02 +3.098e+02] [-1.213e+00 +1.140e+00 +5.867e-03] [-8.278e-02 -9.543e-01 +4.854e-04 +3.045e-02] [-7.551e-01 +2.077e-01 +3.522e-03 +1.493e-02 +2.917e-02]
+[112055:lambdakzero-builder]: fitter 0: error (13922 muted): propagation failed for X:-9.5000e+01 Alp:-2.618e+00 Par: +1.0300e+02 -9.8107e+01 -9.5307e-01 +7.0903e-01 -4.5931e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+2.485e+02] [-1.206e+02 +1.176e+02] [-6.334e-01 +3.044e-01 +1.643e-03] [-5.685e-02 -3.488e-01 +1.901e-04 +2.725e-03] [-1.632e-01 -9.151e-02 +4.584e-04 +1.276e-03 +1.778e-03]
+[112055:lambdakzero-builder]: fitter 0: error (37847 muted): propagation failed for X:+4.9900e+02 Alp:-2.967e+00 Par: +3.2984e+02 -7.7595e+02 +9.5224e-01 -1.2227e+00 -1.5108e+00 |Q|:1 Pion
+[112055:lambdakzero-builder]:  Cov: [+1.463e+02] [-1.397e+02 +1.471e+02] [+1.312e-01 -1.248e-01 +1.186e-04] [+1.397e-02 +1.939e-02 +1.462e-05 +8.485e-05] [-1.784e-01 +1.644e-01 -1.685e-04 -3.943e-05 +3.147e-04]
+[112055:lambdakzero-builder]: [10:17:50][INFO] CCDBManager summary: 3 queries, 21,441,706 bytes for 3 objects, 3 good fetches (and 0 failed ones) in 1,658 ms, instance: ctpo2a9.cern.ch-1743066698-BdHh5D-111914
+[112055:lambdakzero-builder]: [10:17:50][INFO] CCDB cache miss/hit/failures
+[112055:lambdakzero-builder]: [10:17:50][INFO]   GLO/Param/MatLUT: 1/0/0 (21438996-21438996 bytes)
+[112055:lambdakzero-builder]: [10:17:50][INFO]   GLO/Calib/MeanVertex: 1/0/0 (1603-1603 bytes)
+[112055:lambdakzero-builder]: [10:17:50][INFO]   GLO/Config/GRPMagField: 1/0/0 (1107-1107 bytes)
+[112055:lambdakzero-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-builder_to_lambdakzero-initializer
+[112055:lambdakzero-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-builder_to_lambdakzero-v0-data-link-builder
+[112055:lambdakzero-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-builder_to_cascade-builder
+[112055:lambdakzero-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-builder_to_internal-dpl-aod-global-analysis-file-sink
+[112055:lambdakzero-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-builder_to_internal-dpl-aod-writer
+[112056:lambdakzero-initializer]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-initializer_to_lambdakzero-v0-data-link-builder
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_lambdakzero-v0-data-link-builder_to_cascade-builder
+[112058:cascade-builder]: fitter 0: error (0 muted): propagation failed for X:+1.6618e+02 Alp:+1.699e+00 Par: +1.0518e+02 -3.2521e+02 +9.5491e-01 -1.4974e+00 -4.5505e+00 |Q|:1 Pion
+[112058:cascade-builder]: 
+[112058:cascade-builder]: fitter 0: error (1 muted): propagation failed for X:-8.0653e+01 Alp:-1.201e+00 Par: -7.7090e+01 +1.1092e+01 +9.5820e-01 -1.0874e-01 +6.0730e+00 |Q|:1 Pion
+[112058:cascade-builder]:  Cov: [+1.291e+02] [-1.168e+01 +1.733e+01] [-4.786e-01 +4.391e-02 +1.800e-03] [+3.778e-03 -1.903e-01 -1.890e-05 +2.445e-03] [-1.490e-01 +3.314e-02 +6.045e-04 -2.595e-04 +3.995e-03]
+[112058:cascade-builder]: fitter 0: error (4 muted): propagation failed for X:+1.0658e+02 Alp:-2.629e+00 Par: -5.6409e+01 -2.1317e+02 -9.7090e-01 -1.6288e+00 +8.9829e+00 |Q|:1 Pion
+[112058:cascade-builder]: 
+[112058:cascade-builder]: fitter 0: error (12 muted): propagation failed for X:+9.9326e+01 Alp:+3.774e-01 Par: -6.0669e+01 +1.0747e+02 -9.5836e-01 +8.4184e-01 +8.2393e+00 |Q|:1 Pion
+[112058:cascade-builder]: 
+[112058:cascade-builder]: fitter 0: error (33 muted): propagation failed for X:+1.3983e+02 Alp:+2.978e+00 Par: -8.6954e+01 -2.6003e+02 -9.5731e-01 -1.4646e+00 +5.5047e+00 |Q|:1 Pion
+[112058:cascade-builder]: 
+[112058:cascade-builder]: fitter 0: error (93 muted): propagation failed for X:+1.0244e+02 Alp:+5.053e-01 Par: +6.3975e+01 +2.2717e+02 +9.6579e-01 +1.6756e+00 -7.9124e+00 |Q|:1 Pion
+[112058:cascade-builder]: 
+[112058:cascade-builder]: fitter 0: error (254 muted): propagation failed for X:+8.3704e+01 Alp:+1.678e+00 Par: +5.8816e+01 -4.8226e+01 +9.7067e-01 -4.9254e-01 -9.0289e+00 |Q|:1 Pion
+[112058:cascade-builder]: 
+[112058:cascade-builder]: [10:17:50][INFO] CCDBManager summary: 2 queries, 21,440,103 bytes for 2 objects, 2 good fetches (and 0 failed ones) in 1,577 ms, instance: ctpo2a9.cern.ch-1743066698-TS1pjq-111914
+[112058:cascade-builder]: [10:17:50][INFO] CCDB cache miss/hit/failures
+[112058:cascade-builder]: [10:17:50][INFO]   GLO/Param/MatLUT: 1/0/0 (21438996-21438996 bytes)
+[112058:cascade-builder]: [10:17:50][INFO]   GLO/Config/GRPMagField: 1/0/0 (1107-1107 bytes)
+[112058:cascade-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-builder_to_cascade-initializer
+[112058:cascade-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-builder_to_lf-strangeness-filter
+[112058:cascade-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-builder_to_kfcascade-link-builder
+[112058:cascade-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-builder_to_tracascade-link-builder
+[112058:cascade-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-builder_to_internal-dpl-aod-global-analysis-file-sink
+[112058:cascade-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-builder_to_internal-dpl-aod-writer
+[112059:cascade-initializer]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-initializer_to_lf-strangeness-filter
+[112059:cascade-initializer]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-initializer_to_kfcascade-link-builder
+[112059:cascade-initializer]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-initializer_to_tracascade-link-builder
+[112060:lf-strangeness-filter]: [10:17:50][INFO] CCDBManager summary: 3 queries, 21,440,103 bytes for 3 objects, 2 good fetches (and 1 failed ones for 1 objects) in 1,907 ms, instance: ctpo2a9.cern.ch-1743066698-JT7SSp-111914
+[112060:lf-strangeness-filter]: [10:17:50][INFO] CCDB cache miss/hit/failures
+[112060:lf-strangeness-filter]: [10:17:50][INFO]   GLO/Config/GRPMagField: 1/0/0 (1107-1107 bytes)
+[112060:lf-strangeness-filter]: [10:17:50][INFO]   GLO/GRP/GRP: 0/0/1 (18446744073709551615-0 bytes)
+[112060:lf-strangeness-filter]: [10:17:50][INFO]   GLO/Param/MatLUT: 1/0/0 (21438996-21438996 bytes)
+[112060:lf-strangeness-filter]: [10:17:50][INFO] Sending end-of-stream message to channel from_lf-strangeness-filter_to_cascade-link-builder
+[112060:lf-strangeness-filter]: [10:17:50][INFO] Sending end-of-stream message to channel from_lf-strangeness-filter_to_internal-dpl-aod-global-analysis-file-sink
+[112060:lf-strangeness-filter]: [10:17:50][INFO] Sending end-of-stream message to channel from_lf-strangeness-filter_to_internal-dpl-aod-writer
+[112061:cascade-link-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-link-builder_to_kfcascade-link-builder
+[112061:cascade-link-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_cascade-link-builder_to_internal-dpl-aod-writer
+[112062:kfcascade-link-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_kfcascade-link-builder_to_tracascade-link-builder
+[112062:kfcascade-link-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_kfcascade-link-builder_to_internal-dpl-aod-writer
+[112063:tracascade-link-builder]: [10:17:50][INFO] Sending end-of-stream message to channel from_tracascade-link-builder_to_internal-dpl-aod-writer
+[112064:internal-dpl-aod-writer]: [10:17:50][INFO] Sending end-of-stream message to channel from_internal-dpl-aod-writer_to_internal-dpl-injected-dummy-sink
+[INFO] Quitting
+[INFO] QUIT_REQUESTED
+[112051:tpc-pid]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112051:tpc-pid]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112051:tpc-pid]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112051:tpc-pid]: [10:17:50][STATE] RUNNING ---> READY
+[112051:tpc-pid]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112051:tpc-pid]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112051:tpc-pid]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112055:lambdakzero-builder]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112055:lambdakzero-builder]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112049:pid-multiplicity]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112049:pid-multiplicity]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112055:lambdakzero-builder]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112041:internal-dpl-aod-index-builder]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112041:internal-dpl-aod-index-builder]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112055:lambdakzero-builder]: [10:17:50][STATE] RUNNING ---> READY
+[112049:pid-multiplicity]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112049:pid-multiplicity]: [10:17:50][STATE] RUNNING ---> READY
+[112055:lambdakzero-builder]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112055:lambdakzero-builder]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112055:lambdakzero-builder]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112049:pid-multiplicity]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112041:internal-dpl-aod-index-builder]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112041:internal-dpl-aod-index-builder]: [10:17:50][STATE] RUNNING ---> READY
+[112041:internal-dpl-aod-index-builder]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112041:internal-dpl-aod-index-builder]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112041:internal-dpl-aod-index-builder]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112049:pid-multiplicity]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112049:pid-multiplicity]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112041:internal-dpl-aod-index-builder]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112041:internal-dpl-aod-index-builder]: [10:17:50][STATE] IDLE ---> EXITING
+[112050:multiplicity-table]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112050:multiplicity-table]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112050:multiplicity-table]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112050:multiplicity-table]: [10:17:50][STATE] RUNNING ---> READY
+[112050:multiplicity-table]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112050:multiplicity-table]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112050:multiplicity-table]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112049:pid-multiplicity]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112049:pid-multiplicity]: [10:17:50][STATE] IDLE ---> EXITING
+[112043:st-coll-ids]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112043:st-coll-ids]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112043:st-coll-ids]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112043:st-coll-ids]: [10:17:50][STATE] RUNNING ---> READY
+[112043:st-coll-ids]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112043:st-coll-ids]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112043:st-coll-ids]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112047:track-propagation]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112047:track-propagation]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112047:track-propagation]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112047:track-propagation]: [10:17:50][STATE] RUNNING ---> READY
+[112047:track-propagation]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112047:track-propagation]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112047:track-propagation]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112055:lambdakzero-builder]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112055:lambdakzero-builder]: [10:17:50][STATE] IDLE ---> EXITING
+[112043:st-coll-ids]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112043:st-coll-ids]: [10:17:50][STATE] IDLE ---> EXITING
+[112050:multiplicity-table]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112050:multiplicity-table]: [10:17:50][STATE] IDLE ---> EXITING
+[112052:lf-tpc-pid]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112052:lf-tpc-pid]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112052:lf-tpc-pid]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112052:lf-tpc-pid]: [10:17:50][STATE] RUNNING ---> READY
+[112052:lf-tpc-pid]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112052:lf-tpc-pid]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112052:lf-tpc-pid]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112051:tpc-pid]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112051:tpc-pid]: [10:17:50][STATE] IDLE ---> EXITING
+[112053:cascade-preselector]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112053:cascade-preselector]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112058:cascade-builder]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112058:cascade-builder]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112064:internal-dpl-aod-writer]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112064:internal-dpl-aod-writer]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112058:cascade-builder]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112053:cascade-preselector]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112053:cascade-preselector]: [10:17:50][STATE] RUNNING ---> READY
+[112058:cascade-builder]: [10:17:50][STATE] RUNNING ---> READY
+[112053:cascade-preselector]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112053:cascade-preselector]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112053:cascade-preselector]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112058:cascade-builder]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112058:cascade-builder]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112058:cascade-builder]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112064:internal-dpl-aod-writer]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112064:internal-dpl-aod-writer]: [10:17:50][STATE] RUNNING ---> READY
+[112052:lf-tpc-pid]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112052:lf-tpc-pid]: [10:17:50][STATE] IDLE ---> EXITING
+[112064:internal-dpl-aod-writer]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112064:internal-dpl-aod-writer]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112064:internal-dpl-aod-writer]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112055:lambdakzero-builder]: [10:17:50][STATE] Exiting FairMQ state machine
+[112051:tpc-pid]: [10:17:50][STATE] Exiting FairMQ state machine
+[112053:cascade-preselector]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112053:cascade-preselector]: [10:17:50][STATE] IDLE ---> EXITING
+[112064:internal-dpl-aod-writer]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112064:internal-dpl-aod-writer]: [10:17:50][STATE] IDLE ---> EXITING
+[112050:multiplicity-table]: [10:17:50][STATE] Exiting FairMQ state machine
+[112059:cascade-initializer]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112059:cascade-initializer]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112059:cascade-initializer]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112059:cascade-initializer]: [10:17:50][STATE] RUNNING ---> READY
+[112059:cascade-initializer]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112059:cascade-initializer]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112059:cascade-initializer]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112061:cascade-link-builder]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112061:cascade-link-builder]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112058:cascade-builder]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112061:cascade-link-builder]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112058:cascade-builder]: [10:17:50][STATE] IDLE ---> EXITING
+[112061:cascade-link-builder]: [10:17:50][STATE] RUNNING ---> READY
+[112061:cascade-link-builder]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112061:cascade-link-builder]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112061:cascade-link-builder]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112059:cascade-initializer]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112059:cascade-initializer]: [10:17:50][STATE] IDLE ---> EXITING
+[112061:cascade-link-builder]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112061:cascade-link-builder]: [10:17:50][STATE] IDLE ---> EXITING
+[112047:track-propagation]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112047:track-propagation]: [10:17:50][STATE] IDLE ---> EXITING
+[112056:lambdakzero-initializer]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112056:lambdakzero-initializer]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112056:lambdakzero-initializer]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112056:lambdakzero-initializer]: [10:17:50][STATE] RUNNING ---> READY
+[112056:lambdakzero-initializer]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112056:lambdakzero-initializer]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112056:lambdakzero-initializer]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112056:lambdakzero-initializer]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112056:lambdakzero-initializer]: [10:17:50][STATE] IDLE ---> EXITING
+[112044:bc-selection-task]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112044:bc-selection-task]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112044:bc-selection-task]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112044:bc-selection-task]: [10:17:50][STATE] RUNNING ---> READY
+[112044:bc-selection-task]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112044:bc-selection-task]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112044:bc-selection-task]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112044:bc-selection-task]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112044:bc-selection-task]: [10:17:50][STATE] IDLE ---> EXITING
+[112063:tracascade-link-builder]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112063:tracascade-link-builder]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112063:tracascade-link-builder]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112063:tracascade-link-builder]: [10:17:50][STATE] RUNNING ---> READY
+[112063:tracascade-link-builder]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112063:tracascade-link-builder]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112063:tracascade-link-builder]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112038:internal-dpl-clock]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112038:internal-dpl-clock]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112046:tracks-extra-spawner]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112046:tracks-extra-spawner]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112046:tracks-extra-spawner]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112046:tracks-extra-spawner]: [10:17:50][STATE] RUNNING ---> READY
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112046:tracks-extra-spawner]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][STATE] RUNNING ---> READY
+[112046:tracks-extra-spawner]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112046:tracks-extra-spawner]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112058:cascade-builder]: [10:17:50][STATE] Exiting FairMQ state machine
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112038:internal-dpl-clock]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112063:tracascade-link-builder]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112038:internal-dpl-clock]: [10:17:50][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_internal-dpl-aod-reader
+[112063:tracascade-link-builder]: [10:17:50][STATE] IDLE ---> EXITING
+[112038:internal-dpl-clock]: [10:17:50][STATE] RUNNING ---> READY
+[112038:internal-dpl-clock]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112038:internal-dpl-clock]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112038:internal-dpl-clock]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112045:tracks-extra-v002-converter]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112045:tracks-extra-v002-converter]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112045:tracks-extra-v002-converter]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112045:tracks-extra-v002-converter]: [10:17:50][STATE] RUNNING ---> READY
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][STATE] IDLE ---> EXITING
+[112045:tracks-extra-v002-converter]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112038:internal-dpl-clock]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112045:tracks-extra-v002-converter]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112038:internal-dpl-clock]: [10:17:50][STATE] IDLE ---> EXITING
+[112045:tracks-extra-v002-converter]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112046:tracks-extra-spawner]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112046:tracks-extra-spawner]: [10:17:50][STATE] IDLE ---> EXITING
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][STATE] RUNNING ---> READY
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112060:lf-strangeness-filter]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112060:lf-strangeness-filter]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112060:lf-strangeness-filter]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112060:lf-strangeness-filter]: [10:17:50][STATE] RUNNING ---> READY
+[112060:lf-strangeness-filter]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112060:lf-strangeness-filter]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112045:tracks-extra-v002-converter]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112060:lf-strangeness-filter]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112045:tracks-extra-v002-converter]: [10:17:50][STATE] IDLE ---> EXITING
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][STATE] IDLE ---> EXITING
+[112062:kfcascade-link-builder]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112062:kfcascade-link-builder]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112062:kfcascade-link-builder]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112062:kfcascade-link-builder]: [10:17:50][STATE] RUNNING ---> READY
+[112062:kfcascade-link-builder]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112062:kfcascade-link-builder]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112062:kfcascade-link-builder]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112062:kfcascade-link-builder]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112062:kfcascade-link-builder]: [10:17:50][STATE] IDLE ---> EXITING
+[112038:internal-dpl-clock]: [10:17:50][STATE] Exiting FairMQ state machine
+[112060:lf-strangeness-filter]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112060:lf-strangeness-filter]: [10:17:50][STATE] IDLE ---> EXITING
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112042:timestamp-task]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112042:timestamp-task]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112042:timestamp-task]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112042:timestamp-task]: [10:17:50][STATE] RUNNING ---> READY
+[112042:timestamp-task]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112042:timestamp-task]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112042:timestamp-task]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][STATE] RUNNING ---> READY
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112048:event-selection-task]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112048:event-selection-task]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112048:event-selection-task]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112048:event-selection-task]: [10:17:50][STATE] RUNNING ---> READY
+[112039:internal-dpl-aod-reader]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112039:internal-dpl-aod-reader]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112048:event-selection-task]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112048:event-selection-task]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112039:internal-dpl-aod-reader]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112039:internal-dpl-aod-reader]: [10:17:50][STATE] RUNNING ---> READY
+[112048:event-selection-task]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112039:internal-dpl-aod-reader]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112039:internal-dpl-aod-reader]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112039:internal-dpl-aod-reader]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112042:timestamp-task]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112042:timestamp-task]: [10:17:50][STATE] IDLE ---> EXITING
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][STATE] IDLE ---> EXITING
+[112049:pid-multiplicity]: [10:17:50][STATE] Exiting FairMQ state machine
+[112054:lambdakzero-preselector]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112054:lambdakzero-preselector]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112059:cascade-initializer]: [10:17:50][STATE] Exiting FairMQ state machine
+[112056:lambdakzero-initializer]: [10:17:50][STATE] Exiting FairMQ state machine
+[112054:lambdakzero-preselector]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112054:lambdakzero-preselector]: [10:17:50][STATE] RUNNING ---> READY
+[112054:lambdakzero-preselector]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112054:lambdakzero-preselector]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112054:lambdakzero-preselector]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112039:internal-dpl-aod-reader]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112039:internal-dpl-aod-reader]: [10:17:50][STATE] IDLE ---> EXITING
+[112043:st-coll-ids]: [10:17:50][STATE] Exiting FairMQ state machine
+[112053:cascade-preselector]: [10:17:50][STATE] Exiting FairMQ state machine
+[112048:event-selection-task]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112048:event-selection-task]: [10:17:50][STATE] IDLE ---> EXITING
+[112054:lambdakzero-preselector]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112054:lambdakzero-preselector]: [10:17:50][STATE] IDLE ---> EXITING
+[112040:internal-dpl-aod-spawner]: [10:17:50][INFO] Received device shutdown request (signal 15).
+[112040:internal-dpl-aod-spawner]: [10:17:50][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[112040:internal-dpl-aod-spawner]: [10:17:50][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[112040:internal-dpl-aod-spawner]: [10:17:50][STATE] RUNNING ---> READY
+[112064:internal-dpl-aod-writer]: [10:17:50][STATE] Exiting FairMQ state machine
+[112040:internal-dpl-aod-spawner]: [10:17:50][STATE] READY ---> RESETTING TASK
+[112040:internal-dpl-aod-spawner]: [10:17:50][STATE] RESETTING TASK ---> DEVICE READY
+[112040:internal-dpl-aod-spawner]: [10:17:50][STATE] DEVICE READY ---> RESETTING DEVICE
+[112040:internal-dpl-aod-spawner]: [10:17:50][INFO] Cleaning up for shared memory id '96a9894d'...
+[112040:internal-dpl-aod-spawner]: [10:17:50][INFO] Found 0 unmanaged regions...
+[112040:internal-dpl-aod-spawner]: [10:17:50][INFO] Found 1 managed segments...
+[112040:internal-dpl-aod-spawner]: [10:17:50][INFO] Successfully removed 'fmq_96a9894d_m_0'.
+[112040:internal-dpl-aod-spawner]: [10:17:50][INFO] Successfully removed 'fmq_96a9894d_mng'.
+[112045:tracks-extra-v002-converter]: [10:17:50][STATE] Exiting FairMQ state machine
+[112041:internal-dpl-aod-index-builder]: [10:17:50][STATE] Exiting FairMQ state machine
+[112047:track-propagation]: [10:17:50][STATE] Exiting FairMQ state machine
+[112044:bc-selection-task]: [10:17:50][STATE] Exiting FairMQ state machine
+[112062:kfcascade-link-builder]: [10:17:50][STATE] Exiting FairMQ state machine
+[112063:tracascade-link-builder]: [10:17:50][STATE] Exiting FairMQ state machine
+[112066:internal-dpl-injected-dummy-sink]: [10:17:50][STATE] Exiting FairMQ state machine
+[112061:cascade-link-builder]: [10:17:50][STATE] Exiting FairMQ state machine
+[112042:timestamp-task]: [10:17:50][STATE] Exiting FairMQ state machine
+[112052:lf-tpc-pid]: [10:17:50][STATE] Exiting FairMQ state machine
+[112057:lambdakzero-v0-data-link-builder]: [10:17:50][STATE] Exiting FairMQ state machine
+[112065:internal-dpl-aod-global-analysis-file-sink]: [10:17:50][STATE] Exiting FairMQ state machine
+[112054:lambdakzero-preselector]: [10:17:50][STATE] Exiting FairMQ state machine
+[112039:internal-dpl-aod-reader]: [10:17:50][STATE] Exiting FairMQ state machine
+[112060:lf-strangeness-filter]: [10:17:50][STATE] Exiting FairMQ state machine
+[112046:tracks-extra-spawner]: [10:17:50][STATE] Exiting FairMQ state machine
+[112040:internal-dpl-aod-spawner]: [10:17:50][STATE] RESETTING DEVICE ---> IDLE
+[112040:internal-dpl-aod-spawner]: [10:17:50][STATE] IDLE ---> EXITING
+[112048:event-selection-task]: [10:17:50][STATE] Exiting FairMQ state machine
+[112040:internal-dpl-aod-spawner]: [10:17:51][STATE] Exiting FairMQ state machine
+[INFO] Dumping performance metrics to performanceMetrics.json file
+[INFO] ## Processes completed. Run summary:
+[INFO] ### Devices started: 29
+[INFO]  - Device internal-dpl-clock: pid 112038 (exit 0)
+[INFO]  - Device internal-dpl-aod-reader: pid 112039 (exit 0)
+[INFO]  - Device internal-dpl-aod-spawner: pid 112040 (exit 0)
+[INFO]  - Device internal-dpl-aod-index-builder: pid 112041 (exit 0)
+[INFO]  - Device timestamp-task: pid 112042 (exit 0)
+[INFO]  - Device st-coll-ids: pid 112043 (exit 0)
+[INFO]  - Device bc-selection-task: pid 112044 (exit 0)
+[INFO]  - Device tracks-extra-v002-converter: pid 112045 (exit 0)
+[INFO]  - Device tracks-extra-spawner: pid 112046 (exit 0)
+[INFO]  - Device track-propagation: pid 112047 (exit 0)
+[INFO]  - Device event-selection-task: pid 112048 (exit 0)
+[INFO]  - Device pid-multiplicity: pid 112049 (exit 0)
+[INFO]  - Device multiplicity-table: pid 112050 (exit 0)
+[INFO]  - Device tpc-pid: pid 112051 (exit 0)
+[INFO]  - Device lf-tpc-pid: pid 112052 (exit 0)
+[INFO]  - Device cascade-preselector: pid 112053 (exit 0)
+[INFO]  - Device lambdakzero-preselector: pid 112054 (exit 0)
+[INFO]  - Device lambdakzero-builder: pid 112055 (exit 0)
+[INFO]  - Device lambdakzero-initializer: pid 112056 (exit 0)
+[INFO]  - Device lambdakzero-v0-data-link-builder: pid 112057 (exit 0)
+[INFO]  - Device cascade-builder: pid 112058 (exit 0)
+[INFO]  - Device cascade-initializer: pid 112059 (exit 0)
+[INFO]  - Device lf-strangeness-filter: pid 112060 (exit 0)
+[INFO]  - Device cascade-link-builder: pid 112061 (exit 0)
+[INFO]  - Device kfcascade-link-builder: pid 112062 (exit 0)
+[INFO]  - Device tracascade-link-builder: pid 112063 (exit 0)
+[INFO]  - Device internal-dpl-aod-writer: pid 112064 (exit 0)
+[INFO]  - Device internal-dpl-aod-global-analysis-file-sink: pid 112065 (exit 0)
+[INFO]  - Device internal-dpl-injected-dummy-sink: pid 112066 (exit 0)
+[INFO] ## Analysis Run Summary ##
+[INFO] ### Files read stats ###
+[INFO] lfn=/home/rl/TEST/strangeFilter/AO2D.root,size=3994479284,total_df=83,read_df=83,read_bytes=3320248322,read_calls=2349,io_time=3.6,wait_time=366.8,level=0
+[INFO] Dumping used configuration in dpl-config.json
+
+
+O2 exited with 0
+
+O2 job script ends at Thu Mar 27 10:17:51 AM CET 2025

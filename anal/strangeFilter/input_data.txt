@@ -1,0 +1,6 @@
+/home/rl/TEST/strangeFilter/AO2D092_1.root
+/home/rl/TEST/strangeFilter/AO2D092_2.root
+/home/rl/TEST/strangeFilter/AO2D322_1.root
+/home/rl/TEST/strangeFilter/AO2D322_2.root
+
+

@@ -1,0 +1,599 @@
+{
+  "dataset_production_type": "DATA",
+  "max_df_size": -1,
+  "dataset_id": 1594,
+  "cpu_cores": 1,
+  "workflows": [
+    {
+      "subwagon_id": 49995,
+      "subwagon_name": "base",
+      "configuration": {
+        "lf-strangeness-filter": {
+          "maxCpaTrackedOmega": "1",
+          "nsigmatpcpr": "4",
+          "lowerradiusXiYN": "31",
+          "kint7": "0",
+          "dcamesontopv": "0.04",
+          "v0radius": "0.5",
+          "hMinPt": "5",
+          "massWindowTrackedXiNsigma": "6",
+          "useNsigmaCutTrackedOmega": "1",
+          "massWindowXiExclTrackedOmega": "0.005",
+          "cutzvertex": "1000",
+          "eta": "2",
+          "massWindowTrackedOmega": "0.03",
+          "LowLimitFT0MMult": "3100",
+          "matLutPath": "GLO/Param/MatLUT",
+          "minDcaTrackedXi": "-1",
+          "useSigmaBasedMassCutXi": "1",
+          "ccdbUrl": "http://alice-ccdb.cern.ch",
+          "nsigmatpcpi": "4",
+          "lowerradiusOmega": "19",
+          "massWindowXiNsigma": "6",
+          "useNsigmaCutTrackedXi": "1",
+          "dcabachtopv": "0.04",
+          "useAbsDCA": "1",
+          "minRelChi2Change": "0.9",
+          "dcacascdau": "0.9",
+          "doextraQA": "1",
+          "casccospaomega": "0.992",
+          "rapidity": "2",
+          "parSigmaMass": {
+            "values": [
+              [0.0049736, 0.006815],
+              [-2.39594, -2.257],
+              [0.0018064, 0.00138],
+              [0.103468, 0.1898]
+            ]
+          },
+          "ptthrtof": "1",
+          "maxMatchingChi2TrackedCascade": "2000",
+          "maxNSigmaBachelorTrackedXi": "4",
+          "sel7": "0",
+          "casccospaxi": "0.992",
+          "sel8": "0",
+          "etadau": "1",
+          "minParamChange": "0.001",
+          "maxCpaTrackedXi": "1",
+          "omegamasswindow": "0.03",
+          "hEta": "1.1",
+          "massWindowOmegaNsigma": "6",
+          "masslambdalimit": "0.01",
+          "minDcaTrackedOmega": "-1",
+          "dcav0topv": "0",
+          "massWindowTrackedXi": "0.03",
+          "useSigmaBasedMassCutOmega": "1",
+          "maxDZIni": "4",
+          "minNoClsTrackedCascade": "70",
+          "maxNSigmaV0PrTrackedCascade": "4",
+          "dcav0dau": "0.9",
+          "omegarej": "0",
+          "xirej": "0.01",
+          "upperradiusOmega": "10000",
+          "grpPath": "GLO/GRP/GRP",
+          "v0cospa": "0.98",
+          "cascradius": "0.4",
+          "grpMagPath": "GLO/Config/GRPMagField",
+          "propToDCA": "1",
+          "recalculateMasses": "1",
+          "properlifetimefactor": "5",
+          "maxNSigmaBachelorTrackedOmega": "4",
+          "maxR": "200",
+          "minpt": "0",
+          "massWindowTrackedOmegaNsigma": "6",
+          "isTrackFilter": "1",
+          "ximasswindow": "0.03",
+          "minPtTrackedCascade": "0",
+          "dcabaryontopv": "0.04",
+          "maxNSigmaV0PiTrackedCascade": "4",
+          "hastof": "0",
+          "nsigmatpcka": "4",
+          "materialCorrectionType": "2",
+          "isTimeFrameBorderCut": "1",
+          "massWindowLambda": "0.05"
+        }
+      },
+      "wagon_id": 25741,
+      "workflow_name": "o2-analysis-lf-strangeness-filter",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 649,
+      "subwagon_name": "base",
+      "configuration": {
+        "multiplicity-table": {
+          "processRun3MFT": "0",
+          "processRun3": "1",
+          "processRun2": "0",
+          "enabledTables": {
+            "values": [
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1],
+              [-1]
+            ]
+          },
+          "fractionOfEvents": "2",
+          "maxPtGlobalTrack": "1e+10",
+          "processMC2Mults": "0",
+          "autoSetupFromMetadata": "1",
+          "ccdbPath": "Centrality/Calibration",
+          "minPtGlobalTrack": "0.15",
+          "processGlobalTrackingCounters": "0",
+          "doVertexZeq": "1",
+          "produceHistograms": "0",
+          "reconstructionPass": "",
+          "minNclsITSibGlobalTrack": "1",
+          "ccdburl": "http://alice-ccdb.cern.ch",
+          "processMC": "0",
+          "minNclsITSGlobalTrack": "5"
+        }
+      },
+      "wagon_id": 595,
+      "workflow_name": "o2-analysis-multiplicity-table",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 1591,
+      "subwagon_name": "base",
+      "configuration": {
+        "cascade-builder": {
+          "lutPath": "GLO/Param/MatLUT",
+          "axisConfigurations.axisTopoVarDCAToPV": {
+            "values": [200, -1, 1]
+          },
+          "d_QA_checkMC": "1",
+          "casccospa": "0.95",
+          "processRun3": "1",
+          "processRun2": "0",
+          "qaConfigurations.dQAMaxCluSize": "10",
+          "kfDoDCAFitterPreMinimCasc": "1",
+          "useMatCorrTypeCasc": "2",
+          "processFindableRun3": "0",
+          "qaConfigurations.dQANBinsChi2": "200",
+          "axisConfigurations.axisTopoVarDCAV0ToPV": {
+            "values": [200, 0, 5]
+          },
+          "d_UseAutodetectMode": "0",
+          "d_doStraTrackQA": "0",
+          "qaConfigurations.dQAMaxPt": "5",
+          "processRun3withKFParticle": "0",
+          "qaConfigurations.dQAMaxChi2": "20",
+          "qaConfigurations.dQAOmegaMassWindow": "0.005",
+          "useCascadeMomentumAtPrimVtx": "0",
+          "mlConfigurations.modelPathCCDB": "",
+          "cas_cospaParameter": "0.341715",
+          "d_GenerateOnlyTrackedCascades": "0",
+          "createCascCovMats": "-1",
+          "calculateBachBaryonVars": "1",
+          "d_UseWeightedPCA": "0",
+          "rejDiffCollTracks": "0",
+          "qaConfigurations.dQANBinsDCAxy": "200",
+          "dcabachtopv": "0",
+          "mlConfigurations.calculateXiPlusScores": "0",
+          "dcacascdau": "1",
+          "axisConfigurations.axisTopoVarV0Radius": {
+            "values": [500, 0, 100]
+          },
+          "geoPath": "GLO/Config/GeometryAligned",
+          "mlConfigurations.loadModelsFromCCDB": "0",
+          "axisPtQA": {
+            "values": [0, 0, 0.100000001490116, 0.200000002980232, 0.300000011920929, 0.400000005960465, 0.5, 0.600000023841858, 0.699999988079071, 0.800000011920929, 0.899999976158142, 1, 1.10000002384186, 1.20000004768372, 1.29999995231628, 1.39999997615814, 1.5, 1.60000002384186, 1.70000004768372, 1.79999995231628, 1.89999997615814, 2, 2.20000004768372, 2.40000009536743, 2.59999990463257, 2.79999995231628, 3, 3.20000004768372, 3.40000009536743, 3.59999990463257, 3.79999995231628, 4, 4.40000009536743, 4.80000019073486, 5.19999980926514, 5.59999990463257, 6, 6.5, 7, 7.5, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19, 21, 23, 25, 30, 35, 40, 50]
+          },
+          "mlConfigurations.calculateXiMinusScores": "0",
+          "mlConfigurations.calculateOmegaPlusScores": "0",
+          "createCascTrackXs": "-1",
+          "qaConfigurations.dQANBinsRadius": "500",
+          "qaConfigurations.dQAXiMassWindow": "0.005",
+          "mlConfigurations.localModelPathOmegaMinus": "OmegaMinus_BDTModel.onnx",
+          "mlConfigurations.thresholdOmegaMinus": "-1",
+          "dcaZCascToPV": "1e+06",
+          "d_bz": "-999",
+          "ccdb-url": "http://alice-ccdb.cern.ch",
+          "qaConfigurations.d_doQA": "0",
+          "kfConstructMethod": "2",
+          "kfUseCascadeMassConstraint": "0",
+          "precisionDCAs": "0.01",
+          "mlConfigurations.timestampCCDB": "-1",
+          "kfDoDCAFitterPreMinimV0": "1",
+          "processFindableRun3withKFParticle": "0",
+          "mlConfigurations.localModelPathOmegaPlus": "OmegaPlus_BDTModel.onnx",
+          "d_UseAbsDCA": "1",
+          "tpcrefit": "0",
+          "grpPath": "GLO/GRP/GRP",
+          "mlConfigurations.localModelPathXiPlus": "XiPlus_BDTModel.onnx",
+          "cascradius": "0.9",
+          "qaConfigurations.dQANBinsPtCoarse": "10",
+          "axisConfigurations.axisTopoVarDCAV0Dau": {
+            "values": [200, 0, 2]
+          },
+          "mlConfigurations.calculateOmegaMinusScores": "0",
+          "useMatCorrType": "2",
+          "axisConfigurations.axisTopoVarRAP": {
+            "values": [50, 0, 1]
+          },
+          "mlConfigurations.thresholdOmegaPlus": "-1",
+          "d_QA_checkdEdx": "0",
+          "kfUseV0MassConstraint": "1",
+          "roundDCAVariables": "0",
+          "mlConfigurations.enableOptimizations": "0",
+          "dcaXYCascToPV": "1e+06",
+          "qaConfigurations.dQANBinsMass": "400",
+          "kfTuneForOmega": "0",
+          "axisConfigurations.axisTopoVarPointingAngle": {
+            "values": [50, 0, 1]
+          },
+          "maxDaughterEta": "5",
+          "mlConfigurations.localModelPathXiMinus": "XiMinus_BDTModel.onnx",
+          "mlConfigurations.thresholdXiMinus": "-1",
+          "lambdaMassWindow": "0.01",
+          "d_doPtDep_CosPaCut": "0",
+          "qaConfigurations.dQANBinsCluSize": "200",
+          "processRun3withStrangenessTracking": "0",
+          "qaConfigurations.dQAMaxDCA": "1",
+          "d_doTrackQA": "0",
+          "grpmagPath": "GLO/Config/GRPMagField",
+          "mlConfigurations.thresholdXiPlus": "-1"
+        },
+        "cascade-preselector": {
+          "dPreselectOnlyBaryons": "0",
+          "dIfMCselectPhysicalPrimary": "1",
+          "dIfMCgenerateOmegaPlus": "1",
+          "ddEdxPreSelectXiMinus": "1",
+          "dTPCNCrossedRows": "50",
+          "processSkipCascadesNotUsedInTrackedCascades": "0",
+          "processBuildAll": "1",
+          "processBuildFindable": "0",
+          "dIfMCgenerateXiPlus": "1",
+          "processBuildMCAssociated": "0",
+          "dIfMCgenerateXiMinus": "1",
+          "dIfMCgenerateOmegaMinus": "1",
+          "ddEdxPreSelectionWindow": "7",
+          "ddEdxPreSelectOmegaPlus": "1",
+          "doQA": "0",
+          "ddEdxPreSelectXiPlus": "1",
+          "dIfMCselectV0MotherPDG": "0",
+          "processBuildValiddEdx": "0",
+          "ddEdxPreSelectOmegaMinus": "1",
+          "processBuildValiddEdxMCAssociated": "0"
+        },
+        "cascade-link-builder": {
+          "processFound": "1",
+          "processFindable": "0"
+        },
+        "kfcascade-link-builder": {
+
+        },
+        "cascade-initializer": {
+
+        },
+        "tracascade-link-builder": {
+
+        }
+      },
+      "wagon_id": 1405,
+      "workflow_name": "o2-analysis-lf-cascadebuilder",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 2506,
+      "subwagon_name": "base",
+      "configuration": {
+        "bc-selection-task": {
+          "ITSROFrameStartBorderMargin": "-1",
+          "checkRunDurationLimits": "0",
+          "triggerBcShift": "0",
+          "TimeFrameStartBorderMargin": "-1",
+          "processRun3": "1",
+          "processRun2": "0",
+          "TimeFrameEndBorderMargin": "-1",
+          "ITSROFrameEndBorderMargin": "-1",
+          "maxInactiveChipsPerLayer": {
+            "values": [8, 8, 8, 111, 111, 195, 195]
+          }
+        },
+        "event-selection-task": {
+          "TimeRangeVetoOnCollStandard": "10",
+          "confSigmaBCforHighPtTracks": "4",
+          "FT0CamplPerCollCutVetoOnCollInTimeRange": "8000",
+          "processRun3": "1",
+          "TimeIntervalForOccupancyCalculationMin": "-40",
+          "processRun2": "0",
+          "TimeIntervalForOccupancyCalculationMax": "100",
+          "EpsilonVzDiffVetoInROF": "0.3",
+          "isMC": "0",
+          "maxDiffZvtxFT0vsPV": "1",
+          "UseWeightsForOccupancyEstimator": "1",
+          "muonSelection": "0",
+          "FT0CamplPerCollCutVetoOnCollInROF": "5000",
+          "TimeRangeVetoOnCollNarrow": "2"
+        }
+      },
+      "wagon_id": 2257,
+      "workflow_name": "o2-analysis-event-selection",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 5734,
+      "subwagon_name": "base",
+      "configuration": {
+        "st-coll-ids": {
+          "processTrackedV0s": "1",
+          "processTrackedCascades": "1",
+          "processTracked3Bodys": "1"
+        }
+      },
+      "wagon_id": 4830,
+      "workflow_name": "o2-analysis-lf-st-coll-ids",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 10369,
+      "subwagon_name": "base",
+      "configuration": {
+        "lf-tpc-pid": {
+          "processFullAl": "0",
+          "processAl": "0",
+          "processMu": "0",
+          "processEl": "0",
+          "fileParamBbPositive": {
+            "values": [
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ]
+            ]
+          },
+          "processFullEl": "0",
+          "processFullMu": "0",
+          "fileParamBbNegative": {
+            "values": [
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ],
+              [
+                "",
+                "",
+                "false",
+                "false"
+              ]
+            ]
+          },
+          "processFullHe": "0",
+          "processFullTr": "0",
+          "processFullDe": "0",
+          "processKa": "0",
+          "skipTPCOnly": "1",
+          "processFullPi": "1",
+          "fatalOnNonExisting": "1",
+          "processFullPr": "1",
+          "processPr": "0",
+          "processDe": "0",
+          "processTr": "0",
+          "processHe": "0",
+          "ccdb-timestamp": "0",
+          "processPi": "0",
+          "processFullKa": "1",
+          "processStandalone": "0",
+          "bbParameters": {
+            "values": [
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            ]
+          },
+          "ccdb-url": "http://alice-ccdb.cern.ch"
+        }
+      },
+      "wagon_id": 7203,
+      "workflow_name": "o2-analysis-lf-tpcpid",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 23449,
+      "subwagon_name": "base",
+      "configuration": {
+        "tpc-pid": {
+          "param-file": "",
+          "pid-tiny-ka": "-1",
+          "useNetworkDe": "1",
+          "useNetworkPr": "1",
+          "useNetworkHe": "1",
+          "networkPathCCDB": "Analysis/PID/TPC/ML",
+          "useNetworkTr": "1",
+          "useNetworkPi": "1",
+          "enableTuneOnDataTable": "-1",
+          "pid-tiny-mu": "-1",
+          "pid-tiny-el": "-1",
+          "useNetworkKa": "1",
+          "pid-tiny-al": "-1",
+          "pid-full-ka": "-1",
+          "networkSetNumThreads": "0",
+          "skipTPCOnly": "1",
+          "recoPass": "",
+          "processStandard": "1",
+          "pid-full-mu": "-1",
+          "useNetworkEl": "1",
+          "pid-full-al": "-1",
+          "useNetworkMu": "1",
+          "networkBetaGammaCutoff": "0.45",
+          "pid-full-el": "-1",
+          "pid-tiny-pi": "-1",
+          "pid-tiny-tr": "-1",
+          "pid-tiny-he": "-1",
+          "pid-tiny-pr": "-1",
+          "ccdbPath": "Analysis/PID/TPC/Response",
+          "pid-tiny-de": "-1",
+          "pid-full-pi": "-1",
+          "autofetchNetworks": "1",
+          "ccdb-timestamp": "0",
+          "enableNetworkOptimizations": "1",
+          "processMcTuneOnData": "0",
+          "pid-full-de": "-1",
+          "pid-full-pr": "-1",
+          "ccdb-url": "http://alice-ccdb.cern.ch",
+          "useNetworkCorrection": "1",
+          "pid-full-he": "-1",
+          "pid-full-tr": "-1",
+          "useNetworkAl": "1",
+          "networkPathLocally": "network.onnx"
+        }
+      },
+      "wagon_id": 13812,
+      "workflow_name": "o2-analysis-pid-tpc",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 17,
+      "subwagon_name": "base",
+      "configuration": {
+        "timestamp-task": {
+          "rct-path": "RCT/Info/RunInformation",
+          "orbit-reset-path": "CTP/Calib/OrbitReset",
+          "fatalOnInvalidTimestamp": "0",
+          "ccdb-url": "http://alice-ccdb.cern.ch",
+          "verbose": "0",
+          "isRun2MC": "-1"
+        }
+      },
+      "wagon_id": 17,
+      "workflow_name": "o2-analysis-timestamp",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 3844,
+      "subwagon_name": "base",
+      "configuration": {
+        "pid-multiplicity": {
+          "processIU": "1",
+          "processStandard": "0"
+        }
+      },
+      "wagon_id": 3367,
+      "workflow_name": "o2-analysis-pid-tpc-base",
+      "suffix": ""
+    }
+  ],
+  "allowed_parent_level": 0,
+  "type": "test",
+  "inputdata": [
+    "/alice/data/2024/LHC24al/553555/apass1_sampled/1610"
+  ],
+  "package_tag": "VO_ALICE@O2Physics::daily-20250324-0000-1",
+  "wagons_timestamp": 1742847302987,
+  "aod_max_io_rate": 1000,
+  "train_id": "378356",
+  "derived_data": false
+}
+
