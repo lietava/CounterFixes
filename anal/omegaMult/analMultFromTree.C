@@ -16,16 +16,34 @@ void analMultFromTree(TString dataTRG = "dataTRG/513390/AO2D.root")
   //
   ROOT::RDF::RResultPtr<TH1D> dataCentHist;
   ROOT::RDF::RResultPtr<TH1D> dataFT0MHist;
-
   TChain dataChain("O2npcasctablent");
   fillChainFromAO2D(dataChain, dataTRG);
   ROOT::RDataFrame dataDF(dataChain);
   auto dataFilteredDF = dataDF.Filter("fToiMask & 0x1 && fNoSameBunchPileup");
-  dataCentHist =  dataFilteredDF.Histo1D({"Cent","Cent",4000,0.,10.},"fCentFT0M");
-  dataFT0MHist =  dataFilteredDF.Histo1D({"FT0M","FT0M",7000,0.,7000.},"fMultFT0M");
+  //auto dataFilteredDF = dataDF.Filter("fToiMask & 0x1");
   TFile output("outputMultTree.root", "recreate");
-  dataCentHist->Write();
-  dataFT0MHist->Write();
+  // dataCentHist =  dataFilteredDF.Histo1D({"Cent","Cent",4000,0.,10.},"fCentFT0M");
+  // dataFT0MHist =  dataFilteredDF.Histo1D({"FT0M","FT0M",7000,0.,7000.},"fMultFT0M");
+  // dataCentHist->Write();
+  // dataFT0MHist->Write();
+  auto h2CentVsFT0M = dataFilteredDF.Histo2D(
+    { "hCentVsFT0M", "Centrality vs FT0M multiplicity",
+      4000, 0., 10.,     // X bins for Centrality (Cent)
+      7000, 0., 7000. }, // Y bins for FT0M multiplicity
+    "fCentFT0M", "fMultFT0M"
+  );
+  auto h2CentVsNTrk = dataFilteredDF.Histo2D(
+    { "hCentVsNTrk", "Centrality vs FT0M multiplicity",
+      4000, 0., 10.,     // X bins for Centrality (Cent)
+      100, 0., 100. }, // Y bins for FT0M multiplicity
+    "fCentFT0M", "fMultNTracksGlobal"
+  );
+  auto pCentVsMeanMult = h2CentVsFT0M->ProfileX("pCentVsMeanMult");
+  auto pCentVsNTrk = h2CentVsNTrk->ProfileX("pCentVsNTrk");
+  h2CentVsFT0M->Write();
+  pCentVsMeanMult->Write();
+  h2CentVsNTrk->Write();
+  pCentVsNTrk->Write();
   //
   std::map<int, TH1*> centPerRunHist;
   int lastRun = 0;
