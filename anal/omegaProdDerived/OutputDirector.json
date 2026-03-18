@@ -3,7 +3,7 @@
   "resfile": "AO2D",
   "OutputDescriptors": [
     {
-      "table": "AOD/NPCASCTABLENT/0"
+      "table": "AOD/NPPileUpTABLE/0"
     }
   ],
   "ntfmerge": 1

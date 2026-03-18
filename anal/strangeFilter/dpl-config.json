@@ -64,6 +64,83 @@
         },
         "ccdburl": "http:\/\/alice-ccdb.cern.ch"
     },
+    "fwd-track-to-collision-association": {
+        "nSigmaForTimeCompat": "4",
+        "timeMargin": "0",
+        "includeUnassigned": "false",
+        "fillTableOfCollIdsPerTrack": "true",
+        "bcWindowForOneSigma": "115",
+        "processFwdAssocWithTime": "false",
+        "processFwdStandardAssoc": "false",
+        "processMFTAssocWithTime": "true",
+        "processMFTStandardAssoc": "false"
+    },
+    "kink-builder": {
+        "hypoMoth": "0",
+        "fillDebugTable": "false",
+        "maxDCAMothToPV": "0.0252",
+        "minDCADaugToPV": "0.100000001",
+        "minPtMoth": "0.600000024",
+        "maxZDiff": "20",
+        "maxPhiDiff": "50",
+        "timeMarginNS": "600",
+        "etaMax": "1",
+        "nTPCClusMinDaug": "80",
+        "askTOFforDaug": "false",
+        "doSVRadiusCut": "true",
+        "updateMothTrackUsePV": "false",
+        "cfgBetheBlochParams": {
+            "labels_rows": [
+                "Daughter"
+            ],
+            "labels_cols": [
+                "p0",
+                "p1",
+                "p2",
+                "p3",
+                "p4",
+                "resolution"
+            ],
+            "values": [
+                [
+                    "-1.0000000000000001e+32",
+                    "-1.0000000000000001e+32",
+                    "-1.0000000000000001e+32",
+                    "-1.0000000000000001e+32",
+                    "-1.0000000000000001e+32",
+                    "-1.0000000000000001e+32"
+                ]
+            ]
+        },
+        "cfgMaterialCorrection": "0",
+        "customVertexerTimeMargin": "800",
+        "skipAmbiTracks": "false",
+        "unlikeSignBkg": "false",
+        "ccdbPath": "http:\/\/alice-ccdb.cern.ch",
+        "grpmagPath": "GLO\/Config\/GRPMagField",
+        "lutPath": "GLO\/Param\/MatLUT",
+        "rigidityBins": {
+            "values": [
+                "200",
+                "-10",
+                "10"
+            ]
+        },
+        "dedxBins": {
+            "values": [
+                "1000",
+                "0",
+                "1000"
+            ]
+        },
+        "nSigmaBins": {
+            "values": [
+                "200",
+                "-5",
+                "5"
+            ]
+        }
+    },
     "st-coll-ids": {
         "processTrackedCascades": "true",
         "processTrackedV0s": "true",
@@ -124,6 +201,17 @@
         "processTracksIU": "true",
         "processTracksIUWithTracksQA": "false",
         "processTracksMCIU": "false"
+    },
+    "ft0-corrected-table": {
+        "resoFT0A": "20",
+        "resoFT0C": "20",
+        "addHistograms": "false",
+        "collisionSystem": "-2",
+        "ccdb-url": "http:\/\/alice-ccdb.cern.ch",
+        "ccdb-path-grplhcif": "GLO\/Config\/GRPLHCIF",
+        "ccdb-timestamp": "-1",
+        "processStandard": "true",
+        "processWithBypassFT0timeInMC": "false"
     },
     "propagation-service": {
         "ccdburl": "http:\/\/alice-ccdb.cern.ch",
@@ -848,6 +936,80 @@
         "processFullAl": "false",
         "processStandalone": "false"
     },
+    "tof-signal": {
+        "enableQaHistograms": "false",
+        "ccdb-url": "http:\/\/alice-ccdb.cern.ch",
+        "ccdb-path-grplhcif": "GLO\/Config\/GRPLHCIF",
+        "ccdb-timestamp": "-1",
+        "timeShiftCCDBPathPos": "Analysis\/PID\/TOFOffsetPos",
+        "timeShiftCCDBPathNeg": "Analysis\/PID\/TOFOffsetPos",
+        "timeShiftCCDBPathPosMC": "",
+        "timeShiftCCDBPathNegMC": "",
+        "paramFileName": "",
+        "parametrizationPath": "TOF\/Calib\/Params",
+        "reconstructionPass": "metadata",
+        "reconstructionPassDefault": "unanchored",
+        "fatalOnPassNotAvailable": "false",
+        "enableTimeDependentResponse": "true",
+        "collisionSystem": "-1",
+        "autoSetProcessFunctions": "true",
+        "processRun3": "true",
+        "processRun2": "false"
+    },
+    "track-selection": {
+        "isRun3": "true",
+        "produceTable": "1",
+        "produceFBextendedTable": "-1",
+        "compatibilityIU": "false",
+        "itsMatching": "1",
+        "dcaSetup": "0",
+        "ptMin": "0.100000001",
+        "ptMax": "1e+10",
+        "etaMin": "-1",
+        "etaMax": "1"
+    },
+    "ambiguous-track-propagation": {
+        "ccdburl": "http:\/\/alice-ccdb.cern.ch",
+        "geoPath": "GLO\/Config\/GeometryAligned",
+        "grpmagPath": "GLO\/Config\/GRPMagField",
+        "mVtxPath": "GLO\/Calib\/MeanVertex",
+        "produceExtra": "false",
+        "produceHistos": "false",
+        "removeTrivialAssoc": "false",
+        "cfgDCAtype": "2",
+        "cfgApplyZShiftFromCCDB": "false",
+        "cfgZShiftPath": "Users\/m\/mcoquet\/ZShift",
+        "cfgManualZShift": "0",
+        "binsDCAxy": {
+            "values": [
+                "200",
+                "-1",
+                "1"
+            ]
+        },
+        "binsDCAz": {
+            "values": [
+                "200",
+                "-1",
+                "1"
+            ]
+        },
+        "processCentral": "false",
+        "processMFT": "false",
+        "processMFTReassoc": "true",
+        "processMFTReassoc3D": "false"
+    },
+    "tof-event-time": {
+        "minMomentum": "0.5",
+        "maxMomentum": "2",
+        "maxEvTimeTOF": "100000",
+        "sel8TOFEvTime": "false",
+        "computeEvTimeWithTOF": "1",
+        "computeEvTimeWithFT0": "1",
+        "maxNtracksInSet": "10",
+        "processRun2": "false",
+        "processRun3": "true"
+    },
     "mult-cent-table": {
         "enabledTables": {
             "labels_rows": [
@@ -1027,13 +1189,76 @@
         "embedINELgtZEROselection": "false",
         "ccdburl": "http:\/\/alice-ccdb.cern.ch",
         "processRun2": "false",
-        "processRun3": "true",
-        "processRun3WithGlobalCounters": "false",
-        "processMFT": "false",
+        "processRun3": "false",
+        "processRun3WithGlobalCounters": "true",
+        "processMFT": "true",
         "processMonteCarlo": "false",
         "processMonteCarlo2Mults": "false",
         "processCentralityRun2": "false",
         "processCentralityRun3": "true"
+    },
+    "tof-pid-merge": {
+        "enableQaHistograms": "false",
+        "enableTOFParamsForBetaMass": "false",
+        "enableParticle": {
+            "labels_rows": [
+                "El",
+                "Mu",
+                "Pi",
+                "Ka",
+                "Pr",
+                "De",
+                "Tr",
+                "He",
+                "Al"
+            ],
+            "labels_cols": [
+                "Enable",
+                "EnableFull"
+            ],
+            "values": [
+                [
+                    "-1",
+                    "-1"
+                ],
+                [
+                    "-1",
+                    "-1"
+                ],
+                [
+                    "-1",
+                    "-1"
+                ],
+                [
+                    "-1",
+                    "-1"
+                ],
+                [
+                    "-1",
+                    "-1"
+                ],
+                [
+                    "-1",
+                    "-1"
+                ],
+                [
+                    "-1",
+                    "-1"
+                ],
+                [
+                    "-1",
+                    "-1"
+                ],
+                [
+                    "-1",
+                    "-1"
+                ]
+            ]
+        },
+        "processRun3": "true",
+        "processRun2": "false",
+        "processRun2BetaM": "false",
+        "processRun3BetaM": "true"
     },
     "lf-strangeness-filter": {
         "cfgv0radiusMin": "1.20000005",
@@ -1094,10 +1319,18 @@
         "hastof": "false",
         "ptthrtof": "1",
         "sel8": "false",
-        "HMTriggerSelectionForOmega": "5",
-        "LowLimitHMTriggerOmegaTracks": "90",
-        "LowLimitHMTriggerOmegaT0M": "3100",
-        "LowLimitHMTriggerOmegaT0MNorm": "70",
+        "isTriggerTVX": "true",
+        "HMTrgSelectionForOmegaFT0M": "1",
+        "LowLimitHMTrgOmegaT0M": "3100",
+        "LowLimitHMTrgOmegaT0MNorm": "70",
+        "LowLimitHMTrgT0MNorm": "140",
+        "HMTrgSelectionForOmegaTrks": "1",
+        "LowLimitHMTrgOmegaTrkGlob": "45",
+        "LowLimitHMTrgOmegaTrkSel": "50",
+        "LowLimitHMTrgTrksGlob": "100",
+        "LowLimitHMTrgTrkSel": "50",
+        "hEtaHM": "1",
+        "hMinPtHM": "0.200000003",
         "avPyT0C": "8.82999992",
         "avPyT0A": "8.15999985",
         "isTimeFrameBorderCut": "true",
@@ -1135,6 +1368,18 @@
         "maxCpaTrackedXi": "1",
         "minDcaTrackedOmega": "-1",
         "maxCpaTrackedOmega": "1",
+        "nsigmatpcSigma": "3",
+        "nsigmatofSigma": "3",
+        "minMassSigma": "1.14999998",
+        "maxMassSigma": "1.25",
+        "minPtSigma": "1.20000005",
+        "minQtAPSigma": "0.150000006",
+        "maxQtAPSigma": "0.200000003",
+        "maxDCAtoPVSigma": "0.100000001",
+        "minRadiusSigma": "19",
+        "minCosPASigma": "0.995000005",
+        "minPtProtonTOF": "0.75",
+        "maxKStarSigmaProton": "0.800000012",
         "parSigmaMass": {
             "labels_rows": [
                 "p0",

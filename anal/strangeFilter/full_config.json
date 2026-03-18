@@ -5,26 +5,27 @@
     "/alice/data/2025/LHC25ah/565411/apass1_sampled/2000",
     "/alice/data/2025/LHC25ai/566003/apass1_sampled/1810"
   ],
-  "package_tag": "VO_ALICE@O2Physics::daily-20260125-0000-1",
-  "wagons_timestamp": 1769415642829,
+  "package_tag": "VO_ALICE@O2Physics::daily-20260213-0000-1",
+  "wagons_timestamp": 1770978270017,
   "max_df_size": -1,
   "cpu_cores": 1,
   "workflows": [
     {
-      "subwagon_id": 101201,
+      "subwagon_id": 104416,
       "subwagon_name": "base",
       "configuration": {
         "lf-strangeness-filter": {
           "cfgDaughPrPt": "0.5",
           "cfgV0LifeTime": "30",
+          "LowLimitHMTrgOmegaTrkGlob": "45",
           "cfgCompV0Rej": "0.01",
           "cfgDaughTPCnclsMin": "70",
+          "minMassSigma": "1.15",
           "massWindowTrackedXiNsigma": "6",
           "useNsigmaCutTrackedOmega": "1",
           "massWindowXiExclTrackedOmega": "0.005",
           "cfgDaughPIDCutsTPCPr": "5",
           "massWindowTrackedOmega": "0.03",
-          "LowLimitFT0MMult": "3100",
           "useSigmaBasedMassCutXi": "1",
           "ccdbUrl": "http://alice-ccdb.cern.ch",
           "lowerradiusOmega": "19",
@@ -51,6 +52,7 @@
           "dcav0dau": "0.9",
           "cfgv0CosPA": "0.995",
           "omegarej": "0",
+          "maxDCAtoPVSigma": "0.1",
           "cfgDaughPiPt": "0.5",
           "upperradiusOmega": "10000",
           "tpcmincrossedrows": "50",
@@ -58,31 +60,36 @@
           "recalculateMasses": "1",
           "maxR": "200",
           "ximasswindow": "0.03",
+          "minPtSigma": "1.2",
           "cfgV0PtMin": "0",
+          "LowLimitHMTrgOmegaTrkSel": "50",
+          "minPtProtonTOF": "0.75",
           "cfgv0radiusMin": "1.2",
           "maxNSigmaV0PiTrackedCascade": "4",
           "hastof": "0",
-          "HMTriggerSelectionForOmega": "5",
-          "LowLimitHMTriggerOmegaT0M": "3100",
-          "LowLimitHMTriggerOmegaT0MNorm": "70",
-          "LowLimitHMTriggerOmegaTracksGlobal": "150",
           "isTimeFrameBorderCut": "1",
           "cfgDCAPosToPVMin": "0.05",
+          "maxMassSigma": "1.25",
           "maxCpaTrackedOmega": "1",
           "nsigmatpcpr": "4",
           "lowerradiusXiYN": "31",
+          "HMTrgSelectionForOmegaFT0M": "1",
           "dcamesontopv": "0.04",
           "v0radius": "0.5",
           "hMinPt": "5",
           "cfgDaughEtaMin": "-0.8",
           "cfgMaxDistanceV0V0": "5",
+          "maxKStarSigmaProton": "0.8",
           "cfgV0RapMin": "-0.5",
+          "maxQtAPSigma": "0.2",
           "cutzvertex": "1000",
           "cfgDCANegToPVMin": "0.2",
           "useCascadeMomentumAtPrimVtx": "0",
           "eta": "2",
           "minDcaTrackedXi": "-1",
           "nsigmatpcpi": "4",
+          "isTriggerTVX": "1",
+          "LowLimitHMTrgTrksGlob": "100",
           "massWindowXiNsigma": "6",
           "useNsigmaCutTrackedXi": "1",
           "dcabachtopv": "0.04",
@@ -112,33 +119,66 @@
           },
           "ptthrtof": "1",
           "maxMatchingChi2TrackedCascade": "2000",
+          "minCosPASigma": "0.995",
           "casccospaxi": "0.992",
           "cfgDCAV0Dau": "1",
+          "LowLimitHMTrgOmegaT0MNorm": "70",
           "avPyT0A": "8.16",
           "cfgMaxDCAV0V0": "5",
           "masslambdalimit": "0.01",
           "avPyT0C": "8.83",
+          "nsigmatpcSigma": "3",
           "xirej": "0.01",
+          "LowLimitHMTrgOmegaT0M": "3100",
           "v0cospa": "0.98",
           "cascradius": "0.4",
+          "LowLimitHMTrgT0MNorm": "140",
           "cfgLambdaMassWindow": "0.01",
           "properlifetimefactor": "5",
           "maxNSigmaBachelorTrackedOmega": "4",
           "minpt": "0",
+          "minRadiusSigma": "19",
+          "hMinPtHM": "0.2",
           "massWindowTrackedOmegaNsigma": "6",
           "cfgITSNclus": "1",
+          "minQtAPSigma": "0.15",
           "isTrackFilter": "1",
+          "HMTrgSelectionForOmegaTrks": "1",
           "minPtTrackedCascade": "0",
           "dcabaryontopv": "0.04",
+          "LowLimitHMTrgTrkSel": "50",
+          "hEtaHM": "1",
           "nsigmatpcka": "4",
           "cfgMinCPAV0V0": "0.8",
+          "nsigmatofSigma": "3",
           "cfgDaughEtaMax": "0.8",
           "cfgRCrossedFindable": "0",
           "massWindowLambda": "0.05"
         }
       },
-      "wagon_id": 46025,
+      "wagon_id": 47080,
       "workflow_name": "o2-analysis-lf-strangeness-filter",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 5051,
+      "subwagon_name": "base",
+      "configuration": {
+        "track-selection": {
+          "ptMax": "1e+10",
+          "produceTable": "1",
+          "etaMin": "-1",
+          "isRun3": "1",
+          "itsMatching": "1",
+          "etaMax": "1",
+          "compatibilityIU": "0",
+          "dcaSetup": "0",
+          "ptMin": "0.1",
+          "produceFBextendedTable": "-1"
+        }
+      },
+      "wagon_id": 4293,
+      "workflow_name": "o2-analysis-trackselection",
       "suffix": ""
     },
     {
@@ -427,14 +467,102 @@
       "suffix": ""
     },
     {
-      "subwagon_id": 61071,
+      "subwagon_id": 20940,
+      "subwagon_name": "base",
+      "configuration": {
+        "tof-signal": {
+          "parametrizationPath": "TOF/Calib/Params",
+          "timeShiftCCDBPathPosMC": "",
+          "fatalOnPassNotAvailable": "0",
+          "paramFileName": "",
+          "enableTimeDependentResponse": "1",
+          "processRun3": "1",
+          "processRun2": "0",
+          "ccdb-path-grplhcif": "GLO/Config/GRPLHCIF",
+          "collisionSystem": "-1",
+          "enableQaHistograms": "0",
+          "timeShiftCCDBPathPos": "Analysis/PID/TOFOffsetPos",
+          "ccdb-timestamp": "-1",
+          "timeShiftCCDBPathNeg": "Analysis/PID/TOFOffsetPos",
+          "autoSetProcessFunctions": "1",
+          "reconstructionPass": "metadata",
+          "timeShiftCCDBPathNegMC": "",
+          "ccdb-url": "http://alice-ccdb.cern.ch",
+          "reconstructionPassDefault": "unanchored"
+        },
+        "tof-event-time": {
+          "computeEvTimeWithTOF": "1",
+          "minMomentum": "0.5",
+          "sel8TOFEvTime": "0",
+          "maxNtracksInSet": "10",
+          "maxMomentum": "2",
+          "maxEvTimeTOF": "100000",
+          "processRun3": "1",
+          "computeEvTimeWithFT0": "1",
+          "processRun2": "0"
+        },
+        "tof-pid-merge": {
+          "enableParticle": {
+            "values": [
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1
+              ],
+              [
+                -1,
+                -1
+              ]
+            ]
+          },
+          "processRun2BetaM": "0",
+          "processRun3": "1",
+          "processRun2": "0",
+          "enableTOFParamsForBetaMass": "0",
+          "processRun3BetaM": "1",
+          "enableQaHistograms": "0"
+        }
+      },
+      "wagon_id": 12925,
+      "workflow_name": "o2-analysis-pid-tof-merge",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 61860,
       "subwagon_name": "base",
       "configuration": {
         "mult-cent-table": {
           "generatorName": "",
-          "processRun3WithGlobalCounters": "0",
-          "processMFT": "0",
-          "processRun3": "1",
+          "processRun3WithGlobalCounters": "1",
+          "processMFT": "1",
+          "processRun3": "0",
           "processCentralityRun2": "0",
           "processRun2": "0",
           "processMonteCarlo2Mults": "0",
@@ -574,7 +702,7 @@
           "processMonteCarlo": "0"
         }
       },
-      "wagon_id": 30644,
+      "wagon_id": 31037,
       "workflow_name": "o2-analysis-multcenttable",
       "suffix": ""
     },
@@ -1016,11 +1144,151 @@
       "wagon_id": 34044,
       "workflow_name": "o2-analysis-pid-tpc-service",
       "suffix": ""
+    },
+    {
+      "subwagon_id": 105256,
+      "subwagon_name": "base",
+      "configuration": {
+        "kink-builder": {
+          "minDCADaugToPV": "0.1",
+          "maxPhiDiff": "50",
+          "lutPath": "GLO/Param/MatLUT",
+          "unlikeSignBkg": "0",
+          "doSVRadiusCut": "1",
+          "cfgBetheBlochParams": {
+            "values": [
+              [
+                -1e+32,
+                -1e+32,
+                -1e+32,
+                -1e+32,
+                -1e+32,
+                -1e+32
+              ]
+            ]
+          },
+          "maxDCAMothToPV": "0.0252",
+          "rigidityBins": {
+            "values": [
+              200,
+              -10,
+              10
+            ]
+          },
+          "dedxBins": {
+            "values": [
+              1000,
+              0,
+              1000
+            ]
+          },
+          "customVertexerTimeMargin": "800",
+          "hypoMoth": "0",
+          "maxZDiff": "20",
+          "timeMarginNS": "600",
+          "ccdbPath": "http://alice-ccdb.cern.ch",
+          "nSigmaBins": {
+            "values": [
+              200,
+              -5,
+              5
+            ]
+          },
+          "updateMothTrackUsePV": "0",
+          "fillDebugTable": "0",
+          "askTOFforDaug": "0",
+          "minPtMoth": "0.6",
+          "etaMax": "1",
+          "grpmagPath": "GLO/Config/GRPMagField",
+          "nTPCClusMinDaug": "80",
+          "cfgMaterialCorrection": "0",
+          "skipAmbiTracks": "0"
+        }
+      },
+      "wagon_id": 47365,
+      "workflow_name": "o2-analysis-lf-kink-builder",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 1761,
+      "subwagon_name": "base",
+      "configuration": {
+        "ft0-corrected-table": {
+          "ccdb-timestamp": "-1",
+          "resoFT0C": "20",
+          "ccdb-path-grplhcif": "GLO/Config/GRPLHCIF",
+          "resoFT0A": "20",
+          "collisionSystem": "-2",
+          "addHistograms": "0",
+          "ccdb-url": "http://alice-ccdb.cern.ch",
+          "processWithBypassFT0timeInMC": "0",
+          "processStandard": "1"
+        }
+      },
+      "wagon_id": 1560,
+      "workflow_name": "o2-analysis-ft0-corrected-table",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 42690,
+      "subwagon_name": "base",
+      "configuration": {
+        "ambiguous-track-propagation": {
+          "binsDCAxy": {
+            "values": [
+              200,
+              -1,
+              1
+            ]
+          },
+          "produceExtra": "0",
+          "processMFT": "0",
+          "processMFTReassoc": "1",
+          "geoPath": "GLO/Config/GeometryAligned",
+          "removeTrivialAssoc": "0",
+          "binsDCAz": {
+            "values": [
+              200,
+              -1,
+              1
+            ]
+          },
+          "processCentral": "0",
+          "processMFTReassoc3D": "0",
+          "produceHistos": "0",
+          "ccdburl": "http://alice-ccdb.cern.ch",
+          "mVtxPath": "GLO/Calib/MeanVertex",
+          "grpmagPath": "GLO/Config/GRPMagField"
+        }
+      },
+      "wagon_id": 23496,
+      "workflow_name": "o2-analysis-mm-track-propagation",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 47419,
+      "subwagon_name": "base",
+      "configuration": {
+        "fwd-track-to-collision-association": {
+          "timeMargin": "0",
+          "processFwdAssocWithTime": "0",
+          "bcWindowForOneSigma": "115",
+          "processFwdStandardAssoc": "0",
+          "nSigmaForTimeCompat": "4",
+          "includeUnassigned": "0",
+          "fillTableOfCollIdsPerTrack": "1",
+          "processMFTStandardAssoc": "0",
+          "processMFTAssocWithTime": "1"
+        }
+      },
+      "wagon_id": 25073,
+      "workflow_name": "o2-analysis-fwdtrack-to-collision-associator",
+      "suffix": ""
     }
   ],
   "allowed_parent_level": 0,
   "type": "test",
   "aod_max_io_rate": 1000,
-  "train_id": "598135",
+  "train_id": "614752",
   "derived_data": false
 }
