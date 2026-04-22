@@ -10,15 +10,15 @@
         "non-prompt-cascade-task": {
           "cfgUseAbsDCA": "1",
           "cfgMinRelChi2Change": "0.9",
-          "processCascadesMC": "1",
+          "processCascadesMC": "0",
           "processCascadesData": "0",
           "cfgMaxR": "200",
           "ptEdges": "0,0.2,0.4,0.6,0.8,1,1.2,1.6,2.0,2.4,2.8,3.2,3.6,4,4.5,5,5.5,6,7,8,10",
           "ccdbUrl": "http://alice-ccdb.cern.ch",
           "cfgMinParamChange": "0.001",
-          "processTrackedCascadesMC": "1",
+          "processTrackedCascadesMC": "0",
           "cfgTriggersOfInterest": "fTrackedOmega,fOmegaHighMult,fHighFt0Mult",
-          "processGenParticles": "1",
+          "processGenParticles": "0",
           "processdNdetaMC": "1",
           "cfgPropToPCA": "1",
           "particlesCutsPID": {

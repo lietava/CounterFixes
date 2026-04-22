@@ -12,7 +12,6 @@
     },
     "internal-dpl-aod-spawner": "",
     "internal-dpl-aod-index-builder": "",
-    "mc-collision-converter": "",
     "fwd-track-to-collision-association": {
         "nSigmaForTimeCompat": "4",
         "timeMargin": "0",
@@ -66,7 +65,7 @@
         "evselOpts": {
             "amIneeded": "-1",
             "muonSelection": "0",
-            "maxDiffZvtxFT0vsPV": "1",
+            "maxDiffZvtxFT0vsPV": "3",
             "isMC": "-1",
             "confSigmaBCforHighPtTracks": "4",
             "TimeIntervalForOccupancyCalculationMin": "-40",
@@ -138,20 +137,20 @@
             "networkBetaGammaCutoff": "0.449999988",
             "ccdb-path-grplhcif": "GLO\/Config\/GRPLHCIF"
         },
-        "processTracksIU": "false",
+        "processTracksIU": "true",
         "processTracksIUWithTracksQA": "false",
-        "processTracksMCIU": "true"
+        "processTracksMCIU": "false"
     },
     "ft0-corrected-table": {
-        "resoFT0A": "5.6500001",
-        "resoFT0C": "5.6500001",
+        "resoFT0A": "20",
+        "resoFT0C": "20",
         "addHistograms": "false",
         "collisionSystem": "-2",
         "ccdb-url": "http:\/\/alice-ccdb.cern.ch",
         "ccdb-path-grplhcif": "GLO\/Config\/GRPLHCIF",
         "ccdb-timestamp": "-1",
-        "processStandard": "false",
-        "processWithBypassFT0timeInMC": "true"
+        "processStandard": "true",
+        "processWithBypassFT0timeInMC": "false"
     },
     "propagation-service": {
         "ccdburl": "http:\/\/alice-ccdb.cern.ch",
@@ -596,6 +595,10 @@
         "produceExtra": "false",
         "produceHistos": "false",
         "removeTrivialAssoc": "false",
+        "cfgDCAtype": "2",
+        "cfgApplyZShiftFromCCDB": "false",
+        "cfgZShiftPath": "Users\/m\/mcoquet\/ZShift",
+        "cfgManualZShift": "0",
         "binsDCAxy": {
             "values": [
                 "200",
@@ -801,15 +804,15 @@
         "ccdbPathVtxZ": "Centrality\/Calibration",
         "ccdbPathCentrality": "Centrality\/Estimators",
         "reconstructionPass": "",
-        "generatorName": "PYTHIA",
+        "generatorName": "",
         "embedINELgtZEROselection": "false",
         "ccdburl": "http:\/\/alice-ccdb.cern.ch",
         "processRun2": "false",
         "processRun3": "false",
         "processRun3WithGlobalCounters": "true",
         "processMFT": "true",
-        "processMonteCarlo": "true",
-        "processMonteCarlo2Mults": "true",
+        "processMonteCarlo": "false",
+        "processMonteCarlo2Mults": "false",
         "processCentralityRun2": "false",
         "processCentralityRun3": "true"
     },
@@ -874,7 +877,7 @@
         "processRun3": "true",
         "processRun2": "false",
         "processRun2BetaM": "false",
-        "processRun3BetaM": "false"
+        "processRun3BetaM": "true"
     },
     "non-prompt-cascade-task": {
         "ccdbUrl": "http:\/\/alice-ccdb.cern.ch",
@@ -921,16 +924,19 @@
             ]
         },
         "cfgSkimmedProcessing": "true",
-        "cfgTriggersOfInterest": "fTrackedOmega,fOmegaHighMult,fHighFt0Mult",
+        "cfgTriggersOfInterest": "fOmegaHighMult,fHighFt0cFv0Flat,fHighFt0cFv0Mult,fHighFt0Flat,fHighFt0Mult,fHighMultFv0,fHighTrackMult",
         "cfgMaxMult": "8000",
         "cfgMaxMultFV0": "10000",
         "ptEdges": "0,0.2,0.4,0.6,0.8,1,1.2,1.6,2.0,2.4,2.8,3.2,3.6,4,4.5,5,5.5,6,7,8,10",
-        "processTrackedCascadesMC": "true",
-        "processCascadesMC": "true",
-        "processGenParticles": "true",
+        "cfgDownscaleMB": "1",
+        "processTrackedCascadesMC": "false",
+        "processCascadesMC": "false",
+        "processGenParticles": "false",
         "processTrackedCascadesData": "false",
         "processCascadesData": "false",
-        "processdNdetaMC": "true"
+        "processdNdetaMC": "false",
+        "processdNdeta": "true",
+        "processPileUp": "false"
     },
     "internal-dpl-aod-writer": "",
     "internal-dpl-aod-global-analysis-file-sink": "",
