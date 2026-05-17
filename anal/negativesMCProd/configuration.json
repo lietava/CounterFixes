@@ -33,15 +33,19 @@
         ]
       ]
     },
+    "cfgEtaCutdNdeta": "0.8",
     "cfgCutNclusTPC": "70",
     "cfgMaxMultFV0": "10000",
     "cfgGRPmagPath": "GLO/Config/GRPMagField",
     "cfgSkimmedProcessing": "1",
+    "processPileUp": "0",
     "cfgMaxDZIni": "4",
     "cfgSelectOnlyOmegas": "1",
     "cfgRedoPV": "1",
     "cfgMinCosPA": "-1",
     "processTrackedCascadesData": "0",
+    "processdNdeta": "0",
+    "cfgDownscaleMB": "1",
     "cfgMaxMult": "8000",
     "cfgMaterialCorrection": "2"
   },
@@ -56,6 +60,14 @@
     "dcaSetup": "0",
     "ptMin": "0.1",
     "produceFBextendedTable": "-1"
+  },
+  "mc-collision-extra": {
+    "poiEtaWindow": "0.8",
+    "processNoCentrality": "0",
+    "pdgCodeOfInterest": "3312",
+    "processWithCentrality": "1",
+    "processMcContexts": "0",
+    "pdgCodeAbsolute": "1"
   },
   "st-coll-ids": {
     "processTrackedV0s": "1",
@@ -152,7 +164,7 @@
     "evselOpts.NumberOfOrbitsPerTF": "-1",
     "evselOpts.TimeRangeVetoOnCollNarrow": "0.25",
     "evselOpts.VzDiffNsigma": "3",
-    "evselOpts.maxDiffZvtxFT0vsPV": "1",
+    "evselOpts.maxDiffZvtxFT0vsPV": "3",
     "bcselOpts.checkRunDurationLimits": "0",
     "evselOpts.amIneeded": "-1",
     "evselOpts.EpsilonVzDiffVetoInROF": "0.3",

@@ -41,15 +41,19 @@
               ]
             ]
           },
+          "cfgEtaCutdNdeta": "0.8",
           "cfgCutNclusTPC": "70",
           "cfgMaxMultFV0": "10000",
           "cfgGRPmagPath": "GLO/Config/GRPMagField",
           "cfgSkimmedProcessing": "1",
+          "processPileUp": "0",
           "cfgMaxDZIni": "4",
           "cfgSelectOnlyOmegas": "1",
           "cfgRedoPV": "1",
           "cfgMinCosPA": "-1",
           "processTrackedCascadesData": "0",
+          "processdNdeta": "0",
+          "cfgDownscaleMB": "1",
           "cfgMaxMult": "8000",
           "cfgMaterialCorrection": "2"
         }
@@ -77,6 +81,23 @@
       },
       "wagon_id": 951,
       "workflow_name": "o2-analysis-trackselection",
+      "suffix": ""
+    },
+    {
+      "subwagon_id": 5426,
+      "subwagon_name": "base",
+      "configuration": {
+        "mc-collision-extra": {
+          "poiEtaWindow": "0.8",
+          "processNoCentrality": "0",
+          "pdgCodeOfInterest": "3312",
+          "processWithCentrality": "1",
+          "processMcContexts": "0",
+          "pdgCodeAbsolute": "1"
+        }
+      },
+      "wagon_id": 4626,
+      "workflow_name": "o2-analysis-mccollisionextra",
       "suffix": ""
     },
     {
@@ -214,7 +235,7 @@
           "evselOpts.NumberOfOrbitsPerTF": "-1",
           "evselOpts.TimeRangeVetoOnCollNarrow": "0.25",
           "evselOpts.VzDiffNsigma": "3",
-          "evselOpts.maxDiffZvtxFT0vsPV": "1",
+          "evselOpts.maxDiffZvtxFT0vsPV": "3",
           "bcselOpts.checkRunDurationLimits": "0",
           "evselOpts.amIneeded": "-1",
           "evselOpts.EpsilonVzDiffVetoInROF": "0.3",
@@ -875,29 +896,24 @@
   ],
   "allowed_parent_level": 0,
   "type": "test",
+  "tf_limit": 2,
   "derived_data_type": "slim",
   "inputdata": [
     "/alice/sim/2024/LHC24j7/553555"
   ],
-  "package_tag": "VO_ALICE@O2Physics::daily-20251210-0000-1",
+  "package_tag": "VO_ALICE@O2Physics::daily-20260415-0000-1",
   "OutputDirector": {
     "debug_mode": true,
     "resfile": "AO2D",
     "OutputDescriptors": [
       {
-        "table": "AOD/NPCASCTABLEMC/0"
-      },
-      {
-        "table": "AOD/NPCASCTABLEMCNT/0"
-      },
-      {
-        "table": "AOD/NPCASCTABLEGen/0"
+        "table": "AOD/NPMCChargedTABL/0"
       }
     ],
     "ntfmerge": 1
   },
-  "wagons_timestamp": 1765356865781,
+  "wagons_timestamp": 1776749793845,
   "aod_max_io_rate": 1000,
-  "train_id": "572490",
+  "train_id": "661541",
   "derived_data": true
 }

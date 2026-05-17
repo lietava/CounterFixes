@@ -66,7 +66,7 @@
         "evselOpts": {
             "amIneeded": "-1",
             "muonSelection": "0",
-            "maxDiffZvtxFT0vsPV": "1",
+            "maxDiffZvtxFT0vsPV": "3",
             "isMC": "-1",
             "confSigmaBCforHighPtTracks": "4",
             "TimeIntervalForOccupancyCalculationMin": "-40",
@@ -797,6 +797,7 @@
             ]
         },
         "autoConfigureProcess": "false",
+        "doNTrackStudies": "true",
         "doVertexZeq": "1",
         "minPtGlobalTrack": "0.150000006",
         "maxPtGlobalTrack": "1e+10",
@@ -930,15 +931,25 @@
         "cfgMaxMultFV0": "10000",
         "ptEdges": "0,0.2,0.4,0.6,0.8,1,1.2,1.6,2.0,2.4,2.8,3.2,3.6,4,4.5,5,5.5,6,7,8,10",
         "cfgDownscaleMB": "1",
+        "cfgEtaCutdNdeta": "0.80000000000000004",
         "processTrackedCascadesMC": "false",
         "processCascadesMC": "false",
         "processGenParticles": "false",
         "processTrackedCascadesData": "false",
         "processCascadesData": "false",
         "processdNdetaMC": "true",
+        "processdNdeta": "false",
         "processPileUp": "false"
     },
-    "internal-dpl-aod-writer": "",
+    "mc-collision-extra": {
+        "pdgCodeOfInterest": "3312",
+        "pdgCodeAbsolute": "true",
+        "poiEtaWindow": "0.800000012",
+        "processNoCentrality": "false",
+        "processWithCentrality": "true",
+        "processMcContexts": "false"
+    },
     "internal-dpl-aod-global-analysis-file-sink": "",
+    "internal-dpl-aod-writer": "",
     "internal-dpl-injected-dummy-sink": ""
 }

@@ -65,17 +65,6 @@ Matrix2D_t poissonRandomizeMatrix(const Matrix2D_t& input, TRandom3& rand)
   }
   return randomized;
 }
-
-Matrix2D_t makeFlatPrior(double value = 1.0)
-{
-  Matrix2D_t prior;
-  for (int ix = 0; ix < NPT; ++ix) {
-    for (int iy = 0; iy < NMULT; ++iy) {
-      prior[ix][iy] = value;
-    }
-  }
-  return prior;
-}
 void printMatrix4D(Matrix4D_t& m, const std::string& name = "")
 {
   std::cout << "===> " << name << std::endl;
@@ -233,29 +222,27 @@ void generateTrainingSample(int nTrainEvents,
   }
 }
 
-bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
-                                           double ptMin,
-                                           double ptMax,
-                                           double multMin,
-                                           double multMax,
-                                           TH2D* hTruthTrainTmp,
-                                           TH2D* hRecoTrainTmp,
-                                           TH2D* hMissTmp,
-                                           TH1D* hMultTrueTrain,
-                                           TH1D* hMultRecoTrain,
-                                           TH1D* hPtTrueTrain,
-                                           TH1D* hPtRecoTrain,
-                                           Matrix4D_t& Rcount,
-                                           Matrix2D_t& FakeTrain,
-                                           Matrix2D_t& FeedInTrain,
-                                           Matrix2D_t& RecoAllTrain)
+bool readTrainingSampleFromAO2D(const TString& trainAO2D,
+                                double ptMin,
+                                double ptMax,
+                                double multMin,
+                                double multMax,
+                                TH2D* hTruthTrainTmp,
+                                TH2D* hRecoTrainTmp,
+                                TH2D* hMissTmp,
+                                TH1D* hMultTrueTrain,
+                                TH1D* hMultRecoTrain,
+                                TH1D* hPtTrueTrain,
+                                TH1D* hPtRecoTrain,
+                                Matrix4D_t& Rcount,
+                                Matrix2D_t& FakeTrain,
+                                Matrix2D_t& RecoAllTrain)
 {
   TChain trainChain("O2npmcchargedtabl");
   fillChainFromAO2D(trainChain, trainAO2D);
 
   if (trainChain.GetEntries() <= 0) {
-    std::cerr << "No nonPromptCascade NPMCChargedTABLE entries found in "
-              << trainAO2D << std::endl;
+    std::cerr << "No O2npmcchargedtabl entries found in " << trainAO2D << std::endl;
     return false;
   }
 
@@ -263,13 +250,13 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
       !trainChain.GetBranch("fPtRec") ||
       !trainChain.GetBranch("fMultGen") ||
       !trainChain.GetBranch("fMultNTracksNP")) {
-    std::cerr << "NPMCChargedTABLE is missing one of the required branches: "
+    std::cerr << "O2npmcchargedtabl is missing one of the required branches: "
               << "fPtGen, fPtRec, fMultGen, fMultNTracksNP" << std::endl;
     return false;
   }
 
-  float ptTrue = 0.0f;
-  float ptReco = 0.0f;
+  float ptTrue = 0.0;
+  float ptReco = 0.0;
   int multTrue = 0;
   int multReco = 0;
 
@@ -278,22 +265,13 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
   trainChain.SetBranchAddress("fMultGen", &multTrue);
   trainChain.SetBranchAddress("fMultNTracksNP", &multReco);
 
-  Long64_t nMatched = 0;
-  Long64_t nMissed = 0;
-  Long64_t nFake = 0;
-  Long64_t nFeedIn = 0;
-  Long64_t nIgnored = 0;
-
   for (Long64_t i = 0; i < trainChain.GetEntries(); ++i) {
     trainChain.GetEntry(i);
 
-    // Sentinel convention from nonPromptCascade NPMCChargedTABLE:
-    //   matched: ptGen>=0, ptRec>=0; fake: ptGen=-1/-2/-3; feed-in: ptGen=-4; missed: ptRec=-1/-2.
-    const bool isFeedIn = (ptTrue <= -3.5f);
-    const bool hasTruth = (ptTrue >= ptMin && ptTrue < ptMax &&
-                           multTrue >= multMin && multTrue < multMax);
-    const bool hasReco = (ptReco > ptMin && ptReco < ptMax &&
-                          multReco >= multMin && multReco < multMax);
+    bool hasTruth = (ptTrue >= ptMin && ptTrue < ptMax &&
+                     multTrue >= multMin && multTrue < multMax);
+    bool hasReco = (ptReco > ptMin && ptReco < ptMax &&
+                    multReco >= multMin && multReco < multMax);
 
     if (hasTruth) {
       hTruthTrainTmp->Fill(ptTrue, multTrue);
@@ -308,43 +286,21 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
     }
 
     if (hasTruth && hasReco) {
-      // Matched row: fills the detector response R(reco pt,mult | truth pt,mult).
       int it = hTruthTrainTmp->GetXaxis()->FindBin(ptTrue) - 1;
       int jt = hTruthTrainTmp->GetYaxis()->FindBin(multTrue) - 1;
       int ir = hRecoTrainTmp->GetXaxis()->FindBin(ptReco) - 1;
       int jr = hRecoTrainTmp->GetYaxis()->FindBin(multReco) - 1;
       Rcount[ir][jr][it][jt] += 1.0;
       RecoAllTrain[ir][jr] += 1.0;
-      ++nMatched;
     } else if (hasTruth) {
-      // Missed row: truth particle has no usable reco entry; enters response normalization.
       hMissTmp->Fill(ptTrue, multTrue);
-      ++nMissed;
     } else if (hasReco) {
       int ir = hRecoTrainTmp->GetXaxis()->FindBin(ptReco) - 1;
       int jr = hRecoTrainTmp->GetYaxis()->FindBin(multReco) - 1;
-      if (isFeedIn) {
-        // Feed-in row: reco track from outside truth fiducial volume, ptGen=-4; subtracted separately.
-        FeedInTrain[ir][jr] += 1.0;
-        ++nFeedIn;
-      } else {
-        // Fake row: reco track without a usable matched truth particle, ptGen=-1/-2/-3.
-        FakeTrain[ir][jr] += 1.0;
-        ++nFake;
-      }
-      // All reconstructed rows provide the denominator for non-signal subtraction.
+      FakeTrain[ir][jr] += 1.0;
       RecoAllTrain[ir][jr] += 1.0;
-    } else {
-      ++nIgnored;
     }
   }
-
-  std::cout << "Read nonPromptCascade NPMCChargedTABLE from " << trainAO2D << std::endl;
-  std::cout << "  matched: " << nMatched
-            << " missed: " << nMissed
-            << " fake: " << nFake
-            << " feed-in: " << nFeedIn
-            << " ignored: " << nIgnored << std::endl;
 
   return true;
 }
@@ -433,7 +389,7 @@ void generatePseudoData(int nDataEvents,
   }
 }
 
-void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
+void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false)
 {
   const double ptMin   = 0.0;
   const double ptMax   = 10.0;
@@ -442,7 +398,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
 
   const int nTrainEvents = 100000;
   const int nDataEvents  = 1000;
-  const int nIter        = 1000;
+  const int nIter        = 10;
 
   const double eff      = 0.8;
   const double fakeMean = 1.5;
@@ -483,7 +439,6 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   // Response tensor counts
   Matrix4D_t Rcount = {};
   Matrix2D_t FakeTrain;
-  Matrix2D_t FeedInTrain;
   Matrix2D_t RecoAllTrain;
 
   // ------------------------------------------------------------------
@@ -494,11 +449,11 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
       std::cerr << "AO2D training requested, but trainAO2D is empty" << std::endl;
       return;
     }
-    if (!readNonPromptCascadeTrainingFromAO2D(trainAO2D, ptMin, ptMax, multMin, multMax,
+    if (!readTrainingSampleFromAO2D(trainAO2D, ptMin, ptMax, multMin, multMax,
                                     hTruthTrainTmp, hRecoTrainTmp, hMissTmp,
                                     hMultTrueTrain, hMultRecoTrain,
                                     hPtTrueTrain, hPtRecoTrain, Rcount,
-                                    FakeTrain, FeedInTrain, RecoAllTrain)) {
+                                    FakeTrain, RecoAllTrain)) {
       return;
     }
   } else {
@@ -569,17 +524,15 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   // optional debugging line from your original code:
   RecoData = RecoTrain;
 
-  // Reco input to Bayes is corrected for non-signal reco rows measured in training.
-  // FakeTrain and FeedInTrain are kept separate in output, but both are removed here.
   Matrix2D_t RecoDataUnfold = RecoData;
   for (int ir = 0; ir < NPT; ++ir) {
     for (int jr = 0; jr < NMULT; ++jr) {
-      double nonSignalFraction = 0.0;
+      double fakeFraction = 0.0;
       if (RecoAllTrain[ir][jr] > 0.0) {
-        nonSignalFraction = (FakeTrain[ir][jr] + FeedInTrain[ir][jr]) / RecoAllTrain[ir][jr];
+        fakeFraction = FakeTrain[ir][jr] / RecoAllTrain[ir][jr];
       }
-      nonSignalFraction = std::clamp(nonSignalFraction, 0.0, 1.0);
-      RecoDataUnfold[ir][jr] = RecoData[ir][jr] * (1.0 - nonSignalFraction);
+      fakeFraction = std::clamp(fakeFraction, 0.0, 1.0);
+      RecoDataUnfold[ir][jr] = RecoData[ir][jr] * (1.0 - fakeFraction);
     }
   }
 
@@ -587,10 +540,9 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   // 5. MANUAL ITERATIVE BAYES
   // ------------------------------------------------------------------
   TRandom3 randPoisson(123);
-  //Matrix2D_t Tunfold = TruthTrain;
+  Matrix2D_t Tunfold = TruthTrain;
   //Matrix2D_t Tunfold =  poissonRandomizeMatrix(TruthTrain,randPoisson);
   //Matrix2D_t Tunfold = RecoTrain;
-  Matrix2D_t Tunfold = makeFlatPrior();
   printMatrix2D(Tunfold, "Tunfold 0th");
 
   double sumReco = 0.0;
@@ -667,7 +619,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
       }
     }
 
-    printMatrix2D(Tnew, "Tnew " + std::to_string(iter));
+    printMatrix2D(Tnew, "Tnew");
     Tunfold = Tnew;
   }
 
@@ -680,10 +632,6 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   TH2D* hRecoData   = new TH2D("hRecoData",   "Pseudo-data reco;p_{T};mult",  NPT, ptMin, ptMax, NMULT, multMin, multMax);
   TH2D* hUnfold     = new TH2D("hUnfold",     "Manual Bayes unfolded;p_{T};mult", NPT, ptMin, ptMax, NMULT, multMin, multMax);
   TH2D* hMiss       = new TH2D("hMiss",       "Missed;p_{T};mult", NPT, ptMin, ptMax, NMULT, multMin, multMax);
-  TH2D* hFakeTrain  = new TH2D("hFakeTrain",  "Training fakes;p_{T};mult", NPT, ptMin, ptMax, NMULT, multMin, multMax);
-  TH2D* hFeedInTrain = new TH2D("hFeedInTrain", "Training feed-in;p_{T};mult", NPT, ptMin, ptMax, NMULT, multMin, multMax);
-  TH2D* hRecoAllTrain = new TH2D("hRecoAllTrain", "Training reco all;p_{T};mult", NPT, ptMin, ptMax, NMULT, multMin, multMax);
-  TH2D* hRecoDataUnfold = new TH2D("hRecoDataUnfold", "Non-signal-corrected reco data;p_{T};mult", NPT, ptMin, ptMax, NMULT, multMin, multMax);
 
   TH2D* hResponseFlat = new TH2D("hResponseFlat", "Flattened response;reco flat;truth flat",
                                  NPT * NMULT, 0, NPT * NMULT, NPT * NMULT, 0, NPT * NMULT);
@@ -701,10 +649,6 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
     for (int jr = 0; jr < NMULT; ++jr) {
       hRecoTrain->SetBinContent(ir + 1, jr + 1, RecoTrain[ir][jr]);
       hRecoData->SetBinContent(ir + 1, jr + 1, RecoData[ir][jr]);
-      hFakeTrain->SetBinContent(ir + 1, jr + 1, FakeTrain[ir][jr]);
-      hFeedInTrain->SetBinContent(ir + 1, jr + 1, FeedInTrain[ir][jr]);
-      hRecoAllTrain->SetBinContent(ir + 1, jr + 1, RecoAllTrain[ir][jr]);
-      hRecoDataUnfold->SetBinContent(ir + 1, jr + 1, RecoDataUnfold[ir][jr]);
     }
   }
 
@@ -742,10 +686,6 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   hRecoData->Write();
   hUnfold->Write();
   hMiss->Write();
-  hFakeTrain->Write();
-  hFeedInTrain->Write();
-  hRecoAllTrain->Write();
-  hRecoDataUnfold->Write();
   hResponseFlat->Write();
 
   hPtTrueTrain->Write();
