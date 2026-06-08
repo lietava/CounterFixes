@@ -1,0 +1,6 @@
+[FATAL] error while setting up workflow in o2-ctp-reco-workflow: all outputs were disabled
+[/Users/romanlietava/alice/sw/osx_arm64/FairLogger/v2.3.1-local1/lib/libFairLogger.2.3.1.dylib] fair::Logger::~Logger() (no debug info)
+[/Users/romanlietava/alice/sw/osx_arm64/O2/ctpdev-local1/lib/libO2Framework.dylib] doUnknownException(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&, char const*) /Users/romanlietava/alice/sw/SOURCES/O2/ctpdev/0/Framework/Core/src/runDataProcessing.cxx:0
+[/Users/romanlietava/alice/sw/osx_arm64/O2/ctpdev-local1/lib/libO2Framework.dylib] callMain(int, char**, int (*)(int, char**)) /Users/romanlietava/alice/sw/SOURCES/O2/ctpdev/0/Framework/Core/src/runDataProcessing.cxx:220
+[/Users/romanlietava/alice/sw/osx_arm64/O2/ctpdev-local1/bin/o2-ctp-reco-workflow] main /Users/romanlietava/alice/sw/SOURCES/O2/ctpdev/0/Framework/Core/include/Framework/runDataProcessing.h:218
+[/usr/lib/dyld] start (no debug info)

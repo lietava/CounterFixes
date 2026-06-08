@@ -1,0 +1,654 @@
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 8147.
+[INFO] Driver listening on port: 16227
+[INFO] Rate limiting set up at 2000 MB and 64 timeframes distributed over 1 readers
+[INFO] O2 Data Processing Layer initialised. We brake for nobody.
+[INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
+[INFO] Redeployment of configuration asked.
+[INFO] Starting internal-dpl-clock on pid 8156
+[INFO] Starting tf-reader on pid 8157
+[INFO] Starting internal-dpl-ccdb-backend on pid 8158
+[INFO] Starting ctp-raw-decoder on pid 8159
+[INFO] Starting ctp-digit-writer on pid 8160
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 8161
+[INFO] Redeployment of configuration done.
+[8156:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[8161:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[8157:tf-reader]: [INFO] Instrumenting crash signals
+[8156:internal-dpl-clock]: [INFO] Spawning new device internal-dpl-clock in process with pid 8156
+[8161:internal-dpl-injected-dummy-sink]: [INFO] Spawning new device internal-dpl-injected-dummy-sink in process with pid 8161
+[8157:tf-reader]: [INFO] Spawning new device tf-reader in process with pid 8157
+[8156:internal-dpl-clock]: [10:09:01][INFO] 
+[8156:internal-dpl-clock]:       ______      _    _______  _________ 
+[8156:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[8156:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[8156:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[8156:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[8156:internal-dpl-clock]: 
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][INFO] 
+[8161:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[8161:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[8161:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[8161:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[8161:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[8161:internal-dpl-injected-dummy-sink]: 
+[8156:internal-dpl-clock]: [10:09:01][STATE] Starting FairMQ state machine --> IDLE
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] Starting FairMQ state machine --> IDLE
+[8157:tf-reader]: [10:09:01][INFO] 
+[8157:tf-reader]:       ______      _    _______  _________ 
+[8157:tf-reader]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[8157:tf-reader]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[8157:tf-reader]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[8157:tf-reader]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[8157:tf-reader]: 
+[8157:tf-reader]: [10:09:01][STATE] Starting FairMQ state machine --> IDLE
+[8156:internal-dpl-clock]: [10:09:01][STATE] IDLE ---> INITIALIZING DEVICE
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] IDLE ---> INITIALIZING DEVICE
+[8157:tf-reader]: [10:09:01][STATE] IDLE ---> INITIALIZING DEVICE
+[8157:tf-reader]: [10:09:01][INFO] Input contains 1 files, 0 remote
+[8157:tf-reader]: [10:09:01][INFO] Finished file fetching: 1 of 1 files fetched successfully in 0 iterations
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] INITIALIZED ---> BINDING
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] BINDING ---> BOUND
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] BOUND ---> CONNECTING
+[8157:tf-reader]: [10:09:01][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[8157:tf-reader]: [10:09:01][STATE] INITIALIZED ---> BINDING
+[8156:internal-dpl-clock]: [10:09:01][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[8156:internal-dpl-clock]: [10:09:01][STATE] INITIALIZED ---> BINDING
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] CONNECTING ---> DEVICE READY
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] DEVICE READY ---> INITIALIZING TASK
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] INITIALIZING TASK ---> READY
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][STATE] READY ---> RUNNING
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][INFO] fair::mq::Device running...
+[8157:tf-reader]: [10:09:01][STATE] BINDING ---> BOUND
+[8157:tf-reader]: [10:09:01][STATE] BOUND ---> CONNECTING
+[8157:tf-reader]: [10:09:01][STATE] CONNECTING ---> DEVICE READY
+[8157:tf-reader]: [10:09:01][STATE] DEVICE READY ---> INITIALIZING TASK
+[8157:tf-reader]: [10:09:01][STATE] INITIALIZING TASK ---> READY
+[8157:tf-reader]: [10:09:01][STATE] READY ---> RUNNING
+[8157:tf-reader]: [10:09:01][INFO] fair::mq::Device running...
+[8156:internal-dpl-clock]: [10:09:01][STATE] BINDING ---> BOUND
+[8156:internal-dpl-clock]: [10:09:01][STATE] BOUND ---> CONNECTING
+[8156:internal-dpl-clock]: [10:09:01][STATE] CONNECTING ---> DEVICE READY
+[8156:internal-dpl-clock]: [10:09:01][STATE] DEVICE READY ---> INITIALIZING TASK
+[8156:internal-dpl-clock]: [10:09:01][STATE] INITIALIZING TASK ---> READY
+[8156:internal-dpl-clock]: [10:09:01][STATE] READY ---> RUNNING
+[8156:internal-dpl-clock]: [10:09:01][INFO] fair::mq::Device running...
+[8157:tf-reader]: [10:09:01][INFO] LHCPeriod is not available, using current month MAY
+[8157:tf-reader]: [10:09:01][INFO] Correctly handshaken websocket connection.
+[8156:internal-dpl-clock]: [10:09:01][INFO] LHCPeriod is not available, using current month MAY
+[8156:internal-dpl-clock]: [10:09:01][INFO] Correctly handshaken websocket connection.
+[8157:tf-reader]: [10:09:01][INFO] Processing file o2_rawtf_run00572163_tf00475979_epn186.tf
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][INFO] LHCPeriod is not available, using current month MAY
+[8161:internal-dpl-injected-dummy-sink]: [10:09:01][INFO] Correctly handshaken websocket connection.
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114304
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8158:internal-dpl-ccdb-backend]: [INFO] Instrumenting crash signals
+[8160:ctp-digit-writer]: [INFO] Instrumenting crash signals
+[8159:ctp-raw-decoder]: [INFO] Instrumenting crash signals
+[8158:internal-dpl-ccdb-backend]: [INFO] Spawning new device internal-dpl-ccdb-backend in process with pid 8158
+[8160:ctp-digit-writer]: [INFO] Spawning new device ctp-digit-writer in process with pid 8160
+[8159:ctp-raw-decoder]: [INFO] Spawning new device ctp-raw-decoder in process with pid 8159
+[8160:ctp-digit-writer]: [10:09:01][INFO] 
+[8160:ctp-digit-writer]:       ______      _    _______  _________ 
+[8160:ctp-digit-writer]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[8160:ctp-digit-writer]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[8160:ctp-digit-writer]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[8160:ctp-digit-writer]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[8160:ctp-digit-writer]: 
+[8159:ctp-raw-decoder]: [10:09:01][INFO] 
+[8159:ctp-raw-decoder]:       ______      _    _______  _________ 
+[8159:ctp-raw-decoder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[8159:ctp-raw-decoder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[8159:ctp-raw-decoder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[8159:ctp-raw-decoder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[8159:ctp-raw-decoder]: 
+[8159:ctp-raw-decoder]: [10:09:01][STATE] Starting FairMQ state machine --> IDLE
+[8160:ctp-digit-writer]: [10:09:01][STATE] Starting FairMQ state machine --> IDLE
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] 
+[8158:internal-dpl-ccdb-backend]:       ______      _    _______  _________ 
+[8158:internal-dpl-ccdb-backend]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[8158:internal-dpl-ccdb-backend]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[8158:internal-dpl-ccdb-backend]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[8158:internal-dpl-ccdb-backend]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[8158:internal-dpl-ccdb-backend]: 
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] Starting FairMQ state machine --> IDLE
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] IDLE ---> INITIALIZING DEVICE
+[8160:ctp-digit-writer]: [10:09:01][STATE] IDLE ---> INITIALIZING DEVICE
+[8159:ctp-raw-decoder]: [10:09:01][STATE] IDLE ---> INITIALIZING DEVICE
+[8159:ctp-raw-decoder]: [10:09:01][WARN] Input name without level:TVX
+[8159:ctp-raw-decoder]: [10:09:01][WARN] Input name without level:VBA
+[8159:ctp-raw-decoder]: [10:09:01][INFO] CTP reco init done. Inputs decoding here:1 DoLumi:0 DoDigits:1 NTF:90 Lumi inputs:TVX:3 VBA:6 Max errors:1000 Max input size:0 MaxInputSizeFatal:0 CheckConsistency:1
+[8159:ctp-raw-decoder]: [10:09:01][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[8159:ctp-raw-decoder]: [10:09:01][STATE] INITIALIZED ---> BINDING
+[8159:ctp-raw-decoder]: [10:09:01][STATE] BINDING ---> BOUND
+[8159:ctp-raw-decoder]: [10:09:01][STATE] BOUND ---> CONNECTING
+[8159:ctp-raw-decoder]: [10:09:01][STATE] CONNECTING ---> DEVICE READY
+[8159:ctp-raw-decoder]: [10:09:01][STATE] DEVICE READY ---> INITIALIZING TASK
+[8159:ctp-raw-decoder]: [10:09:01][STATE] INITIALIZING TASK ---> READY
+[8159:ctp-raw-decoder]: [10:09:01][STATE] READY ---> RUNNING
+[8159:ctp-raw-decoder]: [10:09:01][INFO] fair::mq::Device running...
+[8159:ctp-raw-decoder]: [10:09:01][INFO] LHCPeriod is not available, using current month MAY
+[8159:ctp-raw-decoder]: [10:09:01][INFO] Correctly handshaken websocket connection.
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] CCDB Backend at: http://alice-ccdb.cern.ch, validity check for every 2147483647 TF
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] Hook to enable signposts for CCDB messages at 0x79c95d820
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] Init CcdApi with UserAgentID: MacOS_app/unknown@8158 target/Darwin_arm64 init/1780128541686 id/romanlietava@192.168.1.45 session/SyzI4rab, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] Initialised default CCDB host http://alice-ccdb.cern.ch
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] The following route is a condition CTP/CTPCONFIG/0
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] - ccdb-path: CTP/Config/Config
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] The following route is a condition CTP/Trig_Offset/0
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] - ccdb-path: CTP/Config/TriggerOffsets
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] INITIALIZED ---> BINDING
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] BINDING ---> BOUND
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] BOUND ---> CONNECTING
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] CONNECTING ---> DEVICE READY
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] DEVICE READY ---> INITIALIZING TASK
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] INITIALIZING TASK ---> READY
+[8158:internal-dpl-ccdb-backend]: [10:09:01][STATE] READY ---> RUNNING
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] fair::mq::Device running...
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] LHCPeriod is not available, using current month MAY
+[8158:internal-dpl-ccdb-backend]: [10:09:01][INFO] Correctly handshaken websocket connection.
+[8160:ctp-digit-writer]: [10:09:01][INFO] 0: branch  CTPDigits set up
+[8160:ctp-digit-writer]: [10:09:01][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[8160:ctp-digit-writer]: [10:09:01][STATE] INITIALIZED ---> BINDING
+[8160:ctp-digit-writer]: [10:09:01][STATE] BINDING ---> BOUND
+[8160:ctp-digit-writer]: [10:09:01][STATE] BOUND ---> CONNECTING
+[8160:ctp-digit-writer]: [10:09:01][STATE] CONNECTING ---> DEVICE READY
+[8160:ctp-digit-writer]: [10:09:01][STATE] DEVICE READY ---> INITIALIZING TASK
+[8160:ctp-digit-writer]: [10:09:01][STATE] INITIALIZING TASK ---> READY
+[8160:ctp-digit-writer]: [10:09:01][STATE] READY ---> RUNNING
+[8160:ctp-digit-writer]: [10:09:01][INFO] fair::mq::Device running...
+[8160:ctp-digit-writer]: [10:09:01][INFO] LHCPeriod is not available, using current month MAY
+[8160:ctp-digit-writer]: [10:09:01][INFO] Correctly handshaken websocket connection.
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 0 of size 114664 with 66 parts, 0.0000 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 115152
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 1 of size 115512 with 66 parts, 0.0002 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114320
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 2 of size 114680 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114736
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 3 of size 115096 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114800
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 4 of size 115160 with 66 parts, 0.0102 s elapsed from previous TF., WaitSending=true
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 115440
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 5 of size 115800 with 66 parts, 0.0122 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 113936
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 6 of size 114296 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114880
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 7 of size 115240 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 115808
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 8 of size 116168 with 66 parts, 0.0157 s elapsed from previous TF., WaitSending=true
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114416
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 9 of size 114776 with 66 parts, 0.0127 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114944
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 10 of size 115304 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 115520
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 11 of size 115880 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114608
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 12 of size 114968 with 66 parts, 0.0143 s elapsed from previous TF., WaitSending=true
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114512
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 13 of size 114872 with 66 parts, 0.0127 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114736
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 14 of size 115096 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 115312
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 15 of size 115672 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 114304
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 16 of size 114664 with 66 parts, 0.0141 s elapsed from previous TF., WaitSending=true
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 109664
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 17 of size 110024 with 66 parts, 0.0127 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 108064
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 18 of size 108424 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 102704
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 19 of size 103064 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 100496
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 20 of size 100856 with 66 parts, 0.0127 s elapsed from previous TF., WaitSending=true
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 102240
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 21 of size 102600 with 66 parts, 0.0127 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 100800
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:01][INFO] Sent TF 22 of size 101160 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/RAWDATA with size 100352
+[8157:tf-reader]: [10:09:01][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:01][INFO] Block:1 CTP/LUMI with size 192
+[8158:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[8158:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.53
+[8158:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.53
+[8158:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/14/21025/555b8c2f-59af-11f1-b135-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[8158:internal-dpl-ccdb-backend]: [10:09:03][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1779874501102/555b8c2f-59af-11f1-b135-0aa140641b9a for 1779878361801 (load to memory, agent_id: MacOS_app/unknown@8158 target/Darwin_arm64 init/1780128541686 id/romanlietava@192.168.1.45 session/SyzI4rab), 
+[8158:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Config/Config/14/19192/1f062358-59b5-11f1-b135-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[8158:internal-dpl-ccdb-backend]: [10:09:04][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Config/Config/1779876386961/1f062358-59b5-11f1-b135-0aa140641b9a for 1779878360766 (load to memory, agent_id: MacOS_app/unknown@8158 target/Darwin_arm64 init/1780128541686 id/romanlietava@192.168.1.45 session/SyzI4rab), 
+[8158:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Config/TriggerOffsets/06/49287/56b4c228-70dc-11ee-bc26-2a010e0a0b16 in SE <ALICE::UPB::CCDB>
+[8158:internal-dpl-ccdb-backend]: [10:09:05][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Config/TriggerOffsets/1696975200000/56b4c228-70dc-11ee-bc26-2a010e0a0b16 for 1779878360766 (load to memory, agent_id: MacOS_app/unknown@8158 target/Darwin_arm64 init/1780128541686 id/romanlietava@192.168.1.45 session/SyzI4rab), 
+[8159:ctp-raw-decoder]: [10:09:05][INFO] Caching in 12888190848 ptr to CTP/Trig_Offset/0 (0x105b20280)
+[8159:ctp-raw-decoder]: [10:09:05][INFO] updateing TroggerOffsetsParam: inputs L0_L1:281 classes L0_L1:280
+[8159:ctp-raw-decoder]: [10:09:05][INFO] Caching in 12888185928 ptr to CTP/CTPCONFIG/0 (0xa1367a000)
+[8159:ctp-raw-decoder]: [10:09:05][INFO] ctpconfig for run done:572163
+[8159:ctp-raw-decoder]: [10:09:05][INFO] RDH version:7 Padding:0
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8356 digits. IR rejected:0 TCR rejected:3
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8356 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8368 digits. IR rejected:0 TCR rejected:6
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8368 digits
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 23 of size 100712 with 66 parts, 3.8883 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 102880
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 24 of size 103240 with 66 parts, 0.0003 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100736
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8241 digits. IR rejected:0 TCR rejected:8
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8241 digits
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 25 of size 101096 with 66 parts, 0.0055 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 101536
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 26 of size 101896 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8317 digits. IR rejected:0 TCR rejected:12
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8317 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 99712
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8296 digits. IR rejected:0 TCR rejected:15
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8296 digits
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 27 of size 100072 with 66 parts, 0.0107 s elapsed from previous TF., WaitSending=true
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8376 digits. IR rejected:0 TCR rejected:24
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8376 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8249 digits. IR rejected:0 TCR rejected:30
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8249 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100464
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 28 of size 100824 with 66 parts, 0.0126 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 102016
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8159:ctp-raw-decoder]: [10:09:05][ERROR] Cls=>Inps: CTP class:C1ZNC-B-NOPF-CRU inpmask:33554432 not compatible with inputs mask:7 BCid: 3268 Orbit: 43449503
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8330 digits. IR rejected:0 TCR rejected:32
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8330 digits
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 29 of size 102376 with 66 parts, 0.0019 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 102720
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 30 of size 103080 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8387 digits. IR rejected:0 TCR rejected:33
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8387 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8322 digits. IR rejected:0 TCR rejected:40
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8322 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 101632
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 31 of size 101992 with 66 parts, 0.0108 s elapsed from previous TF., WaitSending=true
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8320 digits. IR rejected:0 TCR rejected:46
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8320 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8387 digits. IR rejected:0 TCR rejected:48
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8387 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8339 digits. IR rejected:0 TCR rejected:51
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8339 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 101632
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 32 of size 101992 with 66 parts, 0.0121 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100448
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 33 of size 100808 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 101488
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 34 of size 101848 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8324 digits. IR rejected:0 TCR rejected:53
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8324 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8309 digits. IR rejected:0 TCR rejected:57
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8309 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 101520
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 35 of size 101880 with 66 parts, 0.0120 s elapsed from previous TF., WaitSending=true
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8325 digits. IR rejected:0 TCR rejected:60
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8325 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8339 digits. IR rejected:0 TCR rejected:65
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8339 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 8033 digits. IR rejected:0 TCR rejected:66
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 8033 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 101024
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 36 of size 101384 with 66 parts, 0.0126 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100496
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 37 of size 100856 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100976
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 38 of size 101336 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8159:ctp-raw-decoder]: [10:09:05][ERROR] Cls=>Inps: CTP class:C1ZNC-B-NOPF-CRU inpmask:33554432 not compatible with inputs mask:33 BCid: 3268 Orbit: 43521311
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7873 digits. IR rejected:0 TCR rejected:71
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7873 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7710 digits. IR rejected:0 TCR rejected:75
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7710 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7433 digits. IR rejected:0 TCR rejected:78
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7433 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100240
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 39 of size 100600 with 66 parts, 0.0114 s elapsed from previous TF., WaitSending=true
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7603 digits. IR rejected:0 TCR rejected:80
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7603 digits
+[8159:ctp-raw-decoder]: [10:09:05][ERROR] Cls=>Inps: CTP class:C1ZNC-B-NOPF-CRU inpmask:33554432 not compatible with inputs mask:7 BCid: 3268 Orbit: 43547423
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7511 digits. IR rejected:0 TCR rejected:85
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7511 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7445 digits. IR rejected:0 TCR rejected:87
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7445 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7609 digits. IR rejected:0 TCR rejected:90
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7609 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100352
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 40 of size 100712 with 66 parts, 0.0115 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100448
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 41 of size 100808 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 102896
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 42 of size 103256 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7584 digits. IR rejected:0 TCR rejected:93
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7584 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7572 digits. IR rejected:0 TCR rejected:97
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7572 digits
+[8159:ctp-raw-decoder]: [10:09:05][ERROR] Cls=>Inps: CTP class:C1ZNC-B-NOPF-CRU inpmask:33554432 not compatible with inputs mask:1 BCid: 3268 Orbit: 43580063
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7500 digits. IR rejected:0 TCR rejected:101
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7500 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7447 digits. IR rejected:0 TCR rejected:103
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 101440
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7447 digits
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 43 of size 101800 with 66 parts, 0.0147 s elapsed from previous TF., WaitSending=true
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7655 digits. IR rejected:0 TCR rejected:109
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7655 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7621 digits. IR rejected:0 TCR rejected:113
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7621 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7592 digits. IR rejected:0 TCR rejected:117
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7592 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100752
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 44 of size 101112 with 66 parts, 0.0112 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 103184
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 45 of size 103544 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 100336
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 46 of size 100696 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7559 digits. IR rejected:0 TCR rejected:120
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7559 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7554 digits. IR rejected:0 TCR rejected:123
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7554 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7579 digits. IR rejected:0 TCR rejected:125
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7579 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 103024
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 47 of size 103384 with 66 parts, 0.0148 s elapsed from previous TF., WaitSending=true
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7586 digits. IR rejected:0 TCR rejected:129
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7586 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7533 digits. IR rejected:0 TCR rejected:133
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7533 digits
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7466 digits. IR rejected:0 TCR rejected:135
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7466 digits
+[8159:ctp-raw-decoder]: [10:09:05][ERROR] Cls=>Inps: CTP class:C1ZNC-B-NOPF-CRU inpmask:33554432 not compatible with inputs mask:0 BCid: 3268 Orbit: 43651871
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7581 digits. IR rejected:0 TCR rejected:137
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7581 digits
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 101184
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 48 of size 101544 with 66 parts, 0.0126 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 102016
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 49 of size 102376 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/RAWDATA with size 102192
+[8157:tf-reader]: [10:09:05][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:05][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:05][INFO] Sent TF 50 of size 102552 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7504 digits. IR rejected:0 TCR rejected:141
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7504 digits
+[8159:ctp-raw-decoder]: [10:09:05][ERROR] Cls=>Inps: CTP class:C1ZNC-B-NOPF-CRU inpmask:33554432 not compatible with inputs mask:2 BCid: 3268 Orbit: 43664927
+[8159:ctp-raw-decoder]: [10:09:05][INFO] [CTPRawToDigitConverter - run] Writing 7557 digits. IR rejected:0 TCR rejected:141
+[8160:ctp-digit-writer]: [10:09:05][INFO] CTPDigitWriter pulled 7557 digits
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7445 digits. IR rejected:0 TCR rejected:147
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7445 digits
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7616 digits. IR rejected:0 TCR rejected:150
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7616 digits
+[8157:tf-reader]: [10:09:06][INFO] Block:1 CTP/RAWDATA with size 101632
+[8157:tf-reader]: [10:09:06][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[8157:tf-reader]: [10:09:06][INFO] Block:1 CTP/LUMI with size 192
+[8157:tf-reader]: [10:09:06][INFO] Sent TF 51 of size 101992 with 66 parts, 0.0137 s elapsed from previous TF., WaitSending=true
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7498 digits. IR rejected:0 TCR rejected:155
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7498 digits
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7622 digits. IR rejected:0 TCR rejected:156
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7622 digits
+[8157:tf-reader]: [10:09:06][INFO] TFReader stops processing
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7627 digits. IR rejected:0 TCR rejected:161
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7627 digits
+[8157:tf-reader]: [10:09:06][INFO] 52 TFs in 1  loops were sent, spent 0 s in 0 data waiting states
+[8157:tf-reader]: [10:09:06][INFO] Sending end-of-stream message to channel from_tf-reader_to_internal-dpl-ccdb-backend
+[8157:tf-reader]: [10:09:06][INFO] Sending end-of-stream message to channel from_tf-reader_to_ctp-raw-decoder
+[8157:tf-reader]: [10:09:06][INFO] Sending end-of-stream message to channel from_tf-reader_to_internal-dpl-injected-dummy-sink
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_ctp-raw-decoder
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_internal-dpl-injected-dummy-sink
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7547 digits. IR rejected:0 TCR rejected:162
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7547 digits
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7697 digits. IR rejected:0 TCR rejected:166
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7697 digits
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7550 digits. IR rejected:0 TCR rejected:174
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7550 digits
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7601 digits. IR rejected:0 TCR rejected:179
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7601 digits
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7602 digits. IR rejected:0 TCR rejected:181
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7602 digits
+[8159:ctp-raw-decoder]: [10:09:06][INFO] [CTPRawToDigitConverter - run] Writing 7560 digits. IR rejected:0 TCR rejected:184
+[8160:ctp-digit-writer]: [10:09:06][INFO] CTPDigitWriter pulled 7560 digits
+[8159:ctp-raw-decoder]: Missing orbits: 43403776-43410304 43410304-43416832 43416832-43423360 43423360-43429888 43429888-43436416 43436416-43442944 43442944-43449472 43449472-43456000 43456000-43462528 43462528-43469056 43469056-43475584 43475584-43482112 43482112-43488640 43488640-43495168 43495168-43501696 43501696-43508224 43508224-43514752 43514752-43521280 43521280-43527808 43527808-43534336
+[8159:ctp-raw-decoder]: [10:09:06][INFO] Number of non continous TF:10404
+[8159:ctp-raw-decoder]: 
+[8159:ctp-raw-decoder]: [10:09:06][INFO] Lost in shiftInputs:10694
+[8159:ctp-raw-decoder]: [10:09:06][INFO] Lost in addDigit Inputs:0 Classes:4947
+[8159:ctp-raw-decoder]: [10:09:06][INFO] Lost due to the shift Consistency Checker:1335
+[8159:ctp-raw-decoder]: [10:09:06][INFO] Toatl classes:72048
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTCE-B-NOPF-CRU:0 Cls=>Inp:1270 Inp=>Cls:1276  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMVCH-B-NOPF-CRU:1 Cls=>Inp:1219 Inp=>Cls:1225  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXTCE-B-NOPF-CRU:2 Cls=>Inp:1267 Inp=>Cls:1273  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXTCE-A-NOPF-CRU:3 Cls=>Inp:0 Inp=>Cls:1273  ErrorsCls=>Inps:0  MissingInps=>Cls:1135
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXTCE-C-NOPF-CRU:4 Cls=>Inp:1 Inp=>Cls:1273  ErrorsCls=>Inps:0  MissingInps=>Cls:1134
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXTCE-E-NOPF-CRU:5 Cls=>Inp:0 Inp=>Cls:1273  ErrorsCls=>Inps:0  MissingInps=>Cls:1135
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXVCH-B-NOPF-CRU:6 Cls=>Inp:1216 Inp=>Cls:1222  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXVCH-A-NOPF-CRU:7 Cls=>Inp:0 Inp=>Cls:1222  ErrorsCls=>Inps:0  MissingInps=>Cls:1089
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXVCH-C-NOPF-CRU:8 Cls=>Inp:1 Inp=>Cls:1222  ErrorsCls=>Inps:0  MissingInps=>Cls:1088
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXVCH-E-NOPF-CRU:9 Cls=>Inp:0 Inp=>Cls:1222  ErrorsCls=>Inps:0  MissingInps=>Cls:1089
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXTSC-B-NOPF-CRU:10 Cls=>Inp:1329 Inp=>Cls:1368  ErrorsCls=>Inps:0  MissingInps=>Cls:32
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXTSC-A-NOPF-CRU:11 Cls=>Inp:0 Inp=>Cls:1368  ErrorsCls=>Inps:0  MissingInps=>Cls:1204
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXTSC-C-NOPF-CRU:12 Cls=>Inp:0 Inp=>Cls:1368  ErrorsCls=>Inps:0  MissingInps=>Cls:1204
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTVXTSC-E-NOPF-CRU:13 Cls=>Inp:0 Inp=>Cls:1368  ErrorsCls=>Inps:0  MissingInps=>Cls:1204
+[8159:ctp-raw-decoder]: [10:09:06][ERROR]  Class without inputs:
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:C1ZNC-B-NOPF-CRU:14 Cls=>Inp:65745 Inp=>Cls:65807  ErrorsCls=>Inps:6  MissingInps=>Cls:65
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:CMTRUE-B-NOPF-CRU:15 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls16:16 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls17:17 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls18:18 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls19:19 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls20:20 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls21:21 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls22:22 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls23:23 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls24:24 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls25:25 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls26:26 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls27:27 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls28:28 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls29:29 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls30:30 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls31:31 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls32:32 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls33:33 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls34:34 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls35:35 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls36:36 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls37:37 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls38:38 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls39:39 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls40:40 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls41:41 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls42:42 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls43:43 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls44:44 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls45:45 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls46:46 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls47:47 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls48:48 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls49:49 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls50:50 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls51:51 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls52:52 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls53:53 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls54:54 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls55:55 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls56:56 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls57:57 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls58:58 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls59:59 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls60:60 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls61:61 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls62:62 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][IMPORTANT] CLASS:Cls63:63 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[8159:ctp-raw-decoder]: [10:09:06][INFO] Sending end-of-stream message to channel from_ctp-raw-decoder_to_ctp-digit-writer
+[INFO] Quitting
+[INFO] Quit requested at Sat May 30 10:09:06 2026
+
+[8159:ctp-raw-decoder]: [10:09:06][INFO] Received device shutdown request (signal 15).
+[8159:ctp-raw-decoder]: [10:09:06][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[8159:ctp-raw-decoder]: [10:09:06][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[8159:ctp-raw-decoder]: [10:09:06][STATE] RUNNING ---> READY
+[8159:ctp-raw-decoder]: [10:09:06][STATE] READY ---> RESETTING TASK
+[8159:ctp-raw-decoder]: [10:09:06][STATE] RESETTING TASK ---> DEVICE READY
+[8159:ctp-raw-decoder]: [10:09:06][STATE] DEVICE READY ---> RESETTING DEVICE
+[8159:ctp-raw-decoder]: [10:09:06][STATE] RESETTING DEVICE ---> IDLE
+[8159:ctp-raw-decoder]: [10:09:06][STATE] IDLE ---> EXITING
+[8159:ctp-raw-decoder]: [10:09:06][STATE] Exiting FairMQ state machine
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][INFO] Received device shutdown request (signal 15).
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][STATE] RUNNING ---> READY
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][STATE] READY ---> RESETTING TASK
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][STATE] RESETTING TASK ---> DEVICE READY
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][STATE] DEVICE READY ---> RESETTING DEVICE
+[8157:tf-reader]: [10:09:06][INFO] Received device shutdown request (signal 15).
+[8157:tf-reader]: [10:09:06][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[8157:tf-reader]: [10:09:06][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[8157:tf-reader]: [10:09:06][STATE] RUNNING ---> READY
+[8157:tf-reader]: [10:09:06][STATE] READY ---> RESETTING TASK
+[8157:tf-reader]: [10:09:06][STATE] RESETTING TASK ---> DEVICE READY
+[8157:tf-reader]: [10:09:06][STATE] DEVICE READY ---> RESETTING DEVICE
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][STATE] RESETTING DEVICE ---> IDLE
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][STATE] IDLE ---> EXITING
+[8161:internal-dpl-injected-dummy-sink]: [10:09:06][STATE] Exiting FairMQ state machine
+[8157:tf-reader]: [10:09:06][STATE] RESETTING DEVICE ---> IDLE
+[8157:tf-reader]: [10:09:06][STATE] IDLE ---> EXITING
+[8157:tf-reader]: [10:09:06][STATE] Exiting FairMQ state machine
+[8156:internal-dpl-clock]: [10:09:06][INFO] Received device shutdown request (signal 15).
+[8156:internal-dpl-clock]: [10:09:06][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[8156:internal-dpl-clock]: [10:09:06][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO] Received device shutdown request (signal 15).
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[8160:ctp-digit-writer]: [10:09:06][INFO] Received device shutdown request (signal 15).
+[8160:ctp-digit-writer]: [10:09:06][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[8160:ctp-digit-writer]: [10:09:06][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO] CCDB cache miss/hit ratio (7168 fetched / 373760 requested bytes):
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO]   CTP/Config/TriggerOffsets: 1/51 (2048-2048 bytes)
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO]   CTP/Config/Config: 1/51 (4096-4096 bytes)
+[8158:internal-dpl-ccdb-backend]: [10:09:06][INFO]   CTP/Calib/OrbitReset: 1/52 (1024-1024 bytes)
+[8158:internal-dpl-ccdb-backend]: [10:09:06][STATE] RUNNING ---> READY
+[8158:internal-dpl-ccdb-backend]: [10:09:06][STATE] READY ---> RESETTING TASK
+[8158:internal-dpl-ccdb-backend]: [10:09:06][STATE] RESETTING TASK ---> DEVICE READY
+[8158:internal-dpl-ccdb-backend]: [10:09:06][STATE] DEVICE READY ---> RESETTING DEVICE
+[8158:internal-dpl-ccdb-backend]: [10:09:06][STATE] RESETTING DEVICE ---> IDLE
+[8158:internal-dpl-ccdb-backend]: [10:09:06][STATE] IDLE ---> EXITING
+[8158:internal-dpl-ccdb-backend]: [10:09:06][STATE] Exiting FairMQ state machine
+[8160:ctp-digit-writer]: [10:09:06][STATE] RUNNING ---> READY
+[8160:ctp-digit-writer]: [10:09:06][STATE] READY ---> RESETTING TASK
+[8160:ctp-digit-writer]: [10:09:06][STATE] RESETTING TASK ---> DEVICE READY
+[8160:ctp-digit-writer]: [10:09:06][STATE] DEVICE READY ---> RESETTING DEVICE
+[8160:ctp-digit-writer]: [10:09:06][STATE] RESETTING DEVICE ---> IDLE
+[8160:ctp-digit-writer]: [10:09:06][STATE] IDLE ---> EXITING
+[8160:ctp-digit-writer]: [10:09:06][STATE] Exiting FairMQ state machine
+[8156:internal-dpl-clock]: [10:09:06][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_tf-reader
+[8156:internal-dpl-clock]: [10:09:06][STATE] RUNNING ---> READY
+[8156:internal-dpl-clock]: [10:09:06][STATE] READY ---> RESETTING TASK
+[8156:internal-dpl-clock]: [10:09:06][STATE] RESETTING TASK ---> DEVICE READY
+[8156:internal-dpl-clock]: [10:09:06][STATE] DEVICE READY ---> RESETTING DEVICE
+[8156:internal-dpl-clock]: [10:09:06][INFO] Cleaning up for shared memory id 'e6be9756'...
+[8156:internal-dpl-clock]: [10:09:06][INFO] Found 0 unmanaged regions...
+[8156:internal-dpl-clock]: [10:09:06][INFO] Found 1 managed segments...
+[8156:internal-dpl-clock]: [10:09:06][INFO] Successfully removed 'fmq_e6be9756_m_0'.
+[8156:internal-dpl-clock]: [10:09:06][INFO] Successfully removed 'fmq_e6be9756_mng'.
+[8156:internal-dpl-clock]: [10:09:06][STATE] RESETTING DEVICE ---> IDLE
+[8156:internal-dpl-clock]: [10:09:06][STATE] IDLE ---> EXITING
+[8156:internal-dpl-clock]: [10:09:06][STATE] Exiting FairMQ state machine
+[INFO] ## Processes completed. Run summary:
+[INFO] ### Devices started: 6
+[INFO]  - Device internal-dpl-clock: pid 8156 (exit 0)
+[INFO]  - Device tf-reader: pid 8157 (exit 0)
+[INFO]  - Device internal-dpl-ccdb-backend: pid 8158 (exit 0)
+[INFO]  - Device ctp-raw-decoder: pid 8159 (exit 0)
+[INFO]  - Device ctp-digit-writer: pid 8160 (exit 0)
+[INFO]  - Device internal-dpl-injected-dummy-sink: pid 8161 (exit 0)
+[INFO] Dumping used configuration in dpl-config.json

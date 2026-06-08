@@ -1,0 +1,430 @@
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 38009.
+[INFO] Driver listening on port: 16089
+[INFO] Rate limiting set up at 2000 MB and 64 timeframes distributed over 1 readers
+[INFO] O2 Data Processing Layer initialised. We brake for nobody.
+[INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
+[INFO] Redeployment of configuration asked.
+[INFO] Starting internal-dpl-clock on pid 38018
+[INFO] Starting tf-reader on pid 38019
+[INFO] Starting internal-dpl-ccdb-backend on pid 38020
+[INFO] Starting ctp-raw-decoder on pid 38021
+[INFO] Starting ctp-digit-writer on pid 38022
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 38023
+[INFO] Redeployment of configuration done.
+[38019:tf-reader]: [INFO] Instrumenting crash signals
+[38023:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[38018:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[38019:tf-reader]: [INFO] Spawning new device tf-reader in process with pid 38019
+[38023:internal-dpl-injected-dummy-sink]: [INFO] Spawning new device internal-dpl-injected-dummy-sink in process with pid 38023
+[38018:internal-dpl-clock]: [INFO] Spawning new device internal-dpl-clock in process with pid 38018
+[38019:tf-reader]: [20:13:39][INFO] 
+[38019:tf-reader]:       ______      _    _______  _________ 
+[38019:tf-reader]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[38019:tf-reader]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[38019:tf-reader]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[38019:tf-reader]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[38019:tf-reader]: 
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][INFO] 
+[38023:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[38023:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[38023:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[38023:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[38023:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[38023:internal-dpl-injected-dummy-sink]: 
+[38019:tf-reader]: [20:13:39][STATE] Starting FairMQ state machine --> IDLE
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] Starting FairMQ state machine --> IDLE
+[38018:internal-dpl-clock]: [20:13:39][INFO] 
+[38018:internal-dpl-clock]:       ______      _    _______  _________ 
+[38018:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[38018:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[38018:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[38018:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[38018:internal-dpl-clock]: 
+[38018:internal-dpl-clock]: [20:13:39][STATE] Starting FairMQ state machine --> IDLE
+[38019:tf-reader]: [20:13:39][STATE] IDLE ---> INITIALIZING DEVICE
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] IDLE ---> INITIALIZING DEVICE
+[38018:internal-dpl-clock]: [20:13:39][STATE] IDLE ---> INITIALIZING DEVICE
+[38018:internal-dpl-clock]: [20:13:39][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[38018:internal-dpl-clock]: [20:13:39][STATE] INITIALIZED ---> BINDING
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[38018:internal-dpl-clock]: [20:13:39][STATE] BINDING ---> BOUND
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] INITIALIZED ---> BINDING
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] BINDING ---> BOUND
+[38018:internal-dpl-clock]: [20:13:39][STATE] BOUND ---> CONNECTING
+[38018:internal-dpl-clock]: [20:13:39][STATE] CONNECTING ---> DEVICE READY
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] BOUND ---> CONNECTING
+[38018:internal-dpl-clock]: [20:13:39][STATE] DEVICE READY ---> INITIALIZING TASK
+[38019:tf-reader]: [20:13:39][INFO] Input contains 1 files, 0 remote
+[38018:internal-dpl-clock]: [20:13:39][STATE] INITIALIZING TASK ---> READY
+[38018:internal-dpl-clock]: [20:13:39][STATE] READY ---> RUNNING
+[38018:internal-dpl-clock]: [20:13:39][INFO] fair::mq::Device running...
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] CONNECTING ---> DEVICE READY
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] DEVICE READY ---> INITIALIZING TASK
+[38018:internal-dpl-clock]: [20:13:39][INFO] LHCPeriod is not available, using current month MAY
+[38019:tf-reader]: [20:13:39][INFO] Finished file fetching: 1 of 1 files fetched successfully in 0 iterations
+[38018:internal-dpl-clock]: [20:13:39][INFO] Correctly handshaken websocket connection.
+[38019:tf-reader]: [20:13:39][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[38019:tf-reader]: [20:13:39][STATE] INITIALIZED ---> BINDING
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] INITIALIZING TASK ---> READY
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][STATE] READY ---> RUNNING
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][INFO] fair::mq::Device running...
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][INFO] LHCPeriod is not available, using current month MAY
+[38023:internal-dpl-injected-dummy-sink]: [20:13:39][INFO] Correctly handshaken websocket connection.
+[38019:tf-reader]: [20:13:39][STATE] BINDING ---> BOUND
+[38019:tf-reader]: [20:13:39][STATE] BOUND ---> CONNECTING
+[38019:tf-reader]: [20:13:39][STATE] CONNECTING ---> DEVICE READY
+[38019:tf-reader]: [20:13:39][STATE] DEVICE READY ---> INITIALIZING TASK
+[38019:tf-reader]: [20:13:39][STATE] INITIALIZING TASK ---> READY
+[38019:tf-reader]: [20:13:39][STATE] READY ---> RUNNING
+[38019:tf-reader]: [20:13:39][INFO] fair::mq::Device running...
+[38019:tf-reader]: [20:13:39][INFO] LHCPeriod is not available, using current month MAY
+[38019:tf-reader]: [20:13:39][INFO] Correctly handshaken websocket connection.
+[38019:tf-reader]: [20:13:39][INFO] Processing file o2_rawtf_run00572182_tf00015850_epn217.tf
+[38019:tf-reader]: [20:13:39][INFO] Block:1 CTP/RAWDATA with size 27104
+[38019:tf-reader]: [20:13:39][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[38019:tf-reader]: [20:13:39][INFO] Block:1 CTP/LUMI with size 192
+[38019:tf-reader]: [20:13:39][INFO] TFReader stops processing
+[38022:ctp-digit-writer]: [INFO] Instrumenting crash signals
+[38021:ctp-raw-decoder]: [INFO] Instrumenting crash signals
+[38020:internal-dpl-ccdb-backend]: [INFO] Instrumenting crash signals
+[38022:ctp-digit-writer]: [INFO] Spawning new device ctp-digit-writer in process with pid 38022
+[38021:ctp-raw-decoder]: [INFO] Spawning new device ctp-raw-decoder in process with pid 38021
+[38020:internal-dpl-ccdb-backend]: [INFO] Spawning new device internal-dpl-ccdb-backend in process with pid 38020
+[38022:ctp-digit-writer]: [20:13:39][INFO] 
+[38022:ctp-digit-writer]:       ______      _    _______  _________ 
+[38022:ctp-digit-writer]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[38022:ctp-digit-writer]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[38022:ctp-digit-writer]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[38022:ctp-digit-writer]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[38022:ctp-digit-writer]: 
+[38022:ctp-digit-writer]: [20:13:39][STATE] Starting FairMQ state machine --> IDLE
+[38021:ctp-raw-decoder]: [20:13:39][INFO] 
+[38021:ctp-raw-decoder]:       ______      _    _______  _________ 
+[38021:ctp-raw-decoder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[38021:ctp-raw-decoder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[38021:ctp-raw-decoder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[38021:ctp-raw-decoder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[38021:ctp-raw-decoder]: 
+[38021:ctp-raw-decoder]: [20:13:39][STATE] Starting FairMQ state machine --> IDLE
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] 
+[38020:internal-dpl-ccdb-backend]:       ______      _    _______  _________ 
+[38020:internal-dpl-ccdb-backend]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[38020:internal-dpl-ccdb-backend]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[38020:internal-dpl-ccdb-backend]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[38020:internal-dpl-ccdb-backend]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[38020:internal-dpl-ccdb-backend]: 
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] Starting FairMQ state machine --> IDLE
+[38021:ctp-raw-decoder]: [20:13:39][STATE] IDLE ---> INITIALIZING DEVICE
+[38022:ctp-digit-writer]: [20:13:39][STATE] IDLE ---> INITIALIZING DEVICE
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] IDLE ---> INITIALIZING DEVICE
+[38021:ctp-raw-decoder]: [20:13:39][WARN] Input name without level:TVX
+[38021:ctp-raw-decoder]: [20:13:39][WARN] Input name without level:VBA
+[38021:ctp-raw-decoder]: [20:13:39][INFO] CTP reco init done. Inputs decoding here:1 DoLumi:0 DoDigits:1 NTF:90 Lumi inputs:TVX:3 VBA:6 Max errors:1000000 Max input size:0 MaxInputSizeFatal:0 CheckConsistency:1
+[38021:ctp-raw-decoder]: [20:13:39][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[38021:ctp-raw-decoder]: [20:13:39][STATE] INITIALIZED ---> BINDING
+[38021:ctp-raw-decoder]: [20:13:39][STATE] BINDING ---> BOUND
+[38021:ctp-raw-decoder]: [20:13:39][STATE] BOUND ---> CONNECTING
+[38021:ctp-raw-decoder]: [20:13:39][STATE] CONNECTING ---> DEVICE READY
+[38021:ctp-raw-decoder]: [20:13:39][STATE] DEVICE READY ---> INITIALIZING TASK
+[38021:ctp-raw-decoder]: [20:13:39][STATE] INITIALIZING TASK ---> READY
+[38021:ctp-raw-decoder]: [20:13:39][STATE] READY ---> RUNNING
+[38021:ctp-raw-decoder]: [20:13:39][INFO] fair::mq::Device running...
+[38021:ctp-raw-decoder]: [20:13:39][INFO] LHCPeriod is not available, using current month MAY
+[38021:ctp-raw-decoder]: [20:13:39][INFO] Correctly handshaken websocket connection.
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] CCDB Backend at: http://alice-ccdb.cern.ch, validity check for every 2147483647 TF
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] Hook to enable signposts for CCDB messages at 0xad11b5820
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] Init CcdApi with UserAgentID: MacOS_app/unknown@38020 target/Darwin_arm64 init/1779905619548 id/romanlietava@192.168.1.45 session/BImjMCzQ, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] Initialised default CCDB host http://alice-ccdb.cern.ch
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] The following route is a condition CTP/CTPCONFIG/0
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] - ccdb-path: CTP/Config/Config
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] The following route is a condition CTP/Trig_Offset/0
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] - ccdb-path: CTP/Config/TriggerOffsets
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] INITIALIZED ---> BINDING
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] BINDING ---> BOUND
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] BOUND ---> CONNECTING
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] CONNECTING ---> DEVICE READY
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] DEVICE READY ---> INITIALIZING TASK
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] INITIALIZING TASK ---> READY
+[38020:internal-dpl-ccdb-backend]: [20:13:39][STATE] READY ---> RUNNING
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] fair::mq::Device running...
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] LHCPeriod is not available, using current month MAY
+[38020:internal-dpl-ccdb-backend]: [20:13:39][INFO] Correctly handshaken websocket connection.
+[38022:ctp-digit-writer]: [20:13:39][INFO] 0: branch  CTPDigits set up
+[38022:ctp-digit-writer]: [20:13:39][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[38022:ctp-digit-writer]: [20:13:39][STATE] INITIALIZED ---> BINDING
+[38022:ctp-digit-writer]: [20:13:39][STATE] BINDING ---> BOUND
+[38022:ctp-digit-writer]: [20:13:39][STATE] BOUND ---> CONNECTING
+[38022:ctp-digit-writer]: [20:13:39][STATE] CONNECTING ---> DEVICE READY
+[38022:ctp-digit-writer]: [20:13:39][STATE] DEVICE READY ---> INITIALIZING TASK
+[38022:ctp-digit-writer]: [20:13:39][STATE] INITIALIZING TASK ---> READY
+[38022:ctp-digit-writer]: [20:13:39][STATE] READY ---> RUNNING
+[38022:ctp-digit-writer]: [20:13:39][INFO] fair::mq::Device running...
+[38022:ctp-digit-writer]: [20:13:39][INFO] LHCPeriod is not available, using current month MAY
+[38022:ctp-digit-writer]: [20:13:39][INFO] Correctly handshaken websocket connection.
+[38019:tf-reader]: [20:13:39][INFO] Sent TF 0 of size 27464 with 66 parts, 0.0000 s elapsed from previous TF., WaitSending=false
+[38019:tf-reader]: [20:13:39][INFO] 1 TFs in 1  loops were sent, spent 0 s in 0 data waiting states
+[38019:tf-reader]: [20:13:39][INFO] Sending end-of-stream message to channel from_tf-reader_to_internal-dpl-ccdb-backend
+[38019:tf-reader]: [20:13:39][INFO] Sending end-of-stream message to channel from_tf-reader_to_ctp-raw-decoder
+[38019:tf-reader]: [20:13:39][INFO] Sending end-of-stream message to channel from_tf-reader_to_internal-dpl-injected-dummy-sink
+[38020:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[38020:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.50
+[38020:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.50
+[38020:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/14/63687/fae870e6-59e0-11f1-b135-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[38020:internal-dpl-ccdb-backend]: [20:13:43][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1779895824189/fae870e6-59e0-11f1-b135-0aa140641b9a for 1779904035415 (load to memory, agent_id: MacOS_app/unknown@38020 target/Darwin_arm64 init/1779905619548 id/romanlietava@192.168.1.45 session/BImjMCzQ), 
+[38020:internal-dpl-ccdb-backend]: [20:13:43][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Config/Config/1779903357325/ea9d0eb2-59f3-11f1-b135-0aa140641b9a for 1779904034318 (load to memory, agent_id: MacOS_app/unknown@38020 target/Darwin_arm64 init/1779905619548 id/romanlietava@192.168.1.45 session/BImjMCzQ), 
+[38020:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Config/TriggerOffsets/06/49287/56b4c228-70dc-11ee-bc26-2a010e0a0b16 in SE <ALICE::UPB::CCDB>
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Config/TriggerOffsets/1696975200000/56b4c228-70dc-11ee-bc26-2a010e0a0b16 for 1779904034318 (load to memory, agent_id: MacOS_app/unknown@38020 target/Darwin_arm64 init/1779905619548 id/romanlietava@192.168.1.45 session/BImjMCzQ), 
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_ctp-raw-decoder
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_internal-dpl-injected-dummy-sink
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Caching in 12884950560 ptr to CTP/Trig_Offset/0 (0x103338280)
+[38021:ctp-raw-decoder]: [20:13:44][INFO] updateing TroggerOffsetsParam: inputs L0_L1:281 classes L0_L1:280
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Caching in 12884943488 ptr to CTP/CTPCONFIG/0 (0xb635a1400)
+[38021:ctp-raw-decoder]: [20:13:44][INFO] ctpconfig for run done:572182
+[38021:ctp-raw-decoder]: tforbit==================>92326848 580cbc0
+[38021:ctp-raw-decoder]: [20:13:44][INFO] RDH version:7 Padding:0
+[38021:ctp-raw-decoder]: tforbit==================>580cbc0 580cbc0
+[38021:ctp-raw-decoder]: [20:13:44][INFO] LOST:BCid:   98 Orbit: 92326848 shift:296
+[38021:ctp-raw-decoder]: [20:13:44][INFO] LOST:BCid:  223 Orbit: 92326848 shift:296
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Checking readout
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: 0 cls=>inps:0
+[38021:ctp-raw-decoder]: 1 cls=>inps:0
+[38021:ctp-raw-decoder]: 2 cls=>inps:0
+[38021:ctp-raw-decoder]: 6 cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: e cls=>inps:0
+[38021:ctp-raw-decoder]: [20:13:44][INFO] [CTPRawToDigitConverter - run] Writing 997 digits. IR rejected:0 TCR rejected:2
+[38021:ctp-raw-decoder]: Missing orbits:
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Number of non continous TF:0
+[38021:ctp-raw-decoder]: 
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Lost in shiftInputs:2
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Lost in addDigit Inputs:0 Classes:2
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Lost due to the shift Consistency Checker:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTCE-B-NOPF-CRU:0 Cls=>Inp:1 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMVCH-B-NOPF-CRU:1 Cls=>Inp:1 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXTCE-B-NOPF-CRU:2 Cls=>Inp:1 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38022:ctp-digit-writer]: [20:13:44][INFO] CTPDigitWriter pulled 997 digits
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXTCE-A-NOPF-CRU:3 Cls=>Inp:0 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXTCE-C-NOPF-CRU:4 Cls=>Inp:0 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXTCE-E-NOPF-CRU:5 Cls=>Inp:0 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXVCH-B-NOPF-CRU:6 Cls=>Inp:1 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXVCH-A-NOPF-CRU:7 Cls=>Inp:0 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXVCH-C-NOPF-CRU:8 Cls=>Inp:0 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXVCH-E-NOPF-CRU:9 Cls=>Inp:0 Inp=>Cls:1  ErrorsCls=>Inps:0  MissingInps=>Cls:1
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXTSC-B-NOPF-CRU:10 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXTSC-A-NOPF-CRU:11 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXTSC-C-NOPF-CRU:12 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTVXTSC-E-NOPF-CRU:13 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:C1ZNC-B-NOPF-CRU:14 Cls=>Inp:82 Inp=>Cls:82  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:CMTRUE-B-NOPF-CRU:15 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls16:16 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls17:17 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls18:18 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls19:19 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls20:20 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls21:21 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls22:22 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls23:23 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls24:24 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls25:25 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls26:26 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls27:27 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls28:28 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls29:29 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls30:30 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls31:31 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls32:32 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls33:33 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls34:34 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls35:35 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls36:36 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls37:37 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls38:38 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls39:39 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls40:40 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls41:41 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls42:42 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls43:43 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls44:44 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls45:45 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls46:46 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls47:47 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls48:48 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls49:49 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls50:50 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls51:51 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls52:52 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls53:53 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls54:54 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls55:55 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls56:56 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls57:57 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls58:58 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls59:59 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls60:60 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls61:61 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls62:62 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][IMPORTANT] CLASS:Cls63:63 Cls=>Inp:0 Inp=>Cls:0  ErrorsCls=>Inps:0  MissingInps=>Cls:0
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Sending end-of-stream message to channel from_ctp-raw-decoder_to_ctp-digit-writer
+[INFO] Quitting
+[INFO] Quit requested at Wed May 27 20:13:44 2026
+
+[38018:internal-dpl-clock]: [20:13:44][INFO] Received device shutdown request (signal 15).
+[38018:internal-dpl-clock]: [20:13:44][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[38018:internal-dpl-clock]: [20:13:44][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[38018:internal-dpl-clock]: [20:13:44][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_tf-reader
+[38018:internal-dpl-clock]: [20:13:44][STATE] RUNNING ---> READY
+[38018:internal-dpl-clock]: [20:13:44][STATE] READY ---> RESETTING TASK
+[38018:internal-dpl-clock]: [20:13:44][STATE] RESETTING TASK ---> DEVICE READY
+[38018:internal-dpl-clock]: [20:13:44][STATE] DEVICE READY ---> RESETTING DEVICE
+[38018:internal-dpl-clock]: [20:13:44][STATE] RESETTING DEVICE ---> IDLE
+[38018:internal-dpl-clock]: [20:13:44][STATE] IDLE ---> EXITING
+[38018:internal-dpl-clock]: [20:13:44][STATE] Exiting FairMQ state machine
+[38019:tf-reader]: [20:13:44][INFO] Received device shutdown request (signal 15).
+[38019:tf-reader]: [20:13:44][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[38019:tf-reader]: [20:13:44][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[38019:tf-reader]: [20:13:44][STATE] RUNNING ---> READY
+[38019:tf-reader]: [20:13:44][STATE] READY ---> RESETTING TASK
+[38019:tf-reader]: [20:13:44][STATE] RESETTING TASK ---> DEVICE READY
+[38019:tf-reader]: [20:13:44][STATE] DEVICE READY ---> RESETTING DEVICE
+[38019:tf-reader]: [20:13:44][STATE] RESETTING DEVICE ---> IDLE
+[38019:tf-reader]: [20:13:44][STATE] IDLE ---> EXITING
+[38019:tf-reader]: [20:13:44][STATE] Exiting FairMQ state machine
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][INFO] Received device shutdown request (signal 15).
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][STATE] RUNNING ---> READY
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][STATE] READY ---> RESETTING TASK
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][STATE] RESETTING TASK ---> DEVICE READY
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][STATE] DEVICE READY ---> RESETTING DEVICE
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][STATE] RESETTING DEVICE ---> IDLE
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][STATE] IDLE ---> EXITING
+[38023:internal-dpl-injected-dummy-sink]: [20:13:44][STATE] Exiting FairMQ state machine
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO] Received device shutdown request (signal 15).
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO] CCDB cache miss/hit ratio (7168 fetched / 8192 requested bytes):
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO]   CTP/Config/TriggerOffsets: 1/0 (2048-2048 bytes)
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO]   CTP/Config/Config: 1/0 (4096-4096 bytes)
+[38020:internal-dpl-ccdb-backend]: [20:13:44][INFO]   CTP/Calib/OrbitReset: 1/1 (1024-1024 bytes)
+[38020:internal-dpl-ccdb-backend]: [20:13:44][STATE] RUNNING ---> READY
+[38020:internal-dpl-ccdb-backend]: [20:13:44][STATE] READY ---> RESETTING TASK
+[38020:internal-dpl-ccdb-backend]: [20:13:44][STATE] RESETTING TASK ---> DEVICE READY
+[38020:internal-dpl-ccdb-backend]: [20:13:44][STATE] DEVICE READY ---> RESETTING DEVICE
+[38020:internal-dpl-ccdb-backend]: [20:13:44][STATE] RESETTING DEVICE ---> IDLE
+[38020:internal-dpl-ccdb-backend]: [20:13:44][STATE] IDLE ---> EXITING
+[38020:internal-dpl-ccdb-backend]: [20:13:44][STATE] Exiting FairMQ state machine
+[38022:ctp-digit-writer]: [20:13:44][INFO] Received device shutdown request (signal 15).
+[38022:ctp-digit-writer]: [20:13:44][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[38022:ctp-digit-writer]: [20:13:44][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Received device shutdown request (signal 15).
+[38021:ctp-raw-decoder]: [20:13:44][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[38021:ctp-raw-decoder]: [20:13:44][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[38021:ctp-raw-decoder]: [20:13:44][STATE] RUNNING ---> READY
+[38021:ctp-raw-decoder]: [20:13:44][STATE] READY ---> RESETTING TASK
+[38021:ctp-raw-decoder]: [20:13:44][STATE] RESETTING TASK ---> DEVICE READY
+[38021:ctp-raw-decoder]: [20:13:44][STATE] DEVICE READY ---> RESETTING DEVICE
+[38021:ctp-raw-decoder]: [20:13:44][STATE] RESETTING DEVICE ---> IDLE
+[38021:ctp-raw-decoder]: [20:13:44][STATE] IDLE ---> EXITING
+[38021:ctp-raw-decoder]: [20:13:44][STATE] Exiting FairMQ state machine
+[38022:ctp-digit-writer]: [20:13:44][STATE] RUNNING ---> READY
+[38022:ctp-digit-writer]: [20:13:44][STATE] READY ---> RESETTING TASK
+[38022:ctp-digit-writer]: [20:13:44][STATE] RESETTING TASK ---> DEVICE READY
+[38022:ctp-digit-writer]: [20:13:44][STATE] DEVICE READY ---> RESETTING DEVICE
+[38022:ctp-digit-writer]: [20:13:44][INFO] Cleaning up for shared memory id '6b738a4c'...
+[38022:ctp-digit-writer]: [20:13:44][INFO] Found 0 unmanaged regions...
+[38022:ctp-digit-writer]: [20:13:44][INFO] Found 1 managed segments...
+[38022:ctp-digit-writer]: [20:13:44][INFO] Successfully removed 'fmq_6b738a4c_m_0'.
+[38022:ctp-digit-writer]: [20:13:44][INFO] Successfully removed 'fmq_6b738a4c_mng'.
+[38022:ctp-digit-writer]: [20:13:44][STATE] RESETTING DEVICE ---> IDLE
+[38022:ctp-digit-writer]: [20:13:44][STATE] IDLE ---> EXITING
+[38022:ctp-digit-writer]: [20:13:44][STATE] Exiting FairMQ state machine
+[INFO] ## Processes completed. Run summary:
+[INFO] ### Devices started: 6
+[INFO]  - Device internal-dpl-clock: pid 38018 (exit 0)
+[INFO]  - Device tf-reader: pid 38019 (exit 0)
+[INFO]  - Device internal-dpl-ccdb-backend: pid 38020 (exit 0)
+[INFO]  - Device ctp-raw-decoder: pid 38021 (exit 0)
+[INFO]  - Device ctp-digit-writer: pid 38022 (exit 0)
+[INFO]  - Device internal-dpl-injected-dummy-sink: pid 38023 (exit 0)
+[INFO] Dumping used configuration in dpl-config.json

@@ -1,0 +1,54 @@
+{
+    "internal-dpl-clock": "",
+    "tf-reader": {
+        "select-tf-ids": "",
+        "fetch-failure-threshold": "0",
+        "max-tf": "-1",
+        "max-tf-per-file": "-1",
+        "max-cached-tf": "3",
+        "max-cached-files": "3",
+        "orbit-offset-enumeration": "0",
+        "orbit-multiplier-enumeration": "0",
+        "start-value-enumeration": "0",
+        "end-value-enumeration": "-1",
+        "step-value-enumeration": "1"
+    },
+    "internal-dpl-ccdb-backend": {
+        "condition-backend": "http:\/\/alice-ccdb.cern.ch",
+        "condition-not-before": "0",
+        "condition-not-after": "3385078236000",
+        "condition-remap": "",
+        "condition-tf-per-query": "0",
+        "condition-tf-per-query-multiplier": "1",
+        "condition-use-slice-for-prescaling": "0",
+        "condition-time-tolerance": "5000",
+        "orbit-offset-enumeration": "0",
+        "orbit-multiplier-enumeration": "0",
+        "start-value-enumeration": "0",
+        "end-value-enumeration": "-1",
+        "step-value-enumeration": "1"
+    },
+    "ctp-raw-decoder": {
+        "ntf-to-average": "90",
+        "print-errors-num": "1000",
+        "lumi-inp1": "TVX",
+        "lumi-inp2": "VBA",
+        "use-verbose-mode": "false",
+        "max-input-size": "0",
+        "max-input-size-fatal": "false",
+        "check-consistency": "true",
+        "ctpinputs-decoding": "true",
+        "condition-backend": "http:\/\/alice-ccdb.cern.ch",
+        "condition-timestamp": "0"
+    },
+    "ctp-digit-writer": {
+        "outfile": "ctpdigits.root",
+        "output-dir": "none",
+        "treename": "o2sim",
+        "treetitle": "Tree with CTP digits",
+        "nevents": "-1",
+        "autosave": "-1",
+        "terminate": "process"
+    },
+    "internal-dpl-injected-dummy-sink": ""
+}

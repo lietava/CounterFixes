@@ -13,8 +13,8 @@
 #include "TH2D.h"
 #include "TRandom3.h"
 
-constexpr int NPT   = 5;
-constexpr int NMULT = 10;
+constexpr int NPT   = 10;
+constexpr int NMULT = 80;
 
 struct Matrix2D_t {
   double data[NPT][NMULT];
@@ -403,8 +403,7 @@ void generatePseudoData(int nDataEvents,
     }
 
     int nFake = randData.Poisson(fakeMean);
-    (void)nFake;
-    //multReco += nFake;
+    multReco += nFake;
 
     if (multReco < multMin || multReco >= multMax) {
       continue;
@@ -423,26 +422,155 @@ void generatePseudoData(int nDataEvents,
       }
     }
 
-    // for (int i = 0; i < nFake; ++i) {
-    //   double ptFake = fpt->GetRandom();
-    //   if (ptFake >= ptMin && ptFake < ptMax) {
-    //     hRecoDataTmp->Fill(ptFake, multReco);
-    //     hPtRecoData->Fill(ptFake);
-    //   }
-    // }
+    for (int i = 0; i < nFake; ++i) {
+      double ptFake = fpt->GetRandom();
+      if (ptFake >= ptMin && ptFake < ptMax) {
+        hRecoDataTmp->Fill(ptFake, multReco);
+        hPtRecoData->Fill(ptFake);
+      }
+    }
   }
 }
 
-void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
+bool readRecoDataFromAO2D(const TString& dataAO2D,
+                          double ptMin,
+                          double ptMax,
+                          double multMin,
+                          double multMax,
+                          TH2D* hRecoDataTmp,
+                          TH1D* hMultRecoData,
+                          TH1D* hPtRecoData)
+{
+  TChain collChain("O2npcollisiontabl");
+  TChain candChain("O2nprecochargedca");
+  fillChainFromAO2D(collChain, dataAO2D);
+  fillChainFromAO2D(candChain, dataAO2D);
+
+  if (collChain.GetEntries() <= 0) {
+    std::cerr << "No nonPromptCascade NPCollisionTABLE entries found in "
+              << dataAO2D << std::endl;
+    return false;
+  }
+  if (candChain.GetEntries() <= 0) {
+    std::cerr << "No nonPromptCascade NPRecoChargedCand entries found in "
+              << dataAO2D << std::endl;
+    return false;
+  }
+  if (!collChain.GetBranch("fMultNTracksNP")) {
+    std::cerr << "NPCollisionTABLE is missing required branch fMultNTracksNP" << std::endl;
+    return false;
+  }
+  if (!candChain.GetBranch("fPtRec") || !candChain.GetBranch("fIndexNPCollisionTable")) {
+    std::cerr << "NPRecoChargedCand is missing required branches fPtRec and/or fIndexNPCollisionTable" << std::endl;
+    return false;
+  }
+
+  int multReco = 0;
+  std::vector<int> recoMultByCollision(collChain.GetEntries(), -1);
+  collChain.SetBranchAddress("fMultNTracksNP", &multReco);
+  for (Long64_t i = 0; i < collChain.GetEntries(); ++i) {
+    collChain.GetEntry(i);
+    recoMultByCollision[i] = multReco;
+    if (multReco >= multMin && multReco < multMax) {
+      hMultRecoData->Fill(multReco);
+    }
+  }
+
+  float ptReco = 0.0f;
+  int npCollisionId = -1;
+  Long64_t nFilled = 0;
+  Long64_t nIgnored = 0;
+  candChain.SetBranchAddress("fPtRec", &ptReco);
+  candChain.SetBranchAddress("fIndexNPCollisionTable", &npCollisionId);
+
+  for (Long64_t i = 0; i < candChain.GetEntries(); ++i) {
+    candChain.GetEntry(i);
+    if (npCollisionId < 0 || npCollisionId >= static_cast<int>(recoMultByCollision.size())) {
+      ++nIgnored;
+      continue;
+    }
+    multReco = recoMultByCollision[npCollisionId];
+    if (ptReco > ptMin && ptReco < ptMax &&
+        multReco >= multMin && multReco < multMax) {
+      hRecoDataTmp->Fill(ptReco, multReco);
+      hPtRecoData->Fill(ptReco);
+      ++nFilled;
+    } else {
+      ++nIgnored;
+    }
+  }
+
+  std::cout << "Read nonPromptCascade real data from " << dataAO2D << std::endl;
+  std::cout << "  reco candidates filled: " << nFilled
+            << " ignored: " << nIgnored << std::endl;
+  return true;
+}
+
+bool readTruthDataFromMCAO2D(const TString& truthAO2D,
+                             double ptMin,
+                             double ptMax,
+                             double multMin,
+                             double multMax,
+                             TH2D* hTruthDataTmp,
+                             TH1D* hMultTrueData,
+                             TH1D* hPtTrueData)
+{
+  TChain truthChain("O2npmcchargedtabl");
+  fillChainFromAO2D(truthChain, truthAO2D);
+
+  if (truthChain.GetEntries() <= 0) {
+    std::cerr << "No nonPromptCascade NPMCChargedTABLE entries found in "
+              << truthAO2D << std::endl;
+    return false;
+  }
+
+  if (!truthChain.GetBranch("fPtGen") || !truthChain.GetBranch("fMultGen")) {
+    std::cerr << "NPMCChargedTABLE is missing required branches fPtGen and/or fMultGen" << std::endl;
+    return false;
+  }
+
+  float ptTrue = 0.0f;
+  int multTrue = 0;
+  Long64_t nTruth = 0;
+  Long64_t nIgnored = 0;
+
+  truthChain.SetBranchAddress("fPtGen", &ptTrue);
+  truthChain.SetBranchAddress("fMultGen", &multTrue);
+
+  for (Long64_t i = 0; i < truthChain.GetEntries(); ++i) {
+    truthChain.GetEntry(i);
+    if (ptTrue >= ptMin && ptTrue < ptMax &&
+        multTrue >= multMin && multTrue < multMax) {
+      hTruthDataTmp->Fill(ptTrue, multTrue);
+      hPtTrueData->Fill(ptTrue);
+      hMultTrueData->Fill(multTrue);
+      ++nTruth;
+    } else {
+      ++nIgnored;
+    }
+  }
+
+  std::cout << "Read closure truth from " << truthAO2D << std::endl;
+  std::cout << "  truth particles filled: " << nTruth
+            << " ignored: " << nIgnored << std::endl;
+  return true;
+}
+
+// useAO2DTraining: true = train response from MC AO2D NPMCChargedTABLE; false = generate toy training.
+// useAO2Data: 1 = read real reco data from dataAO2D; 0 = generate independent toy data;
+//             2 = use RecoTrain closure input; 3 = read reco from dataAO2D and truth from truthAO2D.
+void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true,
+             TString dataAO2D = "AO2Ddata.root", TString truthAO2D = "AO2Dtruth.root",
+             int useAO2Data = 1)
 {
   const double ptMin   = 0.0;
   const double ptMax   = 10.0;
   const double multMin = 0.0;
-  const double multMax = 100.0;
+  const double multMax = 80.0;
 
-  const int nTrainEvents = 100000;
-  const int nDataEvents  = 1000;
-  const int nIter        = 1000;
+  const int nTrainEvents = 1000000;
+  const int nDataEvents  = 1000000;
+  const int nIter        = 100;
 
   const double eff      = 0.8;
   const double fakeMean = 1.5;
@@ -480,8 +608,9 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   TH1D* hPtTrueData  = new TH1D("hPtTrueData",  "data pt true",  NPT, ptMin, ptMax);
   TH1D* hPtRecoData  = new TH1D("hPtRecoData",  "data pt reco",  NPT, ptMin, ptMax);
 
-  // Response tensor counts
-  Matrix4D_t Rcount = {};
+  // Response tensor counts. Static storage keeps the large 4D array off the stack.
+  static Matrix4D_t Rcount;
+  std::fill(&Rcount[0][0][0][0], &Rcount[0][0][0][0] + NPT * NMULT * NPT * NMULT, 0.0);
   Matrix2D_t FakeTrain;
   Matrix2D_t FeedInTrain;
   Matrix2D_t RecoAllTrain;
@@ -490,6 +619,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   // 1. TRAINING SAMPLE
   // ------------------------------------------------------------------
   if (useAO2DTraining) {
+    std::cout << "Reading training sample from " << trainAO2D << std::endl;
     if (trainAO2D.IsNull()) {
       std::cerr << "AO2D training requested, but trainAO2D is empty" << std::endl;
       return;
@@ -502,6 +632,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
       return;
     }
   } else {
+    std::cout << "Generating training sample with " << nTrainEvents << " events" << std::endl;
     generateTrainingSample(nTrainEvents, fpt, nbd, genTrain, randTrain, eff,
                            fakeMean, ptMin, ptMax, multMin, multMax,
                            hTruthTrainTmp, hRecoTrainTmp, hMissTmp,
@@ -527,7 +658,8 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   // ------------------------------------------------------------------
   // 3. NORMALIZE RESPONSE
   // ------------------------------------------------------------------
-  Matrix4D_t Rprob = {};
+  static Matrix4D_t Rprob;
+  std::fill(&Rprob[0][0][0][0], &Rprob[0][0][0][0] + NPT * NMULT * NPT * NMULT, 0.0);
   for (int it = 0; it < NPT; ++it) {
     for (int jt = 0; jt < NMULT; ++jt) {
       double norm = Miss[it][jt];
@@ -553,12 +685,44 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   //printMatrix4D(Rprob, "Rprob");
 
   // ------------------------------------------------------------------
-  // 4. PSEUDO-DATA SAMPLE
+  // 4. DATA SAMPLE
+  // useAO2Data = 1: read real reco data from dataAO2D
+  //             0: generate independent pseudo-data
+  //             2: use RecoTrain for closure/debug
+  //             3: read reco from dataAO2D and closure truth from truthAO2D
   // ------------------------------------------------------------------
-  generatePseudoData(nDataEvents, fpt, nbd, genData, randData, eff, fakeMean,
-                     ptMin, ptMax, multMin, multMax, hTruthDataTmp,
-                     hRecoDataTmp, hMultTrueData, hMultRecoData, hPtTrueData,
-                     hPtRecoData);
+  if (useAO2Data == 1 || useAO2Data == 3) {
+    std::cout << "Reading reco data sample from " << dataAO2D << std::endl;
+    if (dataAO2D.IsNull()) {
+      std::cerr << "AO2D data requested, but dataAO2D is empty" << std::endl;
+      return;
+    }
+    if (!readRecoDataFromAO2D(dataAO2D, ptMin, ptMax, multMin, multMax,
+                              hRecoDataTmp, hMultRecoData, hPtRecoData)) {
+      return;
+    }
+    if (useAO2Data == 3) {
+      std::cout << "Reading closure truth sample from " << truthAO2D << std::endl;
+      if (truthAO2D.IsNull()) {
+        std::cerr << "Closure truth requested, but truthAO2D is empty" << std::endl;
+        return;
+      }
+      if (!readTruthDataFromMCAO2D(truthAO2D, ptMin, ptMax, multMin, multMax,
+                                   hTruthDataTmp, hMultTrueData, hPtTrueData)) {
+        return;
+      }
+    }
+  } else if (useAO2Data == 0 || useAO2Data == 2) {
+    std::cout << "Generating data sample with " << nDataEvents << " events" << std::endl;
+    generatePseudoData(nDataEvents, fpt, nbd, genData, randData, eff, fakeMean,
+                       ptMin, ptMax, multMin, multMax, hTruthDataTmp,
+                       hRecoDataTmp, hMultTrueData, hMultRecoData, hPtTrueData,
+                       hPtRecoData);
+  } else {
+    std::cerr << "Unknown useAO2Data option " << useAO2Data
+              << ": use 1 for reco data, 0 for generated data, 2 for RecoTrain, 3 for MC2 reco+truth closure" << std::endl;
+    return;
+  }
 
   Matrix2D_t TruthData;
   Matrix2D_t RecoData;
@@ -566,8 +730,9 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   copyTH2ToMatrix2D(hTruthDataTmp, TruthData);
   copyTH2ToMatrix2D(hRecoDataTmp,  RecoData);
 
-  // optional debugging line from your original code:
-  RecoData = RecoTrain;
+  if (useAO2Data == 2) {
+    RecoData = RecoTrain;
+  }
 
   // Reco input to Bayes is corrected for non-signal reco rows measured in training.
   // FakeTrain and FeedInTrain are kept separate in output, but both are removed here.
@@ -767,6 +932,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true)
   hRatioMult->Write();
 
   fout.Close();
+
 
   std::cout << "Done. Output written to manualBayes4D.root\n";
 }

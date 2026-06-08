@@ -1,0 +1,347 @@
+[INFO] Initialising O2 Data Processing Layer. Driver PID: 31213.
+[INFO] Driver listening on port: 9293
+[INFO] Rate limiting set up at 2000 MB and 64 timeframes distributed over 1 readers
+[INFO] O2 Data Processing Layer initialised. We brake for nobody.
+[INFO] Optimised build. O2DEBUG / LOG(debug) / LOGF(debug) / assert statement will not be shown.
+[INFO] Redeployment of configuration asked.
+[INFO] Starting internal-dpl-clock on pid 31231
+[INFO] Starting tf-reader on pid 31232
+[INFO] Starting internal-dpl-ccdb-backend on pid 31233
+[INFO] Starting ctp-raw-decoder on pid 31234
+[INFO] Starting ctp-digit-writer on pid 31235
+[INFO] Starting internal-dpl-injected-dummy-sink on pid 31236
+[INFO] Redeployment of configuration done.
+[31236:internal-dpl-injected-dummy-sink]: [INFO] Instrumenting crash signals
+[31231:internal-dpl-clock]: [INFO] Instrumenting crash signals
+[31232:tf-reader]: [INFO] Instrumenting crash signals
+[31236:internal-dpl-injected-dummy-sink]: [INFO] Spawning new device internal-dpl-injected-dummy-sink in process with pid 31236
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][INFO] 
+[31236:internal-dpl-injected-dummy-sink]:       ______      _    _______  _________ 
+[31236:internal-dpl-injected-dummy-sink]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[31236:internal-dpl-injected-dummy-sink]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[31236:internal-dpl-injected-dummy-sink]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[31236:internal-dpl-injected-dummy-sink]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[31236:internal-dpl-injected-dummy-sink]: 
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] Starting FairMQ state machine --> IDLE
+[31231:internal-dpl-clock]: [INFO] Spawning new device internal-dpl-clock in process with pid 31231
+[31232:tf-reader]: [INFO] Spawning new device tf-reader in process with pid 31232
+[31231:internal-dpl-clock]: [17:30:13][INFO] 
+[31231:internal-dpl-clock]:       ______      _    _______  _________ 
+[31231:internal-dpl-clock]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[31231:internal-dpl-clock]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[31231:internal-dpl-clock]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[31231:internal-dpl-clock]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[31231:internal-dpl-clock]: 
+[31231:internal-dpl-clock]: [17:30:13][STATE] Starting FairMQ state machine --> IDLE
+[31232:tf-reader]: [17:30:13][INFO] 
+[31232:tf-reader]:       ______      _    _______  _________ 
+[31232:tf-reader]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[31232:tf-reader]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[31232:tf-reader]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[31232:tf-reader]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[31232:tf-reader]: 
+[31232:tf-reader]: [17:30:13][STATE] Starting FairMQ state machine --> IDLE
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] IDLE ---> INITIALIZING DEVICE
+[31231:internal-dpl-clock]: [17:30:13][STATE] IDLE ---> INITIALIZING DEVICE
+[31232:tf-reader]: [17:30:13][STATE] IDLE ---> INITIALIZING DEVICE
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] INITIALIZED ---> BINDING
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] BINDING ---> BOUND
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] BOUND ---> CONNECTING
+[31231:internal-dpl-clock]: [17:30:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[31231:internal-dpl-clock]: [17:30:13][STATE] INITIALIZED ---> BINDING
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] CONNECTING ---> DEVICE READY
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] INITIALIZING TASK ---> READY
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][STATE] READY ---> RUNNING
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][INFO] fair::mq::Device running...
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][INFO] LHCPeriod is not available, using current month MAY
+[31236:internal-dpl-injected-dummy-sink]: [17:30:13][INFO] Correctly handshaken websocket connection.
+[31231:internal-dpl-clock]: [17:30:13][STATE] BINDING ---> BOUND
+[31231:internal-dpl-clock]: [17:30:13][STATE] BOUND ---> CONNECTING
+[31231:internal-dpl-clock]: [17:30:13][STATE] CONNECTING ---> DEVICE READY
+[31231:internal-dpl-clock]: [17:30:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[31231:internal-dpl-clock]: [17:30:13][STATE] INITIALIZING TASK ---> READY
+[31231:internal-dpl-clock]: [17:30:13][STATE] READY ---> RUNNING
+[31231:internal-dpl-clock]: [17:30:13][INFO] fair::mq::Device running...
+[31231:internal-dpl-clock]: [17:30:13][INFO] LHCPeriod is not available, using current month MAY
+[31231:internal-dpl-clock]: [17:30:13][INFO] Correctly handshaken websocket connection.
+[31232:tf-reader]: [17:30:13][INFO] Input contains 1 files, 0 remote
+[31232:tf-reader]: [17:30:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[31232:tf-reader]: [17:30:13][STATE] INITIALIZED ---> BINDING
+[31232:tf-reader]: [17:30:13][INFO] Finished file fetching: 1 of 1 files fetched successfully in 0 iterations
+[31232:tf-reader]: [17:30:13][STATE] BINDING ---> BOUND
+[31232:tf-reader]: [17:30:13][STATE] BOUND ---> CONNECTING
+[31232:tf-reader]: [17:30:13][STATE] CONNECTING ---> DEVICE READY
+[31232:tf-reader]: [17:30:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[31232:tf-reader]: [17:30:13][STATE] INITIALIZING TASK ---> READY
+[31232:tf-reader]: [17:30:13][STATE] READY ---> RUNNING
+[31232:tf-reader]: [17:30:13][INFO] fair::mq::Device running...
+[31232:tf-reader]: [17:30:13][INFO] LHCPeriod is not available, using current month MAY
+[31232:tf-reader]: [17:30:13][INFO] Correctly handshaken websocket connection.
+[31232:tf-reader]: [17:30:13][INFO] Processing file o2_rawtf_run00572163_tf03958921_epn103.tf
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 91040
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31235:ctp-digit-writer]: [INFO] Instrumenting crash signals
+[31233:internal-dpl-ccdb-backend]: [INFO] Instrumenting crash signals
+[31234:ctp-raw-decoder]: [INFO] Instrumenting crash signals
+[31235:ctp-digit-writer]: [INFO] Spawning new device ctp-digit-writer in process with pid 31235
+[31235:ctp-digit-writer]: [17:30:13][INFO] 
+[31235:ctp-digit-writer]:       ______      _    _______  _________ 
+[31235:ctp-digit-writer]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[31235:ctp-digit-writer]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[31235:ctp-digit-writer]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[31235:ctp-digit-writer]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[31235:ctp-digit-writer]: 
+[31235:ctp-digit-writer]: [17:30:13][STATE] Starting FairMQ state machine --> IDLE
+[31233:internal-dpl-ccdb-backend]: [INFO] Spawning new device internal-dpl-ccdb-backend in process with pid 31233
+[31234:ctp-raw-decoder]: [INFO] Spawning new device ctp-raw-decoder in process with pid 31234
+[31234:ctp-raw-decoder]: [17:30:13][INFO] 
+[31234:ctp-raw-decoder]:       ______      _    _______  _________ 
+[31234:ctp-raw-decoder]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[31234:ctp-raw-decoder]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[31234:ctp-raw-decoder]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[31234:ctp-raw-decoder]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[31234:ctp-raw-decoder]: 
+[31234:ctp-raw-decoder]: [17:30:13][STATE] Starting FairMQ state machine --> IDLE
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] 
+[31233:internal-dpl-ccdb-backend]:       ______      _    _______  _________ 
+[31233:internal-dpl-ccdb-backend]:      / ____/___ _(_)_______   |/  /_  __ \    version 1.10.1
+[31233:internal-dpl-ccdb-backend]:     / /_  / __ `/ / ___/__  /|_/ /_  / / /    build RELWITHDEBINFO
+[31233:internal-dpl-ccdb-backend]:    / __/ / /_/ / / /    _  /  / / / /_/ /     https://github.com/FairRootGroup/FairMQ
+[31233:internal-dpl-ccdb-backend]:   /_/    \__,_/_/_/     /_/  /_/  \___\_\     LGPL-3.0  © 2012-2025 GSI
+[31233:internal-dpl-ccdb-backend]: 
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] Starting FairMQ state machine --> IDLE
+[31235:ctp-digit-writer]: [17:30:13][STATE] IDLE ---> INITIALIZING DEVICE
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] IDLE ---> INITIALIZING DEVICE
+[31234:ctp-raw-decoder]: [17:30:13][STATE] IDLE ---> INITIALIZING DEVICE
+[31234:ctp-raw-decoder]: [17:30:13][WARN] Input name without level:TVX
+[31234:ctp-raw-decoder]: [17:30:13][WARN] Input name without level:VBA
+[31234:ctp-raw-decoder]: [17:30:13][INFO] CTP reco init done. Inputs decoding here:0 DoLumi:0 DoDigits:1 NTF:90 Lumi inputs:TVX:3 VBA:6 Max errors:3 Max input size:0 MaxInputSizeFatal:0 CheckConsistency:0
+[31234:ctp-raw-decoder]: [17:30:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[31234:ctp-raw-decoder]: [17:30:13][STATE] INITIALIZED ---> BINDING
+[31234:ctp-raw-decoder]: [17:30:13][STATE] BINDING ---> BOUND
+[31234:ctp-raw-decoder]: [17:30:13][STATE] BOUND ---> CONNECTING
+[31234:ctp-raw-decoder]: [17:30:13][STATE] CONNECTING ---> DEVICE READY
+[31234:ctp-raw-decoder]: [17:30:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[31234:ctp-raw-decoder]: [17:30:13][STATE] INITIALIZING TASK ---> READY
+[31234:ctp-raw-decoder]: [17:30:13][STATE] READY ---> RUNNING
+[31234:ctp-raw-decoder]: [17:30:13][INFO] fair::mq::Device running...
+[31234:ctp-raw-decoder]: [17:30:13][INFO] LHCPeriod is not available, using current month MAY
+[31234:ctp-raw-decoder]: [17:30:13][INFO] Correctly handshaken websocket connection.
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] CCDB Backend at: http://alice-ccdb.cern.ch, validity check for every 2147483647 TF
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] Hook to enable signposts for CCDB messages at 0x8171e1820
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] Init CcdApi with UserAgentID: MacOS_app/unknown@31233 target/Darwin_arm64 init/1779895813740 id/romanlietava@192.168.1.45 session/I7cRF28C, Host: http://alice-ccdb.cern.ch, Curl timeouts: upload:20 download:5
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] Initialised default CCDB host http://alice-ccdb.cern.ch
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] The following route is a condition CTP/CTPCONFIG/0
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] - ccdb-path: CTP/Config/Config
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] The following route is a condition CTP/Trig_Offset/0
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] - ccdb-path: CTP/Config/TriggerOffsets
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] INITIALIZED ---> BINDING
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] BINDING ---> BOUND
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] BOUND ---> CONNECTING
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] CONNECTING ---> DEVICE READY
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] INITIALIZING TASK ---> READY
+[31233:internal-dpl-ccdb-backend]: [17:30:13][STATE] READY ---> RUNNING
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] fair::mq::Device running...
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] LHCPeriod is not available, using current month MAY
+[31233:internal-dpl-ccdb-backend]: [17:30:13][INFO] Correctly handshaken websocket connection.
+[31235:ctp-digit-writer]: [17:30:13][INFO] 0: branch  CTPDigits set up
+[31235:ctp-digit-writer]: [17:30:13][STATE] INITIALIZING DEVICE ---> INITIALIZED
+[31235:ctp-digit-writer]: [17:30:13][STATE] INITIALIZED ---> BINDING
+[31235:ctp-digit-writer]: [17:30:13][STATE] BINDING ---> BOUND
+[31235:ctp-digit-writer]: [17:30:13][STATE] BOUND ---> CONNECTING
+[31235:ctp-digit-writer]: [17:30:13][STATE] CONNECTING ---> DEVICE READY
+[31235:ctp-digit-writer]: [17:30:13][STATE] DEVICE READY ---> INITIALIZING TASK
+[31235:ctp-digit-writer]: [17:30:13][STATE] INITIALIZING TASK ---> READY
+[31235:ctp-digit-writer]: [17:30:13][STATE] READY ---> RUNNING
+[31235:ctp-digit-writer]: [17:30:13][INFO] fair::mq::Device running...
+[31235:ctp-digit-writer]: [17:30:13][INFO] LHCPeriod is not available, using current month MAY
+[31235:ctp-digit-writer]: [17:30:13][INFO] Correctly handshaken websocket connection.
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 0 of size 91400 with 66 parts, 0.0000 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90256
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 1 of size 90616 with 66 parts, 0.0002 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90240
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 2 of size 90600 with 66 parts, 0.0002 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90240
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 3 of size 90600 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90528
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 4 of size 90888 with 66 parts, 0.0092 s elapsed from previous TF., WaitSending=true
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90784
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 5 of size 91144 with 66 parts, 0.0127 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 91008
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 6 of size 91368 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90240
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 7 of size 90600 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90400
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 8 of size 90760 with 66 parts, 0.0140 s elapsed from previous TF., WaitSending=true
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90096
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 9 of size 90456 with 66 parts, 0.0102 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 89568
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 10 of size 89928 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 91728
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 11 of size 92088 with 66 parts, 0.0001 s elapsed from previous TF., WaitSending=false
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/RAWDATA with size 90064
+[31232:tf-reader]: [17:30:13][INFO] Block:2 FLP/DISTSUBTIMEFRAME with size 168
+[31232:tf-reader]: [17:30:13][INFO] Block:1 CTP/LUMI with size 192
+[31232:tf-reader]: [17:30:13][INFO] Sent TF 12 of size 90424 with 66 parts, 0.0128 s elapsed from previous TF., WaitSending=true
+[31232:tf-reader]: [17:30:13][INFO] TFReader stops processing
+[31232:tf-reader]: [17:30:13][INFO] 13 TFs in 1  loops were sent, spent 0 s in 0 data waiting states
+[31232:tf-reader]: [17:30:13][INFO] Sending end-of-stream message to channel from_tf-reader_to_internal-dpl-ccdb-backend
+[31232:tf-reader]: [17:30:13][INFO] Sending end-of-stream message to channel from_tf-reader_to_ctp-raw-decoder
+[31232:tf-reader]: [17:30:13][INFO] Sending end-of-stream message to channel from_tf-reader_to_internal-dpl-injected-dummy-sink
+[31233:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to JCentral. Please wait
+[31233:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Opening connection to 128.142.249.34
+[31233:internal-dpl-ccdb-backend]: Info in <TJAlienConnectionManager>: Successfully connected to 128.142.249.34
+[31233:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Calib/OrbitReset/14/21025/555b8c2f-59af-11f1-b135-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[31233:internal-dpl-ccdb-backend]: [17:30:16][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Calib/OrbitReset/1779874501102/555b8c2f-59af-11f1-b135-0aa140641b9a for 1779888272796 (load to memory, agent_id: MacOS_app/unknown@31233 target/Darwin_arm64 init/1779895813740 id/romanlietava@192.168.1.45 session/I7cRF28C), 
+[31233:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Config/Config/14/19192/1f062358-59b5-11f1-b135-0aa140641b9a in SE <ALICE::CCIN2P3::SE>
+[31233:internal-dpl-ccdb-backend]: [17:30:18][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Config/Config/1779876386961/1f062358-59b5-11f1-b135-0aa140641b9a for 1779888271781 (load to memory, agent_id: MacOS_app/unknown@31233 target/Darwin_arm64 init/1779895813740 id/romanlietava@192.168.1.45 session/I7cRF28C), 
+[31233:internal-dpl-ccdb-backend]: Info in <TJAlienFile::Open>: Accessing file /alice/data/CCDB/CTP/Config/TriggerOffsets/06/49287/56b4c228-70dc-11ee-bc26-2a010e0a0b16 in SE <ALICE::UPB::CCDB>
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO] ccdb reads http://alice-ccdb.cern.ch/CTP/Config/TriggerOffsets/1696975200000/56b4c228-70dc-11ee-bc26-2a010e0a0b16 for 1779888271781 (load to memory, agent_id: MacOS_app/unknown@31233 target/Darwin_arm64 init/1779895813740 id/romanlietava@192.168.1.45 session/I7cRF28C), 
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_ctp-raw-decoder
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO] Sending end-of-stream message to channel from_internal-dpl-ccdb-backend_to_internal-dpl-injected-dummy-sink
+[31234:ctp-raw-decoder]: [17:30:19][INFO] Caching in 12886232632 ptr to CTP/Trig_Offset/0 (0x101974280)
+[31234:ctp-raw-decoder]: [17:30:19][INFO] updateing TroggerOffsetsParam: inputs L0_L1:281 classes L0_L1:280
+[31234:ctp-raw-decoder]: [17:30:19][INFO] Caching in 12886227712 ptr to CTP/CTPCONFIG/0 (0x87da03400)
+[31234:ctp-raw-decoder]: [17:30:19][INFO] ctpconfig for run done:572163
+[31234:ctp-raw-decoder]: [17:30:19][INFO] RDH version:7 Padding:0
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8787 digits. IR rejected:0 TCR rejected:9
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8787 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8698 digits. IR rejected:0 TCR rejected:11
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8698 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8733 digits. IR rejected:0 TCR rejected:12
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8733 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8718 digits. IR rejected:0 TCR rejected:13
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8718 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8734 digits. IR rejected:0 TCR rejected:20
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8734 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8791 digits. IR rejected:0 TCR rejected:24
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8791 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8786 digits. IR rejected:0 TCR rejected:28
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8786 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8732 digits. IR rejected:0 TCR rejected:28
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8732 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8721 digits. IR rejected:0 TCR rejected:35
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8721 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8759 digits. IR rejected:0 TCR rejected:39
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8759 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8611 digits. IR rejected:0 TCR rejected:41
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8611 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8859 digits. IR rejected:0 TCR rejected:46
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8859 digits
+[31234:ctp-raw-decoder]: [17:30:19][INFO] [CTPRawToDigitConverter - run] Writing 8686 digits. IR rejected:0 TCR rejected:50
+[31235:ctp-digit-writer]: [17:30:19][INFO] CTPDigitWriter pulled 8686 digits
+[31234:ctp-raw-decoder]: Missing orbits: 154857920-154864448 154864448-154870976 154870976-154877504 154877504-154884032 154884032-154890560 154890560-154897088 154897088-154903616 154903616-154910144 154910144-154916672 154916672-154923200 154923200-154929728 154929728-154936256
+[31234:ctp-raw-decoder]: [17:30:19][INFO] Number of non continous TF:2448
+[31234:ctp-raw-decoder]: 
+[31234:ctp-raw-decoder]: [17:30:19][INFO] Lost in shiftInputs:0
+[31234:ctp-raw-decoder]: [17:30:19][INFO] Lost in addDigit Inputs:0 Classes:356
+[31234:ctp-raw-decoder]: [17:30:19][INFO] Sending end-of-stream message to channel from_ctp-raw-decoder_to_ctp-digit-writer
+[INFO] Quitting
+[INFO] Quit requested at Wed May 27 17:30:19 2026
+
+[31232:tf-reader]: [17:30:19][INFO] Received device shutdown request (signal 15).
+[31232:tf-reader]: [17:30:19][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[31232:tf-reader]: [17:30:19][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[31232:tf-reader]: [17:30:19][STATE] RUNNING ---> READY
+[31232:tf-reader]: [17:30:19][STATE] READY ---> RESETTING TASK
+[31232:tf-reader]: [17:30:19][STATE] RESETTING TASK ---> DEVICE READY
+[31232:tf-reader]: [17:30:19][STATE] DEVICE READY ---> RESETTING DEVICE
+[31232:tf-reader]: [17:30:19][STATE] RESETTING DEVICE ---> IDLE
+[31232:tf-reader]: [17:30:19][STATE] IDLE ---> EXITING
+[31232:tf-reader]: [17:30:19][STATE] Exiting FairMQ state machine
+[31231:internal-dpl-clock]: [17:30:19][INFO] Received device shutdown request (signal 15).
+[31231:internal-dpl-clock]: [17:30:19][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[31231:internal-dpl-clock]: [17:30:19][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][INFO] Received device shutdown request (signal 15).
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][STATE] RUNNING ---> READY
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][STATE] READY ---> RESETTING TASK
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][STATE] RESETTING TASK ---> DEVICE READY
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][STATE] DEVICE READY ---> RESETTING DEVICE
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][STATE] RESETTING DEVICE ---> IDLE
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][STATE] IDLE ---> EXITING
+[31236:internal-dpl-injected-dummy-sink]: [17:30:19][STATE] Exiting FairMQ state machine
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO] Received device shutdown request (signal 15).
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO] CCDB cache miss/hit ratio (7168 fetched / 94208 requested bytes):
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO]   CTP/Config/TriggerOffsets: 1/12 (2048-2048 bytes)
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO]   CTP/Config/Config: 1/12 (4096-4096 bytes)
+[31233:internal-dpl-ccdb-backend]: [17:30:19][INFO]   CTP/Calib/OrbitReset: 1/13 (1024-1024 bytes)
+[31233:internal-dpl-ccdb-backend]: [17:30:19][STATE] RUNNING ---> READY
+[31233:internal-dpl-ccdb-backend]: [17:30:19][STATE] READY ---> RESETTING TASK
+[31233:internal-dpl-ccdb-backend]: [17:30:19][STATE] RESETTING TASK ---> DEVICE READY
+[31233:internal-dpl-ccdb-backend]: [17:30:19][STATE] DEVICE READY ---> RESETTING DEVICE
+[31233:internal-dpl-ccdb-backend]: [17:30:19][STATE] RESETTING DEVICE ---> IDLE
+[31233:internal-dpl-ccdb-backend]: [17:30:19][STATE] IDLE ---> EXITING
+[31233:internal-dpl-ccdb-backend]: [17:30:19][STATE] Exiting FairMQ state machine
+[31235:ctp-digit-writer]: [17:30:19][INFO] Received device shutdown request (signal 15).
+[31235:ctp-digit-writer]: [17:30:19][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[31235:ctp-digit-writer]: [17:30:19][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[31234:ctp-raw-decoder]: [17:30:19][INFO] Received device shutdown request (signal 15).
+[31234:ctp-raw-decoder]: [17:30:19][INFO] Waiting for graceful device shutdown. Hit Ctrl-C again to abort immediately.
+[31234:ctp-raw-decoder]: [17:30:19][INFO] New state requested. No timeout set, quitting immediately as per --completion-policy
+[31234:ctp-raw-decoder]: [17:30:19][STATE] RUNNING ---> READY
+[31234:ctp-raw-decoder]: [17:30:19][STATE] READY ---> RESETTING TASK
+[31234:ctp-raw-decoder]: [17:30:19][STATE] RESETTING TASK ---> DEVICE READY
+[31234:ctp-raw-decoder]: [17:30:19][STATE] DEVICE READY ---> RESETTING DEVICE
+[31234:ctp-raw-decoder]: [17:30:19][STATE] RESETTING DEVICE ---> IDLE
+[31234:ctp-raw-decoder]: [17:30:19][STATE] IDLE ---> EXITING
+[31234:ctp-raw-decoder]: [17:30:19][STATE] Exiting FairMQ state machine
+[31231:internal-dpl-clock]: [17:30:19][INFO] Sending end-of-stream message to channel from_internal-dpl-clock_to_tf-reader
+[31231:internal-dpl-clock]: [17:30:19][STATE] RUNNING ---> READY
+[31231:internal-dpl-clock]: [17:30:19][STATE] READY ---> RESETTING TASK
+[31231:internal-dpl-clock]: [17:30:19][STATE] RESETTING TASK ---> DEVICE READY
+[31231:internal-dpl-clock]: [17:30:19][STATE] DEVICE READY ---> RESETTING DEVICE
+[31231:internal-dpl-clock]: [17:30:19][STATE] RESETTING DEVICE ---> IDLE
+[31231:internal-dpl-clock]: [17:30:19][STATE] IDLE ---> EXITING
+[31231:internal-dpl-clock]: [17:30:19][STATE] Exiting FairMQ state machine
+[31235:ctp-digit-writer]: [17:30:19][STATE] RUNNING ---> READY
+[31235:ctp-digit-writer]: [17:30:19][STATE] READY ---> RESETTING TASK
+[31235:ctp-digit-writer]: [17:30:19][STATE] RESETTING TASK ---> DEVICE READY
+[31235:ctp-digit-writer]: [17:30:19][STATE] DEVICE READY ---> RESETTING DEVICE
+[31235:ctp-digit-writer]: [17:30:19][INFO] Cleaning up for shared memory id '6efcd143'...
+[31235:ctp-digit-writer]: [17:30:19][INFO] Found 0 unmanaged regions...
+[31235:ctp-digit-writer]: [17:30:19][INFO] Found 1 managed segments...
+[31235:ctp-digit-writer]: [17:30:19][INFO] Successfully removed 'fmq_6efcd143_m_0'.
+[31235:ctp-digit-writer]: [17:30:19][INFO] Successfully removed 'fmq_6efcd143_mng'.
+[31235:ctp-digit-writer]: [17:30:19][STATE] RESETTING DEVICE ---> IDLE
+[31235:ctp-digit-writer]: [17:30:19][STATE] IDLE ---> EXITING
+[31235:ctp-digit-writer]: [17:30:19][STATE] Exiting FairMQ state machine
+[INFO] ## Processes completed. Run summary:
+[INFO] ### Devices started: 6
+[INFO]  - Device internal-dpl-clock: pid 31231 (exit 0)
+[INFO]  - Device tf-reader: pid 31232 (exit 0)
+[INFO]  - Device internal-dpl-ccdb-backend: pid 31233 (exit 0)
+[INFO]  - Device ctp-raw-decoder: pid 31234 (exit 0)
+[INFO]  - Device ctp-digit-writer: pid 31235 (exit 0)
+[INFO]  - Device internal-dpl-injected-dummy-sink: pid 31236 (exit 0)
+[INFO] Dumping used configuration in dpl-config.json
