@@ -559,9 +559,9 @@ bool readTruthDataFromMCAO2D(const TString& truthAO2D,
 // useAO2DTraining: true = train response from MC AO2D NPMCChargedTABLE; false = generate toy training.
 // useAO2Data: 1 = read real reco data from dataAO2D; 0 = generate independent toy data;
 //             2 = use RecoTrain closure input; 3 = read reco from dataAO2D and truth from truthAO2D.
-void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true,
+void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
              TString dataAO2D = "AO2Ddata.root", TString truthAO2D = "AO2Dtruth.root",
-             int useAO2Data = 1)
+             int useAO2Data = 2)
 {
   const double ptMin   = 0.0;
   const double ptMax   = 10.0;
@@ -570,7 +570,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true,
 
   const int nTrainEvents = 1000000;
   const int nDataEvents  = 1000000;
-  const int nIter        = 100;
+  const int nIter        = 10;
 
   const double eff      = 0.8;
   const double fakeMean = 1.5;
@@ -885,20 +885,34 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true,
     }
   }
 
-  TH1D* hTruthPt     = hTruthData->ProjectionX("hTruthPt");
-  TH1D* hRecoPt      = hRecoData->ProjectionX("hRecoPt");
-  TH1D* hUnfoldPt    = hUnfold->ProjectionX("hUnfoldPt");
-  TH1D* hTruthMult   = hTruthData->ProjectionY("hTruthMult");
-  TH1D* hRecoMult    = hRecoData->ProjectionY("hRecoMult");
-  TH1D* hUnfoldMult  = hUnfold->ProjectionY("hUnfoldMult");
+  TH1D* hTruthTrainPtProj = hTruthTrain->ProjectionX("hTruthTrainPtProj");
+  TH1D* hRecoTrainPtProj  = hRecoTrain->ProjectionX("hRecoTrainPtProj");
+  TH1D* hTruthDataPtProj  = hTruthData->ProjectionX("hTruthDataPtProj");
+  TH1D* hRecoDataPtProj   = hRecoData->ProjectionX("hRecoDataPtProj");
+  TH1D* hUnfoldPtProj     = hUnfold->ProjectionX("hUnfoldPtProj");
+  TH1D* hMissPtProj       = hMiss->ProjectionX("hMissPtProj");
+  TH1D* hFakeTrainPtProj  = hFakeTrain->ProjectionX("hFakeTrainPtProj");
+  TH1D* hFeedInTrainPtProj = hFeedInTrain->ProjectionX("hFeedInTrainPtProj");
+  TH1D* hRecoAllTrainPtProj = hRecoAllTrain->ProjectionX("hRecoAllTrainPtProj");
+  TH1D* hRecoDataUnfoldPtProj = hRecoDataUnfold->ProjectionX("hRecoDataUnfoldPtProj");
+  TH1D* hTruthTrainMultProj = hTruthTrain->ProjectionY("hTruthTrainMultProj");
+  TH1D* hRecoTrainMultProj  = hRecoTrain->ProjectionY("hRecoTrainMultProj");
+  TH1D* hTruthDataMultProj  = hTruthData->ProjectionY("hTruthDataMultProj");
+  TH1D* hRecoDataMultProj   = hRecoData->ProjectionY("hRecoDataMultProj");
+  TH1D* hUnfoldMultProj     = hUnfold->ProjectionY("hUnfoldMultProj");
+  TH1D* hMissMultProj       = hMiss->ProjectionY("hMissMultProj");
+  TH1D* hFakeTrainMultProj  = hFakeTrain->ProjectionY("hFakeTrainMultProj");
+  TH1D* hFeedInTrainMultProj = hFeedInTrain->ProjectionY("hFeedInTrainMultProj");
+  TH1D* hRecoAllTrainMultProj = hRecoAllTrain->ProjectionY("hRecoAllTrainMultProj");
+  TH1D* hRecoDataUnfoldMultProj = hRecoDataUnfold->ProjectionY("hRecoDataUnfoldMultProj");
 
-  TH1D* hRatioPt = (TH1D*)hUnfoldPt->Clone("hRatioPt");
+  TH1D* hRatioPt = (TH1D*)hUnfoldPtProj->Clone("hRatioPt");
   hRatioPt->SetTitle("Unfold / Truth p_{T}");
-  hRatioPt->Divide(hTruthPt);
+  hRatioPt->Divide(hTruthDataPtProj);
 
-  TH1D* hRatioMult = (TH1D*)hUnfoldMult->Clone("hRatioMult");
+  TH1D* hRatioMult = (TH1D*)hUnfoldMultProj->Clone("hRatioMult");
   hRatioMult->SetTitle("Unfold / Truth mult");
-  hRatioMult->Divide(hTruthMult);
+  hRatioMult->Divide(hTruthDataMultProj);
 
   TFile fout("manualBayes4D.root", "RECREATE");
   hTruthTrain->Write();
@@ -922,12 +936,26 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true,
   hMultTrueData->Write();
   hMultRecoData->Write();
 
-  hTruthPt->Write();
-  hRecoPt->Write();
-  hUnfoldPt->Write();
-  hTruthMult->Write();
-  hRecoMult->Write();
-  hUnfoldMult->Write();
+  hTruthTrainPtProj->Write();
+  hRecoTrainPtProj->Write();
+  hTruthDataPtProj->Write();
+  hRecoDataPtProj->Write();
+  hUnfoldPtProj->Write();
+  hMissPtProj->Write();
+  hFakeTrainPtProj->Write();
+  hFeedInTrainPtProj->Write();
+  hRecoAllTrainPtProj->Write();
+  hRecoDataUnfoldPtProj->Write();
+  hTruthTrainMultProj->Write();
+  hRecoTrainMultProj->Write();
+  hTruthDataMultProj->Write();
+  hRecoDataMultProj->Write();
+  hUnfoldMultProj->Write();
+  hMissMultProj->Write();
+  hFakeTrainMultProj->Write();
+  hFeedInTrainMultProj->Write();
+  hRecoAllTrainMultProj->Write();
+  hRecoDataUnfoldMultProj->Write();
   hRatioPt->Write();
   hRatioMult->Write();
 

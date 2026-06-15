@@ -30,7 +30,7 @@
     },
     "ctp-raw-decoder": {
         "ntf-to-average": "90",
-        "print-errors-num": "1000",
+        "print-errors-num": "10000",
         "lumi-inp1": "TVX",
         "lumi-inp2": "VBA",
         "use-verbose-mode": "false",
