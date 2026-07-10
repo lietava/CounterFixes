@@ -1,9 +1,11 @@
 #include <algorithm>
 #include <array>
+#include <chrono>
 #include <cmath>
 #include <iostream>
 #include <random>
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "TF1.h"
@@ -451,12 +453,18 @@ bool readRecoDataFromAO2D(const TString& dataAO2D,
                           double multMax,
                           double centMin,
                           double centMax,
+                          int sameBCPolicy,
                           TH2D* hRecoDataTmp,
                           TH1D* hMultRecoData,
                           TH1D* hMultRecoDataCand,
                           TH1D* hMultRecoDataCollWithCand,
                           TH1D* hPtRecoData)
 {
+  const auto totalTimerStart = std::chrono::steady_clock::now();
+  auto elapsedSeconds = [](const std::chrono::steady_clock::time_point& start) {
+    return std::chrono::duration<double>(std::chrono::steady_clock::now() - start).count();
+  };
+
   TFile file(dataAO2D);
   if (file.IsZombie() || !file.GetListOfKeys()) {
     std::cerr << "Cannot open AO2D data file: " << dataAO2D << std::endl;
@@ -469,6 +477,11 @@ bool readRecoDataFromAO2D(const TString& dataAO2D,
   Long64_t nMissingTables = 0;
   Long64_t nDF = 0;
   Long64_t nCentralityRejected = 0;
+  Long64_t nSameBCRejected = 0;
+  double timeCollisionRead = 0.0;
+  double timeCollisionSelect = 0.0;
+  double timeCandidateRead = 0.0;
+  double timeCollWithCand = 0.0;
 
   for (auto key : *file.GetListOfKeys()) {
     TString keyName = key->GetName();
@@ -489,6 +502,13 @@ bool readRecoDataFromAO2D(const TString& dataAO2D,
                 << " is missing required branch fMultNTracksNP and/or fCentFT0M" << std::endl;
       return false;
     }
+    if (sameBCPolicy != 0 &&
+        (!collTree->GetBranch("fNoSameBunchPileup") ||
+         !collTree->GetBranch("fCentFT0MNoPileup"))) {
+      std::cerr << "NPCollisionTABLE in " << keyName
+                << " is missing required branch fNoSameBunchPileup and/or fCentFT0MNoPileup for sameBCPolicy != 0" << std::endl;
+      return false;
+    }
     if (!candTree->GetBranch("fPtRec") || !candTree->GetBranch("fIndexNPCollisionTable")) {
       std::cerr << "NPRecoChargedCand in " << keyName
                 << " is missing required branches fPtRec and/or fIndexNPCollisionTable" << std::endl;
@@ -497,16 +517,52 @@ bool readRecoDataFromAO2D(const TString& dataAO2D,
 
     int multReco = 0;
     float centFT0M = 0.0f;
-    std::vector<int> recoMultByCollision(collTree->GetEntries(), -1);
-    std::vector<char> acceptedCollision(collTree->GetEntries(), 0);
-    std::vector<char> hasSelectedCandidate(collTree->GetEntries(), 0);
+    float centFT0MNoPileup = 101.0f;
+    bool noSameBunchPileup = true;
+    const Long64_t nCollEntries = collTree->GetEntries();
+    std::vector<int> recoMultByCollision(nCollEntries, -1);
+    std::vector<float> centFT0MByCollision(nCollEntries, 0.0f);
+    std::vector<float> centFT0MNoPileupByCollision;
+    std::vector<char> noSameBunchPileupByCollision;
+    std::vector<char> acceptedCollision(nCollEntries, 0);
+    std::vector<char> hasSelectedCandidate(nCollEntries, 0);
     collTree->SetBranchAddress("fMultNTracksNP", &multReco);
     collTree->SetBranchAddress("fCentFT0M", &centFT0M);
-    for (Long64_t i = 0; i < collTree->GetEntries(); ++i) {
+
+    if (sameBCPolicy != 0) {
+      centFT0MNoPileupByCollision.resize(nCollEntries, 101.0f);
+      noSameBunchPileupByCollision.resize(nCollEntries, 0);
+      collTree->SetBranchAddress("fCentFT0MNoPileup", &centFT0MNoPileup);
+      collTree->SetBranchAddress("fNoSameBunchPileup", &noSameBunchPileup);
+    }
+
+    auto timerStart = std::chrono::steady_clock::now();
+    for (Long64_t i = 0; i < nCollEntries; ++i) {
       collTree->GetEntry(i);
       recoMultByCollision[i] = multReco;
-      const bool inCentrality = (centFT0M >= centMin && centFT0M < centMax);
-      acceptedCollision[i] = inCentrality ? 1 : 0;
+      centFT0MByCollision[i] = centFT0M;
+
+      if (sameBCPolicy != 0) {
+        centFT0MNoPileupByCollision[i] = centFT0MNoPileup;
+        noSameBunchPileupByCollision[i] = noSameBunchPileup ? 1 : 0;
+      }
+    }
+    timeCollisionRead += elapsedSeconds(timerStart);
+
+    timerStart = std::chrono::steady_clock::now();
+    for (Long64_t i = 0; i < nCollEntries; ++i) {
+      multReco = recoMultByCollision[i];
+      const bool acceptedBC = (sameBCPolicy == 0) ? true : noSameBunchPileupByCollision[i];
+      const float centralityForCut = (sameBCPolicy == 0)
+        ? centFT0MByCollision[i]
+        : centFT0MNoPileupByCollision[i];
+      const bool inCentrality = (centralityForCut >= centMin &&
+                                 centralityForCut < centMax);
+      acceptedCollision[i] = (inCentrality && acceptedBC) ? 1 : 0;
+      if (!acceptedBC) {
+        ++nSameBCRejected;
+        continue;
+      }
       if (!inCentrality) {
         ++nCentralityRejected;
         continue;
@@ -516,12 +572,14 @@ bool readRecoDataFromAO2D(const TString& dataAO2D,
       }
       ++nCollisions;
     }
+    timeCollisionSelect += elapsedSeconds(timerStart);
 
     float ptReco = 0.0f;
     int npCollisionId = -1;
     candTree->SetBranchAddress("fPtRec", &ptReco);
     candTree->SetBranchAddress("fIndexNPCollisionTable", &npCollisionId);
 
+    timerStart = std::chrono::steady_clock::now();
     for (Long64_t i = 0; i < candTree->GetEntries(); ++i) {
       candTree->GetEntry(i);
       if (npCollisionId < 0 || npCollisionId >= static_cast<int>(recoMultByCollision.size())) {
@@ -544,8 +602,10 @@ bool readRecoDataFromAO2D(const TString& dataAO2D,
         ++nIgnored;
       }
     }
+    timeCandidateRead += elapsedSeconds(timerStart);
 
-    for (Long64_t i = 0; i < collTree->GetEntries(); ++i) {
+    timerStart = std::chrono::steady_clock::now();
+    for (Long64_t i = 0; i < nCollEntries; ++i) {
       if (!acceptedCollision[i]) {
         continue;
       }
@@ -554,6 +614,7 @@ bool readRecoDataFromAO2D(const TString& dataAO2D,
         hMultRecoDataCollWithCand->Fill(multReco);
       }
     }
+    timeCollWithCand += elapsedSeconds(timerStart);
   }
 
   if (nDF <= 0) {
@@ -577,8 +638,16 @@ bool readRecoDataFromAO2D(const TString& dataAO2D,
             << " centrality-accepted collisions read: " << nCollisions << std::endl;
   std::cout << "  centrality FT0M accepted range: [" << centMin << ", " << centMax
             << ") rejected collisions: " << nCentralityRejected << std::endl;
+  std::cout << "  pileup policy: " << sameBCPolicy
+            << (sameBCPolicy == 0 ? " (none)" : " (stored fNoSameBunchPileup)")
+            << " rejected collisions: " << nSameBCRejected << std::endl;
   std::cout << "  reco candidates filled: " << nFilled
             << " ignored: " << nIgnored << std::endl;
+  std::cout << "  timing seconds: collisionRead=" << timeCollisionRead
+            << " collisionSelect=" << timeCollisionSelect
+            << " candidateRead=" << timeCandidateRead
+            << " collWithCandidate=" << timeCollWithCand
+            << " total=" << elapsedSeconds(totalTimerStart) << std::endl;
   return true;
 }
 
@@ -724,11 +793,20 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
 //            4 = Poisson-randomized flat positive prior.
 // subtractFakeFeed: true = subtract fake/feed-in from reco input; false = bypass them.
 // centMin/centMax: FT0M centrality percentile range for data-like reco collision tables.
+// sameBCPolicy: 0 = use fCentFT0M and no pileup cut;
+//               1 = require fNoSameBunchPileup and use fCentFT0MNoPileup.
 void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
              TString dataAO2D = "AO2Ddata.root", TString truthAO2D = "AO2Dtruth.root",
              int useAO2Data = 2, int priorMode = 0, bool subtractFakeFeed = true,
-             double centMin = 0.0, double centMax = 100.0)
+             double centMin = 0.0, double centMax = 100.0, int sameBCPolicy = 0)
 {
+  if (sameBCPolicy < 0 || sameBCPolicy > 1) {
+    std::cerr << "Invalid sameBCPolicy = " << sameBCPolicy
+              << ". Use 0 = fCentFT0M without pileup cut, "
+              << "or 1 = fNoSameBunchPileup with fCentFT0MNoPileup." << std::endl;
+    return;
+  }
+
   const double ptMin   = 0.0;
   const double ptMax   = 10.0;
   const double multMin = 0.0;
@@ -867,7 +945,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
       return;
     }
     if (!readRecoDataFromAO2D(dataAO2D, ptMin, ptMax, multMin, multMax,
-                              centMin, centMax,
+                              centMin, centMax, sameBCPolicy,
                               hRecoDataTmp, hMultRecoData,
                               hMultRecoDataCand, hMultRecoDataCollWithCand,
                               hPtRecoData)) {
@@ -888,6 +966,10 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
     if (centMin > 0.0 || centMax < 100.0) {
       std::cout << "Centrality cut requested, but useAO2Data=4 reads O2npmcchargedtabl, "
                 << "which has no centrality column; centrality cut is not applied." << std::endl;
+    }
+    if (sameBCPolicy != 0) {
+      std::cout << "sameBCPolicy requested, but useAO2Data=4 reads O2npmcchargedtabl, "
+                << "which has no fNoSameBunchPileup/fCentFT0MNoPileup columns; pileup cut is not applied." << std::endl;
     }
     std::cout << "Reading reco and truth data sample from MC table in " << dataAO2D << std::endl;
     if (dataAO2D.IsNull()) {
@@ -1215,6 +1297,89 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   TH1D* hRecoAllTrainMultProj = hRecoAllTrain->ProjectionY("hRecoAllTrainMultProj");
   TH1D* hRecoDataUnfoldMultProj = hRecoDataUnfold->ProjectionY("hRecoDataUnfoldMultProj");
 
+  auto makeSum = [](TH1D* first, TH1D* second, const char* name, const char* title) {
+    TH1D* h = (TH1D*)first->Clone(name);
+    h->SetTitle(title);
+    if (!h->GetSumw2N()) {
+      h->Sumw2();
+    }
+    h->Add(second);
+    return h;
+  };
+
+  auto makeRatio = [](TH1D* numerator, TH1D* denominator, const char* name, const char* title) {
+    TH1D* h = (TH1D*)numerator->Clone(name);
+    h->SetTitle(title);
+    if (!h->GetSumw2N()) {
+      h->Sumw2();
+    }
+    h->Divide(denominator);
+    h->SetOption("E1");
+    return h;
+  };
+
+  auto makeSignalDenom = [](TH1D* all, TH1D* fake, TH1D* feed, const char* name, const char* title) {
+    TH1D* h = (TH1D*)all->Clone(name);
+    h->SetTitle(title);
+    if (!h->GetSumw2N()) {
+      h->Sumw2();
+    }
+    h->Add(fake, -1.0);
+    h->Add(feed, -1.0);
+    for (int ib = 1; ib <= h->GetNbinsX(); ++ib) {
+      if (h->GetBinContent(ib) < 0.0) {
+        h->SetBinContent(ib, 0.0);
+        h->SetBinError(ib, 0.0);
+      }
+    }
+    return h;
+  };
+
+  TH1D* hFakeFeedTrainPtProj = makeSum(hFakeTrainPtProj, hFeedInTrainPtProj,
+                                       "hFakeFeedTrainPtProj",
+                                       "Training fake+feed-in;p_{T};entries");
+  TH1D* hFakeFeedTrainMultProj = makeSum(hFakeTrainMultProj, hFeedInTrainMultProj,
+                                         "hFakeFeedTrainMultProj",
+                                         "Training fake+feed-in;mult;entries");
+  TH1D* hSignalTrainPtProj = makeSignalDenom(hRecoAllTrainPtProj, hFakeTrainPtProj, hFeedInTrainPtProj,
+                                             "hSignalTrainPtProj",
+                                             "Training matched signal reco;p_{T};entries");
+  TH1D* hSignalTrainMultProj = makeSignalDenom(hRecoAllTrainMultProj, hFakeTrainMultProj, hFeedInTrainMultProj,
+                                               "hSignalTrainMultProj",
+                                               "Training matched signal reco;mult;entries");
+
+  TH1D* hFakeFractionPtProj = makeRatio(hFakeTrainPtProj, hRecoAllTrainPtProj,
+                                        "hFakeFractionPtProj",
+                                        "fake / all reco training;p_{T};fake / all");
+  TH1D* hFeedInFractionPtProj = makeRatio(hFeedInTrainPtProj, hRecoAllTrainPtProj,
+                                          "hFeedInFractionPtProj",
+                                          "feed-in / all reco training;p_{T};feed-in / all");
+  TH1D* hFakeFeedFractionPtProj = makeRatio(hFakeFeedTrainPtProj, hRecoAllTrainPtProj,
+                                            "hFakeFeedFractionPtProj",
+                                            "(fake+feed-in) / all reco training;p_{T};(fake+feed-in) / all");
+  TH1D* hFakeFeedOverSignalPtProj = makeRatio(hFakeFeedTrainPtProj, hSignalTrainPtProj,
+                                              "hFakeFeedOverSignalPtProj",
+                                              "(fake+feed-in) / matched signal training;p_{T};(fake+feed-in) / signal");
+  TH1D* hRecoDataPurityPtProj = makeRatio(hRecoDataUnfoldPtProj, hRecoDataPtProj,
+                                          "hRecoDataPurityPtProj",
+                                          "corrected reco data / raw reco data;p_{T};purity applied to data");
+
+  TH1D* hFakeFractionMultProj = makeRatio(hFakeTrainMultProj, hRecoAllTrainMultProj,
+                                          "hFakeFractionMultProj",
+                                          "fake / all reco training;mult;fake / all");
+  TH1D* hFeedInFractionMultProj = makeRatio(hFeedInTrainMultProj, hRecoAllTrainMultProj,
+                                            "hFeedInFractionMultProj",
+                                            "feed-in / all reco training;mult;feed-in / all");
+  TH1D* hFakeFeedFractionMultProj = makeRatio(hFakeFeedTrainMultProj, hRecoAllTrainMultProj,
+                                              "hFakeFeedFractionMultProj",
+                                              "(fake+feed-in) / all reco training;mult;(fake+feed-in) / all");
+  TH1D* hFakeFeedOverSignalMultProj = makeRatio(hFakeFeedTrainMultProj, hSignalTrainMultProj,
+                                                "hFakeFeedOverSignalMultProj",
+                                                "(fake+feed-in) / matched signal training;mult;(fake+feed-in) / signal");
+  TH1D* hRecoDataPurityMultProj = makeRatio(hRecoDataUnfoldMultProj, hRecoDataMultProj,
+                                            "hRecoDataPurityMultProj",
+                                            "corrected reco data / raw reco data;mult;purity applied to data");
+
   TH1D* hRatioPt = (TH1D*)hUnfoldPtProj->Clone("hRatioPt");
   if (!hRatioPt->GetSumw2N()) {
     hRatioPt->Sumw2();
@@ -1239,7 +1404,17 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   hRatioMultEvent->SetOption("E1");
   hRatioMultEvent->Divide(hTruthDataMultEventProj);
 
-  TFile fout("manualBayes4D.root", "RECREATE");
+  TString centMinLabel = TString::Format("%g", centMin);
+  TString centMaxLabel = TString::Format("%g", centMax);
+  centMinLabel.ReplaceAll(".", "p");
+  centMaxLabel.ReplaceAll(".", "p");
+  centMinLabel.ReplaceAll("-", "m");
+  centMaxLabel.ReplaceAll("-", "m");
+  TString outputName = TString::Format("manualBayes4D_cent%s_%s_pileup%d.root",
+                                       centMinLabel.Data(), centMaxLabel.Data(),
+                                       sameBCPolicy);
+
+  TFile fout(outputName, "RECREATE");
   hTruthTrain->Write();
   hRecoTrain->Write();
   hTruthData->Write();
@@ -1292,8 +1467,45 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   hRatioMult->Write();
   hRatioMultEvent->Write();
 
+  auto* qaDir = fout.mkdir("QA");
+  if (qaDir) {
+    qaDir->cd();
+    hFakeTrainPtProj->Write();
+    hFeedInTrainPtProj->Write();
+    hFakeFeedTrainPtProj->Write();
+    hSignalTrainPtProj->Write();
+    hRecoAllTrainPtProj->Write();
+    hRecoDataPtProj->Write();
+    hRecoDataUnfoldPtProj->Write();
+    hFakeFractionPtProj->Write();
+    hFeedInFractionPtProj->Write();
+    hFakeFeedFractionPtProj->Write();
+    hFakeFeedOverSignalPtProj->Write();
+    hRecoDataPurityPtProj->Write();
+
+    hFakeTrainMultProj->Write();
+    hFeedInTrainMultProj->Write();
+    hFakeFeedTrainMultProj->Write();
+    hSignalTrainMultProj->Write();
+    hRecoAllTrainMultProj->Write();
+    hRecoDataMultProj->Write();
+    hRecoDataUnfoldMultProj->Write();
+    hFakeFractionMultProj->Write();
+    hFeedInFractionMultProj->Write();
+    hFakeFeedFractionMultProj->Write();
+    hFakeFeedOverSignalMultProj->Write();
+    hRecoDataPurityMultProj->Write();
+
+    hRatioPt->Write();
+    hRatioMult->Write();
+    hRatioMultEvent->Write();
+    hTruthL1RelIter->Write();
+    hRecoL1RelIter->Write();
+    fout.cd();
+  }
+
   fout.Close();
 
 
-  std::cout << "Done. Output written to manualBayes4D.root\n";
+  std::cout << "Done. Output written to " << outputName << "\n";
 }
