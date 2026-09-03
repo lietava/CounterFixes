@@ -905,11 +905,14 @@
   "OutputDirector": {
     "debug_mode": true,
     "resfile": "AO2D",
-    "OutputDescriptors": [
-      {
-        "table": "AOD/NPMCChargedTABL/0"
-      }
-    ],
+      "OutputDescriptors": [
+        {
+          "table": "AOD/NPMCChargedTABL/0"
+        },
+        {
+          "table": "AOD/NPMCRecoCollAss/0"
+        }
+      ],
     "ntfmerge": 1
   },
   "wagons_timestamp": 1776749793845,

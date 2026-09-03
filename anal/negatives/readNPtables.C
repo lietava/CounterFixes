@@ -81,8 +81,9 @@ void readNPRecoFromTree(TTree* t)
 
   TTreeReader r(t);
 
-  TTreeReaderValue<int> collIdx(r, "fCollIdx");
-  TTreeReaderValue<float> pt(r, "fPt");
+  TTreeReaderValue<int> collIdx(r, "fNPCollisionId");
+  TTreeReaderValue<float> pt(r, "fPtRec");
+  TTreeReaderValue<float> eta(r, "fEtaRec");
 
   Long64_t i = 0;
   while (r.Next()) {
@@ -90,6 +91,7 @@ void readNPRecoFromTree(TTree* t)
       << "row=" << i
       << " collIdx=" << *collIdx
       << " pt=" << *pt
+      << " eta=" << *eta
       << std::endl;
     ++i;
     if(i > NREAD) {
@@ -101,7 +103,7 @@ void readNPRecoFromTree(TTree* t)
 //void readNPtables(const char* filename = "data/659826/AO2D.root",
 void readNPtables(const char* filename = "AO2D.root",
                            const char* collTreeName = "O2npcollisiontabl",
-                           const char* recoTreeName = "O2mprecochargedca")
+                           const char* recoTreeName = "O2nprecochargedca")
 {
   TFile* f = TFile::Open(filename);
   if (!f || f->IsZombie()) {

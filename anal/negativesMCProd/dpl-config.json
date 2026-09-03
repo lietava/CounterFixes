@@ -21,6 +21,8 @@
         "bcWindowForOneSigma": "115",
         "processFwdAssocWithTime": "false",
         "processFwdStandardAssoc": "false",
+        "processFwdRealignAssocWithTime": "false",
+        "processFwdRealignStandardAssoc": "false",
         "processMFTAssocWithTime": "true",
         "processMFTStandardAssoc": "false"
     },
@@ -38,13 +40,11 @@
         "timestamp": {
             "verbose": "false",
             "fatalOnInvalidTimestamp": "false",
-            "rct-path": "RCT\/Info\/RunInformation",
             "orbit-reset-path": "CTP\/Calib\/OrbitReset",
             "isRun2MC": "-1"
         },
         "bcselOpts": {
             "amIneeded": "-1",
-            "triggerBcShift": "0",
             "ITSROFrameStartBorderMargin": "-1",
             "ITSROFrameEndBorderMargin": "-1",
             "TimeFrameStartBorderMargin": "-1",
@@ -372,8 +372,47 @@
             "mc_findableDetachedCascade": "false"
         },
         "preSelectOpts": {
-            "preselectOnlyDesiredV0s": "false",
-            "preselectOnlyDesiredCascades": "false",
+            "preselectedSpecies": {
+                "labels_rows": [
+                    "Photon",
+                    "K0s",
+                    "Lambda",
+                    "AntiLambda",
+                    "XiMinus",
+                    "XiPlus",
+                    "OmegaMinus",
+                    "OmegaPlus"
+                ],
+                "labels_cols": [
+                    "enable"
+                ],
+                "values": [
+                    [
+                        "0"
+                    ],
+                    [
+                        "0"
+                    ],
+                    [
+                        "0"
+                    ],
+                    [
+                        "0"
+                    ],
+                    [
+                        "0"
+                    ],
+                    [
+                        "0"
+                    ],
+                    [
+                        "0"
+                    ],
+                    [
+                        "0"
+                    ]
+                ]
+            },
             "lifetimeCut": {
                 "labels_rows": "",
                 "labels_cols": [
@@ -463,6 +502,18 @@
             "massWindownumberOfSigmas": "20",
             "massWindowSafetyMargin": "0.00100000005",
             "maxTPCpidNsigma": "5"
+        },
+        "eventSelectOpts": {
+            "fillOnlySelectedCollisions": "false",
+            "requireTriggerTVX": "false",
+            "rejectITSROFBorder": "false",
+            "rejectTFBorder": "false",
+            "rejectSameBunchPileup": "false",
+            "maxZVtxPosition": "10",
+            "cfgApplyRCTrequirement": "false",
+            "cfgRCTLabel": "",
+            "cfgCheckZDC": "false",
+            "cfgTreatLimitedAcceptanceAsBad": "false"
         },
         "trackTuner": {
             "debugInfo": "false",
@@ -634,7 +685,7 @@
         "enabledTables": {
             "labels_rows": [
                 "FV0Mults",
-                "FV0AOuterMults",
+                "FITExtraMults",
                 "FT0Mults",
                 "FDDMults",
                 "ZDCMults",
@@ -671,12 +722,20 @@
                 "CentMFTs",
                 "BCCentFT0Ms",
                 "BCCentFT0As",
-                "BCCentFT0Cs"
+                "BCCentFT0Cs",
+                "CentFT0MAnchorCols",
+                "CentFT0MAnchorBCs"
             ],
             "labels_cols": [
                 "enable"
             ],
             "values": [
+                [
+                    "-1"
+                ],
+                [
+                    "-1"
+                ],
                 [
                     "-1"
                 ],
@@ -803,18 +862,22 @@
         "maxPtGlobalTrack": "1e+10",
         "minNclsITSGlobalTrack": "5",
         "minNclsITSibGlobalTrack": "1",
+        "minNclsMFTTrack": "5",
+        "maxDCAxyToPVMFTTrack": "2",
+        "minEtaMFTTrack": "-3.9000001",
+        "maxEtaMFTTrack": "-2",
         "ccdbPathVtxZ": "Centrality\/Calibration",
         "ccdbPathCentrality": "Centrality\/Estimators",
         "reconstructionPass": "",
-        "generatorName": "PYTHIA",
+        "generatorName": "",
         "embedINELgtZEROselection": "false",
         "ccdburl": "http:\/\/alice-ccdb.cern.ch",
         "processRun2": "false",
-        "processRun3": "false",
-        "processRun3WithGlobalCounters": "true",
-        "processMFT": "true",
-        "processMonteCarlo": "true",
-        "processMonteCarlo2Mults": "true",
+        "processRun3": "true",
+        "processRun3WithGlobalCounters": "false",
+        "processMFT": "false",
+        "processMonteCarlo": "false",
+        "processMonteCarlo2Mults": "false",
         "processCentralityRun2": "false",
         "processCentralityRun3": "true"
     },

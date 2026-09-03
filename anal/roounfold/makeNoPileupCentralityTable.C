@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <map>
 #include <unordered_map>
 #include <utility>
 #include <vector>
@@ -44,9 +45,50 @@ struct NpCentCollision {
   bool noSameBunchPileup = false;
 };
 
+void addGeneratedFT0EventWeights(TTree* tree, std::map<int, double, std::greater<int>>& weights)
+{
+  if (!tree || !tree->GetBranch("fMultGen") || !tree->GetBranch("fMultGenFT0")) {
+    return;
+  }
+
+  int multGen = 0;
+  int multGenFT0 = 0;
+  tree->ResetBranchAddresses();
+  tree->SetBranchAddress("fMultGen", &multGen);
+  tree->SetBranchAddress("fMultGenFT0", &multGenFT0);
+
+  for (Long64_t i = 0; i < tree->GetEntries(); ++i) {
+    tree->GetEntry(i);
+    if (multGen <= 0 || multGenFT0 < 0) {
+      continue;
+    }
+    weights[multGenFT0] += 1.0 / static_cast<double>(multGen);
+  }
+}
+
+std::map<int, double> buildGeneratedFT0CentralityLookup(const std::map<int, double, std::greater<int>>& weights)
+{
+  double total = 0.0;
+  for (const auto& [_, weight] : weights) {
+    total += weight;
+  }
+  if (total <= 0.0) {
+    return {};
+  }
+
+  std::map<int, double> centrality;
+  double above = 0.0;
+  for (const auto& [mult, weight] : weights) {
+    centrality[mult] = 100.0 * (above + weight) / total;
+    above += weight;
+  }
+  return centrality;
+}
+
 void copyDirectoryWithEnrichedCollisionTable(TDirectory* inputDir,
                                              TDirectory* outputDir,
-                                             const std::vector<NpCentCollision>& collisions)
+                                             const std::vector<NpCentCollision>& collisions,
+                                             const std::map<int, double>& generatedCentLookup)
 {
   for (auto keyObject : *inputDir->GetListOfKeys()) {
     auto* key = dynamic_cast<TKey*>(keyObject);
@@ -66,6 +108,10 @@ void copyDirectoryWithEnrichedCollisionTable(TDirectory* inputDir,
       object->InheritsFrom(TTree::Class()) &&
       objectName == "O2npcollisiontabl" &&
       inputPath.Contains("/DF_");
+    const bool isNPMCChargedTable =
+      object->InheritsFrom(TTree::Class()) &&
+      objectName == "O2npmcchargedtabl" &&
+      inputPath.Contains("/DF_");
 
     if (isDirectory) {
       auto* inputSubDir = dynamic_cast<TDirectory*>(object);
@@ -75,7 +121,7 @@ void copyDirectoryWithEnrichedCollisionTable(TDirectory* inputDir,
         delete object;
         return;
       }
-      copyDirectoryWithEnrichedCollisionTable(inputSubDir, outputSubDir, collisions);
+      copyDirectoryWithEnrichedCollisionTable(inputSubDir, outputSubDir, collisions, generatedCentLookup);
       delete object;
       continue;
     }
@@ -133,6 +179,44 @@ void copyDirectoryWithEnrichedCollisionTable(TDirectory* inputDir,
       continue;
     }
 
+    if (isNPMCChargedTable) {
+      auto* inputTree = dynamic_cast<TTree*>(object);
+      if (!inputTree->GetBranch("fMultGenFT0")) {
+        std::cerr << "O2npmcchargedtabl in " << inputPath
+                  << " is missing required branch fMultGenFT0 for generated centrality" << std::endl;
+        delete object;
+        return;
+      }
+
+      const bool hadCentGenFT0 = inputTree->GetBranch("fCentGenFT0");
+      inputTree->ResetBranchAddresses();
+      inputTree->SetBranchStatus("*", 1);
+      if (hadCentGenFT0) {
+        inputTree->SetBranchStatus("fCentGenFT0", 0);
+      }
+
+      int multGenFT0 = 0;
+      inputTree->SetBranchAddress("fMultGenFT0", &multGenFT0);
+
+      auto* outputTree = inputTree->CloneTree(0);
+      outputTree->SetAutoSave(0);
+
+      float outCentGenFT0 = -1.0f;
+      outputTree->Branch("fCentGenFT0", &outCentGenFT0, "fCentGenFT0/F");
+
+      for (Long64_t i = 0; i < inputTree->GetEntries(); ++i) {
+        inputTree->GetEntry(i);
+        const auto centIt = generatedCentLookup.find(multGenFT0);
+        outCentGenFT0 = centIt == generatedCentLookup.end() ? -1.0f : static_cast<float>(centIt->second);
+        outputTree->Fill();
+      }
+      outputTree->Write("", TObject::kOverwrite);
+      inputTree->SetBranchStatus("*", 1);
+      delete outputTree;
+      delete object;
+      continue;
+    }
+
     if (object->InheritsFrom(TTree::Class())) {
       auto* inputTree = dynamic_cast<TTree*>(object);
       inputTree->ResetBranchAddresses();
@@ -170,10 +254,12 @@ void makeNoPileupCentralityTable(TString inputAO2D = "AO2Ddata.root",
 
   std::vector<NpCentCollision> collisions;
   std::unordered_map<NpCentBCKey, int, NpCentBCKeyHash> collisionsPerBC;
+  std::map<int, double, std::greater<int>> generatedFT0Weights;
 
   int dfIndex = 0;
   Long64_t nDF = 0;
   Long64_t nMissingTables = 0;
+  Long64_t nMCChargedTables = 0;
   bool useStoredNoSameBunchPileup = false;
   bool sawStoredNoSameBunchPileup = false;
   bool sawMissingNoSameBunchPileup = false;
@@ -186,6 +272,11 @@ void makeNoPileupCentralityTable(TString inputAO2D = "AO2Ddata.root",
     ++nDF;
 
     auto* collTree = dynamic_cast<TTree*>(input.Get((keyName + "/O2npcollisiontabl").Data()));
+    auto* mcChargedTree = dynamic_cast<TTree*>(input.Get((keyName + "/O2npmcchargedtabl").Data()));
+    if (mcChargedTree) {
+      addGeneratedFT0EventWeights(mcChargedTree, generatedFT0Weights);
+      ++nMCChargedTables;
+    }
     if (!collTree) {
       ++nMissingTables;
       ++dfIndex;
@@ -260,11 +351,42 @@ void makeNoPileupCentralityTable(TString inputAO2D = "AO2Ddata.root",
     std::cerr << "No DF_* directories found in " << inputAO2D << std::endl;
     return;
   }
-  if (collisions.empty()) {
+  if (collisions.empty() && nMCChargedTables <= 0) {
     std::cerr << "No NPCollisionTABLE rows found in " << inputAO2D << std::endl;
     return;
   }
   useStoredNoSameBunchPileup = sawStoredNoSameBunchPileup && !sawMissingNoSameBunchPileup;
+
+  auto assignNoPileupCentralityFromMultFT0M = [&](std::vector<std::pair<float, std::size_t>>& multToCollision) {
+    std::sort(multToCollision.begin(), multToCollision.end(),
+              [](const std::pair<float, std::size_t>& lhs,
+                 const std::pair<float, std::size_t>& rhs) {
+                return lhs.first > rhs.first;
+              });
+
+    const double nColl = static_cast<double>(multToCollision.size());
+    if (nColl <= 0.0) {
+      return;
+    }
+
+    std::size_t first = 0;
+    while (first < multToCollision.size()) {
+      std::size_t last = first;
+      while (last + 1 < multToCollision.size() &&
+             multToCollision[last + 1].first == multToCollision[first].first) {
+        ++last;
+      }
+
+      // Use the upper percentile edge for tied FT0M values, so the most peripheral
+      // tie group reaches 100 instead of sitting at its average rank.
+      const float percentile = static_cast<float>(
+        (static_cast<double>(last) + 1.0) * 100.0 / nColl);
+      for (std::size_t rank = first; rank <= last; ++rank) {
+        collisions[multToCollision[rank].second].centFT0MNoPileup = percentile;
+      }
+      first = last + 1;
+    }
+  };
 
   std::vector<std::pair<float, std::size_t>> noPileupMult;
   noPileupMult.reserve(collisions.size());
@@ -283,32 +405,8 @@ void makeNoPileupCentralityTable(TString inputAO2D = "AO2Ddata.root",
     }
   }
 
-  std::sort(noPileupMult.begin(), noPileupMult.end(),
-            [](const std::pair<float, std::size_t>& lhs,
-               const std::pair<float, std::size_t>& rhs) {
-              return lhs.first > rhs.first;
-            });
-
-  const double nNoPileup = static_cast<double>(noPileupMult.size());
-  if (nNoPileup > 0.0) {
-    std::size_t first = 0;
-    while (first < noPileupMult.size()) {
-      std::size_t last = first;
-      while (last + 1 < noPileupMult.size() &&
-             noPileupMult[last + 1].first == noPileupMult[first].first) {
-        ++last;
-      }
-
-      // Use the upper percentile edge for tied FT0M values, so the most peripheral
-      // tie group reaches 100 instead of sitting at its average rank.
-      const float percentile = static_cast<float>(
-        (static_cast<double>(last) + 1.0) * 100.0 / nNoPileup);
-      for (std::size_t rank = first; rank <= last; ++rank) {
-        collisions[noPileupMult[rank].second].centFT0MNoPileup = percentile;
-      }
-      first = last + 1;
-    }
-  }
+  assignNoPileupCentralityFromMultFT0M(noPileupMult);
+  const auto generatedCentLookup = buildGeneratedFT0CentralityLookup(generatedFT0Weights);
 
   TFile output(outputFile, "RECREATE");
   if (output.IsZombie()) {
@@ -316,7 +414,7 @@ void makeNoPileupCentralityTable(TString inputAO2D = "AO2Ddata.root",
     return;
   }
 
-  copyDirectoryWithEnrichedCollisionTable(&input, &output, collisions);
+  copyDirectoryWithEnrichedCollisionTable(&input, &output, collisions, generatedCentLookup);
   output.Close();
 
   std::cout << "Wrote " << outputFile << std::endl;
@@ -325,6 +423,8 @@ void makeNoPileupCentralityTable(TString inputAO2D = "AO2Ddata.root",
   std::cout << "  collisions read: " << collisions.size() << std::endl;
   std::cout << "  no-same-bunch-pileup collisions: " << noPileupMult.size() << std::endl;
   std::cout << "  same-bunch-pileup rejected collisions: " << nRejectedSameBC << std::endl;
+  std::cout << "  MC charged tables with generated FT0 weights: " << nMCChargedTables
+            << " generated FT0 centrality bins: " << generatedCentLookup.size() << std::endl;
   std::cout << "  pileup source: "
             << (useStoredNoSameBunchPileup
                   ? "stored fNoSameBunchPileup"

@@ -2,7 +2,7 @@
     "internal-dpl-clock": "",
     "internal-dpl-aod-reader": {
         "aod-file-private": "@input_data.txt",
-        "aod-max-io-rate": "1000",
+        "aod-max-io-rate": "0",
         "time-limit": "0",
         "orbit-offset-enumeration": "0",
         "orbit-multiplier-enumeration": "0",
@@ -12,6 +12,7 @@
     },
     "internal-dpl-aod-spawner": "",
     "internal-dpl-aod-index-builder": "",
+    "mc-collision-converter": "",
     "fwd-track-to-collision-association": {
         "nSigmaForTimeCompat": "4",
         "timeMargin": "0",
@@ -97,7 +98,8 @@
             "skipTPCOnly": "-1",
             "devicesRequiringTPCOnlyPID": {
                 "values": [
-                    "photon-conversion-builder"
+                    "photon-conversion-builder",
+                    "dalitz-selection"
                 ]
             },
             "networkPathLocally": "network.onnx",
@@ -387,28 +389,28 @@
                 ],
                 "values": [
                     [
-                        "0"
+                        "1"
                     ],
                     [
-                        "0"
+                        "1"
                     ],
                     [
-                        "0"
+                        "1"
                     ],
                     [
-                        "0"
+                        "1"
                     ],
                     [
-                        "0"
+                        "1"
                     ],
                     [
-                        "0"
+                        "1"
                     ],
                     [
-                        "0"
+                        "1"
                     ],
                     [
-                        "0"
+                        "1"
                     ]
                 ]
             },
@@ -422,14 +424,14 @@
                 ],
                 "values": [
                     [
-                        "20",
-                        "60",
-                        "40",
-                        "20"
+                        "200",
+                        "200",
+                        "200",
+                        "200"
                     ]
                 ]
             },
-            "massCutPhoton": "0.300000012",
+            "massCutPhoton": "200",
             "massCutK0": {
                 "labels_rows": "",
                 "labels_cols": [
@@ -498,9 +500,21 @@
                     ]
                 ]
             },
-            "massWindownumberOfSigmas": "20",
+            "massWindownumberOfSigmas": "200",
             "massWindowSafetyMargin": "0.00100000005",
             "maxTPCpidNsigma": "5"
+        },
+        "eventSelectOpts": {
+            "fillOnlySelectedCollisions": "false",
+            "requireTriggerTVX": "false",
+            "rejectITSROFBorder": "false",
+            "rejectTFBorder": "false",
+            "rejectSameBunchPileup": "false",
+            "maxZVtxPosition": "10",
+            "cfgApplyRCTrequirement": "false",
+            "cfgRCTLabel": "",
+            "cfgCheckZDC": "false",
+            "cfgTreatLimitedAcceptanceAsBad": "false"
         },
         "trackTuner": {
             "debugInfo": "false",
@@ -672,7 +686,7 @@
         "enabledTables": {
             "labels_rows": [
                 "FV0Mults",
-                "FV0AOuterMults",
+                "FITExtraMults",
                 "FT0Mults",
                 "FDDMults",
                 "ZDCMults",
@@ -709,12 +723,20 @@
                 "CentMFTs",
                 "BCCentFT0Ms",
                 "BCCentFT0As",
-                "BCCentFT0Cs"
+                "BCCentFT0Cs",
+                "CentFT0MLightIonAnchorCols",
+                "CentFT0MLightIonAnchorBCs"
             ],
             "labels_cols": [
                 "enable"
             ],
             "values": [
+                [
+                    "-1"
+                ],
+                [
+                    "-1"
+                ],
                 [
                     "-1"
                 ],
@@ -852,9 +874,9 @@
         "embedINELgtZEROselection": "false",
         "ccdburl": "http:\/\/alice-ccdb.cern.ch",
         "processRun2": "false",
-        "processRun3": "false",
-        "processRun3WithGlobalCounters": "true",
-        "processMFT": "true",
+        "processRun3": "true",
+        "processRun3WithGlobalCounters": "false",
+        "processMFT": "false",
         "processMonteCarlo": "false",
         "processMonteCarlo2Mults": "false",
         "processCentralityRun2": "false",
@@ -935,7 +957,7 @@
         "cfgMaterialCorrection": "2",
         "cfgGRPmagPath": "GLO\/Config\/GRPMagField",
         "cfgSelectOnlyOmegas": "true",
-        "cfgCutNclusTPC": "70",
+        "cfgCutNclusTPC": "1",
         "cfgMinCosPA": "-1",
         "particlesCutsPID": {
             "labels_rows": [
@@ -982,6 +1004,14 @@
         "processdNdetaMC": "false",
         "processdNdeta": "true",
         "processPileUp": "false"
+    },
+    "mc-collision-extra": {
+        "pdgCodeOfInterest": "3312",
+        "pdgCodeAbsolute": "true",
+        "poiEtaWindow": "0.800000012",
+        "processNoCentrality": "false",
+        "processWithCentrality": "true",
+        "processMcContexts": "false"
     },
     "internal-dpl-aod-global-analysis-file-sink": "",
     "internal-dpl-aod-writer": "",

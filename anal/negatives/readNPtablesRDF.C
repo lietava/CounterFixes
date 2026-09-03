@@ -18,8 +18,8 @@ void readNPtablesRDF(const char* fname = "AO2D.root")
     return;
   }
 
-  TChain collChain("O2npcollisiontable");
-  TChain recoChain("O2nprecochargedcand");
+  TChain collChain("O2npcollisiontabl");
+  TChain recoChain("O2nprecochargedca");
 
   TIter next(f->GetListOfKeys());
   TKey* key = nullptr;

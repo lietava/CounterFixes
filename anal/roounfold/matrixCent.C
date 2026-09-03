@@ -10,6 +10,8 @@
 #include <random>
 #include <sstream>
 #include <string>
+#include <unordered_map>
+#include <unordered_set>
 #include <utility>
 #include <vector>
 
@@ -52,6 +54,31 @@ struct TrackInfo {
 };
 
 using Matrix4D_t = double[NPT][NMULT][NPT][NMULT];
+
+struct EventSelection {
+  std::unordered_set<int> mcIds;
+  std::unordered_set<int> truthMcIds;
+  std::unordered_set<int> recoIds;
+  std::unordered_map<int, int> chosenRecoByMc;
+  std::array<double, NMULT> generatedEventsByMult{};
+  std::array<double, NMULT> selectedEventsByMult{};
+};
+
+struct RecoAssocChoice {
+  int recoCollisionId = -1;
+  int multReco = -1;
+  int multGen = -1;
+  int multGenFT0 = -1;
+  double multFT0M = -999.0;
+  double centFT0M = -999.0;
+  bool noSameBunchPileup = false;
+};
+
+long long truthKey(int mcCollisionId, int mcParticleId)
+{
+  return (static_cast<long long>(mcCollisionId) << 32) ^
+         static_cast<unsigned int>(mcParticleId);
+}
 
 void printMatrix2D(const Matrix2D_t& m, const std::string& name = "")
 {
@@ -127,6 +154,21 @@ double sumMatrix2D(const Matrix2D_t& m)
   for (int ix = 0; ix < NPT; ++ix) {
     for (int iy = 0; iy < NMULT; ++iy) {
       sum += m[ix][iy];
+    }
+  }
+  return sum;
+}
+
+double sumResponseCount(const Matrix4D_t& rcount)
+{
+  double sum = 0.0;
+  for (int ir = 0; ir < NPT; ++ir) {
+    for (int jr = 0; jr < NMULT; ++jr) {
+      for (int it = 0; it < NPT; ++it) {
+        for (int jt = 0; jt < NMULT; ++jt) {
+          sum += rcount[ir][jr][it][jt];
+        }
+      }
     }
   }
   return sum;
@@ -273,6 +315,135 @@ double generatedFT0Centrality(int multGenFT0,
   return it == centrality.end() ? -1.0 : it->second;
 }
 
+bool buildMeasuredCentralitySelection(const TString& ao2dPath,
+                                      double centMin,
+                                      double centMax,
+                                      int sameBCPolicy,
+                                      EventSelection& selection)
+{
+  selection.mcIds.clear();
+  selection.truthMcIds.clear();
+  selection.recoIds.clear();
+  selection.chosenRecoByMc.clear();
+  selection.generatedEventsByMult.fill(0.0);
+  selection.selectedEventsByMult.fill(0.0);
+
+  TChain assocChain("O2npmcrecocollass");
+  fillChainFromAO2D(assocChain, ao2dPath);
+
+  if (assocChain.GetEntries() <= 0) {
+    std::cerr << "No NPMCRecoCollisionAssoc entries found in " << ao2dPath
+              << ". Rerun nonPromptCascade with AOD/NPMCRecoCollAss/0 in OutputDirector." << std::endl;
+    return false;
+  }
+
+  if (!assocChain.GetBranch("fMcCollisionId") ||
+      !assocChain.GetBranch("fRecoCollisionId") ||
+      !assocChain.GetBranch("fMultNTracksNP") ||
+      !assocChain.GetBranch("fMultGen") ||
+      !assocChain.GetBranch("fMultGenFT0") ||
+      !assocChain.GetBranch("fMultFT0M") ||
+      !assocChain.GetBranch("fCentFT0M") ||
+      !assocChain.GetBranch("fNoSameBunchPileup")) {
+    std::cerr << "NPMCRecoCollisionAssoc is missing required branches" << std::endl;
+    return false;
+  }
+
+  int mcCollisionId = -1;
+  int recoCollisionId = -1;
+  int multReco = -1;
+  int multGen = -1;
+  int multGenFT0 = -1;
+  float multFT0M = -999.0f;
+  float centFT0M = -999.0f;
+  bool noSameBunchPileup = false;
+
+  assocChain.SetBranchAddress("fMcCollisionId", &mcCollisionId);
+  assocChain.SetBranchAddress("fRecoCollisionId", &recoCollisionId);
+  assocChain.SetBranchAddress("fMultNTracksNP", &multReco);
+  assocChain.SetBranchAddress("fMultGen", &multGen);
+  assocChain.SetBranchAddress("fMultGenFT0", &multGenFT0);
+  assocChain.SetBranchAddress("fMultFT0M", &multFT0M);
+  assocChain.SetBranchAddress("fCentFT0M", &centFT0M);
+  assocChain.SetBranchAddress("fNoSameBunchPileup", &noSameBunchPileup);
+
+  std::unordered_map<int, RecoAssocChoice> bestByMc;
+  std::unordered_map<int, int> multGenByMc;
+  Long64_t nRows = 0;
+  Long64_t nNoReco = 0;
+  Long64_t nPileupRejected = 0;
+
+  for (Long64_t i = 0; i < assocChain.GetEntries(); ++i) {
+    assocChain.GetEntry(i);
+    ++nRows;
+    if (mcCollisionId < 0) {
+      continue;
+    }
+    selection.truthMcIds.insert(mcCollisionId);
+    if (multGen >= 0) {
+      multGenByMc[mcCollisionId] = multGen;
+    }
+    if (recoCollisionId < 0) {
+      ++nNoReco;
+      continue;
+    }
+    if (sameBCPolicy != 0 && !noSameBunchPileup) {
+      ++nPileupRejected;
+      continue;
+    }
+
+    auto& best = bestByMc[mcCollisionId];
+    if (best.recoCollisionId < 0 || multFT0M > best.multFT0M) {
+      best.recoCollisionId = recoCollisionId;
+      best.multReco = multReco;
+      best.multGen = multGen;
+      best.multGenFT0 = multGenFT0;
+      best.multFT0M = multFT0M;
+      best.centFT0M = centFT0M;
+      best.noSameBunchPileup = noSameBunchPileup;
+    }
+  }
+
+  for (const auto& [mcid, multGenValue] : multGenByMc) {
+    if (multGenValue >= 0 && multGenValue < NMULT) {
+      selection.generatedEventsByMult[multGenValue] += 1.0;
+    }
+  }
+
+  Long64_t nCentRejected = 0;
+  for (const auto& [mcid, best] : bestByMc) {
+    if (best.centFT0M < centMin || best.centFT0M >= centMax) {
+      ++nCentRejected;
+      continue;
+    }
+    selection.mcIds.insert(mcid);
+    selection.recoIds.insert(best.recoCollisionId);
+    selection.chosenRecoByMc[mcid] = best.recoCollisionId;
+    const auto multIt = multGenByMc.find(mcid);
+    const int multForEfficiency = multIt != multGenByMc.end() ? multIt->second : best.multGen;
+    if (multForEfficiency >= 0 && multForEfficiency < NMULT) {
+      selection.selectedEventsByMult[multForEfficiency] += 1.0;
+    }
+  }
+
+  std::cout << "Read NPMCRecoCollisionAssoc from " << ao2dPath << std::endl;
+  std::cout << "  assoc rows: " << nRows
+            << " no-reco marker rows: " << nNoReco
+            << " pileup rejected: " << nPileupRejected
+            << " centrality rejected best associations: " << nCentRejected << std::endl;
+  std::cout << "  measured fCentFT0M accepted range: [" << centMin << ", " << centMax
+            << ") selected MC events with reco: " << selection.mcIds.size()
+            << " selected truth MC events: " << selection.truthMcIds.size()
+            << " selected reco collisions: " << selection.recoIds.size() << std::endl;
+  if (!selection.truthMcIds.empty()) {
+    std::cout << "  event-selection efficiency integrated: "
+              << static_cast<double>(selection.mcIds.size()) / static_cast<double>(selection.truthMcIds.size())
+              << " = selected MC with reco in class / all generated MC" << std::endl;
+  }
+
+  return !selection.truthMcIds.empty();
+}
+
 void generateTrainingSample(int nTrainEvents,
                             TF1* fpt,
                             std::negative_binomial_distribution<int>& nbd,
@@ -387,6 +558,7 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
                                            double multMin,
                                            double multMax,
                                            double etaCut,
+                                           const EventSelection* eventSelection,
                                            TH2D* hTruthTrainTmp,
                                            TH2D* hRecoTrainTmp,
                                            TH2D* hMissTmp,
@@ -412,10 +584,13 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
       !trainChain.GetBranch("fPtRec") ||
       !trainChain.GetBranch("fEtaGen") ||
       !trainChain.GetBranch("fEtaRec") ||
+      !trainChain.GetBranch("fMcCollisionId") ||
+      !trainChain.GetBranch("fRecoCollisionId") ||
+      !trainChain.GetBranch("fMcParticleId") ||
       !trainChain.GetBranch("fMultGen") ||
       !trainChain.GetBranch("fMultNTracksNP")) {
     std::cerr << "NPMCChargedTABLE is missing one of the required branches: "
-              << "fPtGen, fPtRec, fEtaGen, fEtaRec, fMultGen, fMultNTracksNP" << std::endl;
+              << "fPtGen, fPtRec, fEtaGen, fEtaRec, fMcCollisionId, fRecoCollisionId, fMcParticleId, fMultGen, fMultNTracksNP" << std::endl;
     return false;
   }
 
@@ -423,6 +598,9 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
   float ptReco = 0.0f;
   float etaTrue = 0.0f;
   float etaReco = 0.0f;
+  int mcCollisionId = -1;
+  int recoCollisionId = -1;
+  int mcParticleId = -1;
   int multTrue = 0;
   int multReco = 0;
 
@@ -430,6 +608,9 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
   trainChain.SetBranchAddress("fPtRec", &ptReco);
   trainChain.SetBranchAddress("fEtaGen", &etaTrue);
   trainChain.SetBranchAddress("fEtaRec", &etaReco);
+  trainChain.SetBranchAddress("fMcCollisionId", &mcCollisionId);
+  trainChain.SetBranchAddress("fRecoCollisionId", &recoCollisionId);
+  trainChain.SetBranchAddress("fMcParticleId", &mcParticleId);
   trainChain.SetBranchAddress("fMultGen", &multTrue);
   trainChain.SetBranchAddress("fMultNTracksNP", &multReco);
 
@@ -439,12 +620,50 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
   Long64_t nFeedIn = 0;
   Long64_t nIgnored = 0;
   Long64_t nEtaRejected = 0;
+  std::unordered_set<long long> matchedChosenTruthKeys;
+  std::unordered_set<long long> filledTruthKeys;
+  std::unordered_set<long long> filledMatchedKeys;
+
+  for (Long64_t i = 0; i < trainChain.GetEntries(); ++i) {
+    trainChain.GetEntry(i);
+
+    const bool selectedTruthEvent = (!eventSelection || eventSelection->truthMcIds.count(mcCollisionId) > 0);
+    const bool selectedRecoEvent = (!eventSelection || eventSelection->recoIds.count(recoCollisionId) > 0);
+    bool selectedChosenMatch = true;
+    if (eventSelection) {
+      const auto chosenRecoIt = eventSelection->chosenRecoByMc.find(mcCollisionId);
+      selectedChosenMatch = (selectedTruthEvent && selectedRecoEvent &&
+                             chosenRecoIt != eventSelection->chosenRecoByMc.end() &&
+                             chosenRecoIt->second == recoCollisionId);
+    }
+    const bool hasTruth = (selectedTruthEvent &&
+                           ptTrue >= ptMin && ptTrue < ptMax &&
+                           inEtaAcceptance(etaTrue, etaCut) &&
+                           multTrue >= multMin && multTrue < multMax &&
+                           mcParticleId >= 0);
+    const bool hasReco = (selectedRecoEvent &&
+                          ptReco > ptMin && ptReco < ptMax &&
+                          inEtaAcceptance(etaReco, etaCut) &&
+                          multReco >= multMin && multReco < multMax);
+    if (hasTruth && hasReco && selectedChosenMatch) {
+      matchedChosenTruthKeys.insert(truthKey(mcCollisionId, mcParticleId));
+    }
+  }
 
   for (Long64_t i = 0; i < trainChain.GetEntries(); ++i) {
     trainChain.GetEntry(i);
 
     // Sentinel convention from nonPromptCascade NPMCChargedTABLE:
     //   matched: ptGen>=0, ptRec>=0; fake: ptGen=-1/-2/-3; feed-in: ptGen=-4; missed: ptRec=-1/-2.
+    const bool selectedTruthEvent = (!eventSelection || eventSelection->truthMcIds.count(mcCollisionId) > 0);
+    const bool selectedRecoEvent = (!eventSelection || eventSelection->recoIds.count(recoCollisionId) > 0);
+    bool selectedChosenMatch = true;
+    if (eventSelection) {
+      const auto chosenRecoIt = eventSelection->chosenRecoByMc.find(mcCollisionId);
+      selectedChosenMatch = (selectedTruthEvent && selectedRecoEvent &&
+                             chosenRecoIt != eventSelection->chosenRecoByMc.end() &&
+                             chosenRecoIt->second == recoCollisionId);
+    }
     const bool hasTruthKinematics = (ptTrue >= ptMin && ptTrue < ptMax &&
                                      inEtaAcceptance(etaTrue, etaCut));
     const bool hasRecoKinematics = (ptReco > ptMin && ptReco < ptMax &&
@@ -452,28 +671,36 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
     const bool truthOutsideEta = (ptTrue >= ptMin && ptTrue < ptMax &&
                                   !inEtaAcceptance(etaTrue, etaCut));
     const bool isFeedIn = (ptTrue <= -3.5f || truthOutsideEta);
-    const bool hasTruth = (hasTruthKinematics &&
+    const bool hasTruth = (selectedTruthEvent &&
+                           hasTruthKinematics &&
                            multTrue >= multMin && multTrue < multMax);
-    const bool hasReco = (hasRecoKinematics &&
+    const bool hasReco = (selectedRecoEvent &&
+                          hasRecoKinematics &&
                           multReco >= multMin && multReco < multMax);
     if ((ptTrue >= ptMin && ptTrue < ptMax && !inEtaAcceptance(etaTrue, etaCut)) ||
         (ptReco > ptMin && ptReco < ptMax && !inEtaAcceptance(etaReco, etaCut))) {
       ++nEtaRejected;
     }
 
-    if (hasTruth) {
+    const bool firstTruthUse = hasTruth && mcParticleId >= 0 &&
+                               filledTruthKeys.insert(truthKey(mcCollisionId, mcParticleId)).second;
+
+    if (firstTruthUse) {
       hTruthTrainTmp->Fill(ptTrue, multTrue);
       hPtTrueTrain->Fill(ptTrue);
       hMultTrueTrain->Fill(multTrue);
     }
 
-    if (hasReco) {
+    if (hasReco && selectedChosenMatch) {
       hRecoTrainTmp->Fill(ptReco, multReco);
       hPtRecoTrain->Fill(ptReco);
       hMultRecoTrain->Fill(multReco);
     }
 
-    if (hasTruth && hasReco) {
+    const long long currentTruthKey = truthKey(mcCollisionId, mcParticleId);
+
+    if (hasTruth && hasReco && selectedChosenMatch &&
+        mcParticleId >= 0 && filledMatchedKeys.insert(currentTruthKey).second) {
       // Matched row: fills the detector response R(reco pt,mult | truth pt,mult).
       int it = hTruthTrainTmp->GetXaxis()->FindBin(ptTrue) - 1;
       int jt = hTruthTrainTmp->GetYaxis()->FindBin(multTrue) - 1;
@@ -482,11 +709,11 @@ bool readNonPromptCascadeTrainingFromAO2D(const TString& trainAO2D,
       Rcount[ir][jr][it][jt] += 1.0;
       RecoAllTrain[ir][jr] += 1.0;
       ++nMatched;
-    } else if (hasTruth) {
+    } else if (firstTruthUse && matchedChosenTruthKeys.count(currentTruthKey) == 0) {
       // Missed row: truth particle has no usable reco entry; enters response normalization.
       hMissTmp->Fill(ptTrue, multTrue);
       ++nMissed;
-    } else if (hasReco) {
+    } else if (hasReco && selectedChosenMatch) {
       int ir = hRecoTrainTmp->GetXaxis()->FindBin(ptReco) - 1;
       int jr = hRecoTrainTmp->GetYaxis()->FindBin(multReco) - 1;
       if (isFeedIn) {
@@ -904,6 +1131,7 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
                                     double centMin,
                                     double centMax,
                                     bool useMeasuredCentFT0M,
+                                    const EventSelection* eventSelection,
                                     TH2D* hTruthDataTmp,
                                     TH2D* hRecoDataTmp,
                                     TH1D* hMultTrueData,
@@ -924,11 +1152,14 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
       !dataChain.GetBranch("fPtRec") ||
       !dataChain.GetBranch("fEtaGen") ||
       !dataChain.GetBranch("fEtaRec") ||
+      !dataChain.GetBranch("fMcCollisionId") ||
+      !dataChain.GetBranch("fRecoCollisionId") ||
+      !dataChain.GetBranch("fMcParticleId") ||
       !dataChain.GetBranch("fMultGen") ||
       !dataChain.GetBranch("fMultNTracksNP") ||
       !dataChain.GetBranch("fMultGenFT0")) {
     std::cerr << "NPMCChargedTABLE is missing one of the required branches: "
-              << "fPtGen, fPtRec, fEtaGen, fEtaRec, fMultGen, fMultNTracksNP, fMultGenFT0" << std::endl;
+              << "fPtGen, fPtRec, fEtaGen, fEtaRec, fMcCollisionId, fRecoCollisionId, fMcParticleId, fMultGen, fMultNTracksNP, fMultGenFT0" << std::endl;
     return false;
   }
   if (useMeasuredCentFT0M && !dataChain.GetBranch("fCentFT0M")) {
@@ -942,6 +1173,9 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
   float ptReco = 0.0f;
   float etaTrue = 0.0f;
   float etaReco = 0.0f;
+  int mcCollisionId = -1;
+  int recoCollisionId = -1;
+  int mcParticleId = -1;
   int multTrue = 0;
   int multReco = 0;
   int multGenFT0 = 0;
@@ -951,11 +1185,15 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
   Long64_t nIgnored = 0;
   Long64_t nTruthEtaRejected = 0;
   Long64_t nRecoEtaRejected = 0;
+  std::unordered_set<long long> filledTruthKeys;
 
   dataChain.SetBranchAddress("fPtGen", &ptTrue);
   dataChain.SetBranchAddress("fPtRec", &ptReco);
   dataChain.SetBranchAddress("fEtaGen", &etaTrue);
   dataChain.SetBranchAddress("fEtaRec", &etaReco);
+  dataChain.SetBranchAddress("fMcCollisionId", &mcCollisionId);
+  dataChain.SetBranchAddress("fRecoCollisionId", &recoCollisionId);
+  dataChain.SetBranchAddress("fMcParticleId", &mcParticleId);
   dataChain.SetBranchAddress("fMultGen", &multTrue);
   dataChain.SetBranchAddress("fMultNTracksNP", &multReco);
   dataChain.SetBranchAddress("fMultGenFT0", &multGenFT0);
@@ -968,17 +1206,27 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
     const double centralityForCut = useMeasuredCentFT0M
       ? static_cast<double>(centFT0M)
       : generatedFT0Centrality(multGenFT0, generatedCentLookup);
-    if (centralityForCut < centMin || centralityForCut >= centMax) {
+    if (!eventSelection && (centralityForCut < centMin || centralityForCut >= centMax)) {
       ++nIgnored;
       continue;
     }
 
     const bool truthPtInRange = (ptTrue >= ptMin && ptTrue < ptMax);
     const bool recoPtInRange = (ptReco > ptMin && ptReco < ptMax);
-    const bool hasTruth = (truthPtInRange &&
+    const bool selectedTruthEvent = (!eventSelection || eventSelection->truthMcIds.count(mcCollisionId) > 0);
+    const bool selectedRecoEvent = (!eventSelection || eventSelection->recoIds.count(recoCollisionId) > 0);
+    bool selectedChosenMatch = true;
+    if (eventSelection && mcCollisionId >= 0 && recoCollisionId >= 0) {
+      const auto chosenRecoIt = eventSelection->chosenRecoByMc.find(mcCollisionId);
+      selectedChosenMatch = (chosenRecoIt != eventSelection->chosenRecoByMc.end() &&
+                             chosenRecoIt->second == recoCollisionId);
+    }
+    const bool hasTruth = (selectedTruthEvent &&
+                           truthPtInRange &&
                            inEtaAcceptance(etaTrue, etaCut) &&
                            multTrue >= multMin && multTrue < multMax);
-    const bool hasReco = (recoPtInRange &&
+    const bool hasReco = (selectedRecoEvent &&
+                          recoPtInRange &&
                           inEtaAcceptance(etaReco, etaCut) &&
                           multReco >= multMin && multReco < multMax);
     if (truthPtInRange && !inEtaAcceptance(etaTrue, etaCut)) {
@@ -988,7 +1236,10 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
       ++nRecoEtaRejected;
     }
 
-    if (hasTruth) {
+    const bool firstTruthUse = hasTruth && mcParticleId >= 0 &&
+                               filledTruthKeys.insert(truthKey(mcCollisionId, mcParticleId)).second;
+
+    if (firstTruthUse) {
       // Truth closure target from the same MC sample.
       hTruthDataTmp->Fill(ptTrue, multTrue);
       hPtTrueData->Fill(ptTrue);
@@ -996,7 +1247,7 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
       ++nTruth;
     }
 
-    if (hasReco) {
+    if (hasReco && selectedChosenMatch) {
       // Reco pseudo-data from the MC table. This includes matched reco rows plus fake/feed-in rows.
       hRecoDataTmp->Fill(ptReco, multReco);
       hPtRecoData->Fill(ptReco);
@@ -1023,12 +1274,12 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
   return true;
 }
 
-// useAO2DTraining: true = train response from MC AO2D NPMCChargedTABLE; false = generate toy training.
+// useAO2DTraining: true = train response from MC AO2D NPMCChargedTABLE selected through O2npmcrecocollass; false = generate toy training.
 // useAO2Data: 1 = read real reco data from dataAO2D; 0 = generate independent toy data;
 //             2 = use RecoTrain and TruthTrain closure input;
 //             3 = read reco from dataAO2D and truth from truthAO2D;
 //             4 = read reco and truth from dataAO2D O2npmcchargedtabl using generated FT0 centrality;
-//             5 = read reco and truth from dataAO2D O2npmcchargedtabl using measured fCentFT0M.
+//             5 = read reco and truth from dataAO2D O2npmcchargedtabl using measured fCentFT0M through O2npmcrecocollass.
 // priorMode: 0 = flat positive prior; 1 = TruthTrain fixed-point check;
 //            2 = RecoTrain-shaped prior; 3 = Poisson-randomized TruthTrain prior;
 //            4 = Poisson-randomized flat positive prior.
@@ -1037,11 +1288,12 @@ bool readRecoAndTruthDataFromMCAO2D(const TString& dataAO2D,
 // sameBCPolicy: 0 = use fCentFT0M and no pileup cut;
 //               1 = require fNoSameBunchPileup and use fCentFT0MNoPileup.
 // etaCut: central-rapidity half-width used for dN/deta output, matching cfgEtaCutdNdeta.
-void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
-             TString dataAO2D = "AO2Ddata.root", TString truthAO2D = "AO2Dtruth.root",
-             int useAO2Data = 2, int priorMode = 0, bool subtractFakeFeed = true,
-             double centMin = 0.0, double centMax = 100.0, int sameBCPolicy = 0,
-             double etaCut = 0.8)
+// nIterInput: number of manual Bayes iterations.
+void matrixCent(TString trainAO2D = "AO2D.root", bool useAO2DTraining = true,
+                TString dataAO2D = "AO2Ddata.root", TString truthAO2D = "AO2Dtruth.root",
+                int useAO2Data = 5, int priorMode = 0, bool subtractFakeFeed = true,
+                double centMin = 0.0, double centMax = 100.0, int sameBCPolicy = 0,
+                double etaCut = 0.8, int nIterInput = 10)
 {
   if (sameBCPolicy < 0 || sameBCPolicy > 1) {
     std::cerr << "Invalid sameBCPolicy = " << sameBCPolicy
@@ -1054,6 +1306,11 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
               << ". Use the positive central-rapidity half-width, e.g. 0.8 for |eta| < 0.8." << std::endl;
     return;
   }
+  if (nIterInput <= 0) {
+    std::cerr << "Invalid nIterInput = " << nIterInput
+              << ". Use a positive number of Bayes iterations." << std::endl;
+    return;
+  }
 
   const double ptMin   = 0.0;
   const double ptMax   = 10.0;
@@ -1063,7 +1320,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
 
   const int nTrainEvents = 1000000;
   const int nDataEvents  = 1000000;
-  const int nIter        = 10;
+  const int nIter        = nIterInput;
 
   const double eff      = 0.8;
   const double fakeMean = 3.;
@@ -1109,6 +1366,23 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   Matrix2D_t FakeTrain;
   Matrix2D_t FeedInTrain;
   Matrix2D_t RecoAllTrain;
+  EventSelection trainEventSelection;
+  EventSelection dataEventSelection;
+  const EventSelection* trainEventSelectionPtr = nullptr;
+  const EventSelection* dataEventSelectionPtr = nullptr;
+
+  if (useAO2DTraining) {
+    if (!buildMeasuredCentralitySelection(trainAO2D, centMin, centMax, sameBCPolicy, trainEventSelection)) {
+      return;
+    }
+    trainEventSelectionPtr = &trainEventSelection;
+  }
+  if (useAO2Data == 5) {
+    if (!buildMeasuredCentralitySelection(dataAO2D, centMin, centMax, sameBCPolicy, dataEventSelection)) {
+      return;
+    }
+    dataEventSelectionPtr = &dataEventSelection;
+  }
 
   // ------------------------------------------------------------------
   // 1. TRAINING SAMPLE
@@ -1120,6 +1394,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
       return;
     }
     if (!readNonPromptCascadeTrainingFromAO2D(trainAO2D, ptMin, ptMax, multMin, multMax, etaCut,
+                                    trainEventSelectionPtr,
                                     hTruthTrainTmp, hRecoTrainTmp, hMissTmp,
                                     hMultTrueTrain, hMultRecoTrain,
                                     hPtTrueTrain, hPtRecoTrain, Rcount,
@@ -1149,6 +1424,19 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   printMatrix2D(TruthTrain, "TruthTrain");
   printMatrix2D(RecoTrain,  "RecoTrain");
   printMatrix2D(Miss,       "Miss");
+
+  const double sumTruthTrain = sumMatrix2D(TruthTrain);
+  const double sumRecoTrain = sumMatrix2D(RecoTrain);
+  const double sumMissTrain = sumMatrix2D(Miss);
+  const double sumMatchedResponse = sumResponseCount(Rcount);
+  std::cout << "Accounting training:"
+            << " truthTrain=" << sumTruthTrain
+            << " recoTrain=" << sumRecoTrain
+            << " matchedResponse=" << sumMatchedResponse
+            << " miss=" << sumMissTrain
+            << " responseTruthNorm=" << (sumMatchedResponse + sumMissTrain)
+            << " truthMinusResponseNorm=" << (sumTruthTrain - sumMatchedResponse - sumMissTrain)
+            << std::endl;
 
   // ------------------------------------------------------------------
   // 3. NORMALIZE RESPONSE
@@ -1225,6 +1513,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
     if (!readRecoAndTruthDataFromMCAO2D(dataAO2D, ptMin, ptMax, multMin, multMax, etaCut,
                                         centMin, centMax,
                                         useAO2Data == 5,
+                                        dataEventSelectionPtr,
                                         hTruthDataTmp, hRecoDataTmp,
                                         hMultTrueData, hMultRecoDataCand,
                                         hPtTrueData, hPtRecoData)) {
@@ -1254,6 +1543,11 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
     TruthData = TruthTrain;
     RecoData = RecoTrain;
   }
+
+  std::cout << "Accounting data before correction:"
+            << " truthData=" << sumMatrix2D(TruthData)
+            << " recoData=" << sumMatrix2D(RecoData)
+            << std::endl;
 
   double dataDownscaleMB = 1.0;
   double truthDownscaleMB = 1.0;
@@ -1316,6 +1610,34 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   } else {
     std::cout << "Fake/feed-in subtraction disabled; using reco input as provided" << std::endl;
   }
+
+  std::cout << "Accounting data after correction:"
+            << " recoDataUnfold=" << sumMatrix2D(RecoDataUnfold)
+            << " fakeTrain=" << sumMatrix2D(FakeTrain)
+            << " feedInTrain=" << sumMatrix2D(FeedInTrain)
+            << " recoAllTrain=" << sumMatrix2D(RecoAllTrain)
+            << std::endl;
+
+  double responseTruthRecoAbsDiff = 0.0;
+  double responseTruthRecoSum = 0.0;
+  for (int ir = 0; ir < NPT; ++ir) {
+    for (int jr = 0; jr < NMULT; ++jr) {
+      double recoFromTruth = 0.0;
+      for (int it = 0; it < NPT; ++it) {
+        for (int jt = 0; jt < NMULT; ++jt) {
+          recoFromTruth += Rprob[ir][jr][it][jt] * TruthData[it][jt];
+        }
+      }
+      responseTruthRecoSum += recoFromTruth;
+      responseTruthRecoAbsDiff += std::abs(recoFromTruth - RecoDataUnfold[ir][jr]);
+    }
+  }
+  const double recoDataUnfoldSum = sumMatrix2D(RecoDataUnfold);
+  std::cout << "Response closure before unfolding:"
+            << " RTruthSum=" << responseTruthRecoSum
+            << " recoDataUnfold=" << recoDataUnfoldSum
+            << " recoL1Rel=" << (recoDataUnfoldSum > 0.0 ? responseTruthRecoAbsDiff / recoDataUnfoldSum : 0.0)
+            << std::endl;
 
   // ------------------------------------------------------------------
   // 5. MANUAL ITERATIVE BAYES
@@ -1485,6 +1807,39 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
                                "Matched reconstruction efficiency;truth p_{T};truth mult",
                                NPT, ptMin, ptMax, NMULT, multMin, multMax);
   hEfficiency->Sumw2();
+  TH1D* hGeneratedEventsVsMultGen = new TH1D("hGeneratedEventsVsMultGen",
+                                             "Generated MC events;generated N_{ch};events",
+                                             NMULT, multMin, multMax);
+  TH1D* hSelectedEventsVsMultGen = new TH1D("hSelectedEventsVsMultGen",
+                                            "MC events selected by measured fCentFT0M;generated N_{ch};events",
+                                            NMULT, multMin, multMax);
+  TH1D* hEventEfficiencyVsMultGen = new TH1D("hEventEfficiencyVsMultGen",
+                                             "Measured-centrality event efficiency;generated N_{ch};selected / generated",
+                                             NMULT, multMin, multMax);
+  hEventEfficiencyVsMultGen->Sumw2();
+
+  if (trainEventSelectionPtr) {
+    std::cout << "Event efficiency vs generated N_ch:" << std::endl;
+    std::cout << "  mult generated selected efficiency" << std::endl;
+    for (int im = 0; im < NMULT; ++im) {
+      const double generated = trainEventSelectionPtr->generatedEventsByMult[im];
+      const double selected = trainEventSelectionPtr->selectedEventsByMult[im];
+      const double efficiency = generated > 0.0 ? selected / generated : 0.0;
+      hGeneratedEventsVsMultGen->SetBinContent(im + 1, generated);
+      hGeneratedEventsVsMultGen->SetBinError(im + 1, generated > 0.0 ? std::sqrt(generated) : 0.0);
+      hSelectedEventsVsMultGen->SetBinContent(im + 1, selected);
+      hSelectedEventsVsMultGen->SetBinError(im + 1, selected > 0.0 ? std::sqrt(selected) : 0.0);
+      hEventEfficiencyVsMultGen->SetBinContent(im + 1, efficiency);
+      hEventEfficiencyVsMultGen->SetBinError(im + 1, generated > 0.0 ? std::sqrt(efficiency * (1.0 - efficiency) / generated) : 0.0);
+      if (generated > 0.0) {
+        std::cout << "  " << im
+                  << " " << generated
+                  << " " << selected
+                  << " " << efficiency
+                  << std::endl;
+      }
+    }
+  }
 
   TH2D* hResponseFlat = new TH2D("hResponseFlat", "Flattened response;reco flat;truth flat",
                                  NPT * NMULT, 0, NPT * NMULT, NPT * NMULT, 0, NPT * NMULT);
@@ -1837,6 +2192,26 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   restrictToSupportedRange(hRatioMultEvent, hTruthDataMultEventProj, minTruthMultForRatio);
   restrictToSupportedRange(hRatioDNdeta, hTruthDataDNdetaProj, minTruthMultForRatio);
 
+  std::cout << "pT closure summary:" << std::endl;
+  std::cout << "  bin low high truth unfolded ratio matched miss efficiency" << std::endl;
+  for (int ib = 1; ib <= hTruthDataPtProj->GetNbinsX(); ++ib) {
+    const double truth = hTruthDataPtProj->GetBinContent(ib);
+    const double unfolded = hUnfoldPtProj->GetBinContent(ib);
+    const double matched = hMatchedTrainPtProj->GetBinContent(ib);
+    const double miss = hMissPtProj->GetBinContent(ib);
+    const double denom = matched + miss;
+    std::cout << "  " << ib
+              << " " << hTruthDataPtProj->GetXaxis()->GetBinLowEdge(ib)
+              << " " << hTruthDataPtProj->GetXaxis()->GetBinUpEdge(ib)
+              << " " << truth
+              << " " << unfolded
+              << " " << (truth > 0.0 ? unfolded / truth : 0.0)
+              << " " << matched
+              << " " << miss
+              << " " << (denom > 0.0 ? matched / denom : 0.0)
+              << std::endl;
+  }
+
   auto printAverageMult = [etaWidth](const TH1D* h, const char* label) {
     const double entries = h->Integral();
     const double meanMult = entries > 0.0 ? h->GetMean() : 0.0;
@@ -1857,7 +2232,7 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   centMaxLabel.ReplaceAll(".", "p");
   centMinLabel.ReplaceAll("-", "m");
   centMaxLabel.ReplaceAll("-", "m");
-  TString outputName = TString::Format("manualBayes4D_useAO2Data%d_cent%s_%s_pileup%d.root",
+  TString outputName = TString::Format("manualBayes4D_eventCent_useAO2Data%d_cent%s_%s_pileup%d.root",
                                        useAO2Data,
                                        centMinLabel.Data(), centMaxLabel.Data(),
                                        sameBCPolicy);
@@ -1888,8 +2263,8 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   optionsText += TString::Format("nDataEvents=%d\n", nDataEvents);
   optionsText += TString::Format("eff=%g\n", eff);
   optionsText += TString::Format("fakeMean=%g\n", fakeMean);
-  TObjString matrixHOptions(optionsText);
-  matrixHOptions.Write("matrixH_options");
+  TObjString matrixCentOptions(optionsText);
+  matrixCentOptions.Write("matrixCent_options");
 
   hTruthTrain->Write();
   hRecoTrain->Write();
@@ -1902,6 +2277,9 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
   hRecoAllTrain->Write();
   hRecoDataUnfold->Write();
   hEfficiency->Write();
+  hGeneratedEventsVsMultGen->Write();
+  hSelectedEventsVsMultGen->Write();
+  hEventEfficiencyVsMultGen->Write();
   hResponseFlat->Write();
   hResponsePtProj->Write();
   hResponseMultProj->Write();
@@ -1978,6 +2356,10 @@ void matrixH(TString trainAO2D = "AO2D.root", bool useAO2DTraining = false,
     hFakeFeedFractionPtProj->Write();
     hFakeFeedOverSignalPtProj->Write();
     hRecoDataPurityPtProj->Write();
+
+    hGeneratedEventsVsMultGen->Write();
+    hSelectedEventsVsMultGen->Write();
+    hEventEfficiencyVsMultGen->Write();
 
     hFakeTrainMultProj->Write();
     hFeedInTrainMultProj->Write();
